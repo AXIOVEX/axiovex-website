@@ -42,7 +42,6 @@ body {
   padding: 0 24px;
 }
 
-.container.narrow { max-width: 760px; }
 .center { text-align: center; }
 /* In centered sections the lede block itself must be centered, not just its text. */
 .center .section-lede { margin-left: auto; margin-right: auto; }
@@ -64,10 +63,8 @@ body {
   padding: 14px 24px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
-
-.brand-logo { height: 30px; width: auto; display: block; }
 
 .nav-links { display: flex; align-items: center; gap: 28px; }
 
@@ -113,8 +110,8 @@ body {
   width: auto;
   margin: 0 auto 30px;
 }
-.hero h1 { margin-left: auto; margin-right: auto; max-width: 16ch; }
-.hero .lede { margin-left: auto; margin-right: auto; max-width: 54ch; }
+.hero h1 { margin-left: auto; margin-right: auto; max-width: 24ch; }
+.hero .lede { margin-left: auto; margin-right: auto; max-width: 68ch; }
 
 .eyebrow {
   color: var(--cyan);
@@ -207,8 +204,12 @@ h2 {
   margin-bottom: 0;
 }
 
+/* One body-copy size across every section — no section-specific sizing. */
+.about-copy p,
+.card p,
+.faq-a { font-size: 18px; }
 .section p + p { margin-top: 18px; }
-.section-alt p { color: var(--muted); font-size: 18px; }
+.section-alt p { color: var(--muted); }
 
 /* ---------- About / founders ---------- */
 /* Symmetric About: centered copy block, founder cards in a centered pair. */
@@ -230,7 +231,7 @@ h2 {
   margin: 40px auto 0;
 }
 
-.founder-card { padding: 24px 26px; text-align: center; }
+.founder-card { padding: 32px 28px; text-align: center; }
 .founder-card h3 { margin-bottom: 6px; }
 /* Higher specificity than .card h3::before (defined later in source) */
 .card.founder-card h3::before { display: none; }
@@ -297,7 +298,7 @@ h2 {
   gap: 18px;
 }
 
-.footer-logo { height: 24px; width: auto; }
+.footer-logo { height: 56px; width: auto; }
 .footer p { color: var(--faint); font-size: 14px; }
 /* Social icons: official brand glyphs, grouped as a pair of quiet icon buttons. */
 .social-links { display: flex; gap: 12px; align-items: center; }
@@ -431,7 +432,7 @@ h2 {
 }
 .faq-item summary:hover::after { border-color: var(--cyan); }
 .faq-a { padding: 0 24px 24px; }
-.faq-a p { color: var(--muted); font-size: 16px; margin: 0; }
+.faq-a p { color: var(--muted); font-size: 18px; margin: 0; }
 .faq-a p + p { margin-top: 12px; }
 
 /* ---------- Responsive ---------- */
