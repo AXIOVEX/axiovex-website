@@ -116,7 +116,7 @@ body {
   letter-spacing: 0.22em;
   font-size: 13px;
   font-weight: 600;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -176,33 +176,30 @@ section[id] { scroll-margin-top: 80px; }
 .section-alt .eyebrow { color: var(--cyan); }
 
 h2 {
-  font-size: clamp(30px, 4vw, 44px);
-  letter-spacing: -0.015em;
-  line-height: 1.12;
-  margin-bottom: 18px;
+  font-size: clamp(38px, 5vw, 60px);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 22px;
   text-wrap: balance;
 }
 
 .section-lede {
   color: var(--muted);
   font-size: 18px;
-  max-width: 56ch;
   margin-bottom: 36px;
 }
 
-/* Centered section header: eyebrow, title and lede share one vertical axis.
-   Used by every section for a symmetric, disciplined rhythm. */
+/* Centered section header: eyebrow, title and lede share one vertical axis and
+   span the full container width — symmetric, disciplined rhythm. */
 .section-head {
   text-align: center;
-  max-width: 780px;
-  margin: 0 auto 52px;
+  margin: 0 auto 56px;
 }
 .section-head .section-lede {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
 }
-.section-head h2 { margin-bottom: 18px; }
 
 .section p + p { margin-top: 18px; }
 .section-alt p { color: var(--muted); font-size: 18px; }
@@ -324,19 +321,14 @@ h2 {
 }
 .inline-link:hover { border-color: var(--cyan); }
 
-/* ---------- Memberships band ---------- */
+/* ---------- Memberships ---------- */
+/* Compact membership row at the foot of About: small badges on white,
+   specific organization names, one shared center axis. */
 .memberships {
+  margin-top: 56px;
+  padding-top: 36px;
   border-top: 1px solid var(--hairline);
-  border-bottom: 1px solid var(--hairline);
-  background: rgba(8, 31, 50, 0.55);
-  padding: 34px 0 30px;
-}
-.memberships-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 22px;
-  flex-wrap: wrap;
+  text-align: center;
 }
 .memberships-label {
   text-transform: uppercase;
@@ -344,27 +336,47 @@ h2 {
   font-size: 12px;
   font-weight: 700;
   color: var(--cyan);
+  margin-bottom: 20px;
 }
-.member-logo {
+.memberships-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 300px;
+  text-decoration: none;
+}
+.member-badge {
   display: inline-flex;
   align-items: center;
   background: #ffffff;
-  border: 1px solid rgba(247, 252, 255, 0.14);
-  border-radius: 12px;
-  padding: 10px 22px;
+  border-radius: 8px;
+  padding: 6px 14px;
   transition: transform 0.15s ease, box-shadow 0.2s ease;
 }
-.member-logo img { height: 36px; width: auto; display: block; }
-.member-logo:hover {
+.member-badge img { height: 24px; width: auto; display: block; }
+.member:hover .member-badge {
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(0, 222, 246, 0.18);
 }
-.memberships-note {
-  text-align: center;
-  color: var(--faint);
+.member-name {
+  color: var(--ink);
   font-size: 14px;
-  margin: 16px 0 0;
+  font-weight: 600;
 }
+.member-desc {
+  color: var(--faint);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.member:hover .member-name { color: var(--cyan); }
 
 /* ---------- FAQ ---------- */
 .faq-list {
@@ -433,5 +445,5 @@ h2 {
   .hero-actions .btn { text-align: center; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
   .memberships-label { width: 100%; text-align: center; }
-  .memberships-inner { gap: 14px; }
+  .memberships-row { gap: 28px; }
 }
