@@ -190,9 +190,22 @@ h2 {
   margin-bottom: 36px;
 }
 
+/* Centered section header: eyebrow, title and lede share one vertical axis.
+   Used by every section for a symmetric, disciplined rhythm. */
+.section-head {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 52px;
+}
+.section-head .section-lede {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+.section-head h2 { margin-bottom: 18px; }
+
 .section p + p { margin-top: 18px; }
 .section-alt p { color: var(--muted); font-size: 18px; }
-.section-alt h2 { margin-bottom: 26px; }
 
 /* ---------- About / founders ---------- */
 .about-grid {
@@ -316,14 +329,14 @@ h2 {
   border-top: 1px solid var(--hairline);
   border-bottom: 1px solid var(--hairline);
   background: rgba(8, 31, 50, 0.55);
-  padding: 30px 0;
+  padding: 34px 0 30px;
 }
-.memberships-line {
-  text-align: center;
-  color: var(--muted);
-  font-size: 16px;
-  letter-spacing: 0.01em;
-  margin: 0;
+.memberships-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
 }
 .memberships-label {
   text-transform: uppercase;
@@ -331,11 +344,27 @@ h2 {
   font-size: 12px;
   font-weight: 700;
   color: var(--cyan);
-  margin-right: 10px;
 }
-.memberships-line strong { color: var(--ink); font-weight: 700; }
-.memberships-sep { color: var(--faint); margin: 0 8px; }
-.memberships-note { color: var(--faint); }
+.member-logo {
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(247, 252, 255, 0.14);
+  border-radius: 12px;
+  padding: 10px 22px;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+.member-logo img { height: 36px; width: auto; display: block; }
+.member-logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 222, 246, 0.18);
+}
+.memberships-note {
+  text-align: center;
+  color: var(--faint);
+  font-size: 14px;
+  margin: 16px 0 0;
+}
 
 /* ---------- FAQ ---------- */
 .faq-list {
@@ -382,7 +411,7 @@ h2 {
 }
 .faq-item summary:hover::after { border-color: var(--cyan); }
 .faq-a { padding: 0 24px 24px; }
-.faq-a p { color: var(--muted); font-size: 17px; margin: 0; }
+.faq-a p { color: var(--muted); font-size: 16px; margin: 0; }
 .faq-a p + p { margin-top: 12px; }
 
 /* ---------- Responsive ---------- */
@@ -403,4 +432,6 @@ h2 {
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .btn { text-align: center; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
+  .memberships-label { width: 100%; text-align: center; }
+  .memberships-inner { gap: 14px; }
 }
