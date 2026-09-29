@@ -92,11 +92,14 @@ body {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(720px 420px at 18% 12%, rgba(0, 222, 246, 0.13), transparent 65%),
-    radial-gradient(560px 380px at 85% 85%, rgba(0, 222, 246, 0.07), transparent 65%);
+    radial-gradient(760px 440px at 50% 0%, rgba(0, 222, 246, 0.13), transparent 65%),
+    radial-gradient(560px 380px at 50% 100%, rgba(0, 222, 246, 0.06), transparent 65%);
 }
 
-.hero .container { position: relative; }
+/* Centered hero: eyebrow, headline, lede and CTAs share one vertical axis. */
+.hero .container { position: relative; text-align: center; }
+.hero h1 { margin-left: auto; margin-right: auto; max-width: 16ch; }
+.hero .lede { margin-left: auto; margin-right: auto; max-width: 54ch; }
 
 .eyebrow {
   color: var(--cyan);
@@ -123,7 +126,7 @@ h1 {
   margin-bottom: 40px;
 }
 
-.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
 /* ---------- Buttons ---------- */
 .btn {
