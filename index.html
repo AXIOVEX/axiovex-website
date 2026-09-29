@@ -25,7 +25,7 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="styles.v14.css">
+  <link rel="stylesheet" href="styles.v15.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -65,7 +65,17 @@
         <a href="https://axiovex.github.io/shared-documents/" target="_blank" rel="noopener">Documents</a>
         <a href="#contact" class="nav-cta">Contact</a>
       </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+      <a href="#what-we-do">What we do</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://axiovex.github.io/shared-documents/" target="_blank" rel="noopener">Documents</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
@@ -233,6 +243,21 @@
       </div>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function () {
+      var t = document.querySelector('.nav-toggle');
+      var m = document.getElementById('mobile-menu');
+      if (!t || !m) return;
+      function set(open) {
+        m.classList.toggle('open', open);
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+        t.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+      t.addEventListener('click', function () { set(!m.classList.contains('open')); });
+      m.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+    })();
+  </script>
 </body>
 </html>
