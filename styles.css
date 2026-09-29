@@ -270,14 +270,15 @@ h2 {
 
 .footer-logo { height: 24px; width: auto; }
 .footer p { color: var(--faint); font-size: 14px; }
-.footer-github {
+.footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+.footer-link {
   color: var(--faint);
   font-size: 14px;
   text-decoration: none;
   border-bottom: 1px solid var(--line);
   padding-bottom: 1px;
 }
-.footer-github:hover { color: var(--cyan); border-color: var(--cyan); }
+.footer-link:hover { color: var(--cyan); border-color: var(--cyan); }
 
 /* ---------- Inline links (body copy) ---------- */
 .inline-link {
