@@ -35,6 +35,8 @@ body {
 
 .container.narrow { max-width: 760px; }
 .center { text-align: center; }
+/* In centered sections the lede block itself must be centered, not just its text. */
+.center .section-lede { margin-left: auto; margin-right: auto; }
 
 /* ---------- Nav ---------- */
 .nav {
