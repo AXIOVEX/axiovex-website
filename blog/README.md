@@ -25,7 +25,7 @@ file, list it in `posts.json`, push — Cloudflare Pages serves it as-is.
    ```
 
    - `slug`: short, URL-safe, unique. The article URL becomes
-     `https://axiovexsystems.com/blog/post.html?p=<slug>`.
+     `https://axiovexsystems.com/blog/post?p=<slug>`.
    - `date`: `YYYY-MM-DD`, shown on the article and used for display order.
    - `tags`: shown as clickable pills; keep them short and reuse existing ones
      when they fit.

@@ -177,10 +177,10 @@
     return '<article class="post-card" data-search="' +
       esc((p.title + ' ' + p.description + ' ' + (p.tags || []).join(' ')).toLowerCase()) + '">' +
       '<p class="post-date">' + esc(fmtDate(p.date)) + '</p>' +
-      '<h2><a href="post.html?p=' + encodeURIComponent(p.slug) + '">' + esc(p.title) + '</a></h2>' +
+      '<h2><a href="post?p=' + encodeURIComponent(p.slug) + '">' + esc(p.title) + '</a></h2>' +
       '<p class="post-desc">' + esc(p.description) + '</p>' +
       (tags ? '<div class="post-tags">' + tags + '</div>' : '') +
-      '<a class="read-more" href="post.html?p=' + encodeURIComponent(p.slug) + '">Read article &rarr;</a>' +
+      '<a class="read-more" href="post?p=' + encodeURIComponent(p.slug) + '">Read article &rarr;</a>' +
       '</article>';
   }
 
@@ -217,7 +217,7 @@
 
   /* ---------- Single post rendering + share ---------- */
   function pageUrl() {
-    return 'https://axiovexsystems.com/blog/post.html?p=' + encodeURIComponent(currentSlug());
+    return 'https://axiovexsystems.com/blog/post?p=' + encodeURIComponent(currentSlug());
   }
 
   function currentSlug() {
