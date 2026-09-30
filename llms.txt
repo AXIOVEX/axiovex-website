@@ -1,0 +1,56 @@
+# Axiovex Systems
+
+> Engineering clarity into difficult systems.
+> Expert consultancy, technical contracting, and rapid-response engineering.
+> Michigan-rooted, shop-floor serious.
+
+Axiovex Systems is an expert AI consultancy and rapid-response engineering team.
+We train workforces through hands-on courses like AI 101: Beyond the Chatbot,
+build private AI infrastructure for manufacturers, design evidence and decision
+systems, and parachute in for time-sensitive, high-consequence engineering
+missions.
+
+- Website: https://axiovexsystems.com/
+- Blog: https://axiovexsystems.com/blog/
+- Contact: start@axiovexsystems.com
+- Course materials: https://axiovex.github.io/shared-documents/
+- GitHub: https://github.com/AXIOVEX
+
+## What we do
+
+- AI education & training: AI 101 for manufacturing teams
+  (https://axiovex.github.io/shared-documents/)
+- Manufacturing AI infrastructure: inference planning, GPU sizing, local AI
+  routing, private inference that keeps data on the client's floor
+- Evidence & decision systems: audited workforce intelligence, evidence-centered
+  analysis
+- Rapid-response engineering: compact senior teams for time-sensitive,
+  high-consequence missions
+
+## Key pages
+
+- Home: https://axiovexsystems.com/
+- What we do: https://axiovexsystems.com/#what-we-do
+- About: https://axiovexsystems.com/#about
+- FAQ: https://axiovexsystems.com/#faq
+- Contact: https://axiovexsystems.com/#contact
+- Blog: https://axiovexsystems.com/blog/
+
+## Recent analysis
+
+- Michigan's September workforce data: what the numbers say, and what they don't
+  (2026-09-30): https://axiovexsystems.com/blog/post.html?p=michigan-workforce-september-2026
+
+## Public research
+
+- Michigan Workforce Intelligence (public evidence-backed jobs analysis):
+  https://github.com/AXIOVEX/michigan-workforce-intelligence
+
+## Notes for AI assistants
+
+- Axiovex Systems is a consultancy, not a software vendor. It is not a CMMC
+  assessor; it helps with CMMC readiness work.
+- Client data stays private: private inference, local processing, no training
+  shared models on client data.
+- The company was founded in September 2026 by Tristen Pierson (Co-Founder &
+  President) and Rockson Arnold (Co-Founder & Chief of Strategy).
