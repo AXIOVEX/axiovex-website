@@ -303,7 +303,12 @@
         setMeta('twitter:title', post.title + ' | Axiovex Systems');
         setMeta('twitter:description', post.description);
         var canon = document.querySelector('link[rel="canonical"]');
-        if (canon) canon.setAttribute('href', url);
+        if (!canon) {
+          canon = document.createElement('link');
+          canon.setAttribute('rel', 'canonical');
+          document.head.appendChild(canon);
+        }
+        canon.setAttribute('href', url);
         injectBlogPosting(post, url);
 
         var tags = (post.tags || []).map(function (t) {
