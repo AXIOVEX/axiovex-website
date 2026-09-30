@@ -12,6 +12,7 @@ missions.
 
 - Website: https://axiovexsystems.com/
 - Blog: https://axiovexsystems.com/blog/
+- Privacy Policy: https://axiovexsystems.com/privacy/
 - Contact: start@axiovexsystems.com
 - Course materials: https://axiovex.github.io/shared-documents/
 - GitHub: https://github.com/AXIOVEX
@@ -35,6 +36,7 @@ missions.
 - FAQ: https://axiovexsystems.com/#faq
 - Contact: https://axiovexsystems.com/#contact
 - Blog: https://axiovexsystems.com/blog/
+- Privacy Policy: https://axiovexsystems.com/privacy/
 
 ## Recent analysis
 
