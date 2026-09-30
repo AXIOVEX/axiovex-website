@@ -1,14 +1,15 @@
 # Axiovex Systems
 
 > Engineering clarity into difficult systems.
-> Expert consultancy, technical contracting, and rapid-response engineering.
+> Expert consultancy and technical contracting.
 > Michigan-rooted, shop-floor serious.
 
-Axiovex Systems is an expert AI consultancy and rapid-response engineering team.
-We train workforces through hands-on courses like AI 101: Beyond the Chatbot,
-build private AI infrastructure for manufacturers, design evidence and decision
-systems, and parachute in for time-sensitive, high-consequence engineering
-missions.
+Axiovex Systems is an expert AI consultancy. We train workforces through
+hands-on courses like AI 101: Beyond the Chatbot, build private AI
+infrastructure for manufacturers, and design evidence and decision systems --
+all through our structural epistemic framework, an out-of-the-box approach
+that questions foundational assumptions and builds from what is actually
+true. Rapid-response engineering is part of how we work.
 
 - Website: https://axiovexsystems.com/
 - Blog: https://axiovexsystems.com/blog/
@@ -25,8 +26,8 @@ missions.
   routing, private inference that keeps data on the client's floor
 - Evidence & decision systems: audited workforce intelligence, evidence-centered
   analysis
-- Rapid-response engineering: compact senior teams for time-sensitive,
-  high-consequence missions
+- Rapid-response engineering is part of how we work: urgent diagnostics,
+  rescue engagements, prototypes, embedded expertise
 
 ## Key pages
 
