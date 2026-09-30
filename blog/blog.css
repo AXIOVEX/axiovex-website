@@ -150,14 +150,13 @@ a.tag-pill:hover, button.tag-pill:hover { background: rgba(0, 222, 246, 0.16); }
 .share-btn.copied { border-color: rgba(0, 222, 246, 0.7); }
 .share-btn.copied svg { fill: #37e08b; }
 
-/* ---------- Blog nav tweak ---------- */
-.blog-nav .nav-inner { justify-content: center; }
-
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
   .post-card { padding: 26px 22px 24px; }
   .post-article { padding-top: 40px; }
+  .share-row { gap: 8px; }
   .share-btn span { display: none; }
-  .share-btn { padding: 10px 12px; }
+  .share-btn { padding: 9px 10px; }
+  .share-btn svg { width: 15px; height: 15px; }
   .blog-hero { padding-top: 56px; }
 }
