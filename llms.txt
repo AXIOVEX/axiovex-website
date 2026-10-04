@@ -15,13 +15,13 @@ true. Rapid-response engineering is part of how we work.
 - Blog: https://axiovexsystems.com/blog/
 - Privacy Policy: https://axiovexsystems.com/privacy/
 - Contact: start@axiovexsystems.com
-- Course materials: https://axiovex.github.io/shared-documents/
+- Course materials: https://axiovexsystems.com/documents/
 - GitHub: https://github.com/AXIOVEX
 
 ## What we do
 
 - AI education & training: AI 101 for manufacturing teams
-  (https://axiovex.github.io/shared-documents/)
+  (https://axiovexsystems.com/documents/)
 - Manufacturing AI infrastructure: inference planning, GPU sizing, local AI
   routing, private inference that keeps data on the client's floor
 - Evidence & decision systems: audited workforce intelligence, evidence-centered
@@ -42,7 +42,7 @@ true. Rapid-response engineering is part of how we work.
 ## Recent analysis
 
 - Michigan's September workforce data: what the numbers say, and what they don't
-  (2026-09-30): https://axiovexsystems.com/blog/post.html?p=michigan-workforce-september-2026
+  (2026-09-30): https://axiovexsystems.com/blog/michigan-workforce-september-2026/
 
 ## Public research
 

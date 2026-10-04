@@ -1,3 +1,10 @@
+---
+title: Michigan's September workforce data: what the numbers say, and what they don't
+date: 2026-09-30
+description: Michigan's August unemployment was 5.0% — but the rate conceals a participation story. Analyzing the September workforce intelligence edition: five decisions for education and industry, and the verified release pipeline behind the numbers.
+tags: workforce, michigan, research, AI, education
+slug: michigan-workforce-september-2026
+---
 Our Michigan workforce intelligence project just published its September edition — new labor data through August, graduation-horizon program planning, and cross-sector analysis of AI task impacts. I want to walk through what the numbers actually say, because the headline figure is the least interesting part.
 
 *Evidence cutoff: September 26, 2026 (America/Detroit). All figures below come from the [September edition](https://github.com/AXIOVEX/michigan-workforce-intelligence/tree/main/reports/2026-09-26-graduation-horizons) of the public research repo.*

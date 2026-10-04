@@ -1,0 +1,86 @@
+name: Site sync (documents + blog)
+
+# Keeps the generated parts of axiovexsystems.com current:
+#   - /documents/ mirrors AXIOVEX/shared-documents (push there is picked up by
+#     the 15-minute poll below, or instantly via a repository_dispatch of type
+#     "shared-docs-updated" if a token is ever wired for it)
+#   - /blog/ is statically built from blog/posts/*.md front matter
+#   - sitemap.xml is regenerated from the same data
+# The bot commits generated output back to main; Cloudflare Pages deploys on
+# that push. Bot pushes do not re-trigger workflows, so this cannot loop.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'blog/posts/**'
+      - 'scripts/**'
+      - '.github/workflows/site-sync.yml'
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [shared-docs-updated]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe shared-documents HEAD (scheduled runs)
+        id: probe
+        if: github.event_name == 'schedule'
+        run: |
+          head=$(git ls-remote https://github.com/AXIOVEX/shared-documents.git HEAD | cut -f1)
+          echo "head=$head" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Skip scheduled run when shared-documents is unchanged
+        id: gate
+        if: github.event_name == 'schedule'
+        run: |
+          saved=$(cat scripts/.shared-docs-head 2>/dev/null || echo none)
+          if [ "$saved" = "${{ steps.probe.outputs.head }}" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "shared-documents unchanged — nothing to do"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Clone shared-documents (docs only, full history for dates)
+        if: steps.gate.outputs.skip != 'true'
+        run: |
+          git clone --filter=blob:none --sparse https://github.com/AXIOVEX/shared-documents.git /tmp/shared-documents
+          git -C /tmp/shared-documents sparse-checkout set docs docs.json
+          git -C /tmp/shared-documents rev-parse HEAD > scripts/.shared-docs-head
+
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.skip != 'true'
+        with:
+          node-version: '20'
+
+      - name: Build (documents sync + blog + sitemap)
+        if: steps.gate.outputs.skip != 'true'
+        run: node scripts/build-site.mjs /tmp/shared-documents
+
+      - name: Commit generated output
+        if: steps.gate.outputs.skip != 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No changes — generated output already current.'
+          else
+            git commit -m 'Site sync: regenerate documents, blog, sitemap'
+            git push
+          fi
