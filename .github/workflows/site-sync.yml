@@ -60,7 +60,7 @@ jobs:
         if: steps.gate.outputs.skip != 'true'
         run: |
           git clone --filter=blob:none --sparse https://github.com/AXIOVEX/shared-documents.git /tmp/shared-documents
-          git -C /tmp/shared-documents sparse-checkout set docs docs.json
+          git -C /tmp/shared-documents sparse-checkout set docs
           git -C /tmp/shared-documents rev-parse HEAD > scripts/.shared-docs-head
 
       - uses: actions/setup-node@v4
