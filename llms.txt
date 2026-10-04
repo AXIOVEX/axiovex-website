@@ -35,7 +35,7 @@ true. Rapid-response engineering is part of how we work.
 - What we do: https://axiovexsystems.com/#what-we-do
 - About: https://axiovexsystems.com/#about
 - FAQ: https://axiovexsystems.com/#faq
-- Contact: https://axiovexsystems.com/#contact
+- Contact: https://axiovexsystems.com/contact/
 - Blog: https://axiovexsystems.com/blog/
 - Privacy Policy: https://axiovexsystems.com/privacy/
 
