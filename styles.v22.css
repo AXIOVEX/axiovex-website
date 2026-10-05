@@ -777,3 +777,14 @@ h2 {
 .card h2 { font-size: 20px; margin-bottom: 12px; letter-spacing: -0.01em; line-height: 1.6; text-wrap: wrap; }
 .panel h2 { font-size: 18px; margin-bottom: 10px; letter-spacing: -0.01em; line-height: 1.6; text-wrap: wrap; }
 .footer-col h3 { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cyan); margin-bottom: 14px; }
+
+/* ---------- v22 (2026-10-05, spec 003): page-head rhythm ----------
+   Approved rhythm (WF-G2): last head text -> strata bar 36px.
+   The head construction stacks .section-head margin-bottom (56px) on
+   .section padding-bottom (76px) = 132px of void. Scoped to sections
+   immediately preceding a strata bar — home sections never match (the
+   hero is not a .section, and no home .section precedes a strata).
+   Strata -> content (40px) is set in the pages' own post-strata
+   section padding / the privacy strata margin. */
+.section:has(+ .strata) { padding-bottom: 0; }
+.section:has(+ .strata) .section-head { margin-bottom: 36px; }

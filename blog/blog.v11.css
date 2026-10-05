@@ -1,7 +1,7 @@
 /* Axiovex Systems blog — brand-matched additions (base styles come from /styles.v16.css) */
 
 /* ---------- Blog header ---------- */
-.blog-hero { text-align: center; padding: 72px 0 16px; }
+.blog-hero { text-align: center; padding: 72px 0 36px; } /* v11 (spec 003): lede -> strata 36px rhythm */
 .blog-hero h1 { font-size: clamp(34px, 5vw, 52px); letter-spacing: -0.02em; margin-bottom: 14px; max-width: none; }
 .blog-hero .lede { max-width: 640px; margin: 0 auto; }
 
@@ -36,7 +36,7 @@
   display: grid;
   gap: 20px;
   max-width: 860px;
-  margin: 44px auto 0;
+  margin: 40px auto 0; /* v11 (spec 003): strata -> first card = 40px rhythm; supersedes spec 002's 44px (tools live in the hero, so the rhythm governs the whole gap) */
   padding-bottom: 24px;
 }
 .post-card {
@@ -81,7 +81,7 @@ a.tag-pill:hover, button.tag-pill:hover { background: rgba(0, 222, 246, 0.16); }
 .post-article { max-width: 760px; margin: 0 auto; padding: 56px 0 24px; text-align: left; }
 .post-article h1 { font-size: clamp(30px, 4.6vw, 44px); letter-spacing: -0.02em; margin: 12px 0 18px; line-height: 1.2; text-align: center; max-width: none; }
 .post-article .post-date { text-align: center; }
-.post-article .post-tags { margin-bottom: 26px; justify-content: center; }
+.post-article .post-tags { margin-bottom: 36px; justify-content: center; } /* v11 (spec 003): tags -> strata measures 36px */
 .post-body { text-align: left; margin-top: 36px; font-size: 17px; line-height: 1.75; color: rgba(247, 252, 255, 0.88); }
 .post-body h2 { font-size: 26px; letter-spacing: -0.01em; margin: 40px 0 14px; color: var(--ink); text-align: left; }
 .post-body h3 { font-size: 20px; margin: 32px 0 10px; color: var(--ink); text-align: left; }
