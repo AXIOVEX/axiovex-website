@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Axiovex Systems — Redesign Wireframes (Rockeagle UX, Axiovex brand)</title>
+<style>
+  :root{
+    --navy:#081F32; --navy-deep:#04121F; --panel:#0C2A42; --panel2:#0A2438;
+    --cyan:#00DEF6; --ink:#F7FCFF; --muted:rgba(247,252,255,.72); --faint:rgba(247,252,255,.48);
+    --line:rgba(0,222,246,.28); --dash:rgba(247,252,255,.38);
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--navy-deep);color:var(--ink);font-family:var(--font);line-height:1.55;padding:40px 20px 80px}
+  .wrap{max-width:1180px;margin:0 auto}
+  .doc-head{text-align:center;margin-bottom:14px}
+  .doc-head .eyebrow{color:var(--cyan);text-transform:uppercase;letter-spacing:.22em;font-size:13px;font-weight:600}
+  .doc-head h1{font-size:clamp(30px,4.6vw,46px);letter-spacing:-.02em;margin:10px 0 12px}
+  .doc-head p{color:var(--muted);max-width:760px;margin:0 auto}
+  .decisions{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:22px 26px;margin:30px 0 8px}
+  .decisions h2{font-size:19px;margin-bottom:10px}
+  .decisions li{color:var(--muted);margin:0 0 8px 20px}
+  .decisions li strong{color:var(--ink)}
+  .flag{color:var(--cyan);font-weight:700}
+  h2.wf-title{font-size:24px;letter-spacing:-.01em;margin:56px 0 4px}
+  h2.wf-title .wf-id{color:var(--cyan);font-size:14px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:6px}
+  .wf-sub{color:var(--faint);margin-bottom:16px;font-size:15px}
+  .frame{background:var(--navy);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .frame-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid rgba(247,252,255,.1);background:rgba(255,255,255,.03)}
+  .dot{width:10px;height:10px;border-radius:50%;background:rgba(247,252,255,.25)}
+  .url{color:var(--faint);font-size:13px;margin-left:8px}
+  .stage{padding:26px 30px 34px}
+  .stage.mobile{max-width:400px;margin:0 auto}
+  .blk{border:1.5px dashed var(--dash);border-radius:10px;padding:20px 22px;position:relative;margin-bottom:18px}
+  .blk.solid{border-style:solid;border-color:var(--line);background:var(--panel2)}
+  .tag{position:absolute;top:-9px;left:14px;background:var(--navy);padding:0 8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);font-weight:700}
+  .frame .tag{background:var(--navy)}
+  .eyebrow{color:var(--cyan);text-transform:uppercase;letter-spacing:.22em;font-size:12px;font-weight:600;text-align:center}
+  .h-real{font-size:30px;letter-spacing:-.02em;line-height:1.15;text-align:center;margin:8px 0}
+  .h-real.left{text-align:left}
+  .h2-real{font-size:23px;letter-spacing:-.01em;text-align:center;margin:6px 0 8px}
+  .lede-c{color:var(--muted);text-align:center;max-width:56ch;margin:0 auto}
+  .bar{height:8px;border-radius:4px;background:rgba(247,252,255,.16);margin:7px 0}
+  .bar.short{width:55%}.bar.med{width:78%}.bar.center{margin-left:auto;margin-right:auto}
+  .btnrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+  .btn{border:1.5px solid var(--cyan);color:var(--cyan);border-radius:999px;padding:9px 20px;font-size:14px;font-weight:600}
+  .btn.fill{background:var(--cyan);color:var(--navy)}
+  .btn.ghost{border-color:rgba(247,252,255,.4);color:var(--ink)}
+  .strata{display:flex;height:8px;border-radius:4px;overflow:hidden;margin:0 0 6px}
+  .strata div{flex:1}
+  .strata-labels{display:flex;margin-bottom:18px}
+  .strata-labels span{flex:1;text-align:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .card{border:1.5px dashed var(--dash);border-radius:10px;padding:18px;position:relative}
+  .card .num{color:var(--cyan);font-weight:700;font-size:14px;letter-spacing:.1em}
+  .card .accentbar{height:4px;width:34px;background:var(--cyan);border-radius:2px;margin:8px 0 12px}
+  .card h3{font-size:18px;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:14px}
+  .card .explore{color:var(--cyan);font-size:13px;font-weight:700;letter-spacing:.06em;margin-top:12px;display:block}
+  .notes{margin:14px 2px 0;color:var(--muted);font-size:14.5px}
+  .notes li{margin:0 0 6px 20px}
+  .notes strong{color:var(--ink)}
+  .crumb{color:var(--faint);font-size:13px;margin-bottom:10px}
+  .crumb b{color:var(--muted);font-weight:600}
+  .leftcol{text-align:left}
+  .tick{color:var(--muted);margin:0 0 8px 4px;font-size:15px}
+  .tick::before{content:"✓ ";color:var(--cyan);font-weight:700}
+  .faqrow{border:1.5px dashed var(--dash);border-radius:10px;padding:14px 18px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+  .faqrow b{color:var(--ink);font-weight:600}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:20px}
+  .foot-grid h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+  .foot-grid p,.foot-grid li{color:var(--muted);font-size:14px;list-style:none;margin-bottom:7px}
+  .foot-bottom{display:flex;justify-content:space-between;border-top:1px solid rgba(247,252,255,.12);padding-top:14px;color:var(--faint);font-size:13px;margin-top:6px}
+  .navmock{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .navlinks{display:flex;gap:18px;color:var(--muted);font-size:14px;align-items:center;flex-wrap:wrap}
+  .navlinks .cta{border:1.5px solid var(--cyan);color:var(--cyan);border-radius:999px;padding:6px 16px;font-weight:600}
+  .logo-ph{border:1.5px dashed var(--dash);border-radius:8px;padding:8px 14px;font-weight:700;letter-spacing:.06em;font-size:14px;color:var(--ink)}
+  .burger{font-size:20px;color:var(--muted)}
+  .search-ph{border:1.5px dashed var(--dash);border-radius:999px;padding:12px 20px;color:var(--faint);max-width:520px;margin:14px auto 0;text-align:left;font-size:14px}
+  .approve{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:24px 28px;margin-top:60px}
+  .approve h2{font-size:21px;margin-bottom:12px}
+  .approve li{list-style:none;color:var(--muted);margin-bottom:8px;font-size:15.5px}
+  .approve li::before{content:"☐  ";color:var(--cyan);font-size:17px}
+  @media(max-width:760px){.grid3,.grid2,.foot-grid{grid-template-columns:1fr}.stage{padding:20px 16px 26px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="doc-head">
+    <p class="eyebrow">Axiovex Systems — Redesign Wireframes</p>
+    <h1>Rockeagle&rsquo;s UX, Axiovex&rsquo;s brand</h1>
+    <p>Each page of axiovexsystems.com re-structured on the Rockeagle Group site&rsquo;s UX patterns — sticky nav with CTA, strata bar, premise &rarr; services grid &rarr; proof &rarr; people &rarr; CTA band &rarr; three-column footer — rendered in Axiovex navy / cyan and the current Axiovex font stack. Dashed boxes are layout blocks; the small cyan labels name each block. <strong style="color:var(--ink)">Nothing on the live site changes until every wireframe here is approved.</strong></p>
+  </div>
+
+  <div class="decisions">
+    <h2>Five adaptations baked into these wireframes — flag anything you want changed</h2>
+    <ul>
+      <li><span class="flag">1 · Centered axis kept.</span> Rockeagle&rsquo;s hero and page heads are left-aligned. Your standing direction is full symmetry, so Axiovex keeps its <strong>centered titles and one center axis</strong>; Rockeagle contributes the structure, rhythm, and components, not its left alignment.</li>
+      <li><span class="flag">2 · Strata bar = 3 segments.</span> Rockeagle&rsquo;s bar has 5 segments for 5 practices. Ours has <strong>3 segments for the 3 services</strong>, in cyan-family tints.</li>
+      <li><span class="flag">3 · No contact form.</span> Rockeagle&rsquo;s contact page is form-first. Our privacy policy states the site has no forms, and there&rsquo;s no form backend — so the contact wireframe keeps Rockeagle&rsquo;s two-column layout but the left column is <strong>email routes</strong> (start@ / legal@), not a form.</li>
+      <li><span class="flag">4 · No invented proof.</span> Rockeagle&rsquo;s track-record band uses stats and brand logos. Axiovex has none published, so that band becomes <strong>&ldquo;Evidence in practice&rdquo;</strong> — the latest published analysis plus the AI 101 materials. Real content only.</li>
+      <li><span class="flag">5 · FAQ stays.</span> Rockeagle has no FAQ; ours remains, restyled as clean rows inside the new rhythm.</li>
+    </ul>
+  </div>
+
+  <!-- ================= GLOBAL COMPONENTS ================= -->
+  <h2 class="wf-title"><span class="wf-id">WF-G1 · Global — Sticky navigation</span>Same on every page</h2>
+  <p class="wf-sub">Rockeagle pattern: sticky, translucent blurred navy, hairline bottom border, bordered CTA button at right.</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">all pages</span></div>
+    <div class="stage">
+      <div class="blk">
+        <span class="tag">Sticky nav · 78px · blur</span>
+        <div class="navmock">
+          <span class="logo-ph">◆ AXIOVEX <span style="color:var(--faint);font-weight:400">Systems</span></span>
+          <div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Documents ↗</span><span class="cta">Contact</span></div>
+        </div>
+      </div>
+      <div class="blk">
+        <span class="tag">Mobile / tablet · hamburger</span>
+        <div class="navmock">
+          <span class="logo-ph">◆ AXIOVEX</span>
+          <span class="burger">☰</span>
+        </div>
+        <div class="bar med" style="margin-top:14px"></div>
+        <p style="color:var(--faint);font-size:13.5px">Panel drops below the nav, links stacked full-width, Contact CTA full-width at the bottom. Panel closes on link tap.</p>
+      </div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>Change vs today:</strong> nav becomes sticky with a blur backdrop and a bordered Contact button; links and order unchanged. Current page shown in cyan.</li>
+  </ul>
+
+  <h2 class="wf-title"><span class="wf-id">WF-G2 · Global — Strata bar</span>Under every hero and page head</h2>
+  <p class="wf-sub">Rockeagle&rsquo;s signature divider: one segment per practice. Ours: one per service.</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">all pages</span></div>
+    <div class="stage">
+      <div class="strata"><div style="background:#00DEF6"></div><div style="background:#2E9DB8"></div><div style="background:#7FD8E8"></div></div>
+      <div class="strata-labels"><span>AI Education &amp; Training</span><span>Manufacturing AI</span><span>Evidence &amp; Decisions</span></div>
+      <p style="color:var(--faint);font-size:13.5px;text-align:center">5px tall, decorative (<span style="color:var(--muted)">aria-hidden</span>), labels shown here for the wireframe only — the bar itself carries no text.</p>
+    </div>
+  </div>
+
+  <h2 class="wf-title"><span class="wf-id">WF-G3 · Global — CTA band</span>Above the footer on every page (except Contact, which is the CTA)</h2>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">all pages</span></div>
+    <div class="stage">
+      <div class="blk solid" style="text-align:center">
+        <span class="tag">CTA band</span>
+        <p class="eyebrow">Next step</p>
+        <p class="h2-real">Tell us what you&rsquo;re trying to solve.</p>
+        <p class="lede-c">One sentence on what happens next — a founder reads it, not a queue.</p>
+        <div class="btnrow"><span class="btn fill">Start a conversation →</span></div>
+      </div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>Change vs today:</strong> today only the home page has a contact section. The band gives every page — blog, article, privacy — the same next step into Contact.</li>
+  </ul>
+
+  <h2 class="wf-title"><span class="wf-id">WF-G4 · Global — Footer</span>Three columns + bottom row</h2>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">all pages</span></div>
+    <div class="stage">
+      <div class="foot-grid">
+        <div>
+          <span class="logo-ph">◆ AXIOVEX Systems</span>
+          <p style="margin-top:14px">Engineering clarity into difficult systems. Michigan-rooted, shop-floor serious.</p>
+          <p style="margin-top:10px;color:var(--cyan)">in &nbsp;·&nbsp; GitHub</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul><li>What we do</li><li>About</li><li>FAQ</li><li>Blog</li></ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul><li>Contact</li><li>Documents ↗</li><li>Privacy Policy</li></ul>
+        </div>
+      </div>
+      <div class="foot-bottom"><span>© 2026 Axiovex Systems, LLC. All rights reserved.</span><span>Macomb County · Michigan</span></div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>Change vs today:</strong> footer goes from a single centered column to Rockeagle&rsquo;s 3-column layout with a location line at right. Logo, socials, and legal line all carry over.</li>
+  </ul>
+
+  <h2 class="wf-title"><span class="wf-id">WF-G5 · Global — Service card</span>Used in What we do (home)</h2>
+  <p class="wf-sub">Rockeagle practice-card pattern: number on top, accent bar that grows on hover, name, description, explore link.</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">component</span></div>
+    <div class="stage">
+      <div class="grid3">
+        <div class="card"><span class="num">01</span><div class="accentbar"></div><h3>AI education &amp; training</h3><p>2–3 line description — current card copy carries over.</p><span class="explore">EXPLORE →</span></div>
+        <div class="card"><span class="num">02</span><div class="accentbar"></div><h3>Manufacturing AI infrastructure</h3><p>2–3 line description — current card copy carries over.</p><span class="explore">EXPLORE →</span></div>
+        <div class="card"><span class="num">03</span><div class="accentbar"></div><h3>Evidence &amp; decision systems</h3><p>2–3 line description — current card copy carries over.</p><span class="explore">EXPLORE →</span></div>
+      </div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>EXPLORE →</strong> scrolls to that service&rsquo;s detail band on the home page (we stay single-page; Rockeagle links out to practice pages).</li>
+    <li>Cards stay <strong>perfectly symmetric</strong>: equal height, equal padding, one row of three, stacking to one column on mobile.</li>
+  </ul>
+
+  <!-- ================= HOME ================= -->
+  <h2 class="wf-title"><span class="wf-id">WF-01 · Home — Desktop</span>axiovexsystems.com/</h2>
+  <p class="wf-sub">Rockeagle home flow: Hero → Strata → Premise → Honesty → Practices grid → Proof → People → CTA band → Footer. Ours, in Axiovex order:</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com</span></div>
+    <div class="stage">
+      <div class="blk">
+        <span class="tag">Nav · WF-G1</span>
+        <div class="navmock"><span class="logo-ph">◆ AXIOVEX <span style="color:var(--faint);font-weight:400">Systems</span></span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Documents ↗</span><span class="cta">Contact</span></div></div>
+      </div>
+
+      <div class="blk solid">
+        <span class="tag">Hero</span>
+        <p class="eyebrow">Axiovex Systems</p>
+        <p class="h-real">Engineering clarity into<br>difficult systems.</p>
+        <p class="lede-c">Current lede carries over — expert consulting team, AI put to work practically and responsibly, Michigan-rooted. (≤60ch per Rockeagle&rsquo;s rhythm; may need a light trim.)</p>
+        <div class="btnrow"><span class="btn fill">See what we do ↓</span><span class="btn">Start a conversation</span></div>
+        <p style="color:var(--faint);font-size:13px;text-align:center;margin-top:14px">Background: faint angular-line motif + logo watermark at right, low opacity (Rockeagle uses topographic lines + crest watermark).</p>
+      </div>
+
+      <div class="strata"><div style="background:#00DEF6"></div><div style="background:#2E9DB8"></div><div style="background:#7FD8E8"></div></div>
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-bottom:18px">STRATA BAR · WF-G2</p>
+      <div class="blk" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">Share row · TOP ONLY · revised 2026-10-05</span>
+        <p style="text-align:center;margin:22px 0 20px"><span class="btn ghost" style="padding:5px 13px;font-size:12.5px">X</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Facebook</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">LinkedIn</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Email</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Text</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Copy link</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">More&hellip;</span></p>
+        <p style="color:var(--faint);font-size:13.5px;text-align:center">The article&rsquo;s only share row &mdash; directly under the strata divider, with clear space around it (22px above, 20px below). &ldquo;Text&rdquo; appears on touch devices only.</p>
+      </div>
+
+      <div class="blk">
+        <span class="tag">The method · premise</span>
+        <p class="eyebrow">The method</p>
+        <p class="h2-real">Difficult problem. Clear evidence. Engineered solution.</p>
+        <div class="grid2" style="margin-top:14px;text-align:left">
+          <div><p style="color:var(--ink);font-weight:600;margin-bottom:6px">The out-of-the-box approach</p><div class="bar"></div><div class="bar med"></div><div class="bar"></div><p style="color:var(--faint);font-size:13.5px">Structural epistemic framework copy — current What-we-do intro, moved up as the premise.</p></div>
+          <div><p style="color:var(--ink);font-weight:600;margin-bottom:6px">How we work</p><div class="bar"></div><div class="bar"></div><div class="bar short"></div><p style="color:var(--faint);font-size:13.5px">Rapid-response note lives here — part of how we work, not a separate service (your Sept 30 direction).</p></div>
+        </div>
+      </div>
+
+      <div class="blk">
+        <span class="tag">What we do · services grid</span>
+        <p class="eyebrow">What we do</p>
+        <p class="h2-real">Three services, one method.</p>
+        <div class="grid3" style="margin-top:16px">
+          <div class="card"><span class="num">01</span><div class="accentbar"></div><h3>AI education &amp; training</h3><p>Current copy.</p><span class="explore">EXPLORE →</span></div>
+          <div class="card"><span class="num">02</span><div class="accentbar"></div><h3>Manufacturing AI infrastructure</h3><p>Current copy.</p><span class="explore">EXPLORE →</span></div>
+          <div class="card"><span class="num">03</span><div class="accentbar"></div><h3>Evidence &amp; decision systems</h3><p>Current copy.</p><span class="explore">EXPLORE →</span></div>
+        </div>
+        <div class="card" style="margin-top:16px;text-align:center"><h3>Not sure where your problem fits?</h3><p>That&rsquo;s normal — most don&rsquo;t, at first.</p><span class="explore">START A CONVERSATION →</span></div>
+      </div>
+
+      <div class="blk">
+        <span class="tag">Evidence in practice · proof band</span>
+        <p class="eyebrow">Evidence in practice</p>
+        <p class="h2-real">Published, checkable, ours.</p>
+        <div class="grid2" style="margin-top:16px;text-align:left">
+          <div class="card"><p style="color:var(--cyan);font-size:12px;letter-spacing:.14em;font-weight:700">LATEST ANALYSIS</p><h3 style="margin-top:8px">Michigan workforce — September findings</h3><p>Latest blog article, featured with date + 1-line summary.</p><span class="explore">READ THE ANALYSIS →</span></div>
+          <div class="card"><p style="color:var(--cyan);font-size:12px;letter-spacing:.14em;font-weight:700">AI 101 · OPEN MATERIALS</p><h3 style="margin-top:8px">Course deck &amp; one-page handout</h3><p>The public AI 101 materials, free to read and share.</p><span class="explore">OPEN THE DOCUMENTS ↗</span></div>
+        </div>
+        <p style="color:var(--faint);font-size:13.5px;margin-top:12px">Rockeagle fills this band with stats + client logos. We publish evidence instead — no numbers we can&rsquo;t back.</p>
+      </div>
+
+      <div class="blk">
+        <span class="tag">About · name + founders</span>
+        <p class="eyebrow">About</p>
+        <p class="h2-real">Difficult problems, solved — whatever it takes.</p>
+        <div class="bar med center"></div><div class="bar center"></div>
+        <p style="color:var(--muted);text-align:center;max-width:60ch;margin:10px auto 0">Name-meaning block carries over: <em>Axio</em> from axiom, <em>Vex</em> from <em>vexare</em> — &ldquo;the name is the method.&rdquo;</p>
+        <div class="grid2" style="margin-top:16px">
+          <div class="card" style="text-align:center"><div class="bar short center" style="height:64px;border-radius:10px"></div><h3 style="margin-top:12px">Tristen Pierson</h3><p>Co-Founder &amp; President</p></div>
+          <div class="card" style="text-align:center"><div class="bar short center" style="height:64px;border-radius:10px"></div><h3 style="margin-top:12px">Rockson Arnold</h3><p>Co-Founder &amp; Chief of Strategy</p></div>
+        </div>
+        <p style="color:var(--faint);font-size:13.5px;text-align:center;margin-top:10px">Portrait blocks are placeholders — real photos only if you want them; initials medallions otherwise.</p>
+      </div>
+
+      <div class="blk">
+        <span class="tag">FAQ · rows</span>
+        <p class="eyebrow">FAQ</p>
+        <p class="h2-real">Questions, answered plainly.</p>
+        <div style="margin-top:14px">
+          <div class="faqrow"><b>Current question 1</b><span>+</span></div>
+          <div class="faqrow"><b>Current question 2</b><span>+</span></div>
+          <div class="faqrow"><b>Current question 3</b><span>+</span></div>
+          <p style="color:var(--faint);font-size:13.5px;text-align:center">All current questions carry over; rows expand in place (accordion), one open at a time.</p>
+        </div>
+      </div>
+
+      <div class="blk solid" style="text-align:center">
+        <span class="tag">CTA band · WF-G3</span>
+        <p class="eyebrow">Next step</p>
+        <p class="h2-real">Tell us what you&rsquo;re trying to solve.</p>
+        <div class="btnrow"><span class="btn fill">Start a conversation →</span></div>
+      </div>
+
+      <div class="blk">
+        <span class="tag">Footer · WF-G4</span>
+        <div class="foot-grid">
+          <div><span class="logo-ph">◆ AXIOVEX Systems</span><p style="margin-top:12px">Mission line + socials</p></div>
+          <div><h4>Explore</h4><ul><li>What we do</li><li>About</li><li>FAQ</li><li>Blog</li></ul></div>
+          <div><h4>Company</h4><ul><li>Contact</li><li>Documents ↗</li><li>Privacy Policy</li></ul></div>
+        </div>
+        <div class="foot-bottom"><span>© 2026 Axiovex Systems, LLC</span><span>Macomb County · Michigan</span></div>
+      </div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>Section order is the main change:</strong> Method (premise) moves above What we do; the proof band and founders get their own full-width bands; the old contact section is replaced by the CTA band + dedicated Contact page (WF-06).</li>
+    <li><strong>Scroll-reveal</strong> on sections, Rockeagle-style, with reduced-motion fully honoured.</li>
+  </ul>
+
+  <h2 class="wf-title"><span class="wf-id">WF-02 · Home — Mobile (390px)</span>Same page, stacked</h2>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com · 390 × 844</span></div>
+    <div class="stage mobile">
+      <div class="blk"><span class="tag">Nav</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><span class="burger">☰</span></div></div>
+      <div class="blk solid"><span class="tag">Hero</span><p class="eyebrow">Axiovex Systems</p><p class="h-real" style="font-size:25px">Engineering clarity into difficult systems.</p><div class="bar med center"></div><div class="btnrow" style="flex-direction:column;align-items:stretch"><span class="btn fill" style="text-align:center">See what we do ↓</span><span class="btn" style="text-align:center">Start a conversation</span></div></div>
+      <div class="strata"><div style="background:#00DEF6"></div><div style="background:#2E9DB8"></div><div style="background:#7FD8E8"></div></div>
+      <div class="blk"><span class="tag">Method</span><p class="h2-real" style="font-size:20px">Difficult problem. Clear evidence…</p><div class="bar"></div><div class="bar med"></div><p style="color:var(--faint);font-size:13px">2-col body stacks to 1 col.</p></div>
+      <div class="blk"><span class="tag">What we do</span><div class="card" style="margin-bottom:12px"><span class="num">01</span><div class="accentbar"></div><h3>AI education &amp; training</h3><span class="explore">EXPLORE →</span></div><div class="card" style="margin-bottom:12px"><span class="num">02</span><div class="accentbar"></div><h3>Manufacturing AI</h3><span class="explore">EXPLORE →</span></div><div class="card"><span class="num">03</span><div class="accentbar"></div><h3>Evidence &amp; decisions</h3><span class="explore">EXPLORE →</span></div></div>
+      <div class="blk"><span class="tag">Proof · About · FAQ</span><div class="bar"></div><div class="bar med"></div><p style="color:var(--faint);font-size:13px">Cards stack 1-col; founder cards stack; FAQ rows full width.</p></div>
+      <div class="blk solid" style="text-align:center"><span class="tag">CTA band</span><p class="h2-real" style="font-size:20px">Tell us what you&rsquo;re trying to solve.</p><div class="btnrow"><span class="btn fill">Start a conversation →</span></div></div>
+      <div class="blk"><span class="tag">Footer</span><p style="color:var(--muted);font-size:14px">3 columns stack vertically, centered; bottom row stacks.</p></div>
+    </div>
+  </div>
+
+  <!-- ================= BLOG INDEX ================= -->
+  <h2 class="wf-title"><span class="wf-id">WF-03 · Blog index</span>axiovexsystems.com/blog/</h2>
+  <p class="wf-sub">Rockeagle sub-page pattern: page head with breadcrumb + strata, then content. <b>REVISED 2026-10-05 (pending approval):</b> more air under the divider &mdash; the article list starts lower (list top margin 32px &rarr; 44px).</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/blog/</span></div>
+    <div class="stage">
+      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span style="color:var(--cyan)">Blog</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
+      <div class="blk solid">
+        <span class="tag">Page head</span>
+        <p class="crumb" style="text-align:center">Home / <b>Blog</b></p>
+        <p class="eyebrow">Axiovex Systems</p>
+        <p class="h-real">Analysis &amp; notes</p>
+        <p class="lede-c">What the data actually says — on Michigan work, manufacturing AI, and engineering with evidence.</p>
+        <div class="search-ph">⌕ &nbsp;Search articles by title, topic, or tag…</div>
+        <p style="color:var(--faint);font-size:13px;text-align:center;margin-top:10px">1 article published</p>
+      </div>
+      <div class="strata"><div style="background:#00DEF6"></div><div style="background:#2E9DB8"></div><div style="background:#7FD8E8"></div></div>
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-bottom:18px">STRATA BAR · WF-G2</p>
+      <div class="blk" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">Share row · TOP ONLY · revised 2026-10-05</span>
+        <p style="text-align:center;margin:22px 0 20px"><span class="btn ghost" style="padding:5px 13px;font-size:12.5px">X</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Facebook</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">LinkedIn</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Email</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Text</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Copy link</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">More&hellip;</span></p>
+        <p style="color:var(--faint);font-size:13.5px;text-align:center">The article&rsquo;s only share row &mdash; directly under the strata divider, with clear space around it (22px above, 20px below). &ldquo;Text&rdquo; appears on touch devices only.</p>
+      </div>
+      <div class="blk">
+        <span class="tag">Article list</span>
+        <div class="card" style="text-align:center;max-width:760px;margin:0 auto">
+          <div class="accentbar" style="margin-left:auto;margin-right:auto"></div>
+          <p style="color:var(--cyan);font-size:12.5px;font-weight:700;letter-spacing:.08em">SEPTEMBER 30, 2026</p>
+          <h3 style="font-size:21px;margin:8px 0">Michigan workforce — September findings</h3>
+          <p>Current description carries over.</p>
+          <p style="margin-top:10px"><span class="btn ghost" style="padding:4px 14px;font-size:12.5px">workforce</span> <span class="btn ghost" style="padding:4px 14px;font-size:12.5px">michigan</span></p>
+          <span class="explore">READ THE ARTICLE →</span>
+        </div>
+        <p style="color:var(--faint);font-size:13.5px;text-align:center;margin-top:14px">Cards keep today&rsquo;s centered design, gaining the accent-bar motif so the blog matches the new service cards. Search + tag filtering unchanged.</p>
+      </div>
+      <div class="blk solid" style="text-align:center"><span class="tag">CTA band · WF-G3</span><p class="eyebrow">Next step</p><p class="h2-real">Working on something like this?</p><div class="btnrow"><span class="btn fill">Start a conversation →</span></div></div>
+      <div class="blk"><span class="tag">Footer · WF-G4</span><p style="color:var(--muted);font-size:14px;text-align:center">Three-column footer (see WF-G4).</p></div>
+    </div>
+  </div>
+
+  <!-- ================= ARTICLE ================= -->
+  <h2 class="wf-title"><span class="wf-id">WF-04 · Blog article</span>axiovexsystems.com/blog/&lt;article&gt;/</h2>
+  <p class="wf-sub">Page head + strata, then your standing rule: centered title block, left-justified editorial body. <b>REVISED 2026-10-05 (pending approval):</b> share row at the top only, with more air under the strata divider — see the revised blocks in this frame.</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/blog/michigan-workforce-september-2026/</span></div>
+    <div class="stage">
+      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span style="color:var(--cyan)">Blog</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
+      <div class="blk solid">
+        <span class="tag">Article head · centered</span>
+        <p class="crumb" style="text-align:center">Home / Blog / <b>Michigan workforce — September findings</b></p>
+        <p style="color:var(--cyan);font-size:12.5px;font-weight:700;letter-spacing:.08em;text-align:center">SEPTEMBER 30, 2026</p>
+        <p class="h-real" style="font-size:27px">Michigan workforce —<br>September findings</p>
+        <p style="text-align:center;margin-top:8px"><span class="btn ghost" style="padding:4px 14px;font-size:12.5px">workforce</span> <span class="btn ghost" style="padding:4px 14px;font-size:12.5px">michigan</span></p>
+      </div>
+      <div class="strata"><div style="background:#00DEF6"></div><div style="background:#2E9DB8"></div><div style="background:#7FD8E8"></div></div>
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-bottom:18px">STRATA BAR · WF-G2</p>
+      <div class="blk" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">Share row · TOP ONLY · revised 2026-10-05</span>
+        <p style="text-align:center;margin:22px 0 20px"><span class="btn ghost" style="padding:5px 13px;font-size:12.5px">X</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Facebook</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">LinkedIn</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Email</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Text</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Copy link</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">More&hellip;</span></p>
+        <p style="color:var(--faint);font-size:13.5px;text-align:center">The article&rsquo;s only share row &mdash; directly under the strata divider, with clear space around it (22px above, 20px below). &ldquo;Text&rdquo; appears on touch devices only.</p>
+      </div>
+      <div class="blk leftcol" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">Body · left-justified column</span>
+        <p style="font-weight:600;margin-bottom:8px">Section heading</p>
+        <div class="bar"></div><div class="bar"></div><div class="bar med"></div><div class="bar"></div><div class="bar short"></div>
+        <p style="color:var(--faint);font-size:13.5px;margin-top:10px">Editorial column exactly as today — LinkedIn/blog-style reading measure (~760px), headings left, tables and quotes as-is.</p>
+      </div>
+      <div class="blk" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">More analysis</span>
+        <p style="color:var(--faint);font-size:13.5px"><b>REVISED 2026-10-05:</b> no share block at the end of the article &mdash; sharing lives at the top only (see the Share row block above).</p>
+        <div class="grid2" style="margin-top:14px">
+          <div class="card"><p style="color:var(--cyan);font-size:12px;letter-spacing:.12em;font-weight:700">MORE ANALYSIS</p><h3 style="font-size:16.5px;margin-top:6px">Next article card</h3><span class="explore">READ →</span></div>
+          <div class="card"><p style="color:var(--cyan);font-size:12px;letter-spacing:.12em;font-weight:700">MORE ANALYSIS</p><h3 style="font-size:16.5px;margin-top:6px">Next article card</h3><span class="explore">READ →</span></div>
+        </div>
+        <p style="color:var(--faint);font-size:13.5px;margin-top:10px">Rockeagle&rsquo;s &ldquo;Also under the group&rdquo; cross-link row, adapted: up to 2 other articles (hidden until a second article exists). &larr; Back to all articles stays below.</p>
+      </div>
+      <div class="blk solid" style="text-align:center"><span class="tag">CTA band · WF-G3</span><p class="eyebrow">Next step</p><p class="h2-real">Questions about this analysis?</p><div class="btnrow"><span class="btn fill">Start a conversation →</span></div></div>
+      <div class="blk"><span class="tag">Footer · WF-G4</span><p style="color:var(--muted);font-size:14px;text-align:center">Three-column footer (see WF-G4).</p></div>
+    </div>
+  </div>
+
+  <!-- ================= PRIVACY ================= -->
+  <h2 class="wf-title"><span class="wf-id">WF-05 · Privacy policy</span>axiovexsystems.com/privacy/</h2>
+  <p class="wf-sub">Same page-head pattern; legal column untouched.</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/privacy/</span></div>
+    <div class="stage">
+      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
+      <div class="blk solid">
+        <span class="tag">Page head · centered</span>
+        <p class="crumb" style="text-align:center">Home / <b>Privacy Policy</b></p>
+        <p class="eyebrow">Legal</p>
+        <p class="h-real">Privacy Policy</p>
+        <p style="color:var(--faint);text-align:center;font-size:14px">Last updated: September 30, 2026</p>
+      </div>
+      <div class="strata"><div style="background:#00DEF6"></div><div style="background:#2E9DB8"></div><div style="background:#7FD8E8"></div></div>
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-bottom:18px">STRATA BAR · WF-G2</p>
+      <div class="blk" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">Share row · TOP ONLY · revised 2026-10-05</span>
+        <p style="text-align:center;margin:22px 0 20px"><span class="btn ghost" style="padding:5px 13px;font-size:12.5px">X</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Facebook</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">LinkedIn</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Email</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Text</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Copy link</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">More&hellip;</span></p>
+        <p style="color:var(--faint);font-size:13.5px;text-align:center">The article&rsquo;s only share row &mdash; directly under the strata divider, with clear space around it (22px above, 20px below). &ldquo;Text&rdquo; appears on touch devices only.</p>
+      </div>
+      <div class="blk leftcol" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">Legal body · unchanged</span>
+        <p style="font-weight:600;margin-bottom:8px">1. Who we are</p>
+        <div class="bar"></div><div class="bar med"></div>
+        <p style="font-weight:600;margin:14px 0 8px">2. Information we collect</p>
+        <div class="bar"></div><div class="bar"></div><div class="bar short"></div>
+        <p style="color:var(--faint);font-size:13.5px;margin-top:10px">All 12 sections carry over word-for-word; contact stays legal@axiovexsystems.com.</p>
+      </div>
+      <div class="blk solid" style="text-align:center"><span class="tag">CTA band · WF-G3</span><p class="eyebrow">Next step</p><p class="h2-real">Questions about this policy?</p><p class="lede-c">legal@axiovexsystems.com</p></div>
+      <div class="blk"><span class="tag">Footer · WF-G4</span><p style="color:var(--muted);font-size:14px;text-align:center">Three-column footer (see WF-G4).</p></div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><span class="flag">Flag:</span> Rockeagle puts a CTA band on every page. On a legal page that&rsquo;s unusual — here it&rsquo;s reduced to the policy contact line. Strike it if you&rsquo;d rather the page end at the legal text.</li>
+  </ul>
+
+  <!-- ================= CONTACT ================= -->
+  <h2 class="wf-title"><span class="wf-id">WF-06 · Contact (new page)</span>axiovexsystems.com/contact/</h2>
+  <p class="wf-sub">Rockeagle&rsquo;s contact layout: page head, then two columns — note-sending left, context panels right. No CTA band; the page is the CTA.</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/contact/</span></div>
+    <div class="stage">
+      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Documents ↗</span><span class="cta" style="background:var(--cyan);color:var(--navy)">Contact</span></div></div></div>
+      <div class="blk solid">
+        <span class="tag">Page head · centered</span>
+        <p class="crumb" style="text-align:center">Home / <b>Contact</b></p>
+        <p class="eyebrow">Contact</p>
+        <p class="h-real">Start a conversation.</p>
+        <p class="lede-c">The first conversation is a diagnosis, not a pitch. Tell us the problem; we&rsquo;ll tell you plainly whether we can help.</p>
+      </div>
+      <div class="strata"><div style="background:#00DEF6"></div><div style="background:#2E9DB8"></div><div style="background:#7FD8E8"></div></div>
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-bottom:18px">STRATA BAR · WF-G2</p>
+      <div class="blk" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">Share row · TOP ONLY · revised 2026-10-05</span>
+        <p style="text-align:center;margin:22px 0 20px"><span class="btn ghost" style="padding:5px 13px;font-size:12.5px">X</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Facebook</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">LinkedIn</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Email</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Text</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Copy link</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">More&hellip;</span></p>
+        <p style="color:var(--faint);font-size:13.5px;text-align:center">The article&rsquo;s only share row &mdash; directly under the strata divider, with clear space around it (22px above, 20px below). &ldquo;Text&rdquo; appears on touch devices only.</p>
+      </div>
+      <div class="grid2" style="align-items:start">
+        <div class="blk leftcol" style="margin-bottom:0">
+          <span class="tag">Send a note · ~55%</span>
+          <p class="eyebrow" style="text-align:left">Send a note</p>
+          <div class="card" style="margin-top:14px"><h3 style="font-size:17px">New projects, courses &amp; questions</h3><p>AI for your operation, AI 101 sessions, or a difficult problem you&rsquo;re facing.</p><span class="explore">start@axiovexsystems.com →</span></div>
+          <div class="card" style="margin-top:14px"><h3 style="font-size:17px">Privacy &amp; legal</h3><p>Questions about the privacy policy or legal matters.</p><span class="explore">legal@axiovexsystems.com →</span></div>
+          <p style="color:var(--faint);font-size:13.5px;margin-top:14px">Each route opens your mail app — no form, no tracking, exactly as the privacy policy describes. Replies come from a founder.</p>
+        </div>
+        <div>
+          <div class="blk leftcol">
+            <span class="tag">Panel · where we work</span>
+            <p style="font-weight:600;margin-bottom:8px">Where we work</p>
+            <p style="color:var(--muted);font-size:15px">Michigan-rooted, based in Macomb County. On-site with manufacturing clients; remote everywhere else.</p>
+          </div>
+          <div class="blk leftcol" style="margin-bottom:0">
+            <span class="tag">Panel · good first conversations</span>
+            <p style="font-weight:600;margin-bottom:10px">Good first conversations include</p>
+            <p class="tick">The problem, in plain words</p>
+            <p class="tick">What you&rsquo;ve already tried</p>
+            <p class="tick">The evidence you have — data, documents, examples</p>
+            <p class="tick">Your timeline, if there is one</p>
+          </div>
+        </div>
+      </div>
+      <div class="blk" style="margin-top:18px"><span class="tag">Footer · WF-G4</span><p style="color:var(--muted);font-size:14px;text-align:center">Three-column footer (see WF-G4). No CTA band on this page.</p></div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>Nav change:</strong> &ldquo;Contact&rdquo; stops being an anchor to the home-page section and becomes this page; the home page keeps the CTA band as its contact entry point.</li>
+    <li><strong>Mobile:</strong> columns stack — email routes first, panels below.</li>
+  </ul>
+
+  <!-- ================= TABLET ================= -->
+  <h2 class="wf-title"><span class="wf-id">Tablet breakpoints · 661–1240px</span>Between desktop and mobile — its own behavior</h2>
+  <p class="wf-sub">Tablet borrows from both: the nav collapses like mobile (Rockeagle collapses at ≤1240px), but content grids drop to <strong style="color:var(--ink)">two columns, not one</strong>, hero buttons stay side-by-side, and the footer splits brand-on-top. True one-column stacking only happens at ≤660px.</p>
+
+  <h2 class="wf-title"><span class="wf-id">WF-07 · Home — Tablet (834px)</span>axiovexsystems.com/ at iPad width</h2>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com · 834px</span></div>
+    <div class="stage" style="max-width:834px;margin:0 auto">
+      <div class="blk"><span class="tag">Nav · collapsed ≤1240px</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX <span style="color:var(--faint);font-weight:400">Systems</span></span><span class="burger">☰</span></div><p style="color:var(--faint);font-size:13px;margin-top:10px">Same hamburger panel as mobile — logo + toggle only.</p></div>
+      <div class="blk solid"><span class="tag">Hero</span><p class="eyebrow">Axiovex Systems</p><p class="h-real" style="font-size:27px">Engineering clarity into difficult systems.</p><div class="bar med center"></div><div class="btnrow"><span class="btn fill">See what we do ↓</span><span class="btn">Start a conversation</span></div><p style="color:var(--faint);font-size:13px;text-align:center;margin-top:10px">Unlike mobile, the two hero buttons stay side-by-side — there&rsquo;s room.</p></div>
+      <div class="strata"><div style="background:#00DEF6"></div><div style="background:#2E9DB8"></div><div style="background:#7FD8E8"></div></div>
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-bottom:18px">STRATA BAR · WF-G2</p>
+      <div class="blk" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">Share row · TOP ONLY · revised 2026-10-05</span>
+        <p style="text-align:center;margin:22px 0 20px"><span class="btn ghost" style="padding:5px 13px;font-size:12.5px">X</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Facebook</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">LinkedIn</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Email</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Text</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Copy link</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">More&hellip;</span></p>
+        <p style="color:var(--faint);font-size:13.5px;text-align:center">The article&rsquo;s only share row &mdash; directly under the strata divider, with clear space around it (22px above, 20px below). &ldquo;Text&rdquo; appears on touch devices only.</p>
+      </div>
+      <div class="blk"><span class="tag">The method · stays 2-col</span><div class="grid2" style="text-align:left"><div><p style="font-weight:600;margin-bottom:6px">The out-of-the-box approach</p><div class="bar"></div><div class="bar med"></div></div><div><p style="font-weight:600;margin-bottom:6px">How we work</p><div class="bar"></div><div class="bar short"></div></div></div></div>
+      <div class="blk">
+        <span class="tag">What we do · 2-col grid</span>
+        <div class="grid2">
+          <div class="card"><span class="num">01</span><div class="accentbar"></div><h3>AI education &amp; training</h3><span class="explore">EXPLORE →</span></div>
+          <div class="card"><span class="num">02</span><div class="accentbar"></div><h3>Manufacturing AI infrastructure</h3><span class="explore">EXPLORE →</span></div>
+        </div>
+        <div class="card" style="max-width:calc(50% - 8px);margin:16px auto 0;text-align:center"><span class="num">03</span><div class="accentbar" style="margin-left:auto;margin-right:auto"></div><h3>Evidence &amp; decision systems</h3><span class="explore">EXPLORE →</span></div>
+        <div class="card" style="margin-top:16px;text-align:center"><h3>Not sure where your problem fits?</h3><span class="explore">START A CONVERSATION →</span></div>
+        <p style="color:var(--faint);font-size:13.5px;text-align:center;margin-top:12px"><span class="flag">Symmetry call:</span> with three cards in a two-column grid, card 03 centers on its own row — the center axis holds instead of leaving a left-hugging orphan.</p>
+      </div>
+      <div class="blk"><span class="tag">Proof · founders · FAQ</span><div class="grid2" style="text-align:left"><div class="card"><p style="color:var(--cyan);font-size:12px;letter-spacing:.12em;font-weight:700">LATEST ANALYSIS</p><h3 style="font-size:16.5px;margin-top:6px">Michigan workforce — September findings</h3><span class="explore">READ →</span></div><div class="card"><p style="color:var(--cyan);font-size:12px;letter-spacing:.12em;font-weight:700">AI 101 · OPEN MATERIALS</p><h3 style="font-size:16.5px;margin-top:6px">Course deck &amp; handout</h3><span class="explore">OPEN ↗</span></div></div><p style="color:var(--faint);font-size:13.5px;margin-top:12px">Proof band and founder cards stay 2-col at tablet. FAQ rows full width, unchanged.</p></div>
+      <div class="blk solid" style="text-align:center"><span class="tag">CTA band · WF-G3</span><p class="h2-real" style="font-size:21px">Tell us what you&rsquo;re trying to solve.</p><div class="btnrow"><span class="btn fill">Start a conversation →</span></div></div>
+      <div class="blk"><span class="tag">Footer · tablet split</span><p style="text-align:center"><span class="logo-ph">◆ AXIOVEX Systems</span></p><p style="color:var(--muted);font-size:14px;text-align:center;margin-top:10px">Mission line + socials, centered, full width</p><div class="grid2" style="margin-top:14px;text-align:center"><div><h4 style="color:var(--cyan);font-size:12px;letter-spacing:.16em">EXPLORE</h4><p style="color:var(--muted);font-size:14px;margin-top:8px">What we do · About · FAQ · Blog</p></div><div><h4 style="color:var(--cyan);font-size:12px;letter-spacing:.16em">COMPANY</h4><p style="color:var(--muted);font-size:14px;margin-top:8px">Contact · Documents ↗ · Privacy</p></div></div><div class="foot-bottom" style="margin-top:14px"><span>© 2026 Axiovex Systems, LLC</span><span>Macomb County · Michigan</span></div></div>
+    </div>
+  </div>
+
+  <h2 class="wf-title"><span class="wf-id">WF-08 · Contact — Tablet (834px)</span>Two columns become a stack + panel row</h2>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/contact/ · 834px</span></div>
+    <div class="stage" style="max-width:834px;margin:0 auto">
+      <div class="blk"><span class="tag">Nav · collapsed</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><span class="burger">☰</span></div></div>
+      <div class="blk solid"><span class="tag">Page head · centered</span><p class="crumb" style="text-align:center">Home / <b>Contact</b></p><p class="eyebrow">Contact</p><p class="h-real" style="font-size:27px">Start a conversation.</p><div class="bar med center"></div></div>
+      <div class="strata"><div style="background:#00DEF6"></div><div style="background:#2E9DB8"></div><div style="background:#7FD8E8"></div></div>
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-bottom:18px">STRATA BAR · WF-G2</p>
+      <div class="blk" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">Share row · TOP ONLY · revised 2026-10-05</span>
+        <p style="text-align:center;margin:22px 0 20px"><span class="btn ghost" style="padding:5px 13px;font-size:12.5px">X</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Facebook</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">LinkedIn</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Email</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Text</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Copy link</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">More&hellip;</span></p>
+        <p style="color:var(--faint);font-size:13.5px;text-align:center">The article&rsquo;s only share row &mdash; directly under the strata divider, with clear space around it (22px above, 20px below). &ldquo;Text&rdquo; appears on touch devices only.</p>
+      </div>
+      <div class="blk leftcol"><span class="tag">Send a note · full width at tablet</span><div class="grid2" style="margin-top:6px"><div class="card"><h3 style="font-size:16.5px">New projects, courses &amp; questions</h3><span class="explore">start@axiovexsystems.com →</span></div><div class="card"><h3 style="font-size:16.5px">Privacy &amp; legal</h3><span class="explore">legal@axiovexsystems.com →</span></div></div><p style="color:var(--faint);font-size:13.5px;margin-top:12px">The desktop 55/45 split is too cramped at 834px, so the email routes go full width — side-by-side as two cards.</p></div>
+      <div class="grid2">
+        <div class="blk leftcol" style="margin-bottom:0"><span class="tag">Panel · where we work</span><div class="bar"></div><div class="bar med"></div></div>
+        <div class="blk leftcol" style="margin-bottom:0"><span class="tag">Panel · good first conversations</span><p class="tick">The problem, in plain words</p><p class="tick">What you&rsquo;ve already tried</p><p class="tick">The evidence you have</p></div>
+      </div>
+      <p style="color:var(--faint);font-size:13.5px;margin-top:14px">The two context panels drop below the routes and sit side-by-side. On mobile (≤660px) everything stacks into one column, routes first.</p>
+    </div>
+  </div>
+
+  <h2 class="wf-title"><span class="wf-id">WF-09 · Blog / article / privacy — Tablet</span>Shared sub-page behavior at 834px</h2>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">/blog/ · /blog/&lt;article&gt;/ · /privacy/ · 834px</span></div>
+    <div class="stage" style="max-width:834px;margin:0 auto">
+      <div class="blk"><span class="tag">Nav · collapsed</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><span class="burger">☰</span></div></div>
+      <div class="blk solid"><span class="tag">Page head · centered, unchanged</span><p class="crumb" style="text-align:center">Home / <b>Blog</b></p><p class="eyebrow">Axiovex Systems</p><p class="h-real" style="font-size:27px">Analysis &amp; notes</p><div class="search-ph">⌕ &nbsp;Search articles…</div></div>
+      <div class="strata"><div style="background:#00DEF6"></div><div style="background:#2E9DB8"></div><div style="background:#7FD8E8"></div></div>
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-bottom:18px">STRATA BAR · WF-G2</p>
+      <div class="blk" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">Share row · TOP ONLY · revised 2026-10-05</span>
+        <p style="text-align:center;margin:22px 0 20px"><span class="btn ghost" style="padding:5px 13px;font-size:12.5px">X</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Facebook</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">LinkedIn</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Email</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Text</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Copy link</span> <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">More&hellip;</span></p>
+        <p style="color:var(--faint);font-size:13.5px;text-align:center">The article&rsquo;s only share row &mdash; directly under the strata divider, with clear space around it (22px above, 20px below). &ldquo;Text&rdquo; appears on touch devices only.</p>
+      </div>
+      <div class="blk leftcol" style="max-width:760px;margin-left:auto;margin-right:auto"><span class="tag">Content column · fits as-is</span><div class="bar"></div><div class="bar"></div><div class="bar med"></div><p style="color:var(--faint);font-size:13.5px;margin-top:10px">The 760px reading column (article body, legal text, blog cards) fits inside 834px with slim margins — no layout change from desktop, just tighter gutters. Article title block stays centered; body stays left-justified.</p></div>
+      <div class="blk"><span class="tag">Footer · tablet split</span><p style="color:var(--muted);font-size:14px;text-align:center">Same tablet footer as WF-07: brand block centered on top, Explore / Company side-by-side below.</p></div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>Breakpoint summary:</strong> ≥1240px desktop (full nav, 3-col grids) · 661–1240px tablet (hamburger nav, 2-col grids, footer split) · ≤660px mobile (1-col, stacked CTAs).</li>
+  </ul>
+
+  <!-- ================= APPROVAL ================= -->
+  <div class="approve">
+    <h2>Approval checklist</h2>
+    <ul>
+      <li>WF-G1 — Sticky nav with Contact CTA + hamburger panel</li>
+      <li>WF-G2 — 3-segment strata bar under every hero / page head</li>
+      <li>WF-G3 — CTA band above the footer (all pages except Contact)</li>
+      <li>WF-G4 — Three-column footer with location line</li>
+      <li>WF-G5 — Numbered service cards with accent bar + EXPLORE</li>
+      <li>WF-01 — Home (desktop): hero → strata → method → services → proof → about → FAQ → CTA → footer</li>
+      <li>WF-02 — Home (mobile): stacked, full-width CTAs</li>
+      <li>WF-03 — Blog index: page head + strata + accent-bar cards</li>
+      <li>WF-04 — Article: breadcrumb head, centered title, left-justified body, more-analysis row</li>
+      <li>WF-05 — Privacy: page head + strata, legal text unchanged</li>
+      <li>WF-06 — Contact page: email routes left, context panels right, no form</li>
+      <li>WF-07 — Home (tablet, 834px): hamburger nav, 2-col grids, card 03 centered on its own row, footer split</li>
+      <li>WF-08 — Contact (tablet): routes full width as two cards, panels side-by-side below</li>
+      <li>WF-09 — Blog / article / privacy (tablet): centered page head, 760px column fits, tablet footer</li>
+    </ul>
+    <p style="color:var(--muted);margin-top:14px">Approve all, or name the wireframes / details to change. The live site is only touched after full approval.</p>
+  </div>
+
+</div>
+</body>
+</html>
