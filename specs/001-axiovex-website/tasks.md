@@ -28,6 +28,6 @@ Legend: [x] done · [ ] open · [OWNER] needs Tristen's decision
 ## Open — compliance/security/accessibility audit (spec R-1)
 - [ ] T013 Verify privacy-policy assertions against actual Cloudflare logging/cookies/challenges
 - [ ] T014 Inspect/set CSP, HSTS, Referrer-Policy, Permissions-Policy, X-Content-Type-Options
-- [ ] T015 WCAG pass: keyboard, focus order, contrast, heading order
+- [ ] T015 WCAG pass: keyboard, focus order, contrast, heading order — PARTIAL 2026-10-05: /contact/ heading order fixed with zero visual change (017082b, styles.v21.css); visually-hidden link text added for anchor disambiguation + link purpose. Remaining: keyboard/focus/contrast, footer-pattern heading residuals on other pages
 - [ ] T016 Substantiate or narrow government/defense, CMMC-adjacent, local-data, and no-shared-training claims
 - [ ] [OWNER] T017 Decide Terms / Disclaimer pages; keep privacy promises no broader than law
