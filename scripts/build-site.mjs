@@ -391,8 +391,159 @@ function buildBlog() {
   return posts;
 }
 
+
+/* ================= Signals + Michigan Pulse (spec 004) =================
+   Renders from data/signals.json, the snapshot written by
+   scripts/fetch-signals.mjs. If the snapshot is absent the site still
+   builds — the home block renders empty between its markers and no
+   signals page is produced (the fetch step runs first in CI). */
+function sparkline(trend) {
+  const pts = (trend || []).filter(p => p.v !== null && p.v !== undefined);
+  if (pts.length < 2) return '';
+  const w = 120, h = 30, pad = 3;
+  const vs = pts.map(p => p.v);
+  const min = Math.min(...vs), max = Math.max(...vs), span = (max - min) || 1;
+  let d = '', pen = false;
+  (trend || []).forEach((p, i) => {
+    if (p.v === null || p.v === undefined) { pen = false; return; }
+    const x = (pad + (i / ((trend.length - 1) || 1)) * (w - 2 * pad)).toFixed(1);
+    const y = (h - pad - ((p.v - min) / span) * (h - 2 * pad)).toFixed(1);
+    d += (pen ? 'L' : 'M') + x + ' ' + y + ' ';
+    pen = true;
+  });
+  return '<svg class="spark" viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="' + d.trim() + '"/></svg>';
+}
+
+function pulseTilesHtml(pulse) {
+  if (!pulse || !pulse.tiles) return '';
+  const tiles = pulse.tiles.map(t => {
+    const arrow = t.delta
+      ? (t.delta.direction === 'up' ? '&#9650;' : t.delta.direction === 'down' ? '&#9660;' : '&#9644;') + ' ' + esc(t.delta.text)
+      : esc(pulse.referenceMonth || '');
+    return '          <div class="pulse-tile">\n' +
+      '            <p class="pulse-label">' + esc(t.label) + '</p>\n' +
+      '            <p class="pulse-value">' + esc(t.display) + '</p>\n' +
+      '            <p class="pulse-delta">' + arrow + '</p>\n' +
+      '            ' + sparkline(t.trend) + '\n          </div>';
+  }).join('\n');
+  return '        <p class="pulse-kicker">Michigan Pulse &middot; ' + esc(pulse.source || 'U.S. Bureau of Labor Statistics') +
+    ' &middot; ' + esc(pulse.referenceMonth || '') + '</p>\n' +
+    '        <div class="pulse-grid">\n' + tiles + '\n        </div>';
+}
+
+function fmtUpdated(iso) {
+  try {
+    const d = new Date(iso);
+    const parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Detroit', month: 'long', day: 'numeric', year: 'numeric',
+      hour: 'numeric', minute: '2-digit', hour12: true,
+    }).formatToParts(d).reduce((o, p) => (o[p.type] = p.value, o), {});
+    return parts.month + ' ' + parts.day + ', ' + parts.year + ' at ' + parts.hour + ':' + parts.minute + ' ' + parts.dayPeriod + ' ET';
+  } catch { return iso || ''; }
+}
+
+function buildSignals(posts) {
+  const snapPath = path.join(ROOT, 'data', 'signals.json');
+  if (!existsSync(snapPath)) {
+    console.warn('signals: no data/signals.json — home block left empty, page skipped');
+    return null;
+  }
+  const snap = JSON.parse(readFileSync(snapPath, 'utf8'));
+  const lanes = JSON.parse(JSON.stringify(snap.lanes || {}));
+
+  // Michigan lane also carries Axiovex's own Michigan/workforce analysis.
+  const own = (posts || [])
+    .filter(p => p.tags.some(t => /michigan|workforce/i.test(t)))
+    .map(p => ({ source: 'Axiovex', sourceId: 'axiovex', title: p.title, link: p.url, date: p.date }));
+  if (own.length && lanes.michigan) {
+    lanes.michigan.items = [...own, ...lanes.michigan.items]
+      .sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 8);
+  }
+
+  const updatedLine = 'Snapshot updated ' + fmtUpdated(snap.updatedUtc) + '.';
+  const itemRow = i =>
+    '          <li><a href="' + escAttr(i.link) + '" target="_blank" rel="noopener">' +
+    '<span class="signal-source">' + esc(String(i.source).toUpperCase()) + '</span> ' +
+    '<span class="signal-title">' + esc(i.title) + '</span></a> ' +
+    '<span class="signal-date">&middot; ' + fmtDate(i.date) + '</span></li>';
+  const lanesHtml = Object.values(lanes).filter(l => l.items && l.items.length).map(l =>
+    '        <div class="signal-lane">\n' +
+    '          <h3 class="lane-title">' + esc(l.title) + '</h3>\n' +
+    '          <ul class="signal-list">\n' + l.items.map(itemRow).join('\n') + '\n          </ul>\n        </div>'
+  ).join('\n');
+
+  // /signals/ page
+  const tpl = readFileSync(path.join(ROOT, 'scripts', 'templates', 'signals.html'), 'utf8');
+  mkdirSync(path.join(ROOT, 'signals'), { recursive: true });
+  writeFileSync(path.join(ROOT, 'signals', 'index.html'), fill(tpl, {
+    '{{PULSE_HTML}}': pulseTilesHtml(snap.pulse),
+    '{{LANES_HTML}}': lanesHtml,
+    '{{UPDATED_LINE}}': updatedLine,
+  }));
+
+  // Home block between the SIGNALS markers
+  const pick = id => (lanes[id] && lanes[id].items && lanes[id].items[0]) || null;
+  const cards = ['manufacturing', 'ai-standards', 'ot-security'].map(pick).filter(Boolean).map(i =>
+    '          <article class="card signal-card">\n' +
+    '            <p class="signal-source">' + esc(String(i.source).toUpperCase()) + '</p>\n' +
+    '            <h3><a href="' + escAttr(i.link) + '" target="_blank" rel="noopener">' + esc(i.title) + '</a></h3>\n' +
+    '            <p class="signal-date">' + fmtDate(i.date) + '</p>\n          </article>').join('\n');
+  const section =
+    '    <section id="signals" class="section">\n' +
+    '      <div class="container">\n' +
+    '        <div class="section-head">\n' +
+    '          <p class="eyebrow">Signals</p>\n' +
+    '          <h2>What we&rsquo;re watching.</h2>\n' +
+    '          <p class="section-lede">Michigan&rsquo;s numbers, and the field items that matter to the people who make things — from primary sources, refreshed automatically.</p>\n' +
+    '        </div>\n' +
+    pulseTilesHtml(snap.pulse) + '\n' +
+    '        <div class="signal-cards">\n' + cards + '\n        </div>\n' +
+    '        <p class="signals-more"><a class="explore" href="/signals/">SEE ALL SIGNALS &rarr;</a></p>\n' +
+    '        <p class="signals-updated">' + updatedLine + ' Headline, source, and date only — every card links to the publisher.</p>\n' +
+    '      </div>\n' +
+    '    </section>';
+  const homePath = path.join(ROOT, 'index.html');
+  const home = readFileSync(homePath, 'utf8');
+  const re = /(<!-- SIGNALS:START -->)[\s\S]*?(<!-- SIGNALS:END -->)/;
+  if (re.test(home)) {
+    // Replacer function, not a '$1...' string: the section HTML can
+    // contain literal '$' amounts (e.g. '$1.7 Million' headlines) that
+    // String.replace would misread as group references.
+    writeFileSync(homePath, home.replace(re, (m, g1, g2) => g1 + '\n' + section + '\n    ' + g2));
+  } else {
+    console.warn('signals: SIGNALS markers not found in index.html — home block skipped');
+  }
+  const total = Object.values(lanes).reduce((n, l) => n + (l.items ? l.items.length : 0), 0);
+  console.log('signals: rendered home block + /signals/ (' + total + ' items, pulse ' +
+    (snap.pulse ? snap.pulse.referenceMonth : 'n/a') + ')');
+  return { updatedDate: String(snap.updatedUtc || '').slice(0, 10) || null };
+}
+
+/* ================= Blog RSS feed (spec 004, T009) ================= */
+function buildFeed(posts) {
+  const rfc = iso => new Date(iso + 'T12:00:00Z').toUTCString();
+  const items = (posts || []).map(p =>
+    '  <item>\n    <title>' + esc(p.title) + '</title>\n' +
+    '    <link>' + p.url + '</link>\n' +
+    '    <guid isPermaLink="true">' + p.url + '</guid>\n' +
+    '    <pubDate>' + rfc(p.date) + '</pubDate>\n' +
+    '    <description>' + esc(p.description) + '</description>\n  </item>').join('\n');
+  const xml =
+    '<?xml version="1.0" encoding="UTF-8"?>\n' +
+    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n' +
+    '  <title>Axiovex Systems — Blog</title>\n' +
+    '  <link>' + SITE + '/blog/</link>\n' +
+    '  <description>Analysis from Axiovex Systems: AI, manufacturing, and Michigan workforce intelligence.</description>\n' +
+    '  <language>en-US</language>\n' +
+    '  <atom:link href="' + SITE + '/feed.xml" rel="self" type="application/rss+xml"/>\n' +
+    (posts && posts.length ? '  <lastBuildDate>' + rfc(posts[0].date) + '</lastBuildDate>\n' : '') +
+    items + '\n</channel>\n</rss>\n';
+  writeFileSync(path.join(ROOT, 'feed.xml'), xml);
+  console.log('feed: wrote /feed.xml with ' + (posts ? posts.length : 0) + ' item(s)');
+}
+
 /* ================= Sitemap ================= */
-function writeSitemap(posts, docsInfo) {
+function writeSitemap(posts, docsInfo, signalsInfo) {
   const latestPost = posts.length ? posts[0].date : null;
   const e = (loc, lastmod, freq, pri) =>
     '  <url>\n    <loc>' + loc + '</loc>\n' +
@@ -402,6 +553,7 @@ function writeSitemap(posts, docsInfo) {
     e(SITE + '/', gitDate(ROOT, 'index.html') || latestPost, 'weekly', '1.0'),
     e(SITE + '/blog/', latestPost, 'weekly', '0.9'),
     ...posts.map(p => e(p.url, p.date, 'monthly', '0.8')),
+    e(SITE + '/signals/', signalsInfo ? signalsInfo.updatedDate : null, 'daily', '0.8'),
     e(SITE + '/documents/', docsInfo.maxDate || gitDate(ROOT, 'scripts/templates/documents.html'), 'monthly', '0.7'),
     e(SITE + '/contact/', gitDate(ROOT, 'contact/index.html'), 'monthly', '0.7'),
     e(SITE + '/privacy/', gitDate(ROOT, 'privacy/index.html'), 'yearly', '0.5'),
@@ -421,4 +573,6 @@ if (existsSync(sharedDir)) {
   console.warn('shared-documents checkout not found at ' + sharedDir + ' — documents page left unchanged');
 }
 const posts = buildBlog();
-writeSitemap(posts, docsInfo);
+buildFeed(posts);
+const signalsInfo = buildSignals(posts);
+writeSitemap(posts, docsInfo, signalsInfo);

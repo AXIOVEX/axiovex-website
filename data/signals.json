@@ -1,0 +1,537 @@
+{
+  "updatedUtc": "2026-10-05T17:28:42.283Z",
+  "lanes": {
+    "manufacturing": {
+      "id": "manufacturing",
+      "title": "Manufacturing & automation",
+      "items": [
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "Made in America Needs More Than Investment. It Needs People.",
+          "link": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/",
+          "date": "2026-10-05"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Your AI strategy is only as good as its first move",
+          "link": "https://www.manufacturingdive.com/spons/your-ai-strategy-is-only-as-good-as-its-first-move/831591/",
+          "date": "2026-10-05"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "AI on the shop floor: Manufacturing’s physical AI moment",
+          "link": "https://www.manufacturingdive.com/spons/ai-on-the-shop-floor-manufacturings-physical-ai-moment/831740/",
+          "date": "2026-10-05"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Iowa governor signs bill allowing $1.4B in tax incentives for steel project",
+          "link": "https://www.manufacturingdive.com/news/gov-reynolds-signs-bill-1b-tax-incentives-iowa-steel-mill-mesabi-metallics/832126/",
+          "date": "2026-10-05"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Defense, data centers and AI driving private equity manufacturing investments",
+          "link": "https://www.manufacturingdive.com/news/private-equity-us-manufacturing-defense-ai-data-centers-report-2026/832073/",
+          "date": "2026-10-05"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "WCC Expands Microelectronics and Semiconductor Workforce Training with New Classroom, NSF Grant",
+          "link": "https://automationalley.com/2026/10/02/wcc-expands-microelectronics-and-semiconductor-workforce-training-with-new-classroom-nsf-grant/",
+          "date": "2026-10-02"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Caterpillar and Ultium Cells make $1B facility investments",
+          "link": "https://www.manufacturingdive.com/news/caterpillar-ultium-cells-1b-facility-investments-avio-usa-genentech/831996/",
+          "date": "2026-10-02"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Manufacturing industry adds 9K jobs in September",
+          "link": "https://www.manufacturingdive.com/news/bls-september-manufacturing-employment-situation-august-jolts-2026/831988/",
+          "date": "2026-10-02"
+        }
+      ]
+    },
+    "ai-standards": {
+      "id": "ai-standards",
+      "title": "AI, standards & research",
+      "items": [
+        {
+          "source": "NIST",
+          "sourceId": "nist",
+          "title": "NIST Awards More Than $1.7 Million to Support Cybersecurity Workforce Development Across 8 States",
+          "link": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development",
+          "date": "2026-09-18"
+        },
+        {
+          "source": "NSF",
+          "sourceId": "nsf",
+          "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
+          "link": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
+          "date": "2026-09-17"
+        },
+        {
+          "source": "NSF",
+          "sourceId": "nsf",
+          "title": "NSF announces 3 additional topics as part of the NSF X-Labs initiative to pursue generational breakthrough science and technology efforts",
+          "link": "https://www.nsf.gov/news/nsf-announces-3-additional-topics-part-nsf-x-labs-initiative",
+          "date": "2026-09-16"
+        },
+        {
+          "source": "NIST",
+          "sourceId": "nist",
+          "title": "NIST-Developed Quantum Sensors Improve Nuclear Monitoring",
+          "link": "https://www.nist.gov/news-events/news/2026/09/nist-developed-quantum-sensors-improve-nuclear-monitoring",
+          "date": "2026-09-10"
+        },
+        {
+          "source": "NSF",
+          "sourceId": "nsf",
+          "title": "Eight NSF research institutes to propel U.S. quantum science with $290M investment",
+          "link": "https://www.nsf.gov/news/eight-nsf-research-institutes-propel-us-quantum-science-290m",
+          "date": "2026-08-25"
+        },
+        {
+          "source": "NIST",
+          "sourceId": "nist",
+          "title": "NIST Researchers Supersize Quantum Technology to Help Detect Faint Photons",
+          "link": "https://www.nist.gov/news-events/news/2026/08/nist-researchers-supersize-quantum-technology-help-detect-faint-photons",
+          "date": "2026-08-24"
+        }
+      ]
+    },
+    "michigan": {
+      "id": "michigan",
+      "title": "Michigan workforce & industry",
+      "items": [
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "Made in America Needs More Than Investment. It Needs People.",
+          "link": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/",
+          "date": "2026-10-05"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "WCC Expands Microelectronics and Semiconductor Workforce Training with New Classroom, NSF Grant",
+          "link": "https://automationalley.com/2026/10/02/wcc-expands-microelectronics-and-semiconductor-workforce-training-with-new-classroom-nsf-grant/",
+          "date": "2026-10-02"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "Technology risk management: How to modernize while successfully managing risk",
+          "link": "https://automationalley.com/2026/10/01/technology-risk-management-how-to-modernize-while-successfully-managing-risk-2/",
+          "date": "2026-10-01"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "Effective Supply Chain Risk Management: An Imperative for Today’s Executives and Leaders",
+          "link": "https://automationalley.com/2026/09/30/effective-supply-chain-risk-management-an-imperative-for-todays-executives-and-leaders/",
+          "date": "2026-09-30"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "From Lab to Production: Fraunhofer Brings Battery Manufacturing Research to Detroit",
+          "link": "https://automationalley.com/2026/09/30/from-lab-to-production-fraunhofer-brings-battery-manufacturing-research-to-detroit/",
+          "date": "2026-09-30"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "3D Printing in Aerospace: Applications, Materials, and Industry Trends",
+          "link": "https://automationalley.com/2026/09/28/3d-printing-in-aerospace-applications-materials-and-industry-trends/",
+          "date": "2026-09-28"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "From Pilot to Practice: How Manufacturers Can Build AI That Actually Lasts",
+          "link": "https://automationalley.com/2026/09/24/from-pilot-to-practice-how-manufacturers-can-build-ai-that-actually-lasts/",
+          "date": "2026-09-24"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "Trust Is the New Competitive Advantage: How Security Readiness Can Help Win and Retain Customers",
+          "link": "https://automationalley.com/2026/09/24/trust-is-the-new-competitive-advantage-how-security-readiness-can-help-win-and-retain-customers/",
+          "date": "2026-09-24"
+        }
+      ]
+    },
+    "ot-security": {
+      "id": "ot-security",
+      "title": "OT cybersecurity",
+      "items": [
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Armatura LLC Armatura One",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01",
+          "date": "2026-10-01"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Monta monta.app",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02",
+          "date": "2026-10-01"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "ABB Protection and Control IED Manager PCM600",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03",
+          "date": "2026-10-01"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Johnson Controls EasyIO Neo Series EC and CW Controllers",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-04",
+          "date": "2026-10-01"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Johnson Controls EasyIO Neo Series EC and CW Controllers",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-05",
+          "date": "2026-10-01"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Meari IoT Cloud Platform OpenAPI Service",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06",
+          "date": "2026-10-01"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "CISA Malcolm",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01",
+          "date": "2026-10-01"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Viidure Dashcam Android Application",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-07",
+          "date": "2026-09-29"
+        }
+      ]
+    },
+    "funding-policy": {
+      "id": "funding-policy",
+      "title": "Funding & policy",
+      "items": [
+        {
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
+          "title": "Energy Department Announces Up to $400 Million for Basic Research to Advance the Frontiers of Science",
+          "link": "https://www.energy.gov/articles/energy-department-announces-400-million-basic-research-advance-frontiers-science",
+          "date": "2026-10-01"
+        },
+        {
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
+          "title": "Energy Department Announces Speed to Power Investments Across 26 States to Lower Electricity Costs and Improve Grid Reliability",
+          "link": "https://www.energy.gov/articles/energy-department-announces-speed-power-investments-across-26-states-lower-electricity",
+          "date": "2026-09-24"
+        },
+        {
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
+          "title": "Energy Department Announces $99 Million for 21 Projects to Advance U.S. Geothermal Energy Development",
+          "link": "https://www.energy.gov/articles/energy-department-announces-99-million-21-projects-advance-us-geothermal-energy",
+          "date": "2026-09-21"
+        },
+        {
+          "source": "NIST",
+          "sourceId": "nist",
+          "title": "NIST Awards More Than $1.7 Million to Support Cybersecurity Workforce Development Across 8 States",
+          "link": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development",
+          "date": "2026-09-18"
+        },
+        {
+          "source": "NSF",
+          "sourceId": "nsf",
+          "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
+          "link": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
+          "date": "2026-09-17"
+        },
+        {
+          "source": "NIST",
+          "sourceId": "nist",
+          "title": "NIST Awards More Than $30 Million for MEP Centers in 11 States and Puerto Rico",
+          "link": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-30-million-mep-centers-11-states-and-puerto-rico",
+          "date": "2026-09-15"
+        },
+        {
+          "source": "NSF",
+          "sourceId": "nsf",
+          "title": "NSF launches $20M pilot to accelerate commercialization of promising deep technologies from small businesses",
+          "link": "https://www.nsf.gov/news/nsf-launches-20m-pilot-accelerate-commercialization",
+          "date": "2026-09-14"
+        },
+        {
+          "source": "NSF",
+          "sourceId": "nsf",
+          "title": "NSF launches three new Science and Technology Centers with $90M investment in transformative research",
+          "link": "https://www.nsf.gov/news/nsf-launches-three-new-science-technology-centers-90m",
+          "date": "2026-08-26"
+        }
+      ]
+    }
+  },
+  "pulse": {
+    "source": "U.S. Bureau of Labor Statistics",
+    "referenceMonth": "August 2026",
+    "tiles": [
+      {
+        "id": "SMU26000003000000001",
+        "label": "Manufacturing employment",
+        "display": "586.7k",
+        "delta": {
+          "direction": "up",
+          "text": "+1.1k MoM"
+        },
+        "trend": [
+          {
+            "ym": "2025-09",
+            "v": 584.3
+          },
+          {
+            "ym": "2025-10",
+            "v": 585.5
+          },
+          {
+            "ym": "2025-11",
+            "v": 582.3
+          },
+          {
+            "ym": "2025-12",
+            "v": 584.9
+          },
+          {
+            "ym": "2026-01",
+            "v": 574.4
+          },
+          {
+            "ym": "2026-02",
+            "v": 575.4
+          },
+          {
+            "ym": "2026-03",
+            "v": 576.7
+          },
+          {
+            "ym": "2026-04",
+            "v": 577.1
+          },
+          {
+            "ym": "2026-05",
+            "v": 583.3
+          },
+          {
+            "ym": "2026-06",
+            "v": 587.2
+          },
+          {
+            "ym": "2026-07",
+            "v": 585.6
+          },
+          {
+            "ym": "2026-08",
+            "v": 586.7
+          }
+        ]
+      },
+      {
+        "id": "LASST260000000000003",
+        "label": "Unemployment rate",
+        "display": "5.0%",
+        "delta": {
+          "direction": "up",
+          "text": "+0.1 pts MoM"
+        },
+        "trend": [
+          {
+            "ym": "2025-09",
+            "v": 4.9
+          },
+          {
+            "ym": "2025-10",
+            "v": null
+          },
+          {
+            "ym": "2025-11",
+            "v": 5
+          },
+          {
+            "ym": "2025-12",
+            "v": 5
+          },
+          {
+            "ym": "2026-01",
+            "v": 5
+          },
+          {
+            "ym": "2026-02",
+            "v": 5
+          },
+          {
+            "ym": "2026-03",
+            "v": 5
+          },
+          {
+            "ym": "2026-04",
+            "v": 5
+          },
+          {
+            "ym": "2026-05",
+            "v": 5.1
+          },
+          {
+            "ym": "2026-06",
+            "v": 5
+          },
+          {
+            "ym": "2026-07",
+            "v": 4.9
+          },
+          {
+            "ym": "2026-08",
+            "v": 5
+          }
+        ]
+      },
+      {
+        "id": "LASST260000000000006",
+        "label": "Labor force",
+        "display": "4.85M",
+        "delta": null,
+        "trend": [
+          {
+            "ym": "2025-09",
+            "v": 5004120
+          },
+          {
+            "ym": "2025-10",
+            "v": null
+          },
+          {
+            "ym": "2025-11",
+            "v": 4998918
+          },
+          {
+            "ym": "2025-12",
+            "v": 4999837
+          },
+          {
+            "ym": "2026-01",
+            "v": 4992846
+          },
+          {
+            "ym": "2026-02",
+            "v": 4983731
+          },
+          {
+            "ym": "2026-03",
+            "v": 4969412
+          },
+          {
+            "ym": "2026-04",
+            "v": 4949821
+          },
+          {
+            "ym": "2026-05",
+            "v": 4930851
+          },
+          {
+            "ym": "2026-06",
+            "v": 4906650
+          },
+          {
+            "ym": "2026-07",
+            "v": 4877961
+          },
+          {
+            "ym": "2026-08",
+            "v": 4852504
+          }
+        ]
+      },
+      {
+        "id": "SMU26000000000000001",
+        "label": "Total nonfarm employment",
+        "display": "4,505.9k",
+        "delta": null,
+        "trend": [
+          {
+            "ym": "2025-09",
+            "v": 4504.4
+          },
+          {
+            "ym": "2025-10",
+            "v": 4516.5
+          },
+          {
+            "ym": "2025-11",
+            "v": 4502.1
+          },
+          {
+            "ym": "2025-12",
+            "v": 4483.2
+          },
+          {
+            "ym": "2026-01",
+            "v": 4396.4
+          },
+          {
+            "ym": "2026-02",
+            "v": 4414.9
+          },
+          {
+            "ym": "2026-03",
+            "v": 4430.1
+          },
+          {
+            "ym": "2026-04",
+            "v": 4469.2
+          },
+          {
+            "ym": "2026-05",
+            "v": 4525.2
+          },
+          {
+            "ym": "2026-06",
+            "v": 4549.5
+          },
+          {
+            "ym": "2026-07",
+            "v": 4500.6
+          },
+          {
+            "ym": "2026-08",
+            "v": 4505.9
+          }
+        ]
+      }
+    ]
+  }
+}

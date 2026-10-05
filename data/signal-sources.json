@@ -1,0 +1,249 @@
+{
+  "blsSeries": [
+    {
+      "delta": "mom",
+      "format": "thousands1",
+      "id": "SMU26000003000000001",
+      "label": "Manufacturing employment"
+    },
+    {
+      "delta": "mom",
+      "format": "percent1",
+      "id": "LASST260000000000003",
+      "label": "Unemployment rate"
+    },
+    {
+      "delta": "none",
+      "format": "millions2",
+      "id": "LASST260000000000006",
+      "label": "Labor force"
+    },
+    {
+      "delta": "none",
+      "format": "thousands1",
+      "id": "SMU26000000000000001",
+      "label": "Total nonfarm employment"
+    }
+  ],
+  "comment": "Signals source config (spec 004). Human-editable: lanes, feeds, per-lane keyword filters, caps. A lane rule with no 'include' list takes every item from that feed. Matching is against headline + summary text, case-insensitive; short terms match on word boundaries.",
+  "feeds": [
+    {
+      "id": "nist",
+      "lanes": [
+        {
+          "include": [
+            "manufactur",
+            "automation",
+            "robot",
+            "factor",
+            "industrial",
+            "supply chain",
+            "additive"
+          ],
+          "lane": "manufacturing"
+        },
+        {
+          "include": [
+            "artificial intelligence",
+            "AI",
+            "machine learning",
+            "standard",
+            "quantum",
+            "semiconductor",
+            "cybersecurity"
+          ],
+          "lane": "ai-standards"
+        },
+        {
+          "include": [
+            "funding opportunit",
+            "competition",
+            "grant",
+            "awards",
+            "invests",
+            "cooperative agreement",
+            "million"
+          ],
+          "lane": "funding-policy",
+          "titleOnly": true
+        },
+        {
+          "include": [
+            "Michigan"
+          ],
+          "lane": "michigan"
+        }
+      ],
+      "name": "NIST",
+      "url": "https://www.nist.gov/news-events/news/rss.xml"
+    },
+    {
+      "id": "nsf",
+      "lanes": [
+        {
+          "include": [
+            "artificial intelligence",
+            "AI",
+            "machine learning",
+            "robot",
+            "quantum",
+            "semiconductor",
+            "manufactur"
+          ],
+          "lane": "ai-standards",
+          "exclude": [
+            "Podcast"
+          ]
+        },
+        {
+          "include": [
+            "Michigan",
+            "workforce",
+            "STEM workforce"
+          ],
+          "lane": "michigan"
+        },
+        {
+          "include": [
+            "invests",
+            "invest",
+            "funding",
+            "grant",
+            "award",
+            "million",
+            "launches $"
+          ],
+          "lane": "funding-policy",
+          "titleOnly": true
+        }
+      ],
+      "name": "NSF",
+      "url": "https://www.nsf.gov/rss/rss_www_news.xml"
+    },
+    {
+      "id": "doe",
+      "lanes": [
+        {
+          "include": [
+            "funding",
+            "grant",
+            "award",
+            "invest",
+            "announces up to",
+            "million",
+            "opportunit"
+          ],
+          "lane": "funding-policy",
+          "titleOnly": true
+        },
+        {
+          "include": [
+            "artificial intelligence",
+            "AI",
+            "supercomput",
+            "quantum"
+          ],
+          "lane": "ai-standards"
+        },
+        {
+          "include": [
+            "manufactur",
+            "industrial",
+            "battery",
+            "critical mineral"
+          ],
+          "lane": "manufacturing"
+        }
+      ],
+      "name": "U.S. Department of Energy",
+      "url": "https://www.energy.gov/rss/news.xml"
+    },
+    {
+      "id": "manufacturing-dive",
+      "lanes": [
+        {
+          "lane": "manufacturing"
+        }
+      ],
+      "name": "Manufacturing Dive",
+      "url": "https://www.manufacturingdive.com/feeds/news/"
+    },
+    {
+      "id": "automation-alley",
+      "lanes": [
+        {
+          "lane": "manufacturing"
+        },
+        {
+          "lane": "michigan"
+        }
+      ],
+      "name": "Automation Alley",
+      "url": "https://automationalley.com/feed/"
+    },
+    {
+      "id": "cisa-ics",
+      "lanes": [
+        {
+          "lane": "ot-security"
+        }
+      ],
+      "name": "CISA",
+      "url": "https://www.cisa.gov/cybersecurity-advisories/ics-advisories.xml"
+    }
+  ],
+  "frApi": {
+    "id": "federal-register",
+    "lanes": [
+      {
+        "include": [
+          "grant",
+          "funding",
+          "opportunit",
+          "artificial intelligence",
+          "workforce",
+          "manufacturing extension",
+          "institute"
+        ],
+        "lane": "funding-policy",
+        "exclude": [
+          "information collection",
+          "paperwork",
+          "comment request",
+          "office of management and budget"
+        ]
+      }
+    ],
+    "name": "Federal Register",
+    "perPage": 40,
+    "term": "manufacturing"
+  },
+  "lanes": [
+    {
+      "cap": 8,
+      "id": "manufacturing",
+      "title": "Manufacturing & automation"
+    },
+    {
+      "cap": 8,
+      "id": "ai-standards",
+      "title": "AI, standards & research"
+    },
+    {
+      "cap": 8,
+      "id": "michigan",
+      "title": "Michigan workforce & industry"
+    },
+    {
+      "cap": 8,
+      "id": "ot-security",
+      "title": "OT cybersecurity"
+    },
+    {
+      "cap": 8,
+      "id": "funding-policy",
+      "title": "Funding & policy"
+    }
+  ],
+  "maxAgeDays": 45
+}

@@ -788,3 +788,47 @@ h2 {
    section padding / the privacy strata margin. */
 .section:has(+ .strata) { padding-bottom: 0; }
 .section:has(+ .strata) .section-head { margin-bottom: 36px; }
+
+/* ---------- v23 (2026-10-05, spec 004): Signals + Michigan Pulse ---------- */
+.pulse-kicker {
+  color: var(--cyan); font-size: 12px; letter-spacing: 0.14em; font-weight: 700;
+  text-transform: uppercase; text-align: center; margin-bottom: 14px;
+}
+.pulse-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.pulse-tile {
+  background: var(--panel, rgba(247, 252, 255, 0.03));
+  border: 1px solid var(--line, rgba(247, 252, 255, 0.09));
+  border-radius: 14px; padding: 18px; text-align: left;
+}
+.pulse-label { color: var(--muted); font-size: 13px; }
+.pulse-value { font-size: 30px; font-weight: 700; letter-spacing: -0.01em; margin-top: 6px; }
+.pulse-delta { color: var(--faint); font-size: 13px; margin-top: 2px; }
+.spark { display: block; width: 100%; height: 30px; margin-top: 10px; }
+.spark path { fill: none; stroke: var(--cyan); stroke-width: 1.5; }
+.signal-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; text-align: left; }
+.signal-card h3 { font-size: 17px; line-height: 1.45; margin-top: 8px; }
+.signal-card h3 a { color: var(--ink); text-decoration: none; }
+.signal-card h3 a:hover { color: var(--cyan); }
+.signal-source { color: var(--cyan); font-size: 11.5px; letter-spacing: 0.12em; font-weight: 700; }
+.signal-date { color: var(--faint); font-size: 13px; margin-top: 8px; }
+.signals-more { text-align: center; margin-top: 26px; }
+.signals-more .explore {
+  color: var(--cyan); font-size: 13.5px; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; text-decoration: none;
+}
+.signals-more .explore:hover { text-decoration: underline; }
+.signals-updated { color: var(--faint); font-size: 13px; text-align: center; margin-top: 12px; }
+.signal-lane { margin-top: 44px; text-align: left; }
+.lane-title { font-size: 20px; letter-spacing: -0.01em; margin-bottom: 6px; }
+.signal-list { list-style: none; }
+.signal-list li { padding: 11px 0; border-bottom: 1px solid var(--line, rgba(247, 252, 255, 0.09)); }
+.signal-list a { color: var(--ink); text-decoration: none; }
+.signal-list a:hover .signal-title { color: var(--cyan); }
+.signal-list .signal-date { margin-top: 0; }
+@media (max-width: 900px) {
+  .pulse-grid { grid-template-columns: repeat(2, 1fr); }
+  .signal-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) {
+  .pulse-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Axiovex Systems — Blog</title>
+  <link>https://axiovexsystems.com/blog/</link>
+  <description>Analysis from Axiovex Systems: AI, manufacturing, and Michigan workforce intelligence.</description>
+  <language>en-US</language>
+  <atom:link href="https://axiovexsystems.com/feed.xml" rel="self" type="application/rss+xml"/>
+  <lastBuildDate>Mon, 05 Oct 2026 12:00:00 GMT</lastBuildDate>
+  <item>
+    <title>What superintelligence actually means — and why today's AI isn't it</title>
+    <link>https://axiovexsystems.com/blog/what-superintelligence-means/</link>
+    <guid isPermaLink="true">https://axiovexsystems.com/blog/what-superintelligence-means/</guid>
+    <pubDate>Mon, 05 Oct 2026 12:00:00 GMT</pubDate>
+    <description>"Superintelligence" is being applied to tools that are not superintelligent. The ladder from narrow AI to AGI to superintelligence, what the confusion costs buyers and educators, and the terminology our own materials now use.</description>
+  </item>
+  <item>
+    <title>Michigan's September workforce data: what the numbers say, and what they don't</title>
+    <link>https://axiovexsystems.com/blog/michigan-workforce-september-2026/</link>
+    <guid isPermaLink="true">https://axiovexsystems.com/blog/michigan-workforce-september-2026/</guid>
+    <pubDate>Wed, 30 Sep 2026 12:00:00 GMT</pubDate>
+    <description>Michigan's August unemployment was 5.0% — but the rate conceals a participation story. Analyzing the September workforce intelligence edition: five decisions for education and industry, and the verified release pipeline behind the numbers.</description>
+  </item>
+</channel>
+</rss>

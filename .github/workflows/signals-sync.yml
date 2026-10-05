@@ -1,0 +1,53 @@
+name: Signals sync (feeds + Michigan Pulse)
+
+# Keeps the Signals snapshot current (spec 004):
+#   - scripts/fetch-signals.mjs pulls the configured RSS/API sources and
+#     the BLS Michigan series into data/signals.json (rewritten only when
+#     the content actually changed; failed sources keep last-good items)
+#   - scripts/build-site.mjs re-renders the home Signals block, /signals/,
+#     /feed.xml, and sitemap.xml from that snapshot
+# The bot commits only when something changed; Cloudflare Pages deploys
+# on that push. Bot pushes do not re-trigger workflows, so this cannot loop.
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: signals-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch signals + Pulse snapshot
+        run: node scripts/fetch-signals.mjs
+
+      - name: Rebuild site from snapshot
+        run: node scripts/build-site.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "snapshot unchanged — nothing to commit"
+            exit 0
+          fi
+          git commit -m "Signals snapshot refresh (automated)"
+          git pull --rebase --quiet origin main || true
+          git push origin main || (git pull --rebase --quiet origin main && git push origin main)
