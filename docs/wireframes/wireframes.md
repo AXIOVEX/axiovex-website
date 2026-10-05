@@ -32,7 +32,7 @@ as accordion rows.
 
 - **2026-10-04** — Full set (14 frames incl. tablet set) approved by Tristen;
   redesign implemented the same day (commit 7102f67).
-- **2026-10-05** — REVISION PENDING APPROVAL (spec 003-page-head-spacing):
+- **2026-10-05** — REVISION APPROVED by Tristen 2026-10-05 and IMPLEMENTED in 6825c7b (spec 003-page-head-spacing):
   page-head rhythm defined at WF-G2 — last head text → strata 36px,
   strata → first content 40px, on Documents, Blog index, Contact, and
   Privacy (measured today: 132px above / ~8px below on Documents and

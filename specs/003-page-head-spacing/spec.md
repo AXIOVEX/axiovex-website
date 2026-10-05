@@ -4,8 +4,7 @@
 
 **Created**: 2026-10-05
 
-**Status**: Wireframes revised — **awaiting Tristen's approval** (wireframe
-gate, constitution §III). No website changes before approval.
+**Status**: Approved by Tristen 2026-10-05 — **implemented and live** in 6825c7b (measured verification in tasks.md).
 
 **Input**: Tristen Pierson (owner), 2026-10-05, with a screenshot of
 /documents/: "fix padding here between the cards and divider above them
