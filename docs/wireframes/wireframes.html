@@ -208,7 +208,7 @@
 
   <!-- ================= HOME ================= -->
   <h2 class="wf-title"><span class="wf-id">WF-01 · Home — Desktop</span>axiovexsystems.com/</h2>
-  <p class="wf-sub">The home flow, in Axiovex order:</p>
+  <p class="wf-sub">The home flow, in Axiovex order: <b>REVISED 2026-10-05 (pending approval):</b> a new Signals + Michigan Pulse block sits between Evidence and About — Pulse tiles, three latest signal cards, and the path to the full Signals page (WF-11).</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com</span></div>
     <div class="stage">
@@ -267,6 +267,26 @@
         <p style="color:var(--faint);font-size:13.5px;margin-top:12px">This band carries published evidence instead of stats or client logos — no numbers we can&rsquo;t back.</p>
       </div>
 
+      <div class="blk">
+        <span class="tag">Signals + Michigan Pulse · NEW · pending approval</span>
+        <p class="eyebrow">Signals</p>
+        <p class="h2-real">What we&rsquo;re watching.</p>
+        <p style="color:var(--muted);font-size:14.5px;text-align:center">Michigan&rsquo;s numbers, and the field items that matter to the people who make things — from primary sources, refreshed automatically.</p>
+        <p style="color:var(--cyan);font-size:11.5px;letter-spacing:.14em;font-weight:700;margin-top:18px">MICHIGAN PULSE · U.S. BUREAU OF LABOR STATISTICS</p>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:10px;text-align:left">
+          <div class="card"><p style="color:var(--muted);font-size:12px">MI manufacturing employment</p><p style="font-size:22px;font-weight:700;margin-top:4px">586.7k</p><p style="color:var(--faint);font-size:12px">Aug 2026 · &#9650; 1.1k MoM</p></div>
+          <div class="card"><p style="color:var(--muted);font-size:12px">MI unemployment rate</p><p style="font-size:22px;font-weight:700;margin-top:4px">5.0%</p><p style="color:var(--faint);font-size:12px">Aug 2026 · &#9650; 0.1 MoM</p></div>
+          <div class="card"><p style="color:var(--muted);font-size:12px">MI labor force</p><p style="font-size:22px;font-weight:700;margin-top:4px">4.85M</p><p style="color:var(--faint);font-size:12px">Aug 2026</p></div>
+          <div class="card"><p style="color:var(--muted);font-size:12px">Trend</p><p style="color:var(--faint);font-size:12.5px;margin-top:6px">12-month trend line per tile (static SVG from the same BLS series).</p></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px;text-align:left">
+          <div class="card"><p style="color:var(--cyan);font-size:11.5px;letter-spacing:.12em;font-weight:700">MANUFACTURING DIVE</p><p style="font-size:14.5px;margin-top:6px">Latest manufacturing headline&hellip;</p><p style="color:var(--faint);font-size:12px;margin-top:6px">Oct 2026</p></div>
+          <div class="card"><p style="color:var(--cyan);font-size:11.5px;letter-spacing:.12em;font-weight:700">NIST</p><p style="font-size:14.5px;margin-top:6px">Latest AI / standards headline&hellip;</p><p style="color:var(--faint);font-size:12px;margin-top:6px">Oct 2026</p></div>
+          <div class="card"><p style="color:var(--cyan);font-size:11.5px;letter-spacing:.12em;font-weight:700">CISA · ICS</p><p style="font-size:14.5px;margin-top:6px">Latest OT advisory headline&hellip;</p><p style="color:var(--faint);font-size:12px;margin-top:6px">Oct 2026</p></div>
+        </div>
+        <p style="margin-top:14px"><span class="explore">SEE ALL SIGNALS &rarr;</span></p>
+        <p style="color:var(--faint);font-size:12.5px;margin-top:8px">Headline, source, and date only — every card links to the publisher. Snapshot timestamp shown (&ldquo;Updated &hellip;&rdquo;). If a feed fails, the last good snapshot stays up; nothing renders blank.</p>
+      </div>
       <div class="blk">
         <span class="tag">About · name + founders</span>
         <p class="eyebrow">About</p>
@@ -526,6 +546,52 @@
       <p style="color:var(--faint);font-size:13.5px;margin-top:10px">Cards mirror the shared-documents manifest automatically — title, description, size, and updated date come from the source repository, never hand-edited. A short mirror note sits under the grid.</p>
       <div class="blk solid" style="text-align:center"><span class="tag">CTA band · WF-G3</span><p class="eyebrow">Next step</p><p class="h2-real">Questions about these materials?</p><div class="btnrow"><span class="btn fill">Start a conversation →</span></div></div>
       <div class="blk"><span class="tag">Footer · WF-G4</span><p style="color:var(--muted);font-size:14px;text-align:center">Three-column footer (see WF-G4).</p></div>
+    </div>
+  </div>
+
+  <h2 class="wf-title"><span class="wf-id">WF-11 · Signals (new page)</span>axiovexsystems.com/signals/</h2>
+  <p class="wf-sub">NEW — pending approval (spec 004-signals-pulse). A public intelligence board: the Michigan Pulse band plus field signals in five lanes. Ingested at build time from primary sources and rendered as static HTML — no live third-party widgets, no visitor tracking, no copied article text (headline, source, date; the publisher gets the click). Reachable from the home Signals block and the footer — the nav is unchanged in v1.</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/signals/</span></div>
+    <div class="stage">
+      <div class="blk"><span class="tag">Nav · WF-G1 (unchanged)</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
+      <div class="blk solid">
+        <span class="tag">Page head · centered</span>
+        <p class="eyebrow">SIGNALS</p>
+        <p class="h-real" style="font-size:27px">What we&rsquo;re watching.</p>
+        <p style="color:var(--muted);font-size:14.5px;text-align:center">Michigan&rsquo;s numbers and the field items that matter — manufacturing, AI, workforce, and industrial security — gathered from primary sources and refreshed automatically.</p>
+      </div>
+      <div class="strata"><div style="background:#00DEF6"></div><div style="background:#2E9DB8"></div><div style="background:#7FD8E8"></div></div>
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-bottom:18px">STRATA BAR · WF-G2 — page-head rhythm 36px above / 40px below</p>
+      <div class="blk">
+        <span class="tag">Michigan Pulse · BLS data band</span>
+        <p style="color:var(--cyan);font-size:11.5px;letter-spacing:.14em;font-weight:700">MICHIGAN PULSE · U.S. BUREAU OF LABOR STATISTICS · AUGUST 2026</p>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:10px;text-align:left">
+          <div class="card"><p style="color:var(--muted);font-size:12px">Manufacturing employment</p><p style="font-size:22px;font-weight:700;margin-top:4px">586.7k</p><p style="color:var(--faint);font-size:12px">&#9650; 1.1k MoM · trend line</p></div>
+          <div class="card"><p style="color:var(--muted);font-size:12px">Unemployment rate</p><p style="font-size:22px;font-weight:700;margin-top:4px">5.0%</p><p style="color:var(--faint);font-size:12px">&#9650; 0.1 MoM · trend line</p></div>
+          <div class="card"><p style="color:var(--muted);font-size:12px">Labor force</p><p style="font-size:22px;font-weight:700;margin-top:4px">4.85M</p><p style="color:var(--faint);font-size:12px">level · trend line</p></div>
+          <div class="card"><p style="color:var(--muted);font-size:12px">Total nonfarm employment</p><p style="font-size:22px;font-weight:700;margin-top:4px">4,505.9k</p><p style="color:var(--faint);font-size:12px">level · trend line</p></div>
+        </div>
+        <p style="color:var(--faint);font-size:12.5px;margin-top:10px">Values are the latest BLS release, labeled with their reference month — never presented as real-time. A missing month in a series renders as a gap in the trend, never a fabricated value.</p>
+      </div>
+      <div class="blk" style="text-align:left">
+        <span class="tag">Signal lanes · item rows</span>
+        <p style="color:var(--cyan);font-size:12px;letter-spacing:.14em;font-weight:700">MANUFACTURING &amp; AUTOMATION</p>
+        <p style="font-size:14.5px;margin-top:8px"><span style="color:var(--cyan);font-size:11.5px;font-weight:700">MANUFACTURING DIVE</span> &nbsp;Headline from the publisher&hellip; <span style="color:var(--faint);font-size:12.5px">· date</span></p>
+        <p style="font-size:14.5px;margin-top:6px"><span style="color:var(--cyan);font-size:11.5px;font-weight:700">AUTOMATION ALLEY</span> &nbsp;Headline&hellip; <span style="color:var(--faint);font-size:12.5px">· date</span></p>
+        <p style="color:var(--cyan);font-size:12px;letter-spacing:.14em;font-weight:700;margin-top:18px">AI, STANDARDS &amp; RESEARCH</p>
+        <p style="font-size:14.5px;margin-top:8px"><span style="color:var(--cyan);font-size:11.5px;font-weight:700">NIST</span> &nbsp;Headline&hellip; <span style="color:var(--faint);font-size:12.5px">· date</span></p>
+        <p style="font-size:14.5px;margin-top:6px"><span style="color:var(--cyan);font-size:11.5px;font-weight:700">NSF</span> &nbsp;Headline&hellip; <span style="color:var(--faint);font-size:12.5px">· date</span></p>
+        <p style="color:var(--cyan);font-size:12px;letter-spacing:.14em;font-weight:700;margin-top:18px">OT CYBERSECURITY</p>
+        <p style="font-size:14.5px;margin-top:8px"><span style="color:var(--cyan);font-size:11.5px;font-weight:700">CISA · ICS</span> &nbsp;Advisory headline&hellip; <span style="color:var(--faint);font-size:12.5px">· date</span></p>
+        <p style="color:var(--faint);font-size:13px;margin-top:14px">Two further lanes follow the identical row pattern: <b style="color:var(--muted)">Michigan workforce &amp; industry</b> and <b style="color:var(--muted)">Funding &amp; policy</b>. Up to 8 items per lane, newest first, nothing older than 45 days.</p>
+      </div>
+      <div class="blk">
+        <span class="tag">Sources &amp; method note</span>
+        <p style="color:var(--muted);font-size:13.5px">Signals are headlines from public sources, gathered automatically and filtered to our lanes. Inclusion is not endorsement, and the numbers above are published government statistics with their reference month attached. Snapshot updated timestamp shown here.</p>
+      </div>
+      <div class="blk solid" style="text-align:center"><span class="tag">CTA band · WF-G3</span><p class="eyebrow">Next step</p><p class="h2-real">Working on something like this?</p><div class="btnrow"><span class="btn fill">Start a conversation →</span></div></div>
+      <div class="blk"><span class="tag">Footer · WF-G4 (+ Signals link in Explore)</span><p style="color:var(--muted);font-size:14px;text-align:center">Three-column footer (see WF-G4); v1 adds a Signals link to the Explore column.</p></div>
     </div>
   </div>
 
