@@ -22,14 +22,17 @@
 - [ ] T006 Report composition: daily/weekly/monthly markdown templates
   per FR-002–FR-005 (facts / insights / suggestions with
   auto-fix vs owner-decision labels), chat-summary format, state.json
-  schema extension.
+  schema extension, and the email step (full report emailed to
+  tristen@axiovexsystems.com + rockson@axiovexsystems.com via the
+  connected Gmail; subject pattern "Axiovex website — <daily|weekly|monthly> report <date/window>").
 - [ ] T007 Schedules: daily cron (~08:00 ET), weekly cron (Mon ~09:00
   ET, supersedes `website-seo-aeo-weekly`), monthly cron (1st ~09:00
   ET) — all under goal `website-seo-aeo-health-monitoring`; update
   RUNBOOK.md to the unified flow.
 - [ ] T008 First runs delivered and reviewed: one daily, one weekly
   (with SEO/AEO section), one monthly baseline (partial-month labeled
-  as such); Tristen's feedback folded into the templates.
+  as such); email delivery to both founders verified for each;
+  Tristen's feedback folded into the templates.
 - [ ] T009 Closeout: spec status → implemented; goal GOAL.md updated
   to the daily/weekly/monthly scope; memory note; AEE claims statuses
   updated with probe/cross-check evidence.

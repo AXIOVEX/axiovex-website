@@ -80,11 +80,16 @@ the weekly report; the push-triggered check stays as-is.
   — it never estimates, back-fills silently, or reuses stale numbers as
   current. Raw API snapshots are retained per run for audit.
 - **FR-007 — Delivery and state.** Each run delivers a concise chat
-  summary to Tristen and saves the full report as markdown under
+  summary to Tristen, saves the full report as markdown under
   `~/workspace/goals/website-seo-aeo-health-monitoring/files/reports/`
   (`daily-YYYY-MM-DD.md`, `weekly-YYYY-MM-DD.md`,
-  `monthly-YYYY-MM.md`). `state.json` is updated with the run's
-  headline metrics and snapshot pointers so deltas compound over time.
+  `monthly-YYYY-MM.md`), and **emails the full report to
+  tristen@axiovexsystems.com and rockson@axiovexsystems.com**
+  (requirement added by Tristen 2026-10-05). Email is sent via the
+  connected Gmail (tristen.pierson@gmail.com) in v1 — no new mail
+  infrastructure; a dedicated Axiovex sender identity would be a
+  separate change. `state.json` is updated with the run's headline
+  metrics and snapshot pointers so deltas compound over time.
 - **FR-008 — Failure behavior.** A failed run (API error, expired
   token, check unreachable) reports itself as failed with the reason;
   a silently missing report is a defect. Token expiry/rotation is

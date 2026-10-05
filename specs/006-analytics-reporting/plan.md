@@ -34,7 +34,10 @@ check results into one report.
    Fail-closed: API error → non-zero exit, no snapshot written.
 3. **Report composer**: the scheduled agent run reads the snapshot +
    state.json (+ browser check results for weekly), writes the report
-   markdown, updates state.json, and sends the chat summary. Insights
+   markdown, updates state.json, sends the chat summary, and emails
+   the full report to tristen@axiovexsystems.com and
+   rockson@axiovexsystems.com via the connected Gmail (FR-007).
+   Insights
    and suggestions follow FR-005 labeling.
 4. **Schedules** (T007), all owned by goal
    `website-seo-aeo-health-monitoring`:
