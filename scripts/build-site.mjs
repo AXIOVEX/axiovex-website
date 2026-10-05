@@ -352,7 +352,6 @@ function buildBlog() {
       '{{DATE_LONG}}': fmtDate(post.date),
       '{{TAGS_HTML}}': tagsHtml,
       '{{SHARE_TOP}}': shareRow(post.title, post.url, true),
-      '{{SHARE_BOTTOM}}': shareRow(post.title, post.url, false),
       '{{BODY_HTML}}': renderMarkdown(post.bodyMd),
       '{{MORE_HTML}}': moreHtml,
     });
