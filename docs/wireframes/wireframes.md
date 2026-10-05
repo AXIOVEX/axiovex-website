@@ -40,6 +40,13 @@ as accordion rows.
   (NIST, NSF, DOE, Manufacturing Dive, Automation Alley, CISA ICS,
   Federal Register). Headline/source/date only; nav unchanged; footer
   gains a Signals link.
+- **2026-10-05** — REVISION PENDING APPROVAL (spec 005-contact-form):
+  WF-06 left column's primary route becomes a contact form (name, email,
+  optional company, topic, message) protected by Cloudflare Turnstile
+  (Managed), delivered to the Start mailbox via a Pages Function with
+  server-side Siteverify. Email routes remain as fallback; legal stays
+  email-only. The privacy policy's "no form, no tracking" wording is
+  revised in the same package (exact copy in the spec).
 - **2026-10-05** — REVISION APPROVED by Tristen 2026-10-05 and IMPLEMENTED in 6825c7b (spec 003-page-head-spacing):
   page-head rhythm defined at WF-G2 — last head text → strata 36px,
   strata → first content 40px, on Documents, Blog index, Contact, and
