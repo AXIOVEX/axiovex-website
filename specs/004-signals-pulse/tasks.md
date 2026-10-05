@@ -15,7 +15,7 @@ Legend: [x] done · [ ] open · [OWNER] needs Tristen's decision
 - [x] T007 Home Signals block + `scripts/templates/signals.html` in the generator; styles.v23.css; sitemap + llms.txt
 - [x] T008 Fixture-based verification (caps, dedupe, cutoff, missing-month gap, dead-feed last-good) + live verification; SEO/AEO baseline confirmed
 - [x] T009 Axiovex blog RSS/Atom feed (`/feed.xml`) from the same generator step — small companion win
-- [ ] T010 Wireframe revision log marked approved; spec status → implemented
+- [x] T010 Wireframe revision log marked approved; spec status → implemented
 
 ## Queued next package (owner said "do both")
 - [ ] T011 Turnstile contact form: WF-06 wireframe revision + spec 005 — starts after this package ships

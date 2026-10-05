@@ -4,9 +4,11 @@
 
 **Created**: 2026-10-05
 
-**Status**: Wireframes revised (WF-01 block + new WF-11) — **awaiting
-Tristen's approval** (wireframe gate, constitution §III). No website
-changes before approval.
+**Status**: IMPLEMENTED AND LIVE 2026-10-05 (commit 84939fd), after
+Tristen approved the wireframe revision. Live verification: /signals/
+200 with all five lanes, home block serving with the Aug 2026 Pulse
+values, /feed.xml valid, and the hourly signals-sync workflow proven
+by a manual dispatch (completed success, no-op commit).
 
 **Input**: Tristen Pierson (owner), 2026-10-05: determine whether RSS /
 news feeds tied to Axiovex careabouts (or other free pipe-ins) can make
