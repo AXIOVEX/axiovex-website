@@ -45,6 +45,6 @@ deploys. There is no `posts.json` and no client-side rendering anymore.
   when nothing changed).
 - `blog.v4.js` — the only client script: mobile nav, index search/tag filter,
   and the article share buttons (copy link + native share).
-- `blog.v8.css` — blog styling on top of the main site stylesheet.
+- `blog.v9.css` — blog styling on top of the main site stylesheet.
 - Images: put them in `posts/` next to the article and reference them by
   relative path, e.g. `![caption](my-image.png)`.

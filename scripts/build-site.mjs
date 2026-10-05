@@ -206,6 +206,7 @@ const ICONS = {
   linkedin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>',
   email: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm10.5 8.1L3.5 6.2v11.3h17V6.2l-8.5 5.9a.6.6 0 0 1-.5 0z"/></svg>',
   sms: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H8l-4 4V4a2 2 0 0 1 2-2zm2 5v2h12V7H6zm0 4v2h8v-2H6z"/></svg>',
+  share: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>',
   link: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 13.4a4 4 0 0 0 5.7 0l3-3a4 4 0 1 0-5.7-5.7l-1.5 1.5 1.4 1.4 1.5-1.5a2 2 0 1 1 2.9 2.9l-3 3a2 2 0 0 1-2.9 0l-1.4 1.4zM13.4 10.6a4 4 0 0 0-5.7 0l-3 3a4 4 0 1 0 5.7 5.7l1.5-1.5-1.4-1.4-1.5 1.5a2 2 0 1 1-2.9-2.9l3-3a2 2 0 0 1 2.9 0l1.4-1.4z"/></svg>',
 };
 
@@ -222,9 +223,11 @@ function shareRow(title, url, withNative) {
     '" aria-label="Copy link" title="Copy link">' + ICONS.link + '<span>Copy link</span></button>';
   const nativeBtn = withNative
     ? '<button class="share-btn share-native" type="button" data-url="' + escAttr(url) + '" data-title="' +
-      escAttr(title) + '" aria-label="More share options" title="More share options">' + ICONS.sms + '<span>More&hellip;</span></button>'
+      escAttr(title) + '" aria-label="More share options" title="More share options">' + ICONS.share + '<span>More&hellip;</span></button>'
     : '';
-  return '<div class="share-row" role="group" aria-label="Share this article">' + links + copyBtn + nativeBtn + '</div>';
+  const smsBtn = '<a class="share-btn sms-share" href="sms:?&body=' + encodeURIComponent(title + ' ' + url) +
+    '" aria-label="Share by text message" title="Share by text message">' + ICONS.sms + '<span>Text</span></a>';
+  return '<div class="share-row" role="group" aria-label="Share this article">' + links + smsBtn + copyBtn + nativeBtn + '</div>';
 }
 
 /* ================= Documents sync ================= */
