@@ -4,10 +4,10 @@
 
 **Created**: 2026-10-05
 
-**Status**: Wireframes revised (WF-06) — **awaiting Tristen's approval**
-(wireframe gate, constitution §III). No website, Cloudflare, or tenant
-changes before approval. Second package of the owner's "do both —
-Signals/Pulse first" direction; spec 004 shipped 2026-10-05.
+**Status**: WF-06 revision + FR-005 copy **approved by Tristen
+2026-10-05** — implementation in progress on branch `005-contact-form`.
+Spec 004 shipped first per the owner's "do both — Signals/Pulse first"
+direction (2026-10-05).
 
 **Audit basis (2026-10-05)**: the site and repo contain no HTML forms
 and no Turnstile code; the AXIOVEX Cloudflare account has **zero**

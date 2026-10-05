@@ -21,7 +21,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   <link rel="apple-touch-icon" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/styles.v23.css">
+  <link rel="stylesheet" href="/styles.v24.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -81,12 +81,63 @@
       <div class="container">
         <div class="contact-grid">
           <div>
-            <p class="contact-eyebrow">Send a note</p>
-            <div class="route-grid">
-              <article class="card">
-                <h2>New projects, courses &amp; questions</h2>
-                <p>AI for your operation, AI 101 sessions, or a difficult problem you&rsquo;re facing.</p>
-                <a class="explore" href="mailto:start@axiovexsystems.com">start@axiovexsystems.com &rarr;</a>
+            <p class="contact-eyebrow" id="send-a-note">Send a note</p>
+            <div class="contact-stack">
+              <article class="card form-card">
+                <h2 class="visually-hidden">Contact form</h2>
+                <form id="contact-form" class="contact-form" method="post" action="/api/contact" aria-labelledby="send-a-note">
+                  <div id="form-summary" class="form-summary" tabindex="-1" role="status" aria-live="polite" hidden></div>
+
+                  <div class="form-field">
+                    <label for="contact-name">Name</label>
+                    <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" placeholder="Your name" required aria-describedby="contact-name-error">
+                    <p class="field-error" id="contact-name-error" data-error-for="name" hidden></p>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="contact-email">Email</label>
+                    <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@company.com" required aria-describedby="contact-email-error">
+                    <p class="field-error" id="contact-email-error" data-error-for="email" hidden></p>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="contact-company">Company <span class="optional">(optional)</span></label>
+                    <input id="contact-company" name="company" type="text" autocomplete="organization" maxlength="120" placeholder="Company or organization" aria-describedby="contact-company-error">
+                    <p class="field-error" id="contact-company-error" data-error-for="company" hidden></p>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="contact-topic">Topic</label>
+                    <select id="contact-topic" name="topic" required aria-describedby="contact-topic-error">
+                      <option value="" selected disabled>Choose a topic</option>
+                      <option value="New project">New project</option>
+                      <option value="Course &amp; training">Course &amp; training</option>
+                      <option value="Question">Question</option>
+                    </select>
+                    <p class="field-error" id="contact-topic-error" data-error-for="topic" hidden></p>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" rows="6" maxlength="5000" placeholder="The problem, in plain words&hellip;" required aria-describedby="contact-message-error"></textarea>
+                    <p class="field-error" id="contact-message-error" data-error-for="message" hidden></p>
+                  </div>
+
+                  <div class="form-field">
+                    <div id="turnstile-container" class="turnstile-box" aria-label="Spam check"></div>
+                    <p class="field-error" id="contact-turnstile-error" data-error-for="turnstile" hidden></p>
+                  </div>
+
+                  <div class="honeypot" aria-hidden="true">
+                    <label for="contact-website">Website</label>
+                    <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+                  </div>
+                  <input id="contact-started-at" name="startedAt" type="hidden" value="0">
+
+                  <noscript><p class="form-noscript">The form needs JavaScript for its spam check. Email <a class="inline-link" href="mailto:start@axiovexsystems.com">start@axiovexsystems.com</a> instead.</p></noscript>
+                  <button id="contact-submit" class="btn btn-primary contact-submit" type="submit">Send message</button>
+                  <p class="form-microcopy">Sent to our Start mailbox; a founder replies. The spam check is run by Cloudflare Turnstile &mdash; see the <a class="inline-link" href="/privacy/">privacy policy</a>. Prefer email? <a class="inline-link" href="mailto:start@axiovexsystems.com">start@axiovexsystems.com</a></p>
+                </form>
               </article>
               <article class="card">
                 <h2>Privacy &amp; legal</h2>
@@ -94,7 +145,7 @@
                 <a class="explore" href="mailto:legal@axiovexsystems.com">legal@axiovexsystems.com &rarr;</a>
               </article>
             </div>
-            <p class="contact-note">Each route opens your mail app &mdash; no form, no tracking, exactly as our <a class="inline-link" href="/privacy/">privacy policy</a> describes. Replies come from a founder, not a queue.</p>
+            <p class="contact-note">The form delivers to the same Start mailbox the email route uses &mdash; replies still come from a founder. The legal route stays email-only.</p>
           </div>
           <div class="panels">
             <div class="panel">
@@ -152,6 +203,130 @@
       </div>
     </div>
   </footer>
+  <script>
+    window.axiovexTurnstileWidgetId = null;
+    window.initAxiovexTurnstile = function () {
+      var container = document.getElementById('turnstile-container');
+      if (!container || !window.turnstile || window.axiovexTurnstileWidgetId !== null) return;
+      var production = window.location.hostname === 'axiovexsystems.com';
+      window.axiovexTurnstileWidgetId = window.turnstile.render(container, {
+        sitekey: production ? '0x4AAAAAAFOkyD9ikBMt8aVk' : '1x00000000000000000000AA',
+        action: 'contact',
+        theme: 'dark',
+        size: 'flexible',
+        appearance: 'always'
+      });
+    };
+  </script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=initAxiovexTurnstile" async defer></script>
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      if (!form) return;
+      var summary = document.getElementById('form-summary');
+      var submit = document.getElementById('contact-submit');
+      var startedAt = document.getElementById('contact-started-at');
+      var submitLabel = submit.textContent;
+
+      function resetStartedAt() { startedAt.value = String(Date.now()); }
+      resetStartedAt();
+
+      function fieldFor(name) { return form.querySelector('[name="' + name + '"]'); }
+      function errorFor(name) { return form.querySelector('[data-error-for="' + name + '"]'); }
+
+      function clearError(name) {
+        var field = fieldFor(name);
+        var error = errorFor(name);
+        if (field) field.removeAttribute('aria-invalid');
+        if (error) { error.textContent = ''; error.hidden = true; }
+      }
+
+      function setError(name, message) {
+        var field = fieldFor(name);
+        var error = errorFor(name);
+        if (field && name !== 'turnstile') field.setAttribute('aria-invalid', 'true');
+        if (error) { error.textContent = message; error.hidden = false; }
+      }
+
+      function showSummary(message, isError) {
+        summary.textContent = message;
+        summary.classList.toggle('error', isError);
+        summary.classList.toggle('success', !isError);
+        summary.hidden = false;
+      }
+
+      function resetTurnstile() {
+        if (window.turnstile && window.axiovexTurnstileWidgetId !== null) {
+          window.turnstile.reset(window.axiovexTurnstileWidgetId);
+        }
+      }
+
+      ['name', 'email', 'company', 'topic', 'message'].forEach(function (name) {
+        var field = fieldFor(name);
+        if (field) field.addEventListener('input', function () { clearError(name); });
+        if (field) field.addEventListener('change', function () { clearError(name); });
+      });
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        var data = Object.fromEntries(new FormData(form).entries());
+        if (!data['cf-turnstile-response']) {
+          var turnstileMessage = 'Please complete the spam check. If it does not appear, email start@axiovexsystems.com instead.';
+          setError('turnstile', turnstileMessage);
+          showSummary(turnstileMessage, true);
+          summary.focus();
+          return;
+        }
+
+        summary.hidden = true;
+        submit.disabled = true;
+        submit.textContent = 'Sending...';
+
+        fetch(form.action, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        }).then(function (response) {
+          return response.json().catch(function () {
+            return { ok: false, message: 'We could not send your message. Please email start@axiovexsystems.com instead.' };
+          }).then(function (payload) { return { response: response, payload: payload }; });
+        }).then(function (result) {
+          var payload = result.payload || {};
+          if (result.response.ok && payload.ok) {
+            form.reset();
+            resetStartedAt();
+            resetTurnstile();
+            showSummary(payload.message || 'Message sent. A founder will reply.', false);
+            summary.focus();
+            return;
+          }
+
+          var firstErrorField = null;
+          if (payload.errors) {
+            Object.keys(payload.errors).forEach(function (name) {
+              setError(name, payload.errors[name]);
+              if (!firstErrorField && name !== 'turnstile') firstErrorField = fieldFor(name);
+            });
+          }
+          showSummary(payload.message || 'We could not send your message. Please email start@axiovexsystems.com instead.', true);
+          if (payload.resetTurnstile) resetTurnstile();
+          (firstErrorField || summary).focus();
+        }).catch(function () {
+          showSummary('We could not send your message. Please email start@axiovexsystems.com instead.', true);
+          resetTurnstile();
+          summary.focus();
+        }).finally(function () {
+          submit.disabled = false;
+          submit.textContent = submitLabel;
+        });
+      });
+    })();
+  </script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     (function () {

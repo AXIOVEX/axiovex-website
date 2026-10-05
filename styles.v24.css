@@ -832,3 +832,95 @@ h2 {
 @media (max-width: 420px) {
   .pulse-grid { grid-template-columns: 1fr; }
 }
+
+/* ---------- v24 (2026-10-05, spec 005): Turnstile contact form ---------- */
+.contact-stack { display: grid; gap: 16px; }
+.form-card:hover { transform: none; }
+.contact-form { display: grid; gap: 16px; text-align: left; }
+.form-field { display: grid; gap: 7px; }
+.form-field label {
+  color: var(--ink);
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.form-field .optional { color: var(--faint); font-weight: 400; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(127, 216, 232, 0.34);
+  border-radius: 10px;
+  background: rgba(8, 31, 50, 0.74);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.45;
+  padding: 11px 13px;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: var(--faint); opacity: 1; }
+.contact-form input:hover,
+.contact-form select:hover,
+.contact-form textarea:hover { border-color: rgba(0, 222, 246, 0.52); }
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--cyan);
+  outline: 2px solid rgba(0, 222, 246, 0.28);
+  outline-offset: 1px;
+}
+.contact-form select option { background: var(--ink); color: var(--navy); }
+.contact-form textarea { min-height: 144px; resize: vertical; }
+.contact-form [aria-invalid="true"] { border-color: #FF8A80; }
+.field-error {
+  color: #FFB4AB;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.form-summary {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.55;
+}
+.form-summary:focus { outline: 2px solid var(--cyan); outline-offset: 3px; }
+.form-summary.error {
+  border-color: rgba(255, 138, 128, 0.58);
+  background: rgba(255, 90, 80, 0.08);
+}
+.form-summary.success {
+  border-color: rgba(0, 222, 246, 0.48);
+  background: rgba(0, 222, 246, 0.08);
+}
+.turnstile-box { min-height: 65px; }
+.form-microcopy,
+.form-noscript {
+  color: var(--faint);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+.contact-submit {
+  justify-self: start;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+.contact-submit:disabled {
+  cursor: wait;
+  opacity: 0.55;
+  transform: none;
+  box-shadow: none;
+}
+.honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+@media (max-width: 480px) {
+  .contact-submit { width: 100%; justify-self: stretch; text-align: center; }
+}
