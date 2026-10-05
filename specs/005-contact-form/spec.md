@@ -4,10 +4,13 @@
 
 **Created**: 2026-10-05
 
-**Status**: WF-06 revision + FR-005 copy **approved by Tristen
-2026-10-05** — implementation in progress on branch `005-contact-form`.
-Spec 004 shipped first per the owner's "do both — Signals/Pulse first"
-direction (2026-10-05).
+**Status**: **Implemented and live 2026-10-05.** Approved by Tristen
+2026-10-05; implemented on branch `005-contact-form` (7d11b2a), full
+preview test ladder passed, ApplicationAccessPolicy applied and
+verified (Start Granted / other mailboxes Denied), merged to main
+(597d6b5), production end-to-end verified the same day (real
+submission → Start mailbox → test message deleted; preview
+deployments removed).
 
 **Audit basis (2026-10-05)**: the site and repo contain no HTML forms
 and no Turnstile code; the AXIOVEX Cloudflare account has **zero**

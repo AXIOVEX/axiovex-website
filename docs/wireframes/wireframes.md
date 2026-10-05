@@ -24,7 +24,8 @@ This file is the index, the gate rule, and the revision log.
 
 Framing decisions baked into the set (2026-10-04): centered axis (standing
 symmetry rule); strata = 3 segments
-(Axiovex's three service lines); no contact form (email routes only); no
+(Axiovex's three service lines); contact form + email routes (form added
+by spec 005, 2026-10-05; the set was email-routes-only before that); no
 invented proof — evidence band carries real published material only; FAQ kept
 as accordion rows.
 
@@ -40,13 +41,21 @@ as accordion rows.
   (NIST, NSF, DOE, Manufacturing Dive, Automation Alley, CISA ICS,
   Federal Register). Headline/source/date only; nav unchanged; footer
   gains a Signals link.
-- **2026-10-05** — REVISION PENDING APPROVAL (spec 005-contact-form):
-  WF-06 left column's primary route becomes a contact form (name, email,
+- **2026-10-05** — REVISION APPROVED by Tristen 2026-10-05 and
+  IMPLEMENTED in 7d11b2a, live on production the same day (spec
+  005-contact-form):
+  WF-06 left column's primary route is now a contact form (name, email,
   optional company, topic, message) protected by Cloudflare Turnstile
   (Managed), delivered to the Start mailbox via a Pages Function with
-  server-side Siteverify. Email routes remain as fallback; legal stays
-  email-only. The privacy policy's "no form, no tracking" wording is
-  revised in the same package (exact copy in the spec).
+  server-side Siteverify (fail-closed), honeypot + timing trap, and an
+  edge rate-limit rule (5 req / 10s per IP). The Graph app is scoped by
+  an ApplicationAccessPolicy to the Start mailbox only (verified:
+  Start Granted, other mailboxes Denied). Email routes remain as
+  fallback; legal stays email-only. The privacy policy's "no form, no
+  tracking" wording was revised in the same release (exact copy in the
+  spec, FR-005). Full test ladder passed on a Pages preview (test-key
+  pass + real delivery, always-fail block, restore) and end-to-end on
+  production.
 - **2026-10-05** — REVISION APPROVED by Tristen 2026-10-05 and IMPLEMENTED in 6825c7b (spec 003-page-head-spacing):
   page-head rhythm defined at WF-G2 — last head text → strata 36px,
   strata → first content 40px, on Documents, Blog index, Contact, and
