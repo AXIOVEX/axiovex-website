@@ -4,8 +4,8 @@
 
 **Created**: 2026-10-05
 
-**Status**: Wireframes revised — **awaiting Tristen's approval** (wireframe
-gate, constitution §III). No website changes before approval.
+**Status**: Implemented and live — wireframe revision approved by Tristen
+2026-10-05; implementation commit d94719e, verified live the same day.
 
 **Input**: Tristen Pierson (owner), 2026-10-05: "for blog articles, remove
 the share buttons from the bottom of the blog articles. we should only

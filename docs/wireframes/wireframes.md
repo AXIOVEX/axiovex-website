@@ -31,9 +31,9 @@ as accordion rows.
 
 - **2026-10-04** — Full set (14 frames incl. tablet set) approved by Tristen;
   redesign implemented the same day (commit 7102f67).
-- **2026-10-05** — REVISION PENDING APPROVAL (spec 002-article-share-layout):
+- **2026-10-05** — REVISION APPROVED by Tristen 2026-10-05 and IMPLEMENTED the same day (spec 002-article-share-layout, commit d94719e):
   WF-04 — share row drawn at the TOP of the article only, directly under the
   strata divider, 22px clear above / 20px below; the end-of-article share
   block removed from the frame. WF-03 — article list starts lower under the
   divider (list top margin 32px → 44px). Not yet implemented on the live
-  site; implementation waits on approval of this revision.
+  site; verified live (one share row per article, no post-footer).
