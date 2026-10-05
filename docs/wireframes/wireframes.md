@@ -22,7 +22,7 @@ This file is the index, the gate rule, and the revision log.
 - Global components: WF-G1 nav · WF-G2 strata bar · WF-G3 CTA band · WF-G4 footer
 
 Framing decisions baked into the set (2026-10-04): centered axis (standing
-symmetry rule) with Rockeagle-derived structure/rhythm; strata = 3 segments
+symmetry rule); strata = 3 segments
 (Axiovex's three service lines); no contact form (email routes only); no
 invented proof — evidence band carries real published material only; FAQ kept
 as accordion rows.

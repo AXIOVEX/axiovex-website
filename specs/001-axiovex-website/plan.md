@@ -23,5 +23,5 @@
 ## Design
 
 - Wireframes: `docs/wireframes/` (WF-01..09, G1..G4), approved 2026-10-04.
-- Redesign lineage: Rockeagle-derived structure/rhythm, Axiovex palette
-  and centered axis (commit 7102f67).
+- Redesign: structure and rhythm per the approved wireframe set,
+  Axiovex palette and centered axis (commit 7102f67).
