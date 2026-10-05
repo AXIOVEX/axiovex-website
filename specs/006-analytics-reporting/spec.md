@@ -5,8 +5,11 @@ branch needed until implementation)
 
 **Created**: 2026-10-05
 
-**Status**: Requirements draft — **pending Tristen's approval** (gate
-task T001). No implementation before approval.
+**Status**: **Implemented 2026-10-05.** Requirements approved by
+Tristen 2026-10-05 (gate T001); token, fetcher, cross-check, report
+formats, and all three schedules live the same day; first daily /
+weekly / monthly reports delivered and emailed to both founders.
+See tasks.md completion notes for probe findings and evidence.
 
 **Direction (Tristen, 2026-10-05)**: "make sure we can do the analytics
 via Cloudflare API. or MCP if available. and set up requirements —
