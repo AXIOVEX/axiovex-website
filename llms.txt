@@ -17,6 +17,7 @@ true. Rapid-response engineering is part of how we work.
 - Contact: start@axiovexsystems.com
 - Course materials: https://axiovexsystems.com/documents/
 - GitHub: https://github.com/AXIOVEX
+- Terminology: AI means today's narrow systems; SI means superintelligence (theoretical). We use each term only for its rung: https://axiovexsystems.com/blog/what-superintelligence-means/
 
 ## What we do
 
