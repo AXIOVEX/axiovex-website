@@ -441,3 +441,14 @@ as accordion rows.
   revised first under the standing wireframes-first
   rule. Spec record: specs/013-signals-highlights-detail
   spec.md Amendment 1 + tasks T008–T012.
+  **Closeout 2026-10-06:** implemented on staging
+  (tasks T009/T010 — exactly 5 cards in the region, the
+  insights summary byte-identical to the pre-fix
+  production rendering, drop-out scratch builds 6/6,
+  Playwright clean at 1440 / 834 / 390; no CSS change,
+  stylesheet stays styles.v30.css) and promoted to
+  production the same day (fast-forward + FR-004 guard
+  restoration `462136e`; guard proof empty;
+  production-verified live: 5 cards, zero Pulse-labelled
+  cards in the region, summary and Pulse band intact) —
+  **IMPLEMENTED + LIVE**.

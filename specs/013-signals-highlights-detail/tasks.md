@@ -223,16 +223,55 @@ Amendment 2 basis); wireframes revised first.
   full data → 5 cards. Staging live: 5 `hl-card`s
   served, styles.v30.css, `x-robots-tag: noindex,
   nofollow` intact.
-- [ ] T011 **Promotion**: merge `staging` → `main`
+- [x] T011 **Promotion**: merge `staging` → `main`
   under spec 010 FR-004 (guard proof EMPTY before
   pushing — STOP if the diff carries staging-only
   `robots.txt`/`_headers` beyond the intended guard
   state); production verification repeated live
   (5 cards, no Pulse duplication, summary + band
   intact); sync back to staging with guards re-applied.
-- [ ] T012 **Closeout**: amendment tasks checked with
+  **Done 2026-10-06:** `main` was a direct ancestor of
+  the staging tip, so the promotion fast-forwarded
+  `83c918e → 29d8edd` and the guard restoration landed
+  as commit `462136e` before pushing (production tip =
+  `462136e`). **FR-004 guard proof:
+  `git diff 83c918e..HEAD -- robots.txt _headers` is
+  EMPTY** — the fast-forward carried staging's guard
+  files in the working result; main's `robots.txt` was
+  restored and `_headers` removed before the push, and
+  the full promotion diff is exactly
+  `scripts/build-site.mjs`, `signals/index.html`, and
+  this tasks file. **Production verification (live):**
+  /signals/ serves **5 highlight cards** (Michigan
+  riser/faller, U.S. riser/faller, education headline)
+  with **zero Pulse-labelled cards** in the region; the
+  insights summary is **byte-identical** to the pre-fix
+  production capture; the Pulse band is intact (9
+  `pulse-tile`s total = 5 cards + 4 band tiles);
+  styles.v30.css; BREAKING markers present with zero
+  banner markup and `data/breaking.json` still
+  `{"active":null}`; production `robots.txt` = Allow
+  version; **no `x-robots-tag`** on `/`. Sync back:
+  commit `b639916` re-applied the guards on top of
+  `main` in a single push (staging never carried an
+  unguarded tree); post-sync diff `main..staging` is
+  exactly `_headers` + staging `robots.txt`, and
+  staging still serves `x-robots-tag: noindex,
+  nofollow` with its staging robots.
+- [x] T012 **Closeout**: amendment tasks checked with
   the production record; wireframe log notes the
   amendment as implemented + live (WF-11 labels stay
   APPROVED · IMPLEMENTED + LIVE); review copy re-synced
   if the wireframes changed; monitoring state
   `website_commit` advanced to the promotion merge.
+  **Done 2026-10-06:** T008–T011 checked with their
+  records; the `wireframes.md` Amendment 1 log entry
+  carries an implemented + LIVE closeout and the WF-11
+  Highlights tag records the amendment as implemented +
+  live (the frame's APPROVED · IMPLEMENTED + LIVE
+  labels stand; spec 014's WF-13 labels untouched, no
+  drawing altered); review copy re-synced
+  byte-identical (cmp verified); monitoring state
+  `website_commit` advanced `4497704` → `462136e` (the
+  production tip of this promotion: fast-forward to
+  staging tip `29d8edd` + guard restoration `462136e`).
