@@ -96,6 +96,41 @@ contain an H1 or repeat the title.
 Section headings are `##` (H2) only within the body; `###` (H3) may
 subdivide a section when needed. No heading deeper than `####`.
 
+## 3A. Standing sections added by FR-010 (2026-10-06)
+
+From the FR-010 amendment (spec 007) onward, three standing
+sections join the §3 structure, in these positions (FR-010 is the
+normative source; this section fixes their placement in the file
+format):
+
+- **Trend board** — immediately after the lead analysis (§3
+  item 3). Ticker-style `|` table of the four FR-002 BLS series:
+  latest value + reference period, month-over-month change,
+  change across the snapshot window, direction marker
+  (▲/▼/▬). Deltas are labeled in the article as computed
+  arithmetic on the published series; series gaps (missing
+  months) are noted, never filled. A sentence states the reading
+  rule: arrows show the direction of the number, not a verdict.
+- **Outlook board** — immediately after the signals section (§3
+  item 4). Published projections only (Michigan MCDA statewide
+  vintage via the current edition; BLS Employment Projections
+  national vintage), organized as rising / falling, with agency,
+  horizon, and vintage stated in the section and annual openings
+  shown beside percentage change where published. Framed as the
+  agencies' modeled outlook; no Axiovex forecast is stated.
+- **Education analytics** — immediately after the outlook board,
+  before the decisions section (§3 item 5). Michigan education
+  indicators in board form (indicator, latest, prior reading,
+  trend), each from a published official source cited in place
+  (CEPI/MDE; IPEDS/NCES for directly citable Michigan series;
+  state consensus figures only when labeled as estimates).
+  Indicators that cannot be verified from the published source
+  are omitted and the omission disclosed.
+
+The decisions section (§3 item 5) follows the three boards and
+may cross-reference them; standing decisions remain labeled as
+standing per §3.
+
 ## 4. Supported markdown subset
 
 Per `blog/README.md` and the generator — nothing outside this list
@@ -159,7 +194,9 @@ every item passes:
 - [ ] Evidence cutoff line present, dated, America/Detroit, with
       all sources named and edition/release linked.
 - [ ] All eight body components of §3 present, in order (worked
-      example per its condition).
+      example per its condition); for series articles under the
+      FR-010 amendment, the three standing sections of §3A are
+      also present, in their §3A positions.
 - [ ] Only `##`/`###` headings in the body; markdown stays inside
       the §4 subset.
 - [ ] Every figure traceable to a cited source with its period

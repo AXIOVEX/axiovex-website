@@ -23,6 +23,17 @@ format is specified in **`blog-format.md`** in this package. A full
 format-validated test article that was **not** published (outcome
 recorded in tasks.md, T006–T010).
 
+**Amendment 2 — 2026-10-06 (Tristen's direction, same day)**:
+**FR-010** adds three standing sections to every monthly article —
+a **Trend board** (ticker-style computed trends), an **Outlook
+board** (published projections, rising/falling), and an
+**Education analytics** section — with their sourcing and
+integrity rules, extending FR-002's source families for those
+sections only. A format sample demonstrating the three sections
+was produced the same day as the approval artifact
+(`2026-10-06-michigan-workforce-trends-sample.md`, series drafts
+folder; not published).
+
 **Direction (Tristen, 2026-10-06)**: once per month near mid-month,
 publish a Michigan workforce data blog article matching the
 presentation and feel of the first one (2026-09-30); then determine
@@ -267,6 +278,61 @@ when the 15th falls badly.
     test article was produced from the verified outputs and
     validated against `blog-format.md` — **not published**. Full
     record: tasks.md T006–T010.
+- **FR-010 — Standing trend, outlook, and education sections**
+  (added 2026-10-06, Tristen's direction; sample produced the same
+  day as the approval artifact). Every monthly article carries
+  three additional standing sections, positioned in the
+  `blog-format.md` §3 order per its §3A: a **Trend board**
+  immediately after the lead analysis; an **Outlook board**
+  immediately after the signals section; an **Education
+  analytics** section immediately after the outlook board, before
+  the decisions section.
+  - **Trend board.** The four FR-002 BLS series in ticker-style
+    tabular form: latest value with its reference period,
+    month-over-month change, change across the window the series
+    snapshot carries, and a direction marker. Deltas are
+    arithmetic computed from the published series and are labeled
+    in the article as computed — they are not BLS-published deltas
+    and not forecasts. Months missing from a published series
+    stay gaps and are noted as gaps. Direction markers denote the
+    direction of the number only; the article states that reading
+    rule (an up arrow on unemployment is not good news).
+  - **Outlook board ("on the rise" / "falling").** Published
+    projections only: the Michigan MCDA long-term occupational
+    projections (current statewide vintage, taken from the current
+    edition's verified capture) and the U.S. BLS Employment
+    Projections (current national vintage, read from BLS). Every
+    projected figure carries its agency, horizon, and vintage in
+    the article. Annual openings (which include replacement
+    demand) are shown alongside percentage change wherever the
+    source publishes them. Projections are framed as the
+    publishing agency's modeled outlook — the series' "signals,
+    not forecasts" restraint applies in full, and **Axiovex issues
+    no forecast of its own**. Geographies and vintages are never
+    mixed within one table without explicit labels.
+  - **Education analytics.** Michigan education indicators with
+    trend direction, from published official sources: Michigan
+    CEPI / MDE releases (e.g. graduation and dropout rates,
+    teacher-preparation enrollment and completions), IPEDS/NCES
+    where a Michigan series can be cited directly, and state
+    consensus figures (House Fiscal Agency / CREC) only when
+    labeled in the article as estimates. An indicator that cannot
+    be verified from its published source in that cycle is
+    **omitted and the omission disclosed** (in the article or the
+    cycle report) — never backfilled from memory, search-result
+    roundups, or secondary summaries.
+  - **Sourcing extension.** FR-002's two source families are
+    extended **for these three sections only** by the official
+    sources named in this requirement, each cited at first use in
+    the article. All other FR-002 rules apply unchanged: every
+    figure traceable, nothing invented or interpolated, nothing
+    carried forward as current.
+  - **Sample.** The approval artifact for this amendment is
+    `2026-10-06-michigan-workforce-trends-sample.md` (series
+    drafts folder, with its SAMPLE-NOTES accounting of sources,
+    omissions, and format validation), produced 2026-10-06 and
+    **not published**. The sections first appear in a real cycle
+    article through the normal FR-004 approval gate.
 
 ## Out of scope
 
