@@ -6,13 +6,12 @@ through the normal build)
 
 **Created**: 2026-10-06
 
-**Status**: **Proposed 2026-10-06 — PENDING OWNER APPROVAL.**
-Wireframes were revised first, per constitution §III: WF-G1 (nav),
-WF-01 (home Signals block), and the new WF-G6 / WF-12 (floating
-widget) are drawn in `docs/wireframes/` and marked pending. **No
-implementation task starts until Tristen approves the wireframes**
-(tasks.md T001 is the blocking gate). Nothing on the live site has
-changed for this spec.
+**Status**: **Implemented and live 2026-10-06** (implementation
+commit `ab0e4e5`). Tristen approved the wireframes on 2026-10-06
+08:55 EDT — "Approve spec 008 wireframes — implement it" — and the
+implementation follows the approved WF-G1 / WF-01 / WF-G6 / WF-12
+with no deviations. Verified by a local Playwright pass (desktop,
+tablet, mobile) and live curl checks (see tasks.md T002–T009).
 
 **Direction (Tristen, 2026-10-06)**: make Axiovex Signals part of
 the navigation (it currently lives only in the footer and a

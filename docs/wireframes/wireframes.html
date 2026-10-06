@@ -127,7 +127,7 @@
 
   <!-- ================= GLOBAL COMPONENTS ================= -->
   <h2 class="wf-title"><span class="wf-id">WF-G1 · Global — Sticky navigation</span>Same on every page</h2>
-  <p class="wf-sub">Pattern: sticky, translucent blurred navy, hairline bottom border, bordered CTA button at right. <b>REVISED 2026-10-06 (spec 008 — PENDING OWNER APPROVAL):</b> a <b>Signals</b> link (/signals/) joins the nav — immediately after Blog, before Documents — in the desktop links and the hamburger panel alike.</p>
+  <p class="wf-sub">Pattern: sticky, translucent blurred navy, hairline bottom border, bordered CTA button at right. <b>REVISED 2026-10-06 (spec 008 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE (commit ab0e4e5)):</b> a <b>Signals</b> link (/signals/) joins the nav — immediately after Blog, before Documents — in the desktop links and the hamburger panel alike.</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">all pages</span></div>
     <div class="stage">
@@ -150,7 +150,7 @@
     </div>
   </div>
   <ul class="notes">
-    <li><strong>Change vs today:</strong> nav becomes sticky with a blur backdrop and a bordered Contact button; current page shown in cyan. <strong>2026-10-06 (spec 008 — pending approval):</strong> Signals is added after Blog in both the desktop links and the hamburger panel — the one link-order change; every other link and its order is untouched.</li>
+    <li><strong>Change vs today:</strong> nav becomes sticky with a blur backdrop and a bordered Contact button; current page shown in cyan. <strong>2026-10-06 (spec 008 — approved 2026-10-06 · implemented + live):</strong> Signals is added after Blog in both the desktop links and the hamburger panel — the one link-order change; every other link and its order is untouched.</li>
   </ul>
 
   <h2 class="wf-title"><span class="wf-id">WF-G2 · Global — Strata bar</span>Under every hero and page head</h2>
@@ -225,7 +225,7 @@
     <li>Cards stay <strong>perfectly symmetric</strong>: equal height, equal padding, one row of three, stacking to one column on mobile.</li>
   </ul>
 
-  <h2 class="wf-title"><span class="wf-id">WF-G6 · Global — Signals floating widget</span>NEW 2026-10-06 (spec 008 — pending approval) · full states at WF-12</h2>
+  <h2 class="wf-title"><span class="wf-id">WF-G6 · Global — Signals floating widget</span>NEW 2026-10-06 (spec 008 — approved 2026-10-06 · implemented + live) · full states at WF-12</h2>
   <p class="wf-sub">A collapsible corner widget that carries the current Signals highlights onto every page — each page gets applicable live data with links out. Collapsed, it is a single pill in the bottom-right corner; expanded, the compact panel drawn at WF-12. Present on every page <strong style="color:var(--ink)">except /signals/</strong>, where the full board already lives. Fed by a build-generated first-party JSON derived from the same <span style="color:var(--muted)">data/signals.json</span> snapshot as WF-01 / WF-11 — no third-party runtime fetching (spec 004 architecture), refreshed by the hourly signals sync.</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">all pages except /signals/</span></div>
@@ -246,7 +246,7 @@
 
   <!-- ================= HOME ================= -->
   <h2 class="wf-title"><span class="wf-id">WF-01 · Home — Desktop</span>axiovexsystems.com/</h2>
-  <p class="wf-sub">The home flow, in Axiovex order: <b>REVISED 2026-10-05 (approved, live):</b> a new Signals + Michigan Pulse block sits between Evidence and About — Pulse tiles, three latest signal cards, and the path to the full Signals page (WF-11). <b>REVISED 2026-10-06 (spec 008 — PENDING OWNER APPROVAL):</b> the block is highlighted — the eyebrow becomes &ldquo;AXIOVEX SIGNALS — LIVE&rdquo; with a live-dot, and a Michigan Pulse mini-strip (the three headline stats, period-labeled, build-generated) sits directly under the heading; the full Pulse band remains on WF-11 only.</p>
+  <p class="wf-sub">The home flow, in Axiovex order: <b>REVISED 2026-10-05 (approved, live):</b> a new Signals + Michigan Pulse block sits between Evidence and About — Pulse tiles, three latest signal cards, and the path to the full Signals page (WF-11). <b>REVISED 2026-10-06 (spec 008 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE (commit ab0e4e5)):</b> the block is highlighted — the eyebrow becomes &ldquo;AXIOVEX SIGNALS — LIVE&rdquo; with a live-dot, and a Michigan Pulse mini-strip (the three headline stats, period-labeled, build-generated) sits directly under the heading; the full Pulse band remains on WF-11 only.</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com</span></div>
     <div class="stage">
@@ -600,7 +600,7 @@
   </div>
 
   <h2 class="wf-title"><span class="wf-id">WF-11 · Signals (new page)</span>axiovexsystems.com/signals/</h2>
-  <p class="wf-sub">NEW 2026-10-05 (spec 004-signals-pulse, live). A public intelligence board: the Michigan Pulse band plus field signals in five lanes. Ingested at build time from primary sources and rendered as static HTML — no live third-party widgets, no visitor tracking, no copied article text (headline, source, date; the publisher gets the click). Reachable from the home Signals block and the footer — the nav is unchanged in v1. <b>REVISED 2026-10-06 (spec 008 — PENDING OWNER APPROVAL):</b> WF-G1 gains the Signals link, so this page becomes reachable from the nav too, where it shows as the current page.</p>
+  <p class="wf-sub">NEW 2026-10-05 (spec 004-signals-pulse, live). A public intelligence board: the Michigan Pulse band plus field signals in five lanes. Ingested at build time from primary sources and rendered as static HTML — no live third-party widgets, no visitor tracking, no copied article text (headline, source, date; the publisher gets the click). Reachable from the home Signals block and the footer — the nav is unchanged in v1. <b>REVISED 2026-10-06 (spec 008 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE (commit ab0e4e5)):</b> WF-G1 gains the Signals link, so this page becomes reachable from the nav too, where it shows as the current page.</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/signals/</span></div>
     <div class="stage">
@@ -646,7 +646,7 @@
   </div>
 
   <!-- ================= SIGNALS WIDGET ================= -->
-  <h2 class="wf-title"><span class="wf-id">WF-12 · Signals widget — States (WF-G6)</span>NEW 2026-10-06 (spec 008 — pending approval)</h2>
+  <h2 class="wf-title"><span class="wf-id">WF-12 · Signals widget — States (WF-G6)</span>NEW 2026-10-06 (spec 008 — approved 2026-10-06 · implemented + live)</h2>
   <p class="wf-sub">The floating widget in its two states, plus mobile. Every page carries the same component; only the headline order changes — on blog articles, the lane matching the article&rsquo;s tags surfaces first (workforce / Michigan tags &rarr; Michigan lane; AI tags &rarr; AI, standards &amp; research lane). The Michigan Pulse row always leads the panel.</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">all pages except axiovexsystems.com/signals/</span></div>
