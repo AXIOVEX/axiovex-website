@@ -174,7 +174,7 @@ Amendment 2 basis); wireframes revised first.
   `~/workspace/your_files/axiovex-wireframes/
   wireframes.html` re-synced byte-identical. Committed
   on `main`.
-- [ ] T009 **Implement on staging**: merge `main` →
+- [x] T009 **Implement on staging**: merge `main` →
   `staging` (guards win — post-merge diff is exactly
   `_headers` + staging `robots.txt`);
   `highlightCardsHtml()` in `scripts/build-site.mjs`
@@ -182,7 +182,17 @@ Amendment 2 basis); wireframes revised first.
   U.S. riser/faller, education headline; drop-out
   preserved); regenerate; stylesheet bumped only if
   the card-grid CSS must change.
-- [ ] T010 **Staging verification**: Highlights region
+  **Done 2026-10-06:** merge `c914f68` brought `main`
+  (docs package `83c918e`) into staging; post-merge diff
+  `main..staging` = exactly `_headers` + staging
+  `robots.txt`. Implementation `95d2bb1`: the Pulse-card
+  loop removed from `highlightCardsHtml()` (FR-003
+  comment updated to the amended rule); regeneration
+  changed only `signals/index.html` (−20 lines = the
+  four cards) — the card grid needed **no CSS change**,
+  so the stylesheet stays **styles.v30.css**; the home
+  page is byte-identical.
+- [x] T010 **Staging verification**: Highlights region
   carries exactly 5 cards and none of the four Pulse
   labels appear inside it; the insights summary text is
   byte-identical to the current production rendering;
@@ -195,6 +205,24 @@ Amendment 2 basis); wireframes revised first.
   cards); home byte-identical except any stylesheet
   repoint; staging serves the fix with
   `x-robots-tag: noindex, nofollow` intact.
+  **Done 2026-10-06 — ALL PASS.** Source checks: the
+  generated region holds exactly the five amended labels
+  (Michigan riser/faller, U.S. riser/faller, education
+  headline) and no `· MI` Pulse card label; the
+  `.hl-summary` inner HTML is **byte-identical** to the
+  pre-fix production capture (762 chars). Playwright at
+  1440 / 834 / 390: 5 cards, 4 band tiles, 5 lanes,
+  detail toggle present, summary text matches the
+  production capture, **no horizontal overflow** at any
+  width; screenshot of the region inspected (5 cards in
+  the existing 4 + 1 grid rhythm). Drop-out scratch
+  builds (never committed), 6/6: outlook absent →
+  0 cards + summary + detail Pulse table, exit 0;
+  empty outlook `{}` → same; BLS-only → 2 cards;
+  Michigan-only → 2 cards; no-education → 4 cards;
+  full data → 5 cards. Staging live: 5 `hl-card`s
+  served, styles.v30.css, `x-robots-tag: noindex,
+  nofollow` intact.
 - [ ] T011 **Promotion**: merge `staging` → `main`
   under spec 010 FR-004 (guard proof EMPTY before
   pushing — STOP if the diff carries staging-only
