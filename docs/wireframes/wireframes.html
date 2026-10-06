@@ -83,6 +83,25 @@
   .approve h2{font-size:21px;margin-bottom:12px}
   .approve li{list-style:none;color:var(--muted);margin-bottom:8px;font-size:15.5px}
   .approve li::before{content:"☐  ";color:var(--cyan);font-size:17px}
+  .livedot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--cyan);margin-right:8px;vertical-align:1px}
+  .pulse-strip{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 14px;border:1px solid var(--line);border-radius:999px;padding:10px 20px;margin-top:14px;background:var(--panel2)}
+  .ps-label{color:var(--cyan);font-size:11.5px;letter-spacing:.14em;font-weight:700;text-transform:uppercase}
+  .ps-stat{color:var(--muted);font-size:14px}
+  .ps-stat b{color:var(--ink);font-size:15px}
+  .ps-dot{color:var(--faint)}
+  .wpill{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--cyan);background:var(--panel);color:var(--ink);border-radius:999px;padding:9px 18px;font-size:14px;font-weight:600}
+  .wpanel{width:340px;max-width:100%;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-align:left;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+  .wpanel .wp-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+  .wpanel .wp-title{font-size:13px;letter-spacing:.14em;font-weight:700;color:var(--ink);text-transform:uppercase}
+  .wpanel .wp-pulse{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border-top:1px solid rgba(247,252,255,.1);border-bottom:1px solid rgba(247,252,255,.1);padding:10px 0;margin-bottom:12px}
+  .wpanel .wp-pulse p{font-size:11px;color:var(--faint);line-height:1.35}
+  .wpanel .wp-pulse b{display:block;font-size:17px;color:var(--ink);margin-top:2px}
+  .wp-item{margin-bottom:10px}
+  .wp-item .wp-lane{color:var(--cyan);font-size:11px;letter-spacing:.12em;font-weight:700}
+  .wp-item .wp-hl{font-size:14.5px;color:var(--ink);line-height:1.4}
+  .wp-item .wp-meta{color:var(--faint);font-size:12px}
+  .cornerstage{position:relative;min-height:200px}
+  .cornerstage .wpill{position:absolute;right:6px;bottom:6px}
   @media(max-width:760px){.grid3,.grid2,.foot-grid{grid-template-columns:1fr}.stage{padding:20px 16px 26px}}
 </style>
 </head>
@@ -108,7 +127,7 @@
 
   <!-- ================= GLOBAL COMPONENTS ================= -->
   <h2 class="wf-title"><span class="wf-id">WF-G1 · Global — Sticky navigation</span>Same on every page</h2>
-  <p class="wf-sub">Pattern: sticky, translucent blurred navy, hairline bottom border, bordered CTA button at right.</p>
+  <p class="wf-sub">Pattern: sticky, translucent blurred navy, hairline bottom border, bordered CTA button at right. <b>REVISED 2026-10-06 (spec 008 — PENDING OWNER APPROVAL):</b> a <b>Signals</b> link (/signals/) joins the nav — immediately after Blog, before Documents — in the desktop links and the hamburger panel alike.</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">all pages</span></div>
     <div class="stage">
@@ -116,7 +135,7 @@
         <span class="tag">Sticky nav · 78px · blur</span>
         <div class="navmock">
           <span class="logo-ph">◆ AXIOVEX <span style="color:var(--faint);font-weight:400">Systems</span></span>
-          <div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Documents ↗</span><span class="cta">Contact</span></div>
+          <div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Signals</span><span>Documents ↗</span><span class="cta">Contact</span></div>
         </div>
       </div>
       <div class="blk">
@@ -126,12 +145,12 @@
           <span class="burger">☰</span>
         </div>
         <div class="bar med" style="margin-top:14px"></div>
-        <p style="color:var(--faint);font-size:13.5px">Panel drops below the nav, links stacked full-width, Contact CTA full-width at the bottom. Panel closes on link tap.</p>
+        <p style="color:var(--faint);font-size:13.5px">Panel drops below the nav; links stacked full-width in the same order as the desktop row — What we do · About · FAQ · Blog · <b style="color:var(--muted)">Signals</b> · Documents — with the Contact CTA full-width at the bottom. Panel closes on link tap.</p>
       </div>
     </div>
   </div>
   <ul class="notes">
-    <li><strong>Change vs today:</strong> nav becomes sticky with a blur backdrop and a bordered Contact button; links and order unchanged. Current page shown in cyan.</li>
+    <li><strong>Change vs today:</strong> nav becomes sticky with a blur backdrop and a bordered Contact button; current page shown in cyan. <strong>2026-10-06 (spec 008 — pending approval):</strong> Signals is added after Blog in both the desktop links and the hamburger panel — the one link-order change; every other link and its order is untouched.</li>
   </ul>
 
   <h2 class="wf-title"><span class="wf-id">WF-G2 · Global — Strata bar</span>Under every hero and page head</h2>
@@ -206,15 +225,34 @@
     <li>Cards stay <strong>perfectly symmetric</strong>: equal height, equal padding, one row of three, stacking to one column on mobile.</li>
   </ul>
 
+  <h2 class="wf-title"><span class="wf-id">WF-G6 · Global — Signals floating widget</span>NEW 2026-10-06 (spec 008 — pending approval) · full states at WF-12</h2>
+  <p class="wf-sub">A collapsible corner widget that carries the current Signals highlights onto every page — each page gets applicable live data with links out. Collapsed, it is a single pill in the bottom-right corner; expanded, the compact panel drawn at WF-12. Present on every page <strong style="color:var(--ink)">except /signals/</strong>, where the full board already lives. Fed by a build-generated first-party JSON derived from the same <span style="color:var(--muted)">data/signals.json</span> snapshot as WF-01 / WF-11 — no third-party runtime fetching (spec 004 architecture), refreshed by the hourly signals sync.</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">all pages except /signals/</span></div>
+    <div class="stage">
+      <div class="blk cornerstage">
+        <span class="tag">Collapsed state · the default on every page</span>
+        <div class="bar med"></div><div class="bar"></div><div class="bar short"></div>
+        <p style="color:var(--faint);font-size:13px;margin-top:10px">Page content. The widget floats over the bottom-right corner — above the footer, below the nav and the mobile menu — and never auto-opens.</p>
+        <span class="wpill"><span class="livedot" style="margin-right:0"></span>Signals <span style="color:var(--cyan)">▴</span></span>
+      </div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>Starts collapsed.</strong> Opening it is the visitor&rsquo;s choice: the toggle is a real button (<span style="color:var(--muted)">aria-expanded</span>), ESC collapses it, and the open/closed choice is remembered for the session only — nothing is stored beyond the visit.</li>
+    <li><strong>Data failure = invisible.</strong> If the widget&rsquo;s JSON fails to load, it renders nothing at all — no empty shell, no error box; the page is complete without it.</li>
+    <li><strong>Full treatment at WF-12:</strong> the expanded panel, the Michigan Pulse row, headline relevance by page, and the mobile behavior.</li>
+  </ul>
+
   <!-- ================= HOME ================= -->
   <h2 class="wf-title"><span class="wf-id">WF-01 · Home — Desktop</span>axiovexsystems.com/</h2>
-  <p class="wf-sub">The home flow, in Axiovex order: <b>REVISED 2026-10-05 (approved, live):</b> a new Signals + Michigan Pulse block sits between Evidence and About — Pulse tiles, three latest signal cards, and the path to the full Signals page (WF-11).</p>
+  <p class="wf-sub">The home flow, in Axiovex order: <b>REVISED 2026-10-05 (approved, live):</b> a new Signals + Michigan Pulse block sits between Evidence and About — Pulse tiles, three latest signal cards, and the path to the full Signals page (WF-11). <b>REVISED 2026-10-06 (spec 008 — PENDING OWNER APPROVAL):</b> the block is highlighted — the eyebrow becomes &ldquo;AXIOVEX SIGNALS — LIVE&rdquo; with a live-dot, and a Michigan Pulse mini-strip (the three headline stats, period-labeled, build-generated) sits directly under the heading; the full Pulse band remains on WF-11 only.</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com</span></div>
     <div class="stage">
       <div class="blk">
         <span class="tag">Nav · WF-G1</span>
-        <div class="navmock"><span class="logo-ph">◆ AXIOVEX <span style="color:var(--faint);font-weight:400">Systems</span></span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Documents ↗</span><span class="cta">Contact</span></div></div>
+        <div class="navmock"><span class="logo-ph">◆ AXIOVEX <span style="color:var(--faint);font-weight:400">Systems</span></span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Signals</span><span>Documents ↗</span><span class="cta">Contact</span></div></div>
       </div>
 
       <div class="blk solid">
@@ -268,17 +306,19 @@
       </div>
 
       <div class="blk">
-        <span class="tag">Signals + Michigan Pulse · NEW 2026-10-05</span>
-        <p class="eyebrow">Signals</p>
+        <span class="tag">Signals + Michigan Pulse · NEW 2026-10-05 · HIGHLIGHTED 2026-10-06 (spec 008)</span>
+        <p class="eyebrow"><span class="livedot"></span>Axiovex Signals — Live</p>
         <p class="h2-real">What we&rsquo;re watching.</p>
-        <p style="color:var(--muted);font-size:14.5px;text-align:center">Michigan&rsquo;s numbers, and the field items that matter to the people who make things — from primary sources, refreshed automatically.</p>
-        <p style="color:var(--cyan);font-size:11.5px;letter-spacing:.14em;font-weight:700;margin-top:18px">MICHIGAN PULSE · U.S. BUREAU OF LABOR STATISTICS</p>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:10px;text-align:left">
-          <div class="card"><p style="color:var(--muted);font-size:12px">MI manufacturing employment</p><p style="font-size:22px;font-weight:700;margin-top:4px">586.7k</p><p style="color:var(--faint);font-size:12px">Aug 2026 · &#9650; 1.1k MoM</p></div>
-          <div class="card"><p style="color:var(--muted);font-size:12px">MI unemployment rate</p><p style="font-size:22px;font-weight:700;margin-top:4px">5.0%</p><p style="color:var(--faint);font-size:12px">Aug 2026 · &#9650; 0.1 MoM</p></div>
-          <div class="card"><p style="color:var(--muted);font-size:12px">MI labor force</p><p style="font-size:22px;font-weight:700;margin-top:4px">4.85M</p><p style="color:var(--faint);font-size:12px">Aug 2026</p></div>
-          <div class="card"><p style="color:var(--muted);font-size:12px">Trend</p><p style="color:var(--faint);font-size:12.5px;margin-top:6px">12-month trend line per tile (static SVG from the same BLS series).</p></div>
+        <div class="pulse-strip">
+          <span class="ps-label">Michigan Pulse · Aug 2026</span>
+          <span class="ps-stat"><b>586.7k</b> MI manufacturing employment</span>
+          <span class="ps-dot">·</span>
+          <span class="ps-stat"><b>5.0%</b> MI unemployment</span>
+          <span class="ps-dot">·</span>
+          <span class="ps-stat"><b>4.85M</b> MI labor force</span>
         </div>
+        <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-top:8px">NEW (spec 008): a Pulse mini-strip directly under the heading — the three headline BLS stats with their period, ahead of the lane previews. The values above are placeholders taken from the current snapshot; in the build they are generated from the same verified snapshot as WF-11, never hand-typed. The full Pulse band (all four series + trend lines) stays on /signals/ (WF-11).</p>
+        <p style="color:var(--muted);font-size:14.5px;text-align:center;margin-top:14px">Michigan&rsquo;s numbers, and the field items that matter to the people who make things — from primary sources, refreshed automatically.</p>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px;text-align:left">
           <div class="card"><p style="color:var(--cyan);font-size:11.5px;letter-spacing:.12em;font-weight:700">MANUFACTURING DIVE</p><p style="font-size:14.5px;margin-top:6px">Latest manufacturing headline&hellip;</p><p style="color:var(--faint);font-size:12px;margin-top:6px">Oct 2026</p></div>
           <div class="card"><p style="color:var(--cyan);font-size:11.5px;letter-spacing:.12em;font-weight:700">NIST</p><p style="font-size:14.5px;margin-top:6px">Latest AI / standards headline&hellip;</p><p style="color:var(--faint);font-size:12px;margin-top:6px">Oct 2026</p></div>
@@ -356,7 +396,7 @@
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/blog/</span></div>
     <div class="stage">
-      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span style="color:var(--cyan)">Blog</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
+      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span style="color:var(--cyan)">Blog</span><span>Signals</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
       <div class="blk solid">
         <span class="tag">Page head</span>
         <p class="crumb" style="text-align:center">Home / <b>Blog</b></p>
@@ -396,7 +436,7 @@
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/blog/michigan-workforce-september-2026/</span></div>
     <div class="stage">
-      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span style="color:var(--cyan)">Blog</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
+      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span style="color:var(--cyan)">Blog</span><span>Signals</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
       <div class="blk solid">
         <span class="tag">Article head · centered</span>
         <p class="crumb" style="text-align:center">Home / Blog / <b>Michigan workforce — September findings</b></p>
@@ -437,7 +477,7 @@
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/privacy/</span></div>
     <div class="stage">
-      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
+      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Signals</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
       <div class="blk solid">
         <span class="tag">Page head · centered</span>
         <p class="crumb" style="text-align:center">Home / <b>Privacy Policy</b></p>
@@ -474,7 +514,7 @@
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/contact/</span></div>
     <div class="stage">
-      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Documents ↗</span><span class="cta" style="background:var(--cyan);color:var(--navy)">Contact</span></div></div></div>
+      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Signals</span><span>Documents ↗</span><span class="cta" style="background:var(--cyan);color:var(--navy)">Contact</span></div></div></div>
       <div class="blk solid">
         <span class="tag">Page head · centered</span>
         <p class="crumb" style="text-align:center">Home / <b>Contact</b></p>
@@ -540,7 +580,7 @@
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/documents/</span></div>
     <div class="stage">
-      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span style="color:var(--cyan)">Documents</span><span class="cta">Contact</span></div></div></div>
+      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Signals</span><span style="color:var(--cyan)">Documents</span><span class="cta">Contact</span></div></div></div>
       <div class="blk solid">
         <span class="tag">Page head · centered</span>
         <p class="eyebrow">DOCUMENTS</p>
@@ -560,11 +600,11 @@
   </div>
 
   <h2 class="wf-title"><span class="wf-id">WF-11 · Signals (new page)</span>axiovexsystems.com/signals/</h2>
-  <p class="wf-sub">NEW 2026-10-05 (spec 004-signals-pulse, live). A public intelligence board: the Michigan Pulse band plus field signals in five lanes. Ingested at build time from primary sources and rendered as static HTML — no live third-party widgets, no visitor tracking, no copied article text (headline, source, date; the publisher gets the click). Reachable from the home Signals block and the footer — the nav is unchanged in v1.</p>
+  <p class="wf-sub">NEW 2026-10-05 (spec 004-signals-pulse, live). A public intelligence board: the Michigan Pulse band plus field signals in five lanes. Ingested at build time from primary sources and rendered as static HTML — no live third-party widgets, no visitor tracking, no copied article text (headline, source, date; the publisher gets the click). Reachable from the home Signals block and the footer — the nav is unchanged in v1. <b>REVISED 2026-10-06 (spec 008 — PENDING OWNER APPROVAL):</b> WF-G1 gains the Signals link, so this page becomes reachable from the nav too, where it shows as the current page.</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/signals/</span></div>
     <div class="stage">
-      <div class="blk"><span class="tag">Nav · WF-G1 (unchanged)</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
+      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span style="color:var(--cyan)">Signals</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
       <div class="blk solid">
         <span class="tag">Page head · centered</span>
         <p class="eyebrow">SIGNALS</p>
@@ -604,6 +644,50 @@
       <div class="blk"><span class="tag">Footer · WF-G4 (+ Signals link in Explore)</span><p style="color:var(--muted);font-size:14px;text-align:center">Three-column footer (see WF-G4); v1 adds a Signals link to the Explore column.</p></div>
     </div>
   </div>
+
+  <!-- ================= SIGNALS WIDGET ================= -->
+  <h2 class="wf-title"><span class="wf-id">WF-12 · Signals widget — States (WF-G6)</span>NEW 2026-10-06 (spec 008 — pending approval)</h2>
+  <p class="wf-sub">The floating widget in its two states, plus mobile. Every page carries the same component; only the headline order changes — on blog articles, the lane matching the article&rsquo;s tags surfaces first (workforce / Michigan tags &rarr; Michigan lane; AI tags &rarr; AI, standards &amp; research lane). The Michigan Pulse row always leads the panel.</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">all pages except axiovexsystems.com/signals/</span></div>
+    <div class="stage">
+      <div class="grid2" style="align-items:start">
+        <div class="blk cornerstage" style="margin-bottom:0">
+          <span class="tag">State A · Collapsed (default)</span>
+          <div class="bar"></div><div class="bar med"></div><div class="bar short"></div>
+          <p style="color:var(--faint);font-size:13px;margin-top:10px">Bottom-right pill: live dot + &ldquo;Signals&rdquo; + chevron. A quiet presence, never a pop-up — it does not auto-open, animate in over content, or cover the page&rsquo;s calls to action.</p>
+          <span class="wpill"><span class="livedot" style="margin-right:0"></span>Signals <span style="color:var(--cyan)">▴</span></span>
+        </div>
+        <div class="blk" style="margin-bottom:0">
+          <span class="tag">State B · Expanded panel · ~340px</span>
+          <div class="wpanel" style="margin:6px auto 0">
+            <div class="wp-head"><span class="wp-title"><span class="livedot"></span>Axiovex Signals</span><span class="btn ghost" style="padding:2px 12px;font-size:13px">▾ collapse</span></div>
+            <p style="color:var(--cyan);font-size:11px;letter-spacing:.14em;font-weight:700">MICHIGAN PULSE · AUG 2026 · U.S. BUREAU OF LABOR STATISTICS</p>
+            <div class="wp-pulse">
+              <p>MI manufacturing<b>586.7k</b></p>
+              <p>MI unemployment<b>5.0%</b></p>
+              <p>MI labor force<b>4.85M</b></p>
+            </div>
+            <div class="wp-item"><p class="wp-lane">MANUFACTURING &amp; AUTOMATION</p><p class="wp-hl">Freshest headline in the lane&hellip;</p><p class="wp-meta">Manufacturing Dive · Oct 5, 2026</p></div>
+            <div class="wp-item"><p class="wp-lane">MICHIGAN WORKFORCE &amp; INDUSTRY</p><p class="wp-hl">Freshest headline in the lane&hellip;</p><p class="wp-meta">Automation Alley · Oct 5, 2026</p></div>
+            <div class="wp-item"><p class="wp-lane">AI, STANDARDS &amp; RESEARCH</p><p class="wp-hl">Freshest headline in the lane&hellip;</p><p class="wp-meta">NIST · Oct 4, 2026</p></div>
+            <p style="margin-top:12px"><span class="explore">ALL SIGNALS &rarr;</span></p>
+            <p style="color:var(--faint);font-size:12px;margin-top:8px">Snapshot updated &hellip; · Headline, source, and date only — every headline links to its publisher.</p>
+          </div>
+        </div>
+      </div>
+      <div class="blk" style="max-width:400px;margin:18px auto 0">
+        <span class="tag">Mobile · &le;660px</span>
+        <p style="color:var(--muted);font-size:14px">The pill rests above the bottom safe-area inset. Expanded, the panel keeps its ~340px width (never wider than the screen minus margins) and its height is capped at ~70% of the viewport — the headline list scrolls inside the panel; the page behind it does not scroll along.</p>
+        <p style="color:var(--faint);font-size:13px;margin-top:8px">Headline rows and values above are placeholders in the same style as WF-01 / WF-11 — in the build, every value and headline comes from the verified snapshot.</p>
+      </div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>Behavior:</strong> starts collapsed; the toggle is a real <strong>button</strong> with <span style="color:var(--muted)">aria-expanded</span> and <span style="color:var(--muted)">aria-controls</span>; <strong>ESC</strong> collapses the panel and returns focus to the button; expanded/collapsed is remembered for the <strong>session only</strong> (session storage — no cookie, nothing persists after the visit); motion honours <span style="color:var(--muted)">prefers-reduced-motion</span>.</li>
+    <li><strong>Relevance:</strong> default order is the three freshest headlines across all five lanes. On a blog article, items from the tag-matching lane come first and the remaining slots fill by freshness. The Pulse row is always present. On /signals/ itself the widget is not rendered at all.</li>
+    <li><strong>Placement:</strong> fixed bottom-right, above page content but below the sticky nav and the open mobile menu; it must never cover the Contact CTA or the hamburger toggle at any breakpoint.</li>
+  </ul>
 
   <h2 class="wf-title"><span class="wf-id">WF-07 · Home — Tablet (834px)</span>axiovexsystems.com/ at iPad width</h2>
   <div class="frame">
@@ -687,7 +771,10 @@
       <li>WF-G3 — CTA band above the footer (all pages except Contact)</li>
       <li>WF-G4 — Three-column footer with location line</li>
       <li>WF-G5 — Numbered service cards with accent bar + EXPLORE</li>
+      <li>WF-G1 (revised, spec 008) — Signals link after Blog, in the desktop row and the hamburger panel</li>
+      <li>WF-G6 / WF-12 (new, spec 008) — Signals floating widget: collapsed live-dot pill + expanded panel (Pulse row, 3 freshest headlines, All signals), every page except /signals/</li>
       <li>WF-01 — Home (desktop): hero → strata → method → services → proof → about → FAQ → CTA → footer</li>
+      <li>WF-01 (revised, spec 008) — Signals block highlighted: “AXIOVEX SIGNALS — LIVE” eyebrow + Michigan Pulse mini-strip under the heading</li>
       <li>WF-02 — Home (mobile): stacked, full-width CTAs</li>
       <li>WF-03 — Blog index: page head + strata + accent-bar cards</li>
       <li>WF-04 — Article: breadcrumb head, centered title, left-justified body, more-analysis row</li>

@@ -18,9 +18,13 @@ This file is the index, the gate rule, and the revision log.
 - WF-01 Home — desktop · WF-02 Home — mobile (390px)
 - WF-03 Blog index · WF-04 Blog article · WF-05 Privacy policy
 - WF-06 Contact · WF-10 Documents (added 2026-10-05) · WF-11 Signals
+- WF-12 Signals widget (added 2026-10-06, spec 008 — **pending approval**)
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
 - WF-09 Blog / article / privacy — tablet
-- Global components: WF-G1 nav · WF-G2 strata bar · WF-G3 CTA band · WF-G4 footer
+- Global components: WF-G1 nav (Signals link added by spec 008 — pending
+  approval) · WF-G2 strata bar · WF-G3 CTA band · WF-G4 footer ·
+  WF-G5 service card · WF-G6 Signals floating widget (spec 008 —
+  pending approval)
 
 Framing decisions baked into the set (2026-10-04): centered axis (standing
 symmetry rule); strata = 3 segments
@@ -67,3 +71,29 @@ as accordion rows.
   block removed from the frame. WF-03 — article list starts lower under the
   divider (list top margin 32px → 44px). Not yet implemented on the live
   site; verified live (one share row per article, no post-footer).
+- **2026-10-06** — REVISION PROPOSED 2026-10-06 — **PENDING OWNER
+  APPROVAL — NOT approved, NOT implemented** (spec
+  008-signals-nav-widget): (1) WF-G1 nav gains a **Signals** link
+  (`/signals/`) immediately after Blog, in the desktop links and the
+  hamburger panel; every page frame's nav mock updated to match, with
+  Signals shown as the current page on WF-11. (2) WF-01 home Signals
+  block highlighted: the eyebrow becomes "AXIOVEX SIGNALS — LIVE"
+  with a live-dot, and a **Michigan Pulse mini-strip** — MI
+  manufacturing employment · MI unemployment · MI labor force,
+  period-labeled — sits directly under "What we're watching.",
+  build-generated from the same verified snapshot as WF-11 (the
+  full Pulse band stays on WF-11); lane previews and the
+  SEE ALL SIGNALS path unchanged, hero untouched. (3) NEW **WF-12 /
+  WF-G6** — a collapsible **Signals floating widget** on every page
+  except `/signals/`: collapsed bottom-right pill (live dot +
+  "Signals" + chevron); expanded ~340px panel with a Michigan Pulse
+  row (same three stats), the three freshest headlines (lane label,
+  headline, source + date, linking out; on blog articles the
+  tag-matching lane surfaces first), and an "All signals →" footer
+  link. Starts collapsed; real button with `aria-expanded`; ESC
+  closes; state remembered for the session only; mobile panel
+  height-capped with internal scroll and safe-area-aware pill;
+  renders nothing if its data fails. Fed by a build-generated
+  first-party JSON derived from `data/signals.json` (no third-party
+  runtime fetching, per spec 004), refreshed by the hourly
+  signals-sync build.
