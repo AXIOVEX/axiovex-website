@@ -414,3 +414,92 @@ table; the four sparkline window % values render as drawn
 the snapshot with zero mismatches. Ships in `styles.v28.css`.
 Promotion to production follows the spec 010 flow together
 with spec 011's main body and spec 012.
+
+## Amendment 3 — owner direction 2026-10-06
+
+Recorded 2026-10-06, after spec 011 + Amendment 2 shipped to
+production (merge `89c65c1`). Tristen, reviewing the live
+/signals/ page, directed the ticker moved (2026-10-06,
+verbatim):
+
+> "also move the ticker on the signals page. it looks bad
+> there. perhaps at the very top above the menu? Or
+> elsewhere? what is more common? It’s just that where it
+> sits now looks funny and too busy."
+
+His question — what is more common — has a settled answer:
+on finance and news pages the market-data tape sits at the
+very top of the page, above the masthead/header, as a
+utility strip. That is the placement this amendment
+adopts.
+
+**Approval basis.** This package follows the constitution's
+wireframes-first rule in its standard form: WF-11 is
+revised first (`docs/wireframes/wireframes.html` + the
+`wireframes.md` revision log, marked **PENDING OWNER
+APPROVAL**), and implementation is blocked on Tristen's
+approval of the package (tasks.md T011, the gate). The
+direction to move the ticker is recorded; the proposed
+destination goes through the gate because he asked what is
+standard rather than naming the slot himself.
+
+### A3-1 — Ticker relocates above the header
+
+A2-1's placement is superseded: the ticker strip renders
+as a **slim pre-header strip above the site header** on
+/signals/ (template: `{{TICKER_HTML}}` moves ahead of the
+header, into the first page-owned slot after the
+breaking-banner marker region). The new page sequence is:
+
+1. the spec 012 breaking-news banner, when an entry is
+   active (global; sits above everything, unchanged);
+2. the ticker tape;
+3. the site header / nav;
+4. the page head;
+5. the Highlights region;
+6. everything else, unchanged.
+
+**Stacking rule.** If a breaking banner is ever active on
+/signals/, it renders **above** the tape — urgency takes
+precedence over the data strip; the tape remains below it,
+above the header. On every other page (no tape), the
+banner-to-header order is exactly as shipped in spec 012.
+
+**Rationale.** In the Amendment 2 slot, three competing
+horizontal bands stack at the top of the page — nav, tape,
+page head — and the title area reads busy and awkward. As
+a pre-header strip, the tape reads the way it reads on
+finance/news pages: as a data utility strip that belongs
+to the page chrome, not as a piece of page content — and
+the title area is decluttered.
+
+**Carried decisions (unchanged by this amendment).** The
+ticker stays **STATIC** at the top of /signals/ and
+**Signals-only** — the owner decision of 2026-10-06
+13:30 EDT stands (sticky-on-scroll and site-wide placements
+remain declined; the floating widget remains the site-wide
+carrier). The tape's own treatment stands: a decorative
+duplicate of board content, aria-hidden, pausing on hover
+and on focus-within, static under prefers-reduced-motion,
+neutral glyph + signed figure.
+
+### What this amendment does NOT change
+
+- **Amendment 2's condensed top spacing (A2-2)** — every
+  value in the table stands; the below-header stack is
+  untouched. This is a placement change only.
+- **The sparkline window-% annotations (A2-3)** — unchanged.
+- The trend board, outlook board, education block,
+  Highlights region, Detail region, lanes, and the sources
+  & method note — unchanged.
+- The ticker's content and generation — unchanged; the
+  same `{{TICKER_HTML}}`, moved.
+
+This amendment supersedes **Amendment 2's placement
+paragraph (A2-1) only**; A2-2, A2-3, and the 13:30 EDT
+static/Signals-only placement decision otherwise stand.
+
+**Status:** **PENDING OWNER APPROVAL** — wireframe + spec
+package only; nothing implemented. Implementation runs
+through the spec 010 staging flow (tasks T011–T015) once
+the gate passes.

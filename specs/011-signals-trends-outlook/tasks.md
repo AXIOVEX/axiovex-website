@@ -224,3 +224,46 @@ implementation under way on the staging branch.**
   5 lanes intact; home page and a blog article byte-identical
   to the pre-amendment build except the stylesheet repoint;
   staging-only `robots.txt` / `_headers` untouched in the diff.
+
+## Amendment 3 (owner direction 2026-10-06 — see spec.md)
+
+- [ ] T011 **OWNER APPROVAL GATE (blocking)**: Tristen
+  approves this Amendment 3 package — WF-11 revised (ticker
+  drawn as a pre-header strip above the nav, below the
+  breaking-banner slot) + the spec.md Amendment 3 section.
+  No implementation task starts before this is checked.
+- [ ] T012 **Implement Amendment 3 on staging** (starts only
+  after T011): move `{{TICKER_HTML}}` ahead of the header in
+  `scripts/templates/signals.html` so the tape renders as a
+  slim pre-header strip — the first page-owned element after
+  the breaking-banner marker region. Tape markup, content,
+  and accessibility mechanics unchanged (aria-hidden, hover /
+  focus-within pause, reduced-motion static). A2-2 spacing
+  values below the header are NOT touched; any style change
+  rides the next versioned stylesheet in sequence, with all
+  references repointed per the standing cache rule.
+  Regenerate and commit on `staging`.
+- [ ] T013 **Verify Amendment 3 at the staging URL**
+  (staging.axiovexsystems.com/signals/): exactly one `.tape`,
+  rendered above the header and nowhere else on the page;
+  with a test breaking entry active, the rendered order is
+  banner → tape → header (and banner → header on a
+  non-signals page); measured below-header spacing still
+  matches the A2-2 table; tape mechanics unchanged
+  (aria-hidden, pauses, reduced motion); no horizontal
+  overflow at 1440 / 834 / 390px; Highlights region, Pulse
+  band, trend board, outlook board, Detail region, and
+  lanes unchanged apart from the relocation.
+- [ ] T014 **Promote Amendment 3 to production** under spec
+  010's rules: merge staging → main with the FR-004 guard
+  proof (the promotion diff carries no staging `robots.txt`
+  or `_headers`), then production verification of the new
+  sequence at axiovexsystems.com/signals/.
+- [ ] T015 **Close-out**: mark the `docs/wireframes/wireframes.md`
+  revision-log entry APPROVED · IMPLEMENTED + LIVE, update
+  the WF-11 labels in `wireframes.html`, sync the review
+  copy at `~/workspace/your_files/axiovex-wireframes/`
+  (byte-identical, cmp), record the outcome in spec.md's
+  Amendment 3 status, advance the monitoring state
+  `website_commit`, and check off these tasks with the
+  completion record.

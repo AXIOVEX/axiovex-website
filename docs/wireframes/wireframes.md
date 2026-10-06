@@ -452,3 +452,34 @@ as accordion rows.
   production-verified live: 5 cards, zero Pulse-labelled
   cards in the region, summary and Pulse band intact) —
   **IMPLEMENTED + LIVE**.
+- **2026-10-06** — AMENDMENT (spec 011-signals-trends-outlook,
+  **Amendment 3**) — **PENDING OWNER APPROVAL (owner
+  direction 2026-10-06; wireframes revised before
+  implementation)**: reviewing the live /signals/ page,
+  Tristen directed the ticker moved: "also move the ticker
+  on the signals page. it looks bad there. perhaps at the
+  very top above the menu? … It's just that where it sits
+  now looks funny and too busy." WF-11 revised accordingly:
+  the **ticker strip moves to a slim pre-header strip
+  above the nav** — the page sequence becomes: the spec 012
+  breaking-news banner (when active; it renders **above
+  everything**) → ticker tape → site header/nav → page
+  head → Highlights → the rest, unchanged. The under-header
+  slot stacked three competing horizontal bands (nav, tape,
+  page head); a pre-header tape is the standard
+  market-data strip pattern on finance/news pages — it
+  reads as a data utility strip, not page content, and
+  declutters the title area. **Carried decisions,
+  unchanged**: the tape stays **static** (not sticky on
+  scroll — the owner's 2026-10-06 13:30 EDT decision),
+  **Signals page only**, and a decorative aria-hidden echo
+  of the board (pause on hover/focus-within, static under
+  prefers-reduced-motion). **Stacking rule**: an active
+  breaking banner renders **above** the tape (urgency
+  precedence); the tape remains below it, above the
+  header. **Placement only** — Amendment 2's condensed
+  top spacing (A2-2) and the sparkline window % are not
+  changed; this supersedes Amendment 2's placement
+  paragraph (A2-1) only. Implementation is spec 011 tasks
+  T011–T015, blocked on the T011 approval gate. Nothing on
+  the live site changes until Tristen approves.
