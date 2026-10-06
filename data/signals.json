@@ -1,17 +1,10 @@
 {
-  "updatedUtc": "2026-10-05T17:35:29.083Z",
+  "updatedUtc": "2026-10-06T00:02:44.952Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Made in America Needs More Than Investment. It Needs People.",
-          "link": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/",
-          "date": "2026-10-05"
-        },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
@@ -36,16 +29,16 @@
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "Defense, data centers and AI driving private equity manufacturing investments: Report",
+          "title": "Defense, data centers and AI driving private equity manufacturing investments",
           "link": "https://www.manufacturingdive.com/news/private-equity-us-manufacturing-defense-ai-data-centers-report-2026/832073/",
           "date": "2026-10-05"
         },
         {
           "source": "Automation Alley",
           "sourceId": "automation-alley",
-          "title": "WCC Expands Microelectronics and Semiconductor Workforce Training with New Classroom, NSF Grant",
-          "link": "https://automationalley.com/2026/10/02/wcc-expands-microelectronics-and-semiconductor-workforce-training-with-new-classroom-nsf-grant/",
-          "date": "2026-10-02"
+          "title": "Made in America Needs More Than Investment. It Needs People.",
+          "link": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/",
+          "date": "2026-10-05"
         },
         {
           "source": "Manufacturing Dive",
@@ -59,6 +52,13 @@
           "sourceId": "manufacturing-dive",
           "title": "Manufacturing industry adds 9K jobs in September",
           "link": "https://www.manufacturingdive.com/news/bls-september-manufacturing-employment-situation-august-jolts-2026/831988/",
+          "date": "2026-10-02"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Manufacturers ‘all in’ on Senate permitting reform bill: NAM",
+          "link": "https://www.manufacturingdive.com/news/manufacturers-permitting-reform-bill-nam/831923/",
           "date": "2026-10-02"
         }
       ]
@@ -242,6 +242,20 @@
         {
           "source": "U.S. Department of Energy",
           "sourceId": "doe",
+          "title": "Energy Department Announces $4.2 Billion Investment to Boost Nuclear Power and Help Lower Energy Costs in Pennsylvania and Ohio",
+          "link": "https://www.energy.gov/articles/energy-department-announces-42-billion-investment-boost-nuclear-power-and-help-lower",
+          "date": "2026-10-05"
+        },
+        {
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
+          "title": "Energy Department Announces Alaska Railbelt Transmission Project to Receive Defense Production Act Funding, Securing Alaska Military Installations and Local Communities",
+          "link": "https://www.energy.gov/articles/energy-department-announces-alaska-railbelt-transmission-project-receive-defense",
+          "date": "2026-10-05"
+        },
+        {
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
           "title": "Energy Department Announces Up to $400 Million for Basic Research to Advance the Frontiers of Science",
           "link": "https://www.energy.gov/articles/energy-department-announces-400-million-basic-research-advance-frontiers-science",
           "date": "2026-10-01"
@@ -280,20 +294,6 @@
           "title": "NIST Awards More Than $30 Million for MEP Centers in 11 States and Puerto Rico",
           "link": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-30-million-mep-centers-11-states-and-puerto-rico",
           "date": "2026-09-15"
-        },
-        {
-          "source": "NSF",
-          "sourceId": "nsf",
-          "title": "NSF launches $20M pilot to accelerate commercialization of promising deep technologies from small businesses",
-          "link": "https://www.nsf.gov/news/nsf-launches-20m-pilot-accelerate-commercialization",
-          "date": "2026-09-14"
-        },
-        {
-          "source": "NSF",
-          "sourceId": "nsf",
-          "title": "NSF launches three new Science and Technology Centers with $90M investment in transformative research",
-          "link": "https://www.nsf.gov/news/nsf-launches-three-new-science-technology-centers-90m",
-          "date": "2026-08-26"
         }
       ]
     }
