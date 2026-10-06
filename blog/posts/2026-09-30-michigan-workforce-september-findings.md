@@ -7,7 +7,7 @@ slug: michigan-workforce-september-2026
 ---
 Our Michigan workforce intelligence project just published its September edition — new labor data through August, graduation-horizon program planning, and cross-sector analysis of AI task impacts. I want to walk through what the numbers actually say, because the headline figure is the least interesting part.
 
-*Evidence cutoff: September 26, 2026 (America/Detroit). All figures below come from the [September edition](https://github.com/AXIOVEX/michigan-workforce-intelligence/tree/main/reports/2026-09-26-graduation-horizons) of the public research repo.*
+*Evidence cutoff: September 26, 2026 (America/Detroit). All figures below come from the [September edition](https://github.com/AXIOVEX/michigan-workforce-intelligence/tree/reports-2026.09.27.131143Z/reports/2026-09-26-graduation-horizons) of the public research repo.*
 
 ## The rate is not the story
 

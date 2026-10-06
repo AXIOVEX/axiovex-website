@@ -130,8 +130,15 @@ other than those the generator escapes itself.
 - Article-to-article and outbound canonical links use the clean
   form `https://axiovexsystems.com/blog/<slug>/` — never the
   `/blog/post?p=` shim.
-- Research-repo links point at the specific edition directory and
-  the specific release tag relied on, not only the repo root.
+- **Edition links are anchored to the release tag, never to a
+  branch**: an edition link uses the tag form
+  `https://github.com/AXIOVEX/michigan-workforce-intelligence/tree/<release-tag>/reports/<edition-dir>`
+  (September 2026 edition: tag `reports-2026.09.27.131143Z`,
+  commit `d0fbc71`). `tree/main` edition links are prohibited —
+  main moves; the tag is the immutable record of the published
+  data. Per-edition branches are not created; the release tag is
+  the anchor (owner decision, 2026-10-06). The closing block also
+  links the release page itself.
 
 ## 6. Validation checklist
 
