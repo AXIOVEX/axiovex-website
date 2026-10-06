@@ -1439,6 +1439,16 @@ function geoIpedsBlock(geo) {
         'coordinates; never placed by guess): ' +
         unlocated.map(i => esc(i.name) + ' (' + l.valueOf(i).toLocaleString('en-US') + ')').join('; ') + '.</p>\n'
       : '';
+    const zeroNote = l.key === 'ALL'
+      ? (() => {
+          const zero = ipeds.institutions.filter(i => i.totalCompletions === 0);
+          return zero.length
+            ? '          <p class="board-note">Listed without a dot (the source publishes no ' +
+              'completions for 2023&ndash;24): ' +
+              zero.map(i => esc(i.name) + ' &middot; ' + esc(i.city)).join('; ') + '.</p>\n'
+            : '';
+        })()
+      : '';
     return '          <div class="geo-layer" data-geo-layer="ipeds:' + l.key + '">\n' +
       '          <div class="geo-mapwrap">\n' +
       '          <svg class="geo-map" viewBox="' + esc(paths.viewBox) + '" role="img" aria-label="Map of Michigan postsecondary institutions, sized by ' + esc(l.label.toLowerCase()) + ' completions, 2023-24">\n' +
@@ -1448,7 +1458,7 @@ function geoIpedsBlock(geo) {
       top + '\n' +
       (rest > 0 ? '          <p class="board-note">Plus ' + rest + ' more institutions on the map; ' +
         'the map carries every institution in the layer.</p>\n' : '') +
-      unlocNote +
+      unlocNote + zeroNote +
       '          </div>\n          </div>';
   }).join('\n');
   return '          <div class="geo-block">\n' +
