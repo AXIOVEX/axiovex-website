@@ -63,6 +63,17 @@ implementation under way on the staging branch.**
   agencyShort / publication / vintage / horizon / sourceUrl /
   decliningTableUrl / retrievedOn metadata. Second-read check
   of all 10 figures against `sources.md` PASSED before commit.
+  **RESTORATION 2026-10-06**: `michiganProjections` (MCDA
+  Long-Term Industry Employment Projections, 2024–2034, top-5
+  per side by % change, read on michigan.gov via live browser)
+  and `education` (CEPI four-year graduation rate + student
+  enrollment headcount, read on mischooldata.org via live
+  browser) sections added with the verified figures recorded
+  in `sources.md` §§2–3; the enrollment entry's label/vintage
+  carry the unduplicated-headcount (not FTE) school-year
+  labeling. IPEDS completions remain absent (unverified).
+  Figure audit of the rebuilt page against the verified
+  values PASSED (all 20 outlook rows + both education rows).
 - [x] T004 **Generator + template (FR-001, FR-002, FR-003,
   FR-004, FR-006, FR-007)** — **DONE 2026-10-06**: in `scripts/build-site.mjs` —
   `trendDeltas()` (MoM + window from trend arrays, "—" when
@@ -75,6 +86,16 @@ implementation under way on the staging branch.**
   `{{PULSE_HTML}}` and `{{LANES_HTML}}`; append the sources-note
   attribution sentences (plan.md draft, narrowed if needed);
   meta description only within the ~198-char discipline.
+  **RESTORATION 2026-10-06**: sources-note sentences widened
+  back to cover the Michigan projections + CEPI education
+  figures now shipping; the section framing line's education
+  clause restored (WF-11 as approved); one minimal renderer
+  change — `educationHtml` percent values render at the
+  source's published precision (two decimals, e.g. 84.01%)
+  instead of one. Verified locally with Playwright at
+  1440 / 390 (Michigan group inside the outlook board,
+  education block rendered, no overflow; home page
+  byte-identical — the restoration touches `/signals/` only).
 - [x] T005 **Stylesheet bump (FR-008)** — **DONE 2026-10-06**: new component styles
   (tape animation + hover/focus pause + reduced-motion static
   state, boards, stacked mobile rows) in `styles.v26.css`;

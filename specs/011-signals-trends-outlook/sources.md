@@ -45,7 +45,7 @@ replaced with an estimate or a secondary-source figure.
   solar 37%); the EP tables govern, per plan.md.
 - Retrieved: 2026-10-06.
 
-## 2. Michigan long-term industry projections — NOT VERIFIED → group dropped
+## 2. Michigan long-term industry projections — NOT VERIFIED at T002 → group dropped; RESTORED 2026-10-06 (browser verification, below)
 
 - **Publication**: Michigan long-term employment projections,
   Michigan Center for Data and Analytics (MCDA), within the
@@ -67,8 +67,8 @@ replaced with an estimate or a secondary-source figure.
   projections-page fetch (HTTP 403), and the figures
   circulating in secondary coverage (a MIRS news article,
   2026-09-04) are not the source and were **not** used.
-- **Disposition**: the Michigan group is **dropped for this
-  implementation** and spec.md is amended (below). The
+- **Disposition (T002)**: the Michigan group is **dropped for
+  this implementation** and spec.md is amended (below). The
   generator renders a Michigan group automatically if a
   future refresh adds a verified `michiganProjections`
   section to `data/outlook.json` — no code change needed.
@@ -76,7 +76,37 @@ replaced with an estimate or a secondary-source figure.
   projections file on michigan.gov/mcda (a live-browser pass
   can do this; the text-fetch channel could not).
 
-## 3. Education indicators — NOT VERIFIED at dataset precision → block dropped
+- **RESTORED 2026-10-06 (live-browser verification).** The
+  re-verification path above was executed the same day: a
+  live-browser pass read the MCDA employment-projections page
+  (https://www.michigan.gov/mcda/labor-market-information/employment-projections)
+  and the statewide file in full —
+  `LongTerm_IndustryProj_2034_Michigan_Statewide.xlsx`,
+  "Long-Term Industry Employment Projections, (2024-2034)",
+  Michigan Statewide; columns Base / Projected / 10-yr
+  numeric / 10-yr percent change. No release date is
+  displayed on the page or in the file; the horizon is
+  labeled as published, **2024–2034**. Top five per side by
+  percent change, transcribed verbatim:
+  Rise — Specialized Design Services +52.0% (+5,440);
+  Educational Support Services +24.7% (+2,180); Transit and
+  Ground Passenger Transportation +24.5% (+2,380); Other
+  Heavy and Civil Engineering Construction +23.2% (+570);
+  Beverage and Tobacco Product Manufacturing +23.0%
+  (+2,240). Fall — Land Subdivision −35.5% (−110); Motion
+  Picture and Sound Recording Industries −24.0% (−1,320);
+  Clothing, Clothing Accessories, Shoe, and Jewelry
+  Retailers −22.8% (−5,700); Broadcasting and Content
+  Providers −22.8% (−1,050); Telecommunications −21.7%
+  (−3,180). (The two −22.8% entries are a tie in the source
+  table; both are carried so the fall side holds five
+  distinct industries.) The `michiganProjections` section is
+  restored in `data/outlook.json` (agency: Michigan Center
+  for Data and Analytics; retrieved 2026-10-06) and the
+  group renders on the page as its own labeled group,
+  never blended with the national BLS ranking.
+
+## 3. Education indicators — NOT VERIFIED at T002 → block dropped; RESTORED 2026-10-06 in part (browser verification, below)
 
 Per indicator:
 
@@ -104,15 +134,44 @@ Per indicator:
   available channels. **Dropped** (no aggregation was
   substituted).
 
-- **Disposition**: the education block is **dropped for this
-  implementation** and spec.md is amended (below). The
-  generator renders the block automatically if a future
+- **Disposition (T002)**: the education block is **dropped
+  for this implementation** and spec.md is amended (below).
+  The generator renders the block automatically if a future
   refresh adds a verified `education` section to
   `data/outlook.json`. Re-verification path: MISchoolData
   Graduation/Dropout + Student Enrollment Counts reports and
   the IPEDS completions files, read on the sources (a
   live-browser pass or the data-file downloads), then the
   plan.md refresh procedure.
+
+- **RESTORED 2026-10-06 (live-browser verification) — two of
+  three indicators.** The re-verification path above was
+  executed the same day; a live-browser pass read the
+  MISchoolData reports on the source (mischooldata.org):
+  - **Four-year graduation rate** (Graduation/Dropout Rate
+    report, https://www.mischooldata.org/graddropout-rate/):
+    class of 2025 = **84.01%** (cohort 115,489; graduated
+    97,018); class of 2024 = **82.83%** (cohort 115,097;
+    graduated 95,334). Dataset precision, read on the
+    source — supersedes the rounded MDE release figures,
+    which were never entered. Restored as a two-point
+    history; the page's "+1.2 pts vs prior class" delta is
+    the generator's arithmetic on these two values.
+  - **Student enrollment headcount** (Student Enrollment
+    Counts report,
+    https://www.mischooldata.org/student-enrollment-counts-report/):
+    school year 2025-26 = **1,419,859**; school year
+    2024-25 = **1,427,386**. Labeling caveat, recorded here
+    and carried in the dataset's label and vintage text:
+    these are **unduplicated pupil headcounts, not FTE**,
+    labeled by school year — they are never presented as
+    "fall count" figures.
+  - **Postsecondary completions by field (IPEDS)**: remains
+    **unverified — still dropped.** No completions figure
+    was read on the source, and none is entered.
+  The `education` section is restored in `data/outlook.json`
+  with the two verified CEPI indicators (retrieved
+  2026-10-06) and the block renders on the page.
 
 ## Amendment recorded (2026-10-06, per plan.md Step 0)
 
@@ -130,3 +189,24 @@ Per indicator:
    broader.
 4. The section framing line is narrowed the same way (the
    education clause is dropped).
+
+## Restoration recorded (2026-10-06, live-browser verification)
+
+5. Items 1–2 are **superseded in part**: the Michigan group
+   (item 1) is restored with the MCDA figures read on the
+   source (§2, above), and FR-004's education block (item 2)
+   is restored with the two CEPI indicators read on
+   MISchoolData (§3, above). The IPEDS completions indicator
+   remains dropped — still unverified, nothing substituted.
+6. Item 3–4's narrowing is reversed to match what now
+   ships: the sources & method note again covers the
+   Michigan projections and the education figures (CEPI
+   only — IPEDS is not shown and is not named), and the
+   section framing line again carries its education clause,
+   matching WF-11 as approved.
+7. One minimal renderer change accompanied the restoration:
+   `educationHtml` percent values now render at the
+   precision the source publishes (two decimals — CEPI's
+   84.01% cannot be carried by the previous one-decimal
+   format). No other renderer behavior changed; deltas are
+   still computed by the generator from the stored history.

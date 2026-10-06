@@ -48,6 +48,42 @@ Recorded in full in `sources.md`. Summary:
   cover only what ships (BLS projections + computed trend
   deltas). Narrower than the approved drafts, never broader.
 
+## Restoration — browser verification (2026-10-06)
+
+The two drops above were reversed the same day, when a
+live-browser pass read both sources on their official pages
+(full record in `sources.md` §§2–3):
+
+- **FR-003's Michigan group is RESTORED.** MCDA Long-Term
+  Industry Employment Projections, horizon **2024–2034** as
+  published (statewide file read in full on michigan.gov;
+  no release date is displayed on the page or file). Top
+  five industries per side by percent change are in
+  `data/outlook.json` (`michiganProjections`) and render as
+  their own labeled group inside the outlook board — never
+  blended with the national BLS ranking.
+- **FR-004's education block is RESTORED with two of its
+  three indicators.** MI School Data (CEPI), read on
+  mischooldata.org: four-year graduation rate, class of
+  2025 **84.01%** (class of 2024: 82.83%); student
+  enrollment **1,419,859** for school year 2025-26
+  (2024-25: 1,427,386) — unduplicated pupil **headcounts,
+  not FTE**, labeled by school year in the dataset and on
+  the page, never as fall counts. The third indicator,
+  IPEDS postsecondary completions by field, **remains
+  dropped**: still unverified on its source, and no figure
+  was substituted.
+- The consequential narrowing above is reversed: the
+  section framing line again carries its education clause
+  (WF-11 as approved), and the FR-007 sources-note sentences
+  again cover the Michigan projections and the education
+  figures (CEPI only — IPEDS is not shown and is not
+  named).
+- One minimal renderer change: education percent values
+  render at the precision the source publishes (two
+  decimals) — the one-decimal format could not carry
+  CEPI's 84.01%. Recorded in `sources.md` item 7.
+
 ## What exists today
 
 `/signals/` (spec 004, live) carries the Michigan Pulse band — four
