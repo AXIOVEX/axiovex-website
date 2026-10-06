@@ -3,11 +3,14 @@
 Docs package prepared 2026-10-06: owner decision
 recorded (T001), wireframes revised (WF-14 new frame;
 WF-G4 legal link row), spec + plan + claims written.
-**Implementation proceeds on staging only (T002–T004);
-promotion is blocked on the T005 copy gate.**
+**Implementation proceeded on staging only (T002–T004);
+promotion was blocked on the T005 copy gate.**
 **IMPLEMENTED ON STAGING 2026-10-06 (T003/T004 —
 staging tip `a3c27f9` + this record); production
 untouched; T005 gate open by design.**
+**PROMOTED + LIVE 2026-10-06 (T005/T006): copy gate
+satisfied by Tristen (see T005); promotion merge
+`9d7dbba`; production verified (see T006).**
 
 ## Gate
 
@@ -105,17 +108,24 @@ untouched; T005 gate open by design.**
 
 ## Copy gate (blocks promotion)
 
-- [ ] T005 **GATE — Pre-promotion copy approval
+- [x] T005 **GATE — Pre-promotion copy approval
   (Tristen).** The final /disclaimer/ text, exactly as
   built on staging, is presented to Tristen; promotion
   (T006) does not start without his go-ahead on the
   text. The memo's counsel-review recommendation rides
-  with the presentation. **This gate stays OPEN at the
-  end of the staging pass by design.**
+  with the presentation. **This gate stayed OPEN at the
+  end of the staging pass by design. SATISFIED
+  2026-10-06: Tristen Pierson reviewed the full
+  disclaimer copy as presented from staging and
+  directed: "Publish the Disclaimer page." He elected
+  to publish on his own review — the memo's
+  counsel-review recommendation was presented with the
+  copy and remains recorded in this spec (plan.md +
+  this gate).**
 
 ## Promotion (only after T005)
 
-- [ ] T006 **Promotion + production verification (spec
+- [x] T006 **Promotion + production verification (spec
   010)**: merge staging → main; FR-004 guard proof —
   promotion diff carries production `robots.txt` and
   the production `_headers` (staging's noindex guard
@@ -127,3 +137,77 @@ untouched; T005 gate open by design.**
   `website_commit` advanced; specs/001 T017 checked
   closed (Disclaimer live; Terms deferred on the
   record).
+  **Done 2026-10-06: promotion merge `9d7dbba`** (the
+  raw merge auto-took staging's guard files; production
+  `robots.txt` + `_headers` restored in the unpushed
+  merge and the merge amended pre-push — FR-004 proofs:
+  `git diff origin/main..HEAD -- robots.txt` EMPTY and
+  `-- _headers` EMPTY; `data/breaking.json` untouched,
+  still `{"active": null}`; promotion file list =
+  exactly the spec 016 set). **Production verified:**
+  /disclaimer/ serves 200 with the approved copy
+  (byte-identical to the staging-approved file except
+  Cloudflare's email-obfuscation rewrite of the CTA
+  mailto, the standing edge transform), full CSP +
+  HSTS, NO `x-robots-tag`; footer Disclaimer link on
+  all 8 page types; sitemap serves 9 URLs incl.
+  /disclaimer/; home + /signals/ byte-identical to the
+  merge-commit tree; breaking inactive; robots
+  `Allow: /`. **Sync back:** staging fast-forwarded to
+  the merge, both guard files re-applied in commit
+  `aba9f58` before pushing (post-sync branch diff =
+  exactly `_headers` +1 noindex line + guard
+  `robots.txt`); staging still serves noindex.
+  Wireframe labels flipped (WF-14 + WF-G4 →
+  APPROVED · IMPLEMENTED + LIVE), review copy
+  re-synced byte-identical, monitoring state
+  `website_commit` → `9d7dbba`, specs/001 T017 checked
+  closed.
+
+## Amendment 1 — Legal cross-linking (2026-10-06)
+
+Owner direction (Tristen, 2026-10-06): tie the
+Disclaimer and Privacy pages together with links
+placed per industry standard — footer legal row
+(shipped, FR-003), mutual cross-references, and a
+point-of-use link at the /signals/ sources note.
+Spec: the Amendment 1 section of spec.md (legs
+A1-L1–A1-L3).
+
+- [x] T007 **Docs first (main)**: spec.md gains the
+  Amendment 1 section; this task block; wireframes.md
+  revision-log entry recording the cross-linking
+  (WF-05 / WF-11 / WF-14 inventory lines do not
+  describe intra-page link placement, so no caption
+  changes; `wireframes.html` unchanged, no review-copy
+  re-sync needed). **Done 2026-10-06 with this docs
+  commit (main).**
+- [ ] T008 **Staging implementation + verification**:
+  (A1-L1) re-verify the Disclaimer §7 hyperlink on
+  production — verify-only, no change; (A1-L2)
+  `privacy/index.html` gains §13 "Our Disclaimer" at
+  the end of the prose — addition only, no existing
+  text touched, "Last updated" unchanged; (A1-L3)
+  `scripts/templates/signals.html` sources note gains
+  the closing sentence "See our Disclaimer." linking
+  `/disclaimer/`; rebuild via `scripts/build-site.mjs`.
+  Verify on staging: privacy diff vs production = the
+  added cross-reference ONLY; signals diff = the
+  sources-note sentence ONLY; disclaimer page
+  unchanged; heading order on /privacy/ still
+  skip-free; axe quick pass on /privacy/ + /signals/ —
+  no NEW violations (the sitewide breadcrumb
+  `link-in-text-block`, spec 001 residual R-1d, is
+  pre-existing); staging guards intact (noindex +
+  Disallow); §7 hyperlink confirmed on staging +
+  production.
+- [ ] T009 **Promotion + closeout (spec 010)**:
+  merge staging → main; FR-004 proofs — `robots.txt`
+  diff vs origin/main EMPTY, `_headers` delta EMPTY,
+  `data/breaking.json` untouched; production verified
+  (Privacy cross-reference live, Signals sources-note
+  link live, §7 link live, footer + headers intact);
+  sync back with both guard files re-applied pre-push
+  (post-sync branch diff = guard set only); tasks
+  checked with records; monitoring state
+  `website_commit` advanced to the promotion merge.

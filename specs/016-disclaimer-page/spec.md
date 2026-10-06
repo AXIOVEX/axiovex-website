@@ -6,13 +6,14 @@ staging flow in spec 010)
 
 **Created**: 2026-10-06
 
-**Status**: DECIDED + WIREFRAMED 2026-10-06 — owner
+**Status**: IMPLEMENTED + LIVE 2026-10-06 — owner
 decision recorded (tasks.md T001): a short Disclaimer page
-now, a Terms page deferred. Implementation proceeds on
-staging (T002–T004); **promotion is blocked on the distinct
-pre-promotion copy gate (T005)** — Tristen's go-ahead on
-the final page text. Spec 001 T017 stays open until the
-page is live.
+now, a Terms page deferred. Implemented on staging
+(T002–T004); the pre-promotion copy gate (T005) was
+satisfied 2026-10-06 (Tristen reviewed the full staging
+copy and directed "Publish the Disclaimer page");
+promoted to production in merge `9d7dbba` and verified
+live (T006). Spec 001 T017 is closed by this spec.
 
 **Decision (spec 001 T017)**: Tristen Pierson (owner),
 2026-10-06 — adopt a short Disclaimer page now; defer a
@@ -178,3 +179,43 @@ today** (promotion `7bd2cfb`).
    `https://axiovexsystems.com/disclaimer/`, and the
    AEO/SEO baseline (100/90) holds on the next monitoring
    cycle.
+
+## Amendment 1 — Legal cross-linking (2026-10-06)
+
+**Direction**: Tristen Pierson (owner), 2026-10-06 —
+tie the Disclaimer and the Privacy Policy together
+with links placed where industry standard puts them:
+the footer legal row (shipped with the base page,
+FR-003), mutual cross-references between the two legal
+pages, and a point-of-use link where readers rely on
+republished data. Three legs:
+
+- **A1-L1 (verify-only)**: the Disclaimer's §7
+  cross-reference shipped as a live hyperlink
+  (`<a href="/privacy/">Privacy Policy</a>`). No change;
+  re-verify on production and record it.
+- **A1-L2**: the Privacy page gains the reciprocal
+  cross-reference — a final numbered section,
+  **§13 "Our Disclaimer"**, closing the prose after
+  §11 (Changes to this policy) and §12 (Contact us):
+  the policy covers personal information only; reliance
+  on the Site's published content is covered by the
+  Disclaimer (linked, `inline-link`). **Addition only** —
+  no existing privacy text is altered, moved, or
+  reworded, and the "Last updated" date does not change
+  (the addition is dated by this record). Heading order
+  stays skip-free (post-T015 discipline).
+- **A1-L3**: the /signals/ sources note (the
+  `.cards-note` paragraph in
+  `scripts/templates/signals.html`, carrying the
+  "Inclusion is not endorsement" language) gains a
+  closing point-of-use sentence — "See our
+  Disclaimer." linking `/disclaimer/` — appended after
+  the snapshot line. Nothing else in the note changes.
+
+No layout change, no new component, **no stylesheet
+change** (links use the pages' existing styles).
+Governance: this amendment section + tasks (T007)
+recorded on main before implementation; implementation
+verified on staging (T008); promotion per spec 010
+FR-004 under the standing guard invariant (T009).
