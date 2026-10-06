@@ -28,7 +28,9 @@ This file is the index, the gate rule, and the revision log.
   approved + implemented 2026-10-06; Home as the home page's first
   nav item added by spec 009 — approved + implemented 2026-10-06) · WF-G2 strata bar · WF-G3 CTA
   band · WF-G4 footer · WF-G5 service card · WF-G6 Signals floating
-  widget (spec 008 — approved + implemented 2026-10-06)
+  widget (spec 008 — approved + implemented 2026-10-06) · WF-G7
+  Breaking news banner (proposed 2026-10-06 by spec 012 —
+  PENDING OWNER APPROVAL)
 
 Framing decisions baked into the set (2026-10-04): centered axis (standing
 symmetry rule); strata = 3 segments
@@ -146,4 +148,27 @@ as accordion rows.
   refreshed on the sources' release cycle, never hourly-fetched.
   No invented or model-generated predictions anywhere; the page's
   "signals, not forecasts" restraint is preserved. Nothing on the
+  live site changes until Tristen approves.
+- **2026-10-06** — REVISION PROPOSED (spec 012-breaking-news-banner) —
+  **PENDING OWNER APPROVAL — NOT approved, NOT implemented**: NEW
+  **WF-G7 Breaking news banner** (global). A full-width deep-red
+  strip above the sticky nav on every page, present only while a
+  curated entry is active in `data/breaking.json`. Curated, never
+  auto-triggered: an entry is placed deliberately (Tristen, or an
+  agent under the monitoring runbook) and committed — the commit
+  is the audit trail — with its applicability reason recorded in
+  the file. The strip shows the publisher's headline **verbatim**
+  plus source name and published time (the Signals display rule,
+  spec 004); Axiovex adds no summary, opinion, or rewording. The
+  whole strip is one link to the source story; a real dismiss
+  button beside the link hides it, remembered per entry id
+  (localStorage) so a new entry shows again. Every entry expires
+  at most 72 hours after its published time and the build drops
+  expired entries; with no active entry the banner leaves zero
+  layout trace. The deep red (#8C2B2B family) is deliberately the
+  site's only off-palette element — an alert must read as an
+  alert. Build-time injection only (one generator marker-region
+  mechanism across all page shells/templates — no client-side
+  fetching); `role="region"` labeled "Breaking news", first in
+  reading order, visible focus states, no motion. Nothing on the
   live site changes until Tristen approves.
