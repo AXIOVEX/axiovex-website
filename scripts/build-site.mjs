@@ -1835,6 +1835,7 @@ function writeSitemap(posts, docsInfo, signalsInfo) {
     e(SITE + '/documents/', docsInfo.maxDate || gitDate(ROOT, 'scripts/templates/documents.html'), 'monthly', '0.7'),
     e(SITE + '/contact/', gitDate(ROOT, 'contact/index.html'), 'monthly', '0.7'),
     e(SITE + '/privacy/', gitDate(ROOT, 'privacy/index.html'), 'yearly', '0.5'),
+    e(SITE + '/disclaimer/', gitDate(ROOT, 'disclaimer/index.html'), 'yearly', '0.5'),
   ];
   writeFileSync(path.join(ROOT, 'sitemap.xml'),
     '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
