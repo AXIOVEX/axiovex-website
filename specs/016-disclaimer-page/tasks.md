@@ -5,6 +5,9 @@ recorded (T001), wireframes revised (WF-14 new frame;
 WF-G4 legal link row), spec + plan + claims written.
 **Implementation proceeds on staging only (T002–T004);
 promotion is blocked on the T005 copy gate.**
+**IMPLEMENTED ON STAGING 2026-10-06 (T003/T004 —
+staging tip `a3c27f9` + this record); production
+untouched; T005 gate open by design.**
 
 ## Gate
 
@@ -37,7 +40,7 @@ promotion is blocked on the T005 copy gate.**
 
 ## Implementation (staging branch, per spec 010)
 
-- [ ] T003 **Page + footer + discovery (FR-001–FR-005)**:
+- [x] T003 **Page + footer + discovery (FR-001–FR-005)**:
   new source `disclaimer/index.html` modeled on
   `privacy/index.html` (head machinery + WebPage
   JSON-LD, `.legal-body` page styles carried over, no
@@ -53,7 +56,14 @@ promotion is blocked on the T005 copy gate.**
   `scripts/build-site.mjs`; generated pages never
   hand-edited. **Stop rule (FR-005):** if any CSS
   change proves necessary, stop and flag it instead.
-- [ ] T004 **Staging verification (FR-007)**: local
+  **Done on staging:** source commit `ad6653e`
+  (disclaimer/index.html — 7 sections as drafted;
+  footer links in all 8 sources/templates;
+  writeSitemap + llms.txt), regenerated commit
+  `a3c27f9` (build: "sitemap: 9 urls"; breaking pass
+  now covers 8 pages). No CSS change was needed —
+  styles.v31.css untouched.
+- [x] T004 **Staging verification (FR-007)**: local
   build + Playwright (1440 / 834 / 390) — Privacy
   pattern, no overflow; heading order clean; axe-core
   on /disclaimer/ = zero violations; footer Disclaimer
@@ -63,6 +73,35 @@ promotion is blocked on the T005 copy gate.**
   header present on staging /disclaimer/; every other
   page's diff vs current production = footer link only
   (+ regenerated sitemap).
+  **Verified 2026-10-06 (Playwright local build +
+  staging host):** ending stacks byte-identical to
+  /privacy/ at 1440 / 834 / 390 (48px prose-bottom,
+  56/56 band, 40 footer-top; 40 / 44 / 40 at 390px);
+  no horizontal overflow at any width; heading order
+  H1 → 7 numbered H2s → CTA H2 → footer H3s, zero
+  skips; axe-core on /disclaimer/ — zero in-scope
+  violations (the single `link-in-text-block` finding
+  is the breadcrumb Home link, byte-identical on
+  /privacy/: spec 001 residual R-1d, the owner's
+  standing design call, not introduced here); footer
+  Disclaimer link present, after Privacy Policy, on
+  all 8 page types (`aria-current="page"` on the new
+  page itself); staging serves /disclaimer/ 200 with
+  the full CSP + HSTS and `x-robots-tag: noindex,
+  nofollow`, Disallow robots intact; staging sitemap
+  serves 9 URLs incl. /disclaimer/ (lastmod
+  2026-10-06); generated-page diffs vs the pre-change
+  build = exactly +1 footer-link line on each of blog
+  index, both articles, documents, signals, plus the
+  sitemap entry. Production confirmed untouched:
+  /disclaimer/ there returns the site's standing
+  fallback (homepage body, byte-identical to a
+  nonexistent-path control) and production pages
+  carry no Disclaimer link. Served-page note: the
+  staging /disclaimer/ body differs from the committed
+  file only by Cloudflare's email-obfuscation rewrite
+  of the CTA-band mailto (the same edge transform the
+  Privacy page gets).
 
 ## Copy gate (blocks promotion)
 
