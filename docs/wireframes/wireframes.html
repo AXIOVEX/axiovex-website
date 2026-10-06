@@ -164,7 +164,7 @@
   </ul>
 
   <h2 class="wf-title"><span class="wf-id">WF-G2 · Global — Strata bar</span>Under every hero and page head</h2>
-  <p class="wf-sub">The signature divider: one segment per service. <b>Page-head rhythm — REVISED 2026-10-05 (approved 2026-10-05):</b> wherever the bar closes a page head, the space above it (last head text &rarr; bar) is <b>36px</b> and the space below it (bar &rarr; first content) is <b>40px</b> — the same on Documents, Blog index, Contact, and Privacy. Measured today: 132px above on Documents/Contact/Privacy (a void) and only ~8px below on Documents/Contact (crowding). Article pages: tags &rarr; bar 36px; bar &rarr; share row stays 22px per spec 002.</p>
+  <p class="wf-sub">The signature divider: one segment per service. <b>Page-head rhythm — REVISED 2026-10-05 (approved 2026-10-05):</b> wherever the bar closes a page head, the space above it (last head text &rarr; bar) is <b>36px</b> and the space below it (bar &rarr; first content) is <b>40px</b> — the same on Documents, Blog index, Contact, and Privacy. Measured today: 132px above on Documents/Contact/Privacy (a void) and only ~8px below on Documents/Contact (crowding). Article pages: tags &rarr; bar 36px; bar &rarr; share row stays 22px per spec 002. <b>Page-foot rhythm — PROPOSED 2026-10-06 (spec 015 — PENDING OWNER APPROVAL):</b> the head rhythm&rsquo;s counterpart at the end of the page — last content section &rarr; <b>48px</b>, CTA band padding <b>56px</b> above and below its content, footer content <b>40px</b> below the band (at &le;820px: 40 / 44 / 40). Measured today: 76px under every last section, 76px on each side of the band, 56px above the footer — 284px of pure padding around the band on six pages, and one 132px void at the bottom of Contact (the same void size spec 003 fixed at page heads).</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">all pages</span></div>
     <div class="stage">
@@ -172,10 +172,12 @@
       <div class="strata-labels"><span>AI Education &amp; Training</span><span>Manufacturing AI</span><span>Evidence &amp; Decisions</span></div>
       <p style="color:var(--faint);font-size:13.5px;text-align:center">5px tall, decorative (<span style="color:var(--muted)">aria-hidden</span>), labels shown here for the wireframe only — the bar itself carries no text.</p>
       <p style="color:var(--faint);font-size:13.5px;text-align:center">Page-head rhythm: 36px of air above the bar, 40px below it — consistent on every page head.</p>
+      <p style="color:var(--faint);font-size:13.5px;text-align:center">Page-foot rhythm (proposed, spec 015): 48px below the last section, CTA band 56px, footer 40px — the page ends as deliberately as it begins.</p>
     </div>
   </div>
 
   <h2 class="wf-title"><span class="wf-id">WF-G3 · Global — CTA band</span>Above the footer on every page (except Contact, which is the CTA)</h2>
+  <p class="wf-sub">The band&rsquo;s own padding is the middle of the page-foot rhythm (WF-G2). <b>PROPOSED 2026-10-06 (spec 015 — PENDING OWNER APPROVAL):</b> band padding 76px &rarr; <b>56px</b> top and bottom (at &le;820px: 60px &rarr; 44px). The band&rsquo;s internal spacing — eyebrow 16px, lede 32px — is unchanged, as is everything the band says.</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">all pages</span></div>
     <div class="stage">
@@ -190,9 +192,11 @@
   </div>
   <ul class="notes">
     <li><strong>Change vs today:</strong> today only the home page has a contact section. The band gives every page — blog, article, privacy — the same next step into Contact.</li>
+    <li><strong>Spacing (proposed, spec 015):</strong> the air above the band is the last section&rsquo;s 48px and the air below it is the footer&rsquo;s 40px top padding (WF-G2 page-foot rhythm). Before &rarr; after for the full ending stack on a band page: 76 + 76 (band) + 76 + 56 = 284px &rarr; 48 + 56 (band) + 56 + 40 = 200px.</li>
   </ul>
 
   <h2 class="wf-title"><span class="wf-id">WF-G4 · Global — Footer</span>Three columns + bottom row</h2>
+  <p class="wf-sub">The footer&rsquo;s top padding closes the page-foot rhythm (WF-G2). <b>PROPOSED 2026-10-06 (spec 015 — PENDING OWNER APPROVAL):</b> padding above the footer grid 56px &rarr; <b>40px</b>. Everything inside the footer is unchanged — grid gap, mission spacing, the bottom row, and the 32px under it.</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">all pages</span></div>
     <div class="stage">
@@ -216,6 +220,7 @@
   </div>
   <ul class="notes">
     <li><strong>Change vs today:</strong> footer goes from a single centered column to a 3-column layout with a location line at right. Logo, socials, and legal line all carry over.</li>
+    <li><strong>Spacing (proposed, spec 015):</strong> on band pages the footer follows the band&rsquo;s 56px bottom padding; on Contact it follows the last section&rsquo;s 48px — one rhythm either way. The footer&rsquo;s own internal spacing is not part of the tightening.</li>
   </ul>
 
   <h2 class="wf-title"><span class="wf-id">WF-G5 · Global — Service card</span>Used in What we do (home)</h2>
@@ -304,7 +309,7 @@
 
   <!-- ================= HOME ================= -->
   <h2 class="wf-title"><span class="wf-id">WF-01 · Home — Desktop</span>axiovexsystems.com/</h2>
-  <p class="wf-sub">The home flow, in Axiovex order: <b>REVISED 2026-10-05 (approved, live):</b> a new Signals + Michigan Pulse block sits between Evidence and About — Pulse tiles, three latest signal cards, and the path to the full Signals page (WF-11). <b>REVISED 2026-10-06 (spec 008 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE (commit ab0e4e5)):</b> the block is highlighted — the eyebrow becomes &ldquo;AXIOVEX SIGNALS — LIVE&rdquo; with a live-dot, and a Michigan Pulse mini-strip (the three headline stats, period-labeled, build-generated) sits directly under the heading; the full Pulse band remains on WF-11 only. <b>REVISED 2026-10-06 (spec 009 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE (commit 11873b1)):</b> the home nav drawn on this frame gains <b>Home</b> as its first item, shown current — see WF-G1 variant (a).</p>
+  <p class="wf-sub">The home flow, in Axiovex order: <b>REVISED 2026-10-05 (approved, live):</b> a new Signals + Michigan Pulse block sits between Evidence and About — Pulse tiles, three latest signal cards, and the path to the full Signals page (WF-11). <b>REVISED 2026-10-06 (spec 008 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE (commit ab0e4e5)):</b> the block is highlighted — the eyebrow becomes &ldquo;AXIOVEX SIGNALS — LIVE&rdquo; with a live-dot, and a Michigan Pulse mini-strip (the three headline stats, period-labeled, build-generated) sits directly under the heading; the full Pulse band remains on WF-11 only. <b>REVISED 2026-10-06 (spec 009 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE (commit 11873b1)):</b> the home nav drawn on this frame gains <b>Home</b> as its first item, shown current — see WF-G1 variant (a). <b>REVISED 2026-10-06 (spec 015 — PENDING OWNER APPROVAL):</b> the page bottom tightens per the WF-G2 page-foot rhythm — drawn at the foot of this frame; mid-page section spacing is unchanged.</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com</span></div>
     <div class="stage">
@@ -410,6 +415,7 @@
         </div>
       </div>
 
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-bottom:18px">↓ 48px — FAQ section → CTA band (was 76px) · PAGE-FOOT RHYTHM · WF-G2 (proposed, spec 015)</p>
       <div class="blk solid" style="text-align:center">
         <span class="tag">CTA band · WF-G3</span>
         <p class="eyebrow">Next step</p>
@@ -417,6 +423,7 @@
         <div class="btnrow"><span class="btn fill">Start a conversation →</span></div>
       </div>
 
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-bottom:18px">CTA BAND PADDING 56px (was 76px) · ↓ 40px — BAND → FOOTER CONTENT (was 56px) · spec 015</p>
       <div class="blk">
         <span class="tag">Footer · WF-G4</span>
         <div class="foot-grid">
@@ -431,6 +438,7 @@
   <ul class="notes">
     <li><strong>Section order is the main change:</strong> Method (premise) moves above What we do; the proof band and founders get their own full-width bands; the old contact section is replaced by the CTA band + dedicated Contact page (WF-06).</li>
     <li><strong>Scroll-reveal</strong> on sections, with reduced-motion fully honoured.</li>
+    <li><strong>Page bottom — REVISED 2026-10-06 (spec 015 — PENDING OWNER APPROVAL):</strong> the ending stack tightens per the WF-G2 page-foot rhythm: FAQ section &rarr; band 76px &rarr; 48px, band padding 76px &rarr; 56px, footer top padding 56px &rarr; 40px — pure padding around the band 284px &rarr; 200px. Only the ending moves; every mid-page gap on this frame is unchanged.</li>
   </ul>
 
   <h2 class="wf-title"><span class="wf-id">WF-02 · Home — Mobile (390px)</span>Same page, stacked</h2>
@@ -568,7 +576,7 @@
 
   <!-- ================= CONTACT ================= -->
   <h2 class="wf-title"><span class="wf-id">WF-06 · Contact (new page)</span>axiovexsystems.com/contact/</h2>
-  <p class="wf-sub">Contact layout: page head, then two columns — note-sending left, context panels right. No CTA band; the page is the CTA. <b>REVISED 2026-10-05 (approved 2026-10-05):</b> head rhythm per WF-G2 — lede &rarr; strata 132px &rarr; 36px; strata &rarr; cards ~8px &rarr; 40px. <b>REVISED 2026-10-05 (approved 2026-10-05; implemented and live):</b> spec 005 — the left column&rsquo;s primary route becomes a contact form protected by Cloudflare Turnstile (Managed), delivered to the Start mailbox; the email routes stay as fallback, and the privacy policy&rsquo;s &ldquo;no form&rdquo; wording is updated to match (exact copy in spec 005).</p>
+  <p class="wf-sub">Contact layout: page head, then two columns — note-sending left, context panels right. No CTA band; the page is the CTA. <b>REVISED 2026-10-05 (approved 2026-10-05):</b> head rhythm per WF-G2 — lede &rarr; strata 132px &rarr; 36px; strata &rarr; cards ~8px &rarr; 40px. <b>REVISED 2026-10-05 (approved 2026-10-05; implemented and live):</b> spec 005 — the left column&rsquo;s primary route becomes a contact form protected by Cloudflare Turnstile (Managed), delivered to the Start mailbox; the email routes stay as fallback, and the privacy policy&rsquo;s &ldquo;no form&rdquo; wording is updated to match (exact copy in spec 005). <b>REVISED 2026-10-06 (spec 015 — PENDING OWNER APPROVAL):</b> the page bottom tightens per the WF-G2 page-foot rhythm — drawn at the foot of this frame.</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/contact/</span></div>
     <div class="stage">
@@ -621,12 +629,14 @@
           </div>
         </div>
       </div>
-      <div class="blk" style="margin-top:18px"><span class="tag">Footer · WF-G4</span><p style="color:var(--muted);font-size:14px;text-align:center">Three-column footer (see WF-G4). No CTA band on this page.</p></div>
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin:18px 0 10px">↓ 48px — LAST SECTION → FOOTER (was 76px) · FOOTER TOP PADDING 40px (was 56px) · PAGE-FOOT RHYTHM · WF-G2 (proposed, spec 015)</p>
+      <div class="blk"><span class="tag">Footer · WF-G4</span><p style="color:var(--muted);font-size:14px;text-align:center">Three-column footer (see WF-G4). No CTA band on this page.</p></div>
     </div>
   </div>
   <ul class="notes">
     <li><strong>Nav change:</strong> &ldquo;Contact&rdquo; stops being an anchor to the home-page section and becomes this page; the home page keeps the CTA band as its contact entry point.</li>
     <li><strong>Mobile:</strong> columns stack — email routes first, panels below.</li>
+    <li><strong>Page bottom — REVISED 2026-10-06 (spec 015 — PENDING OWNER APPROVAL):</strong> with no band, Contact&rsquo;s ending is the rhythm in its plainest form: the content section ends 48px above the footer (was 76px) and the footer content sits 40px below its top edge (was 56px) — a 132px void becomes an 88px ending, the same excess spec 003 removed at page heads.</li>
   </ul>
 
   <!-- ================= TABLET ================= -->
