@@ -875,6 +875,125 @@ function writeSitemap(posts, docsInfo, signalsInfo) {
   console.log('sitemap: ' + urls.length + ' urls');
 }
 
+/* ================= Breaking news banner (spec 012) =================
+   The build's LAST pass. Reads data/breaking.json — a single
+   curated `active` entry or null — and rewrites the BREAKING
+   marker region placed immediately after <body id="top"> in the
+   three shells and four templates, in every served page: the
+   shells in place and the generated outputs (blog index, every
+   article, documents, signals). The blog redirect shim
+   (blog/post.html) is the one named exclusion (FR-004) — it
+   carries no chrome to banner.
+
+   This is the one wall-clock-dependent step in an otherwise
+   deterministic build: an entry renders only while
+   publishedUtc <= build time < expiresUtc (FR-006). With no
+   active entry the region collapses to the empty marker pair —
+   zero layout trace, no script (FR-004).
+
+   Validation fails closed (FR-001): a malformed file, an invalid
+   entry, or an expiry more than 72h after publication renders NO
+   banner and logs a warning naming the defect. Missing markers
+   in an output file warn too (the SIGNALS pattern) — a page
+   that lost its markers in an edit is found by the build, not
+   by a visitor. */
+const BREAKING_MAX_MS = 72 * 60 * 60 * 1000;
+
+function breakingEntry() {
+  const p = path.join(ROOT, 'data', 'breaking.json');
+  if (!existsSync(p)) {
+    console.warn('breaking: data/breaking.json not found — banner inactive');
+    return null;
+  }
+  let data;
+  try { data = JSON.parse(readFileSync(p, 'utf8')); }
+  catch (e) {
+    console.warn('breaking: data/breaking.json is not valid JSON (' + e.message + ') — banner inactive');
+    return null;
+  }
+  const entry = data ? data.active : null;
+  if (!entry) return null;
+  const bad = why => {
+    console.warn('breaking: entry invalid — ' + why + ' — banner inactive');
+    return null;
+  };
+  for (const f of ['id', 'headline', 'sourceName', 'url', 'publishedUtc', 'expiresUtc', 'addedBy', 'reason']) {
+    if (typeof entry[f] !== 'string' || !entry[f].trim()) {
+      return bad('missing or empty field "' + f + '"');
+    }
+  }
+  if (!entry.url.startsWith('https://')) return bad('url is not https');
+  const pub = Date.parse(entry.publishedUtc);
+  const exp = Date.parse(entry.expiresUtc);
+  if (Number.isNaN(pub)) return bad('publishedUtc is not a valid timestamp');
+  if (Number.isNaN(exp)) return bad('expiresUtc is not a valid timestamp');
+  if (exp <= pub) return bad('expiresUtc is not after publishedUtc');
+  if (exp - pub > BREAKING_MAX_MS) return bad('expiresUtc is more than 72 hours after publishedUtc');
+  const now = Date.now();
+  if (now < pub) {
+    console.log('breaking: entry "' + entry.id + '" is not yet published — banner inactive');
+    return null;
+  }
+  if (now >= exp) {
+    console.log('breaking: entry "' + entry.id + '" has expired — banner inactive');
+    return null;
+  }
+  return entry;
+}
+
+function breakingHtml(entry) {
+  return '<div class="breaking-banner" role="region" aria-label="Breaking news">\n' +
+    '    <a class="breaking-link" href="' + escAttr(entry.url) + '" target="_blank" rel="noopener">' +
+    '<span class="breaking-lead">BREAKING</span> ' +
+    '<span class="breaking-headline">' + esc(entry.headline) + '</span> ' +
+    '<span class="breaking-meta">&middot; ' + esc(entry.sourceName) + ' &middot; ' +
+    esc(fmtUpdated(entry.publishedUtc)) + '</span></a>\n' +
+    '    <button class="breaking-dismiss" type="button" aria-label="Dismiss breaking news banner" ' +
+    'data-breaking-dismiss="' + escAttr(entry.id) + '">&#10005;</button>\n' +
+    '  </div>\n' +
+    '  <script src="/breaking.v1.js" defer></script>';
+}
+
+function buildBreaking() {
+  const entry = breakingEntry();
+  const inner = entry ? '\n  ' + breakingHtml(entry) + '\n  ' : '';
+  const outputs = [
+    'index.html',
+    path.join('contact', 'index.html'),
+    path.join('privacy', 'index.html'),
+    path.join('blog', 'index.html'),
+    path.join('documents', 'index.html'),
+    path.join('signals', 'index.html'),
+  ];
+  const blogDir = path.join(ROOT, 'blog');
+  for (const name of readdirSync(blogDir, { withFileTypes: true })) {
+    if (!name.isDirectory()) continue;
+    const rel = path.join('blog', name.name, 'index.html');
+    if (existsSync(path.join(ROOT, rel))) outputs.push(rel);
+  }
+  const re = /(<!-- BREAKING:START -->)[\s\S]*?(<!-- BREAKING:END -->)/;
+  let rewritten = 0;
+  for (const rel of outputs) {
+    const file = path.join(ROOT, rel);
+    if (!existsSync(file)) {
+      console.warn('breaking: expected output ' + rel + ' missing — banner skipped for it');
+      continue;
+    }
+    const html = readFileSync(file, 'utf8');
+    if (!re.test(html)) {
+      console.warn('breaking: BREAKING markers not found in ' + rel + ' — banner skipped for that page');
+      continue;
+    }
+    // Replacer function, not a '$1...' string — the banner HTML can
+    // contain literal '$' amounts from a headline (the SIGNALS gotcha).
+    const out = html.replace(re, (m, g1, g2) => g1 + inner + g2);
+    if (out !== html) writeFileSync(file, out);
+    rewritten++;
+  }
+  console.log('breaking: ' + (entry ? 'active banner "' + entry.id + '"' : 'no active entry') +
+    ' — marker region rewritten in ' + rewritten + ' page(s)');
+}
+
 /* ================= Main ================= */
 const sharedDir = process.argv[2] || '/tmp/shared-documents';
 let docsInfo = { maxDate: null, count: 0 };
@@ -887,3 +1006,4 @@ const posts = buildBlog();
 buildFeed(posts);
 const signalsInfo = buildSignals(posts);
 writeSitemap(posts, docsInfo, signalsInfo);
+buildBreaking();
