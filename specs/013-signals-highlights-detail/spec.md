@@ -400,3 +400,11 @@ regions still render absent, as before.
 and verification on the staging branch (T009–T010);
 promotion `staging` → `main` under spec 010 FR-004
 (T011); closeout (T012).
+
+**Status: implemented and LIVE 2026-10-06** — docs
+package `83c918e` on main; staging implementation
+`95d2bb1` (verification in tasks T010: 5 cards, summary
+byte-identical to the pre-fix production rendering,
+drop-out 6/6); promotion fast-forward + FR-004 guard
+restoration `462136e`; production-verified (tasks
+T011–T012).
