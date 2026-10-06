@@ -1,10 +1,38 @@
 {
-  "updatedUtc": "2026-10-06T14:11:26.509Z",
+  "updatedUtc": "2026-10-06T19:32:17.877Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "2027 manufacturing conferences and trade shows",
+          "link": "https://www.manufacturingdive.com/news/2027-manufacturing-conferences-and-trade-shows/832164/",
+          "date": "2026-10-06"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Bayer to invest $2.2B in Ohio pharmaceutical facility",
+          "link": "https://www.manufacturingdive.com/news/bayer-to-invest-2b-ohio-pharmaceutical-facility-new-albany/832237/",
+          "date": "2026-10-06"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Boeing nabs $14.7B PAC-3 MSE component contract from Lockheed Martin",
+          "link": "https://www.manufacturingdive.com/news/boeing-lockheed-martin-pac-3-mse-seeker-contract-huntsville-alabama/832170/",
+          "date": "2026-10-06"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "Why Supply Chain Automation Depends on Alignment, Not Just Technology",
+          "link": "https://automationalley.com/2026/10/06/why-supply-chain-automation-depends-on-alignment-not-just-technology/",
+          "date": "2026-10-06"
+        },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
@@ -32,34 +60,6 @@
           "title": "Defense, data centers and AI driving private equity manufacturing investments",
           "link": "https://www.manufacturingdive.com/news/private-equity-us-manufacturing-defense-ai-data-centers-report-2026/832073/",
           "date": "2026-10-05"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Made in America Needs More Than Investment. It Needs People.",
-          "link": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/",
-          "date": "2026-10-05"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Caterpillar and Ultium Cells make $1B facility investments",
-          "link": "https://www.manufacturingdive.com/news/caterpillar-ultium-cells-1b-facility-investments-avio-usa-genentech/831996/",
-          "date": "2026-10-02"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Manufacturing industry adds 9K jobs in September",
-          "link": "https://www.manufacturingdive.com/news/bls-september-manufacturing-employment-situation-august-jolts-2026/831988/",
-          "date": "2026-10-02"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Manufacturers ‘all in’ on Senate permitting reform bill: NAM",
-          "link": "https://www.manufacturingdive.com/news/manufacturers-permitting-reform-bill-nam/831923/",
-          "date": "2026-10-02"
         }
       ]
     },
@@ -118,6 +118,13 @@
         {
           "source": "Automation Alley",
           "sourceId": "automation-alley",
+          "title": "Why Supply Chain Automation Depends on Alignment, Not Just Technology",
+          "link": "https://automationalley.com/2026/10/06/why-supply-chain-automation-depends-on-alignment-not-just-technology/",
+          "date": "2026-10-06"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
           "title": "Made in America Needs More Than Investment. It Needs People.",
           "link": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/",
           "date": "2026-10-05"
@@ -163,13 +170,6 @@
           "title": "From Pilot to Practice: How Manufacturers Can Build AI That Actually Lasts",
           "link": "https://automationalley.com/2026/09/24/from-pilot-to-practice-how-manufacturers-can-build-ai-that-actually-lasts/",
           "date": "2026-09-24"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Trust Is the New Competitive Advantage: How Security Readiness Can Help Win and Retain Customers",
-          "link": "https://automationalley.com/2026/09/24/trust-is-the-new-competitive-advantage-how-security-readiness-can-help-win-and-retain-customers/",
-          "date": "2026-09-24"
         }
       ]
     },
@@ -177,6 +177,48 @@
       "id": "ot-security",
       "title": "OT cybersecurity",
       "items": [
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Johnson Controls EasyIO FG",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01",
+          "date": "2026-10-06"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Savannah lwIP SMTP client",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-02",
+          "date": "2026-10-06"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Hitachi Energy Asset Suite",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-03",
+          "date": "2026-10-06"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Hitachi Energy SOI",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04",
+          "date": "2026-10-06"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Hitachi Energy REB500",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05",
+          "date": "2026-10-06"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Hitachi Energy RTU500",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06",
+          "date": "2026-10-06"
+        },
         {
           "source": "CISA",
           "sourceId": "cisa-ics",
@@ -190,48 +232,6 @@
           "title": "Monta monta.app",
           "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02",
           "date": "2026-10-01"
-        },
-        {
-          "source": "CISA",
-          "sourceId": "cisa-ics",
-          "title": "ABB Protection and Control IED Manager PCM600",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03",
-          "date": "2026-10-01"
-        },
-        {
-          "source": "CISA",
-          "sourceId": "cisa-ics",
-          "title": "Johnson Controls EasyIO Neo Series EC and CW Controllers",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-04",
-          "date": "2026-10-01"
-        },
-        {
-          "source": "CISA",
-          "sourceId": "cisa-ics",
-          "title": "Johnson Controls EasyIO Neo Series EC and CW Controllers",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-05",
-          "date": "2026-10-01"
-        },
-        {
-          "source": "CISA",
-          "sourceId": "cisa-ics",
-          "title": "Meari IoT Cloud Platform OpenAPI Service",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06",
-          "date": "2026-10-01"
-        },
-        {
-          "source": "CISA",
-          "sourceId": "cisa-ics",
-          "title": "CISA Malcolm",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01",
-          "date": "2026-10-01"
-        },
-        {
-          "source": "CISA",
-          "sourceId": "cisa-ics",
-          "title": "Viidure Dashcam Android Application",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-07",
-          "date": "2026-09-29"
         }
       ]
     },

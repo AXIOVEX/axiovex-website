@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-06T14:11:26.509Z",
+  "updatedUtc": "2026-10-06T19:32:17.877Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -21,6 +21,30 @@
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "2027 manufacturing conferences and trade shows",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-06",
+      "url": "https://www.manufacturingdive.com/news/2027-manufacturing-conferences-and-trade-shows/832164/"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "Why Supply Chain Automation Depends on Alignment, Not Just Technology",
+      "source": "Automation Alley",
+      "date": "2026-10-06",
+      "url": "https://automationalley.com/2026/10/06/why-supply-chain-automation-depends-on-alignment-not-just-technology/"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Johnson Controls EasyIO FG",
+      "source": "CISA",
+      "date": "2026-10-06",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01"
+    },
+    {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
       "title": "New Mexico Institute of Mining and Technology et.al, Notice of Decision on Application for Duty-Free Entry of Scientific Instruments",
@@ -31,82 +55,58 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Your AI strategy is only as good as its first move",
+      "title": "Bayer to invest $2.2B in Ohio pharmaceutical facility",
       "source": "Manufacturing Dive",
-      "date": "2026-10-05",
-      "url": "https://www.manufacturingdive.com/spons/your-ai-strategy-is-only-as-good-as-its-first-move/831591/"
+      "date": "2026-10-06",
+      "url": "https://www.manufacturingdive.com/news/bayer-to-invest-2b-ohio-pharmaceutical-facility-new-albany/832237/"
     },
     {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
-      "title": "Made in America Needs More Than Investment. It Needs People.",
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Boeing nabs $14.7B PAC-3 MSE component contract from Lockheed Martin",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-06",
+      "url": "https://www.manufacturingdive.com/news/boeing-lockheed-martin-pac-3-mse-seeker-contract-huntsville-alabama/832170/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Why Supply Chain Automation Depends on Alignment, Not Just Technology",
       "source": "Automation Alley",
-      "date": "2026-10-05",
-      "url": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "AI on the shop floor: Manufacturing’s physical AI moment",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-05",
-      "url": "https://www.manufacturingdive.com/spons/ai-on-the-shop-floor-manufacturings-physical-ai-moment/831740/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Iowa governor signs bill allowing $1.4B in tax incentives for steel project",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-05",
-      "url": "https://www.manufacturingdive.com/news/gov-reynolds-signs-bill-1b-tax-incentives-iowa-steel-mill-mesabi-metallics/832126/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Defense, data centers and AI driving private equity manufacturing investments",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-05",
-      "url": "https://www.manufacturingdive.com/news/private-equity-us-manufacturing-defense-ai-data-centers-report-2026/832073/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Made in America Needs More Than Investment. It Needs People.",
-      "source": "Automation Alley",
-      "date": "2026-10-05",
-      "url": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Energy Department Announces $4.2 Billion Investment to Boost Nuclear Power and Help Lower Energy Costs in Pennsylvania and Ohio",
-      "source": "U.S. Department of Energy",
-      "date": "2026-10-05",
-      "url": "https://www.energy.gov/articles/energy-department-announces-42-billion-investment-boost-nuclear-power-and-help-lower"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Energy Department Announces Alaska Railbelt Transmission Project to Receive Defense Production Act Funding, Securing Alaska Military Installations and Local Communities",
-      "source": "U.S. Department of Energy",
-      "date": "2026-10-05",
-      "url": "https://www.energy.gov/articles/energy-department-announces-alaska-railbelt-transmission-project-receive-defense"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Caterpillar and Ultium Cells make $1B facility investments",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-02",
-      "url": "https://www.manufacturingdive.com/news/caterpillar-ultium-cells-1b-facility-investments-avio-usa-genentech/831996/"
+      "date": "2026-10-06",
+      "url": "https://automationalley.com/2026/10/06/why-supply-chain-automation-depends-on-alignment-not-just-technology/"
     },
     {
       "lane": "ot-security",
       "laneLabel": "OT cybersecurity",
-      "title": "Armatura LLC Armatura One",
+      "title": "Savannah lwIP SMTP client",
       "source": "CISA",
-      "date": "2026-10-01",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
+      "date": "2026-10-06",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-02"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Hitachi Energy Asset Suite",
+      "source": "CISA",
+      "date": "2026-10-06",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-03"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Hitachi Energy SOI",
+      "source": "CISA",
+      "date": "2026-10-06",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Hitachi Energy REB500",
+      "source": "CISA",
+      "date": "2026-10-06",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05"
     },
     {
       "lane": "ai-standards",
