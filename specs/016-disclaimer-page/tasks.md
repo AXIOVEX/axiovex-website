@@ -182,7 +182,7 @@ A1-L1–A1-L3).
   changes; `wireframes.html` unchanged, no review-copy
   re-sync needed). **Done 2026-10-06 with this docs
   commit (main).**
-- [ ] T008 **Staging implementation + verification**:
+- [x] T008 **Staging implementation + verification**:
   (A1-L1) re-verify the Disclaimer §7 hyperlink on
   production — verify-only, no change; (A1-L2)
   `privacy/index.html` gains §13 "Our Disclaimer" at
@@ -201,6 +201,35 @@ A1-L1–A1-L3).
   pre-existing); staging guards intact (noindex +
   Disallow); §7 hyperlink confirmed on staging +
   production.
+  **Done on staging 2026-10-06 (implementation
+  `55e8792`):** (A1-L1) Disclaimer §7 hyperlink
+  re-verified live on production
+  (`<a href="/privacy/">Privacy Policy</a>` present in
+  the served /disclaimer/) and on staging — verify-only,
+  no change. (A1-L2) Privacy §13 added — the git diff
+  is exactly +3 lines after §12; no existing text
+  altered; "Last updated" unchanged; heading sequence
+  H1 → H2 §§1–13 → CTA H2 → footer H3s, zero skips.
+  (A1-L3) Signals sources-note sentence appended in
+  `scripts/templates/signals.html`; the regenerated
+  page differs from the pre-change build on exactly
+  one line — the note, identical except the appended
+  sentence (snapshot line unchanged). The Disclaimer
+  page itself is byte-identical to its pre-change
+  build. **Axe (4.10.2, local build, new vs baseline):**
+  /privacy/ — identical finding set (breadcrumb
+  `link-in-text-block` only, R-1d); /signals/ — a bare
+  anchor in the muted `.cards-note` failed
+  `color-contrast`, so the link carries the site's
+  existing `.inline-link` style (cyan, the style the
+  Privacy §13 link uses; zero CSS change) and the
+  re-run finding set is identical to baseline
+  (breadcrumb only). No page errors under the enforced
+  CSP locally. **Staging host verified:** /privacy/
+  serves §13 + link, /signals/ serves the sentence,
+  both under `x-robots-tag: noindex, nofollow`;
+  staging robots still Disallow; staging /signals/
+  byte-identical to the committed build.
 - [ ] T009 **Promotion + closeout (spec 010)**:
   merge staging → main; FR-004 proofs — `robots.txt`
   diff vs origin/main EMPTY, `_headers` delta EMPTY,
