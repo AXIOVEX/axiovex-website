@@ -509,6 +509,21 @@ function deltaHtml(tile, diff, upper) {
   return glyph + ' ' + sign + mag.toFixed(1) + (upper ? unit.toUpperCase() : unit);
 }
 
+/* Spec 011 Amendment 2 (A2-3): window percent change —
+   (last − first) ÷ first across the non-null points, one
+   decimal, glyph + signed figure in the tape's neutral
+   treatment. For the rate series this is the RELATIVE change
+   of the rate; its absolute movement stays in the pts delta
+   columns. "—" when fewer than two non-null points exist. */
+function windowPctHtml(trend) {
+  const pts = (trend || []).filter(p => p.v !== null && p.v !== undefined);
+  if (pts.length < 2 || !pts[0].v) return '&mdash;';
+  const pct = ((pts[pts.length - 1].v - pts[0].v) / pts[0].v) * 100;
+  const glyph = pct > 0 ? '&#9650;' : pct < 0 ? '&#9660;' : '&#9644;';
+  const sign = pct > 0 ? '+' : pct < 0 ? '&minus;' : '';
+  return glyph + ' ' + sign + Math.abs(pct).toFixed(1) + '%';
+}
+
 const TAPE_LABELS = {
   SMU26000003000000001: 'MI MFG EMPLOYMENT',
   LASST260000000000003: 'MI UNEMPLOYMENT',
@@ -544,11 +559,13 @@ function trendBoardHtml(pulse) {
     const d = trendDeltas(t.trend);
     const mom = d ? deltaHtml(t, d.mom, false) : '&mdash;';
     const win = d ? deltaHtml(t, d.window, false) : '&mdash;';
+    const pct = d ? windowPctHtml(t.trend) : '&mdash;';
     return '            <tr><td class="tb-series">' + esc(t.label) + '</td>' +
       '<td class="tb-latest">' + esc(t.display) + '</td>' +
       '<td class="tb-delta tb-mom">' + mom + '</td>' +
       '<td class="tb-delta tb-win">' + win + '</td>' +
-      '<td class="tb-spark">' + sparkline(t.trend) + '</td></tr>';
+      '<td class="tb-spark"><span class="tb-sparkwrap">' + sparkline(t.trend) +
+      '<span class="tb-pct">' + pct + '</span></span></td></tr>';
   }).join('\n');
   return '        <div class="trend-board">\n' +
     '          <table class="trend-table">\n' +
@@ -727,8 +744,10 @@ function buildSignals(posts) {
   ).join('\n');
 
   // Spec 011: Trends & outlook section between the Pulse band and
-  // the lanes. The section head attaches to the first element that
-  // renders; absent elements render nothing (FR-005e).
+  // the lanes. The section head attaches to the first in-section
+  // element that renders; absent elements render nothing (FR-005e).
+  // Amendment 2: the tape (part 0) renders at the top of the page,
+  // outside the section — it never carries the section head.
   const outlook = loadOutlook();
   const trendsParts = [
     tickerHtml(snap.pulse),
@@ -736,9 +755,11 @@ function buildSignals(posts) {
     outlookHtml(outlook),
     educationHtml(outlook),
   ];
-  if (trendsParts.some(Boolean)) {
-    const i = trendsParts.findIndex(Boolean);
-    trendsParts[i] = trendsHeadHtml() + '\n' + trendsParts[i];
+  for (let i = 1; i < trendsParts.length; i++) {
+    if (trendsParts[i]) {
+      trendsParts[i] = trendsHeadHtml() + '\n' + trendsParts[i];
+      break;
+    }
   }
 
   // /signals/ page
