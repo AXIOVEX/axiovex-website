@@ -6,13 +6,16 @@ implementation lands through the staging flow in spec 010)
 
 **Created**: 2026-10-06
 
-**Status**: **Implemented on staging 2026-10-06** —
+**Status**: **Implemented and live 2026-10-06** —
 approved by Tristen 2026-10-06 13:43 EDT ("Approve spec 013
-wireframes — implement it"); tasks T001–T005 complete with
-the verification record in this package's `sources.md`.
-Promotion (T006) and closeout (T007) remain open. Sequencing
-as it fell out: specs 011/012 + Amendment 2 promoted first;
-spec 013 follows with its own staging cycle.
+wireframes — implement it"); implemented on staging
+(tasks T001–T005, verification record in this package's
+`sources.md`), promoted to production with spec 015 in
+merge `4497704` (T006 — FR-004 guard proof empty,
+production figure audit repeated live) and closed out
+(T007). Sequencing as it fell out: specs 011/012 +
+Amendment 2 promoted first; spec 013 followed with its
+own staging cycle.
 
 **Direction (Tristen, 2026-10-06)**: "can we add more data to
 the signals page? basically much of what we report for the
