@@ -30,7 +30,8 @@ This file is the index, the gate rule, and the revision log.
 - WF-09 Blog / article / privacy — tablet
 - Global components: WF-G1 nav (Signals link added by spec 008 —
   approved + implemented 2026-10-06; Home as the home page's first
-  nav item added by spec 009 — approved + implemented 2026-10-06) · WF-G2 strata bar · WF-G3 CTA
+  nav item added by spec 009 — approved + implemented 2026-10-06) · WF-G2 strata bar (+ page-head rhythm, spec 003; page-foot
+  rhythm proposed by spec 015 — PENDING OWNER APPROVAL) · WF-G3 CTA
   band · WF-G4 footer · WF-G5 service card · WF-G6 Signals floating
   widget (spec 008 — approved + implemented 2026-10-06) · WF-G7
   Breaking news banner (proposed 2026-10-06 by spec 012 —
@@ -258,3 +259,34 @@ as accordion rows.
   whether specs 011/012 + Amendment 2 promote first or bundle
   with 013 is the owner's call at approval. Nothing on the
   live site changes until Tristen approves.
+- **2026-10-06** — REVISION PROPOSED (spec
+  015-page-bottom-spacing) — **PENDING OWNER APPROVAL —
+  NOT approved, NOT implemented**: WF-G2 gains a
+  **page-foot rhythm**, the bottom counterpart to spec
+  003's page-head rhythm, after Tristen reported "a lot
+  of vertical empty space at the bottom of the pages
+  too." Measured from the shipped styles.v28.css, every
+  page ending is composed of three shared values — last
+  section padding-bottom 76px, CTA band padding 76px
+  top/bottom, footer padding-top 56px — totalling 284px
+  of pure padding around the band on the six band pages
+  and a single 132px void on Contact (the same void
+  size spec 003 fixed at page heads; the article's own
+  24px is already tight, its excess is the shared
+  stack). Proposed rhythm: last section **48px**, band
+  **56px / 56px**, footer top **40px** (≤820px:
+  40 / 44 / 40) — band pages end at 200px of padding,
+  Contact at 88px, roughly one third less air, with the
+  band's and footer's internal spacing, all mid-page
+  spacing, spec 003's head values, and spec 011
+  Amendment 2's signals-top values explicitly
+  unchanged. WF-G3 and WF-G4 carry the new values as
+  captions; WF-01 (band ending) and WF-06 (no-band
+  ending) bottoms are redrawn with before → after
+  captions; the remaining page frames inherit through
+  the global frames. Implementation is gated on
+  Tristen's approval (spec 015 tasks.md T001), lands on
+  staging as the next versioned stylesheet, and is
+  verified by computed measurement on all seven page
+  types. Nothing on the live site changes until
+  Tristen approves.
