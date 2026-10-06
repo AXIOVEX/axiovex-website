@@ -137,8 +137,8 @@ body {
 
 /* ---------- Breadcrumb (centered, inside page heads) ---------- */
 .crumb { color: var(--faint); font-size: 13.5px; margin-bottom: 18px; }
-.crumb a { color: var(--muted); text-decoration: none; }
-.crumb a:hover { color: var(--cyan); }
+.crumb a { color: var(--muted); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+.crumb a:hover { color: var(--cyan); text-decoration-color: var(--cyan); }
 .crumb [aria-current] { color: var(--ink); font-weight: 600; }
 
 /* Section heads that carry an h1 (sub-pages) must not inherit the hero h1 cap */
