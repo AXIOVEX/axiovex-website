@@ -93,10 +93,11 @@ manifest's "Updated" date advanced.
     lost at write time), no copy changed. The jobs-FAQ "partner with
     educators…" awareness item was narrowed in the same pass
     ("partner with" → "work with", visible + JSON-LD).
-  - **R-1d (design decision)**: breadcrumb links are distinguished by
-    color alone (axe `link-in-text-block`); the owner approved the
-    underline remedy 2026-10-06 and the fix ships in the R-1c/R-1d
-    closure pass (styles.v32.css) — closure record follows at
-    promotion.
+  - **R-1d (design decision)** — CLOSED 2026-10-06: the owner
+    approved the underline remedy and it shipped in styles.v32.css
+    (breadcrumb links underlined — `.crumb a`, `var(--line)`
+    decoration, 3px offset; promotion `1c2c1ee`). Axe before/after on
+    the local build: `link-in-text-block` gone from every tested page
+    (privacy, disclaimer, article, home), no new findings.
   No compliance claim may be strengthened on the basis of this audit;
   website hygiene is not organizational compliance (constitution §I).
