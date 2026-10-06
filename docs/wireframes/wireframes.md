@@ -21,7 +21,9 @@ This file is the index, the gate rule, and the revision log.
   (Trends & outlook section proposed 2026-10-06 by spec 011 —
   PENDING OWNER APPROVAL; amended 2026-10-06 by the spec 011
   amendment — owner-directed: ticker to the top of the page,
-  condensed page top, sparkline window-% annotations)
+  condensed page top, sparkline window-% annotations;
+  Highlights region + expandable Detail region proposed
+  2026-10-06 by spec 013 — PENDING OWNER APPROVAL)
 - WF-12 Signals widget (added 2026-10-06, spec 008 — approved +
   implemented 2026-10-06)
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
@@ -206,3 +208,53 @@ as accordion rows.
   ▲ +0.0%. Implementation is spec 011 tasks T009–T010, on staging
   after spec 012's in-flight build (shared generator/stylesheet
   chain), promoted under spec 010's rules.
+- **2026-10-06** — REVISION PROPOSED (spec
+  013-signals-highlights-detail) — **PENDING OWNER APPROVAL —
+  NOT approved, NOT implemented**: WF-11 gains two regions.
+  (1) A **Highlights region** directly under the page head,
+  ahead of the Pulse band: a **generated insights summary** —
+  2–4 sentences composed by the build from fixed templates
+  filled only with values computed from the same committed
+  data the boards show (Pulse levels + deltas, window moves,
+  each outlook board's top movers, the education headline),
+  every clause traceable to a figure on the page, observational
+  language only (no causes, no advice, no forecast language
+  beyond the agencies' attributed projections), a sentence
+  whose inputs are missing omitted rather than approximated,
+  under a provenance line ("Generated at build time from the
+  data on this page · …"). This is not a summary of the news
+  lanes — spec 004 FR-008's bar on auto-generated summaries of
+  ingested news items stands; the summary speaks only about
+  Axiovex's own ingested statistics (reconciliation in spec
+  013 FR-002). Below the summary, **highlight cards**: the
+  four Pulse headline stats, one top-riser + one top-faller
+  card per outlook dataset present, and the education headline
+  figure when verified data exists — each card source- and
+  vintage-labeled, and absent when its data is absent (no
+  placeholders). (2) An expandable **Detail region** ("The
+  full picture") between Trends & outlook and the lanes —
+  collapsed by default (its whole visible footprint while
+  closed is one header row with a real button, aria-expanded,
+  keyboard-operable), its content server-rendered into the DOM
+  so it stays crawlable and works without JavaScript. Inside:
+  the full 12-month Pulse value tables (missing months shown
+  as gaps); the full BLS Employment Projections tables (every
+  committed row, % + numeric change); the **Michigan MCDA
+  occupation projections** — all 36 verified rows from the
+  workforce study's September edition, grouped statewide
+  2024–34 / Detroit Metro 2022–32, never blended, labeled
+  "via the Axiovex workforce study, September edition" with
+  the direct-source caveat (the pending direct DTMB read
+  supersedes the transcription when it lands); the
+  **education-to-career figures** (graduation, dropout,
+  teacher pipeline, pupil membership — the verified set only,
+  estimates labeled as the source labels them; postsecondary
+  completions by field absent until verified); and a link
+  block to the current monthly workforce article + the study
+  edition. Clean-page constraints: no new colors or type
+  styles, the condensed Amendment-2 top is untouched, mobile
+  390 stacking drawn. Spec 013's detail region is the natural
+  home for the pending Michigan/education restorations;
+  whether specs 011/012 + Amendment 2 promote first or bundle
+  with 013 is the owner's call at approval. Nothing on the
+  live site changes until Tristen approves.
