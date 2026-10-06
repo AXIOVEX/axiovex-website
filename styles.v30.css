@@ -1122,3 +1122,68 @@ h2 {
   .breaking-banner { font-size: 14px; }
   .breaking-dismiss { top: 10px; transform: none; }
 }
+
+/* ---------- v30 (2026-10-06, spec 013): Signals Highlights +
+   Detail regions. Existing tokens only (FR-008): the highlight
+   cards are .pulse-tile cards, the kickers/notes/rows reuse
+   .board-kicker / .board-note / .proj-* / .edu-*, the detail
+   table follows .trend-table — no new colors or type styles.
+   The disclosure renders expanded in markup (FR-004); the
+   script emitted with the region applies the collapsed state
+   when JavaScript is present, so .detail-body carries no
+   display rule of its own (the hidden attribute must win). */
+.highlights { text-align: left; margin-bottom: 36px; }
+.hl-kicker {
+  color: var(--cyan); font-size: 12px; letter-spacing: 0.14em; font-weight: 700;
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.hl-summary { font-size: 15px; line-height: 1.65; }
+.hl-prov { color: var(--faint); font-size: 12.5px; line-height: 1.6; margin-top: 8px; }
+.hl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+.hl-value { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin-top: 6px; }
+.hl-name { font-size: 17px; font-weight: 700; line-height: 1.35; margin-top: 6px; }
+.hl-card .pulse-delta { margin-top: 4px; }
+@media (max-width: 900px) {
+  .hl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 420px) {
+  .hl-grid { grid-template-columns: 1fr; }
+}
+
+.detail { margin-top: 44px; text-align: left; }
+.detail-head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px 16px; flex-wrap: wrap;
+  border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px;
+}
+.detail-title { font-size: 15.5px; font-weight: 700; }
+.detail-sub { color: var(--faint); font-size: 13px; }
+.detail-toggle {
+  background: transparent; border: 1px solid var(--line); border-radius: 6px;
+  color: var(--ink); font: inherit; font-size: 13.5px; font-weight: 600;
+  padding: 9px 14px; cursor: pointer; white-space: nowrap;
+}
+.detail-toggle:hover { border-color: var(--cyan); }
+.detail-toggle:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.detail-body { margin-top: 6px; }
+.detail-block { margin-top: 26px; }
+.detail-block .board-kicker { margin-top: 0; }
+.detail-scroll { overflow-x: auto; margin-top: 8px; }
+.detail-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 14px; }
+.detail-table th {
+  color: var(--faint); font-size: 11px; letter-spacing: 0.1em; font-weight: 700;
+  text-transform: uppercase; text-align: left; padding: 0 8px 6px 0;
+}
+.detail-table td { padding: 7px 8px 7px 0; border-top: 1px solid var(--line); }
+.detail-table .dt-num { text-align: right; }
+.detail-table th.dt-num { padding-right: 0; padding-left: 8px; }
+.detail-table td.dt-num { padding-right: 0; padding-left: 8px; }
+.detail-table tr.dt-latest td { font-weight: 700; }
+.detail-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
+.detail-link { font-size: 14.5px; line-height: 1.5; padding: 6px 0; }
+.detail-link a { color: var(--cyan); text-decoration: none; }
+.detail-link a:hover { text-decoration: underline; }
+@media (max-width: 640px) {
+  .detail-cols { grid-template-columns: 1fr; }
+  .detail-toggle { width: 100%; }
+}
