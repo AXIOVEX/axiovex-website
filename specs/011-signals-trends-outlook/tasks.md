@@ -133,18 +133,41 @@ implementation under way on the staging branch.**
   build with `data/outlook.json` renamed (boards absent, page
   intact), regression check (Pulse band, lanes, home, widget
   unchanged apart from the stylesheet repoint).
-- [ ] T007 **Promote + production verification (FR-007,
+- [x] T007 **Promote + production verification (FR-007,
   FR-008)**: merge `staging` → `main` under spec 010's hazard
   rule (stop if staging-only `robots.txt`/`_headers` appear in
   the diff); repeat the figure audit + spot checks against the
   served production page; confirm the SEO/AEO baseline holds
   on the next monitoring cycle (AEO 100 / Seobility 90).
-- [ ] T008 **Close-out**: mark the `docs/wireframes/wireframes.md`
+  **DONE 2026-10-06**: promoted with spec 012 in merge
+  `89c65c1` under spec 010 FR-004 — the pre-merge diff was
+  reviewed first, and staging's `robots.txt`/`_headers` were
+  excluded from the merge result (proof: post-merge
+  `git diff origin/main..HEAD -- robots.txt _headers` is
+  empty; production `robots.txt` remains the Allow version
+  and no `X-Robots-Tag` is served on the apex). Production
+  verification against the served https://axiovexsystems.com/signals/:
+  styles.v28.css; ticker directly under the header; sparkline
+  window % (+0.4 / +2.0 / −3.0 / +0.0); BLS board (Nurse
+  practitioners +41.0%); MCDA group (Specialized Design
+  Services +52.0%, Land Subdivision −35.5%); education block
+  (84.01%, 1,419,859); Pulse values 586.7k / 5.0% / 4.85M —
+  every figure matched `data/outlook.json` / `data/signals.json`
+  (audit clean); all five lanes intact. The SEO/AEO baseline
+  confirmation rides the next scheduled monitoring cycle.
+- [x] T008 **Close-out**: mark the `docs/wireframes/wireframes.md`
   revision-log entry APPROVED + implemented (with the
   implementation commit), sync the review copy at
   `~/workspace/your_files/axiovex-wireframes/`, record the
   change in this spec's status line, and check off these tasks
   with the completion record.
+  **DONE 2026-10-06**: wireframes.md log entries for spec 011
+  + Amendment 2 marked APPROVED · IMPLEMENTED + LIVE;
+  wireframes.html WF-11 labels updated; review copy at
+  `~/workspace/your_files/axiovex-wireframes/` re-synced
+  byte-identical (cmp); spec.md status line set to
+  implemented and live; monitoring state `website_commit`
+  advanced to the promotion merge `89c65c1`.
 
 ## Amendment 2 (owner-directed 2026-10-06 — see spec.md)
 

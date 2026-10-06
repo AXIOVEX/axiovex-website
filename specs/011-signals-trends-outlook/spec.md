@@ -6,11 +6,18 @@ staging flow in spec 010)
 
 **Created**: 2026-10-06
 
-**Status**: **Implemented on staging — pending staging-URL
-verification + promotion.** (Approved 2026-10-06, tasks.md
-T001; amended at T002 — see Amendment. T002–T006 complete
-2026-10-06 with local verification; the staging-URL pass and
-T007 promotion remain — see tasks.md.)**
+**Status**: **Implemented and live 2026-10-06.** Approved
+2026-10-06 (T001); implemented on staging (T002–T006;
+Amendment 2 as T009–T010; the Michigan + education sections
+restored after browser verification — see the Restoration
+section); promoted to production in merge `89c65c1` under
+spec 010's FR-004 rule and production-verified the same day
+(T007/T008): /signals/ serves styles.v28.css with the ticker
+at the page top, the condensed page top, sparkline window-%
+annotations, the BLS 2025–35 outlook board, the MCDA
+Michigan industry group, and the CEPI education block —
+figure audit against `data/signals.json` +
+`data/outlook.json` clean.
 
 **Direction (Tristen, 2026-10-06)**: "also update the signals page
 to include education analytics and workforce predictions - whats
@@ -391,6 +398,12 @@ computed, never hand-typed (FR-005c); a series with fewer than
 two non-null points renders "—", matching the delta behavior.
 
 The sources & method note is unchanged by this amendment.
+
+**Ticker placement decision (owner, 2026-10-06 13:30 EDT):**
+the ticker stays static at the top of /signals/ and
+Signals-only — sticky-on-scroll and site-wide placements
+were considered and declined; the floating widget remains
+the site-wide carrier.
 
 **Status (staging):** implemented on the staging branch
 2026-10-06 (commit `cb00d9c`; tasks T009–T010, verification
