@@ -18,7 +18,7 @@ Legend: [x] done · [ ] open · [OWNER] needs Tristen's decision
 - [x] T008 SMS share option restored touch-only (95a70bd) — layout since revised by spec 002
 
 ## Phase 4 — Monitoring
-- [x] T009 Weekly + on-push SEO/AEO checks against baseline (AEO 100, Seobility 91)
+- [x] T009 Weekly + on-push SEO/AEO checks against baseline (AEO 100, Seobility 90) — baseline amended 2026-10-06: Seobility reset 91 → 90 at Tristen's direction (official readings 90 since 2026-10-05; see spec.md FR-008 note)
 
 ## Phase 5 — SDD adoption (2026-10-05)
 - [x] T010 spec-kit init (copilot, speckit 1.0.10) + AEE and evaluator extensions installed

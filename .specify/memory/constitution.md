@@ -44,5 +44,7 @@ Ratified: 2026-10-05 (codifies the standing rules the site was built under).
 - Every release is verified live (HTTP status, content, rendering) before
   it is reported done.
 - SEO/AEO health is monitored against the recorded baseline (AEO 100/100,
-  Seobility 91); safe technical fixes may auto-apply — marketing claims,
+  Seobility 90); safe technical fixes may auto-apply — marketing claims,
   founder wording, and branding never change to satisfy a checker.
+  (Baseline reset 2026-10-06 at Tristen's direction: Seobility 91 → 90;
+  official readings have been 90 since 2026-10-05.)

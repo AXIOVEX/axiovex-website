@@ -65,8 +65,11 @@ manifest's "Updated" date advanced.
   superintelligence (ANI → AGI → ASI ladder) in the FAQ (visible +
   FAQPage JSON-LD), llms.txt, and the terminology article.
 - **FR-008**: SEO/AEO health monitored weekly + on push against baseline
-  (AEO 100/100, Seobility 91) per the monitoring runbook; safe technical
+  (AEO 100/100, Seobility 90) per the monitoring runbook; safe technical
   fixes may auto-apply; claims/branding changes always surface to Tristen.
+  (Baseline reset, 2026-10-06: the Seobility baseline was formally reset
+  from 91 to 90 at Tristen's direction — the official readings have been
+  90 since 2026-10-05, including the fresh 2026-10-06 rescan.)
 - **FR-009**: No contact form and no invented proof anywhere on the site;
   contact routes are the published mailboxes (start@, legal@).
 
