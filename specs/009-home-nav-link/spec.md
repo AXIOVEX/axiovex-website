@@ -6,10 +6,9 @@ through the normal flow)
 
 **Created**: 2026-10-06
 
-**Status**: **Proposed — PENDING OWNER APPROVAL.** The wireframes
-(WF-G1 revised, WF-01 nav mock aligned) are drawn and marked
-pending; nothing is implemented. Implementation starts only when
-Tristen approves (tasks.md T001).
+**Status**: **Implemented and live 2026-10-06** (implementation
+commit `11873b1`). Approved by Tristen 2026-10-06 11:22 EDT —
+"Approve spec 009 wireframes — implement it" (tasks.md T001).
 
 **Direction (Tristen, 2026-10-06)**: "show home button on the main
 page too, not just when leaving the page. clicking home from the
@@ -40,7 +39,8 @@ nav is item-for-item identical to the subpage nav.
   explicitly — variant (a) the home page nav with Home first,
   shown current (cyan, `aria-current="page"`), in the desktop row
   and first in the hamburger panel list; variant (b) the subpage
-  nav, unchanged. Labeled "spec 009 — PENDING OWNER APPROVAL".
+  nav, unchanged. Labeled "spec 009 — APPROVED + IMPLEMENTED
+  2026-10-06" at close-out.
 - **WF-01** (nav mock aligned): the home frame's drawn nav gains
   Home first, matching variant (a). No other frame changes —
   WF-02 / WF-07 draw only the collapsed header (logo + hamburger),

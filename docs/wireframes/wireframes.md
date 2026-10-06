@@ -24,7 +24,7 @@ This file is the index, the gate rule, and the revision log.
 - WF-09 Blog / article / privacy — tablet
 - Global components: WF-G1 nav (Signals link added by spec 008 —
   approved + implemented 2026-10-06; Home as the home page's first
-  nav item proposed by spec 009 — PENDING OWNER APPROVAL) · WF-G2 strata bar · WF-G3 CTA
+  nav item added by spec 009 — approved + implemented 2026-10-06) · WF-G2 strata bar · WF-G3 CTA
   band · WF-G4 footer · WF-G5 service card · WF-G6 Signals floating
   widget (spec 008 — approved + implemented 2026-10-06)
 
@@ -104,8 +104,9 @@ as accordion rows.
   `signals-widget.v1.css` / `signals-widget.v1.js`, site stylesheet
   bumped to `styles.v25.css` — and verified live (Playwright
   desktop/tablet/mobile + curl) on 2026-10-06.
-- **2026-10-06** — REVISION PROPOSED (spec 009-home-nav-link) —
-  **PENDING OWNER APPROVAL — NOT approved, NOT implemented**: WF-G1
+- **2026-10-06** — REVISION (spec 009-home-nav-link) —
+  **APPROVED 2026-10-06 · IMPLEMENTED + LIVE (commit 11873b1)**:
+  WF-G1
   gains an explicit home-page variant (a): the home page's nav adds
   **Home** (`href="/"`, `aria-current="page"`) as the first item of
   both the desktop row and the hamburger panel, shown current —
@@ -115,5 +116,6 @@ as accordion rows.
   unchanged, as are all other links, the mobile header (logo +
   hamburger), and the stylesheet. From the home page, clicking Home
   is a plain navigation to `/` — reload at the top; no fragment, no
-  JavaScript. Nothing on the live site changes until Tristen
-  approves.
+  JavaScript. Approved by Tristen 2026-10-06 (11:22 EDT) and
+  implemented the same day — commit 11873b1; live-verified (served
+  `/` carries Home first in both menus, with `aria-current`).
