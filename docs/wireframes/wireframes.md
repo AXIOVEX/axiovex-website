@@ -575,3 +575,24 @@ as accordion rows.
   link is on every page, and the sitemap lists 9 URLs.
   Spec 001 T017 is CLOSED (Disclaimer live; Terms
   deferred on the record).
+- **2026-10-06** — AMENDMENT 1 (spec 016-disclaimer-page):
+  legal cross-linking, owner-directed (Tristen,
+  2026-10-06 — tie the Disclaimer and Privacy pages
+  together with links placed per industry standard:
+  footer legal row, mutual cross-references between
+  the two legal pages, and a point-of-use link where
+  readers rely on republished data). Three legs:
+  (1) the Disclaimer's §7 Privacy Policy hyperlink
+  shipped with the base page — verify-only, re-verified
+  live on production; (2) **WF-05 Privacy** gains a
+  closing §13 "Our Disclaimer" cross-reference at the
+  end of the prose, after §11 (Changes to this policy)
+  and §12 (Contact us) — addition only, no existing
+  privacy text altered, heading order unchanged
+  otherwise; (3) **WF-11 Signals**: the sources note
+  at the foot of the page gains a closing point-of-use
+  sentence, "See our Disclaimer.", linking
+  /disclaimer/. No layout change, no new component,
+  no stylesheet change — link placement only, inside
+  the approved WF-05 / WF-11 / WF-14 patterns.
+  Implemented on staging; promoted per spec 010.
