@@ -596,3 +596,18 @@ as accordion rows.
   no stylesheet change — link placement only, inside
   the approved WF-05 / WF-11 / WF-14 patterns.
   Implemented on staging; promoted per spec 010.
+- **2026-10-06** — CLOSEOUT (spec 016 Amendment 1):
+  the cross-linking is **IMPLEMENTED + LIVE**.
+  Promoted staging → main (fast-forward; FR-004
+  guard restoration `e53c0d1` — production
+  `robots.txt` and `_headers` proofs empty). Live on
+  production: the Privacy page closes with §13 "Our
+  Disclaimer" pointing to /disclaimer/, the /signals/
+  sources note ends with the "See our Disclaimer."
+  point-of-use link, and the Disclaimer's §7 Privacy
+  Policy hyperlink is re-verified — the two legal
+  pages now reference each other, with the WF-G4
+  footer legal row on every page. Addition-only
+  diffs; axe finding sets unchanged from baseline
+  (the signals link uses the existing `.inline-link`
+  style — no stylesheet change).
