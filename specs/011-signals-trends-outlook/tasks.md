@@ -24,7 +24,22 @@ implementation under way on the staging branch.**
 
 ## Source verification (starts only after T001)
 
-- [ ] T002 **Verify the three sources (plan.md Step 0)**:
+- [x] T002 **Verify the three sources (plan.md Step 0)** —
+  **DONE 2026-10-06, recorded in `sources.md`**: (1) U.S. BLS
+  Employment Projections VERIFIED at the **2025–35** vintage
+  (released Aug 27, 2026; Tables 1.3 + 1.5 read on bls.gov).
+  (2) Michigan DTMB industry projections — publication and
+  2024–34 horizon verified, but the industry table could not
+  be read on the source through the available channels
+  (michigan.gov fetch denied; secondary coverage not used) →
+  **Michigan group DROPPED for this implementation** via the
+  spec.md Amendment. (3) Education indicators — CEPI grad rate
+  published only in rounded form in the MDE release;
+  MISchoolData tables and IPEDS files not readable at dataset
+  precision through the available channels → **education
+  block DROPPED for this implementation** via the same
+  Amendment. Both renderers ship and render their sections
+  automatically if a future verified refresh adds the data.
   confirm and record in
   `specs/011-signals-trends-outlook/sources.md` — (1) U.S. BLS
   Employment Projections: latest published vintage (expected
@@ -41,15 +56,15 @@ implementation under way on the staging branch.**
 
 ## Implementation (starts only after T001 + T002)
 
-- [ ] T003 **Build `data/outlook.json` (FR-003, FR-004,
-  FR-006)**: transcribe the verified figures verbatim (national
-  rise/fall occupations, Michigan rise/fall industries,
-  education indicator histories), with per-section agency /
-  horizon / vintage / sourceUrl / retrievedOn metadata.
-  Second-read check of every figure against the source tables
-  before commit.
-- [ ] T004 **Generator + template (FR-001, FR-002, FR-003,
-  FR-004, FR-006, FR-007)**: in `scripts/build-site.mjs` —
+- [x] T003 **Build `data/outlook.json` (FR-003, FR-004,
+  FR-006)** — **DONE 2026-10-06**: BLS section only (per the
+  T002 outcome): top-5 fastest-growing + top-5
+  fastest-declining occupations, 2025–35, with agency /
+  agencyShort / publication / vintage / horizon / sourceUrl /
+  decliningTableUrl / retrievedOn metadata. Second-read check
+  of all 10 figures against `sources.md` PASSED before commit.
+- [x] T004 **Generator + template (FR-001, FR-002, FR-003,
+  FR-004, FR-006, FR-007)** — **DONE 2026-10-06**: in `scripts/build-site.mjs` —
   `trendDeltas()` (MoM + window from trend arrays, "—" when
   fewer than two non-null points), `tickerHtml()`,
   `trendBoardHtml()` (reusing `sparkline()`, "Computed from
@@ -60,15 +75,35 @@ implementation under way on the staging branch.**
   `{{PULSE_HTML}}` and `{{LANES_HTML}}`; append the sources-note
   attribution sentences (plan.md draft, narrowed if needed);
   meta description only within the ~198-char discipline.
-- [ ] T005 **Stylesheet bump (FR-008)**: new component styles
+- [x] T005 **Stylesheet bump (FR-008)** — **DONE 2026-10-06**: new component styles
   (tape animation + hover/focus pause + reduced-motion static
   state, boards, stacked mobile rows) in `styles.v26.css`;
   repoint every page/template; remove `styles.v25.css`.
 
 ## Verification + promotion
 
-- [ ] T006 **Stage + verify (FR-008)**: merge the work to the
-  `staging` branch; verify at staging.axiovexsystems.com —
+- [x] T006 **Stage + verify (FR-008)** — **DONE LOCALLY
+  2026-10-06; STAGING-URL PASS PENDING.** staging.axiovexsystems.com
+  is not live yet (the staging Pages project is a separate
+  task), so verification ran against the worktree build served
+  locally; the same checklist must be re-run against the
+  staging URL once the project exists, before T007. Results:
+  figure audit PASSED (every trend-board value/delta
+  recomputed independently from `data/signals.json`; tape items
+  match the board in both sequences; all 10 outlook rows match
+  `data/outlook.json`, which matches `sources.md`); Playwright
+  at 1440 / 834 / 390 PASSED (section present in drawn order,
+  no horizontal overflow, tape `aria-hidden` with CSS
+  animation, hover pauses it, `prefers-reduced-motion` renders
+  it static with the duplicate sequence hidden, mobile rows
+  stack as drawn); resilience build with `data/outlook.json`
+  renamed PASSED (build exit 0, outlook board absent, page
+  intact); dormant Michigan-group + education renderers
+  exercised against a local fixture (never committed) and
+  render correctly; regression PASSED (home page and a blog
+  article byte-identical after a full build except the
+  stylesheet repoint; Pulse band, lanes, widget untouched).
+  Original staging-URL checklist, for the re-run:
   figure audit (every rendered number recomputed/matched
   against `data/signals.json`, `data/outlook.json`, and the
   sources.md tables; zero mismatches), tape/board equivalence,

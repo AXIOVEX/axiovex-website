@@ -967,3 +967,85 @@ h2 {
 .ps-stat { color: var(--muted); font-size: 14px; }
 .ps-stat b { color: var(--ink); font-size: 15px; font-weight: 700; }
 .ps-dot { color: var(--faint); }
+
+/* ---------- v26 (2026-10-06, spec 011): Trends & outlook on /signals/ ---------- */
+.trends-head { text-align: center; max-width: 760px; margin: 58px auto 0; }
+.trends-frame { color: var(--muted); font-size: 14.5px; line-height: 1.6; margin-top: 8px; }
+
+.tape {
+  border: 1px solid var(--line); border-radius: 6px;
+  padding: 10px 14px; margin-top: 26px; overflow: hidden;
+  text-align: left;
+}
+.tape-track {
+  display: flex; width: max-content;
+  animation: tape-scroll 30s linear infinite;
+}
+.tape:hover .tape-track, .tape:focus-within .tape-track { animation-play-state: paused; }
+.tape-seq {
+  display: inline-flex; align-items: baseline; white-space: nowrap;
+  font-size: 13px; color: var(--muted); letter-spacing: 0.04em;
+}
+.tape-seq b { color: var(--ink); font-weight: 700; }
+.tape-delta { color: var(--faint); }
+.tape-sep { color: var(--faint); padding: 0 10px; }
+@keyframes tape-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tape { overflow: visible; }
+  .tape-track { animation: none; width: auto; }
+  .tape-seq { white-space: normal; flex-wrap: wrap; }
+  .tape-seq + .tape-seq { display: none; }
+}
+
+.trend-board { margin-top: 30px; text-align: left; }
+.trend-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.trend-table th {
+  color: var(--faint); font-size: 11px; letter-spacing: 0.1em; font-weight: 700;
+  text-transform: uppercase; text-align: left; padding: 0 8px 6px 0;
+}
+.trend-table td { padding: 10px 8px 10px 0; border-top: 1px solid var(--line); vertical-align: middle; }
+.tb-series { font-size: 14.5px; }
+.tb-latest { font-size: 15px; font-weight: 700; white-space: nowrap; }
+.tb-delta { color: var(--faint); font-size: 13.5px; white-space: nowrap; }
+.tb-spark .spark { width: 112px; height: 24px; margin-top: 0; }
+.board-note { color: var(--faint); font-size: 12.5px; line-height: 1.6; margin-top: 10px; }
+
+.outlook-board, .education-block { margin-top: 36px; text-align: left; }
+.board-kicker {
+  color: var(--cyan); font-size: 12px; letter-spacing: 0.14em; font-weight: 700;
+  margin: 24px 0 6px;
+}
+.outlook-board .board-kicker:first-child, .education-block .board-kicker:first-child { margin-top: 0; }
+.board-sub {
+  color: var(--faint); font-size: 11.5px; letter-spacing: 0.1em; font-weight: 700;
+  text-transform: uppercase; margin: 14px 0 2px;
+}
+.proj-list { list-style: none; }
+.proj-row { padding: 6px 0; font-size: 14.5px; line-height: 1.5; }
+.proj-meta, .proj-jobs { color: var(--faint); font-size: 13px; }
+.proj-pct { font-weight: 700; }
+.edu-row { padding: 6px 0; font-size: 14.5px; line-height: 1.5; }
+.edu-vintage, .edu-delta { color: var(--faint); font-size: 13px; }
+.edu-source { color: var(--cyan); font-size: 11.5px; letter-spacing: 0.12em; font-weight: 700; }
+
+@media (max-width: 640px) {
+  .trend-table thead { display: none; }
+  .trend-table, .trend-table tbody, .trend-table tr, .trend-table td { display: block; }
+  .trend-table tr {
+    display: grid; padding: 10px 0; border-top: 1px solid var(--line);
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "series latest" "mom win" "spark spark";
+  }
+  .trend-table td { border-top: 0; padding: 2px 0; }
+  .tb-series { grid-area: series; }
+  .tb-latest { grid-area: latest; text-align: right; }
+  .tb-mom { grid-area: mom; }
+  .tb-win { grid-area: win; text-align: right; }
+  .tb-mom::before { content: "Mo-Mo "; color: var(--faint); }
+  .tb-win::before { content: "12-mo "; color: var(--faint); }
+  .tb-spark { grid-area: spark; }
+  .tb-spark .spark { width: 100%; height: 24px; }
+}

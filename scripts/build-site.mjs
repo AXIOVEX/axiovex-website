@@ -466,6 +466,225 @@ function pulseStripHtml(pulse) {
     '          </div>\n';
 }
 
+/* ================= Trends & outlook (spec 011) =================
+   Renders into /signals/ between the Pulse band and the lanes.
+   Ticker + trend board compute from the same data/signals.json
+   snapshot (deterministic arithmetic on the ingested series,
+   FR-002); the outlook board and education block render from the
+   committed data/outlook.json (FR-003/FR-004), whose figures are
+   transcribed from the verified sources recorded in
+   specs/011-signals-trends-outlook/sources.md. A missing or
+   unreadable outlook file — or a missing section in it — renders
+   no board and never fails the build (FR-005e). */
+function loadOutlook() {
+  const p = path.join(ROOT, 'data', 'outlook.json');
+  if (!existsSync(p)) return null;
+  try { return JSON.parse(readFileSync(p, 'utf8')); }
+  catch { console.warn('signals: data/outlook.json unreadable — outlook boards omitted'); return null; }
+}
+
+/* MoM = last two non-null points; window = first vs last non-null
+   point. Returns raw differences in the series' own units, or
+   null when fewer than two non-null points exist (the board then
+   renders "—", never a fabricated 0). */
+function trendDeltas(trend) {
+  const pts = (trend || []).filter(p => p.v !== null && p.v !== undefined);
+  if (pts.length < 2) return null;
+  return {
+    mom: pts[pts.length - 1].v - pts[pts.length - 2].v,
+    window: pts[pts.length - 1].v - pts[0].v,
+  };
+}
+
+/* Signed delta in the tile's own display conventions: percent
+   series in pts, thousand-unit series in k, and raw-count series
+   (labor force, values in persons) converted to k. Direction is
+   glyph + signed figure, neutral treatment — no red/green. */
+function deltaHtml(tile, diff, upper) {
+  const glyph = diff > 0 ? '&#9650;' : diff < 0 ? '&#9660;' : '&#9644;';
+  const sign = diff > 0 ? '+' : diff < 0 ? '&minus;' : '';
+  const pts = /%$/.test(tile.display || '');
+  const mag = Math.abs(diff) >= 10000 ? Math.abs(diff) / 1000 : Math.abs(diff);
+  const unit = pts ? ' pts' : 'k';
+  return glyph + ' ' + sign + mag.toFixed(1) + (upper ? unit.toUpperCase() : unit);
+}
+
+const TAPE_LABELS = {
+  SMU26000003000000001: 'MI MFG EMPLOYMENT',
+  LASST260000000000003: 'MI UNEMPLOYMENT',
+  LASST260000000000006: 'MI LABOR FORCE',
+  SMU26000000000000001: 'MI NONFARM',
+};
+/* FR-001: the tape duplicates trend-board content only (latest +
+   MoM per series), is aria-hidden, and its motion is pure CSS
+   (styles: .tape-track animation, paused on hover/focus-within,
+   static under prefers-reduced-motion). The sequence is emitted
+   twice for the loop. */
+function tickerHtml(pulse) {
+  if (!pulse || !pulse.tiles || !pulse.tiles.length) return '';
+  const items = pulse.tiles.map(t => {
+    const name = TAPE_LABELS[t.id] || esc(String(t.label || '').toUpperCase());
+    const val = esc(String(t.display || '').toUpperCase());
+    const d = trendDeltas(t.trend);
+    if (!d) return '<span class="tape-item">' + name + ' <b>' + val + '</b></span>';
+    const suffix = t.id === 'SMU26000003000000001' ? ' MO-MO' : '';
+    return '<span class="tape-item">' + name + ' <b>' + val + '</b> ' +
+      '<span class="tape-delta">' + deltaHtml(t, d.mom, true) + suffix + '</span></span>';
+  });
+  const seq = '<span class="tape-seq">' +
+    items.join('<span class="tape-sep">&middot;</span>') +
+    '<span class="tape-sep">&middot;</span></span>';
+  return '        <div class="tape" aria-hidden="true">\n' +
+    '          <div class="tape-track">' + seq + seq + '</div>\n        </div>';
+}
+
+function trendBoardHtml(pulse) {
+  if (!pulse || !pulse.tiles || !pulse.tiles.length) return '';
+  const rows = pulse.tiles.map(t => {
+    const d = trendDeltas(t.trend);
+    const mom = d ? deltaHtml(t, d.mom, false) : '&mdash;';
+    const win = d ? deltaHtml(t, d.window, false) : '&mdash;';
+    return '            <tr><td class="tb-series">' + esc(t.label) + '</td>' +
+      '<td class="tb-latest">' + esc(t.display) + '</td>' +
+      '<td class="tb-delta tb-mom">' + mom + '</td>' +
+      '<td class="tb-delta tb-win">' + win + '</td>' +
+      '<td class="tb-spark">' + sparkline(t.trend) + '</td></tr>';
+  }).join('\n');
+  return '        <div class="trend-board">\n' +
+    '          <table class="trend-table">\n' +
+    '            <caption class="visually-hidden">Michigan Pulse series: latest value, month-over-month change, and change across the 12-month window</caption>\n' +
+    '            <thead><tr><th scope="col">Series</th><th scope="col">Latest &middot; ' +
+    esc(shortMonth(pulse.referenceMonth)) + '</th><th scope="col">Mo-Mo</th>' +
+    '<th scope="col">12-mo window</th><th scope="col">Trend</th></tr></thead>\n' +
+    '            <tbody>\n' + rows + '\n            </tbody>\n          </table>\n' +
+    '          <p class="board-note">Computed from BLS series — latest values verbatim from the snapshot; both deltas are arithmetic on each series&rsquo; own monthly history. A missing month breaks the trend line; it is never interpolated.</p>\n' +
+    '        </div>';
+}
+
+function trendsHeadHtml() {
+  return '        <div class="trends-head">\n' +
+    '          <p class="eyebrow">Trends &amp; outlook</p>\n' +
+    '          <h2>Where it&rsquo;s heading.</h2>\n' +
+    '          <p class="trends-frame">The Pulse series as a trend board, and published projections for what comes next. Every forward-looking figure belongs to the agency that published it — Axiovex publishes no forecasts of its own.</p>\n' +
+    '        </div>';
+}
+
+/* One projections row. Figures come from data/outlook.json only;
+   the horizon suffix follows the drawn form (jobs + horizon when
+   the table publishes a numeric change, horizon alone when it
+   does not). */
+function projRow(r, horizon) {
+  const pct = (r.pctChange > 0 ? '+' : r.pctChange < 0 ? '&minus;' : '') +
+    Math.abs(r.pctChange).toFixed(1) + '%';
+  const tail = typeof r.jobsChange === 'number'
+    ? (r.jobsChange > 0 ? '+' : r.jobsChange < 0 ? '&minus;' : '') +
+      Math.abs(r.jobsChange).toLocaleString('en-US') + ' jobs, ' + esc(horizon)
+    : esc(horizon);
+  return '          <li class="proj-row"><span class="proj-name">' + esc(r.name) + '</span> ' +
+    '<span class="proj-meta">&middot; projected</span> <b class="proj-pct">' + pct + '</b> ' +
+    '<span class="proj-jobs">&middot; ' + tail + '</span></li>';
+}
+
+function projGroupHtml(sec, kind, itemKind) {
+  const rows = Array.isArray(sec[kind]) ? sec[kind] : [];
+  if (!rows.length) return '';
+  const head = (kind === 'rise'
+    ? 'On the rise — fastest-growing ' + itemKind
+    : 'Falling — fastest-declining ' + itemKind) +
+    ' · ' + (sec.agencyShort || sec.agency || '') + ' ' + (sec.publication || '') +
+    ' ' + (sec.vintage || '');
+  return '          <p class="board-kicker">' + esc(head.toUpperCase()) + '</p>\n' +
+    '          <ul class="proj-list">\n' +
+    rows.map(r => projRow(r, sec.horizon || sec.vintage || '')).join('\n') +
+    '\n          </ul>';
+}
+
+/* FR-003: attributed agency projections. National (BLS) and
+   Michigan groups render as separate labeled groups from their
+   own sections of the dataset — never blended into one ranking.
+   A section that is absent renders nothing. */
+function outlookHtml(outlook) {
+  if (!outlook) return '';
+  const groups = [];
+  const notes = [];
+  const bls = outlook.blsProjections;
+  if (bls && ((bls.rise || []).length || (bls.fall || []).length)) {
+    groups.push(projGroupHtml(bls, 'rise', 'occupations'));
+    groups.push(projGroupHtml(bls, 'fall', 'occupations'));
+    notes.push(esc(bls.agency || '') + ', ' + esc(bls.publication || '') +
+      ' (' + esc(bls.vintage || '') + '), retrieved ' + esc(bls.retrievedOn || '') + '.');
+  }
+  const mi = outlook.michiganProjections;
+  if (mi && ((mi.rise || []).length || (mi.fall || []).length)) {
+    const head = 'Michigan industry outlook — ' + (mi.agencyShort || mi.agency || '') +
+      ' ' + (mi.publication || '') + ' ' + (mi.vintage || '');
+    const sub = (kind, label) => {
+      const rows = Array.isArray(mi[kind]) ? mi[kind] : [];
+      if (!rows.length) return '';
+      return '          <p class="board-sub">' + label + '</p>\n' +
+        '          <ul class="proj-list">\n' +
+        rows.map(r => projRow(r, mi.horizon || mi.vintage || '')).join('\n') +
+        '\n          </ul>';
+    };
+    groups.push('          <p class="board-kicker">' + esc(head.toUpperCase()) + '</p>\n' +
+      sub('rise', 'On the rise') + sub('fall', 'Falling'));
+    notes.push(esc(mi.agency || '') + ', ' + esc(mi.publication || '') +
+      ' (' + esc(mi.vintage || '') + '), retrieved ' + esc(mi.retrievedOn || '') + '.');
+  }
+  const body = groups.filter(Boolean).join('\n');
+  if (!body) return '';
+  return '        <div class="outlook-board">\n' + body + '\n' +
+    '          <p class="board-note">Projections are the publishing agency&rsquo;s modeled outlook, published with its horizon and vintage — they are not Axiovex forecasts, and they are not guarantees. Source: ' +
+    notes.join(' ') + '</p>\n        </div>';
+}
+
+/* FR-004: education indicators from the committed dataset. A
+   history indicator shows its latest value with the delta vs the
+   prior period computed here (points for percent indicators,
+   percent change otherwise); a completions indicator shows its
+   field groups rising / falling. Absent section → no block. */
+function educationHtml(outlook) {
+  const edu = outlook && outlook.education;
+  if (!edu || !Array.isArray(edu.indicators) || !edu.indicators.length) return '';
+  const fmtVal = (ind, v) => ind.unit === 'percent'
+    ? v.toFixed(1) + '%'
+    : (Number.isInteger(v) ? v.toLocaleString('en-US') : v.toFixed(1));
+  const rows = edu.indicators.map(ind => {
+    const src = ' <span class="edu-source">' + esc(String(ind.source || '').toUpperCase()) + '</span>';
+    if (Array.isArray(ind.history) && ind.history.length) {
+      const h = ind.history;
+      const last = h[h.length - 1];
+      let delta = '';
+      if (h.length > 1) {
+        const prev = h[h.length - 2].v;
+        const diff = last.v - prev;
+        const glyph = diff > 0 ? '&#9650;' : diff < 0 ? '&#9660;' : '&#9644;';
+        const sign = diff > 0 ? '+' : diff < 0 ? '&minus;' : '';
+        const text = ind.unit === 'percent'
+          ? sign + Math.abs(diff).toFixed(1) + ' pts vs prior class'
+          : sign + Math.abs(prev ? (diff / prev) * 100 : 0).toFixed(1) + '% vs prior period';
+        delta = ' <span class="edu-delta">&middot; ' + glyph + ' ' + text + '</span>';
+      }
+      return '          <p class="edu-row">' + esc(ind.label) + ' <b>' + fmtVal(ind, last.v) + '</b>' +
+        ' <span class="edu-vintage">&middot; ' + esc(ind.vintage || last.period) + '</span>' + delta + src + '</p>';
+    }
+    if ((ind.rise || []).length || (ind.fall || []).length) {
+      const side = (list, glyph) => (list || []).map(f =>
+        esc(f.name) + ' ' + glyph + ' ' + (f.pctChange > 0 ? '+' : f.pctChange < 0 ? '&minus;' : '') +
+        Math.abs(f.pctChange).toFixed(1) + '%').join(' &middot; ');
+      return '          <p class="edu-row">' + esc(ind.label) +
+        ' <span class="edu-vintage">&middot; ' + esc(ind.vintage || '') + '</span>' +
+        ' <span class="edu-delta">&middot; rising: ' + side(ind.rise, '&#9650;') +
+        ' &middot; falling: ' + side(ind.fall, '&#9660;') + '</span>' + src + '</p>';
+    }
+    return '';
+  }).filter(Boolean);
+  if (!rows.length) return '';
+  return '        <div class="education-block">\n' +
+    '          <p class="board-kicker">EDUCATION ANALYTICS — MICHIGAN</p>\n' +
+    rows.join('\n') + '\n        </div>';
+}
+
 function fmtUpdated(iso) {
   try {
     const d = new Date(iso);
@@ -507,11 +726,30 @@ function buildSignals(posts) {
     '          <ul class="signal-list">\n' + l.items.map(itemRow).join('\n') + '\n          </ul>\n        </div>'
   ).join('\n');
 
+  // Spec 011: Trends & outlook section between the Pulse band and
+  // the lanes. The section head attaches to the first element that
+  // renders; absent elements render nothing (FR-005e).
+  const outlook = loadOutlook();
+  const trendsParts = [
+    tickerHtml(snap.pulse),
+    trendBoardHtml(snap.pulse),
+    outlookHtml(outlook),
+    educationHtml(outlook),
+  ];
+  if (trendsParts.some(Boolean)) {
+    const i = trendsParts.findIndex(Boolean);
+    trendsParts[i] = trendsHeadHtml() + '\n' + trendsParts[i];
+  }
+
   // /signals/ page
   const tpl = readFileSync(path.join(ROOT, 'scripts', 'templates', 'signals.html'), 'utf8');
   mkdirSync(path.join(ROOT, 'signals'), { recursive: true });
   writeFileSync(path.join(ROOT, 'signals', 'index.html'), fill(tpl, {
     '{{PULSE_HTML}}': pulseTilesHtml(snap.pulse),
+    '{{TICKER_HTML}}': trendsParts[0],
+    '{{TREND_BOARD_HTML}}': trendsParts[1],
+    '{{OUTLOOK_HTML}}': trendsParts[2],
+    '{{EDUCATION_HTML}}': trendsParts[3],
     '{{LANES_HTML}}': lanesHtml,
     '{{UPDATED_LINE}}': updatedLine,
   }));
