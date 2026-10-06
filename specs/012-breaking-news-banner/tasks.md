@@ -3,22 +3,21 @@
 Proposal package prepared 2026-10-06: wireframes revised
 (`docs/wireframes/wireframes.html` — new global frame WF-G7,
 the breaking news banner; `wireframes.md` revision log) and
-this spec package written. **PENDING OWNER APPROVAL — nothing
-below the gate is done, and nothing is implemented.**
+this spec package written. **APPROVED 2026-10-06 (Tristen) —
+implementation underway on the staging branch.**
 
 ## Gate
 
-- [ ] T001 **GATE — Owner approval of the wireframes (Tristen).**
+- [x] T001 **GATE — Owner approval of the wireframes (Tristen).**
+  **APPROVED — Tristen, 2026-10-06 12:55 EDT: "Approve spec 012
+  wireframes — implement it".**
   Scope of the approval: WF-G7 (curated deep-red banner above
   the nav on every page; verbatim headline + source + published
   time; whole strip links to the source story; dismiss
   remembered per entry; 72-hour max life; zero layout trace
   when inactive; deliberately off-palette) and the curation +
-  integrity rules in spec.md FR-002 / FR-003. **Blocks every
-  task below.** Nothing is implemented, committed to the live
-  pages, or deployed until Tristen approves; if he requests
-  changes, the wireframes are revised and re-presented first
-  (constitution §III).
+  integrity rules in spec.md FR-002 / FR-003. The gate blocked
+  every task below until the approval above was given.
 
 ## Implementation (starts only after T001)
 
