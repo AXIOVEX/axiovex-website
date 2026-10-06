@@ -34,6 +34,14 @@ was produced the same day as the approval artifact
 (`2026-10-06-michigan-workforce-trends-sample.md`, series drafts
 folder; not published).
 
+**Amendment 3 — 2026-10-06 (via spec 014, Tristen's direction)**:
+**FR-011** adds a standing **Talent geography callout** section to
+every monthly article — links to the Signals page's geography
+maps with their vintages, plus one or two computed geographic
+insights from three named computations only — and a map-refresh
+verification step in the cycle checklist. Format placement is
+`blog-format.md` §3B.
+
 **Direction (Tristen, 2026-10-06)**: once per month near mid-month,
 publish a Michigan workforce data blog article matching the
 presentation and feel of the first one (2026-09-30); then determine
@@ -333,6 +341,43 @@ when the 15th falls badly.
     omissions, and format validation), produced 2026-10-06 and
     **not published**. The sections first appear in a real cycle
     article through the normal FR-004 approval gate.
+- **FR-011 — Talent geography callout** (added 2026-10-06 by
+  spec 014, Tristen's direction). Every monthly article carries
+  a **Talent geography callout** section (placement per
+  `blog-format.md` §3B: after Education analytics, before the
+  decisions section):
+  - **Links, never embeds.** The section links the Signals
+    page's geography subsection (spec 014) and states, at
+    drafting time, the vintage of each linked layer (QCEW
+    annual vintage; LAUS reference month; IPEDS survey cycle;
+    PSEO release). Map images are never embedded in the article
+    (v1).
+  - **One or two computed geographic insights**, drawn from
+    exactly these computations on the committed datasets in
+    `data/geo/` — and no others:
+    1. the highest-location-quotient county for a rising
+       industry (location quotient from the QCEW dataset;
+       "rising" as determined by the article's own outlook
+       board);
+    2. the county unemployment spread — highest minus lowest
+       county rate for the LAUS reference month, naming both
+       counties;
+    3. the PSEO spotlight institution's in-state retention
+       share at year 1 (in-state employed ÷ employed, from the
+       committed PSEO dataset).
+    Each insight is labeled in the article as computed, with its
+    inputs' vintages. An insight whose inputs are missing or
+    stale in that cycle is **omitted — never approximated**.
+  - **Map-refresh verification.** The cycle's checklist gains a
+    step: before drafting, verify each committed geography
+    dataset's vintage against its source's current release;
+    a layer that cannot be refreshed is cited in the article
+    and the cycle report as last-good, with its vintage —
+    never silently presented as current.
+  - **Sourcing extension.** FR-002's source families are
+    extended **for geographic insights only** by the spec 014
+    sources (BLS QCEW, BLS LAUS, NCES IPEDS, Census PSEO), each
+    cited at first use. All other FR-002 rules apply unchanged.
 
 ## Out of scope
 
