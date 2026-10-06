@@ -227,11 +227,16 @@ implementation under way on the staging branch.**
 
 ## Amendment 3 (owner direction 2026-10-06 — see spec.md)
 
-- [ ] T011 **OWNER APPROVAL GATE (blocking)**: Tristen
+- [x] T011 **OWNER APPROVAL GATE (blocking)**: Tristen
   approves this Amendment 3 package — WF-11 revised (ticker
   drawn as a pre-header strip above the nav, below the
   breaking-banner slot) + the spec.md Amendment 3 section.
   No implementation task starts before this is checked.
+  **Approval record (2026-10-06): Approved by Tristen,
+  2026-10-06 ~15:21 EDT: "everything should be approved"**
+  (Axiovex website chat) — the blanket approval given after
+  this Amendment 3 package was presented to him. The gate
+  passes; T012–T015 proceed.
 - [ ] T012 **Implement Amendment 3 on staging** (starts only
   after T011): move `{{TICKER_HTML}}` ahead of the header in
   `scripts/templates/signals.html` so the tape renders as a
