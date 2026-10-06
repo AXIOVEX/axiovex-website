@@ -1204,6 +1204,428 @@ function detailGoDeeper(posts, outlook) {
   return detailBlock('GO DEEPER', parts.join('\n'));
 }
 
+/* ============ Spec 014 — Talent geography ===================
+   The geography subsection of the detail region: the last
+   data block, after Education-to-career, before Go Deeper
+   (spec 014 FR-001). Every figure renders from the committed
+   datasets under data/geo/ — nothing is fetched, estimated,
+   or interpolated at build or view time. A dataset that is
+   missing or unreadable drops its own map only; the others
+   still render (the FR-011 pattern), and the sources note
+   names only the datasets actually present (geoNote below).
+   County geometry is emitted ONCE as <defs>; every choropleth
+   layer is <use> references plus its own table (WF-13). */
+function loadGeoFile(name) {
+  const p = path.join(ROOT, 'data', 'geo', name);
+  if (!existsSync(p)) return null;
+  try { return JSON.parse(readFileSync(p, 'utf8')); }
+  catch { console.warn('signals: data/geo/' + name + ' unreadable — its map is omitted'); return null; }
+}
+function loadGeo() {
+  const geo = {
+    paths: loadGeoFile('mi-county-paths.json'),
+    laus: loadGeoFile('laus-county.json'),
+    qcew: loadGeoFile('qcew-county-industry.json'),
+    ipeds: loadGeoFile('ipeds-institutions.json'),
+    pseo: loadGeoFile('pseo-pipelines.json'),
+  };
+  return Object.values(geo).some(Boolean) ? geo : null;
+}
+const GEO_RAMP = ['#E8FAFD', '#A9E9F5', '#5CC6DC', '#2E9DB8', '#17617E'];
+const MONTHS_LONG = ['January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'];
+function monthLong(ym) {
+  const m = /^(\d{4})-(\d{2})$/.exec(ym || '');
+  return m ? MONTHS_LONG[Number(m[2]) - 1] + ' ' + m[1] : String(ym || '');
+}
+function geoDefsSvg(paths) {
+  const defs = (paths.counties || []).map(c =>
+    '      <path id="mi-' + c.fips + '" d="' + c.path + '"/>').join('\n');
+  return '          <svg class="geo-defs" aria-hidden="true" focusable="false">' +
+    '<defs>\n' + defs + '\n' +
+    '      <pattern id="geo-hatch" width="6" height="6" patternUnits="userSpaceOnUse" ' +
+    'patternTransform="rotate(45)"><rect width="6" height="6" fill="#EDF2F5"/>' +
+    '<line x1="0" y1="0" x2="0" y2="6" stroke="#8A97A5" stroke-width="2"/></pattern>\n' +
+    '    </defs></svg>';
+}
+function geoUse(fips, fill) {
+  return '        <use href="#mi-' + fips + '" fill="' + fill + '"/>';
+}
+function geoLegend(items) {
+  return '          <p class="geo-legend">' + items.map(([fill, label]) =>
+    '<span class="geo-swatch" style="background:' + fill + '"></span> ' + label
+  ).join(' &nbsp; ') + '</p>';
+}
+const HATCH_FILL = 'url(#geo-hatch)';
+
+/* Map (b): LAUS county unemployment choropleth. The five legend
+   bins are the wireframe's; a county the source has not
+   published for the month takes the hatched not-published state
+   — never a neighboring value, never an interpolation
+   (FR-002). The table repeats every value as text. */
+function geoLausBlock(geo) {
+  const { paths, laus } = geo;
+  if (!paths || !laus || !(laus.counties || []).length) return '';
+  const binOf = r => r < 4 ? 0 : r < 5 ? 1 : r < 6 ? 2 : r < 7 ? 3 : 4;
+  const fills = new Map(laus.counties.map(c => [c.fips,
+    c.rate === null || c.rate === undefined ? HATCH_FILL : GEO_RAMP[binOf(c.rate)]]));
+  const uses = paths.counties.map(c => geoUse(c.fips, fills.get(c.fips) || HATCH_FILL)).join('\n');
+  const rows = [...laus.counties].sort((a, b) =>
+    (b.rate ?? -1) - (a.rate ?? -1) || (a.name < b.name ? -1 : 1)).map(c =>
+    '              <tr><td>' + esc(c.name) + '</td><td>' +
+    (c.rate === null || c.rate === undefined ? 'Not published' : c.rate.toFixed(1) + '%') +
+    '</td></tr>').join('\n');
+  const holes = (laus.holeMonths || []).map(monthLong);
+  const holeNote = holes.length
+    ? ' ' + holes.join(' and ') + ' ' + (holes.length > 1 ? 'are' : 'is') +
+      ' a genuine hole in this series &mdash; the source published no values for ' +
+      (holes.length > 1 ? 'those months' : 'that month') +
+      ' (federal lapse in appropriations) &mdash; shown as not published, never interpolated.'
+    : '';
+  return '          <div class="geo-block">\n' +
+    '          <p class="board-sub">County unemployment &mdash; ' + esc(monthLong(laus.referenceMonth)) +
+    (laus.preliminary ? ' (preliminary)' : '') + '</p>\n' +
+    '          <div class="geo-mapwrap">\n' +
+    '          <svg class="geo-map" viewBox="' + esc(paths.viewBox) + '" role="img" aria-label="Map of Michigan counties shaded by unemployment rate, ' + esc(monthLong(laus.referenceMonth)) + '">\n' +
+    uses + '\n          </svg>\n' +
+    geoLegend([...GEO_RAMP.map((fill, i) => [fill,
+      ['Under 4.0%', '4.0&ndash;4.9%', '5.0&ndash;5.9%', '6.0&ndash;6.9%', '7.0% and over'][i]]),
+      ['repeating-linear-gradient(45deg, #EDF2F5 0 3px, #8A97A5 3px 5px)', 'Not published']]) + '\n' +
+    '          </div>\n' +
+    '          <div class="geo-tablewrap"><table class="geo-table">\n' +
+    '            <caption>Unemployment rate by county &middot; BLS Local Area Unemployment Statistics</caption>\n' +
+    '            <thead><tr><th scope="col">County</th><th scope="col">Rate</th></tr></thead>\n' +
+    '            <tbody>\n' + rows + '\n            </tbody>\n          </table></div>\n' +
+    '          <p class="board-note">Shading follows the rate only; the table is the record. ' +
+    'Rates are the source&rsquo;s published values for the month named.' + holeNote + '</p>\n' +
+    '          </div>';
+}
+
+/* Map (a): QCEW employment by county x industry. Shading is the
+   employment LEVEL on each layer's own five-step scale — never
+   the location quotient, which appears only in the table
+   (FR-003). Sector rows are QCEW's private-ownership rows, the
+   grain at which QCEW publishes county x sector data, labeled
+   as such; the All-industries layer is the published county
+   total (all ownerships). Suppressed and absent cells take the
+   hatched not-disclosed state — never zero, never a value
+   shade (FR-010a). */
+function geoQcewBlock(geo) {
+  const { paths, qcew } = geo;
+  if (!paths || !qcew || !(qcew.counties || []).length || !(qcew.sectors || []).length) return '';
+  const rampIdx = (v, max) => {
+    const f = max > 0 ? v / max : 0;
+    return f >= 0.6 ? 4 : f >= 0.3 ? 3 : f >= 0.12 ? 2 : f >= 0.04 ? 1 : 0;
+  };
+  const cellOf = (c, code) => {
+    const cell = (c.sectors || {})[code];
+    return cell && typeof cell.emplvl === 'number' ? cell : null;
+  };
+  const layerDefs = [
+    { key: 'total', label: 'All industries', caption: 'Total employment by county (all ownerships)' },
+    ...qcew.sectors.map(s => ({
+      key: s.code, label: s.label, caption: s.label + ' &mdash; private employment by county',
+    })),
+  ];
+  const valueOf = (l, c) => l.key === 'total'
+    ? { emplvl: c.totalAllOwnership.emplvl } : cellOf(c, l.key);
+  const buttons = layerDefs.map(l =>
+    '            <button type="button" class="geo-chip" data-geo-btn="qcew:' + l.key + '"' +
+    (l.key === '31-33' ? ' aria-pressed="true"' : ' aria-pressed="false"') + '>' +
+    esc(l.label) + '</button>').join('\n');
+  const layerHtml = layerDefs.map(l => {
+    const max = Math.max(0, ...qcew.counties.map(c => {
+      const v = valueOf(l, c); return v ? v.emplvl : 0;
+    }));
+    const uses = qcew.counties.map(c => {
+      const v = valueOf(l, c);
+      return geoUse(c.fips, v === null ? HATCH_FILL : GEO_RAMP[rampIdx(v.emplvl, max)]);
+    }).join('\n');
+    const rows = [...qcew.counties].sort((a, b) => {
+      const va = valueOf(l, a), vb = valueOf(l, b);
+      return (vb ? vb.emplvl : -1) - (va ? va.emplvl : -1) || (a.name < b.name ? -1 : 1);
+    }).map(c => {
+      if (l.key === 'total') {
+        return '              <tr><td>' + esc(c.name) + '</td><td>' +
+          c.totalAllOwnership.emplvl.toLocaleString('en-US') + '</td><td>' +
+          c.totalPrivate.emplvl.toLocaleString('en-US') + '</td></tr>';
+      }
+      const cell = cellOf(c, l.key);
+      if (!cell) {
+        return '              <tr><td>' + esc(c.name) + '</td><td>Not disclosed</td><td>&mdash;</td></tr>';
+      }
+      return '              <tr><td>' + esc(c.name) + '</td><td>' +
+        cell.emplvl.toLocaleString('en-US') + '</td><td>' + cell.lq.toFixed(2) + '</td></tr>';
+    }).join('\n');
+    const head = l.key === 'total'
+      ? '<tr><th scope="col">County</th><th scope="col">Total employment</th><th scope="col">of which private</th></tr>'
+      : '<tr><th scope="col">County</th><th scope="col">Employment (private)</th><th scope="col">Location quotient</th></tr>';
+    return '          <div class="geo-layer" data-geo-layer="qcew:' + l.key + '">\n' +
+      '          <div class="geo-mapwrap">\n' +
+      '          <svg class="geo-map" viewBox="' + esc(paths.viewBox) + '" role="img" aria-label="Map of Michigan counties shaded by ' + esc(l.label.toLowerCase()) + ' employment, 2024">\n' +
+      uses + '\n          </svg>\n          </div>\n' +
+      '          <div class="geo-tablewrap"><table class="geo-table">\n' +
+      '            <caption>' + l.caption + ' &middot; BLS QCEW, 2024 annual averages</caption>\n' +
+      '            <thead>' + head + '</thead>\n' +
+      '            <tbody>\n' + rows + '\n            </tbody>\n          </table></div>\n' +
+      '          </div>';
+  }).join('\n');
+  return '          <div class="geo-block">\n' +
+    '          <p class="board-sub">Employment by county and industry &mdash; 2024 annual averages</p>\n' +
+    '          <p class="geo-selector" role="group" aria-label="Industry">\n' + buttons + '\n          </p>\n' +
+    geoLegend([[GEO_RAMP[0], 'Fewest jobs in this industry'], [GEO_RAMP[4], 'Most jobs in this industry'],
+      ['repeating-linear-gradient(45deg, #EDF2F5 0 3px, #8A97A5 3px 5px)', 'Not disclosed']]) + '\n' +
+    layerHtml + '\n' +
+    '          <p class="board-note">Shading is the employment level on each industry&rsquo;s own ' +
+    'scale &mdash; never the location quotient, which appears only in the table (the county&rsquo;s ' +
+    'share of its jobs in the industry, against the national share; above 1.00 = more concentrated ' +
+    'than the nation). Industry rows are QCEW&rsquo;s private-ownership rows &mdash; the grain at ' +
+    'which QCEW publishes county-by-industry data; the All-industries layer is the published county ' +
+    'total across all ownerships. &ldquo;Not disclosed&rdquo; means the source publishes no value for ' +
+    'that county and industry (suppressed, or no establishments reported) &mdash; never zero.</p>\n' +
+    '          </div>';
+}
+
+/* Map (c): IPEDS institutions. Dots sit at the coordinates the
+   source publishes, projected with the county geometry's own
+   fit (constants committed in mi-county-paths.json); size is
+   completions in the selected layer. The list beside the map
+   is the data of record; an institution without published
+   coordinates would be listed, never placed by guess — the
+   committed extract currently has none (FR-004). */
+function geoIpedsBlock(geo) {
+  const { paths, ipeds } = geo;
+  if (!paths || !ipeds || !(ipeds.institutions || []).length) return '';
+  const proj = paths.projection;
+  if (!proj) return '';
+  const cos = Math.cos(proj.cosLatDeg * Math.PI / 180);
+  const xy = i => [proj.pad + (i.lon * cos - proj.minX) * proj.k,
+    proj.pad + (-i.lat - proj.minY) * proj.k];
+  const fams = Object.keys(ipeds.families || {})
+    .map(code => ({
+      code, label: ipeds.families[code],
+      total: ipeds.institutions.reduce((n, i) => n + ((i.byFamily || {})[code] || 0), 0),
+    })).filter(f => f.total > 0).sort((a, b) => b.total - a.total);
+  const layerDef = [
+    { key: 'ALL', label: 'All fields', valueOf: i => i.totalCompletions },
+    ...fams.map(f => ({
+      key: f.code, label: f.label, valueOf: i => (i.byFamily || {})[f.code] || 0,
+    })),
+  ];
+  const outlines = paths.counties.map(c =>
+    '        <use href="#mi-' + c.fips + '" class="geo-outline"/>').join('\n');
+  const buttons = layerDef.map(l =>
+    '            <button type="button" class="geo-chip" data-geo-btn="ipeds:' + l.key + '"' +
+    (l.key === 'ALL' ? ' aria-pressed="true"' : ' aria-pressed="false"') + '>' +
+    esc(l.label) + '</button>').join('\n');
+  const layerHtml = layerDef.map(l => {
+    const placed = ipeds.institutions.filter(i => i.lat !== null && i.lon !== null && l.valueOf(i) > 0);
+    const max = Math.max(1, ...placed.map(l.valueOf));
+    const dots = placed.map(i => {
+      const [x, y] = xy(i);
+      const r = (1.6 + 4.6 * Math.sqrt(l.valueOf(i) / max)).toFixed(1);
+      return '        <circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="' + r +
+        '" class="geo-dot"><title>' + esc(i.name) + ' &middot; ' +
+        l.valueOf(i).toLocaleString('en-US') + ' completions</title></circle>';
+    }).join('\n');
+    const sorted = [...placed].sort((a, b) => l.valueOf(b) - l.valueOf(a) || (a.name < b.name ? -1 : 1));
+    const top = sorted.slice(0, 8).map(i =>
+      '          <p class="proj-row">' + esc(i.name) + ' &middot; ' + esc(i.city) +
+      ' <b class="proj-pct">' + l.valueOf(i).toLocaleString('en-US') + '</b></p>').join('\n');
+    const rest = sorted.length - Math.min(8, sorted.length);
+    const unlocated = ipeds.institutions.filter(i => (i.lat === null || i.lon === null) && l.valueOf(i) > 0);
+    const unlocNote = unlocated.length
+      ? '          <p class="board-note">Listed without a map position (the source publishes no ' +
+        'coordinates; never placed by guess): ' +
+        unlocated.map(i => esc(i.name) + ' (' + l.valueOf(i).toLocaleString('en-US') + ')').join('; ') + '.</p>\n'
+      : '';
+    const zeroNote = l.key === 'ALL'
+      ? (() => {
+          const zero = ipeds.institutions.filter(i => i.totalCompletions === 0);
+          return zero.length
+            ? '          <p class="board-note">Listed without a dot (the source publishes no ' +
+              'completions for 2023&ndash;24): ' +
+              zero.map(i => esc(i.name) + ' &middot; ' + esc(i.city)).join('; ') + '.</p>\n'
+            : '';
+        })()
+      : '';
+    return '          <div class="geo-layer" data-geo-layer="ipeds:' + l.key + '">\n' +
+      '          <div class="geo-mapwrap">\n' +
+      '          <svg class="geo-map" viewBox="' + esc(paths.viewBox) + '" role="img" aria-label="Map of Michigan postsecondary institutions, sized by ' + esc(l.label.toLowerCase()) + ' completions, 2023-24">\n' +
+      outlines + '\n' + dots + '\n          </svg>\n          </div>\n' +
+      '          <div class="geo-listwrap">\n' +
+      '          <p class="board-sub">Largest by completions &mdash; ' + esc(l.label) + '</p>\n' +
+      top + '\n' +
+      (rest > 0 ? '          <p class="board-note">Plus ' + rest + ' more institutions on the map; ' +
+        'the map carries every institution in the layer.</p>\n' : '') +
+      unlocNote + zeroNote +
+      '          </div>\n          </div>';
+  }).join('\n');
+  return '          <div class="geo-block">\n' +
+    '          <p class="board-sub">Where the completions are &mdash; postsecondary institutions, 2023&ndash;24 awards</p>\n' +
+    '          <p class="geo-selector" role="group" aria-label="Field of study">\n' + buttons + '\n          </p>\n' +
+    layerHtml + '\n' +
+    '          <p class="board-note">Dots sit at the coordinates IPEDS publishes for each ' +
+    'institution; size is completions in the selected field (all award levels). Field is the ' +
+    'IPEDS CIP family. The list is the record; the map is the picture of it.</p>\n' +
+    '          </div>';
+}
+
+/* Map (d): PSEO pipelines — statewide field-to-industry flows
+   as ranked bars, plus the University of Michigan spotlight.
+   The coverage limitation is stated ON the panel: UMich is
+   Michigan's only PSEO partner institution (~10% of statewide
+   graduates, 2015 estimate, per the Census partner file), so
+   institution-level outcomes exist for it alone — never
+   presented as a school-by-school Michigan pipeline (FR-006). */
+function geoPseoBlock(geo) {
+  const pseo = geo.pseo;
+  if (!pseo || !pseo.statewideFlows || !(pseo.statewideFlows.rows || []).length) return '';
+  const rows = pseo.statewideFlows.rows;
+  const max = Math.max(1, ...rows.map(r => r.y1GradsEmp));
+  const bars = rows.map(r =>
+    '          <div class="pseo-row">\n' +
+    '            <p class="pseo-label">' + esc(r.field) + ' &rarr; ' + esc(r.industryLabel) +
+    ' <b class="proj-pct">' + r.y1GradsEmp.toLocaleString('en-US') + '</b>' +
+    ' <span class="proj-jobs">&middot; ' +
+    (r.y1GradsEmpInstate === null || r.y1GradsEmpInstate === undefined
+      ? 'in-state not published' : r.y1GradsEmpInstate.toLocaleString('en-US') + ' in Michigan') +
+    (r.y1MedianEarningsField ? ' &middot; field median, year 1: $' +
+      r.y1MedianEarningsField.toLocaleString('en-US') : '') +
+    '</span></p>\n' +
+    '            <p class="pseo-bar"><span style="width:' +
+    Math.max(1.5, 100 * r.y1GradsEmp / max).toFixed(1) + '%"></span></p>\n' +
+    '          </div>').join('\n');
+  const um = pseo.umichSpotlight;
+  let spot = '';
+  if (um && um.earnings) {
+    const earnRow = y => {
+      const e = um.earnings['y' + y] || {};
+      if (e.p50 === null || e.p50 === undefined) return '';
+      return '              <tr><td>' + y + (y === 1 ? ' year' : ' years') + '</td><td>$' +
+        e.p25.toLocaleString('en-US') + '</td><td>$' + e.p50.toLocaleString('en-US') +
+        '</td><td>$' + e.p75.toLocaleString('en-US') + '</td></tr>';
+    };
+    const retLine = y => {
+      const r = (um.employment || {})['y' + y];
+      if (!r || r.emp === null || r.emp === undefined) return '';
+      return '          <p class="edu-row">Employed ' + y + (y === 1 ? ' year' : ' years') +
+        ' out <b>' + r.emp.toLocaleString('en-US') + '</b>' +
+        (r.instate !== null && r.instate !== undefined
+          ? ' <span class="edu-vintage">&middot; ' + r.instate.toLocaleString('en-US') +
+            ' in Michigan (' + r.sharePct.toFixed(1) + '%)</span>' : '') + '</p>';
+    };
+    const umFlows = (um.topIndustryFlows || []).map(f =>
+      '          <p class="proj-row">' + esc(f.industryLabel) +
+      ' <b class="proj-pct">' + f.y1GradsEmp.toLocaleString('en-US') + '</b>' +
+      (f.y1GradsEmpInstate !== null && f.y1GradsEmpInstate !== undefined
+        ? ' <span class="proj-jobs">&middot; ' + f.y1GradsEmpInstate.toLocaleString('en-US') +
+          ' in Michigan</span>' : '') + '</p>').join('\n');
+    spot = '          <div class="pseo-spot">\n' +
+      '          <p class="board-sub">Institution spotlight &mdash; University of Michigan ' +
+      '(bachelor&rsquo;s, all fields)</p>\n' +
+      '          <div class="geo-tablewrap"><table class="geo-table">\n' +
+      '            <caption>Median earnings by years since graduation (25th / 50th / 75th percentile)</caption>\n' +
+      '            <thead><tr><th scope="col">Horizon</th><th scope="col">25th</th><th scope="col">Median</th><th scope="col">75th</th></tr></thead>\n' +
+      '            <tbody>\n' + [1, 5, 10].map(earnRow).filter(Boolean).join('\n') + '\n            </tbody>\n          </table></div>\n' +
+      [1, 5, 10].map(retLine).filter(Boolean).join('\n') + '\n' +
+      (umFlows ? '          <p class="board-sub">Top industries at year 1</p>\n' + umFlows + '\n' : '') +
+      '          <p class="board-note"><b>Coverage:</b> the University of Michigan is the only ' +
+      'Michigan institution in PSEO &mdash; its graduates are about 10% of statewide graduates ' +
+      '(2015 estimate, per the Census partner file). Institution-level outcomes exist for it ' +
+      'alone; this is not a school-by-school Michigan pipeline, and no other Michigan school ' +
+      'is ranked or implied here.</p>\n' +
+      '          </div>';
+  }
+  return '          <div class="geo-block">\n' +
+    '          <p class="board-sub">Graduate pipelines &mdash; field of study to industry, one year out</p>\n' +
+    '          <p class="geo-caption">' + esc(pseo.statewideFlows.label || '') + '</p>\n' +
+    bars + '\n' + spot + '\n' +
+    '          <p class="board-note">Counts are graduates the Census Bureau matched to employment ' +
+    'one year after graduation, pooled across the 2001&ndash;2021 cohorts in this release; the ' +
+    'field median is the field&rsquo;s year-1 median earnings across all industries. Rows the ' +
+    'source suppresses are excluded, never estimated.</p>\n' +
+    '          </div>';
+}
+
+/* The geography subsection as a whole: one detail block whose
+   inner blocks drop out individually (missing dataset → its
+   map absent, the rest unaffected). The layer-switch script is
+   progressive enhancement in the detail region's pattern: the
+   markup renders every layer; the script activates the
+   defaults and hides the rest. */
+function geoSectionHtml(geo) {
+  if (!geo) return '';
+  const blocks = [
+    geoLausBlock(geo), geoQcewBlock(geo), geoIpedsBlock(geo), geoPseoBlock(geo),
+  ].filter(Boolean);
+  if (!blocks.length) return '';
+  const inner = (geo.paths ? geoDefsSvg(geo.paths) + '\n' : '') +
+    '          <p class="geo-intro">Four views of the same question &mdash; where Michigan&rsquo;s ' +
+    'talent is, and where it goes. Shading and dot size are the picture; the table or list beside ' +
+    'each map is the record.</p>\n' +
+    blocks.join('\n') + '\n' +
+    '          <script>\n' +
+    '          (function () {\n' +
+    '            var sec = document.getElementById(\'geo-section\');\n' +
+    '            if (!sec) return;\n' +
+    '            sec.classList.add(\'geo-js\');\n' +
+    '            function activate(group, key) {\n' +
+    '              sec.querySelectorAll(\'[data-geo-btn]\').forEach(function (b) {\n' +
+    '                var parts = b.getAttribute(\'data-geo-btn\').split(\':\');\n' +
+    '                if (parts[0] === group) b.setAttribute(\'aria-pressed\', parts[1] === key ? \'true\' : \'false\');\n' +
+    '              });\n' +
+    '              sec.querySelectorAll(\'[data-geo-layer]\').forEach(function (l) {\n' +
+    '                var parts = l.getAttribute(\'data-geo-layer\').split(\':\');\n' +
+    '                if (parts[0] === group) l.hidden = parts[1] !== key;\n' +
+    '              });\n' +
+    '            }\n' +
+    '            sec.querySelectorAll(\'[data-geo-btn]\').forEach(function (b) {\n' +
+    '              b.addEventListener(\'click\', function () {\n' +
+    '                var parts = b.getAttribute(\'data-geo-btn\').split(\':\');\n' +
+    '                activate(parts[0], parts[1]);\n' +
+    '              });\n' +
+    '            });\n' +
+    '            activate(\'qcew\', \'31-33\');\n' +
+    '            activate(\'ipeds\', \'ALL\');\n' +
+    '          })();\n' +
+    '          </script>';
+  return '          <div class="detail-block geo" id="geo-section">\n' +
+    '          <p class="board-kicker">TALENT GEOGRAPHY &mdash; MICHIGAN</p>\n' +
+    inner + '\n          </div>';
+}
+
+/* Spec 014: the sources-note sentences for the geography
+   datasets, composed from the committed metadata and naming
+   only the datasets that rendered. Appended to the template's
+   sources paragraph ({{GEO_NOTE}}); existing sentences are
+   never edited. */
+function geoNote(geo) {
+  if (!geo) return '';
+  const parts = [];
+  if (geo.laus && geo.paths) {
+    parts.push('county unemployment from the BLS Local Area Unemployment Statistics (' +
+      monthLong(geo.laus.referenceMonth) + (geo.laus.preliminary ? ', preliminary' : '') + ')');
+  }
+  if (geo.qcew && geo.paths) {
+    parts.push('county employment by industry from the BLS Quarterly Census of Employment and ' +
+      'Wages (2024 annual averages; industry rows are private ownership &mdash; the grain at ' +
+      'which QCEW publishes them &mdash; and suppressed cells are shown as not disclosed, never as zero)');
+  }
+  if (geo.ipeds) {
+    parts.push('institutions and completions from the National Center for Education Statistics&rsquo; ' +
+      'IPEDS (2024 survey cycle; completions are 2023&ndash;24 awards)');
+  }
+  if (geo.pseo) {
+    parts.push('graduate outcomes from the U.S. Census Bureau&rsquo;s Post-Secondary Employment ' +
+      'Outcomes (release R2026Q2, cohorts 2001&ndash;2021) &mdash; the University of Michigan is ' +
+      'Michigan&rsquo;s only PSEO partner institution, so institution-level outcomes are shown ' +
+      'for it alone, beside the Census state aggregates');
+  }
+  if (!parts.length) return '';
+  return ' Geography: ' + parts.join('; ') + '.';
+}
+
 /* FR-004 disclosure: the markup renders EXPANDED (truthful
    aria state, content in the DOM, readable with scripts
    unavailable); the small script emitted with the region
@@ -1212,13 +1634,14 @@ function detailGoDeeper(posts, outlook) {
    collapsing is the only client behavior. The subtitle is
    composed from the blocks actually present, so it never
    names an absent dataset. */
-function detailHtml(pulse, outlook, posts) {
+function detailHtml(pulse, outlook, posts, geo) {
   const bPulse = detailPulseTable(pulse);
   const bBls = detailBls(outlook);
   const bMi = detailMichigan(outlook);
   const bEdu = detailEducation(outlook);
+  const bGeo = geoSectionHtml(geo);
   const bGo = detailGoDeeper(posts, outlook);
-  const blocks = [bPulse, bBls, bMi, bEdu, bGo].filter(Boolean);
+  const blocks = [bPulse, bBls, bMi, bEdu, bGeo, bGo].filter(Boolean);
   if (!blocks.length) return '';
   const subParts = [];
   if (bPulse) {
@@ -1228,6 +1651,7 @@ function detailHtml(pulse, outlook, posts) {
   if (bBls) subParts.push('the full projection tables');
   if (bMi) subParts.push('Michigan occupations');
   if (bEdu) subParts.push('education-to-career figures');
+  if (bGeo) subParts.push('talent geography');
   const sub = subParts.length
     ? ' <span class="detail-sub" id="detail-sub" hidden>&middot; the complete tables ' +
       'behind the boards &mdash; ' + subParts.join(', ') + '</span>'
@@ -1308,6 +1732,7 @@ function buildSignals(posts) {
   // Amendment 2: the tape (part 0) renders at the top of the page,
   // outside the section — it never carries the section head.
   const outlook = loadOutlook();
+  const geo = loadGeo();
   const trendsParts = [
     tickerHtml(snap.pulse),
     trendBoardHtml(snap.pulse),
@@ -1331,8 +1756,9 @@ function buildSignals(posts) {
     '{{TREND_BOARD_HTML}}': trendsParts[1],
     '{{OUTLOOK_HTML}}': trendsParts[2],
     '{{EDUCATION_HTML}}': trendsParts[3],
-    '{{DETAIL_HTML}}': detailHtml(snap.pulse, outlook, posts),
+    '{{DETAIL_HTML}}': detailHtml(snap.pulse, outlook, posts, geo),
     '{{LANES_HTML}}': lanesHtml,
+    '{{GEO_NOTE}}': geoNote(geo),
     '{{UPDATED_LINE}}': updatedLine,
   }));
 

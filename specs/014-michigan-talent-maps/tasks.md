@@ -4,13 +4,20 @@ Proposal package prepared 2026-10-06: wireframes revised
 (`docs/wireframes/wireframes.html` — NEW WF-13 Michigan
 talent map + the WF-11 integration note;
 `docs/wireframes/wireframes.md` revision log) and this spec
-package written. **PENDING OWNER APPROVAL — nothing below
-the gate is done, and nothing is implemented.**
+package written. **APPROVED 2026-10-06 (T001 below) —
+implementation complete on the staging branch
+2026-10-06; promotion (T009) open.**
 
 ## Gate
 
-- [ ] T001 **GATE — Owner approval of the wireframes
-  (Tristen).** Scope of the approval: WF-13 as drawn (the
+- [x] T001 **GATE — Owner approval of the wireframes
+  (Tristen).** **APPROVED 2026-10-06** — Tristen:
+  "Approve spec 014 wireframes — implement it", including
+  the adjusted PSEO pipeline design (statewide flows +
+  labeled UMich spotlight). Sequencing recorded at the
+  gate: spec 013 (incl. its Amendment 1) promoted to
+  production first; spec 014 implements on staging on top
+  of the promoted Detail region. Scope of the approval: WF-13 as drawn (the
   geography subsection inside spec 013's Detail region: the
   QCEW industry choropleth with its selector, the LAUS
   unemployment choropleth, the IPEDS institution map, and
@@ -31,7 +38,7 @@ the gate is done, and nothing is implemented.**
 
 ## Data builds (start only after T001)
 
-- [ ] T002 **Geometry + QCEW extract (FR-002, FR-003,
+- [x] T002 **Geometry + QCEW extract (FR-002, FR-003,
   FR-007)**: extract the 83 Michigan county paths from
   us-atlas counties-10m into `data/geo/mi-county-paths.json`
   (FIPS + name per county); fetch the 2024 annual QCEW
@@ -45,7 +52,20 @@ the gate is done, and nothing is implemented.**
   (manufacturing 89,659 private-ownership row; county total
   719,741), Keweenaw suppression present. A failed county
   read fails the refresh whole (last-good), never partial.
-- [ ] T003 **LAUS layer + fetcher step (FR-004, FR-007)**:
+  **Done 2026-10-06** (commits `07f7ca2`, `4e76ac1`):
+  geometry extracted (83 paths, viewBox 0 0 640 721; the
+  projection constants are committed in the file — audit
+  reproduced every path string from the source). QCEW
+  extract via `scripts/fetch-geo.mjs qcew`: 83 counties ×
+  20 sectors; **the sector grain is private ownership
+  (own_code 5)** — total-ownership sector rows do not
+  exist in QCEW (sources.md D1); 416 suppressed + 57
+  absent cells stored valueless. Cross-check correction
+  (sources.md D2): this task's "county total 719,741" is
+  Wayne's **2023** total; the 2024 total is **725,504**
+  (manufacturing 89,659 ✓ as written). Keweenaw
+  suppression present (health care + 9 more sectors).
+- [x] T003 **LAUS layer + fetcher step (FR-004, FR-007)**:
   batched BLS API read of the 83 `LAUCN26{ccc}000000003`
   series → `data/geo/laus-county.json` (latest month's rate
   per county, preliminary flag carried, hole months simply
@@ -54,7 +74,13 @@ the gate is done, and nothing is implemented.**
   Wayne 6.9 / Oakland 4.7 / Kent 4.3 for Aug 2026 (or the
   then-latest month's published values, read on the API at
   build time); Oct 2025 recorded as a hole, not a value.
-- [ ] T004 **IPEDS extract (FR-005, FR-007)**: HD2024 +
+  **Done 2026-10-06** (commit `07f7ca2`): fetcher
+  `scripts/fetch-geo.mjs laus`, month-gated + last-good.
+  Aug 2026 preliminary; Wayne 6.9 / Oakland 4.7 / Kent
+  4.3 exact; Oct 2025 a hole in 83/83 series. Series-ID
+  correction recorded (sources.md D3): the suffix is ten
+  zeros (`0000000003`, 20-char ID).
+- [x] T004 **IPEDS extract (FR-005, FR-007)**: HD2024 +
   C2024_A → `data/geo/ipeds-institutions.json` (160
   Michigan institutions: name, city, published lat/lon,
   total completions, completions by CIP 2-digit family).
@@ -62,7 +88,13 @@ the gate is done, and nothing is implemented.**
   rows accounted for in the aggregation; any institution
   lacking published coordinates flagged `coords: null`
   (listed, never placed).
-- [ ] T005 **PSEO extract (FR-006, FR-007)**: first confirm
+  **Done 2026-10-06** (commit `07f7ca2`): 160
+  institutions, 10,051 Michigan rows accounted; **no
+  institution lacks published coordinates** (all 160
+  placed from source values). CIPCODE 99 grand-total
+  rows excluded from aggregates (sources.md D5) —
+  statewide completions 128,540.
+- [x] T005 **PSEO extract (FR-006, FR-007)**: first confirm
   degree-level + status code labels against the PSEO
   Technical Documentation (record the confirmation — or the
   correction — in sources.md); then extract from
@@ -74,10 +106,18 @@ the gate is done, and nothing is implemented.**
   with the partners file's coverage line stored as metadata
   (the on-page label is generated from it). Excluded
   (suppressed) row counts per view recorded in sources.md.
+  **Done 2026-10-06** (commit `07f7ca2`): code labels
+  confirmed against the LEHD schema V4.9.0 label CSVs
+  (05 = Baccalaureate; status 1 = OK) — sources.md D6.
+  Statewide top-10 flows (460 published rows; 40
+  excluded, counted in the dataset); UMich spotlight
+  medians $53,268 / $78,284 / $106,836 exact; retention
+  shares computed (y1 41.0%). Coverage line stored from
+  the partners file and rendered on the panel.
 
 ## Implementation (after T002–T005)
 
-- [ ] T006 **Generator + template + styles (FR-001,
+- [x] T006 **Generator + template + styles (FR-001,
   FR-002, FR-008)**: `geoHtml()` and its per-view renderers
   in `scripts/build-site.mjs` (geometry defs referenced by
   all layers; fixed bin rules generating both fills and
@@ -89,7 +129,20 @@ the gate is done, and nothing is implemented.**
   styles in the next versioned stylesheet bump in sequence
   (existing tokens only; choropleth bins from the strata
   blues + the not-disclosed hatch/gray).
-- [ ] T007 **Spec 007 amendment application (FR-009)**:
+  **Done 2026-10-06** (commit `66431e9`): `geoSectionHtml()`
+  + per-view renderers composed after Education, before
+  Go Deeper; subtitle gains "talent geography";
+  `{{GEO_NOTE}}` sentences appended to the sources note
+  (existing sentences untouched); **styles.v31.css**
+  (= v30 + appended block; v30 removed, all references
+  repointed). Geometry defs emitted once (83 paths;
+  5,063 `<use>` across 61 layer maps). Selectors are
+  real buttons (aria-pressed); all layers + tables render
+  in markup. Drop-out verified per dataset (each file
+  removed in turn → only its view absent; all removed →
+  section + subtitle part + note sentences absent, page
+  intact). Build byte-deterministic across rebuilds.
+- [x] T007 **Spec 007 amendment application (FR-009)**:
   FR-011 into `specs/007-michigan-workforce-monthly/spec.md`
   (Amendment 3, dated, quoting this spec); the §3B
   geographic-callout placement note into spec 007's
@@ -97,10 +150,16 @@ the gate is done, and nothing is implemented.**
   the cycle checklist of
   `~/workspace/skills/michigan-workforce-monthly/SKILL.md`.
   No article is drafted or published by this task.
+  **Done 2026-10-06** (commit `b019a84` + the skill
+  edit): FR-011 + Amendment 3 header in spec 007's
+  spec.md; §3B in blog-format.md; map-refresh item in
+  blog-format §6 checklist; map-refresh verification
+  step in the SKILL.md Step 1 drafting list. No article
+  drafted or published.
 
 ## Verification + promotion
 
-- [ ] T008 **Staging verification (FR-011)**: figure audit
+- [x] T008 **Staging verification (FR-011)**: figure audit
   (zero mismatches — sampled QCEW cells incl. Wayne +
   Keweenaw suppression, the three named LAUS counties, ten
   institutions across dot-size bands, every pipeline bar +
@@ -113,6 +172,32 @@ the gate is done, and nothing is implemented.**
   1440 / 834 / 390; resilience builds (each geo file removed
   in turn → its view absent, page intact; stale LAUS file →
   vintage label shows the stale month).
+  **Done 2026-10-06.** Figure audit: the independent
+  re-read in sources.md §3 (ALL PASS, 17/17) covers every
+  committed figure; the rendered page was additionally
+  spot-checked in-browser (Wayne manufacturing row
+  89,659 / 1.50; Keweenaw Utilities = Not disclosed; 63
+  Not-disclosed cells in the Utilities layer; UMich dot
+  titled 17,020; top pipeline bar Engineering →
+  Manufacturing 4,345; spotlight medians present).
+  Playwright suite 30/30 at 1440 / 834 / 390: geo section
+  renders after expand, zero horizontal overflow at all
+  widths, chips wrap on mobile, QCEW + IPEDS selectors
+  switch layers by click and keyboard (aria-pressed
+  tracked), LAUS fills resolve, PSEO coverage label
+  present in served HTML, spec 013 regression clean
+  (5 highlight cards, tape, lanes, detail mechanics).
+  No-JS: all 60 layers stacked + visible, detail region
+  expanded. Resilience: per-file drop-out matrix exact
+  (each dataset drops only its view; geometry loss drops
+  the three geometry maps only); stale LAUS file
+  (2026-07) → block heading + sources note both show
+  July 2026. One implementation fix from this pass: the
+  single zero-completions IPEDS institution is now
+  listed in an ALL-layer note instead of silently absent
+  (commit `116d4ee`). Selector switching is
+  network-silent (no fetch/XHR in the section scripts —
+  presentation-only class/attribute toggles).
 - [ ] T009 **Promotion + closeout**: merge `staging` →
   `main` under spec 010 FR-004 (STOP if the diff carries
   staging-only `robots.txt`/`_headers` beyond the intended

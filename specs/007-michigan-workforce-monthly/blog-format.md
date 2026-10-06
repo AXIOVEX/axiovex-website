@@ -131,6 +131,38 @@ The decisions section (§3 item 5) follows the three boards and
 may cross-reference them; standing decisions remain labeled as
 standing per §3.
 
+## 3B. Talent geography callout (added by FR-011, 2026-10-06, via spec 014)
+
+From the FR-011 amendment onward, a **Talent geography callout**
+section joins the §3 structure, placed immediately after the
+Education analytics section (§3A) and before the decisions
+section (§3 item 5). FR-011 (spec 007) is the normative source;
+this section fixes the file format:
+
+- **Heading**: `## Talent geography` (series style).
+- **Map links, never embeds**: the section links the Signals
+  page geography subsection (`https://axiovexsystems.com/signals/`
+  — the geography blocks inside "The full picture") and states
+  each linked layer's vintage as of drafting: QCEW annual
+  vintage (e.g. "QCEW 2024 annual averages"), LAUS reference
+  month (e.g. "county unemployment, August 2026"), IPEDS
+  survey cycle (e.g. "IPEDS 2024; completions 2023–24"), PSEO
+  release (e.g. "PSEO R2026Q2"). No map images are embedded
+  in the article in v1.
+- **Computed insights**: one or two short paragraphs, each
+  presenting ONE computed geographic insight from exactly the
+  three computations FR-011 names (highest-LQ county for a
+  rising industry; county unemployment spread naming both
+  counties; PSEO spotlight in-state retention share at year 1).
+  Each paragraph labels the figure as computed and names its
+  inputs and vintages (dataset + period). An insight whose
+  inputs are missing or stale is omitted — never approximated,
+  never replaced by a different computation.
+- **Stale layers**: a geography layer that could not be
+  refreshed in the cycle is cited here and in the cycle report
+  as last-good with its vintage (the §6 checklist carries the
+  verification step).
+
 ## 4. Supported markdown subset
 
 Per `blog/README.md` and the generator — nothing outside this list
@@ -209,6 +241,17 @@ every item passes:
       the article renders at `/blog/<slug>/` (pre-publish drafts
       validate against this checklist without being placed in the
       repo).
+- [ ] **Map-refresh verification (FR-011, from the spec 014
+      amendment)**: each committed geography dataset in
+      `data/geo/` was checked against its source's current
+      release before drafting (LAUS reference month current;
+      QCEW annual vintage current; IPEDS cycle current; PSEO
+      release current). The §3B callout states each layer's
+      vintage as of drafting; any layer that could not be
+      refreshed is cited as last-good with its vintage in the
+      article and the cycle report. Each §3B insight traces to
+      one of FR-011's three named computations on the committed
+      datasets, labeled computed with input vintages.
 
 ## 7. Validation record — 2026-10-06 test article
 

@@ -1187,3 +1187,67 @@ h2 {
   .detail-cols { grid-template-columns: 1fr; }
   .detail-toggle { width: 100%; }
 }
+
+/* ---------- v31 (2026-10-06, spec 014): Talent geography —
+   the detail region's geography subsection (WF-13). Appended
+   to v30; every v30 rule is untouched (spec 015 bottom values
+   and Amendment 2 top values included). Existing tokens only:
+   the choropleth ramp is the five-step cyan scale drawn in
+   WF-13; the not-disclosed state is a hatched fill (SVG
+   pattern #geo-hatch, emitted once in the section's <defs>);
+   selector chips follow .detail-toggle. Layers render stacked
+   in markup; the section's script activates one per group
+   (progressive enhancement), so [hidden] must beat the grid. */
+.geo-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.geo-intro { font-size: 14.5px; line-height: 1.6; margin-top: 8px; max-width: 72ch; }
+.geo-block {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  column-gap: 28px; margin-top: 26px; text-align: left;
+}
+.geo-block > .board-sub, .geo-block > .board-note, .geo-block > .geo-selector,
+.geo-block > .geo-legend, .geo-block > .geo-layer, .geo-block > .geo-caption,
+.geo-block > .pseo-row, .geo-block > .pseo-spot { grid-column: 1 / -1; }
+.geo-block > .board-sub:first-child { margin-top: 0; }
+.geo-caption { color: var(--faint); font-size: 13px; line-height: 1.55; margin-top: 2px; }
+.geo-selector { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 2px; }
+.geo-chip {
+  background: transparent; border: 1px solid var(--line); border-radius: 6px;
+  color: var(--ink); font: inherit; font-size: 13px; font-weight: 600;
+  padding: 7px 12px; cursor: pointer;
+}
+.geo-chip:hover { border-color: var(--cyan); }
+.geo-chip:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.geo-chip[aria-pressed="true"] { border-color: var(--cyan); color: var(--cyan); }
+.geo-legend { color: var(--faint); font-size: 12.5px; line-height: 2; margin-top: 8px; }
+.geo-swatch {
+  display: inline-block; width: 12px; height: 12px; border-radius: 2px;
+  border: 1px solid var(--hairline); vertical-align: -1px; margin-right: 2px;
+}
+.geo-layer {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 6px 28px; margin-top: 12px; align-items: start;
+}
+.geo-layer[hidden] { display: none; }
+.geo-map { width: 100%; height: auto; display: block; }
+.geo-map use { stroke: var(--navy); stroke-width: 0.8; }
+.geo-map use.geo-outline { fill: rgba(247, 252, 255, 0.04); stroke: rgba(247, 252, 255, 0.28); stroke-width: 0.6; }
+.geo-dot { fill: var(--cyan); fill-opacity: 0.8; stroke: var(--navy); stroke-width: 0.5; }
+.geo-tablewrap { overflow: auto; max-height: 470px; }
+.geo-table { width: 100%; min-width: 300px; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 13.5px; }
+.geo-table caption { text-align: left; color: var(--faint); font-size: 12.5px; line-height: 1.5; padding-bottom: 6px; }
+.geo-table th {
+  color: var(--faint); font-size: 11px; letter-spacing: 0.1em; font-weight: 700;
+  text-transform: uppercase; text-align: left; padding: 0 8px 6px 0;
+}
+.geo-table td { padding: 6px 8px 6px 0; border-top: 1px solid var(--hairline); }
+.pseo-row { margin-top: 12px; }
+.pseo-label { font-size: 14.5px; line-height: 1.5; }
+.pseo-bar { height: 8px; background: var(--hairline); border-radius: 4px; overflow: hidden; margin-top: 5px; }
+.pseo-bar span { display: block; height: 100%; background: var(--cyan); }
+.pseo-spot { margin-top: 24px; border: 1px solid var(--line); border-radius: 6px; padding: 4px 16px 14px; }
+.pseo-spot .geo-tablewrap { max-height: none; }
+@media (max-width: 820px) {
+  .geo-block, .geo-layer { grid-template-columns: 1fr; }
+  .geo-map { max-width: 520px; }
+  .geo-tablewrap { max-height: 380px; }
+}

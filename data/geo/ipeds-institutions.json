@@ -1,0 +1,3037 @@
+{
+  "source": "NCES IPEDS Data Center bulk files: HD2024 (institutional characteristics) + C2024_A (Completions)",
+  "sourceUrl": "https://nces.ed.gov/ipeds/datacenter/data/HD2024.zip \u00b7 https://nces.ed.gov/ipeds/datacenter/data/C2024_A.zip",
+  "vintage": "2024 survey cycle (files posted 2025-09-21); completions are 2023-24 awards",
+  "retrievedOn": "2026-10-06",
+  "grain": "One entry per Michigan institution (STABBR = MI in HD2024): IPEDS-published coordinates, total completions (sum of the published C2024_A detail rows; the file's CIPCODE 99 grand-total rows are excluded \u2014 they duplicate the detail rows exactly), and completions by CIP 2-digit family.",
+  "families": {
+    "01": "Agriculture",
+    "03": "Natural resources & conservation",
+    "04": "Architecture",
+    "05": "Area & ethnic studies",
+    "09": "Communication & journalism",
+    "10": "Communications technologies",
+    "11": "Computer & information sciences",
+    "12": "Personal & culinary services",
+    "13": "Education",
+    "14": "Engineering",
+    "15": "Engineering technologies",
+    "16": "Languages & linguistics",
+    "19": "Family & consumer sciences",
+    "22": "Legal professions",
+    "23": "English & literature",
+    "24": "Liberal arts & humanities",
+    "25": "Library science",
+    "26": "Biological & biomedical sciences",
+    "27": "Mathematics & statistics",
+    "29": "Military technologies",
+    "30": "Multi/interdisciplinary studies",
+    "31": "Parks, recreation & fitness",
+    "38": "Philosophy & religious studies",
+    "39": "Theology & religious vocations",
+    "40": "Physical sciences",
+    "41": "Science technologies",
+    "42": "Psychology",
+    "43": "Homeland security & protective services",
+    "44": "Public administration & social services",
+    "45": "Social sciences",
+    "46": "Construction trades",
+    "47": "Mechanic & repair technologies",
+    "48": "Precision production",
+    "49": "Transportation",
+    "50": "Visual & performing arts",
+    "51": "Health professions",
+    "52": "Business & management",
+    "54": "History"
+  },
+  "institutions": [
+    {
+      "unitid": 500069,
+      "name": "ACUPUNCTURE AND MASSAGE SCHOOL OF ORIENTAL MEDICINE",
+      "city": "SOUTHFILED USA",
+      "lat": 42.496704,
+      "lon": -83.303027,
+      "totalCompletions": 0,
+      "byFamily": {}
+    },
+    {
+      "unitid": 461892,
+      "name": "Abcott Institute",
+      "city": "Southfield",
+      "lat": 42.446331,
+      "lon": -83.210617,
+      "totalCompletions": 106,
+      "byFamily": {
+        "47": 3,
+        "51": 103
+      }
+    },
+    {
+      "unitid": 168528,
+      "name": "Adrian College",
+      "city": "Adrian",
+      "lat": 41.898591,
+      "lon": -84.061481,
+      "totalCompletions": 438,
+      "byFamily": {
+        "03": 9,
+        "05": 1,
+        "09": 7,
+        "10": 1,
+        "11": 16,
+        "13": 46,
+        "16": 4,
+        "23": 8,
+        "24": 4,
+        "26": 41,
+        "27": 3,
+        "31": 72,
+        "38": 1,
+        "40": 8,
+        "42": 12,
+        "43": 26,
+        "44": 9,
+        "45": 6,
+        "50": 30,
+        "51": 18,
+        "52": 115,
+        "54": 1
+      }
+    },
+    {
+      "unitid": 168546,
+      "name": "Albion College",
+      "city": "Albion",
+      "lat": 42.245049,
+      "lon": -84.745639,
+      "totalCompletions": 300,
+      "byFamily": {
+        "03": 5,
+        "05": 3,
+        "09": 30,
+        "11": 3,
+        "13": 14,
+        "14": 2,
+        "16": 5,
+        "23": 8,
+        "26": 40,
+        "27": 5,
+        "30": 6,
+        "31": 33,
+        "38": 6,
+        "40": 10,
+        "42": 32,
+        "44": 1,
+        "45": 31,
+        "50": 17,
+        "52": 42,
+        "54": 7
+      }
+    },
+    {
+      "unitid": 168591,
+      "name": "Alma College",
+      "city": "Alma",
+      "lat": 43.38004,
+      "lon": -84.672053,
+      "totalCompletions": 357,
+      "byFamily": {
+        "03": 13,
+        "09": 12,
+        "11": 2,
+        "13": 51,
+        "14": 3,
+        "16": 1,
+        "23": 13,
+        "24": 1,
+        "26": 69,
+        "27": 7,
+        "30": 1,
+        "38": 2,
+        "40": 8,
+        "42": 37,
+        "45": 21,
+        "50": 27,
+        "51": 18,
+        "52": 63,
+        "54": 8
+      }
+    },
+    {
+      "unitid": 168607,
+      "name": "Alpena Community College",
+      "city": "Alpena",
+      "lat": 45.081647,
+      "lon": -83.445069,
+      "totalCompletions": 345,
+      "byFamily": {
+        "01": 1,
+        "10": 1,
+        "11": 5,
+        "13": 10,
+        "14": 8,
+        "15": 15,
+        "22": 1,
+        "24": 24,
+        "26": 2,
+        "30": 4,
+        "40": 3,
+        "42": 12,
+        "43": 6,
+        "45": 6,
+        "46": 107,
+        "47": 15,
+        "48": 18,
+        "50": 3,
+        "51": 71,
+        "52": 32,
+        "54": 1
+      }
+    },
+    {
+      "unitid": 168740,
+      "name": "Andrews University",
+      "city": "Berrien Springs",
+      "lat": 41.963859,
+      "lon": -86.355815,
+      "totalCompletions": 755,
+      "byFamily": {
+        "01": 9,
+        "04": 27,
+        "09": 4,
+        "11": 15,
+        "13": 46,
+        "14": 18,
+        "16": 16,
+        "19": 12,
+        "23": 11,
+        "24": 22,
+        "26": 31,
+        "27": 3,
+        "30": 8,
+        "31": 4,
+        "38": 21,
+        "39": 183,
+        "40": 3,
+        "42": 42,
+        "44": 34,
+        "45": 11,
+        "49": 7,
+        "50": 18,
+        "51": 164,
+        "52": 46
+      }
+    },
+    {
+      "unitid": 168786,
+      "name": "Aquinas College",
+      "city": "Grand Rapids",
+      "lat": 42.96019,
+      "lon": -85.628785,
+      "totalCompletions": 321,
+      "byFamily": {
+        "03": 4,
+        "09": 5,
+        "11": 6,
+        "13": 44,
+        "16": 8,
+        "19": 3,
+        "23": 9,
+        "24": 6,
+        "26": 19,
+        "27": 13,
+        "30": 5,
+        "31": 22,
+        "38": 4,
+        "39": 2,
+        "42": 20,
+        "45": 17,
+        "50": 18,
+        "51": 32,
+        "52": 78,
+        "54": 6
+      }
+    },
+    {
+      "unitid": 498049,
+      "name": "Arizona College of Nursing-Southfield",
+      "city": "Southfield",
+      "lat": 42.48156,
+      "lon": -83.260202,
+      "totalCompletions": 21,
+      "byFamily": {
+        "51": 21
+      }
+    },
+    {
+      "unitid": 168847,
+      "name": "Baker College",
+      "city": "Owosso",
+      "lat": 42.984804,
+      "lon": -84.172404,
+      "totalCompletions": 1006,
+      "byFamily": {
+        "01": 58,
+        "11": 71,
+        "12": 48,
+        "15": 3,
+        "19": 47,
+        "22": 14,
+        "24": 77,
+        "42": 46,
+        "43": 17,
+        "47": 22,
+        "51": 373,
+        "52": 230
+      }
+    },
+    {
+      "unitid": 380359,
+      "name": "Bay Mills Community College",
+      "city": "Brimley",
+      "lat": 46.45482,
+      "lon": -84.606312,
+      "totalCompletions": 151,
+      "byFamily": {
+        "05": 2,
+        "11": 3,
+        "13": 65,
+        "16": 8,
+        "24": 19,
+        "31": 1,
+        "43": 1,
+        "45": 8,
+        "46": 3,
+        "51": 24,
+        "52": 17
+      }
+    },
+    {
+      "unitid": 168883,
+      "name": "Bay de Noc Community College",
+      "city": "Escanaba",
+      "lat": 45.772586,
+      "lon": -87.085228,
+      "totalCompletions": 305,
+      "byFamily": {
+        "11": 6,
+        "14": 4,
+        "15": 31,
+        "19": 7,
+        "24": 83,
+        "43": 30,
+        "44": 10,
+        "47": 14,
+        "48": 12,
+        "50": 3,
+        "51": 51,
+        "52": 54
+      }
+    },
+    {
+      "unitid": 168892,
+      "name": "Bayshire Academy of Beauty Craft Inc",
+      "city": "Bay City",
+      "lat": 43.599758,
+      "lon": -83.88895,
+      "totalCompletions": 34,
+      "byFamily": {
+        "12": 25,
+        "51": 9
+      }
+    },
+    {
+      "unitid": 477002,
+      "name": "Brighton Institute of Cosmetology",
+      "city": "Brighton",
+      "lat": 42.521018,
+      "lon": -83.743486,
+      "totalCompletions": 74,
+      "byFamily": {
+        "12": 74
+      }
+    },
+    {
+      "unitid": 421665,
+      "name": "Cadillac Institute of Cosmetology",
+      "city": "Cadillac",
+      "lat": 44.251375,
+      "lon": -85.400655,
+      "totalCompletions": 19,
+      "byFamily": {
+        "12": 19
+      }
+    },
+    {
+      "unitid": 169099,
+      "name": "Calvin Theological Seminary",
+      "city": "Grand Rapids",
+      "lat": 42.927951,
+      "lon": -85.586439,
+      "totalCompletions": 60,
+      "byFamily": {
+        "39": 60
+      }
+    },
+    {
+      "unitid": 169080,
+      "name": "Calvin University",
+      "city": "Grand Rapids",
+      "lat": 42.929916,
+      "lon": -85.587548,
+      "totalCompletions": 934,
+      "byFamily": {
+        "03": 15,
+        "05": 4,
+        "09": 29,
+        "11": 28,
+        "13": 112,
+        "14": 62,
+        "16": 31,
+        "23": 13,
+        "26": 65,
+        "27": 8,
+        "30": 22,
+        "31": 34,
+        "38": 7,
+        "39": 56,
+        "40": 12,
+        "42": 41,
+        "44": 29,
+        "45": 47,
+        "50": 33,
+        "51": 162,
+        "52": 115,
+        "54": 9
+      }
+    },
+    {
+      "unitid": 169187,
+      "name": "Carnegie Institute",
+      "city": "Troy",
+      "lat": 42.53889,
+      "lon": -83.118801,
+      "totalCompletions": 70,
+      "byFamily": {
+        "51": 70
+      }
+    },
+    {
+      "unitid": 169248,
+      "name": "Central Michigan University",
+      "city": "Mount Pleasant",
+      "lat": 43.591203,
+      "lon": -84.77525,
+      "totalCompletions": 4372,
+      "byFamily": {
+        "03": 43,
+        "05": 16,
+        "09": 166,
+        "11": 569,
+        "13": 504,
+        "14": 74,
+        "15": 62,
+        "16": 27,
+        "19": 71,
+        "22": 13,
+        "23": 53,
+        "26": 185,
+        "27": 39,
+        "30": 15,
+        "31": 186,
+        "38": 8,
+        "40": 42,
+        "41": 1,
+        "42": 253,
+        "43": 44,
+        "44": 176,
+        "45": 113,
+        "49": 1,
+        "50": 123,
+        "51": 501,
+        "52": 1063,
+        "54": 24
+      }
+    },
+    {
+      "unitid": 486947,
+      "name": "Chamberlain University-Michigan",
+      "city": "Troy",
+      "lat": 42.557063,
+      "lon": -83.150571,
+      "totalCompletions": 239,
+      "byFamily": {
+        "51": 239
+      }
+    },
+    {
+      "unitid": 169327,
+      "name": "Cleary University",
+      "city": "Howell",
+      "lat": 42.586638,
+      "lon": -83.879987,
+      "totalCompletions": 652,
+      "byFamily": {
+        "52": 652
+      }
+    },
+    {
+      "unitid": 169442,
+      "name": "College for Creative Studies",
+      "city": "Detroit",
+      "lat": 42.361839,
+      "lon": -83.062352,
+      "totalCompletions": 343,
+      "byFamily": {
+        "10": 80,
+        "11": 25,
+        "13": 4,
+        "15": 74,
+        "30": 12,
+        "50": 148
+      }
+    },
+    {
+      "unitid": 169363,
+      "name": "Concordia University Ann Arbor",
+      "city": "Ann Arbor",
+      "lat": 42.273157,
+      "lon": -83.68268,
+      "totalCompletions": 277,
+      "byFamily": {
+        "09": 6,
+        "13": 64,
+        "14": 2,
+        "19": 4,
+        "23": 1,
+        "26": 8,
+        "27": 1,
+        "30": 8,
+        "31": 19,
+        "39": 8,
+        "42": 9,
+        "43": 8,
+        "44": 7,
+        "50": 3,
+        "51": 82,
+        "52": 46,
+        "54": 1
+      }
+    },
+    {
+      "unitid": 170037,
+      "name": "Cornerstone University",
+      "city": "Grand Rapids",
+      "lat": 42.979966,
+      "lon": -85.595328,
+      "totalCompletions": 477,
+      "byFamily": {
+        "09": 17,
+        "11": 1,
+        "13": 50,
+        "14": 7,
+        "16": 1,
+        "23": 8,
+        "24": 11,
+        "26": 9,
+        "27": 1,
+        "30": 2,
+        "31": 27,
+        "38": 11,
+        "39": 58,
+        "42": 72,
+        "44": 17,
+        "45": 3,
+        "50": 17,
+        "51": 22,
+        "52": 142,
+        "54": 1
+      }
+    },
+    {
+      "unitid": 169424,
+      "name": "Cranbrook Academy of Art",
+      "city": "Bloomfield Hills",
+      "lat": 42.568904,
+      "lon": -83.250681,
+      "totalCompletions": 60,
+      "byFamily": {
+        "30": 3,
+        "50": 57
+      }
+    },
+    {
+      "unitid": 169813,
+      "name": "Creative Hair School of Cosmetology",
+      "city": "Flint",
+      "lat": 42.980416,
+      "lon": -83.757927,
+      "totalCompletions": 16,
+      "byFamily": {
+        "12": 16
+      }
+    },
+    {
+      "unitid": 492096,
+      "name": "D&S School of Cosmetology",
+      "city": "Waterford",
+      "lat": 42.639596,
+      "lon": -83.369697,
+      "totalCompletions": 2,
+      "byFamily": {
+        "12": 2
+      }
+    },
+    {
+      "unitid": 492139,
+      "name": "DSDT",
+      "city": "Detroit",
+      "lat": 42.325621,
+      "lon": -83.081501,
+      "totalCompletions": 307,
+      "byFamily": {
+        "11": 260,
+        "50": 40,
+        "51": 7
+      }
+    },
+    {
+      "unitid": 169479,
+      "name": "Davenport University",
+      "city": "Grand Rapids",
+      "lat": 42.850013,
+      "lon": -85.533519,
+      "totalCompletions": 1263,
+      "byFamily": {
+        "11": 148,
+        "13": 47,
+        "22": 15,
+        "30": 19,
+        "31": 44,
+        "41": 7,
+        "43": 6,
+        "51": 337,
+        "52": 640
+      }
+    },
+    {
+      "unitid": 169503,
+      "name": "David Pressley School of Cosmetology",
+      "city": "Royal Oak",
+      "lat": 42.479729,
+      "lon": -83.146008,
+      "totalCompletions": 185,
+      "byFamily": {
+        "12": 185
+      }
+    },
+    {
+      "unitid": 169521,
+      "name": "Delta College",
+      "city": "University Center",
+      "lat": 43.559491,
+      "lon": -83.985943,
+      "totalCompletions": 1322,
+      "byFamily": {
+        "01": 8,
+        "09": 8,
+        "11": 52,
+        "12": 6,
+        "14": 7,
+        "15": 20,
+        "19": 28,
+        "22": 2,
+        "23": 11,
+        "24": 432,
+        "30": 1,
+        "31": 26,
+        "41": 9,
+        "43": 93,
+        "44": 8,
+        "46": 29,
+        "47": 38,
+        "48": 109,
+        "50": 16,
+        "51": 282,
+        "52": 137
+      }
+    },
+    {
+      "unitid": 169576,
+      "name": "Detroit Business Institute-Downriver",
+      "city": "Riverview",
+      "lat": 42.168682,
+      "lon": -83.191212,
+      "totalCompletions": 73,
+      "byFamily": {
+        "51": 73
+      }
+    },
+    {
+      "unitid": 169761,
+      "name": "Dorsey College",
+      "city": "Madison Heights",
+      "lat": 42.525318,
+      "lon": -83.107631,
+      "totalCompletions": 468,
+      "byFamily": {
+        "12": 106,
+        "47": 58,
+        "51": 304
+      }
+    },
+    {
+      "unitid": 483504,
+      "name": "Dorsey College-Dearborn",
+      "city": "Detroit",
+      "lat": 42.330658,
+      "lon": -83.219356,
+      "totalCompletions": 216,
+      "byFamily": {
+        "47": 61,
+        "51": 155
+      }
+    },
+    {
+      "unitid": 499185,
+      "name": "Dorsey College-Grand Rapids",
+      "city": "Grand Rapids",
+      "lat": 42.916234,
+      "lon": -85.542671,
+      "totalCompletions": 71,
+      "byFamily": {
+        "13": 6,
+        "51": 65
+      }
+    },
+    {
+      "unitid": 250744,
+      "name": "Dorsey College-Roseville",
+      "city": "Roseville",
+      "lat": 42.527764,
+      "lon": -82.915541,
+      "totalCompletions": 323,
+      "byFamily": {
+        "12": 84,
+        "47": 23,
+        "51": 216
+      }
+    },
+    {
+      "unitid": 460482,
+      "name": "Dorsey College-Saginaw",
+      "city": "Saginaw",
+      "lat": 43.47055,
+      "lon": -83.973056,
+      "totalCompletions": 165,
+      "byFamily": {
+        "47": 12,
+        "51": 153
+      }
+    },
+    {
+      "unitid": 247153,
+      "name": "Dorsey College-Wayne",
+      "city": "Wayne",
+      "lat": 42.28171,
+      "lon": -83.382299,
+      "totalCompletions": 163,
+      "byFamily": {
+        "47": 32,
+        "51": 131
+      }
+    },
+    {
+      "unitid": 495837,
+      "name": "Dorsey College-Woodhaven",
+      "city": "Woodhaven",
+      "lat": 42.142483,
+      "lon": -83.223919,
+      "totalCompletions": 186,
+      "byFamily": {
+        "13": 5,
+        "47": 21,
+        "51": 160
+      }
+    },
+    {
+      "unitid": 261719,
+      "name": "Dorsey School of Beauty",
+      "city": "Taylor",
+      "lat": 42.254745,
+      "lon": -83.259322,
+      "totalCompletions": 205,
+      "byFamily": {
+        "12": 205
+      }
+    },
+    {
+      "unitid": 261436,
+      "name": "Douglas J Aveda Institute",
+      "city": "East Lansing",
+      "lat": 42.734606,
+      "lon": -84.480467,
+      "totalCompletions": 857,
+      "byFamily": {
+        "12": 832,
+        "51": 25
+      }
+    },
+    {
+      "unitid": 496575,
+      "name": "Dymond Designs Beauty School",
+      "city": "Detroit",
+      "lat": 42.341646,
+      "lon": -83.013866,
+      "totalCompletions": 43,
+      "byFamily": {
+        "12": 43
+      }
+    },
+    {
+      "unitid": 169798,
+      "name": "Eastern Michigan University",
+      "city": "Ypsilanti",
+      "lat": 42.251675,
+      "lon": -83.627443,
+      "totalCompletions": 3462,
+      "byFamily": {
+        "01": 1,
+        "03": 26,
+        "04": 11,
+        "05": 11,
+        "09": 117,
+        "10": 7,
+        "11": 164,
+        "13": 591,
+        "14": 59,
+        "15": 106,
+        "16": 13,
+        "19": 16,
+        "22": 10,
+        "23": 35,
+        "26": 140,
+        "27": 19,
+        "30": 178,
+        "31": 49,
+        "38": 9,
+        "40": 36,
+        "42": 199,
+        "44": 177,
+        "45": 140,
+        "49": 35,
+        "50": 128,
+        "51": 638,
+        "52": 521,
+        "54": 26
+      }
+    },
+    {
+      "unitid": 247162,
+      "name": "Ecumenical Theological Seminary",
+      "city": "Detroit",
+      "lat": 42.344129,
+      "lon": -83.055266,
+      "totalCompletions": 24,
+      "byFamily": {
+        "39": 24
+      }
+    },
+    {
+      "unitid": 451282,
+      "name": "Elevate Salon Institute",
+      "city": "Royal Oak",
+      "lat": 42.525165,
+      "lon": -83.164514,
+      "totalCompletions": 175,
+      "byFamily": {
+        "12": 175
+      }
+    },
+    {
+      "unitid": 169284,
+      "name": "Empire Beauty School-Michigan",
+      "city": "Grand Rapids",
+      "lat": 43.028642,
+      "lon": -85.691067,
+      "totalCompletions": 126,
+      "byFamily": {
+        "12": 126
+      }
+    },
+    {
+      "unitid": 169910,
+      "name": "Ferris State University",
+      "city": "Big Rapids",
+      "lat": 43.687724,
+      "lon": -85.481925,
+      "totalCompletions": 2982,
+      "byFamily": {
+        "04": 9,
+        "09": 18,
+        "10": 106,
+        "11": 113,
+        "12": 3,
+        "13": 126,
+        "14": 31,
+        "15": 471,
+        "16": 3,
+        "19": 53,
+        "23": 35,
+        "24": 97,
+        "26": 75,
+        "27": 7,
+        "30": 43,
+        "40": 4,
+        "41": 11,
+        "42": 57,
+        "43": 246,
+        "44": 107,
+        "45": 7,
+        "47": 56,
+        "48": 88,
+        "50": 128,
+        "51": 596,
+        "52": 485,
+        "54": 7
+      }
+    },
+    {
+      "unitid": 455062,
+      "name": "French Academy of Cosmetology",
+      "city": "Spring Lake",
+      "lat": 43.075898,
+      "lon": -86.198004,
+      "totalCompletions": 52,
+      "byFamily": {
+        "12": 52
+      }
+    },
+    {
+      "unitid": 169974,
+      "name": "Glen Oaks Community College",
+      "city": "Centreville",
+      "lat": 41.892504,
+      "lon": -85.496929,
+      "totalCompletions": 234,
+      "byFamily": {
+        "01": 3,
+        "11": 8,
+        "15": 14,
+        "24": 88,
+        "43": 2,
+        "47": 4,
+        "48": 1,
+        "50": 7,
+        "51": 59,
+        "52": 48
+      }
+    },
+    {
+      "unitid": 169992,
+      "name": "Gogebic Community College",
+      "city": "Ironwood",
+      "lat": 46.471893,
+      "lon": -90.165592,
+      "totalCompletions": 192,
+      "byFamily": {
+        "03": 6,
+        "11": 6,
+        "13": 9,
+        "15": 3,
+        "24": 22,
+        "26": 4,
+        "30": 1,
+        "31": 4,
+        "42": 1,
+        "43": 3,
+        "44": 7,
+        "47": 7,
+        "48": 9,
+        "49": 11,
+        "51": 64,
+        "52": 35
+      }
+    },
+    {
+      "unitid": 170000,
+      "name": "Grace Christian University",
+      "city": "Wyoming",
+      "lat": 42.919541,
+      "lon": -85.692077,
+      "totalCompletions": 171,
+      "byFamily": {
+        "09": 6,
+        "13": 4,
+        "24": 8,
+        "30": 6,
+        "39": 67,
+        "42": 17,
+        "43": 3,
+        "44": 21,
+        "45": 5,
+        "50": 1,
+        "52": 33
+      }
+    },
+    {
+      "unitid": 170055,
+      "name": "Grand Rapids Community College",
+      "city": "Grand Rapids",
+      "lat": 42.967076,
+      "lon": -85.665625,
+      "totalCompletions": 2109,
+      "byFamily": {
+        "04": 10,
+        "10": 13,
+        "11": 108,
+        "12": 59,
+        "13": 2,
+        "15": 91,
+        "19": 61,
+        "24": 930,
+        "43": 28,
+        "46": 43,
+        "47": 94,
+        "48": 73,
+        "50": 47,
+        "51": 265,
+        "52": 285
+      }
+    },
+    {
+      "unitid": 170082,
+      "name": "Grand Valley State University",
+      "city": "Allendale",
+      "lat": 42.963001,
+      "lon": -85.889826,
+      "totalCompletions": 6172,
+      "byFamily": {
+        "01": 6,
+        "03": 96,
+        "05": 5,
+        "09": 225,
+        "11": 351,
+        "13": 687,
+        "14": 141,
+        "15": 18,
+        "16": 33,
+        "22": 56,
+        "23": 111,
+        "24": 92,
+        "26": 422,
+        "27": 95,
+        "30": 70,
+        "31": 238,
+        "38": 8,
+        "40": 29,
+        "42": 343,
+        "43": 117,
+        "44": 276,
+        "45": 201,
+        "50": 177,
+        "51": 992,
+        "52": 1317,
+        "54": 66
+      }
+    },
+    {
+      "unitid": 495110,
+      "name": "Great Lakes Boat Building School",
+      "city": "Cedarville",
+      "lat": 45.992299,
+      "lon": -84.362578,
+      "totalCompletions": 21,
+      "byFamily": {
+        "47": 21
+      }
+    },
+    {
+      "unitid": 170091,
+      "name": "Great Lakes Christian College",
+      "city": "Lansing",
+      "lat": 42.754249,
+      "lon": -84.638714,
+      "totalCompletions": 50,
+      "byFamily": {
+        "09": 2,
+        "13": 1,
+        "19": 3,
+        "24": 13,
+        "39": 11,
+        "42": 11,
+        "52": 9
+      }
+    },
+    {
+      "unitid": 170240,
+      "name": "Henry Ford College",
+      "city": "Dearborn",
+      "lat": 42.324639,
+      "lon": -83.236056,
+      "totalCompletions": 3126,
+      "byFamily": {
+        "03": 4,
+        "04": 36,
+        "05": 14,
+        "09": 13,
+        "10": 5,
+        "11": 232,
+        "12": 58,
+        "13": 70,
+        "14": 51,
+        "15": 67,
+        "16": 2,
+        "22": 47,
+        "23": 3,
+        "24": 1650,
+        "26": 21,
+        "31": 2,
+        "40": 3,
+        "42": 15,
+        "43": 22,
+        "44": 28,
+        "45": 4,
+        "46": 3,
+        "47": 44,
+        "48": 1,
+        "50": 20,
+        "51": 364,
+        "52": 347
+      }
+    },
+    {
+      "unitid": 168555,
+      "name": "Hillsdale Beauty College",
+      "city": "Hillsdale",
+      "lat": 41.918718,
+      "lon": -84.631429,
+      "totalCompletions": 11,
+      "byFamily": {
+        "12": 11
+      }
+    },
+    {
+      "unitid": 170286,
+      "name": "Hillsdale College",
+      "city": "Hillsdale",
+      "lat": 41.933682,
+      "lon": -84.633195,
+      "totalCompletions": 442,
+      "byFamily": {
+        "05": 1,
+        "09": 6,
+        "13": 11,
+        "16": 20,
+        "23": 34,
+        "26": 37,
+        "27": 39,
+        "31": 21,
+        "38": 23,
+        "40": 10,
+        "42": 14,
+        "45": 104,
+        "50": 20,
+        "52": 51,
+        "54": 51
+      }
+    },
+    {
+      "unitid": 170301,
+      "name": "Hope College",
+      "city": "Holland",
+      "lat": 42.787247,
+      "lon": -86.100971,
+      "totalCompletions": 822,
+      "byFamily": {
+        "03": 6,
+        "05": 10,
+        "09": 53,
+        "11": 15,
+        "13": 94,
+        "14": 59,
+        "16": 37,
+        "23": 14,
+        "26": 65,
+        "27": 7,
+        "30": 13,
+        "31": 23,
+        "38": 29,
+        "40": 28,
+        "42": 88,
+        "44": 14,
+        "45": 44,
+        "50": 23,
+        "51": 48,
+        "52": 145,
+        "54": 7
+      }
+    },
+    {
+      "unitid": 443137,
+      "name": "Irene's Myomassology Institute",
+      "city": "Southfield",
+      "lat": 42.480113,
+      "lon": -83.287169,
+      "totalCompletions": 50,
+      "byFamily": {
+        "51": 50
+      }
+    },
+    {
+      "unitid": 170444,
+      "name": "Jackson College",
+      "city": "Jackson",
+      "lat": 42.16483,
+      "lon": -84.403942,
+      "totalCompletions": 2093,
+      "byFamily": {
+        "01": 3,
+        "03": 4,
+        "09": 7,
+        "10": 3,
+        "11": 58,
+        "14": 2,
+        "15": 32,
+        "24": 1362,
+        "31": 3,
+        "40": 35,
+        "42": 32,
+        "43": 13,
+        "44": 2,
+        "46": 55,
+        "48": 13,
+        "50": 48,
+        "51": 254,
+        "52": 167
+      }
+    },
+    {
+      "unitid": 170532,
+      "name": "Kalamazoo College",
+      "city": "Kalamazoo",
+      "lat": 42.290789,
+      "lon": -85.601857,
+      "totalCompletions": 399,
+      "byFamily": {
+        "05": 14,
+        "11": 18,
+        "16": 51,
+        "23": 29,
+        "26": 66,
+        "27": 11,
+        "30": 3,
+        "38": 13,
+        "40": 22,
+        "42": 51,
+        "45": 43,
+        "50": 17,
+        "52": 45,
+        "54": 16
+      }
+    },
+    {
+      "unitid": 170541,
+      "name": "Kalamazoo Valley Community College",
+      "city": "Kalamazoo",
+      "lat": 42.225948,
+      "lon": -85.682144,
+      "totalCompletions": 1023,
+      "byFamily": {
+        "01": 7,
+        "10": 13,
+        "11": 22,
+        "12": 24,
+        "13": 4,
+        "14": 28,
+        "15": 87,
+        "22": 3,
+        "24": 439,
+        "30": 9,
+        "31": 5,
+        "41": 5,
+        "43": 16,
+        "47": 65,
+        "48": 43,
+        "50": 11,
+        "51": 166,
+        "52": 76
+      }
+    },
+    {
+      "unitid": 170550,
+      "name": "Kellogg Community College",
+      "city": "Battle Creek",
+      "lat": 42.335638,
+      "lon": -85.177329,
+      "totalCompletions": 939,
+      "byFamily": {
+        "01": 4,
+        "10": 23,
+        "11": 5,
+        "15": 16,
+        "19": 19,
+        "23": 2,
+        "24": 194,
+        "31": 3,
+        "43": 59,
+        "44": 13,
+        "46": 5,
+        "47": 21,
+        "48": 18,
+        "50": 5,
+        "51": 412,
+        "52": 140
+      }
+    },
+    {
+      "unitid": 169983,
+      "name": "Kettering University",
+      "city": "Flint",
+      "lat": 43.012468,
+      "lon": -83.71282,
+      "totalCompletions": 505,
+      "byFamily": {
+        "11": 49,
+        "14": 321,
+        "15": 21,
+        "26": 13,
+        "27": 1,
+        "40": 4,
+        "52": 96
+      }
+    },
+    {
+      "unitid": 461315,
+      "name": "Keweenaw Bay Ojibwa Community College",
+      "city": "LAnse",
+      "lat": 46.764477,
+      "lon": -88.447052,
+      "totalCompletions": 23,
+      "byFamily": {
+        "03": 5,
+        "05": 1,
+        "13": 5,
+        "24": 1,
+        "51": 4,
+        "52": 7
+      }
+    },
+    {
+      "unitid": 170587,
+      "name": "Kirtland Community College",
+      "city": "Grayling",
+      "lat": 44.601785,
+      "lon": -84.706254,
+      "totalCompletions": 316,
+      "byFamily": {
+        "12": 27,
+        "15": 15,
+        "24": 75,
+        "43": 32,
+        "47": 42,
+        "48": 18,
+        "50": 3,
+        "51": 82,
+        "52": 22
+      }
+    },
+    {
+      "unitid": 171881,
+      "name": "Kuyper College",
+      "city": "Grand Rapids",
+      "lat": 43.02195,
+      "lon": -85.592657,
+      "totalCompletions": 20,
+      "byFamily": {
+        "24": 3,
+        "39": 4,
+        "44": 10,
+        "52": 3
+      }
+    },
+    {
+      "unitid": 457633,
+      "name": "L'esprit Academy",
+      "city": "Canton",
+      "lat": 42.321904,
+      "lon": -83.457386,
+      "totalCompletions": 241,
+      "byFamily": {
+        "12": 241
+      }
+    },
+    {
+      "unitid": 170620,
+      "name": "Lake Michigan College",
+      "city": "Benton Harbor",
+      "lat": 42.097276,
+      "lon": -86.393445,
+      "totalCompletions": 462,
+      "byFamily": {
+        "01": 7,
+        "09": 2,
+        "11": 11,
+        "12": 3,
+        "13": 5,
+        "14": 7,
+        "19": 7,
+        "23": 5,
+        "24": 141,
+        "26": 1,
+        "30": 31,
+        "40": 1,
+        "42": 10,
+        "43": 11,
+        "45": 10,
+        "48": 19,
+        "50": 12,
+        "51": 108,
+        "52": 70,
+        "54": 1
+      }
+    },
+    {
+      "unitid": 170639,
+      "name": "Lake Superior State University",
+      "city": "Sault Ste Marie",
+      "lat": 46.492849,
+      "lon": -84.365573,
+      "totalCompletions": 475,
+      "byFamily": {
+        "03": 32,
+        "11": 7,
+        "13": 31,
+        "14": 29,
+        "15": 20,
+        "23": 3,
+        "24": 66,
+        "26": 32,
+        "29": 2,
+        "31": 21,
+        "40": 28,
+        "41": 1,
+        "42": 13,
+        "43": 68,
+        "44": 4,
+        "45": 14,
+        "51": 54,
+        "52": 50
+      }
+    },
+    {
+      "unitid": 451291,
+      "name": "Lakewood School of Therapeutic Massage",
+      "city": "Port Huron",
+      "lat": 42.97236,
+      "lon": -82.425714,
+      "totalCompletions": 16,
+      "byFamily": {
+        "51": 16
+      }
+    },
+    {
+      "unitid": 170657,
+      "name": "Lansing Community College",
+      "city": "Lansing",
+      "lat": 42.738435,
+      "lon": -84.55157,
+      "totalCompletions": 1847,
+      "byFamily": {
+        "04": 5,
+        "05": 1,
+        "09": 6,
+        "10": 39,
+        "11": 98,
+        "13": 18,
+        "14": 20,
+        "15": 22,
+        "16": 3,
+        "19": 13,
+        "22": 12,
+        "23": 7,
+        "24": 436,
+        "26": 8,
+        "27": 1,
+        "30": 3,
+        "31": 12,
+        "38": 2,
+        "40": 1,
+        "42": 53,
+        "43": 76,
+        "44": 8,
+        "45": 22,
+        "46": 61,
+        "47": 154,
+        "48": 47,
+        "50": 16,
+        "51": 593,
+        "52": 105,
+        "54": 5
+      }
+    },
+    {
+      "unitid": 170675,
+      "name": "Lawrence Technological University",
+      "city": "Southfield",
+      "lat": 42.474072,
+      "lon": -83.25003,
+      "totalCompletions": 652,
+      "byFamily": {
+        "04": 124,
+        "09": 12,
+        "10": 11,
+        "11": 65,
+        "14": 264,
+        "15": 26,
+        "24": 18,
+        "42": 7,
+        "50": 23,
+        "51": 23,
+        "52": 79
+      }
+    },
+    {
+      "unitid": 170736,
+      "name": "M J Murphy Beauty College of Mount Pleasant",
+      "city": "Mount Pleasant",
+      "lat": 43.60429,
+      "lon": -84.777927,
+      "totalCompletions": 37,
+      "byFamily": {
+        "12": 37
+      }
+    },
+    {
+      "unitid": 170790,
+      "name": "Macomb Community College",
+      "city": "Warren",
+      "lat": 42.50599,
+      "lon": -82.972377,
+      "totalCompletions": 2485,
+      "byFamily": {
+        "01": 37,
+        "09": 5,
+        "11": 159,
+        "12": 24,
+        "14": 6,
+        "15": 187,
+        "19": 21,
+        "22": 26,
+        "24": 1054,
+        "27": 6,
+        "31": 20,
+        "42": 33,
+        "43": 47,
+        "44": 33,
+        "46": 11,
+        "47": 93,
+        "48": 56,
+        "50": 10,
+        "51": 357,
+        "52": 300
+      }
+    },
+    {
+      "unitid": 170806,
+      "name": "Madonna University",
+      "city": "Livonia",
+      "lat": 42.384323,
+      "lon": -83.404722,
+      "totalCompletions": 639,
+      "byFamily": {
+        "09": 1,
+        "11": 2,
+        "13": 60,
+        "15": 3,
+        "16": 11,
+        "19": 7,
+        "22": 5,
+        "24": 11,
+        "26": 20,
+        "30": 3,
+        "31": 19,
+        "42": 11,
+        "43": 114,
+        "44": 37,
+        "45": 4,
+        "50": 15,
+        "51": 190,
+        "52": 125,
+        "54": 1
+      }
+    },
+    {
+      "unitid": 457642,
+      "name": "Marketti Academy of Cosmetology",
+      "city": "Waterford",
+      "lat": 42.683352,
+      "lon": -83.374733,
+      "totalCompletions": 51,
+      "byFamily": {
+        "12": 51
+      }
+    },
+    {
+      "unitid": 490489,
+      "name": "Metro Detroit Barber College",
+      "city": "Detroit",
+      "lat": 42.416931,
+      "lon": -83.145979,
+      "totalCompletions": 13,
+      "byFamily": {
+        "12": 13
+      }
+    },
+    {
+      "unitid": 172422,
+      "name": "Michigan Career and Technical Institute",
+      "city": "Plainwell",
+      "lat": 42.504599,
+      "lon": -85.517049,
+      "totalCompletions": 130,
+      "byFamily": {
+        "01": 9,
+        "10": 7,
+        "11": 12,
+        "12": 29,
+        "46": 8,
+        "47": 20,
+        "48": 30,
+        "51": 11,
+        "52": 4
+      }
+    },
+    {
+      "unitid": 170611,
+      "name": "Michigan College of Beauty-Monroe",
+      "city": "Monroe",
+      "lat": 41.907014,
+      "lon": -83.407005,
+      "totalCompletions": 78,
+      "byFamily": {
+        "12": 78
+      }
+    },
+    {
+      "unitid": 381370,
+      "name": "Michigan College of Beauty-Troy",
+      "city": "Troy",
+      "lat": 42.570337,
+      "lon": -83.12734,
+      "totalCompletions": 156,
+      "byFamily": {
+        "12": 156
+      }
+    },
+    {
+      "unitid": 169220,
+      "name": "Michigan School of Psychology",
+      "city": "Farmington Hills",
+      "lat": 42.491427,
+      "lon": -83.359575,
+      "totalCompletions": 73,
+      "byFamily": {
+        "42": 73
+      }
+    },
+    {
+      "unitid": 171100,
+      "name": "Michigan State University",
+      "city": "East Lansing",
+      "lat": 42.73212,
+      "lon": -84.476111,
+      "totalCompletions": 13017,
+      "byFamily": {
+        "01": 549,
+        "03": 232,
+        "04": 6,
+        "05": 13,
+        "09": 1001,
+        "10": 1,
+        "11": 466,
+        "13": 503,
+        "14": 932,
+        "15": 224,
+        "16": 109,
+        "19": 96,
+        "22": 397,
+        "23": 103,
+        "24": 34,
+        "26": 1460,
+        "27": 145,
+        "30": 370,
+        "31": 325,
+        "38": 3,
+        "40": 229,
+        "42": 630,
+        "43": 371,
+        "44": 102,
+        "45": 799,
+        "46": 18,
+        "50": 438,
+        "51": 1247,
+        "52": 2160,
+        "54": 54
+      }
+    },
+    {
+      "unitid": 171128,
+      "name": "Michigan Technological University",
+      "city": "Houghton",
+      "lat": 47.11866,
+      "lon": -88.548092,
+      "totalCompletions": 1909,
+      "byFamily": {
+        "03": 70,
+        "09": 17,
+        "10": 6,
+        "11": 149,
+        "13": 1,
+        "14": 960,
+        "15": 74,
+        "23": 8,
+        "24": 8,
+        "26": 47,
+        "27": 82,
+        "30": 92,
+        "31": 24,
+        "40": 72,
+        "42": 16,
+        "43": 3,
+        "44": 10,
+        "45": 31,
+        "50": 21,
+        "51": 90,
+        "52": 127,
+        "54": 1
+      }
+    },
+    {
+      "unitid": 171155,
+      "name": "Mid Michigan College",
+      "city": "Harrison",
+      "lat": 43.969586,
+      "lon": -84.763715,
+      "totalCompletions": 519,
+      "byFamily": {
+        "03": 1,
+        "11": 24,
+        "13": 13,
+        "15": 24,
+        "24": 111,
+        "43": 4,
+        "47": 46,
+        "48": 21,
+        "50": 5,
+        "51": 157,
+        "52": 113
+      }
+    },
+    {
+      "unitid": 171225,
+      "name": "Monroe County Community College",
+      "city": "Monroe",
+      "lat": 41.91617,
+      "lon": -83.470274,
+      "totalCompletions": 381,
+      "byFamily": {
+        "01": 1,
+        "11": 24,
+        "13": 6,
+        "15": 31,
+        "24": 142,
+        "43": 10,
+        "47": 6,
+        "48": 10,
+        "50": 14,
+        "51": 77,
+        "52": 60
+      }
+    },
+    {
+      "unitid": 171234,
+      "name": "Montcalm Community College",
+      "city": "Sidney",
+      "lat": 43.253191,
+      "lon": -85.100181,
+      "totalCompletions": 301,
+      "byFamily": {
+        "01": 2,
+        "11": 5,
+        "13": 4,
+        "15": 2,
+        "19": 10,
+        "24": 122,
+        "42": 8,
+        "43": 4,
+        "44": 4,
+        "47": 28,
+        "48": 5,
+        "50": 6,
+        "51": 70,
+        "52": 31
+      }
+    },
+    {
+      "unitid": 500430,
+      "name": "Mosley School of Cosmetology",
+      "city": "Kentwood",
+      "lat": 42.882294,
+      "lon": -85.604279,
+      "totalCompletions": 71,
+      "byFamily": {
+        "12": 71
+      }
+    },
+    {
+      "unitid": 496478,
+      "name": "Motion Picture Institute",
+      "city": "Troy",
+      "lat": 42.55223,
+      "lon": -83.166066,
+      "totalCompletions": 50,
+      "byFamily": {
+        "50": 50
+      }
+    },
+    {
+      "unitid": 169275,
+      "name": "Mott Community College",
+      "city": "Flint",
+      "lat": 43.019941,
+      "lon": -83.67243,
+      "totalCompletions": 1298,
+      "byFamily": {
+        "11": 53,
+        "12": 79,
+        "15": 48,
+        "16": 3,
+        "19": 24,
+        "24": 586,
+        "26": 96,
+        "30": 1,
+        "31": 1,
+        "43": 29,
+        "46": 3,
+        "47": 7,
+        "48": 5,
+        "50": 31,
+        "51": 193,
+        "52": 139
+      }
+    },
+    {
+      "unitid": 171304,
+      "name": "Muskegon Community College",
+      "city": "Muskegon",
+      "lat": 43.250329,
+      "lon": -86.196384,
+      "totalCompletions": 637,
+      "byFamily": {
+        "01": 4,
+        "09": 3,
+        "10": 3,
+        "11": 20,
+        "13": 31,
+        "14": 4,
+        "15": 33,
+        "24": 237,
+        "31": 1,
+        "42": 10,
+        "43": 5,
+        "44": 2,
+        "47": 9,
+        "48": 13,
+        "50": 17,
+        "51": 185,
+        "52": 60
+      }
+    },
+    {
+      "unitid": 171395,
+      "name": "North Central Michigan College",
+      "city": "Petoskey",
+      "lat": 45.361727,
+      "lon": -84.954183,
+      "totalCompletions": 266,
+      "byFamily": {
+        "09": 1,
+        "10": 4,
+        "11": 5,
+        "13": 4,
+        "15": 1,
+        "24": 152,
+        "40": 20,
+        "43": 6,
+        "48": 4,
+        "50": 8,
+        "51": 31,
+        "52": 30
+      }
+    },
+    {
+      "unitid": 171456,
+      "name": "Northern Michigan University",
+      "city": "Marquette",
+      "lat": 46.559751,
+      "lon": -87.406568,
+      "totalCompletions": 1760,
+      "byFamily": {
+        "01": 42,
+        "03": 85,
+        "05": 10,
+        "09": 31,
+        "11": 28,
+        "12": 25,
+        "13": 176,
+        "14": 1,
+        "15": 31,
+        "16": 12,
+        "22": 8,
+        "23": 36,
+        "24": 101,
+        "26": 130,
+        "27": 13,
+        "29": 23,
+        "30": 9,
+        "31": 72,
+        "38": 4,
+        "40": 26,
+        "42": 77,
+        "43": 67,
+        "44": 70,
+        "45": 77,
+        "46": 42,
+        "47": 16,
+        "48": 32,
+        "50": 71,
+        "51": 231,
+        "52": 206,
+        "54": 8
+      }
+    },
+    {
+      "unitid": 171483,
+      "name": "Northwestern Michigan College",
+      "city": "Traverse City",
+      "lat": 44.765436,
+      "lon": -85.585517,
+      "totalCompletions": 562,
+      "byFamily": {
+        "01": 1,
+        "03": 4,
+        "10": 10,
+        "11": 15,
+        "12": 18,
+        "14": 8,
+        "15": 23,
+        "19": 11,
+        "24": 222,
+        "43": 15,
+        "46": 13,
+        "47": 5,
+        "48": 6,
+        "49": 79,
+        "51": 104,
+        "52": 28
+      }
+    },
+    {
+      "unitid": 168573,
+      "name": "Northwestern Technological Institute",
+      "city": "Southfield",
+      "lat": 42.4721,
+      "lon": -83.238868,
+      "totalCompletions": 473,
+      "byFamily": {
+        "15": 473
+      }
+    },
+    {
+      "unitid": 171492,
+      "name": "Northwood University",
+      "city": "Midland",
+      "lat": 43.628717,
+      "lon": -84.27682,
+      "totalCompletions": 815,
+      "byFamily": {
+        "09": 7,
+        "11": 42,
+        "31": 26,
+        "51": 17,
+        "52": 723
+      }
+    },
+    {
+      "unitid": 447980,
+      "name": "Nuvo College of Cosmetology",
+      "city": "Norton Shores",
+      "lat": 43.190304,
+      "lon": -86.266315,
+      "totalCompletions": 21,
+      "byFamily": {
+        "12": 21
+      }
+    },
+    {
+      "unitid": 171535,
+      "name": "Oakland Community College",
+      "city": "Auburn Hills",
+      "lat": 42.646226,
+      "lon": -83.224283,
+      "totalCompletions": 2307,
+      "byFamily": {
+        "04": 17,
+        "09": 38,
+        "11": 69,
+        "12": 12,
+        "13": 54,
+        "14": 52,
+        "15": 75,
+        "19": 29,
+        "22": 39,
+        "24": 818,
+        "25": 8,
+        "30": 2,
+        "41": 92,
+        "43": 215,
+        "44": 87,
+        "46": 2,
+        "47": 65,
+        "48": 40,
+        "50": 24,
+        "51": 343,
+        "52": 226
+      }
+    },
+    {
+      "unitid": 171571,
+      "name": "Oakland University",
+      "city": "Rochester Hills",
+      "lat": 42.674573,
+      "lon": -83.216418,
+      "totalCompletions": 4198,
+      "byFamily": {
+        "03": 27,
+        "05": 6,
+        "09": 105,
+        "11": 238,
+        "13": 358,
+        "14": 371,
+        "15": 31,
+        "16": 36,
+        "23": 86,
+        "24": 142,
+        "26": 168,
+        "27": 21,
+        "30": 6,
+        "31": 43,
+        "38": 9,
+        "40": 21,
+        "42": 219,
+        "43": 64,
+        "44": 162,
+        "45": 84,
+        "50": 160,
+        "51": 1100,
+        "52": 701,
+        "54": 40
+      }
+    },
+    {
+      "unitid": 391005,
+      "name": "P&A Scholars Beauty School",
+      "city": "Detroit",
+      "lat": 42.376091,
+      "lon": -83.157878,
+      "totalCompletions": 46,
+      "byFamily": {
+        "12": 46
+      }
+    },
+    {
+      "unitid": 484093,
+      "name": "Paul Mitchell the School-Farmington Hills",
+      "city": "Farmington Hills",
+      "lat": 42.498205,
+      "lon": -83.357682,
+      "totalCompletions": 50,
+      "byFamily": {
+        "12": 50
+      }
+    },
+    {
+      "unitid": 172680,
+      "name": "Paul Mitchell the School-Grand Rapids",
+      "city": "Kentwood",
+      "lat": 42.910707,
+      "lon": -85.596605,
+      "totalCompletions": 53,
+      "byFamily": {
+        "12": 53
+      }
+    },
+    {
+      "unitid": 446288,
+      "name": "Paul Mitchell the School-Great Lakes",
+      "city": "Port Huron",
+      "lat": 42.978839,
+      "lon": -82.458848,
+      "totalCompletions": 42,
+      "byFamily": {
+        "12": 42
+      }
+    },
+    {
+      "unitid": 449977,
+      "name": "Paul Mitchell the School-Michigan",
+      "city": "Sterling Heights",
+      "lat": 42.593439,
+      "lon": -83.028804,
+      "totalCompletions": 112,
+      "byFamily": {
+        "12": 112
+      }
+    },
+    {
+      "unitid": 171775,
+      "name": "Port Huron Cosmetology College",
+      "city": "Waterford",
+      "lat": 42.700677,
+      "lon": -83.398624,
+      "totalCompletions": 25,
+      "byFamily": {
+        "12": 25
+      }
+    },
+    {
+      "unitid": 461944,
+      "name": "Protege Academy",
+      "city": "East Lansing",
+      "lat": 42.724862,
+      "lon": -84.452903,
+      "totalCompletions": 56,
+      "byFamily": {
+        "12": 56
+      }
+    },
+    {
+      "unitid": 487083,
+      "name": "Protege Academy",
+      "city": "Mt. Pleasant",
+      "lat": 43.61137,
+      "lon": -84.751095,
+      "totalCompletions": 24,
+      "byFamily": {
+        "12": 24
+      }
+    },
+    {
+      "unitid": 170967,
+      "name": "Rochester University",
+      "city": "Rochester Hills",
+      "lat": 42.667521,
+      "lon": -83.144959,
+      "totalCompletions": 196,
+      "byFamily": {
+        "09": 14,
+        "11": 4,
+        "13": 46,
+        "23": 2,
+        "24": 19,
+        "26": 3,
+        "30": 5,
+        "31": 12,
+        "39": 10,
+        "42": 24,
+        "50": 3,
+        "51": 27,
+        "52": 27
+      }
+    },
+    {
+      "unitid": 490841,
+      "name": "Ross College-Grand Rapids North",
+      "city": "Grand Rapids",
+      "lat": 43.026716,
+      "lon": -85.630252,
+      "totalCompletions": 215,
+      "byFamily": {
+        "51": 215
+      }
+    },
+    {
+      "unitid": 261685,
+      "name": "Ross Medical Education Center-Ann Arbor",
+      "city": "Ann Arbor",
+      "lat": 42.25294,
+      "lon": -83.666667,
+      "totalCompletions": 19,
+      "byFamily": {
+        "51": 19
+      }
+    },
+    {
+      "unitid": 456515,
+      "name": "Ross Medical Education Center-Battle Creek",
+      "city": "Battle Creek",
+      "lat": 42.247801,
+      "lon": -85.20031,
+      "totalCompletions": 33,
+      "byFamily": {
+        "51": 33
+      }
+    },
+    {
+      "unitid": 261676,
+      "name": "Ross Medical Education Center-Brighton",
+      "city": "Brighton",
+      "lat": 42.548468,
+      "lon": -83.796918,
+      "totalCompletions": 41,
+      "byFamily": {
+        "51": 41
+      }
+    },
+    {
+      "unitid": 460127,
+      "name": "Ross Medical Education Center-Canton",
+      "city": "Canton",
+      "lat": 42.324442,
+      "lon": -83.482675,
+      "totalCompletions": 55,
+      "byFamily": {
+        "01": 20,
+        "51": 35
+      }
+    },
+    {
+      "unitid": 460093,
+      "name": "Ross Medical Education Center-Davison",
+      "city": "Davison",
+      "lat": 43.021829,
+      "lon": -83.516551,
+      "totalCompletions": 27,
+      "byFamily": {
+        "51": 27
+      }
+    },
+    {
+      "unitid": 172015,
+      "name": "Ross Medical Education Center-Flint",
+      "city": "Flint",
+      "lat": 42.986442,
+      "lon": -83.751751,
+      "totalCompletions": 50,
+      "byFamily": {
+        "51": 50
+      }
+    },
+    {
+      "unitid": 365833,
+      "name": "Ross Medical Education Center-Kentwood",
+      "city": "Kentwood",
+      "lat": 42.880955,
+      "lon": -85.605379,
+      "totalCompletions": 95,
+      "byFamily": {
+        "51": 95
+      }
+    },
+    {
+      "unitid": 171988,
+      "name": "Ross Medical Education Center-Lansing",
+      "city": "Lansing",
+      "lat": 42.741855,
+      "lon": -84.605807,
+      "totalCompletions": 73,
+      "byFamily": {
+        "51": 73
+      }
+    },
+    {
+      "unitid": 488970,
+      "name": "Ross Medical Education Center-Midland",
+      "city": "Midland",
+      "lat": 43.641877,
+      "lon": -84.258017,
+      "totalCompletions": 72,
+      "byFamily": {
+        "51": 72
+      }
+    },
+    {
+      "unitid": 452072,
+      "name": "Ross Medical Education Center-New Baltimore",
+      "city": "New Baltimore",
+      "lat": 42.677429,
+      "lon": -82.751334,
+      "totalCompletions": 34,
+      "byFamily": {
+        "01": 9,
+        "51": 25
+      }
+    },
+    {
+      "unitid": 363013,
+      "name": "Ross Medical Education Center-Port Huron",
+      "city": "Port Huron",
+      "lat": 43.024632,
+      "lon": -82.452984,
+      "totalCompletions": 24,
+      "byFamily": {
+        "51": 24
+      }
+    },
+    {
+      "unitid": 490814,
+      "name": "Ross Medical Education Center-Portage",
+      "city": "Portage",
+      "lat": 42.226549,
+      "lon": -85.588596,
+      "totalCompletions": 112,
+      "byFamily": {
+        "01": 15,
+        "51": 97
+      }
+    },
+    {
+      "unitid": 365824,
+      "name": "Ross Medical Education Center-Roosevelt Park",
+      "city": "Roosevelt Park",
+      "lat": 43.191474,
+      "lon": -86.267098,
+      "totalCompletions": 80,
+      "byFamily": {
+        "51": 80
+      }
+    },
+    {
+      "unitid": 247409,
+      "name": "Ross Medical Education Center-Saginaw",
+      "city": "Saginaw",
+      "lat": 43.469473,
+      "lon": -83.967884,
+      "totalCompletions": 53,
+      "byFamily": {
+        "51": 53
+      }
+    },
+    {
+      "unitid": 367158,
+      "name": "Ross Medical Education Center-Taylor",
+      "city": "Taylor",
+      "lat": 42.194933,
+      "lon": -83.250307,
+      "totalCompletions": 33,
+      "byFamily": {
+        "51": 33
+      }
+    },
+    {
+      "unitid": 171997,
+      "name": "Ross Medical Education Center-Warren",
+      "city": "Warren",
+      "lat": 42.506481,
+      "lon": -83.065785,
+      "totalCompletions": 109,
+      "byFamily": {
+        "01": 9,
+        "51": 100
+      }
+    },
+    {
+      "unitid": 172033,
+      "name": "Sacred Heart Major Seminary",
+      "city": "Detroit",
+      "lat": 42.375248,
+      "lon": -83.111682,
+      "totalCompletions": 56,
+      "byFamily": {
+        "38": 10,
+        "39": 46
+      }
+    },
+    {
+      "unitid": 441070,
+      "name": "Saginaw Chippewa Tribal College",
+      "city": "Mount Pleasant",
+      "lat": 43.612084,
+      "lon": -84.731121,
+      "totalCompletions": 15,
+      "byFamily": {
+        "05": 2,
+        "24": 6,
+        "30": 1,
+        "52": 6
+      }
+    },
+    {
+      "unitid": 172051,
+      "name": "Saginaw Valley State University",
+      "city": "University Center",
+      "lat": 43.51176,
+      "lon": -83.964273,
+      "totalCompletions": 1570,
+      "byFamily": {
+        "03": 1,
+        "09": 27,
+        "11": 60,
+        "13": 229,
+        "14": 50,
+        "15": 15,
+        "16": 6,
+        "23": 18,
+        "24": 29,
+        "26": 65,
+        "27": 15,
+        "30": 2,
+        "31": 36,
+        "40": 10,
+        "42": 71,
+        "43": 77,
+        "44": 121,
+        "45": 24,
+        "50": 41,
+        "51": 429,
+        "52": 232,
+        "54": 12
+      }
+    },
+    {
+      "unitid": 480727,
+      "name": "School of Missionary Aviation Technology",
+      "city": "Ionia",
+      "lat": 42.941371,
+      "lon": -85.07224,
+      "totalCompletions": 32,
+      "byFamily": {
+        "47": 29,
+        "49": 3
+      }
+    },
+    {
+      "unitid": 172200,
+      "name": "Schoolcraft Community College District",
+      "city": "Livonia",
+      "lat": 42.419279,
+      "lon": -83.430958,
+      "totalCompletions": 1336,
+      "byFamily": {
+        "01": 8,
+        "10": 9,
+        "11": 102,
+        "12": 78,
+        "13": 4,
+        "14": 35,
+        "15": 58,
+        "19": 23,
+        "24": 361,
+        "31": 4,
+        "43": 48,
+        "48": 18,
+        "50": 14,
+        "51": 342,
+        "52": 232
+      }
+    },
+    {
+      "unitid": 391759,
+      "name": "Sharp's Academy of Hairstyling",
+      "city": "Grand Blanc",
+      "lat": 42.912036,
+      "lon": -83.624526,
+      "totalCompletions": 12,
+      "byFamily": {
+        "12": 12
+      }
+    },
+    {
+      "unitid": 172264,
+      "name": "Siena Heights University",
+      "city": "Adrian",
+      "lat": 41.905624,
+      "lon": -84.018841,
+      "totalCompletions": 560,
+      "byFamily": {
+        "01": 1,
+        "03": 1,
+        "05": 4,
+        "09": 18,
+        "10": 1,
+        "11": 11,
+        "13": 18,
+        "14": 5,
+        "15": 13,
+        "16": 9,
+        "23": 4,
+        "24": 11,
+        "26": 17,
+        "27": 1,
+        "30": 2,
+        "31": 21,
+        "39": 1,
+        "41": 1,
+        "42": 17,
+        "43": 33,
+        "44": 20,
+        "47": 3,
+        "49": 1,
+        "50": 22,
+        "51": 179,
+        "52": 144,
+        "54": 2
+      }
+    },
+    {
+      "unitid": 499972,
+      "name": "Southwest Michigan Beauty School",
+      "city": "Sturgis",
+      "lat": 41.791014,
+      "lon": -85.429184,
+      "totalCompletions": 7,
+      "byFamily": {
+        "12": 7
+      }
+    },
+    {
+      "unitid": 172307,
+      "name": "Southwestern Michigan College",
+      "city": "Dowagiac",
+      "lat": 41.965095,
+      "lon": -86.082715,
+      "totalCompletions": 317,
+      "byFamily": {
+        "01": 4,
+        "09": 2,
+        "11": 10,
+        "13": 19,
+        "15": 7,
+        "23": 3,
+        "24": 80,
+        "26": 3,
+        "31": 5,
+        "42": 6,
+        "43": 16,
+        "44": 6,
+        "45": 2,
+        "46": 11,
+        "47": 20,
+        "48": 22,
+        "50": 11,
+        "51": 55,
+        "52": 35
+      }
+    },
+    {
+      "unitid": 172334,
+      "name": "Spring Arbor University",
+      "city": "Spring Arbor",
+      "lat": 42.206568,
+      "lon": -84.556074,
+      "totalCompletions": 772,
+      "byFamily": {
+        "09": 8,
+        "11": 1,
+        "13": 77,
+        "14": 5,
+        "16": 1,
+        "23": 1,
+        "24": 16,
+        "26": 5,
+        "31": 17,
+        "38": 6,
+        "39": 6,
+        "40": 2,
+        "42": 78,
+        "43": 3,
+        "44": 152,
+        "45": 3,
+        "50": 9,
+        "51": 300,
+        "52": 78,
+        "54": 4
+      }
+    },
+    {
+      "unitid": 172291,
+      "name": "St Clair County Community College",
+      "city": "Port Huron",
+      "lat": 42.979494,
+      "lon": -82.428717,
+      "totalCompletions": 677,
+      "byFamily": {
+        "11": 25,
+        "15": 41,
+        "24": 331,
+        "43": 27,
+        "48": 8,
+        "50": 15,
+        "51": 179,
+        "52": 51
+      }
+    },
+    {
+      "unitid": 495341,
+      "name": "Taylor Andrews Academy of Hair Design-Hair Lab Detroit Barber School",
+      "city": "Southgate",
+      "lat": 42.198536,
+      "lon": -83.214501,
+      "totalCompletions": 31,
+      "byFamily": {
+        "12": 31
+      }
+    },
+    {
+      "unitid": 496539,
+      "name": "The  Salon Professional Academy of Holland",
+      "city": "Holland",
+      "lat": 42.822173,
+      "lon": -86.090522,
+      "totalCompletions": 49,
+      "byFamily": {
+        "12": 46,
+        "51": 3
+      }
+    },
+    {
+      "unitid": 171012,
+      "name": "The Michigan Barber School",
+      "city": "Detroit",
+      "lat": 42.365023,
+      "lon": -83.128883,
+      "totalCompletions": 39,
+      "byFamily": {
+        "12": 39
+      }
+    },
+    {
+      "unitid": 451307,
+      "name": "The Salon Professional Academy-Battle Creek",
+      "city": "Battle Creek",
+      "lat": 42.297776,
+      "lon": -85.224127,
+      "totalCompletions": 41,
+      "byFamily": {
+        "12": 31,
+        "51": 10
+      }
+    },
+    {
+      "unitid": 171599,
+      "name": "The University of Olivet",
+      "city": "Olivet",
+      "lat": 42.442891,
+      "lon": -84.923891,
+      "totalCompletions": 213,
+      "byFamily": {
+        "03": 10,
+        "09": 6,
+        "11": 2,
+        "23": 2,
+        "24": 3,
+        "26": 19,
+        "31": 30,
+        "42": 35,
+        "43": 25,
+        "45": 1,
+        "50": 4,
+        "51": 3,
+        "52": 69,
+        "54": 4
+      }
+    },
+    {
+      "unitid": 172477,
+      "name": "Thomas M Cooley Law School",
+      "city": "Lansing",
+      "lat": 42.731,
+      "lon": -84.554429,
+      "totalCompletions": 142,
+      "byFamily": {
+        "22": 142
+      }
+    },
+    {
+      "unitid": 172495,
+      "name": "Twin City Beauty College",
+      "city": "Saint Joseph",
+      "lat": 42.071099,
+      "lon": -86.47655,
+      "totalCompletions": 102,
+      "byFamily": {
+        "12": 102
+      }
+    },
+    {
+      "unitid": 488837,
+      "name": "U.S. Truck Driver Training School",
+      "city": "Sterling Heights",
+      "lat": 42.550239,
+      "lon": -83.042997,
+      "totalCompletions": 790,
+      "byFamily": {
+        "49": 790
+      }
+    },
+    {
+      "unitid": 169655,
+      "name": "Universal Technical Institute-Canton",
+      "city": "Canton",
+      "lat": 42.286324,
+      "lon": -83.445507,
+      "totalCompletions": 893,
+      "byFamily": {
+        "15": 138,
+        "47": 672,
+        "48": 83
+      }
+    },
+    {
+      "unitid": 169716,
+      "name": "University of Detroit Mercy",
+      "city": "Detroit",
+      "lat": 42.414222,
+      "lon": -83.139158,
+      "totalCompletions": 1740,
+      "byFamily": {
+        "04": 74,
+        "09": 7,
+        "11": 58,
+        "13": 5,
+        "14": 341,
+        "16": 30,
+        "22": 227,
+        "23": 3,
+        "24": 5,
+        "26": 143,
+        "27": 2,
+        "30": 4,
+        "38": 3,
+        "40": 13,
+        "42": 87,
+        "43": 19,
+        "44": 16,
+        "45": 17,
+        "50": 3,
+        "51": 557,
+        "52": 122,
+        "54": 4
+      }
+    },
+    {
+      "unitid": 170976,
+      "name": "University of Michigan-Ann Arbor",
+      "city": "Ann Arbor",
+      "lat": 42.278374,
+      "lon": -83.73481,
+      "totalCompletions": 17020,
+      "byFamily": {
+        "03": 364,
+        "04": 215,
+        "05": 116,
+        "09": 241,
+        "11": 1980,
+        "13": 227,
+        "14": 2900,
+        "15": 5,
+        "16": 221,
+        "22": 358,
+        "23": 157,
+        "24": 59,
+        "26": 1341,
+        "27": 535,
+        "30": 848,
+        "31": 377,
+        "38": 68,
+        "40": 392,
+        "42": 778,
+        "44": 687,
+        "45": 1364,
+        "50": 563,
+        "51": 1294,
+        "52": 1810,
+        "54": 120
+      }
+    },
+    {
+      "unitid": 171137,
+      "name": "University of Michigan-Dearborn",
+      "city": "Dearborn",
+      "lat": 42.317287,
+      "lon": -83.231417,
+      "totalCompletions": 2297,
+      "byFamily": {
+        "03": 24,
+        "05": 18,
+        "09": 44,
+        "11": 369,
+        "13": 90,
+        "14": 622,
+        "15": 61,
+        "16": 14,
+        "19": 13,
+        "23": 30,
+        "24": 13,
+        "26": 117,
+        "27": 24,
+        "30": 93,
+        "38": 6,
+        "40": 11,
+        "42": 132,
+        "44": 7,
+        "45": 133,
+        "50": 7,
+        "51": 98,
+        "52": 371
+      }
+    },
+    {
+      "unitid": 171146,
+      "name": "University of Michigan-Flint",
+      "city": "Flint",
+      "lat": 43.01875,
+      "lon": -83.690276,
+      "totalCompletions": 1549,
+      "byFamily": {
+        "09": 18,
+        "11": 110,
+        "13": 80,
+        "14": 26,
+        "19": 1,
+        "23": 7,
+        "24": 3,
+        "26": 81,
+        "27": 2,
+        "30": 65,
+        "38": 1,
+        "40": 4,
+        "42": 98,
+        "43": 14,
+        "44": 38,
+        "45": 41,
+        "50": 20,
+        "51": 656,
+        "52": 272,
+        "54": 12
+      }
+    },
+    {
+      "unitid": 172608,
+      "name": "Walsh College",
+      "city": "Troy",
+      "lat": 42.573888,
+      "lon": -83.147197,
+      "totalCompletions": 486,
+      "byFamily": {
+        "11": 52,
+        "15": 2,
+        "30": 9,
+        "43": 1,
+        "52": 422
+      }
+    },
+    {
+      "unitid": 172617,
+      "name": "Washtenaw Community College",
+      "city": "Ann Arbor",
+      "lat": 42.26361,
+      "lon": -83.66559,
+      "totalCompletions": 3634,
+      "byFamily": {
+        "03": 20,
+        "09": 12,
+        "10": 71,
+        "11": 137,
+        "13": 40,
+        "14": 36,
+        "15": 103,
+        "19": 36,
+        "22": 17,
+        "24": 1554,
+        "30": 5,
+        "31": 5,
+        "43": 140,
+        "44": 42,
+        "46": 131,
+        "47": 126,
+        "48": 120,
+        "50": 31,
+        "51": 495,
+        "52": 513
+      }
+    },
+    {
+      "unitid": 172635,
+      "name": "Wayne County Community College District",
+      "city": "Detroit",
+      "lat": 42.327299,
+      "lon": -83.054497,
+      "totalCompletions": 1914,
+      "byFamily": {
+        "09": 15,
+        "10": 9,
+        "11": 38,
+        "12": 2,
+        "14": 5,
+        "15": 44,
+        "16": 4,
+        "19": 21,
+        "22": 10,
+        "24": 883,
+        "43": 71,
+        "44": 4,
+        "46": 56,
+        "47": 100,
+        "48": 12,
+        "49": 234,
+        "51": 269,
+        "52": 137
+      }
+    },
+    {
+      "unitid": 172644,
+      "name": "Wayne State University",
+      "city": "Detroit",
+      "lat": 42.358994,
+      "lon": -83.068998,
+      "totalCompletions": 6566,
+      "byFamily": {
+        "03": 27,
+        "04": 22,
+        "05": 20,
+        "09": 141,
+        "11": 250,
+        "12": 38,
+        "13": 359,
+        "14": 425,
+        "15": 98,
+        "16": 51,
+        "19": 152,
+        "22": 158,
+        "23": 56,
+        "24": 5,
+        "25": 150,
+        "26": 275,
+        "27": 43,
+        "30": 10,
+        "31": 159,
+        "38": 21,
+        "40": 124,
+        "42": 464,
+        "43": 140,
+        "44": 367,
+        "45": 217,
+        "50": 152,
+        "51": 1251,
+        "52": 1358,
+        "54": 33
+      }
+    },
+    {
+      "unitid": 152044,
+      "name": "West Michigan College of Barbering and Beauty",
+      "city": "Kalamazoo",
+      "lat": 42.259329,
+      "lon": -85.590244,
+      "totalCompletions": 26,
+      "byFamily": {
+        "12": 26
+      }
+    },
+    {
+      "unitid": 172671,
+      "name": "West Shore Community College",
+      "city": "Scottville",
+      "lat": 44.008512,
+      "lon": -86.336122,
+      "totalCompletions": 151,
+      "byFamily": {
+        "01": 1,
+        "11": 7,
+        "13": 1,
+        "19": 6,
+        "24": 62,
+        "43": 5,
+        "47": 3,
+        "48": 9,
+        "50": 1,
+        "51": 42,
+        "52": 14
+      }
+    },
+    {
+      "unitid": 172699,
+      "name": "Western Michigan University",
+      "city": "Kalamazoo",
+      "lat": 42.282194,
+      "lon": -85.613759,
+      "totalCompletions": 4454,
+      "byFamily": {
+        "01": 1,
+        "03": 19,
+        "05": 3,
+        "09": 103,
+        "11": 92,
+        "13": 482,
+        "14": 316,
+        "15": 51,
+        "16": 45,
+        "19": 40,
+        "22": 17,
+        "23": 64,
+        "26": 165,
+        "27": 34,
+        "30": 289,
+        "31": 116,
+        "38": 17,
+        "40": 48,
+        "42": 233,
+        "43": 60,
+        "44": 91,
+        "45": 99,
+        "49": 266,
+        "50": 255,
+        "51": 561,
+        "52": 972,
+        "54": 15
+      }
+    },
+    {
+      "unitid": 490373,
+      "name": "Western Michigan University Homer Stryker M.D. School of Medicine",
+      "city": "Kalamazoo",
+      "lat": 42.289571,
+      "lon": -85.57943,
+      "totalCompletions": 91,
+      "byFamily": {
+        "14": 2,
+        "26": 5,
+        "51": 84
+      }
+    },
+    {
+      "unitid": 172705,
+      "name": "Western Theological Seminary",
+      "city": "Holland",
+      "lat": 42.786246,
+      "lon": -86.10324,
+      "totalCompletions": 159,
+      "byFamily": {
+        "39": 159
+      }
+    },
+    {
+      "unitid": 247773,
+      "name": "Yeshiva Gedolah of Greater Detroit",
+      "city": "Oak Park",
+      "lat": 42.471924,
+      "lon": -83.200754,
+      "totalCompletions": 10,
+      "byFamily": {
+        "38": 10
+      }
+    }
+  ]
+}

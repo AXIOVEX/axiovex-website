@@ -1,0 +1,7337 @@
+{
+  "source": "U.S. Bureau of Labor Statistics, Quarterly Census of Employment and Wages (QCEW), per-area CSV API",
+  "sourceUrl": "https://data.bls.gov/cew/data/api/2024/a/area/{countyFips}.csv",
+  "vintage": "2024 annual averages",
+  "retrievedOn": "2026-10-06",
+  "grain": "County x NAICS sector at agglvl_code 74, PRIVATE ownership (own_code 5) — the only ownership grain at which QCEW publishes county x sector rows; county totals are total-ownership (agglvl 70) and private (agglvl 71). Cells: {emplvl, lq} published; {disclosed:false} = disclosure_code N (values zeroed in the source, never transcribed); {absent:true} = the source publishes no row for the cell.",
+  "sectors": [
+    {
+      "code": "11",
+      "label": "Agriculture, forestry, fishing and hunting"
+    },
+    {
+      "code": "21",
+      "label": "Mining, quarrying, and oil and gas extraction"
+    },
+    {
+      "code": "22",
+      "label": "Utilities"
+    },
+    {
+      "code": "23",
+      "label": "Construction"
+    },
+    {
+      "code": "31-33",
+      "label": "Manufacturing"
+    },
+    {
+      "code": "42",
+      "label": "Wholesale trade"
+    },
+    {
+      "code": "44-45",
+      "label": "Retail trade"
+    },
+    {
+      "code": "48-49",
+      "label": "Transportation and warehousing"
+    },
+    {
+      "code": "51",
+      "label": "Information"
+    },
+    {
+      "code": "52",
+      "label": "Finance and insurance"
+    },
+    {
+      "code": "53",
+      "label": "Real estate and rental and leasing"
+    },
+    {
+      "code": "54",
+      "label": "Professional and technical services"
+    },
+    {
+      "code": "55",
+      "label": "Management of companies and enterprises"
+    },
+    {
+      "code": "56",
+      "label": "Administrative and waste services"
+    },
+    {
+      "code": "61",
+      "label": "Educational services"
+    },
+    {
+      "code": "62",
+      "label": "Health care and social assistance"
+    },
+    {
+      "code": "71",
+      "label": "Arts, entertainment, and recreation"
+    },
+    {
+      "code": "72",
+      "label": "Accommodation and food services"
+    },
+    {
+      "code": "81",
+      "label": "Other services, except public administration"
+    },
+    {
+      "code": "99",
+      "label": "Unclassified"
+    }
+  ],
+  "counties": [
+    {
+      "fips": "26001",
+      "name": "Alcona",
+      "totalPrivate": {
+        "emplvl": 1178,
+        "lq": 0.92
+      },
+      "totalAllOwnership": {
+        "emplvl": 1494
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 47,
+          "lq": 0.6
+        },
+        "42": {
+          "emplvl": 11,
+          "lq": 0.19
+        },
+        "51": {
+          "emplvl": 14,
+          "lq": 0.5
+        },
+        "52": {
+          "emplvl": 29,
+          "lq": 0.48
+        },
+        "53": {
+          "emplvl": 23,
+          "lq": 0.99
+        },
+        "54": {
+          "emplvl": 23,
+          "lq": 0.22
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 36,
+          "lq": 0.41
+        },
+        "61": {
+          "absent": true
+        },
+        "62": {
+          "emplvl": 148,
+          "lq": 0.69
+        },
+        "71": {
+          "disclosed": false
+        },
+        "72": {
+          "disclosed": false
+        },
+        "81": {
+          "emplvl": 82,
+          "lq": 1.82
+        },
+        "99": {
+          "emplvl": 11,
+          "lq": 5.28
+        },
+        "31-33": {
+          "emplvl": 181,
+          "lq": 1.47
+        },
+        "44-45": {
+          "emplvl": 296,
+          "lq": 1.98
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26003",
+      "name": "Alger",
+      "totalPrivate": {
+        "emplvl": 1824,
+        "lq": 0.8
+      },
+      "totalAllOwnership": {
+        "emplvl": 2650
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 108,
+          "lq": 0.78
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "disclosed": false
+        },
+        "52": {
+          "emplvl": 59,
+          "lq": 0.55
+        },
+        "53": {
+          "emplvl": 26,
+          "lq": 0.63
+        },
+        "54": {
+          "emplvl": 45,
+          "lq": 0.24
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "disclosed": false
+        },
+        "72": {
+          "disclosed": false
+        },
+        "81": {
+          "emplvl": 34,
+          "lq": 0.43
+        },
+        "99": {
+          "disclosed": false
+        },
+        "31-33": {
+          "emplvl": 397,
+          "lq": 1.82
+        },
+        "44-45": {
+          "emplvl": 201,
+          "lq": 0.76
+        },
+        "48-49": {
+          "emplvl": 74,
+          "lq": 0.66
+        }
+      }
+    },
+    {
+      "fips": "26005",
+      "name": "Allegan",
+      "totalPrivate": {
+        "emplvl": 35861,
+        "lq": 1.01
+      },
+      "totalAllOwnership": {
+        "emplvl": 41360
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 1743,
+          "lq": 5.21
+        },
+        "21": {
+          "emplvl": 25,
+          "lq": 0.16
+        },
+        "22": {
+          "emplvl": 88,
+          "lq": 0.56
+        },
+        "23": {
+          "emplvl": 2974,
+          "lq": 1.37
+        },
+        "42": {
+          "emplvl": 2079,
+          "lq": 1.28
+        },
+        "51": {
+          "emplvl": 178,
+          "lq": 0.23
+        },
+        "52": {
+          "emplvl": 384,
+          "lq": 0.23
+        },
+        "53": {
+          "emplvl": 371,
+          "lq": 0.58
+        },
+        "54": {
+          "emplvl": 720,
+          "lq": 0.25
+        },
+        "55": {
+          "emplvl": 77,
+          "lq": 0.11
+        },
+        "56": {
+          "emplvl": 872,
+          "lq": 0.36
+        },
+        "61": {
+          "emplvl": 518,
+          "lq": 0.61
+        },
+        "62": {
+          "emplvl": 2612,
+          "lq": 0.44
+        },
+        "71": {
+          "emplvl": 647,
+          "lq": 0.93
+        },
+        "72": {
+          "emplvl": 3120,
+          "lq": 0.83
+        },
+        "81": {
+          "emplvl": 1169,
+          "lq": 0.94
+        },
+        "99": {
+          "emplvl": 159,
+          "lq": 2.76
+        },
+        "31-33": {
+          "emplvl": 13777,
+          "lq": 4.05
+        },
+        "44-45": {
+          "emplvl": 3192,
+          "lq": 0.77
+        },
+        "48-49": {
+          "emplvl": 1156,
+          "lq": 0.66
+        }
+      }
+    },
+    {
+      "fips": "26007",
+      "name": "Alpena",
+      "totalPrivate": {
+        "emplvl": 9511,
+        "lq": 0.91
+      },
+      "totalAllOwnership": {
+        "emplvl": 12191
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 48,
+          "lq": 0.49
+        },
+        "21": {
+          "emplvl": 40,
+          "lq": 0.87
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 479,
+          "lq": 0.75
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 141,
+          "lq": 0.62
+        },
+        "52": {
+          "emplvl": 429,
+          "lq": 0.87
+        },
+        "53": {
+          "emplvl": 108,
+          "lq": 0.57
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "emplvl": 14,
+          "lq": 0.06
+        },
+        "62": {
+          "emplvl": 1917,
+          "lq": 1.1
+        },
+        "71": {
+          "emplvl": 103,
+          "lq": 0.5
+        },
+        "72": {
+          "emplvl": 932,
+          "lq": 0.84
+        },
+        "81": {
+          "emplvl": 430,
+          "lq": 1.17
+        },
+        "99": {
+          "emplvl": 66,
+          "lq": 3.88
+        },
+        "31-33": {
+          "emplvl": 1896,
+          "lq": 1.89
+        },
+        "44-45": {
+          "emplvl": 1601,
+          "lq": 1.31
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26009",
+      "name": "Antrim",
+      "totalPrivate": {
+        "emplvl": 4147,
+        "lq": 0.95
+      },
+      "totalAllOwnership": {
+        "emplvl": 5128
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 483,
+          "lq": 1.79
+        },
+        "42": {
+          "emplvl": 86,
+          "lq": 0.43
+        },
+        "51": {
+          "emplvl": 97,
+          "lq": 1.01
+        },
+        "52": {
+          "emplvl": 92,
+          "lq": 0.44
+        },
+        "53": {
+          "emplvl": 64,
+          "lq": 0.8
+        },
+        "54": {
+          "emplvl": 173,
+          "lq": 0.48
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 213,
+          "lq": 2.47
+        },
+        "72": {
+          "emplvl": 835,
+          "lq": 1.79
+        },
+        "81": {
+          "emplvl": 174,
+          "lq": 1.13
+        },
+        "99": {
+          "emplvl": 25,
+          "lq": 3.5
+        },
+        "31-33": {
+          "emplvl": 685,
+          "lq": 1.63
+        },
+        "44-45": {
+          "emplvl": 711,
+          "lq": 1.39
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26011",
+      "name": "Arenac",
+      "totalPrivate": {
+        "emplvl": 3523,
+        "lq": 1.01
+      },
+      "totalAllOwnership": {
+        "emplvl": 4077
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 108,
+          "lq": 0.5
+        },
+        "42": {
+          "emplvl": 104,
+          "lq": 0.65
+        },
+        "51": {
+          "disclosed": false
+        },
+        "52": {
+          "disclosed": false
+        },
+        "53": {
+          "disclosed": false
+        },
+        "54": {
+          "emplvl": 161,
+          "lq": 0.57
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 242,
+          "lq": 1.01
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 54,
+          "lq": 0.79
+        },
+        "72": {
+          "emplvl": 346,
+          "lq": 0.93
+        },
+        "81": {
+          "emplvl": 79,
+          "lq": 0.64
+        },
+        "99": {
+          "disclosed": false
+        },
+        "31-33": {
+          "emplvl": 879,
+          "lq": 2.62
+        },
+        "44-45": {
+          "emplvl": 682,
+          "lq": 1.67
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26013",
+      "name": "Baraga",
+      "totalPrivate": {
+        "emplvl": 1389,
+        "lq": 0.55
+      },
+      "totalAllOwnership": {
+        "emplvl": 2973
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 79,
+          "lq": 0.51
+        },
+        "42": {
+          "emplvl": 52,
+          "lq": 0.44
+        },
+        "51": {
+          "disclosed": false
+        },
+        "52": {
+          "disclosed": false
+        },
+        "53": {
+          "disclosed": false
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "disclosed": false
+        },
+        "72": {
+          "disclosed": false
+        },
+        "81": {
+          "disclosed": false
+        },
+        "99": {
+          "absent": true
+        },
+        "31-33": {
+          "emplvl": 520,
+          "lq": 2.13
+        },
+        "44-45": {
+          "emplvl": 153,
+          "lq": 0.52
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26015",
+      "name": "Barry",
+      "totalPrivate": {
+        "emplvl": 11094,
+        "lq": 0.98
+      },
+      "totalAllOwnership": {
+        "emplvl": 13236
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 607,
+          "lq": 0.87
+        },
+        "42": {
+          "emplvl": 310,
+          "lq": 0.59
+        },
+        "51": {
+          "emplvl": 119,
+          "lq": 0.48
+        },
+        "52": {
+          "emplvl": 617,
+          "lq": 1.15
+        },
+        "53": {
+          "emplvl": 55,
+          "lq": 0.27
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 331,
+          "lq": 0.42
+        },
+        "61": {
+          "emplvl": 109,
+          "lq": 0.4
+        },
+        "62": {
+          "emplvl": 1237,
+          "lq": 0.65
+        },
+        "71": {
+          "emplvl": 190,
+          "lq": 0.85
+        },
+        "72": {
+          "emplvl": 1354,
+          "lq": 1.13
+        },
+        "81": {
+          "emplvl": 476,
+          "lq": 1.19
+        },
+        "99": {
+          "emplvl": 21,
+          "lq": 1.14
+        },
+        "31-33": {
+          "emplvl": 3667,
+          "lq": 3.37
+        },
+        "44-45": {
+          "emplvl": 1223,
+          "lq": 0.93
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26017",
+      "name": "Bay",
+      "totalPrivate": {
+        "emplvl": 29008,
+        "lq": 0.99
+      },
+      "totalAllOwnership": {
+        "emplvl": 34112
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 432,
+          "lq": 1.56
+        },
+        "21": {
+          "emplvl": 15,
+          "lq": 0.12
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 1520,
+          "lq": 0.85
+        },
+        "42": {
+          "emplvl": 1340,
+          "lq": 1
+        },
+        "51": {
+          "emplvl": 297,
+          "lq": 0.46
+        },
+        "52": {
+          "emplvl": 587,
+          "lq": 0.42
+        },
+        "53": {
+          "emplvl": 407,
+          "lq": 0.77
+        },
+        "54": {
+          "emplvl": 1411,
+          "lq": 0.59
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "emplvl": 172,
+          "lq": 0.24
+        },
+        "62": {
+          "emplvl": 6019,
+          "lq": 1.23
+        },
+        "71": {
+          "emplvl": 559,
+          "lq": 0.97
+        },
+        "72": {
+          "emplvl": 3975,
+          "lq": 1.28
+        },
+        "81": {
+          "emplvl": 1020,
+          "lq": 0.99
+        },
+        "99": {
+          "emplvl": 68,
+          "lq": 1.43
+        },
+        "31-33": {
+          "emplvl": 4440,
+          "lq": 1.58
+        },
+        "44-45": {
+          "emplvl": 4591,
+          "lq": 1.35
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26019",
+      "name": "Benzie",
+      "totalPrivate": {
+        "emplvl": 4138,
+        "lq": 0.99
+      },
+      "totalAllOwnership": {
+        "emplvl": 4882
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 472,
+          "lq": 1.84
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 20,
+          "lq": 0.22
+        },
+        "52": {
+          "emplvl": 199,
+          "lq": 1
+        },
+        "53": {
+          "emplvl": 64,
+          "lq": 0.84
+        },
+        "54": {
+          "emplvl": 120,
+          "lq": 0.35
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 156,
+          "lq": 0.54
+        },
+        "61": {
+          "emplvl": 19,
+          "lq": 0.19
+        },
+        "62": {
+          "emplvl": 453,
+          "lq": 0.65
+        },
+        "71": {
+          "emplvl": 138,
+          "lq": 1.68
+        },
+        "72": {
+          "emplvl": 1225,
+          "lq": 2.76
+        },
+        "81": {
+          "emplvl": 158,
+          "lq": 1.07
+        },
+        "99": {
+          "emplvl": 10,
+          "lq": 1.47
+        },
+        "31-33": {
+          "emplvl": 301,
+          "lq": 0.75
+        },
+        "44-45": {
+          "emplvl": 600,
+          "lq": 1.23
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26021",
+      "name": "Berrien",
+      "totalPrivate": {
+        "emplvl": 52285,
+        "lq": 1.01
+      },
+      "totalAllOwnership": {
+        "emplvl": 60626
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 1186,
+          "lq": 2.42
+        },
+        "21": {
+          "emplvl": 94,
+          "lq": 0.41
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 1974,
+          "lq": 0.62
+        },
+        "42": {
+          "emplvl": 1822,
+          "lq": 0.76
+        },
+        "51": {
+          "emplvl": 386,
+          "lq": 0.34
+        },
+        "52": {
+          "emplvl": 2013,
+          "lq": 0.82
+        },
+        "53": {
+          "emplvl": 493,
+          "lq": 0.52
+        },
+        "54": {
+          "emplvl": 1375,
+          "lq": 0.33
+        },
+        "55": {
+          "emplvl": 119,
+          "lq": 0.12
+        },
+        "56": {
+          "emplvl": 3037,
+          "lq": 0.85
+        },
+        "61": {
+          "emplvl": 1259,
+          "lq": 1
+        },
+        "62": {
+          "emplvl": 8001,
+          "lq": 0.92
+        },
+        "71": {
+          "emplvl": 866,
+          "lq": 0.85
+        },
+        "72": {
+          "emplvl": 6789,
+          "lq": 1.23
+        },
+        "81": {
+          "emplvl": 2176,
+          "lq": 1.19
+        },
+        "99": {
+          "emplvl": 171,
+          "lq": 2.02
+        },
+        "31-33": {
+          "emplvl": 11601,
+          "lq": 2.33
+        },
+        "44-45": {
+          "emplvl": 7096,
+          "lq": 1.17
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26023",
+      "name": "Branch",
+      "totalPrivate": {
+        "emplvl": 12605,
+        "lq": 0.97
+      },
+      "totalAllOwnership": {
+        "emplvl": 15240
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 239,
+          "lq": 1.94
+        },
+        "21": {
+          "absent": true
+        },
+        "22": {
+          "emplvl": 57,
+          "lq": 0.98
+        },
+        "23": {
+          "emplvl": 487,
+          "lq": 0.61
+        },
+        "42": {
+          "emplvl": 727,
+          "lq": 1.21
+        },
+        "51": {
+          "emplvl": 84,
+          "lq": 0.29
+        },
+        "52": {
+          "emplvl": 509,
+          "lq": 0.82
+        },
+        "53": {
+          "emplvl": 42,
+          "lq": 0.18
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 374,
+          "lq": 0.42
+        },
+        "61": {
+          "emplvl": 29,
+          "lq": 0.09
+        },
+        "62": {
+          "emplvl": 846,
+          "lq": 0.39
+        },
+        "71": {
+          "emplvl": 153,
+          "lq": 0.6
+        },
+        "72": {
+          "emplvl": 1606,
+          "lq": 1.16
+        },
+        "81": {
+          "emplvl": 333,
+          "lq": 0.73
+        },
+        "99": {
+          "emplvl": 22,
+          "lq": 1.04
+        },
+        "31-33": {
+          "emplvl": 3704,
+          "lq": 2.96
+        },
+        "44-45": {
+          "emplvl": 1739,
+          "lq": 1.14
+        },
+        "48-49": {
+          "emplvl": 1432,
+          "lq": 2.22
+        }
+      }
+    },
+    {
+      "fips": "26025",
+      "name": "Calhoun",
+      "totalPrivate": {
+        "emplvl": 43495,
+        "lq": 0.93
+      },
+      "totalAllOwnership": {
+        "emplvl": 54415
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 754,
+          "lq": 1.71
+        },
+        "21": {
+          "emplvl": 53,
+          "lq": 0.26
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 1831,
+          "lq": 0.64
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 181,
+          "lq": 0.18
+        },
+        "52": {
+          "emplvl": 943,
+          "lq": 0.43
+        },
+        "53": {
+          "emplvl": 238,
+          "lq": 0.28
+        },
+        "54": {
+          "emplvl": 2246,
+          "lq": 0.59
+        },
+        "55": {
+          "emplvl": 429,
+          "lq": 0.47
+        },
+        "56": {
+          "emplvl": 2414,
+          "lq": 0.75
+        },
+        "61": {
+          "emplvl": 836,
+          "lq": 0.74
+        },
+        "62": {
+          "emplvl": 8542,
+          "lq": 1.1
+        },
+        "71": {
+          "emplvl": 540,
+          "lq": 0.59
+        },
+        "72": {
+          "emplvl": 4275,
+          "lq": 0.86
+        },
+        "81": {
+          "emplvl": 1363,
+          "lq": 0.83
+        },
+        "99": {
+          "emplvl": 100,
+          "lq": 1.32
+        },
+        "31-33": {
+          "emplvl": 10071,
+          "lq": 2.25
+        },
+        "44-45": {
+          "emplvl": 5710,
+          "lq": 1.05
+        },
+        "48-49": {
+          "emplvl": 1940,
+          "lq": 0.84
+        }
+      }
+    },
+    {
+      "fips": "26027",
+      "name": "Cass",
+      "totalPrivate": {
+        "emplvl": 7415,
+        "lq": 0.92
+      },
+      "totalAllOwnership": {
+        "emplvl": 9373
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 361,
+          "lq": 0.73
+        },
+        "42": {
+          "emplvl": 324,
+          "lq": 0.88
+        },
+        "51": {
+          "emplvl": 16,
+          "lq": 0.09
+        },
+        "52": {
+          "emplvl": 228,
+          "lq": 0.6
+        },
+        "53": {
+          "emplvl": 48,
+          "lq": 0.33
+        },
+        "54": {
+          "emplvl": 343,
+          "lq": 0.53
+        },
+        "55": {
+          "emplvl": 13,
+          "lq": 0.08
+        },
+        "56": {
+          "emplvl": 350,
+          "lq": 0.63
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 193,
+          "lq": 1.23
+        },
+        "72": {
+          "emplvl": 1156,
+          "lq": 1.36
+        },
+        "81": {
+          "emplvl": 598,
+          "lq": 2.12
+        },
+        "99": {
+          "emplvl": 34,
+          "lq": 2.6
+        },
+        "31-33": {
+          "emplvl": 2023,
+          "lq": 2.63
+        },
+        "44-45": {
+          "emplvl": 793,
+          "lq": 0.85
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26029",
+      "name": "Charlevoix",
+      "totalPrivate": {
+        "emplvl": 9247,
+        "lq": 0.98
+      },
+      "totalAllOwnership": {
+        "emplvl": 10983
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 53,
+          "lq": 0.6
+        },
+        "21": {
+          "absent": true
+        },
+        "22": {
+          "emplvl": 192,
+          "lq": 4.6
+        },
+        "23": {
+          "emplvl": 670,
+          "lq": 1.16
+        },
+        "42": {
+          "emplvl": 109,
+          "lq": 0.25
+        },
+        "51": {
+          "emplvl": 71,
+          "lq": 0.34
+        },
+        "52": {
+          "emplvl": 145,
+          "lq": 0.33
+        },
+        "53": {
+          "emplvl": 204,
+          "lq": 1.2
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 322,
+          "lq": 0.5
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 302,
+          "lq": 1.64
+        },
+        "72": {
+          "emplvl": 1834,
+          "lq": 1.84
+        },
+        "81": {
+          "emplvl": 266,
+          "lq": 0.8
+        },
+        "99": {
+          "emplvl": 36,
+          "lq": 2.35
+        },
+        "31-33": {
+          "emplvl": 2747,
+          "lq": 3.04
+        },
+        "44-45": {
+          "emplvl": 895,
+          "lq": 0.82
+        },
+        "48-49": {
+          "emplvl": 71,
+          "lq": 0.15
+        }
+      }
+    },
+    {
+      "fips": "26031",
+      "name": "Cheboygan",
+      "totalPrivate": {
+        "emplvl": 5022,
+        "lq": 0.96
+      },
+      "totalAllOwnership": {
+        "emplvl": 6140
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "emplvl": 15,
+          "lq": 0.64
+        },
+        "23": {
+          "emplvl": 581,
+          "lq": 1.8
+        },
+        "42": {
+          "emplvl": 163,
+          "lq": 0.67
+        },
+        "51": {
+          "emplvl": 10,
+          "lq": 0.09
+        },
+        "52": {
+          "emplvl": 196,
+          "lq": 0.79
+        },
+        "53": {
+          "emplvl": 50,
+          "lq": 0.52
+        },
+        "54": {
+          "emplvl": 261,
+          "lq": 0.61
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "emplvl": 38,
+          "lq": 0.3
+        },
+        "62": {
+          "emplvl": 563,
+          "lq": 0.64
+        },
+        "71": {
+          "emplvl": 127,
+          "lq": 1.23
+        },
+        "72": {
+          "emplvl": 1040,
+          "lq": 1.86
+        },
+        "81": {
+          "emplvl": 202,
+          "lq": 1.09
+        },
+        "99": {
+          "emplvl": 22,
+          "lq": 2.57
+        },
+        "31-33": {
+          "emplvl": 143,
+          "lq": 0.28
+        },
+        "44-45": {
+          "emplvl": 1245,
+          "lq": 2.03
+        },
+        "48-49": {
+          "emplvl": 187,
+          "lq": 0.72
+        }
+      }
+    },
+    {
+      "fips": "26033",
+      "name": "Chippewa",
+      "totalPrivate": {
+        "emplvl": 6499,
+        "lq": 0.59
+      },
+      "totalAllOwnership": {
+        "emplvl": 12793
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 652,
+          "lq": 0.97
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 47,
+          "lq": 0.2
+        },
+        "52": {
+          "emplvl": 253,
+          "lq": 0.49
+        },
+        "53": {
+          "emplvl": 87,
+          "lq": 0.44
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "emplvl": 52,
+          "lq": 0.2
+        },
+        "62": {
+          "emplvl": 776,
+          "lq": 0.42
+        },
+        "71": {
+          "emplvl": 85,
+          "lq": 0.4
+        },
+        "72": {
+          "emplvl": 1047,
+          "lq": 0.9
+        },
+        "81": {
+          "emplvl": 211,
+          "lq": 0.55
+        },
+        "99": {
+          "emplvl": 32,
+          "lq": 1.79
+        },
+        "31-33": {
+          "emplvl": 589,
+          "lq": 0.56
+        },
+        "44-45": {
+          "emplvl": 1554,
+          "lq": 1.22
+        },
+        "48-49": {
+          "emplvl": 275,
+          "lq": 0.51
+        }
+      }
+    },
+    {
+      "fips": "26035",
+      "name": "Clare",
+      "totalPrivate": {
+        "emplvl": 5743,
+        "lq": 0.92
+      },
+      "totalAllOwnership": {
+        "emplvl": 7261
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 391,
+          "lq": 1.03
+        },
+        "42": {
+          "emplvl": 240,
+          "lq": 0.84
+        },
+        "51": {
+          "emplvl": 9,
+          "lq": 0.07
+        },
+        "52": {
+          "emplvl": 82,
+          "lq": 0.28
+        },
+        "53": {
+          "emplvl": 45,
+          "lq": 0.4
+        },
+        "54": {
+          "emplvl": 252,
+          "lq": 0.5
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 223,
+          "lq": 0.52
+        },
+        "61": {
+          "absent": true
+        },
+        "62": {
+          "emplvl": 1074,
+          "lq": 1.03
+        },
+        "71": {
+          "emplvl": 121,
+          "lq": 0.99
+        },
+        "72": {
+          "emplvl": 812,
+          "lq": 1.23
+        },
+        "81": {
+          "emplvl": 408,
+          "lq": 1.87
+        },
+        "99": {
+          "emplvl": 20,
+          "lq": 1.98
+        },
+        "31-33": {
+          "emplvl": 924,
+          "lq": 1.55
+        },
+        "44-45": {
+          "emplvl": 938,
+          "lq": 1.29
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26037",
+      "name": "Clinton",
+      "totalPrivate": {
+        "emplvl": 16594,
+        "lq": 1.04
+      },
+      "totalAllOwnership": {
+        "emplvl": 18614
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 791,
+          "lq": 5.25
+        },
+        "21": {
+          "emplvl": 11,
+          "lq": 0.16
+        },
+        "22": {
+          "absent": true
+        },
+        "23": {
+          "emplvl": 2096,
+          "lq": 2.15
+        },
+        "42": {
+          "emplvl": 931,
+          "lq": 1.27
+        },
+        "51": {
+          "emplvl": 83,
+          "lq": 0.24
+        },
+        "52": {
+          "emplvl": 587,
+          "lq": 0.78
+        },
+        "53": {
+          "emplvl": 553,
+          "lq": 1.91
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 872,
+          "lq": 0.8
+        },
+        "61": {
+          "emplvl": 119,
+          "lq": 0.31
+        },
+        "62": {
+          "emplvl": 1908,
+          "lq": 0.72
+        },
+        "71": {
+          "emplvl": 427,
+          "lq": 1.36
+        },
+        "72": {
+          "emplvl": 1619,
+          "lq": 0.96
+        },
+        "81": {
+          "emplvl": 750,
+          "lq": 1.34
+        },
+        "99": {
+          "emplvl": 103,
+          "lq": 3.97
+        },
+        "31-33": {
+          "emplvl": 1671,
+          "lq": 1.09
+        },
+        "44-45": {
+          "emplvl": 2617,
+          "lq": 1.41
+        },
+        "48-49": {
+          "emplvl": 791,
+          "lq": 1
+        }
+      }
+    },
+    {
+      "fips": "26039",
+      "name": "Crawford",
+      "totalPrivate": {
+        "emplvl": 3273,
+        "lq": 0.93
+      },
+      "totalAllOwnership": {
+        "emplvl": 4105
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 70,
+          "lq": 0.32
+        },
+        "42": {
+          "emplvl": 124,
+          "lq": 0.77
+        },
+        "51": {
+          "emplvl": 22,
+          "lq": 0.29
+        },
+        "52": {
+          "emplvl": 51,
+          "lq": 0.31
+        },
+        "53": {
+          "emplvl": 13,
+          "lq": 0.2
+        },
+        "54": {
+          "emplvl": 87,
+          "lq": 0.3
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "absent": true
+        },
+        "62": {
+          "emplvl": 788,
+          "lq": 1.34
+        },
+        "71": {
+          "disclosed": false
+        },
+        "72": {
+          "disclosed": false
+        },
+        "81": {
+          "emplvl": 153,
+          "lq": 1.24
+        },
+        "99": {
+          "emplvl": 1,
+          "lq": 0.17
+        },
+        "31-33": {
+          "emplvl": 719,
+          "lq": 2.13
+        },
+        "44-45": {
+          "emplvl": 546,
+          "lq": 1.33
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26041",
+      "name": "Delta",
+      "totalPrivate": {
+        "emplvl": 11863,
+        "lq": 1
+      },
+      "totalAllOwnership": {
+        "emplvl": 13848
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "emplvl": 51,
+          "lq": 0.97
+        },
+        "23": {
+          "emplvl": 639,
+          "lq": 0.88
+        },
+        "42": {
+          "emplvl": 366,
+          "lq": 0.67
+        },
+        "51": {
+          "emplvl": 242,
+          "lq": 0.93
+        },
+        "52": {
+          "emplvl": 423,
+          "lq": 0.75
+        },
+        "53": {
+          "emplvl": 54,
+          "lq": 0.25
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 861,
+          "lq": 1.06
+        },
+        "61": {
+          "emplvl": 74,
+          "lq": 0.26
+        },
+        "62": {
+          "emplvl": 1935,
+          "lq": 0.97
+        },
+        "71": {
+          "emplvl": 171,
+          "lq": 0.73
+        },
+        "72": {
+          "emplvl": 1219,
+          "lq": 0.97
+        },
+        "81": {
+          "emplvl": 885,
+          "lq": 2.12
+        },
+        "99": {
+          "emplvl": 28,
+          "lq": 1.45
+        },
+        "31-33": {
+          "emplvl": 1988,
+          "lq": 1.75
+        },
+        "44-45": {
+          "emplvl": 2044,
+          "lq": 1.48
+        },
+        "48-49": {
+          "emplvl": 473,
+          "lq": 0.81
+        }
+      }
+    },
+    {
+      "fips": "26043",
+      "name": "Dickinson",
+      "totalPrivate": {
+        "emplvl": 11235,
+        "lq": 0.95
+      },
+      "totalAllOwnership": {
+        "emplvl": 13798
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "emplvl": 75,
+          "lq": 1.43
+        },
+        "23": {
+          "emplvl": 1407,
+          "lq": 1.94
+        },
+        "42": {
+          "emplvl": 349,
+          "lq": 0.64
+        },
+        "51": {
+          "emplvl": 72,
+          "lq": 0.28
+        },
+        "52": {
+          "emplvl": 259,
+          "lq": 0.46
+        },
+        "53": {
+          "emplvl": 56,
+          "lq": 0.26
+        },
+        "54": {
+          "emplvl": 370,
+          "lq": 0.39
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "emplvl": 69,
+          "lq": 0.24
+        },
+        "62": {
+          "emplvl": 1206,
+          "lq": 0.61
+        },
+        "71": {
+          "emplvl": 136,
+          "lq": 0.59
+        },
+        "72": {
+          "emplvl": 1164,
+          "lq": 0.93
+        },
+        "81": {
+          "emplvl": 264,
+          "lq": 0.64
+        },
+        "99": {
+          "emplvl": 88,
+          "lq": 4.57
+        },
+        "31-33": {
+          "emplvl": 2859,
+          "lq": 2.52
+        },
+        "44-45": {
+          "emplvl": 2030,
+          "lq": 1.47
+        },
+        "48-49": {
+          "emplvl": 371,
+          "lq": 0.64
+        }
+      }
+    },
+    {
+      "fips": "26045",
+      "name": "Eaton",
+      "totalPrivate": {
+        "emplvl": 38488,
+        "lq": 1.01
+      },
+      "totalAllOwnership": {
+        "emplvl": 44501
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 417,
+          "lq": 1.16
+        },
+        "21": {
+          "emplvl": 42,
+          "lq": 0.25
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 1555,
+          "lq": 0.67
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 506,
+          "lq": 0.61
+        },
+        "52": {
+          "emplvl": 4836,
+          "lq": 2.68
+        },
+        "53": {
+          "emplvl": 387,
+          "lq": 0.56
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 1137,
+          "lq": 0.43
+        },
+        "61": {
+          "emplvl": 910,
+          "lq": 0.99
+        },
+        "62": {
+          "emplvl": 2514,
+          "lq": 0.39
+        },
+        "71": {
+          "emplvl": 371,
+          "lq": 0.5
+        },
+        "72": {
+          "emplvl": 3624,
+          "lq": 0.9
+        },
+        "81": {
+          "emplvl": 1565,
+          "lq": 1.17
+        },
+        "99": {
+          "emplvl": 120,
+          "lq": 1.93
+        },
+        "31-33": {
+          "emplvl": 7983,
+          "lq": 2.18
+        },
+        "44-45": {
+          "emplvl": 5476,
+          "lq": 1.23
+        },
+        "48-49": {
+          "emplvl": 3996,
+          "lq": 2.12
+        }
+      }
+    },
+    {
+      "fips": "26047",
+      "name": "Emmet",
+      "totalPrivate": {
+        "emplvl": 15501,
+        "lq": 1.02
+      },
+      "totalAllOwnership": {
+        "emplvl": 17742
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 120,
+          "lq": 0.84
+        },
+        "21": {
+          "absent": true
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 1501,
+          "lq": 1.61
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 169,
+          "lq": 0.51
+        },
+        "52": {
+          "emplvl": 317,
+          "lq": 0.44
+        },
+        "53": {
+          "emplvl": 264,
+          "lq": 0.96
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 925,
+          "lq": 0.89
+        },
+        "61": {
+          "emplvl": 83,
+          "lq": 0.23
+        },
+        "62": {
+          "emplvl": 2741,
+          "lq": 1.08
+        },
+        "71": {
+          "emplvl": 596,
+          "lq": 2
+        },
+        "72": {
+          "emplvl": 2402,
+          "lq": 1.49
+        },
+        "81": {
+          "emplvl": 682,
+          "lq": 1.28
+        },
+        "99": {
+          "emplvl": 62,
+          "lq": 2.51
+        },
+        "31-33": {
+          "emplvl": 1564,
+          "lq": 1.07
+        },
+        "44-45": {
+          "emplvl": 2948,
+          "lq": 1.66
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26049",
+      "name": "Genesee",
+      "totalPrivate": {
+        "emplvl": 115450,
+        "lq": 1.01
+      },
+      "totalAllOwnership": {
+        "emplvl": 133787
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 6477,
+          "lq": 0.92
+        },
+        "42": {
+          "emplvl": 6480,
+          "lq": 1.23
+        },
+        "51": {
+          "emplvl": 850,
+          "lq": 0.34
+        },
+        "52": {
+          "emplvl": 3920,
+          "lq": 0.72
+        },
+        "53": {
+          "emplvl": 1784,
+          "lq": 0.86
+        },
+        "54": {
+          "emplvl": 5055,
+          "lq": 0.54
+        },
+        "55": {
+          "emplvl": 378,
+          "lq": 0.17
+        },
+        "56": {
+          "emplvl": 10721,
+          "lq": 1.36
+        },
+        "61": {
+          "emplvl": 2394,
+          "lq": 0.87
+        },
+        "62": {
+          "emplvl": 23203,
+          "lq": 1.21
+        },
+        "71": {
+          "emplvl": 1842,
+          "lq": 0.82
+        },
+        "72": {
+          "emplvl": 13246,
+          "lq": 1.09
+        },
+        "81": {
+          "emplvl": 4021,
+          "lq": 1
+        },
+        "99": {
+          "emplvl": 307,
+          "lq": 1.65
+        },
+        "31-33": {
+          "emplvl": 13485,
+          "lq": 1.23
+        },
+        "44-45": {
+          "emplvl": 17957,
+          "lq": 1.34
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26051",
+      "name": "Gladwin",
+      "totalPrivate": {
+        "emplvl": 3836,
+        "lq": 0.98
+      },
+      "totalAllOwnership": {
+        "emplvl": 4593
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "absent": true
+        },
+        "23": {
+          "emplvl": 453,
+          "lq": 1.88
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 19,
+          "lq": 0.22
+        },
+        "52": {
+          "emplvl": 94,
+          "lq": 0.5
+        },
+        "53": {
+          "emplvl": 113,
+          "lq": 1.58
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 129,
+          "lq": 0.48
+        },
+        "61": {
+          "emplvl": 8,
+          "lq": 0.08
+        },
+        "62": {
+          "emplvl": 466,
+          "lq": 0.71
+        },
+        "71": {
+          "emplvl": 50,
+          "lq": 0.65
+        },
+        "72": {
+          "emplvl": 465,
+          "lq": 1.11
+        },
+        "81": {
+          "emplvl": 304,
+          "lq": 2.2
+        },
+        "99": {
+          "emplvl": 11,
+          "lq": 1.72
+        },
+        "31-33": {
+          "emplvl": 940,
+          "lq": 2.49
+        },
+        "44-45": {
+          "emplvl": 555,
+          "lq": 1.21
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26053",
+      "name": "Gogebic",
+      "totalPrivate": {
+        "emplvl": 3556,
+        "lq": 0.82
+      },
+      "totalAllOwnership": {
+        "emplvl": 5046
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 201,
+          "lq": 0.76
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 31,
+          "lq": 0.33
+        },
+        "52": {
+          "emplvl": 103,
+          "lq": 0.5
+        },
+        "53": {
+          "emplvl": 21,
+          "lq": 0.27
+        },
+        "54": {
+          "emplvl": 71,
+          "lq": 0.2
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 30,
+          "lq": 0.1
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 115,
+          "lq": 1.36
+        },
+        "72": {
+          "emplvl": 560,
+          "lq": 1.22
+        },
+        "81": {
+          "emplvl": 254,
+          "lq": 1.67
+        },
+        "99": {
+          "emplvl": 12,
+          "lq": 1.71
+        },
+        "31-33": {
+          "emplvl": 611,
+          "lq": 1.47
+        },
+        "44-45": {
+          "emplvl": 755,
+          "lq": 1.5
+        },
+        "48-49": {
+          "emplvl": 97,
+          "lq": 0.45
+        }
+      }
+    },
+    {
+      "fips": "26055",
+      "name": "Grand Traverse",
+      "totalPrivate": {
+        "emplvl": 46298,
+        "lq": 1.04
+      },
+      "totalAllOwnership": {
+        "emplvl": 51962
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 321,
+          "lq": 0.76
+        },
+        "21": {
+          "emplvl": 187,
+          "lq": 0.95
+        },
+        "22": {
+          "emplvl": 235,
+          "lq": 1.19
+        },
+        "23": {
+          "emplvl": 3190,
+          "lq": 1.17
+        },
+        "42": {
+          "emplvl": 1482,
+          "lq": 0.72
+        },
+        "51": {
+          "emplvl": 662,
+          "lq": 0.68
+        },
+        "52": {
+          "emplvl": 2283,
+          "lq": 1.08
+        },
+        "53": {
+          "emplvl": 624,
+          "lq": 0.77
+        },
+        "54": {
+          "emplvl": 2117,
+          "lq": 0.59
+        },
+        "55": {
+          "emplvl": 46,
+          "lq": 0.05
+        },
+        "56": {
+          "emplvl": 1398,
+          "lq": 0.46
+        },
+        "61": {
+          "emplvl": 1273,
+          "lq": 1.18
+        },
+        "62": {
+          "emplvl": 10937,
+          "lq": 1.47
+        },
+        "71": {
+          "emplvl": 754,
+          "lq": 0.86
+        },
+        "72": {
+          "emplvl": 6035,
+          "lq": 1.28
+        },
+        "81": {
+          "emplvl": 1858,
+          "lq": 1.19
+        },
+        "99": {
+          "emplvl": 183,
+          "lq": 2.53
+        },
+        "31-33": {
+          "emplvl": 4503,
+          "lq": 1.05
+        },
+        "44-45": {
+          "emplvl": 7218,
+          "lq": 1.39
+        },
+        "48-49": {
+          "emplvl": 993,
+          "lq": 0.45
+        }
+      }
+    },
+    {
+      "fips": "26057",
+      "name": "Gratiot",
+      "totalPrivate": {
+        "emplvl": 9821,
+        "lq": 0.93
+      },
+      "totalAllOwnership": {
+        "emplvl": 12359
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 288,
+          "lq": 0.44
+        },
+        "42": {
+          "emplvl": 606,
+          "lq": 1.24
+        },
+        "51": {
+          "emplvl": 46,
+          "lq": 0.2
+        },
+        "52": {
+          "emplvl": 328,
+          "lq": 0.65
+        },
+        "53": {
+          "emplvl": 53,
+          "lq": 0.28
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 452,
+          "lq": 0.62
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 73,
+          "lq": 0.35
+        },
+        "72": {
+          "emplvl": 637,
+          "lq": 0.57
+        },
+        "81": {
+          "emplvl": 282,
+          "lq": 0.76
+        },
+        "99": {
+          "emplvl": 17,
+          "lq": 0.99
+        },
+        "31-33": {
+          "emplvl": 1751,
+          "lq": 1.72
+        },
+        "44-45": {
+          "emplvl": 1295,
+          "lq": 1.05
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26059",
+      "name": "Hillsdale",
+      "totalPrivate": {
+        "emplvl": 10580,
+        "lq": 0.96
+      },
+      "totalAllOwnership": {
+        "emplvl": 12854
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 265,
+          "lq": 2.55
+        },
+        "21": {
+          "absent": true
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 385,
+          "lq": 0.57
+        },
+        "42": {
+          "emplvl": 229,
+          "lq": 0.45
+        },
+        "51": {
+          "emplvl": 91,
+          "lq": 0.38
+        },
+        "52": {
+          "emplvl": 258,
+          "lq": 0.49
+        },
+        "53": {
+          "emplvl": 44,
+          "lq": 0.22
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 445,
+          "lq": 0.59
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 47,
+          "lq": 0.22
+        },
+        "72": {
+          "emplvl": 816,
+          "lq": 0.7
+        },
+        "81": {
+          "emplvl": 323,
+          "lq": 0.83
+        },
+        "99": {
+          "emplvl": 60,
+          "lq": 3.35
+        },
+        "31-33": {
+          "emplvl": 3601,
+          "lq": 3.41
+        },
+        "44-45": {
+          "emplvl": 1853,
+          "lq": 1.44
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26061",
+      "name": "Houghton",
+      "totalPrivate": {
+        "emplvl": 8884,
+        "lq": 0.86
+      },
+      "totalAllOwnership": {
+        "emplvl": 12124
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 788,
+          "lq": 1.24
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 130,
+          "lq": 0.57
+        },
+        "52": {
+          "emplvl": 375,
+          "lq": 0.76
+        },
+        "53": {
+          "emplvl": 113,
+          "lq": 0.6
+        },
+        "54": {
+          "emplvl": 671,
+          "lq": 0.8
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 151,
+          "lq": 0.21
+        },
+        "61": {
+          "emplvl": 48,
+          "lq": 0.19
+        },
+        "62": {
+          "emplvl": 1792,
+          "lq": 1.03
+        },
+        "71": {
+          "emplvl": 100,
+          "lq": 0.49
+        },
+        "72": {
+          "emplvl": 1396,
+          "lq": 1.27
+        },
+        "81": {
+          "emplvl": 351,
+          "lq": 0.96
+        },
+        "99": {
+          "emplvl": 22,
+          "lq": 1.3
+        },
+        "31-33": {
+          "emplvl": 939,
+          "lq": 0.94
+        },
+        "44-45": {
+          "emplvl": 1563,
+          "lq": 1.29
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26063",
+      "name": "Huron",
+      "totalPrivate": {
+        "emplvl": 9592,
+        "lq": 1
+      },
+      "totalAllOwnership": {
+        "emplvl": 11234
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 523,
+          "lq": 0.89
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 197,
+          "lq": 0.94
+        },
+        "52": {
+          "emplvl": 442,
+          "lq": 0.97
+        },
+        "53": {
+          "emplvl": 11,
+          "lq": 0.06
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 391,
+          "lq": 0.59
+        },
+        "61": {
+          "emplvl": 31,
+          "lq": 0.13
+        },
+        "62": {
+          "emplvl": 1644,
+          "lq": 1.02
+        },
+        "71": {
+          "emplvl": 108,
+          "lq": 0.57
+        },
+        "72": {
+          "emplvl": 799,
+          "lq": 0.78
+        },
+        "81": {
+          "emplvl": 344,
+          "lq": 1.02
+        },
+        "99": {
+          "emplvl": 44,
+          "lq": 2.81
+        },
+        "31-33": {
+          "emplvl": 1669,
+          "lq": 1.81
+        },
+        "44-45": {
+          "emplvl": 1202,
+          "lq": 1.07
+        },
+        "48-49": {
+          "emplvl": 410,
+          "lq": 0.86
+        }
+      }
+    },
+    {
+      "fips": "26065",
+      "name": "Ingham",
+      "totalPrivate": {
+        "emplvl": 109332,
+        "lq": 0.82
+      },
+      "totalAllOwnership": {
+        "emplvl": 155500
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 766,
+          "lq": 0.61
+        },
+        "21": {
+          "emplvl": 111,
+          "lq": 0.19
+        },
+        "22": {
+          "emplvl": 27,
+          "lq": 0.05
+        },
+        "23": {
+          "emplvl": 6106,
+          "lq": 0.75
+        },
+        "42": {
+          "emplvl": 2773,
+          "lq": 0.45
+        },
+        "51": {
+          "emplvl": 2234,
+          "lq": 0.77
+        },
+        "52": {
+          "emplvl": 6758,
+          "lq": 1.07
+        },
+        "53": {
+          "emplvl": 2360,
+          "lq": 0.98
+        },
+        "54": {
+          "emplvl": 7664,
+          "lq": 0.71
+        },
+        "55": {
+          "emplvl": 2567,
+          "lq": 0.98
+        },
+        "56": {
+          "emplvl": 5843,
+          "lq": 0.64
+        },
+        "61": {
+          "emplvl": 2582,
+          "lq": 0.8
+        },
+        "62": {
+          "emplvl": 24527,
+          "lq": 1.1
+        },
+        "71": {
+          "emplvl": 1506,
+          "lq": 0.58
+        },
+        "72": {
+          "emplvl": 10705,
+          "lq": 0.76
+        },
+        "81": {
+          "emplvl": 6042,
+          "lq": 1.29
+        },
+        "99": {
+          "emplvl": 329,
+          "lq": 1.52
+        },
+        "31-33": {
+          "emplvl": 10106,
+          "lq": 0.79
+        },
+        "44-45": {
+          "emplvl": 12012,
+          "lq": 0.77
+        },
+        "48-49": {
+          "emplvl": 4315,
+          "lq": 0.66
+        }
+      }
+    },
+    {
+      "fips": "26067",
+      "name": "Ionia",
+      "totalPrivate": {
+        "emplvl": 15129,
+        "lq": 0.95
+      },
+      "totalAllOwnership": {
+        "emplvl": 18530
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "absent": true
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "disclosed": false
+        },
+        "42": {
+          "emplvl": 375,
+          "lq": 0.51
+        },
+        "51": {
+          "emplvl": 23,
+          "lq": 0.07
+        },
+        "52": {
+          "emplvl": 646,
+          "lq": 0.86
+        },
+        "53": {
+          "emplvl": 50,
+          "lq": 0.17
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "emplvl": 132,
+          "lq": 0.34
+        },
+        "62": {
+          "emplvl": 1242,
+          "lq": 0.47
+        },
+        "71": {
+          "emplvl": 210,
+          "lq": 0.67
+        },
+        "72": {
+          "emplvl": 1207,
+          "lq": 0.72
+        },
+        "81": {
+          "emplvl": 526,
+          "lq": 0.94
+        },
+        "99": {
+          "emplvl": 42,
+          "lq": 1.63
+        },
+        "31-33": {
+          "emplvl": 3673,
+          "lq": 2.41
+        },
+        "44-45": {
+          "emplvl": 1747,
+          "lq": 0.94
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26069",
+      "name": "Iosco",
+      "totalPrivate": {
+        "emplvl": 6299,
+        "lq": 0.95
+      },
+      "totalAllOwnership": {
+        "emplvl": 7724
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 322,
+          "lq": 0.79
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 55,
+          "lq": 0.38
+        },
+        "52": {
+          "emplvl": 175,
+          "lq": 0.56
+        },
+        "53": {
+          "emplvl": 52,
+          "lq": 0.43
+        },
+        "54": {
+          "emplvl": 124,
+          "lq": 0.23
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 191,
+          "lq": 0.42
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 97,
+          "lq": 0.75
+        },
+        "72": {
+          "emplvl": 681,
+          "lq": 0.97
+        },
+        "81": {
+          "emplvl": 230,
+          "lq": 0.99
+        },
+        "99": {
+          "emplvl": 21,
+          "lq": 1.95
+        },
+        "31-33": {
+          "emplvl": 1006,
+          "lq": 1.59
+        },
+        "44-45": {
+          "emplvl": 1057,
+          "lq": 1.37
+        },
+        "48-49": {
+          "emplvl": 1422,
+          "lq": 4.35
+        }
+      }
+    },
+    {
+      "fips": "26071",
+      "name": "Iron",
+      "totalPrivate": {
+        "emplvl": 2600,
+        "lq": 0.89
+      },
+      "totalAllOwnership": {
+        "emplvl": 3410
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "emplvl": 13,
+          "lq": 1
+        },
+        "23": {
+          "emplvl": 217,
+          "lq": 1.21
+        },
+        "42": {
+          "emplvl": 29,
+          "lq": 0.22
+        },
+        "51": {
+          "emplvl": 14,
+          "lq": 0.22
+        },
+        "52": {
+          "emplvl": 117,
+          "lq": 0.85
+        },
+        "53": {
+          "emplvl": 26,
+          "lq": 0.49
+        },
+        "54": {
+          "emplvl": 120,
+          "lq": 0.51
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "absent": true
+        },
+        "62": {
+          "emplvl": 277,
+          "lq": 0.57
+        },
+        "71": {
+          "emplvl": 92,
+          "lq": 1.61
+        },
+        "72": {
+          "emplvl": 314,
+          "lq": 1.01
+        },
+        "81": {
+          "emplvl": 165,
+          "lq": 1.61
+        },
+        "99": {
+          "emplvl": 34,
+          "lq": 7.15
+        },
+        "31-33": {
+          "emplvl": 287,
+          "lq": 1.02
+        },
+        "44-45": {
+          "emplvl": 626,
+          "lq": 1.84
+        },
+        "48-49": {
+          "emplvl": 52,
+          "lq": 0.36
+        }
+      }
+    },
+    {
+      "fips": "26073",
+      "name": "Isabella",
+      "totalPrivate": {
+        "emplvl": 18552,
+        "lq": 0.81
+      },
+      "totalAllOwnership": {
+        "emplvl": 26640
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 232,
+          "lq": 1.08
+        },
+        "21": {
+          "emplvl": 330,
+          "lq": 3.27
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 1653,
+          "lq": 1.18
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 179,
+          "lq": 0.36
+        },
+        "52": {
+          "emplvl": 705,
+          "lq": 0.65
+        },
+        "53": {
+          "emplvl": 254,
+          "lq": 0.61
+        },
+        "54": {
+          "emplvl": 639,
+          "lq": 0.34
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "emplvl": 159,
+          "lq": 0.29
+        },
+        "62": {
+          "emplvl": 3145,
+          "lq": 0.82
+        },
+        "71": {
+          "emplvl": 362,
+          "lq": 0.81
+        },
+        "72": {
+          "emplvl": 2298,
+          "lq": 0.95
+        },
+        "81": {
+          "emplvl": 524,
+          "lq": 0.65
+        },
+        "99": {
+          "emplvl": 42,
+          "lq": 1.13
+        },
+        "31-33": {
+          "emplvl": 2589,
+          "lq": 1.18
+        },
+        "44-45": {
+          "emplvl": 3119,
+          "lq": 1.17
+        },
+        "48-49": {
+          "emplvl": 936,
+          "lq": 0.83
+        }
+      }
+    },
+    {
+      "fips": "26075",
+      "name": "Jackson",
+      "totalPrivate": {
+        "emplvl": 48044,
+        "lq": 1
+      },
+      "totalAllOwnership": {
+        "emplvl": 55945
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 296,
+          "lq": 0.65
+        },
+        "21": {
+          "emplvl": 37,
+          "lq": 0.17
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 2405,
+          "lq": 0.82
+        },
+        "42": {
+          "emplvl": 1241,
+          "lq": 0.56
+        },
+        "51": {
+          "emplvl": 148,
+          "lq": 0.14
+        },
+        "52": {
+          "emplvl": 1579,
+          "lq": 0.7
+        },
+        "53": {
+          "emplvl": 532,
+          "lq": 0.61
+        },
+        "54": {
+          "emplvl": 2275,
+          "lq": 0.58
+        },
+        "55": {
+          "emplvl": 566,
+          "lq": 0.6
+        },
+        "56": {
+          "emplvl": 2986,
+          "lq": 0.91
+        },
+        "61": {
+          "emplvl": 1057,
+          "lq": 0.91
+        },
+        "62": {
+          "emplvl": 8476,
+          "lq": 1.06
+        },
+        "71": {
+          "emplvl": 584,
+          "lq": 0.62
+        },
+        "72": {
+          "emplvl": 4590,
+          "lq": 0.9
+        },
+        "81": {
+          "emplvl": 1765,
+          "lq": 1.05
+        },
+        "99": {
+          "emplvl": 191,
+          "lq": 2.45
+        },
+        "31-33": {
+          "emplvl": 9250,
+          "lq": 2.01
+        },
+        "44-45": {
+          "emplvl": 6349,
+          "lq": 1.14
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26077",
+      "name": "Kalamazoo",
+      "totalPrivate": {
+        "emplvl": 107943,
+        "lq": 1.05
+      },
+      "totalAllOwnership": {
+        "emplvl": 120708
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 1485,
+          "lq": 1.52
+        },
+        "21": {
+          "emplvl": 24,
+          "lq": 0.05
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 6522,
+          "lq": 1.03
+        },
+        "42": {
+          "emplvl": 5036,
+          "lq": 1.06
+        },
+        "51": {
+          "emplvl": 695,
+          "lq": 0.31
+        },
+        "52": {
+          "emplvl": 3326,
+          "lq": 0.68
+        },
+        "53": {
+          "emplvl": 1793,
+          "lq": 0.96
+        },
+        "54": {
+          "emplvl": 5959,
+          "lq": 0.71
+        },
+        "55": {
+          "emplvl": 158,
+          "lq": 0.08
+        },
+        "56": {
+          "emplvl": 5719,
+          "lq": 0.8
+        },
+        "61": {
+          "emplvl": 2538,
+          "lq": 1.02
+        },
+        "62": {
+          "emplvl": 20432,
+          "lq": 1.18
+        },
+        "71": {
+          "emplvl": 1838,
+          "lq": 0.91
+        },
+        "72": {
+          "emplvl": 11060,
+          "lq": 1.01
+        },
+        "81": {
+          "emplvl": 4000,
+          "lq": 1.1
+        },
+        "99": {
+          "emplvl": 248,
+          "lq": 1.47
+        },
+        "31-33": {
+          "emplvl": 21198,
+          "lq": 2.14
+        },
+        "44-45": {
+          "emplvl": 12358,
+          "lq": 1.03
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26079",
+      "name": "Kalkaska",
+      "totalPrivate": {
+        "emplvl": 3700,
+        "lq": 0.89
+      },
+      "totalAllOwnership": {
+        "emplvl": 4860
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 150,
+          "lq": 3.81
+        },
+        "21": {
+          "emplvl": 332,
+          "lq": 18.06
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 559,
+          "lq": 2.19
+        },
+        "42": {
+          "emplvl": 219,
+          "lq": 1.14
+        },
+        "51": {
+          "emplvl": 30,
+          "lq": 0.33
+        },
+        "52": {
+          "emplvl": 33,
+          "lq": 0.17
+        },
+        "53": {
+          "emplvl": 64,
+          "lq": 0.85
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "disclosed": false
+        },
+        "72": {
+          "disclosed": false
+        },
+        "81": {
+          "emplvl": 114,
+          "lq": 0.78
+        },
+        "99": {
+          "emplvl": 12,
+          "lq": 1.77
+        },
+        "31-33": {
+          "emplvl": 287,
+          "lq": 0.72
+        },
+        "44-45": {
+          "emplvl": 472,
+          "lq": 0.97
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26081",
+      "name": "Kent",
+      "totalPrivate": {
+        "emplvl": 389176,
+        "lq": 1.09
+      },
+      "totalAllOwnership": {
+        "emplvl": 415565
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 2741,
+          "lq": 0.81
+        },
+        "21": {
+          "emplvl": 98,
+          "lq": 0.06
+        },
+        "22": {
+          "emplvl": 847,
+          "lq": 0.54
+        },
+        "23": {
+          "emplvl": 20290,
+          "lq": 0.93
+        },
+        "42": {
+          "emplvl": 27544,
+          "lq": 1.68
+        },
+        "51": {
+          "emplvl": 4273,
+          "lq": 0.55
+        },
+        "52": {
+          "emplvl": 15039,
+          "lq": 0.89
+        },
+        "53": {
+          "emplvl": 4513,
+          "lq": 0.7
+        },
+        "54": {
+          "emplvl": 19530,
+          "lq": 0.68
+        },
+        "55": {
+          "emplvl": 5587,
+          "lq": 0.8
+        },
+        "56": {
+          "emplvl": 48794,
+          "lq": 1.99
+        },
+        "61": {
+          "emplvl": 10460,
+          "lq": 1.22
+        },
+        "62": {
+          "emplvl": 67987,
+          "lq": 1.14
+        },
+        "71": {
+          "emplvl": 4889,
+          "lq": 0.7
+        },
+        "72": {
+          "emplvl": 31658,
+          "lq": 0.84
+        },
+        "81": {
+          "emplvl": 13090,
+          "lq": 1.05
+        },
+        "99": {
+          "emplvl": 1175,
+          "lq": 2.03
+        },
+        "31-33": {
+          "emplvl": 62796,
+          "lq": 1.84
+        },
+        "44-45": {
+          "emplvl": 34924,
+          "lq": 0.84
+        },
+        "48-49": {
+          "emplvl": 12941,
+          "lq": 0.74
+        }
+      }
+    },
+    {
+      "fips": "26083",
+      "name": "Keweenaw",
+      "totalPrivate": {
+        "emplvl": 349,
+        "lq": 0.85
+      },
+      "totalAllOwnership": {
+        "emplvl": 478
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 12,
+          "lq": 3.1
+        },
+        "21": {
+          "absent": true
+        },
+        "22": {
+          "absent": true
+        },
+        "23": {
+          "emplvl": 19,
+          "lq": 0.76
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "disclosed": false
+        },
+        "52": {
+          "disclosed": false
+        },
+        "53": {
+          "disclosed": false
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "absent": true
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "disclosed": false
+        },
+        "72": {
+          "disclosed": false
+        },
+        "81": {
+          "emplvl": 14,
+          "lq": 0.97
+        },
+        "99": {
+          "absent": true
+        },
+        "31-33": {
+          "emplvl": 55,
+          "lq": 1.4
+        },
+        "44-45": {
+          "emplvl": 37,
+          "lq": 0.78
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26085",
+      "name": "Lake",
+      "totalPrivate": {
+        "emplvl": 1280,
+        "lq": 0.87
+      },
+      "totalAllOwnership": {
+        "emplvl": 1721
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 45,
+          "lq": 3.23
+        },
+        "21": {
+          "absent": true
+        },
+        "22": {
+          "absent": true
+        },
+        "23": {
+          "emplvl": 78,
+          "lq": 0.86
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "absent": true
+        },
+        "52": {
+          "disclosed": false
+        },
+        "53": {
+          "disclosed": false
+        },
+        "54": {
+          "emplvl": 32,
+          "lq": 0.27
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "disclosed": false
+        },
+        "72": {
+          "disclosed": false
+        },
+        "81": {
+          "emplvl": 51,
+          "lq": 0.98
+        },
+        "99": {
+          "emplvl": 5,
+          "lq": 2.08
+        },
+        "31-33": {
+          "emplvl": 63,
+          "lq": 0.45
+        },
+        "44-45": {
+          "emplvl": 193,
+          "lq": 1.12
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26087",
+      "name": "Lapeer",
+      "totalPrivate": {
+        "emplvl": 17911,
+        "lq": 0.95
+      },
+      "totalAllOwnership": {
+        "emplvl": 21986
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 299,
+          "lq": 1.68
+        },
+        "21": {
+          "emplvl": 99,
+          "lq": 1.19
+        },
+        "22": {
+          "emplvl": 54,
+          "lq": 0.65
+        },
+        "23": {
+          "emplvl": 1273,
+          "lq": 1.1
+        },
+        "42": {
+          "emplvl": 481,
+          "lq": 0.56
+        },
+        "51": {
+          "emplvl": 179,
+          "lq": 0.43
+        },
+        "52": {
+          "emplvl": 449,
+          "lq": 0.5
+        },
+        "53": {
+          "emplvl": 201,
+          "lq": 0.59
+        },
+        "54": {
+          "emplvl": 524,
+          "lq": 0.34
+        },
+        "55": {
+          "emplvl": 10,
+          "lq": 0.03
+        },
+        "56": {
+          "emplvl": 1113,
+          "lq": 0.86
+        },
+        "61": {
+          "emplvl": 145,
+          "lq": 0.32
+        },
+        "62": {
+          "emplvl": 1895,
+          "lq": 0.6
+        },
+        "71": {
+          "emplvl": 193,
+          "lq": 0.52
+        },
+        "72": {
+          "emplvl": 2121,
+          "lq": 1.06
+        },
+        "81": {
+          "emplvl": 753,
+          "lq": 1.14
+        },
+        "99": {
+          "emplvl": 88,
+          "lq": 2.87
+        },
+        "31-33": {
+          "emplvl": 4738,
+          "lq": 2.62
+        },
+        "44-45": {
+          "emplvl": 2958,
+          "lq": 1.35
+        },
+        "48-49": {
+          "emplvl": 338,
+          "lq": 0.36
+        }
+      }
+    },
+    {
+      "fips": "26089",
+      "name": "Leelanau",
+      "totalPrivate": {
+        "emplvl": 4978,
+        "lq": 0.87
+      },
+      "totalAllOwnership": {
+        "emplvl": 6662
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "absent": true
+        },
+        "23": {
+          "emplvl": 545,
+          "lq": 1.56
+        },
+        "42": {
+          "emplvl": 291,
+          "lq": 1.11
+        },
+        "51": {
+          "emplvl": 40,
+          "lq": 0.32
+        },
+        "52": {
+          "emplvl": 100,
+          "lq": 0.37
+        },
+        "53": {
+          "emplvl": 114,
+          "lq": 1.1
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 251,
+          "lq": 0.64
+        },
+        "61": {
+          "emplvl": 114,
+          "lq": 0.83
+        },
+        "62": {
+          "emplvl": 529,
+          "lq": 0.55
+        },
+        "71": {
+          "emplvl": 163,
+          "lq": 1.46
+        },
+        "72": {
+          "emplvl": 987,
+          "lq": 1.63
+        },
+        "81": {
+          "emplvl": 227,
+          "lq": 1.13
+        },
+        "99": {
+          "emplvl": 49,
+          "lq": 5.27
+        },
+        "31-33": {
+          "emplvl": 556,
+          "lq": 1.02
+        },
+        "44-45": {
+          "emplvl": 609,
+          "lq": 0.92
+        },
+        "48-49": {
+          "emplvl": 30,
+          "lq": 0.11
+        }
+      }
+    },
+    {
+      "fips": "26091",
+      "name": "Lenawee",
+      "totalPrivate": {
+        "emplvl": 21435,
+        "lq": 0.97
+      },
+      "totalAllOwnership": {
+        "emplvl": 25796
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "absent": true
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "disclosed": false
+        },
+        "42": {
+          "emplvl": 527,
+          "lq": 0.52
+        },
+        "51": {
+          "emplvl": 293,
+          "lq": 0.61
+        },
+        "52": {
+          "emplvl": 1035,
+          "lq": 0.99
+        },
+        "53": {
+          "emplvl": 155,
+          "lq": 0.39
+        },
+        "54": {
+          "emplvl": 469,
+          "lq": 0.26
+        },
+        "55": {
+          "emplvl": 40,
+          "lq": 0.09
+        },
+        "56": {
+          "emplvl": 561,
+          "lq": 0.37
+        },
+        "61": {
+          "emplvl": 1384,
+          "lq": 2.59
+        },
+        "62": {
+          "emplvl": 3610,
+          "lq": 0.98
+        },
+        "71": {
+          "emplvl": 392,
+          "lq": 0.9
+        },
+        "72": {
+          "emplvl": 2151,
+          "lq": 0.92
+        },
+        "81": {
+          "emplvl": 757,
+          "lq": 0.97
+        },
+        "99": {
+          "emplvl": 100,
+          "lq": 2.78
+        },
+        "31-33": {
+          "emplvl": 4313,
+          "lq": 2.04
+        },
+        "44-45": {
+          "emplvl": 3612,
+          "lq": 1.4
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26093",
+      "name": "Livingston",
+      "totalPrivate": {
+        "emplvl": 57331,
+        "lq": 1.04
+      },
+      "totalAllOwnership": {
+        "emplvl": 64380
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 390,
+          "lq": 0.75
+        },
+        "21": {
+          "emplvl": 27,
+          "lq": 0.11
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 4536,
+          "lq": 1.34
+        },
+        "42": {
+          "emplvl": 2689,
+          "lq": 1.06
+        },
+        "51": {
+          "emplvl": 415,
+          "lq": 0.34
+        },
+        "52": {
+          "emplvl": 1558,
+          "lq": 0.6
+        },
+        "53": {
+          "emplvl": 959,
+          "lq": 0.96
+        },
+        "54": {
+          "emplvl": 4832,
+          "lq": 1.08
+        },
+        "55": {
+          "emplvl": 567,
+          "lq": 0.52
+        },
+        "56": {
+          "emplvl": 2149,
+          "lq": 0.57
+        },
+        "61": {
+          "emplvl": 379,
+          "lq": 0.28
+        },
+        "62": {
+          "emplvl": 7974,
+          "lq": 0.86
+        },
+        "71": {
+          "emplvl": 1112,
+          "lq": 1.03
+        },
+        "72": {
+          "emplvl": 7462,
+          "lq": 1.27
+        },
+        "81": {
+          "emplvl": 2157,
+          "lq": 1.11
+        },
+        "99": {
+          "emplvl": 410,
+          "lq": 4.57
+        },
+        "31-33": {
+          "emplvl": 9756,
+          "lq": 1.84
+        },
+        "44-45": {
+          "emplvl": 8298,
+          "lq": 1.29
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26095",
+      "name": "Luce",
+      "totalPrivate": {
+        "emplvl": 976,
+        "lq": 0.64
+      },
+      "totalAllOwnership": {
+        "emplvl": 1786
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 56,
+          "lq": 3.87
+        },
+        "21": {
+          "absent": true
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 32,
+          "lq": 0.34
+        },
+        "42": {
+          "emplvl": 25,
+          "lq": 0.36
+        },
+        "51": {
+          "disclosed": false
+        },
+        "52": {
+          "disclosed": false
+        },
+        "53": {
+          "disclosed": false
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "absent": true
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "disclosed": false
+        },
+        "72": {
+          "disclosed": false
+        },
+        "81": {
+          "emplvl": 42,
+          "lq": 0.78
+        },
+        "99": {
+          "disclosed": false
+        },
+        "31-33": {
+          "emplvl": 60,
+          "lq": 0.41
+        },
+        "44-45": {
+          "emplvl": 263,
+          "lq": 1.47
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26097",
+      "name": "Mackinac",
+      "totalPrivate": {
+        "emplvl": 3836,
+        "lq": 0.93
+      },
+      "totalAllOwnership": {
+        "emplvl": 4836
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 232,
+          "lq": 0.91
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "disclosed": false
+        },
+        "52": {
+          "emplvl": 81,
+          "lq": 0.41
+        },
+        "53": {
+          "emplvl": 37,
+          "lq": 0.49
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 66,
+          "lq": 0.23
+        },
+        "61": {
+          "emplvl": 34,
+          "lq": 0.34
+        },
+        "62": {
+          "emplvl": 398,
+          "lq": 0.57
+        },
+        "71": {
+          "emplvl": 79,
+          "lq": 0.97
+        },
+        "72": {
+          "emplvl": 1566,
+          "lq": 3.56
+        },
+        "81": {
+          "emplvl": 144,
+          "lq": 0.99
+        },
+        "99": {
+          "disclosed": false
+        },
+        "31-33": {
+          "emplvl": 108,
+          "lq": 0.27
+        },
+        "44-45": {
+          "emplvl": 470,
+          "lq": 0.97
+        },
+        "48-49": {
+          "emplvl": 259,
+          "lq": 1.26
+        }
+      }
+    },
+    {
+      "fips": "26099",
+      "name": "Macomb",
+      "totalPrivate": {
+        "emplvl": 301041,
+        "lq": 1.05
+      },
+      "totalAllOwnership": {
+        "emplvl": 336295
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 1466,
+          "lq": 0.54
+        },
+        "21": {
+          "emplvl": 41,
+          "lq": 0.03
+        },
+        "22": {
+          "emplvl": 352,
+          "lq": 0.28
+        },
+        "23": {
+          "emplvl": 17630,
+          "lq": 1
+        },
+        "42": {
+          "emplvl": 10075,
+          "lq": 0.76
+        },
+        "51": {
+          "emplvl": 1887,
+          "lq": 0.3
+        },
+        "52": {
+          "emplvl": 5596,
+          "lq": 0.41
+        },
+        "53": {
+          "emplvl": 3986,
+          "lq": 0.76
+        },
+        "54": {
+          "emplvl": 30840,
+          "lq": 1.32
+        },
+        "55": {
+          "emplvl": 8888,
+          "lq": 1.57
+        },
+        "56": {
+          "emplvl": 14731,
+          "lq": 0.74
+        },
+        "61": {
+          "emplvl": 2396,
+          "lq": 0.34
+        },
+        "62": {
+          "emplvl": 43428,
+          "lq": 0.9
+        },
+        "71": {
+          "emplvl": 3004,
+          "lq": 0.53
+        },
+        "72": {
+          "emplvl": 28154,
+          "lq": 0.92
+        },
+        "81": {
+          "emplvl": 9649,
+          "lq": 0.95
+        },
+        "99": {
+          "emplvl": 1132,
+          "lq": 2.41
+        },
+        "31-33": {
+          "emplvl": 63562,
+          "lq": 2.3
+        },
+        "44-45": {
+          "emplvl": 40456,
+          "lq": 1.2
+        },
+        "48-49": {
+          "emplvl": 13767,
+          "lq": 0.97
+        }
+      }
+    },
+    {
+      "fips": "26101",
+      "name": "Manistee",
+      "totalPrivate": {
+        "emplvl": 4893,
+        "lq": 0.79
+      },
+      "totalAllOwnership": {
+        "emplvl": 7281
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "emplvl": 48,
+          "lq": 1.73
+        },
+        "23": {
+          "emplvl": 315,
+          "lq": 0.82
+        },
+        "42": {
+          "emplvl": 263,
+          "lq": 0.92
+        },
+        "51": {
+          "emplvl": 41,
+          "lq": 0.3
+        },
+        "52": {
+          "emplvl": 128,
+          "lq": 0.43
+        },
+        "53": {
+          "emplvl": 38,
+          "lq": 0.34
+        },
+        "54": {
+          "emplvl": 98,
+          "lq": 0.19
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 104,
+          "lq": 0.24
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 221,
+          "lq": 1.81
+        },
+        "72": {
+          "emplvl": 666,
+          "lq": 1.01
+        },
+        "81": {
+          "emplvl": 237,
+          "lq": 1.08
+        },
+        "99": {
+          "emplvl": 3,
+          "lq": 0.3
+        },
+        "31-33": {
+          "emplvl": 1058,
+          "lq": 1.77
+        },
+        "44-45": {
+          "emplvl": 1097,
+          "lq": 1.51
+        },
+        "48-49": {
+          "emplvl": 77,
+          "lq": 0.25
+        }
+      }
+    },
+    {
+      "fips": "26103",
+      "name": "Marquette",
+      "totalPrivate": {
+        "emplvl": 21458,
+        "lq": 0.95
+      },
+      "totalAllOwnership": {
+        "emplvl": 26385
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 169,
+          "lq": 0.79
+        },
+        "21": {
+          "emplvl": 1185,
+          "lq": 11.87
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 1461,
+          "lq": 1.05
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 249,
+          "lq": 0.5
+        },
+        "52": {
+          "emplvl": 673,
+          "lq": 0.63
+        },
+        "53": {
+          "emplvl": 264,
+          "lq": 0.64
+        },
+        "54": {
+          "emplvl": 846,
+          "lq": 0.46
+        },
+        "55": {
+          "emplvl": 351,
+          "lq": 0.79
+        },
+        "56": {
+          "emplvl": 783,
+          "lq": 0.5
+        },
+        "61": {
+          "emplvl": 107,
+          "lq": 0.2
+        },
+        "62": {
+          "emplvl": 4928,
+          "lq": 1.3
+        },
+        "71": {
+          "emplvl": 346,
+          "lq": 0.78
+        },
+        "72": {
+          "emplvl": 3108,
+          "lq": 1.3
+        },
+        "81": {
+          "emplvl": 860,
+          "lq": 1.08
+        },
+        "99": {
+          "emplvl": 72,
+          "lq": 1.96
+        },
+        "31-33": {
+          "emplvl": 1185,
+          "lq": 0.55
+        },
+        "44-45": {
+          "emplvl": 3613,
+          "lq": 1.37
+        },
+        "48-49": {
+          "emplvl": 696,
+          "lq": 0.62
+        }
+      }
+    },
+    {
+      "fips": "26105",
+      "name": "Mason",
+      "totalPrivate": {
+        "emplvl": 8576,
+        "lq": 0.98
+      },
+      "totalAllOwnership": {
+        "emplvl": 10186
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "emplvl": 109,
+          "lq": 2.81
+        },
+        "23": {
+          "emplvl": 545,
+          "lq": 1.02
+        },
+        "42": {
+          "emplvl": 114,
+          "lq": 0.28
+        },
+        "51": {
+          "emplvl": 169,
+          "lq": 0.89
+        },
+        "52": {
+          "emplvl": 240,
+          "lq": 0.58
+        },
+        "53": {
+          "emplvl": 109,
+          "lq": 0.69
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 282,
+          "lq": 0.47
+        },
+        "61": {
+          "emplvl": 21,
+          "lq": 0.1
+        },
+        "62": {
+          "emplvl": 1163,
+          "lq": 0.8
+        },
+        "71": {
+          "emplvl": 130,
+          "lq": 0.76
+        },
+        "72": {
+          "emplvl": 1014,
+          "lq": 1.09
+        },
+        "81": {
+          "emplvl": 236,
+          "lq": 0.77
+        },
+        "99": {
+          "emplvl": 18,
+          "lq": 1.27
+        },
+        "31-33": {
+          "emplvl": 1973,
+          "lq": 2.36
+        },
+        "44-45": {
+          "emplvl": 1491,
+          "lq": 1.47
+        },
+        "48-49": {
+          "emplvl": 287,
+          "lq": 0.67
+        }
+      }
+    },
+    {
+      "fips": "26107",
+      "name": "Mecosta",
+      "totalPrivate": {
+        "emplvl": 8842,
+        "lq": 0.81
+      },
+      "totalAllOwnership": {
+        "emplvl": 12746
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 168,
+          "lq": 0.25
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 102,
+          "lq": 0.43
+        },
+        "52": {
+          "emplvl": 136,
+          "lq": 0.26
+        },
+        "53": {
+          "emplvl": 73,
+          "lq": 0.37
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 498,
+          "lq": 0.66
+        },
+        "61": {
+          "emplvl": 83,
+          "lq": 0.31
+        },
+        "62": {
+          "emplvl": 1597,
+          "lq": 0.87
+        },
+        "71": {
+          "emplvl": 182,
+          "lq": 0.85
+        },
+        "72": {
+          "emplvl": 1094,
+          "lq": 0.94
+        },
+        "81": {
+          "emplvl": 514,
+          "lq": 1.34
+        },
+        "99": {
+          "emplvl": 58,
+          "lq": 3.26
+        },
+        "31-33": {
+          "emplvl": 1226,
+          "lq": 1.17
+        },
+        "44-45": {
+          "emplvl": 2362,
+          "lq": 1.86
+        },
+        "48-49": {
+          "emplvl": 225,
+          "lq": 0.42
+        }
+      }
+    },
+    {
+      "fips": "26109",
+      "name": "Menominee",
+      "totalPrivate": {
+        "emplvl": 5103,
+        "lq": 0.83
+      },
+      "totalAllOwnership": {
+        "emplvl": 7149
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 155,
+          "lq": 0.41
+        },
+        "42": {
+          "emplvl": 384,
+          "lq": 1.36
+        },
+        "51": {
+          "disclosed": false
+        },
+        "52": {
+          "emplvl": 119,
+          "lq": 0.41
+        },
+        "53": {
+          "emplvl": 55,
+          "lq": 0.5
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 43,
+          "lq": 0.36
+        },
+        "72": {
+          "emplvl": 484,
+          "lq": 0.74
+        },
+        "81": {
+          "emplvl": 270,
+          "lq": 1.25
+        },
+        "99": {
+          "disclosed": false
+        },
+        "31-33": {
+          "emplvl": 2163,
+          "lq": 3.68
+        },
+        "44-45": {
+          "emplvl": 531,
+          "lq": 0.74
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26111",
+      "name": "Midland",
+      "totalPrivate": {
+        "emplvl": 35244,
+        "lq": 1.08
+      },
+      "totalAllOwnership": {
+        "emplvl": 38288
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 2209,
+          "lq": 1.1
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 207,
+          "lq": 0.29
+        },
+        "52": {
+          "emplvl": 641,
+          "lq": 0.41
+        },
+        "53": {
+          "emplvl": 348,
+          "lq": 0.59
+        },
+        "54": {
+          "emplvl": 1035,
+          "lq": 0.39
+        },
+        "55": {
+          "emplvl": 3834,
+          "lq": 5.94
+        },
+        "56": {
+          "emplvl": 3036,
+          "lq": 1.35
+        },
+        "61": {
+          "emplvl": 726,
+          "lq": 0.92
+        },
+        "62": {
+          "emplvl": 8647,
+          "lq": 1.58
+        },
+        "71": {
+          "emplvl": 711,
+          "lq": 1.1
+        },
+        "72": {
+          "emplvl": 2955,
+          "lq": 0.85
+        },
+        "81": {
+          "emplvl": 1816,
+          "lq": 1.58
+        },
+        "99": {
+          "emplvl": 84,
+          "lq": 1.57
+        },
+        "31-33": {
+          "emplvl": 4610,
+          "lq": 1.47
+        },
+        "44-45": {
+          "emplvl": 3254,
+          "lq": 0.85
+        },
+        "48-49": {
+          "emplvl": 438,
+          "lq": 0.27
+        }
+      }
+    },
+    {
+      "fips": "26113",
+      "name": "Missaukee",
+      "totalPrivate": {
+        "emplvl": 3734,
+        "lq": 1.04
+      },
+      "totalAllOwnership": {
+        "emplvl": 4213
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 961,
+          "lq": 28.18
+        },
+        "21": {
+          "emplvl": 38,
+          "lq": 2.38
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 198,
+          "lq": 0.9
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 7,
+          "lq": 0.09
+        },
+        "52": {
+          "disclosed": false
+        },
+        "53": {
+          "disclosed": false
+        },
+        "54": {
+          "emplvl": 61,
+          "lq": 0.21
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 28,
+          "lq": 0.11
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "disclosed": false
+        },
+        "72": {
+          "disclosed": false
+        },
+        "81": {
+          "emplvl": 112,
+          "lq": 0.88
+        },
+        "99": {
+          "emplvl": 6,
+          "lq": 1.02
+        },
+        "31-33": {
+          "emplvl": 680,
+          "lq": 1.96
+        },
+        "44-45": {
+          "emplvl": 610,
+          "lq": 1.45
+        },
+        "48-49": {
+          "emplvl": 196,
+          "lq": 1.1
+        }
+      }
+    },
+    {
+      "fips": "26115",
+      "name": "Monroe",
+      "totalPrivate": {
+        "emplvl": 35905,
+        "lq": 1.02
+      },
+      "totalAllOwnership": {
+        "emplvl": 41159
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 1940,
+          "lq": 0.9
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 213,
+          "lq": 0.28
+        },
+        "52": {
+          "emplvl": 684,
+          "lq": 0.41
+        },
+        "53": {
+          "emplvl": 223,
+          "lq": 0.35
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 2310,
+          "lq": 0.95
+        },
+        "61": {
+          "emplvl": 395,
+          "lq": 0.46
+        },
+        "62": {
+          "emplvl": 4683,
+          "lq": 0.79
+        },
+        "71": {
+          "emplvl": 455,
+          "lq": 0.66
+        },
+        "72": {
+          "emplvl": 4278,
+          "lq": 1.14
+        },
+        "81": {
+          "emplvl": 1199,
+          "lq": 0.97
+        },
+        "99": {
+          "emplvl": 152,
+          "lq": 2.65
+        },
+        "31-33": {
+          "emplvl": 5814,
+          "lq": 1.72
+        },
+        "44-45": {
+          "emplvl": 5380,
+          "lq": 1.31
+        },
+        "48-49": {
+          "emplvl": 2107,
+          "lq": 1.21
+        }
+      }
+    },
+    {
+      "fips": "26117",
+      "name": "Montcalm",
+      "totalPrivate": {
+        "emplvl": 13129,
+        "lq": 0.94
+      },
+      "totalAllOwnership": {
+        "emplvl": 16263
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "emplvl": 131,
+          "lq": 2.12
+        },
+        "23": {
+          "emplvl": 678,
+          "lq": 0.79
+        },
+        "42": {
+          "emplvl": 295,
+          "lq": 0.46
+        },
+        "51": {
+          "emplvl": 132,
+          "lq": 0.43
+        },
+        "52": {
+          "emplvl": 307,
+          "lq": 0.47
+        },
+        "53": {
+          "emplvl": 33,
+          "lq": 0.13
+        },
+        "54": {
+          "emplvl": 182,
+          "lq": 0.16
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 517,
+          "lq": 0.54
+        },
+        "61": {
+          "emplvl": 15,
+          "lq": 0.04
+        },
+        "62": {
+          "emplvl": 2182,
+          "lq": 0.94
+        },
+        "71": {
+          "emplvl": 131,
+          "lq": 0.48
+        },
+        "72": {
+          "emplvl": 1744,
+          "lq": 1.18
+        },
+        "81": {
+          "emplvl": 408,
+          "lq": 0.83
+        },
+        "99": {
+          "emplvl": 56,
+          "lq": 2.47
+        },
+        "31-33": {
+          "emplvl": 3141,
+          "lq": 2.35
+        },
+        "44-45": {
+          "emplvl": 2399,
+          "lq": 1.48
+        },
+        "48-49": {
+          "emplvl": 351,
+          "lq": 0.51
+        }
+      }
+    },
+    {
+      "fips": "26119",
+      "name": "Montmorency",
+      "totalPrivate": {
+        "emplvl": 1626,
+        "lq": 0.93
+      },
+      "totalAllOwnership": {
+        "emplvl": 2050
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "disclosed": false
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "disclosed": false
+        },
+        "52": {
+          "emplvl": 65,
+          "lq": 0.78
+        },
+        "53": {
+          "emplvl": 24,
+          "lq": 0.75
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 78,
+          "lq": 2.26
+        },
+        "72": {
+          "emplvl": 189,
+          "lq": 1.01
+        },
+        "81": {
+          "emplvl": 50,
+          "lq": 0.81
+        },
+        "99": {
+          "disclosed": false
+        },
+        "31-33": {
+          "emplvl": 441,
+          "lq": 2.62
+        },
+        "44-45": {
+          "emplvl": 229,
+          "lq": 1.12
+        },
+        "48-49": {
+          "emplvl": 22,
+          "lq": 0.25
+        }
+      }
+    },
+    {
+      "fips": "26121",
+      "name": "Muskegon",
+      "totalPrivate": {
+        "emplvl": 56184,
+        "lq": 1.03
+      },
+      "totalAllOwnership": {
+        "emplvl": 63475
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "emplvl": 227,
+          "lq": 0.94
+        },
+        "23": {
+          "emplvl": 2424,
+          "lq": 0.73
+        },
+        "42": {
+          "emplvl": 1497,
+          "lq": 0.6
+        },
+        "51": {
+          "emplvl": 264,
+          "lq": 0.22
+        },
+        "52": {
+          "emplvl": 955,
+          "lq": 0.37
+        },
+        "53": {
+          "emplvl": 623,
+          "lq": 0.63
+        },
+        "54": {
+          "emplvl": 1848,
+          "lq": 0.42
+        },
+        "55": {
+          "emplvl": 77,
+          "lq": 0.07
+        },
+        "56": {
+          "emplvl": 1553,
+          "lq": 0.42
+        },
+        "61": {
+          "emplvl": 725,
+          "lq": 0.55
+        },
+        "62": {
+          "emplvl": 10424,
+          "lq": 1.15
+        },
+        "71": {
+          "emplvl": 970,
+          "lq": 0.91
+        },
+        "72": {
+          "emplvl": 6838,
+          "lq": 1.18
+        },
+        "81": {
+          "emplvl": 1828,
+          "lq": 0.96
+        },
+        "99": {
+          "emplvl": 200,
+          "lq": 2.26
+        },
+        "31-33": {
+          "emplvl": 13093,
+          "lq": 2.51
+        },
+        "44-45": {
+          "emplvl": 11104,
+          "lq": 1.75
+        },
+        "48-49": {
+          "emplvl": 834,
+          "lq": 0.31
+        }
+      }
+    },
+    {
+      "fips": "26123",
+      "name": "Newaygo",
+      "totalPrivate": {
+        "emplvl": 9855,
+        "lq": 0.97
+      },
+      "totalAllOwnership": {
+        "emplvl": 11901
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 500,
+          "lq": 5.19
+        },
+        "21": {
+          "absent": true
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 539,
+          "lq": 0.86
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 36,
+          "lq": 0.16
+        },
+        "52": {
+          "emplvl": 596,
+          "lq": 1.23
+        },
+        "53": {
+          "emplvl": 36,
+          "lq": 0.19
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 498,
+          "lq": 0.71
+        },
+        "61": {
+          "emplvl": 74,
+          "lq": 0.3
+        },
+        "62": {
+          "emplvl": 1317,
+          "lq": 0.77
+        },
+        "71": {
+          "emplvl": 116,
+          "lq": 0.58
+        },
+        "72": {
+          "emplvl": 753,
+          "lq": 0.7
+        },
+        "81": {
+          "emplvl": 558,
+          "lq": 1.56
+        },
+        "99": {
+          "emplvl": 20,
+          "lq": 1.21
+        },
+        "31-33": {
+          "emplvl": 2211,
+          "lq": 2.26
+        },
+        "44-45": {
+          "emplvl": 1775,
+          "lq": 1.49
+        },
+        "48-49": {
+          "emplvl": 173,
+          "lq": 0.34
+        }
+      }
+    },
+    {
+      "fips": "26125",
+      "name": "Oakland",
+      "totalPrivate": {
+        "emplvl": 676710,
+        "lq": 1.09
+      },
+      "totalAllOwnership": {
+        "emplvl": 723862
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 970,
+          "lq": 0.17
+        },
+        "21": {
+          "emplvl": 226,
+          "lq": 0.08
+        },
+        "22": {
+          "emplvl": 1632,
+          "lq": 0.59
+        },
+        "23": {
+          "emplvl": 32506,
+          "lq": 0.86
+        },
+        "42": {
+          "emplvl": 38222,
+          "lq": 1.34
+        },
+        "51": {
+          "emplvl": 13074,
+          "lq": 0.96
+        },
+        "52": {
+          "emplvl": 42518,
+          "lq": 1.45
+        },
+        "53": {
+          "emplvl": 19133,
+          "lq": 1.7
+        },
+        "54": {
+          "emplvl": 93104,
+          "lq": 1.85
+        },
+        "55": {
+          "emplvl": 15819,
+          "lq": 1.3
+        },
+        "56": {
+          "emplvl": 49441,
+          "lq": 1.16
+        },
+        "61": {
+          "emplvl": 11862,
+          "lq": 0.79
+        },
+        "62": {
+          "emplvl": 110614,
+          "lq": 1.07
+        },
+        "71": {
+          "emplvl": 11009,
+          "lq": 0.9
+        },
+        "72": {
+          "emplvl": 57076,
+          "lq": 0.87
+        },
+        "81": {
+          "emplvl": 21497,
+          "lq": 0.99
+        },
+        "99": {
+          "emplvl": 2660,
+          "lq": 2.64
+        },
+        "31-33": {
+          "emplvl": 68661,
+          "lq": 1.15
+        },
+        "44-45": {
+          "emplvl": 71533,
+          "lq": 0.99
+        },
+        "48-49": {
+          "emplvl": 15153,
+          "lq": 0.49
+        }
+      }
+    },
+    {
+      "fips": "26127",
+      "name": "Oceana",
+      "totalPrivate": {
+        "emplvl": 5237,
+        "lq": 0.95
+      },
+      "totalAllOwnership": {
+        "emplvl": 6470
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 298,
+          "lq": 0.88
+        },
+        "42": {
+          "emplvl": 260,
+          "lq": 1.02
+        },
+        "51": {
+          "disclosed": false
+        },
+        "52": {
+          "emplvl": 92,
+          "lq": 0.35
+        },
+        "53": {
+          "emplvl": 51,
+          "lq": 0.51
+        },
+        "54": {
+          "emplvl": 96,
+          "lq": 0.21
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 126,
+          "lq": 1.16
+        },
+        "72": {
+          "emplvl": 754,
+          "lq": 1.28
+        },
+        "81": {
+          "emplvl": 142,
+          "lq": 0.73
+        },
+        "99": {
+          "disclosed": false
+        },
+        "31-33": {
+          "emplvl": 1401,
+          "lq": 2.64
+        },
+        "44-45": {
+          "emplvl": 1096,
+          "lq": 1.7
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26129",
+      "name": "Ogemaw",
+      "totalPrivate": {
+        "emplvl": 5272,
+        "lq": 1.03
+      },
+      "totalAllOwnership": {
+        "emplvl": 6008
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 185,
+          "lq": 3.8
+        },
+        "21": {
+          "emplvl": 25,
+          "lq": 1.1
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 289,
+          "lq": 0.92
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 48,
+          "lq": 0.43
+        },
+        "52": {
+          "emplvl": 113,
+          "lq": 0.46
+        },
+        "53": {
+          "emplvl": 39,
+          "lq": 0.42
+        },
+        "54": {
+          "emplvl": 59,
+          "lq": 0.14
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 71,
+          "lq": 0.2
+        },
+        "61": {
+          "absent": true
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 78,
+          "lq": 0.77
+        },
+        "72": {
+          "emplvl": 676,
+          "lq": 1.24
+        },
+        "81": {
+          "emplvl": 206,
+          "lq": 1.14
+        },
+        "99": {
+          "disclosed": false
+        },
+        "31-33": {
+          "emplvl": 341,
+          "lq": 0.69
+        },
+        "44-45": {
+          "emplvl": 1515,
+          "lq": 2.52
+        },
+        "48-49": {
+          "emplvl": 307,
+          "lq": 1.21
+        }
+      }
+    },
+    {
+      "fips": "26131",
+      "name": "Ontonagon",
+      "totalPrivate": {
+        "emplvl": 905,
+        "lq": 0.79
+      },
+      "totalAllOwnership": {
+        "emplvl": 1338
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 67,
+          "lq": 0.95
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "disclosed": false
+        },
+        "52": {
+          "disclosed": false
+        },
+        "53": {
+          "disclosed": false
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "absent": true
+        },
+        "62": {
+          "emplvl": 65,
+          "lq": 0.34
+        },
+        "71": {
+          "disclosed": false
+        },
+        "72": {
+          "disclosed": false
+        },
+        "81": {
+          "emplvl": 34,
+          "lq": 0.84
+        },
+        "99": {
+          "disclosed": false
+        },
+        "31-33": {
+          "emplvl": 20,
+          "lq": 0.18
+        },
+        "44-45": {
+          "emplvl": 392,
+          "lq": 2.93
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26133",
+      "name": "Osceola",
+      "totalPrivate": {
+        "emplvl": 7032,
+        "lq": 1.03
+      },
+      "totalAllOwnership": {
+        "emplvl": 8011
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 111,
+          "lq": 1.71
+        },
+        "21": {
+          "emplvl": 36,
+          "lq": 1.19
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 938,
+          "lq": 2.23
+        },
+        "42": {
+          "emplvl": 176,
+          "lq": 0.56
+        },
+        "51": {
+          "disclosed": false
+        },
+        "52": {
+          "emplvl": 95,
+          "lq": 0.29
+        },
+        "53": {
+          "emplvl": 23,
+          "lq": 0.18
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 200,
+          "lq": 0.42
+        },
+        "61": {
+          "absent": true
+        },
+        "62": {
+          "emplvl": 963,
+          "lq": 0.84
+        },
+        "71": {
+          "emplvl": 28,
+          "lq": 0.21
+        },
+        "72": {
+          "emplvl": 282,
+          "lq": 0.39
+        },
+        "81": {
+          "emplvl": 217,
+          "lq": 0.9
+        },
+        "99": {
+          "disclosed": false
+        },
+        "31-33": {
+          "emplvl": 2518,
+          "lq": 3.83
+        },
+        "44-45": {
+          "emplvl": 407,
+          "lq": 0.51
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26135",
+      "name": "Oscoda",
+      "totalPrivate": {
+        "emplvl": 1017,
+        "lq": 0.87
+      },
+      "totalAllOwnership": {
+        "emplvl": 1364
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 11,
+          "lq": 1
+        },
+        "21": {
+          "absent": true
+        },
+        "22": {
+          "absent": true
+        },
+        "23": {
+          "emplvl": 75,
+          "lq": 1.05
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 6,
+          "lq": 0.23
+        },
+        "52": {
+          "disclosed": false
+        },
+        "53": {
+          "disclosed": false
+        },
+        "54": {
+          "emplvl": 17,
+          "lq": 0.18
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 69,
+          "lq": 0.86
+        },
+        "61": {
+          "absent": true
+        },
+        "62": {
+          "emplvl": 54,
+          "lq": 0.28
+        },
+        "71": {
+          "disclosed": false
+        },
+        "72": {
+          "disclosed": false
+        },
+        "81": {
+          "emplvl": 73,
+          "lq": 1.78
+        },
+        "99": {
+          "emplvl": 7,
+          "lq": 3.68
+        },
+        "31-33": {
+          "emplvl": 148,
+          "lq": 1.32
+        },
+        "44-45": {
+          "emplvl": 226,
+          "lq": 1.66
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26137",
+      "name": "Otsego",
+      "totalPrivate": {
+        "emplvl": 9484,
+        "lq": 1.04
+      },
+      "totalAllOwnership": {
+        "emplvl": 10703
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 86,
+          "lq": 0.99
+        },
+        "21": {
+          "emplvl": 232,
+          "lq": 5.73
+        },
+        "22": {
+          "emplvl": 92,
+          "lq": 2.26
+        },
+        "23": {
+          "emplvl": 626,
+          "lq": 1.11
+        },
+        "42": {
+          "emplvl": 341,
+          "lq": 0.81
+        },
+        "51": {
+          "emplvl": 48,
+          "lq": 0.24
+        },
+        "52": {
+          "emplvl": 482,
+          "lq": 1.11
+        },
+        "53": {
+          "emplvl": 64,
+          "lq": 0.39
+        },
+        "54": {
+          "emplvl": 271,
+          "lq": 0.36
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 218,
+          "lq": 1.21
+        },
+        "72": {
+          "emplvl": 1353,
+          "lq": 1.39
+        },
+        "81": {
+          "emplvl": 466,
+          "lq": 1.45
+        },
+        "99": {
+          "emplvl": 34,
+          "lq": 2.28
+        },
+        "31-33": {
+          "emplvl": 998,
+          "lq": 1.13
+        },
+        "44-45": {
+          "emplvl": 2260,
+          "lq": 2.11
+        },
+        "48-49": {
+          "emplvl": 342,
+          "lq": 0.75
+        }
+      }
+    },
+    {
+      "fips": "26139",
+      "name": "Ottawa",
+      "totalPrivate": {
+        "emplvl": 115836,
+        "lq": 1.03
+      },
+      "totalAllOwnership": {
+        "emplvl": 131885
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 3561,
+          "lq": 3.34
+        },
+        "21": {
+          "emplvl": 65,
+          "lq": 0.13
+        },
+        "22": {
+          "emplvl": 678,
+          "lq": 1.35
+        },
+        "23": {
+          "emplvl": 6952,
+          "lq": 1
+        },
+        "42": {
+          "emplvl": 5141,
+          "lq": 0.99
+        },
+        "51": {
+          "emplvl": 667,
+          "lq": 0.27
+        },
+        "52": {
+          "emplvl": 2381,
+          "lq": 0.44
+        },
+        "53": {
+          "emplvl": 1064,
+          "lq": 0.52
+        },
+        "54": {
+          "emplvl": 4764,
+          "lq": 0.52
+        },
+        "55": {
+          "emplvl": 230,
+          "lq": 0.1
+        },
+        "56": {
+          "emplvl": 6750,
+          "lq": 0.87
+        },
+        "61": {
+          "emplvl": 2959,
+          "lq": 1.09
+        },
+        "62": {
+          "emplvl": 9743,
+          "lq": 0.52
+        },
+        "71": {
+          "emplvl": 1393,
+          "lq": 0.63
+        },
+        "72": {
+          "emplvl": 10395,
+          "lq": 0.87
+        },
+        "81": {
+          "emplvl": 4789,
+          "lq": 1.21
+        },
+        "99": {
+          "emplvl": 339,
+          "lq": 1.84
+        },
+        "31-33": {
+          "emplvl": 40464,
+          "lq": 3.73
+        },
+        "44-45": {
+          "emplvl": 10500,
+          "lq": 0.8
+        },
+        "48-49": {
+          "emplvl": 3001,
+          "lq": 0.54
+        }
+      }
+    },
+    {
+      "fips": "26141",
+      "name": "Presque Isle",
+      "totalPrivate": {
+        "emplvl": 1978,
+        "lq": 0.89
+      },
+      "totalAllOwnership": {
+        "emplvl": 2595
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 105,
+          "lq": 0.77
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 26,
+          "lq": 0.53
+        },
+        "52": {
+          "emplvl": 98,
+          "lq": 0.93
+        },
+        "53": {
+          "emplvl": 18,
+          "lq": 0.45
+        },
+        "54": {
+          "emplvl": 32,
+          "lq": 0.18
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 91,
+          "lq": 0.6
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "disclosed": false
+        },
+        "72": {
+          "disclosed": false
+        },
+        "81": {
+          "emplvl": 95,
+          "lq": 1.22
+        },
+        "99": {
+          "emplvl": 13,
+          "lq": 3.59
+        },
+        "31-33": {
+          "emplvl": 122,
+          "lq": 0.57
+        },
+        "44-45": {
+          "emplvl": 376,
+          "lq": 1.45
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26143",
+      "name": "Roscommon",
+      "totalPrivate": {
+        "emplvl": 5179,
+        "lq": 0.94
+      },
+      "totalAllOwnership": {
+        "emplvl": 6429
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 285,
+          "lq": 0.84
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 18,
+          "lq": 0.15
+        },
+        "52": {
+          "emplvl": 104,
+          "lq": 0.4
+        },
+        "53": {
+          "emplvl": 60,
+          "lq": 0.6
+        },
+        "54": {
+          "emplvl": 65,
+          "lq": 0.15
+        },
+        "55": {
+          "emplvl": 43,
+          "lq": 0.4
+        },
+        "56": {
+          "emplvl": 68,
+          "lq": 0.18
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 168,
+          "lq": 1.55
+        },
+        "72": {
+          "emplvl": 1916,
+          "lq": 3.28
+        },
+        "81": {
+          "emplvl": 215,
+          "lq": 1.11
+        },
+        "99": {
+          "emplvl": 25,
+          "lq": 2.79
+        },
+        "31-33": {
+          "emplvl": 355,
+          "lq": 0.67
+        },
+        "44-45": {
+          "emplvl": 1171,
+          "lq": 1.82
+        },
+        "48-49": {
+          "emplvl": 66,
+          "lq": 0.24
+        }
+      }
+    },
+    {
+      "fips": "26145",
+      "name": "Saginaw",
+      "totalPrivate": {
+        "emplvl": 69046,
+        "lq": 1.02
+      },
+      "totalAllOwnership": {
+        "emplvl": 79478
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 3351,
+          "lq": 0.8
+        },
+        "42": {
+          "emplvl": 2386,
+          "lq": 0.76
+        },
+        "51": {
+          "emplvl": 687,
+          "lq": 0.46
+        },
+        "52": {
+          "emplvl": 2868,
+          "lq": 0.89
+        },
+        "53": {
+          "emplvl": 614,
+          "lq": 0.5
+        },
+        "54": {
+          "emplvl": 2524,
+          "lq": 0.46
+        },
+        "55": {
+          "emplvl": 269,
+          "lq": 0.2
+        },
+        "56": {
+          "emplvl": 5214,
+          "lq": 1.11
+        },
+        "61": {
+          "emplvl": 439,
+          "lq": 0.27
+        },
+        "62": {
+          "emplvl": 14629,
+          "lq": 1.28
+        },
+        "71": {
+          "emplvl": 712,
+          "lq": 0.53
+        },
+        "72": {
+          "emplvl": 8057,
+          "lq": 1.11
+        },
+        "81": {
+          "emplvl": 2539,
+          "lq": 1.06
+        },
+        "99": {
+          "emplvl": 118,
+          "lq": 1.06
+        },
+        "31-33": {
+          "emplvl": 10729,
+          "lq": 1.64
+        },
+        "44-45": {
+          "emplvl": 10842,
+          "lq": 1.37
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26147",
+      "name": "St. Clair",
+      "totalPrivate": {
+        "emplvl": 35949,
+        "lq": 0.99
+      },
+      "totalAllOwnership": {
+        "emplvl": 42283
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 85,
+          "lq": 0.25
+        },
+        "21": {
+          "emplvl": 30,
+          "lq": 0.19
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 2641,
+          "lq": 1.19
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 194,
+          "lq": 0.24
+        },
+        "52": {
+          "emplvl": 861,
+          "lq": 0.5
+        },
+        "53": {
+          "emplvl": 290,
+          "lq": 0.44
+        },
+        "54": {
+          "emplvl": 1487,
+          "lq": 0.51
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "emplvl": 304,
+          "lq": 0.35
+        },
+        "62": {
+          "emplvl": 7082,
+          "lq": 1.17
+        },
+        "71": {
+          "emplvl": 487,
+          "lq": 0.69
+        },
+        "72": {
+          "emplvl": 5028,
+          "lq": 1.31
+        },
+        "81": {
+          "emplvl": 1301,
+          "lq": 1.02
+        },
+        "99": {
+          "emplvl": 66,
+          "lq": 1.12
+        },
+        "31-33": {
+          "emplvl": 6768,
+          "lq": 1.95
+        },
+        "44-45": {
+          "emplvl": 5342,
+          "lq": 1.27
+        },
+        "48-49": {
+          "emplvl": 916,
+          "lq": 0.51
+        }
+      }
+    },
+    {
+      "fips": "26149",
+      "name": "St. Joseph",
+      "totalPrivate": {
+        "emplvl": 18495,
+        "lq": 1.02
+      },
+      "totalAllOwnership": {
+        "emplvl": 21098
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 859,
+          "lq": 5.03
+        },
+        "21": {
+          "absent": true
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 741,
+          "lq": 0.67
+        },
+        "42": {
+          "emplvl": 380,
+          "lq": 0.46
+        },
+        "51": {
+          "emplvl": 40,
+          "lq": 0.1
+        },
+        "52": {
+          "emplvl": 445,
+          "lq": 0.52
+        },
+        "53": {
+          "emplvl": 73,
+          "lq": 0.22
+        },
+        "54": {
+          "emplvl": 583,
+          "lq": 0.4
+        },
+        "55": {
+          "emplvl": 79,
+          "lq": 0.22
+        },
+        "56": {
+          "emplvl": 334,
+          "lq": 0.27
+        },
+        "61": {
+          "emplvl": 49,
+          "lq": 0.11
+        },
+        "62": {
+          "emplvl": 2247,
+          "lq": 0.74
+        },
+        "71": {
+          "emplvl": 128,
+          "lq": 0.36
+        },
+        "72": {
+          "emplvl": 1596,
+          "lq": 0.83
+        },
+        "81": {
+          "emplvl": 641,
+          "lq": 1.01
+        },
+        "99": {
+          "emplvl": 112,
+          "lq": 3.81
+        },
+        "31-33": {
+          "emplvl": 7477,
+          "lq": 4.31
+        },
+        "44-45": {
+          "emplvl": 2453,
+          "lq": 1.16
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26151",
+      "name": "Sanilac",
+      "totalPrivate": {
+        "emplvl": 9154,
+        "lq": 1.03
+      },
+      "totalAllOwnership": {
+        "emplvl": 10437
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "absent": true
+        },
+        "23": {
+          "emplvl": 442,
+          "lq": 0.81
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 114,
+          "lq": 0.58
+        },
+        "52": {
+          "emplvl": 321,
+          "lq": 0.76
+        },
+        "53": {
+          "emplvl": 36,
+          "lq": 0.22
+        },
+        "54": {
+          "emplvl": 300,
+          "lq": 0.41
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 154,
+          "lq": 0.25
+        },
+        "61": {
+          "emplvl": 31,
+          "lq": 0.14
+        },
+        "62": {
+          "emplvl": 1149,
+          "lq": 0.77
+        },
+        "71": {
+          "emplvl": 119,
+          "lq": 0.68
+        },
+        "72": {
+          "emplvl": 882,
+          "lq": 0.93
+        },
+        "81": {
+          "emplvl": 238,
+          "lq": 0.76
+        },
+        "99": {
+          "emplvl": 50,
+          "lq": 3.44
+        },
+        "31-33": {
+          "emplvl": 2720,
+          "lq": 3.17
+        },
+        "44-45": {
+          "emplvl": 1299,
+          "lq": 1.25
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26153",
+      "name": "Schoolcraft",
+      "totalPrivate": {
+        "emplvl": 1702,
+        "lq": 0.74
+      },
+      "totalAllOwnership": {
+        "emplvl": 2702
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 151,
+          "lq": 1.06
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "disclosed": false
+        },
+        "52": {
+          "disclosed": false
+        },
+        "53": {
+          "disclosed": false
+        },
+        "54": {
+          "emplvl": 53,
+          "lq": 0.28
+        },
+        "55": {
+          "absent": true
+        },
+        "56": {
+          "emplvl": 17,
+          "lq": 0.11
+        },
+        "61": {
+          "absent": true
+        },
+        "62": {
+          "emplvl": 123,
+          "lq": 0.32
+        },
+        "71": {
+          "emplvl": 18,
+          "lq": 0.4
+        },
+        "72": {
+          "emplvl": 305,
+          "lq": 1.24
+        },
+        "81": {
+          "emplvl": 87,
+          "lq": 1.07
+        },
+        "99": {
+          "disclosed": false
+        },
+        "31-33": {
+          "emplvl": 196,
+          "lq": 0.88
+        },
+        "44-45": {
+          "emplvl": 318,
+          "lq": 1.18
+        },
+        "48-49": {
+          "emplvl": 31,
+          "lq": 0.27
+        }
+      }
+    },
+    {
+      "fips": "26155",
+      "name": "Shiawassee",
+      "totalPrivate": {
+        "emplvl": 12392,
+        "lq": 0.93
+      },
+      "totalAllOwnership": {
+        "emplvl": 15541
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 773,
+          "lq": 0.95
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 174,
+          "lq": 0.6
+        },
+        "52": {
+          "emplvl": 253,
+          "lq": 0.4
+        },
+        "53": {
+          "emplvl": 117,
+          "lq": 0.48
+        },
+        "54": {
+          "emplvl": 686,
+          "lq": 0.63
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "disclosed": false
+        },
+        "61": {
+          "emplvl": 103,
+          "lq": 0.32
+        },
+        "62": {
+          "emplvl": 2551,
+          "lq": 1.15
+        },
+        "71": {
+          "emplvl": 217,
+          "lq": 0.83
+        },
+        "72": {
+          "emplvl": 1427,
+          "lq": 1.01
+        },
+        "81": {
+          "emplvl": 389,
+          "lq": 0.83
+        },
+        "99": {
+          "emplvl": 26,
+          "lq": 1.2
+        },
+        "31-33": {
+          "emplvl": 1771,
+          "lq": 1.39
+        },
+        "44-45": {
+          "emplvl": 2209,
+          "lq": 1.42
+        },
+        "48-49": {
+          "emplvl": 650,
+          "lq": 0.99
+        }
+      }
+    },
+    {
+      "fips": "26157",
+      "name": "Tuscola",
+      "totalPrivate": {
+        "emplvl": 9312,
+        "lq": 0.9
+      },
+      "totalAllOwnership": {
+        "emplvl": 12102
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 625,
+          "lq": 0.98
+        },
+        "42": {
+          "emplvl": 428,
+          "lq": 0.9
+        },
+        "51": {
+          "emplvl": 104,
+          "lq": 0.46
+        },
+        "52": {
+          "emplvl": 246,
+          "lq": 0.5
+        },
+        "53": {
+          "emplvl": 67,
+          "lq": 0.36
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 591,
+          "lq": 0.83
+        },
+        "61": {
+          "emplvl": 23,
+          "lq": 0.09
+        },
+        "62": {
+          "emplvl": 1960,
+          "lq": 1.13
+        },
+        "71": {
+          "emplvl": 109,
+          "lq": 0.54
+        },
+        "72": {
+          "emplvl": 992,
+          "lq": 0.9
+        },
+        "81": {
+          "emplvl": 362,
+          "lq": 0.99
+        },
+        "99": {
+          "emplvl": 34,
+          "lq": 2.01
+        },
+        "31-33": {
+          "emplvl": 1421,
+          "lq": 1.43
+        },
+        "44-45": {
+          "emplvl": 1398,
+          "lq": 1.16
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26159",
+      "name": "Van Buren",
+      "totalPrivate": {
+        "emplvl": 17076,
+        "lq": 0.92
+      },
+      "totalAllOwnership": {
+        "emplvl": 21597
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 1312,
+          "lq": 7.51
+        },
+        "21": {
+          "absent": true
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 696,
+          "lq": 0.61
+        },
+        "42": {
+          "emplvl": 510,
+          "lq": 0.6
+        },
+        "51": {
+          "emplvl": 109,
+          "lq": 0.27
+        },
+        "52": {
+          "emplvl": 221,
+          "lq": 0.25
+        },
+        "53": {
+          "emplvl": 96,
+          "lq": 0.29
+        },
+        "54": {
+          "emplvl": 2178,
+          "lq": 1.45
+        },
+        "55": {
+          "emplvl": 257,
+          "lq": 0.71
+        },
+        "56": {
+          "emplvl": 758,
+          "lq": 0.6
+        },
+        "61": {
+          "emplvl": 69,
+          "lq": 0.15
+        },
+        "62": {
+          "emplvl": 1388,
+          "lq": 0.45
+        },
+        "71": {
+          "emplvl": 278,
+          "lq": 0.77
+        },
+        "72": {
+          "emplvl": 2200,
+          "lq": 1.12
+        },
+        "81": {
+          "emplvl": 538,
+          "lq": 0.83
+        },
+        "99": {
+          "emplvl": 72,
+          "lq": 2.39
+        },
+        "31-33": {
+          "emplvl": 3524,
+          "lq": 1.99
+        },
+        "44-45": {
+          "emplvl": 2574,
+          "lq": 1.19
+        },
+        "48-49": {
+          "disclosed": false
+        }
+      }
+    },
+    {
+      "fips": "26161",
+      "name": "Washtenaw",
+      "totalPrivate": {
+        "emplvl": 133668,
+        "lq": 0.72
+      },
+      "totalAllOwnership": {
+        "emplvl": 217948
+      },
+      "sectors": {
+        "11": {
+          "disclosed": false
+        },
+        "21": {
+          "disclosed": false
+        },
+        "22": {
+          "emplvl": 397,
+          "lq": 0.48
+        },
+        "23": {
+          "emplvl": 4907,
+          "lq": 0.43
+        },
+        "42": {
+          "emplvl": 6324,
+          "lq": 0.74
+        },
+        "51": {
+          "emplvl": 3909,
+          "lq": 0.96
+        },
+        "52": {
+          "emplvl": 3448,
+          "lq": 0.39
+        },
+        "53": {
+          "emplvl": 2581,
+          "lq": 0.76
+        },
+        "54": {
+          "emplvl": 17908,
+          "lq": 1.18
+        },
+        "55": {
+          "emplvl": 1845,
+          "lq": 0.5
+        },
+        "56": {
+          "emplvl": 7195,
+          "lq": 0.56
+        },
+        "61": {
+          "emplvl": 3590,
+          "lq": 0.8
+        },
+        "62": {
+          "emplvl": 28273,
+          "lq": 0.9
+        },
+        "71": {
+          "emplvl": 2641,
+          "lq": 0.72
+        },
+        "72": {
+          "emplvl": 13791,
+          "lq": 0.7
+        },
+        "81": {
+          "emplvl": 4901,
+          "lq": 0.75
+        },
+        "99": {
+          "emplvl": 478,
+          "lq": 1.57
+        },
+        "31-33": {
+          "emplvl": 11602,
+          "lq": 0.65
+        },
+        "44-45": {
+          "emplvl": 15024,
+          "lq": 0.69
+        },
+        "48-49": {
+          "emplvl": 4348,
+          "lq": 0.47
+        }
+      }
+    },
+    {
+      "fips": "26163",
+      "name": "Wayne",
+      "totalPrivate": {
+        "emplvl": 641267,
+        "lq": 1.03
+      },
+      "totalAllOwnership": {
+        "emplvl": 725504
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 598,
+          "lq": 0.1
+        },
+        "21": {
+          "emplvl": 582,
+          "lq": 0.21
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 23670,
+          "lq": 0.62
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 5836,
+          "lq": 0.43
+        },
+        "52": {
+          "emplvl": 27371,
+          "lq": 0.93
+        },
+        "53": {
+          "emplvl": 7272,
+          "lq": 0.65
+        },
+        "54": {
+          "emplvl": 53927,
+          "lq": 1.07
+        },
+        "55": {
+          "emplvl": 19605,
+          "lq": 1.6
+        },
+        "56": {
+          "emplvl": 38789,
+          "lq": 0.91
+        },
+        "61": {
+          "emplvl": 11073,
+          "lq": 0.74
+        },
+        "62": {
+          "emplvl": 116757,
+          "lq": 1.12
+        },
+        "71": {
+          "emplvl": 10748,
+          "lq": 0.88
+        },
+        "72": {
+          "emplvl": 60098,
+          "lq": 0.91
+        },
+        "81": {
+          "emplvl": 22945,
+          "lq": 1.05
+        },
+        "99": {
+          "emplvl": 1638,
+          "lq": 1.62
+        },
+        "31-33": {
+          "emplvl": 89659,
+          "lq": 1.5
+        },
+        "44-45": {
+          "emplvl": 64087,
+          "lq": 0.88
+        },
+        "48-49": {
+          "emplvl": 58035,
+          "lq": 1.89
+        }
+      }
+    },
+    {
+      "fips": "26165",
+      "name": "Wexford",
+      "totalPrivate": {
+        "emplvl": 10903,
+        "lq": 0.97
+      },
+      "totalAllOwnership": {
+        "emplvl": 13163
+      },
+      "sectors": {
+        "11": {
+          "emplvl": 133,
+          "lq": 1.25
+        },
+        "21": {
+          "emplvl": 15,
+          "lq": 0.3
+        },
+        "22": {
+          "disclosed": false
+        },
+        "23": {
+          "emplvl": 289,
+          "lq": 0.42
+        },
+        "42": {
+          "disclosed": false
+        },
+        "51": {
+          "emplvl": 194,
+          "lq": 0.79
+        },
+        "52": {
+          "emplvl": 150,
+          "lq": 0.28
+        },
+        "53": {
+          "emplvl": 80,
+          "lq": 0.39
+        },
+        "54": {
+          "disclosed": false
+        },
+        "55": {
+          "disclosed": false
+        },
+        "56": {
+          "emplvl": 455,
+          "lq": 0.59
+        },
+        "61": {
+          "emplvl": 123,
+          "lq": 0.45
+        },
+        "62": {
+          "emplvl": 1655,
+          "lq": 0.88
+        },
+        "71": {
+          "emplvl": 160,
+          "lq": 0.72
+        },
+        "72": {
+          "emplvl": 1052,
+          "lq": 0.88
+        },
+        "81": {
+          "emplvl": 409,
+          "lq": 1.03
+        },
+        "99": {
+          "emplvl": 19,
+          "lq": 1.04
+        },
+        "31-33": {
+          "emplvl": 3171,
+          "lq": 2.93
+        },
+        "44-45": {
+          "emplvl": 1831,
+          "lq": 1.39
+        },
+        "48-49": {
+          "emplvl": 552,
+          "lq": 0.99
+        }
+      }
+    }
+  ]
+}
