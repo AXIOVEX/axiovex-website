@@ -236,3 +236,92 @@ framing.
   per spec 004 FR-008).
 - Real-time or intraday data of any kind; the Pulse cadence
   (monthly BLS data, hourly ingest check) is unchanged.
+
+## Amendment 2 — owner direction 2026-10-06
+
+Recorded 2026-10-06, after spec 011 was implemented on staging
+(see the staging-branch status line and the Amendment — T002
+outcome). Tristen, reviewing the staging page, directed
+(13:03–13:04 EDT, verbatim):
+
+> "can we put the ticker at the top of the page? Also the very
+> top has a lot of wasted space especially vertically. condense
+> this, dont have so much wasted space."
+>
+> "also make sure that the graphs have the up/down percentage
+> thing that the ticker strip has too."
+
+**Approval basis.** This is an owner-directed change: Tristen's
+direction IS the approval for this amendment — there is no
+separate gate. The constitution's wireframes-first rule is
+satisfied by this package (WF-11 revised in
+`docs/wireframes/wireframes.html` + the `wireframes.md`
+revision log, committed before any implementation).
+Implementation is gated only on sequencing: it runs on the
+staging branch **after spec 012's in-flight build completes**,
+because the two share the generator and the versioned
+stylesheet chain — this amendment ships in the stylesheet
+version after spec 012's, through the same staging →
+verification → promotion flow (tasks T009–T010).
+
+### A2-1 — Ticker relocates to the top of the page
+
+FR-001's placement is superseded: the ticker strip renders
+**directly under the site header, above the page head** — it is
+no longer inside the Trends & outlook section (template:
+`{{TICKER_HTML}}` moves ahead of the page-head section). The
+section keeps its head, the trend board, and the outlook
+board. Everything else in FR-001 stands: the tape remains a
+decorative echo of the trend board (aria-hidden, pause on
+hover/focus-within, static under prefers-reduced-motion, board
+content only, neutral glyph + signed figure). The spec 012
+breaking-news banner occupies the slot *above* the header when
+active; the ticker's slot is *below* the header — no conflict,
+no shared state.
+
+### A2-2 — Condensed page top (/signals/ only)
+
+The vertical spacing of the /signals/ top region is tightened
+by roughly a third. Values measured from the shipped
+`styles.v26.css` (staging) and `scripts/templates/signals.html`:
+
+| Element | Source | Before | After |
+|---|---|---:|---:|
+| Page-head section top padding | `.section { padding: 76px 0 }` | 76px (60px at ≤820px) | **44px** (36px at ≤820px) |
+| Head text → strata | `.section:has(+ .strata) .section-head { margin-bottom }` | 36px | **24px** |
+| Strata → content (Pulse) section | template inline `padding-top` | 40px | **28px** |
+| Pulse kicker → tiles | `.pulse-kicker { margin-bottom }` | 14px | **10px** |
+| Pulse tile padding | `.pulse-tile { padding }` | 18px | **14px** |
+| Ticker offset | `.tape { margin-top }` (inside section) | 26px | **16px** at page top |
+| Trends & outlook head margin | `.trends-head { margin: 58px auto 0 }` | 58px | **40px** |
+
+The six spacing values total **250px → 162px (−88px, ≈ one
+third)**; the tile-padding cut also reduces the Pulse band's
+height by 8px. **Scope: the /signals/ page top only.** The
+WF-G2 36/40 rhythm (spec 003) on every other page is untouched
+— this amendment records a deliberate signals-only exception
+to it. No content is removed and no interactive element sits
+in the condensed region, so tap targets are unaffected; at
+390px the tightened stack must still read as separate blocks,
+never crowded (verified in T010).
+
+### A2-3 — Sparkline window-% annotations
+
+FR-002 is extended: each trend-board sparkline gains, beside
+the graph, its direction glyph + the **window percent change**
+(▲ +0.4% style), computed by the generator from the same trend
+history as the deltas — window % = (last non-null − first
+non-null) ÷ first non-null across the snapshot's trend window,
+one decimal. For the unemployment-rate series the % is the
+**relative change of the rate** (4.9% → 5.0% = +2.0%); the
+rate's absolute movement remains in the pts figures in the
+delta columns — the two forms coexist, neither replaces the
+other. Neutral treatment (glyph + signed figure, no red/green),
+consistent with FR-001's tape. Drawn values, recomputed from
+the current `data/signals.json` snapshot: manufacturing
+**▲ +0.4%**, unemployment **▲ +2.0%**, labor force
+**▼ −3.0%**, nonfarm **▲ +0.0%**. Like the deltas, the % is
+computed, never hand-typed (FR-005c); a series with fewer than
+two non-null points renders "—", matching the delta behavior.
+
+The sources & method note is unchanged by this amendment.
