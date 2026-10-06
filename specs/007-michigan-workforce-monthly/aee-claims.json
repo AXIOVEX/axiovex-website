@@ -1,1 +1,192 @@
-{"claims":[{"boundary":["Axiovex Michigan workforce monthly series"],"conflicts_with":[],"depends_on":[],"evidence":["Tristen's direction 2026-10-06; weekdays verified with date -d 2026-10-06: Oct 13 2026 is a Tuesday, Oct 15 a Thursday, Nov 10 a Tuesday, Nov 12 a Thursday, Dec 15 a Tuesday, Dec 17 a Thursday","Jobs created 2026-10-06: michigan-workforce-draft (monthly day 8, next run Thu 2026-10-08) and michigan-workforce-publish (monthly day 12, next run Mon 2026-10-12), owner goal:website-seo-aeo-health-monitoring"],"falsification_tests":["A cycle publishes on a day that is not the Tuesday nearest the 15th without a documented FR-008 reason; two Tuesdays equidistant from the 15th resolve to the later one"],"id":"FR-001","kind":"requirement","source_ref":"specs/007-michigan-workforce-monthly/spec.md#FR-001","status":"specified","text":"One article per month on the Publish Day = Tuesday nearest the 15th (tie to the earlier Tuesday): article ~09:00 ET, personal LinkedIn post same day ~10:30 ET, company re-share that Thursday ~09:30 ET","uncertainty":"low"},{"boundary":["Axiovex Michigan workforce monthly series"],"conflicts_with":[],"depends_on":[],"evidence":["Model article (2026-09-30) figures all trace to the September edition of AXIOVEX/michigan-workforce-intelligence; the four BLS series IDs are the ones already used by Michigan Pulse (spec 004)"],"falsification_tests":["Any published figure in a series article that cannot be traced to a BLS API response or a cited research-repo edition"],"id":"FR-002","kind":"requirement","source_ref":"specs/007-michigan-workforce-monthly/spec.md#FR-002","status":"specified","text":"Every figure in a series article comes from the BLS public API (MI series SMU26000003000000001, LASST260000000000003, LASST260000000000006, SMU26000000000000001) or a cited new edition of AXIOVEX/michigan-workforce-intelligence; nothing is invented, interpolated, or carried forward as current","uncertainty":"low"},{"boundary":["Axiovex Michigan workforce monthly series"],"conflicts_with":[],"depends_on":["FR-002"],"evidence":["Structure extracted from blog/posts/2026-09-30-michigan-workforce-september-findings.md: front matter, evidence cutoff line, lead analysis, warning-signals restraint, decisions section, method/pipeline note, repo links"],"falsification_tests":["A series article missing the evidence cutoff line, or presenting soft indicators as forecasts, or lacking the decisions section"],"id":"FR-003","kind":"requirement","source_ref":"specs/007-michigan-workforce-monthly/spec.md#FR-003","status":"specified","text":"Each article matches the 2026-09-30 model article: front matter per blog/README.md, title pattern, evidence cutoff line, lead analysis, warning-signals-not-forecasts restraint, decisions section, method/pipeline note, first-person founder voice","uncertainty":"low"},{"boundary":["Axiovex Michigan workforce monthly series"],"conflicts_with":[],"depends_on":[],"evidence":["Gate encoded in spec FR-004, SKILL.md Step 2, both cron bodies, and tasks.md (T-OCT-02 blocks T-OCT-03 onward)"],"falsification_tests":["Any cycle where an article is committed to blog/posts/ or a LinkedIn post is made before Tristen's recorded approval of that month's draft"],"id":"FR-004","kind":"requirement","source_ref":"specs/007-michigan-workforce-monthly/spec.md#FR-004","status":"specified","text":"Nothing publishes and nothing posts without Tristen's explicit approval of that month's draft; if approval is missing by Publish Day, nothing goes out and Tristen is pinged","uncertainty":"low"},{"boundary":["Axiovex Michigan workforce monthly series"],"conflicts_with":[],"depends_on":["FR-004"],"evidence":["Established LinkedIn pattern from the 2026-09-30 launch and the 2026-10-05 SI posts: link as first comment, hashtags #Michigan #WorkforceDevelopment #Manufacturing #LaborMarket #AI; personal-first ordering is Tristen's 2026-10-06 instruction for this series"],"falsification_tests":["A series post with the article URL in the post body, or missing the first-comment link, or published from the company page before the personal post"],"id":"FR-005","kind":"requirement","source_ref":"specs/007-michigan-workforce-monthly/spec.md#FR-005","status":"specified","text":"The personal LinkedIn post goes first (Publish Tuesday ~10:30 ET): no link in the body, body ends 'Link in the first comment.', article URL is the first comment, established hashtag set, post URL captured and verified","uncertainty":"low"},{"boundary":["Axiovex Michigan workforce monthly series"],"conflicts_with":[],"depends_on":["FR-005"],"evidence":["Tristen's direction 2026-10-06 ('re-share the post on my AXIOVEX systems LinkedIn page' at the appropriate later time); Thursday-of-Publish-Week ~09:30 ET set as that time in the date rule"],"falsification_tests":["A cycle with no company-page re-share by the Friday of Publish Week and no FR-008 failure report explaining it"],"id":"FR-006","kind":"requirement","source_ref":"specs/007-michigan-workforce-monthly/spec.md#FR-006","status":"specified","text":"The Axiovex Systems company page re-shares the personal post on the Thursday of Publish Week ~09:30 ET (a re-share of the original, not a duplicate post), verified on the company feed with its URL captured","uncertainty":"low"},{"boundary":["Axiovex Michigan workforce monthly series"],"conflicts_with":[],"depends_on":["FR-001","FR-005","FR-006"],"evidence":["Verification pattern mirrors the 2026-09-30 and 2026-10-05 launches, whose post URLs were captured and verified before being recorded as posted"],"falsification_tests":["A cycle reported complete without an article URL returning 200, or without captured personal-post and re-share URLs"],"id":"FR-007","kind":"requirement","source_ref":"specs/007-michigan-workforce-monthly/spec.md#FR-007","status":"specified","text":"Each step is verified from its live surface (article 200 + blog index + sitemap; post URL captured; re-share visible on the company feed) and the cycle is reported to Tristen with all three URLs, actual dates/times, and any deviation with its reason; cycle state is recorded in workforce-monthly-state.json","uncertainty":"low"},{"boundary":["Axiovex Michigan workforce monthly series"],"conflicts_with":[],"depends_on":["FR-002","FR-004"],"evidence":["Failure paths written into spec FR-008, SKILL.md failure handling, and both cron bodies (same-week shift for unreleased BLS data; no-approval = no publish + ping; LinkedIn failure = report + single next-morning retry after a duplicate check)"],"falsification_tests":["A skipped or shifted cycle with no same-day report to Tristen naming the cause; a duplicate LinkedIn post produced by a retry"],"id":"FR-008","kind":"requirement","source_ref":"specs/007-michigan-workforce-monthly/spec.md#FR-008","status":"specified","text":"Failures are handled explicitly: unreleased BLS data shifts the cycle within the same week with notice; missing approval publishes nothing and pings Tristen; LinkedIn failures are reported the same day and retried once the next morning with a duplicate check first","uncertainty":"medium"}],"schema_version":"1.0"}
+{
+ "claims": [
+  {
+   "boundary": [
+    "Axiovex Michigan workforce monthly series"
+   ],
+   "conflicts_with": [],
+   "depends_on": [],
+   "evidence": [
+    "Tristen's direction 2026-10-06; weekdays verified with date -d 2026-10-06: Oct 13 2026 is a Tuesday, Oct 15 a Thursday, Nov 10 a Tuesday, Nov 12 a Thursday, Dec 15 a Tuesday, Dec 17 a Thursday",
+    "Jobs created 2026-10-06: michigan-workforce-draft (monthly day 8, next run Thu 2026-10-08) and michigan-workforce-publish (monthly day 12, next run Mon 2026-10-12), owner goal:website-seo-aeo-health-monitoring"
+   ],
+   "falsification_tests": [
+    "A cycle publishes on a day that is not the Tuesday nearest the 15th without a documented FR-008 reason; two Tuesdays equidistant from the 15th resolve to the later one"
+   ],
+   "id": "FR-001",
+   "kind": "requirement",
+   "source_ref": "specs/007-michigan-workforce-monthly/spec.md#FR-001",
+   "status": "specified",
+   "text": "One article per month on the Publish Day = Tuesday nearest the 15th (tie to the earlier Tuesday): article ~09:00 ET, personal LinkedIn post same day ~10:30 ET, company re-share that Thursday ~09:30 ET",
+   "uncertainty": "low"
+  },
+  {
+   "boundary": [
+    "Axiovex Michigan workforce monthly series"
+   ],
+   "conflicts_with": [],
+   "depends_on": [],
+   "evidence": [
+    "Model article (2026-09-30) figures all trace to the September edition of AXIOVEX/michigan-workforce-intelligence; the four BLS series IDs are the ones already used by Michigan Pulse (spec 004)"
+   ],
+   "falsification_tests": [
+    "Any published figure in a series article that cannot be traced to a BLS API response or a cited research-repo edition"
+   ],
+   "id": "FR-002",
+   "kind": "requirement",
+   "source_ref": "specs/007-michigan-workforce-monthly/spec.md#FR-002",
+   "status": "specified",
+   "text": "Every figure in a series article comes from the BLS public API (MI series SMU26000003000000001, LASST260000000000003, LASST260000000000006, SMU26000000000000001) or a cited new edition of AXIOVEX/michigan-workforce-intelligence; nothing is invented, interpolated, or carried forward as current",
+   "uncertainty": "low"
+  },
+  {
+   "boundary": [
+    "Axiovex Michigan workforce monthly series"
+   ],
+   "conflicts_with": [],
+   "depends_on": [
+    "FR-002"
+   ],
+   "evidence": [
+    "Structure extracted from blog/posts/2026-09-30-michigan-workforce-september-findings.md: front matter, evidence cutoff line, lead analysis, warning-signals restraint, decisions section, method/pipeline note, repo links"
+   ],
+   "falsification_tests": [
+    "A series article missing the evidence cutoff line, or presenting soft indicators as forecasts, or lacking the decisions section"
+   ],
+   "id": "FR-003",
+   "kind": "requirement",
+   "source_ref": "specs/007-michigan-workforce-monthly/spec.md#FR-003",
+   "status": "specified",
+   "text": "Each article matches the 2026-09-30 model article: front matter per blog/README.md, title pattern, evidence cutoff line, lead analysis, warning-signals-not-forecasts restraint, decisions section, method/pipeline note, first-person founder voice",
+   "uncertainty": "low"
+  },
+  {
+   "boundary": [
+    "Axiovex Michigan workforce monthly series"
+   ],
+   "conflicts_with": [],
+   "depends_on": [],
+   "evidence": [
+    "Gate encoded in spec FR-004, SKILL.md Step 2, both cron bodies, and tasks.md (T-OCT-02 blocks T-OCT-03 onward)"
+   ],
+   "falsification_tests": [
+    "Any cycle where an article is committed to blog/posts/ or a LinkedIn post is made before Tristen's recorded approval of that month's draft"
+   ],
+   "id": "FR-004",
+   "kind": "requirement",
+   "source_ref": "specs/007-michigan-workforce-monthly/spec.md#FR-004",
+   "status": "specified",
+   "text": "Nothing publishes and nothing posts without Tristen's explicit approval of that month's draft; if approval is missing by Publish Day, nothing goes out and Tristen is pinged",
+   "uncertainty": "low"
+  },
+  {
+   "boundary": [
+    "Axiovex Michigan workforce monthly series"
+   ],
+   "conflicts_with": [],
+   "depends_on": [
+    "FR-004"
+   ],
+   "evidence": [
+    "Established LinkedIn pattern from the 2026-09-30 launch and the 2026-10-05 SI posts: link as first comment, hashtags #Michigan #WorkforceDevelopment #Manufacturing #LaborMarket #AI; personal-first ordering is Tristen's 2026-10-06 instruction for this series"
+   ],
+   "falsification_tests": [
+    "A series post with the article URL in the post body, or missing the first-comment link, or published from the company page before the personal post"
+   ],
+   "id": "FR-005",
+   "kind": "requirement",
+   "source_ref": "specs/007-michigan-workforce-monthly/spec.md#FR-005",
+   "status": "specified",
+   "text": "The personal LinkedIn post goes first (Publish Tuesday ~10:30 ET): no link in the body, body ends 'Link in the first comment.', article URL is the first comment, established hashtag set, post URL captured and verified",
+   "uncertainty": "low"
+  },
+  {
+   "boundary": [
+    "Axiovex Michigan workforce monthly series"
+   ],
+   "conflicts_with": [],
+   "depends_on": [
+    "FR-005"
+   ],
+   "evidence": [
+    "Tristen's direction 2026-10-06 ('re-share the post on my AXIOVEX systems LinkedIn page' at the appropriate later time); Thursday-of-Publish-Week ~09:30 ET set as that time in the date rule"
+   ],
+   "falsification_tests": [
+    "A cycle with no company-page re-share by the Friday of Publish Week and no FR-008 failure report explaining it"
+   ],
+   "id": "FR-006",
+   "kind": "requirement",
+   "source_ref": "specs/007-michigan-workforce-monthly/spec.md#FR-006",
+   "status": "specified",
+   "text": "The Axiovex Systems company page re-shares the personal post on the Thursday of Publish Week ~09:30 ET (a re-share of the original, not a duplicate post), verified on the company feed with its URL captured",
+   "uncertainty": "low"
+  },
+  {
+   "boundary": [
+    "Axiovex Michigan workforce monthly series"
+   ],
+   "conflicts_with": [],
+   "depends_on": [
+    "FR-001",
+    "FR-005",
+    "FR-006"
+   ],
+   "evidence": [
+    "Verification pattern mirrors the 2026-09-30 and 2026-10-05 launches, whose post URLs were captured and verified before being recorded as posted"
+   ],
+   "falsification_tests": [
+    "A cycle reported complete without an article URL returning 200, or without captured personal-post and re-share URLs"
+   ],
+   "id": "FR-007",
+   "kind": "requirement",
+   "source_ref": "specs/007-michigan-workforce-monthly/spec.md#FR-007",
+   "status": "specified",
+   "text": "Each step is verified from its live surface (article 200 + blog index + sitemap; post URL captured; re-share visible on the company feed) and the cycle is reported to Tristen with all three URLs, actual dates/times, and any deviation with its reason; cycle state is recorded in workforce-monthly-state.json",
+   "uncertainty": "low"
+  },
+  {
+   "boundary": [
+    "Axiovex Michigan workforce monthly series"
+   ],
+   "conflicts_with": [],
+   "depends_on": [
+    "FR-002",
+    "FR-004"
+   ],
+   "evidence": [
+    "Failure paths written into spec FR-008, SKILL.md failure handling, and both cron bodies (same-week shift for unreleased BLS data; no-approval = no publish + ping; LinkedIn failure = report + single next-morning retry after a duplicate check)"
+   ],
+   "falsification_tests": [
+    "A skipped or shifted cycle with no same-day report to Tristen naming the cause; a duplicate LinkedIn post produced by a retry"
+   ],
+   "id": "FR-008",
+   "kind": "requirement",
+   "source_ref": "specs/007-michigan-workforce-monthly/spec.md#FR-008",
+   "status": "specified",
+   "text": "Failures are handled explicitly: unreleased BLS data shifts the cycle within the same week with notice; missing approval publishes nothing and pings Tristen; LinkedIn failures are reported the same day and retried once the next morning with a duplicate check first",
+   "uncertainty": "medium"
+  },
+  {
+   "boundary": [
+    "Axiovex Michigan workforce monthly series"
+   ],
+   "conflicts_with": [],
+   "depends_on": [
+    "FR-002"
+   ],
+   "evidence": [
+    "Test run 2026-10-06: pull to e15b810; reviewed_evidence.py valid (28 sources, 187 observations, ledger head 87afe0b2); release reports-2026.09.27.131143Z assets re-verified (all SHA-256 matched); collect leg blocked (no Docker runtime); new edition blocked (newest MI reference month still Aug 2026 per BLS API); test article format-validated against blog-format.md, not published"
+   ],
+   "falsification_tests": [
+    "A series article whose insights cite figures absent from the current verified edition and from any cited post-cutoff official dataset; a cycle report claiming a pipeline leg ran when the cycle state records it blocked"
+   ],
+   "id": "FR-009",
+   "kind": "requirement",
+   "source_ref": "specs/007-michigan-workforce-monthly/spec.md#FR-009",
+   "status": "implemented",
+   "text": "Each cycle executes the workforce study in AXIOVEX/michigan-workforce-intelligence (pull, collect/run, edition when new data supports one, publish via release request, push back, verify edition ledger + release checksums) and derives the article's insights from the verified study outputs; legs that cannot run are recorded with their exact reason, never silently skipped or fabricated",
+   "uncertainty": "low"
+  }
+ ],
+ "schema_version": "1.0"
+}

@@ -29,12 +29,62 @@
     created per cycle by the publish run.
 - [x] T005 Memory: cadence recorded in `~/MEMORY.md` (2026-10-06).
 
+## Study execution + format spec + test run (2026-10-06 amendment)
+
+- [x] T006 **Study pipeline mapped** from the research repo
+  (`docs/report-operations.md`, `scripts/reports.py`,
+  `scripts/reviewed_evidence.py`, `scripts/release_request.py`,
+  `.github/workflows/reports-release.yml`): Pipeline A (Docker
+  collect → analyze → build → release) and Pipeline B (reviewed
+  research edition → verify → release request → workflow publish →
+  asset verification). Recorded normatively in spec FR-009,
+  plan.md, and SKILL.md Step 1.
+- [x] T007 **Test run — execute the study** (2026-10-06):
+  - Pull: research repo `main` → `e15b810`. OK.
+  - Verification leg: `reviewed_evidence.py` on the current
+    (September) edition — valid: 28 sources, 187 observations, 36
+    projection rows, ledger valid. Release
+    `reports-2026.09.27.131143Z` assets re-downloaded; all
+    SHA-256 checksums matched; manifest source commit `d0fbc71`.
+    OK.
+  - Collect/analyze/build leg: **BLOCKED** — no Docker runtime on
+    this workstation (`docker: command not found`); all Pipeline A
+    commands shell out to Docker.
+  - New edition: **BLOCKED** — BLS API (2026-10-06) confirms the
+    newest Michigan reference month is still August 2026
+    (September state LAUS unreleased). No edition fabricated;
+    FR-002/FR-009 prohibit repackaging the September edition as
+    new.
+  - Publish/push-back leg: **not executed** — no new reviewed
+    sources exist to publish; a duplicate release of identical
+    sources was deliberately not created. The exact commands are
+    specified in plan.md for the first cycle with new data.
+- [x] T008 **Formal blog format specification** written:
+  `specs/007-michigan-workforce-monthly/blog-format.md` (filename,
+  front matter, body structure, markdown subset, citation rules,
+  validation checklist), referenced from FR-003 and SKILL.md.
+- [x] T009 **Test article produced and validated** (NOT published,
+  NOT committed to the website repo, NOT posted):
+  `~/workspace/goals/website-seo-aeo-health-monitoring/files/workforce-drafts/2026-10-13-michigan-workforce-october-2026.md`
+  with test notes beside it
+  (`…TEST-NOTES.md`) and the run recorded in
+  `hidden_files/workforce-monthly-state.json`. Insights derived
+  from the verified September edition + the new national September
+  2026 Employment Situation (BLS API). Validation vs
+  `blog-format.md`: **format-valid** (record in blog-format.md §7).
+- [x] T010 **Skill + draft job amended**: SKILL.md Step 1 now
+  executes the study pipeline (FR-009); cron
+  `michigan-workforce-draft` body updated to the study-execution
+  steps (schedule/owner/delivery unchanged).
+
 ## October 2026 cycle (unexecuted — run by the schedules + gate)
 
-- [ ] T-OCT-01 **Draft** (draft job, Thu Oct 8 ~09:00 ET): pull
-  newest BLS MI data (4 series); check
-  `~/workspace/michigan-workforce-intelligence` for a new edition;
-  draft article + LinkedIn post text in the model format; save to
+- [ ] T-OCT-01 **Draft** (draft job, Thu Oct 8 ~09:00 ET):
+  **execute the study** per FR-009 (research-repo pull → collect
+  leg → edition if new data supports one → publish/push-back →
+  verify outputs); draft article + LinkedIn post text from the
+  verified study outputs in the model format, validated against
+  `blog-format.md`; save to
   `files/workforce-drafts/michigan-workforce-2026-10-draft.md`;
   present to Tristen.
 - [ ] T-OCT-02 **GATE — Tristen approves the October draft.**

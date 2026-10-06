@@ -1,5 +1,61 @@
 # Plan: Michigan Workforce Monthly Article Series (spec 007)
 
+## Study execution pipeline (FR-009, added 2026-10-06)
+
+The draft step does not merely "check for a new edition" — it
+**executes the study** in `~/workspace/michigan-workforce-intelligence`
+(GitHub `AXIOVEX/michigan-workforce-intelligence`), whose own
+operations doc (`docs/report-operations.md` there) is the governing
+procedure. Exact sequence:
+
+```sh
+cd ~/workspace/michigan-workforce-intelligence
+git pull --ff-only origin main            # record HEAD SHA in cycle state
+
+# Pipeline A — evidence refresh (Docker; canonical local gate)
+python3 scripts/reports.py build-image
+python3 scripts/reports.py collect        # BLS monthly series -> audited evidence
+python3 scripts/reports.py analyze        # ledger + artifact-hash checks (read-only)
+python3 scripts/reports.py build          # -> output/pdf/<version>/ (PDFs, manifest, checksums, ZIP)
+# vintage collectors (collect-qcew / collect-reference /
+# collect-comparisons / collect-hardship) only after period review
+
+# Pipeline B — reviewed research edition (the monthly edition path)
+#   research official sources -> write reports/<YYYY-MM-DD>-<slug>/
+#   (executive brief, analysis, evidence/, observations.json,
+#    source-registry.json, research-ledger.jsonl)
+python3 scripts/reviewed_evidence.py --record   # append ledger events
+python3 scripts/reviewed_evidence.py            # verify edition + ledger chain
+#   update reports/current-edition.json -> commit edition to main -> push
+
+# Publish (research-repo spec 010 connector path)
+python3 scripts/release_request.py prepare --version YYYY.MM.DD.HHMMSSZ
+#   commit ONLY release/request.json -> push -> "Reviewed workforce
+#   reports" workflow publishes release reports-<version>
+
+# Verify the published outputs
+gh release download reports-<version> --repo AXIOVEX/michigan-workforce-intelligence
+sha256sum -c SHA256SUMS.txt               # assets + ZIP members
+#   manifest.json: version + source_commit must match the request
+```
+
+Then the article is drafted **from the verified study outputs**
+(edition brief / ledger / recommendations, plus any genuinely new
+official dataset since the edition cutoff), in the format specified
+by `blog-format.md` (this package), and validated against that
+spec's checklist before presentation.
+
+**Test run 2026-10-06 (recorded in tasks.md T006–T010)**: pull OK
+(`e15b810`); edition verification OK (28 sources, 187 observations,
+ledger valid, head `87afe0b2…`); September release
+(`reports-2026.09.27.131143Z`, workflow run `36321581479`) assets
+re-verified — all checksums matched, manifest source commit
+`d0fbc71`. Pipeline A blocked (no Docker runtime on the
+workstation); new edition blocked (BLS: newest Michigan reference
+month still August 2026 — September LAUS unreleased); publish leg
+not executed (nothing new to publish; no duplicate release
+created). Test article produced + format-validated, not published.
+
 ## Architecture
 
 ```

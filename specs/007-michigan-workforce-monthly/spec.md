@@ -12,6 +12,17 @@ first cycle is October 2026 (tasks T-OCT-* in tasks.md). Each article
 still passes its own approval gate (FR-004) before anything publishes
 or posts.
 
+**Amendment — 2026-10-06 (Tristen's direction, same day)**: the
+series now includes the real **study-execution pipeline** (FR-009):
+each cycle executes the workforce study in
+`AXIOVEX/michigan-workforce-intelligence` (pull → collect/run →
+edition → publish → push back → verify), and the article's insights
+are derived from the study's outputs. The normative blog file
+format is specified in **`blog-format.md`** in this package. A full
+**test run** of the pipeline was executed 2026-10-06, producing a
+format-validated test article that was **not** published (outcome
+recorded in tasks.md, T006–T010).
+
 **Direction (Tristen, 2026-10-06)**: once per month near mid-month,
 publish a Michigan workforce data blog article matching the
 presentation and feel of the first one (2026-09-30); then determine
@@ -73,7 +84,11 @@ when the 15th falls badly.
   stops it. Months are never silently skipped: a missed cycle is
   reported as missed, with the reason (see FR-008).
 - **FR-002 — Data sourcing.** Figures come from exactly two source
-  families, cited in the article:
+  families, cited in the article. The article's **insights are
+  derived from the executed study's outputs** (FR-009) — the current
+  edition's executive brief, evidence ledger, and recommendations —
+  not assembled from raw BLS numbers alone; the BLS readings below
+  are the study's inputs and cross-checks, and are cited as such.
   1. **BLS public API** (no key), the series already used by Michigan
      Pulse (spec 004): MI manufacturing employment
      `SMU26000003000000001`, MI unemployment rate
@@ -94,7 +109,11 @@ when the 15th falls badly.
   edition is pending — it does not repackage the prior edition as
   new.
 - **FR-003 — Article format parity.** Each article matches the model
-  article's structure and voice:
+  article's structure and voice. The normative file-level format —
+  filename, front matter, body structure, markdown subset, citation
+  rules, validation checklist — is the **Blog Article File Format
+  specification (`blog-format.md`, this package)**; every draft and
+  publish candidate is validated against it:
   - Front matter per `blog/README.md` (title, date = Publish Day,
     description, tags `workforce, michigan, research, AI, education`,
     slug `michigan-workforce-<month>-<year>`).
@@ -176,6 +195,78 @@ when the 15th falls badly.
   - **Build/deploy failure**: the article commit is not reported as
     published until FR-007 verification passes; fix forward per the
     site runbooks and report.
+- **FR-009 — Study execution (the workforce study itself).** The
+  article is the *output* of executing the study in
+  `AXIOVEX/michigan-workforce-intelligence` (local clone
+  `~/workspace/michigan-workforce-intelligence`). Each cycle's draft
+  step executes this pipeline, in order, following the research
+  repo's own governance (`docs/report-operations.md` in that repo):
+  1. **Pull**: `git pull --ff-only` the research repo's `main`;
+     record the HEAD SHA in the cycle state.
+  2. **Collect / run**: refresh the study's evidence per the repo's
+     documented process. The canonical local path is Docker-based:
+     `python3 scripts/reports.py build-image`,
+     `python3 scripts/reports.py collect` (plus the reviewed
+     vintage-specific collectors when their periods are updated),
+     `python3 scripts/reports.py analyze`,
+     `python3 scripts/reports.py build` → `output/pdf/<version>/`.
+     Where Docker is unavailable, that leg is recorded as **not
+     run, with the reason** — never silently skipped and never
+     replaced by unlabeled ad-hoc numbers (direct API readings are
+     labeled readings, not ingested evidence).
+  3. **New edition (when the data supports one)**: research current
+     official sources (Michigan MCDA/LEO, BLS, Census, NCES/IPEDS,
+     O*NET) and write the edition under
+     `reports/<YYYY-MM-DD>-<slug>/` in the established layout
+     (executive brief, economic analysis, evidence, observations,
+     source registry, append-only research ledger), run
+     `python3 scripts/reviewed_evidence.py --record` then
+     `python3 scripts/reviewed_evidence.py` to verify it, and point
+     `reports/current-edition.json` at it. **An edition is a claim
+     about new evidence**: if the newest Michigan reference month
+     has not advanced since the current edition (state LAUS
+     unreleased), NO new edition is produced — the cycle works from
+     the current verified edition and the article says so
+     (repackaging the prior edition as new is an FR-002 violation).
+  4. **Publish + push back**: commit the edition sources to the
+     research repo's `main` and push; then publish via the repo's
+     documented release path (spec 010 there):
+     `python3 scripts/release_request.py prepare --version
+     YYYY.MM.DD.HHMMSSZ`, commit **only** `release/request.json`,
+     push — the *Reviewed workforce reports* workflow builds and
+     publishes release `reports-<version>` (or
+     `python3 scripts/reports.py release` with authenticated `gh`).
+     Ordinary commits never publish; a release publishes exactly
+     its reviewed source commit.
+  5. **Verify the study outputs**: `python3
+     scripts/reviewed_evidence.py` passes for the current edition
+     (sources / observations / ledger chain), and the release's
+     assets verify — `gh release download reports-<version>` +
+     `sha256sum -c SHA256SUMS.txt` (downloadable assets and ZIP
+     members) + `manifest.json` version and `source_commit` match.
+     Verification results are recorded in the cycle state.
+  6. **Insights from outputs**: the article is drafted from the
+     verified outputs of steps 1–5 — the current edition's
+     executive brief, evidence ledger, and recommendations, plus
+     any genuinely new official dataset since the edition's
+     cutoff, cited as such (FR-002).
+  - **Blockers are first-class results.** A leg that cannot run
+    (Docker absent, data unreleased, credentials) is recorded in
+    the cycle state and reported in the cycle report with the exact
+    reason, and the article's pipeline note discloses it — the
+    study is never described as having run a leg it did not run.
+  - **Test run (2026-10-06)**: the pipeline was executed end to end
+    as far as the environment and data allow — pull OK
+    (`e15b810`); edition + release verification OK (28 sources,
+    187 observations, ledger valid; September release checksums all
+    matched); collect/build leg blocked (no Docker runtime on the
+    workstation); new edition blocked (newest Michigan reference
+    month still August 2026 — September state LAUS unreleased);
+    publish leg not executed (no new reviewed sources; a duplicate
+    release of identical sources was deliberately not created). A
+    test article was produced from the verified outputs and
+    validated against `blog-format.md` — **not published**. Full
+    record: tasks.md T006–T010.
 
 ## Out of scope
 
