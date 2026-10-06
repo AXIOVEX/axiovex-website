@@ -240,8 +240,9 @@ as accordion rows.
   site-wide placements were considered and declined; the
   floating widget remains the site-wide carrier.
 - **2026-10-06** — REVISION PROPOSED (spec
-  013-signals-highlights-detail) — **PENDING OWNER APPROVAL —
-  NOT approved, NOT implemented**: WF-11 gains two regions.
+  013-signals-highlights-detail) — **APPROVED 2026-10-06 ·
+  IMPLEMENTED + LIVE** (staging, then promotion merge
+  `4497704`): WF-11 gains two regions.
   (1) A **Highlights region** directly under the page head,
   ahead of the Pulse band: a **generated insights summary** —
   2–4 sentences composed by the build from fixed templates
@@ -289,9 +290,17 @@ as accordion rows.
   whether specs 011/012 + Amendment 2 promote first or bundle
   with 013 is the owner's call at approval. Nothing on the
   live site changes until Tristen approves.
+  **Closeout 2026-10-06:** approved by Tristen (13:43 EDT);
+  implemented on staging (specs/013 tasks T001–T005 — figure
+  audit zero mismatches, insights clause audit clean,
+  Michigan transcription 36/36); promoted to production in
+  merge `4497704` and production-verified live (served page
+  byte-identical to the generated build; summary and detail
+  figures spot-audited) — specs/013 tasks T006/T007.
 - **2026-10-06** — REVISION PROPOSED (spec
-  015-page-bottom-spacing) — **PENDING OWNER APPROVAL —
-  NOT approved, NOT implemented**: WF-G2 gains a
+  015-page-bottom-spacing) — **APPROVED 2026-10-06 ·
+  IMPLEMENTED + LIVE** (staging, then promotion merge
+  `4497704`): WF-G2 gains a
   **page-foot rhythm**, the bottom counterpart to spec
   003's page-head rhythm, after Tristen reported "a lot
   of vertical empty space at the bottom of the pages
@@ -320,6 +329,13 @@ as accordion rows.
   verified by computed measurement on all seven page
   types. Nothing on the live site changes until
   Tristen approves.
+  **Closeout 2026-10-06:** approved by Tristen (13:39 EDT);
+  implemented on staging as styles.v29.css (specs/015 tasks
+  T002–T004 — ending stacks measured exact on all seven page
+  types); promoted with spec 013 in merge `4497704`
+  (stylesheet chain reaching styles.v30.css) and
+  production-verified (served values: final section 48px,
+  band 56px, footer top 40px) — specs/015 tasks T005/T006.
 - **2026-10-06** — NEW FRAME PROPOSED (spec
   014-michigan-talent-maps) — **PENDING OWNER APPROVAL —
   NOT approved, NOT implemented**: **WF-13 Michigan
@@ -398,3 +414,30 @@ as accordion rows.
   region must exist first) is decided at the approval
   gate (spec 014 tasks.md T001). Nothing on the live
   site changes until Tristen approves.
+- **2026-10-06** — AMENDMENT (spec 013 **Amendment 1** —
+  owner-directed 2026-10-06, after Tristen reviewed the
+  live page with a screenshot: "fix repeat cards. cannot
+  do that."): WF-11's Highlights region loses its four
+  Pulse cards. As shipped, the region opened with the
+  four Pulse headline stats (manufacturing 586.7k,
+  unemployment 5.0%, labor force 4.85M, nonfarm
+  4,505.9k, with their computed MoM deltas) — and the
+  Michigan Pulse band directly below the region carries
+  the same four values and deltas in fuller form, with
+  sparklines. Pure duplication, two adjacent regions
+  saying the same numbers twice. The region now keeps
+  the **generated insights summary, unchanged
+  byte-for-byte** (it narrates the Pulse data; it does
+  not duplicate a display element), plus exactly **five
+  cards**: the Michigan outlook top riser + top faller,
+  the U.S. outlook top riser + top faller, and the
+  education headline. The Pulse statistics live in the
+  band below and are not repeated as cards — the band
+  is their single home on the page. Card drop-out
+  behavior is preserved (a card whose dataset is absent
+  still does not render; the full set is now five).
+  Approval basis: owner direction is the approval (the
+  spec 011 Amendment 2 basis); the wireframe was
+  revised first under the standing wireframes-first
+  rule. Spec record: specs/013-signals-highlights-detail
+  spec.md Amendment 1 + tasks T008–T012.

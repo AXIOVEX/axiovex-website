@@ -6,10 +6,13 @@
 
 **Status**: APPROVED 2026-10-06 (T001 gate — Tristen:
 "Approve spec 015 wireframes — implement it") ·
-**IMPLEMENTED ON STAGING** (styles.v29.css; tasks
-T002–T004 verified by computed-style measurement).
-Promotion (T005) and closeout (T006) run at this
-spec's own promotion, per spec 010.
+**IMPLEMENTED AND LIVE 2026-10-06** — implemented on
+staging (styles.v29.css; tasks T002–T004 verified by
+computed-style measurement), promoted to production
+with spec 013 in merge `4497704` (T005, per spec
+010; FR-004 guard proof empty; the served
+styles.v30.css carries the rhythm values 48px / 56px /
+40px); closeout (T006) complete.
 
 **Input**: Tristen Pierson (owner), 2026-10-06: "also there is
 a lot of vertical empty space at the bottom of the pages too.
