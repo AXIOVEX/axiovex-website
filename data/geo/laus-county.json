@@ -1,0 +1,428 @@
+{
+  "source": "U.S. Bureau of Labor Statistics, Local Area Unemployment Statistics (LAUS), county unemployment rate, not seasonally adjusted",
+  "sourceUrl": "https://api.bls.gov/publicAPI/v2/timeseries/data/ (series LAUCN26{county}000000003)",
+  "vintage": "Monthly; reference month 2026-08",
+  "referenceMonth": "2026-08",
+  "preliminary": true,
+  "retrievedOn": "2026-10-06",
+  "holeMonths": [
+    "2025-10"
+  ],
+  "counties": [
+    {
+      "fips": "26001",
+      "name": "Alcona",
+      "rate": 7.2
+    },
+    {
+      "fips": "26003",
+      "name": "Alger",
+      "rate": 5.3
+    },
+    {
+      "fips": "26005",
+      "name": "Allegan",
+      "rate": 3.9
+    },
+    {
+      "fips": "26007",
+      "name": "Alpena",
+      "rate": 5.3
+    },
+    {
+      "fips": "26009",
+      "name": "Antrim",
+      "rate": 4.5
+    },
+    {
+      "fips": "26011",
+      "name": "Arenac",
+      "rate": 6.1
+    },
+    {
+      "fips": "26013",
+      "name": "Baraga",
+      "rate": 6
+    },
+    {
+      "fips": "26015",
+      "name": "Barry",
+      "rate": 4.6
+    },
+    {
+      "fips": "26017",
+      "name": "Bay",
+      "rate": 5.4
+    },
+    {
+      "fips": "26019",
+      "name": "Benzie",
+      "rate": 4.2
+    },
+    {
+      "fips": "26021",
+      "name": "Berrien",
+      "rate": 4.8
+    },
+    {
+      "fips": "26023",
+      "name": "Branch",
+      "rate": 3.9
+    },
+    {
+      "fips": "26025",
+      "name": "Calhoun",
+      "rate": 5.3
+    },
+    {
+      "fips": "26027",
+      "name": "Cass",
+      "rate": 4.8
+    },
+    {
+      "fips": "26029",
+      "name": "Charlevoix",
+      "rate": 3.8
+    },
+    {
+      "fips": "26031",
+      "name": "Cheboygan",
+      "rate": 4.6
+    },
+    {
+      "fips": "26033",
+      "name": "Chippewa",
+      "rate": 5.3
+    },
+    {
+      "fips": "26035",
+      "name": "Clare",
+      "rate": 6.1
+    },
+    {
+      "fips": "26037",
+      "name": "Clinton",
+      "rate": 4
+    },
+    {
+      "fips": "26039",
+      "name": "Crawford",
+      "rate": 5.4
+    },
+    {
+      "fips": "26041",
+      "name": "Delta",
+      "rate": 5.1
+    },
+    {
+      "fips": "26043",
+      "name": "Dickinson",
+      "rate": 4.4
+    },
+    {
+      "fips": "26045",
+      "name": "Eaton",
+      "rate": 4.4
+    },
+    {
+      "fips": "26047",
+      "name": "Emmet",
+      "rate": 4.1
+    },
+    {
+      "fips": "26049",
+      "name": "Genesee",
+      "rate": 5.8
+    },
+    {
+      "fips": "26051",
+      "name": "Gladwin",
+      "rate": 5.8
+    },
+    {
+      "fips": "26053",
+      "name": "Gogebic",
+      "rate": 6.1
+    },
+    {
+      "fips": "26055",
+      "name": "Grand Traverse",
+      "rate": 3.5
+    },
+    {
+      "fips": "26057",
+      "name": "Gratiot",
+      "rate": 5.3
+    },
+    {
+      "fips": "26059",
+      "name": "Hillsdale",
+      "rate": 4.7
+    },
+    {
+      "fips": "26061",
+      "name": "Houghton",
+      "rate": 5.1
+    },
+    {
+      "fips": "26063",
+      "name": "Huron",
+      "rate": 5.1
+    },
+    {
+      "fips": "26065",
+      "name": "Ingham",
+      "rate": 4.8
+    },
+    {
+      "fips": "26067",
+      "name": "Ionia",
+      "rate": 4.3
+    },
+    {
+      "fips": "26069",
+      "name": "Iosco",
+      "rate": 6.7
+    },
+    {
+      "fips": "26071",
+      "name": "Iron",
+      "rate": 6.2
+    },
+    {
+      "fips": "26073",
+      "name": "Isabella",
+      "rate": 5.1
+    },
+    {
+      "fips": "26075",
+      "name": "Jackson",
+      "rate": 5
+    },
+    {
+      "fips": "26077",
+      "name": "Kalamazoo",
+      "rate": 4.5
+    },
+    {
+      "fips": "26079",
+      "name": "Kalkaska",
+      "rate": 4.8
+    },
+    {
+      "fips": "26081",
+      "name": "Kent",
+      "rate": 4.3
+    },
+    {
+      "fips": "26083",
+      "name": "Keweenaw",
+      "rate": 5.3
+    },
+    {
+      "fips": "26085",
+      "name": "Lake",
+      "rate": 6.2
+    },
+    {
+      "fips": "26087",
+      "name": "Lapeer",
+      "rate": 5.1
+    },
+    {
+      "fips": "26089",
+      "name": "Leelanau",
+      "rate": 3.6
+    },
+    {
+      "fips": "26091",
+      "name": "Lenawee",
+      "rate": 4.8
+    },
+    {
+      "fips": "26093",
+      "name": "Livingston",
+      "rate": 4.2
+    },
+    {
+      "fips": "26095",
+      "name": "Luce",
+      "rate": 5.8
+    },
+    {
+      "fips": "26097",
+      "name": "Mackinac",
+      "rate": 3.5
+    },
+    {
+      "fips": "26099",
+      "name": "Macomb",
+      "rate": 5.7
+    },
+    {
+      "fips": "26101",
+      "name": "Manistee",
+      "rate": 5
+    },
+    {
+      "fips": "26103",
+      "name": "Marquette",
+      "rate": 4.9
+    },
+    {
+      "fips": "26105",
+      "name": "Mason",
+      "rate": 5.7
+    },
+    {
+      "fips": "26107",
+      "name": "Mecosta",
+      "rate": 5.7
+    },
+    {
+      "fips": "26109",
+      "name": "Menominee",
+      "rate": 4.1
+    },
+    {
+      "fips": "26111",
+      "name": "Midland",
+      "rate": 4.8
+    },
+    {
+      "fips": "26113",
+      "name": "Missaukee",
+      "rate": 4.4
+    },
+    {
+      "fips": "26115",
+      "name": "Monroe",
+      "rate": 5
+    },
+    {
+      "fips": "26117",
+      "name": "Montcalm",
+      "rate": 4.5
+    },
+    {
+      "fips": "26119",
+      "name": "Montmorency",
+      "rate": 6.1
+    },
+    {
+      "fips": "26121",
+      "name": "Muskegon",
+      "rate": 5.3
+    },
+    {
+      "fips": "26123",
+      "name": "Newaygo",
+      "rate": 5.1
+    },
+    {
+      "fips": "26125",
+      "name": "Oakland",
+      "rate": 4.7
+    },
+    {
+      "fips": "26127",
+      "name": "Oceana",
+      "rate": 5.4
+    },
+    {
+      "fips": "26129",
+      "name": "Ogemaw",
+      "rate": 6.7
+    },
+    {
+      "fips": "26131",
+      "name": "Ontonagon",
+      "rate": 6
+    },
+    {
+      "fips": "26133",
+      "name": "Osceola",
+      "rate": 5.2
+    },
+    {
+      "fips": "26135",
+      "name": "Oscoda",
+      "rate": 8.6
+    },
+    {
+      "fips": "26137",
+      "name": "Otsego",
+      "rate": 4.4
+    },
+    {
+      "fips": "26139",
+      "name": "Ottawa",
+      "rate": 4
+    },
+    {
+      "fips": "26141",
+      "name": "Presque Isle",
+      "rate": 6.9
+    },
+    {
+      "fips": "26143",
+      "name": "Roscommon",
+      "rate": 6.4
+    },
+    {
+      "fips": "26145",
+      "name": "Saginaw",
+      "rate": 5.8
+    },
+    {
+      "fips": "26147",
+      "name": "St. Clair",
+      "rate": 5.3
+    },
+    {
+      "fips": "26149",
+      "name": "St. Joseph",
+      "rate": 5
+    },
+    {
+      "fips": "26151",
+      "name": "Sanilac",
+      "rate": 5.5
+    },
+    {
+      "fips": "26153",
+      "name": "Schoolcraft",
+      "rate": 5.8
+    },
+    {
+      "fips": "26155",
+      "name": "Shiawassee",
+      "rate": 4.8
+    },
+    {
+      "fips": "26157",
+      "name": "Tuscola",
+      "rate": 5.6
+    },
+    {
+      "fips": "26159",
+      "name": "Van Buren",
+      "rate": 4.6
+    },
+    {
+      "fips": "26161",
+      "name": "Washtenaw",
+      "rate": 4.2
+    },
+    {
+      "fips": "26163",
+      "name": "Wayne",
+      "rate": 6.9
+    },
+    {
+      "fips": "26165",
+      "name": "Wexford",
+      "rate": 5
+    }
+  ]
+}

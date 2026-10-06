@@ -1,0 +1,187 @@
+{
+  "source": "U.S. Census Bureau, Post-Secondary Employment Outcomes (PSEO), LEHD \u2014 Michigan release files pseoe_mi.csv (earnings) + pseof_mi.csv (flows); labels from the LEHD Public Use Data Schema V4.9.0",
+  "sourceUrl": "https://lehd.ces.census.gov/data/pseo/latest_release/mi/",
+  "vintage": "Release R2026Q2 (version_pseo.txt: PSEOE MI 26 2001-2021 V4.14.1 2026Q2); graduate cohorts 2001-2021 pooled",
+  "retrievedOn": "2026-10-06",
+  "coverage": {
+    "partnerInstitutions": [
+      "University of Michigan (OPEID 00232500)"
+    ],
+    "coverageNote": "pseo_mi_partners.txt states the University of Michigan is the only Michigan institution in PSEO and that its graduates are ~10% of statewide graduates. Statewide rows are Census state aggregates, not a sum of Michigan partner institutions."
+  },
+  "selection": "Bachelor's degrees (degree_level 05), all cohorts pooled (grad_cohort 0000), national outcomes (geo_level N). Published rows only: status flag 1 in the source's status_* columns; every other row is counted under excludedRows, never carried.",
+  "excludedRows": {
+    "statewideFlows": 40,
+    "fieldEarnings": 1,
+    "umichIndustryFlows": 0
+  },
+  "statewideFlows": {
+    "label": "Michigan bachelor's graduates, all institutions (state aggregate) \u2014 top field-to-industry flows, one year after graduation",
+    "rows": [
+      {
+        "cip": "14",
+        "field": "Engineering",
+        "industry": "31-33",
+        "industryLabel": "Manufacturing",
+        "y1GradsEmp": 4345,
+        "y1GradsEmpInstate": 1514,
+        "y1MedianEarningsField": 75007
+      },
+      {
+        "cip": "14",
+        "field": "Engineering",
+        "industry": "54",
+        "industryLabel": "Professional, Scientific, and Technical Services",
+        "y1GradsEmp": 3625,
+        "y1GradsEmpInstate": 1706,
+        "y1MedianEarningsField": 75007
+      },
+      {
+        "cip": "45",
+        "field": "Social Sciences",
+        "industry": "54",
+        "industryLabel": "Professional, Scientific, and Technical Services",
+        "y1GradsEmp": 2606,
+        "y1GradsEmpInstate": 692,
+        "y1MedianEarningsField": 52048
+      },
+      {
+        "cip": "51",
+        "field": "Health Professions and Related Programs",
+        "industry": "62",
+        "industryLabel": "Health Care and Social Assistance",
+        "y1GradsEmp": 2432,
+        "y1GradsEmpInstate": 1611,
+        "y1MedianEarningsField": 66024
+      },
+      {
+        "cip": "52",
+        "field": "Business, Management, Marketing, and Related Support Services",
+        "industry": "52",
+        "industryLabel": "Finance and Insurance",
+        "y1GradsEmp": 2106,
+        "y1GradsEmpInstate": 91,
+        "y1MedianEarningsField": 84543
+      },
+      {
+        "cip": "52",
+        "field": "Business, Management, Marketing, and Related Support Services",
+        "industry": "54",
+        "industryLabel": "Professional, Scientific, and Technical Services",
+        "y1GradsEmp": 1983,
+        "y1GradsEmpInstate": 475,
+        "y1MedianEarningsField": 84543
+      },
+      {
+        "cip": "45",
+        "field": "Social Sciences",
+        "industry": "52",
+        "industryLabel": "Finance and Insurance",
+        "y1GradsEmp": 1929,
+        "y1GradsEmpInstate": 482,
+        "y1MedianEarningsField": 52048
+      },
+      {
+        "cip": "42",
+        "field": "Psychology",
+        "industry": "62",
+        "industryLabel": "Health Care and Social Assistance",
+        "y1GradsEmp": 1341,
+        "y1GradsEmpInstate": 889,
+        "y1MedianEarningsField": 37187
+      },
+      {
+        "cip": "42",
+        "field": "Psychology",
+        "industry": "61",
+        "industryLabel": "Educational Services",
+        "y1GradsEmp": 1270,
+        "y1GradsEmpInstate": 733,
+        "y1MedianEarningsField": 37187
+      },
+      {
+        "cip": "13",
+        "field": "Education",
+        "industry": "61",
+        "industryLabel": "Educational Services",
+        "y1GradsEmp": 1188,
+        "y1GradsEmpInstate": 698,
+        "y1MedianEarningsField": 45856
+      }
+    ]
+  },
+  "umichSpotlight": {
+    "institution": "University of Michigan",
+    "opeid": "00232500",
+    "degreeLevel": "Bachelor's degrees, all fields",
+    "earnings": {
+      "y1": {
+        "p25": 32885,
+        "p50": 53268,
+        "p75": 79160,
+        "gradsEarn": 68015
+      },
+      "y5": {
+        "p25": 53441,
+        "p50": 78284,
+        "p75": 113319,
+        "gradsEarn": 65125
+      },
+      "y10": {
+        "p25": 70205,
+        "p50": 106836,
+        "p75": 165585,
+        "gradsEarn": 39563
+      }
+    },
+    "employment": {
+      "y1": {
+        "emp": 73720,
+        "instate": 30253,
+        "sharePct": 41.0
+      },
+      "y5": {
+        "emp": 71863,
+        "instate": 23737,
+        "sharePct": 33.0
+      },
+      "y10": {
+        "emp": 44483,
+        "instate": 13377,
+        "sharePct": 30.1
+      }
+    },
+    "topIndustryFlows": [
+      {
+        "industry": "54",
+        "industryLabel": "Professional, Scientific, and Technical Services",
+        "y1GradsEmp": 16524,
+        "y1GradsEmpInstate": 5569
+      },
+      {
+        "industry": "61",
+        "industryLabel": "Educational Services",
+        "y1GradsEmp": 10077,
+        "y1GradsEmpInstate": 6043
+      },
+      {
+        "industry": "62",
+        "industryLabel": "Health Care and Social Assistance",
+        "y1GradsEmp": 8367,
+        "y1GradsEmpInstate": 5447
+      },
+      {
+        "industry": "52",
+        "industryLabel": "Finance and Insurance",
+        "y1GradsEmp": 7217,
+        "y1GradsEmpInstate": 1525
+      },
+      {
+        "industry": "31-33",
+        "industryLabel": "Manufacturing",
+        "y1GradsEmp": 6529,
+        "y1GradsEmpInstate": 2384
+      }
+    ]
+  }
+}
