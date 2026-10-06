@@ -26,6 +26,13 @@ This file is the index, the gate rule, and the revision log.
   2026-10-06 by spec 013 — PENDING OWNER APPROVAL)
 - WF-12 Signals widget (added 2026-10-06, spec 008 — approved +
   implemented 2026-10-06)
+- WF-13 Michigan talent map (added 2026-10-06, spec 014 —
+  PENDING OWNER APPROVAL): the geography subsection of
+  WF-11's Detail region — QCEW employment-by-industry
+  choropleth (committed-layer selector, not-disclosed
+  state), LAUS unemployment choropleth, IPEDS institution
+  map, PSEO pipeline view (adjusted scope: statewide
+  flows + labeled University of Michigan spotlight)
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
 - WF-09 Blog / article / privacy — tablet
 - Global components: WF-G1 nav (Signals link added by spec 008 —
@@ -290,3 +297,81 @@ as accordion rows.
   verified by computed measurement on all seven page
   types. Nothing on the live site changes until
   Tristen approves.
+- **2026-10-06** — NEW FRAME PROPOSED (spec
+  014-michigan-talent-maps) — **PENDING OWNER APPROVAL —
+  NOT approved, NOT implemented**: **WF-13 Michigan
+  talent map** added, and WF-11 gains an integration
+  note, after Tristen asked for "geographic heap maps
+  showing insight on education and employment related
+  things … where talent is for what industries and what
+  schools pipeline to what industries," included in the
+  monthly jobs/employment insights report. WF-13 is the
+  **geography subsection of WF-11's Detail region**
+  (expanded-state order: … education to career →
+  **geography** → go deeper; it inherits spec 013's
+  region mechanics — DOM-resident, crawlable, no new
+  toggle). Contents, all **static build-generated SVG
+  from committed data** (no map library, tiles, or
+  runtime fetch), each view paired with its full table
+  or list: **(a)** county choropleth — employment by
+  industry (BLS QCEW per-area API, verified 2026-10-06;
+  2024 annual / 2025 Q1): shading = employment level,
+  location quotient in the table, **industry selector =
+  committed pre-rendered layers over one shared county
+  geometry** (small multiples considered and declined —
+  layout cost, 390px legibility), default Manufacturing;
+  disclosure-suppressed small-county cells drawn
+  hatched and labeled **not disclosed**, never zeroed
+  (Keweenaw is the verified example). **(b)** county
+  choropleth — unemployment (BLS LAUS, all 83 counties,
+  monthly fetcher-pattern refresh; drawn values are the
+  verified Aug 2026 preliminary: Wayne 6.9%, Oakland
+  4.7%, Kent 4.3%); a skipped month stays a hole — Oct
+  2025 (federal lapse) is named in the caption, never
+  interpolated. **(c)** institution map — 160 Michigan
+  institutions at IPEDS-published coordinates (HD2024),
+  dots sized by completions (C2024_A; 10,051 Michigan
+  rows, 1,060 CIPs) with CIP-family layers; the adjacent
+  list is the data of record; unlocated institutions are
+  listed, never placed by guess. **(d)** field →
+  industry pipelines (Census PSEO R2026Q2, cohorts
+  2001–2021) **in adjusted, honest scope**: the only
+  per-institution outcomes dataset covers **exactly one
+  Michigan institution** — the University of Michigan,
+  ~10% of statewide graduates (partners file) — so the
+  view is drawn as **statewide CIP → industry ranked
+  flows** (drawn real example: Business → Professional/
+  technical, 1,983 employed at year 1, 475 in-state)
+  plus a **UMich spotlight** carrying the coverage
+  label on the panel (drawn figures: bachelor's median
+  earnings $53,268 yr 1 / $78,284 yr 5 / $106,836 yr 10;
+  73,720 employed yr 1, 30,253 in-state). **A multi-school
+  Michigan pipeline map is not buildable from published
+  data today; the spec states this plainly rather than
+  implying coverage that does not exist**, and the
+  spotlight generalizes automatically if more Michigan
+  institutions join PSEO. Data pipeline per view is
+  spec'd with cadences (LAUS monthly last-good; QCEW
+  quarterly committed; IPEDS annual; PSEO per release —
+  partner list re-checked), committed files under
+  `data/geo/` with vintage labels on every view, and a
+  zero-mismatch figure audit + completeness counts at
+  staging verification. **Monthly integration**: spec
+  007 gains **FR-011** + blog-format **§3B** (recorded
+  in the spec 014 package, applied at implementation) —
+  each monthly article links the live maps with
+  vintages stated and cites 1–2 **computed geographic
+  insights** from named computations (highest-LQ county
+  for a rising industry; county unemployment spread;
+  PSEO in-state retention share), and the cycle
+  checklist gains a map-refresh verification step.
+  **Out of scope for v1**: MCDA prosperity-region
+  projections as a layer (region grain only — no
+  county-level projections exist — and projections are
+  never blended with measured actuals). The build
+  generates true county geometry (us-atlas / TIGER,
+  public domain); the frame's outlines are deliberately
+  schematic. Sequencing vs spec 013 (whose Detail
+  region must exist first) is decided at the approval
+  gate (spec 014 tasks.md T001). Nothing on the live
+  site changes until Tristen approves.
