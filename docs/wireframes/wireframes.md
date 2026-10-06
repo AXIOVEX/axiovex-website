@@ -37,9 +37,10 @@ This file is the index, the gate rule, and the revision log.
 - WF-14 Disclaimer (added 2026-10-06, spec 016 — owner
   decision 2026-10-06 (spec 001 T017): Disclaimer page
   adopted, Terms deferred; drawn on the WF-05 Privacy
-  pattern; footer-reached via WF-G4; implemented on
-  staging — promotion pending the owner's pre-promotion
-  copy approval, spec 016 T005)
+  pattern; footer-reached via WF-G4; **APPROVED ·
+  IMPLEMENTED + LIVE 2026-10-06** (promotion merge
+  `9d7dbba`; copy approval given by Tristen 2026-10-06,
+  spec 016 T005))
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
 - WF-09 Blog / article / privacy — tablet
 - Global components: WF-G1 nav (Signals link added by spec 008 —
@@ -48,7 +49,8 @@ This file is the index, the gate rule, and the revision log.
   rhythm proposed by spec 015 — PENDING OWNER APPROVAL) · WF-G3 CTA
   band · WF-G4 footer (legal link row gains Disclaimer
   beside Privacy Policy, spec 016 — owner decision
-  2026-10-06) · WF-G5 service card · WF-G6 Signals floating
+  2026-10-06; IMPLEMENTED + LIVE 2026-10-06, merge
+  `9d7dbba`) · WF-G5 service card · WF-G6 Signals floating
   widget (spec 008 — approved + implemented 2026-10-06) · WF-G7
   Breaking news banner (proposed 2026-10-06 by spec 012 —
   PENDING OWNER APPROVAL)
@@ -556,3 +558,20 @@ as accordion rows.
   T005), and spec 001 T017 closes only when the page is
   live — **IMPLEMENTED ON STAGING · PROMOTION PENDING
   OWNER COPY APPROVAL**.
+- **2026-10-06** — CLOSEOUT (spec 016-disclaimer-page):
+  the T005 copy gate was satisfied the same day —
+  Tristen reviewed the full Disclaimer text exactly as
+  built on staging and directed "Publish the Disclaimer
+  page," electing to publish on his own review (the
+  T017 memo's counsel-review recommendation was
+  presented with the copy and stands on the record in
+  spec 016). Promoted staging → main (merge `9d7dbba`;
+  FR-004 guard proof clean — production `robots.txt`
+  and `_headers` untouched by the promotion; staging
+  guards re-applied in sync-back `aba9f58`). WF-14 and
+  the WF-G4 legal-link revision are **APPROVED ·
+  IMPLEMENTED + LIVE**: /disclaimer/ serves the
+  approved copy on production, the footer Disclaimer
+  link is on every page, and the sitemap lists 9 URLs.
+  Spec 001 T017 is CLOSED (Disclaimer live; Terms
+  deferred on the record).

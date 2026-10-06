@@ -6,13 +6,14 @@ staging flow in spec 010)
 
 **Created**: 2026-10-06
 
-**Status**: DECIDED + WIREFRAMED 2026-10-06 — owner
+**Status**: IMPLEMENTED + LIVE 2026-10-06 — owner
 decision recorded (tasks.md T001): a short Disclaimer page
-now, a Terms page deferred. Implementation proceeds on
-staging (T002–T004); **promotion is blocked on the distinct
-pre-promotion copy gate (T005)** — Tristen's go-ahead on
-the final page text. Spec 001 T017 stays open until the
-page is live.
+now, a Terms page deferred. Implemented on staging
+(T002–T004); the pre-promotion copy gate (T005) was
+satisfied 2026-10-06 (Tristen reviewed the full staging
+copy and directed "Publish the Disclaimer page");
+promoted to production in merge `9d7dbba` and verified
+live (T006). Spec 001 T017 is closed by this spec.
 
 **Decision (spec 001 T017)**: Tristen Pierson (owner),
 2026-10-06 — adopt a short Disclaimer page now; defer a
