@@ -74,17 +74,21 @@ manifest's "Updated" date advanced.
 
 - **R-1**: The compliance/security/accessibility audit (T013–T016) was
   executed 2026-10-06 (evidence: claims-audit.md in this folder) and the
-  fixes are live. Of the owner-gated residuals, only R-1b remains open:
+  fixes are live. All four owner-gated residuals are now CLOSED:
   - **R-1a (T017, owner decision)** — CLOSED 2026-10-06: decided
     (Disclaimer now, Terms deferred) and shipped live via spec 016;
     see tasks.md T017.
-  - **R-1b (owner dashboard action)**: Cloudflare Web Analytics (RUM) is
-    configured for the zone with automatic beacon installation armed.
-    The beacon does not in fact inject into this Pages-served site
-    (verified on every page type), and the privacy copy was narrowed so
-    it is true regardless — but the durable fix is disabling the
-    automatic setup in the dashboard (or extending the ops token with
-    Web Analytics edit; the API write is currently denied, 403).
+  - **R-1b (owner dashboard action)** — CLOSED 2026-10-06: Cloudflare
+    Web Analytics (RUM) automatic setup for axiovexsystems.com was
+    disabled in the dashboard — the site now runs "Enable with JS
+    Snippet installation" (manual install only), verified persisted in
+    the Web Analytics site list and the Manage site view. The beacon
+    never injected into this Pages-served site (verified on every page
+    type during T013) and the privacy copy had already been narrowed so
+    it was true regardless; the armed auto-install configuration is now
+    off. The API route stays denied (the ops token has no Web Analytics
+    edit permission, 403), so the change was executed in a signed-in
+    browser session under the owner's direction.
   - **R-1c (owner-confirmed practice claims)** — CLOSED 2026-10-06:
     the owner confirmed both categorical claims as accurate (client
     data "not shipped to third-party clouds"; "We don't train shared
