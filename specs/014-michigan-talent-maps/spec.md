@@ -7,11 +7,18 @@ on top of spec 013's Detail region)
 
 **Created**: 2026-10-06
 
-**Status**: **Approved 2026-10-06** (Tristen, at the
-tasks.md T001 gate — including the adjusted PSEO design).
-Implementation in progress on the staging branch; the
-wireframe (new frame WF-13, plus an integration note on
-WF-11) remains the design of record.
+**Status**: **Implemented on staging 2026-10-06** (approved
+2026-10-06 by Tristen at the tasks.md T001 gate — including
+the adjusted PSEO design). All datasets committed under
+`data/geo/` with the traceability audit ALL PASS
+(`sources.md`); the geography subsection is live on the
+staging branch inside spec 013's Detail region. Promotion
+(T009) remains open. The wireframe (new frame WF-13, plus
+an integration note on WF-11) remains the design of
+record. One evidence-driven grain correction is recorded
+in `sources.md` D1: QCEW county × sector rows are
+private-ownership (total-ownership sector rows do not
+exist in QCEW).
 
 **Direction (Tristen, 2026-10-06)**: "also create geographic
 heap maps showing insite on education and employment related

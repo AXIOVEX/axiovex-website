@@ -5,7 +5,8 @@ Proposal package prepared 2026-10-06: wireframes revised
 talent map + the WF-11 integration note;
 `docs/wireframes/wireframes.md` revision log) and this spec
 package written. **APPROVED 2026-10-06 (T001 below) —
-implementation under way on the staging branch.**
+implementation complete on the staging branch
+2026-10-06; promotion (T009) open.**
 
 ## Gate
 
@@ -158,7 +159,7 @@ implementation under way on the staging branch.**
 
 ## Verification + promotion
 
-- [ ] T008 **Staging verification (FR-011)**: figure audit
+- [x] T008 **Staging verification (FR-011)**: figure audit
   (zero mismatches — sampled QCEW cells incl. Wayne +
   Keweenaw suppression, the three named LAUS counties, ten
   institutions across dot-size bands, every pipeline bar +
@@ -171,6 +172,32 @@ implementation under way on the staging branch.**
   1440 / 834 / 390; resilience builds (each geo file removed
   in turn → its view absent, page intact; stale LAUS file →
   vintage label shows the stale month).
+  **Done 2026-10-06.** Figure audit: the independent
+  re-read in sources.md §3 (ALL PASS, 17/17) covers every
+  committed figure; the rendered page was additionally
+  spot-checked in-browser (Wayne manufacturing row
+  89,659 / 1.50; Keweenaw Utilities = Not disclosed; 63
+  Not-disclosed cells in the Utilities layer; UMich dot
+  titled 17,020; top pipeline bar Engineering →
+  Manufacturing 4,345; spotlight medians present).
+  Playwright suite 30/30 at 1440 / 834 / 390: geo section
+  renders after expand, zero horizontal overflow at all
+  widths, chips wrap on mobile, QCEW + IPEDS selectors
+  switch layers by click and keyboard (aria-pressed
+  tracked), LAUS fills resolve, PSEO coverage label
+  present in served HTML, spec 013 regression clean
+  (5 highlight cards, tape, lanes, detail mechanics).
+  No-JS: all 60 layers stacked + visible, detail region
+  expanded. Resilience: per-file drop-out matrix exact
+  (each dataset drops only its view; geometry loss drops
+  the three geometry maps only); stale LAUS file
+  (2026-07) → block heading + sources note both show
+  July 2026. One implementation fix from this pass: the
+  single zero-completions IPEDS institution is now
+  listed in an ALL-layer note instead of silently absent
+  (commit `116d4ee`). Selector switching is
+  network-silent (no fetch/XHR in the section scripts —
+  presentation-only class/attribute toggles).
 - [ ] T009 **Promotion + closeout**: merge `staging` →
   `main` under spec 010 FR-004 (STOP if the diff carries
   staging-only `robots.txt`/`_headers` beyond the intended
