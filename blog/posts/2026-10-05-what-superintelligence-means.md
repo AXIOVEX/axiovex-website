@@ -1,7 +1,7 @@
 ---
 title: What superintelligence actually means — and why today's AI isn't it
 date: 2026-10-05
-description: "Superintelligence" is being applied to tools that are not superintelligent. The ladder from narrow AI to AGI to superintelligence, what the confusion costs buyers and educators, and the terminology our own materials now use.
+description: "Superintelligence" is being applied to tools that are not superintelligent. The ladder from narrow AI to AGI to SI, and what the confusion costs buyers and educators.
 tags: AI, superintelligence, terminology, education
 slug: what-superintelligence-means
 ---
