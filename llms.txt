@@ -16,6 +16,7 @@ true. Rapid-response engineering is part of how we work.
 - Signals (Michigan data + field signals from primary sources): https://axiovexsystems.com/signals/
 - Blog RSS feed: https://axiovexsystems.com/feed.xml
 - Privacy Policy: https://axiovexsystems.com/privacy/
+- Disclaimer: https://axiovexsystems.com/disclaimer/
 - Contact: start@axiovexsystems.com
 - Course materials: https://axiovexsystems.com/documents/
 - GitHub: https://github.com/AXIOVEX
@@ -43,6 +44,7 @@ true. Rapid-response engineering is part of how we work.
 - Signals (Michigan data + field signals from primary sources): https://axiovexsystems.com/signals/
 - Blog RSS feed: https://axiovexsystems.com/feed.xml
 - Privacy Policy: https://axiovexsystems.com/privacy/
+- Disclaimer: https://axiovexsystems.com/disclaimer/
 
 ## Recent analysis
 
