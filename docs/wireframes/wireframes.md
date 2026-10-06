@@ -19,7 +19,9 @@ This file is the index, the gate rule, and the revision log.
 - WF-03 Blog index · WF-04 Blog article · WF-05 Privacy policy
 - WF-06 Contact · WF-10 Documents (added 2026-10-05) · WF-11 Signals
   (Trends & outlook section proposed 2026-10-06 by spec 011 —
-  PENDING OWNER APPROVAL)
+  PENDING OWNER APPROVAL; amended 2026-10-06 by the spec 011
+  amendment — owner-directed: ticker to the top of the page,
+  condensed page top, sparkline window-% annotations)
 - WF-12 Signals widget (added 2026-10-06, spec 008 — approved +
   implemented 2026-10-06)
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
@@ -172,3 +174,35 @@ as accordion rows.
   fetching); `role="region"` labeled "Breaking news", first in
   reading order, visible focus states, no motion. Nothing on the
   live site changes until Tristen approves.
+- **2026-10-06** — AMENDMENT (spec 011-signals-trends-outlook,
+  Amendment 2) — **OWNER-DIRECTED 2026-10-06 (13:03–13:04 EDT);
+  wireframes revised before implementation**: reviewing spec 011
+  on staging, Tristen directed: "can we put the ticker at the top
+  of the page? Also the very top has a lot of wasted space
+  especially vertically. condense this, dont have so much wasted
+  space." and "also make sure that the graphs have the up/down
+  percentage thing that the ticker strip has too." WF-11 revised
+  accordingly: (1) the **ticker strip moves to the top of the
+  page**, directly under the nav and above the page head — the
+  Trends & outlook section keeps its head, trend board, and
+  outlook board, and the tape leaves the section; the spec 012
+  banner's slot above the nav is unaffected. (2) The **page top
+  is condensed** (/signals/ only; measured from the shipped
+  styles.v26.css): page-head top padding 76px → 44px (≤820px:
+  60px → 36px), head text → strata 36px → 24px, strata → Pulse
+  section 40px → 28px, Pulse kicker margin 14px → 10px, Pulse
+  tile padding 18px → 14px (band height −8px), the ticker's
+  offset at its new page-top slot 16px, Trends head margin 58px
+  → 40px — the gap stack totals 250px → 162px (−88px, ≈ one
+  third). WF-G2's 36/40 rhythm on every other page is unchanged;
+  this is a deliberate signals-only exception, recorded as such.
+  (3) Each trend-board **sparkline gains its window % change**
+  beside the graph — glyph + signed percent in the tape's
+  neutral style, computed by the generator from the same history
+  ((last − first) ÷ first; for the unemployment rate the % is
+  the rate's relative change — the pts figures stay in the delta
+  columns). Drawn from the current snapshot: manufacturing
+  ▲ +0.4%, unemployment ▲ +2.0%, labor force ▼ −3.0%, nonfarm
+  ▲ +0.0%. Implementation is spec 011 tasks T009–T010, on staging
+  after spec 012's in-flight build (shared generator/stylesheet
+  chain), promoted under spec 010's rules.

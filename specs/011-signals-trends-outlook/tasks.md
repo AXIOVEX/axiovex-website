@@ -124,3 +124,35 @@ implementation under way on the staging branch.**
   `~/workspace/your_files/axiovex-wireframes/`, record the
   change in this spec's status line, and check off these tasks
   with the completion record.
+
+## Amendment 2 (owner-directed 2026-10-06 — see spec.md)
+
+- [ ] T009 **Implement Amendment 2 on staging** (starts only
+  after spec 012's build completes on the staging branch —
+  shared generator/stylesheet chain): relocate `{{TICKER_HTML}}`
+  ahead of the page-head section in
+  `scripts/templates/signals.html` so the tape renders directly
+  under the header (tape markup + accessibility mechanics
+  unchanged; its margin becomes the 16px page-top offset);
+  apply the A2-2 spacing values (44/36px head padding,
+  24px head→strata, 28px strata→content, 10px kicker margin,
+  14px tile padding, 40px trends-head margin) as
+  /signals/-scoped rules in the next versioned stylesheet
+  (the version after spec 012's; repoint all references per
+  the standing cache rule); extend the trend-board renderer
+  so each sparkline cell also carries the window % (glyph +
+  signed %, one decimal, computed from the trend history;
+  relative change for the rate series; "—" when fewer than
+  two non-null points). Sources & method note unchanged.
+  Regenerate and commit on `staging`.
+- [ ] T010 **Verify Amendment 2 at the staging URL**
+  (staging.axiovexsystems.com/signals/): the ticker renders
+  directly under the header and nowhere else on the page;
+  measured spacing matches the A2-2 table (page-head padding,
+  head→strata, strata→content, kicker margin, tile padding,
+  trends-head margin); every sparkline % equals an
+  independently recomputed value from `data/signals.json`
+  (zero mismatches); tape/board equivalence still holds;
+  no horizontal overflow and no crowding at 1440 / 834 /
+  390px; Pulse band, trend board, outlook board, lanes, and
+  the widget are unchanged apart from the above.
