@@ -87,7 +87,7 @@
           <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Privacy Policy</span></nav>
           <p class="eyebrow">Legal</p>
           <h1>Privacy Policy</h1>
-          <p class="section-lede legal-updated">Last updated: October 5, 2026</p>
+          <p class="section-lede legal-updated">Last updated: October 6, 2026</p>
         </div>
       </div>
     </section>
@@ -100,8 +100,8 @@
 
           <h2>2. Information we collect</h2>
           <p><strong>Information you provide.</strong> The Site has no accounts or newsletter sign-ups. You can share personal information with us directly in two ways: by emailing us, or through the contact form &mdash; in either case, typically your name, email address, and the contents of your message. The contact form is protected by Cloudflare Turnstile, a spam check run by Cloudflare. The form delivers your message to our mailbox, and we do not store form submissions anywhere else.</p>
-          <p><strong>Information collected automatically.</strong> The Site is a static website hosted on Cloudflare Pages. Like most websites, our hosting provider processes limited technical data to deliver and protect the Site, such as your IP address, browser type, and the pages you request. We do not combine this data with any other personal information.</p>
-          <p><strong>What we do not collect.</strong> We do not use cookies, analytics, advertising pixels, or other tracking technologies on the Site. We do not build profiles of visitors, and we do not collect information from children.</p>
+          <p><strong>Information collected automatically.</strong> The Site is a static website hosted on Cloudflare Pages. Like most websites, our hosting provider processes limited technical data to deliver and protect the Site, such as your IP address, browser type, and the pages you request. We review aggregate statistics derived from this technical data &mdash; for example, how many requests each page receives &mdash; to operate the Site. We do not combine this data with any other personal information.</p>
+          <p><strong>What we do not collect.</strong> We do not use cookies, analytics scripts, advertising pixels, or other tracking technologies on the Site. Your browser may store small functional preferences on your own device &mdash; for example, remembering that you dismissed a banner, or how you left a panel &mdash; which never leave your device and are not used to track you. We do not build profiles of visitors, and we do not collect information from children.</p>
 
           <h2>3. How we use information</h2>
           <p>We use the information described above only to:</p>
@@ -179,7 +179,7 @@
       </div>
         </div>
         <nav class="footer-col" aria-label="Explore">
-          <h4>Explore</h4>
+          <h3>Explore</h3>
           <a href="/#what-we-do">What we do</a>
           <a href="/#about">About</a>
           <a href="/#faq">FAQ</a>
@@ -187,7 +187,7 @@
           <a href="/signals/">Signals</a>
         </nav>
         <nav class="footer-col" aria-label="Company">
-          <h4>Company</h4>
+          <h3>Company</h3>
           <a href="/contact/">Contact</a>
           <a href="/documents/">Documents</a>
           <a href="/privacy/" aria-current="page">Privacy Policy</a>
@@ -199,22 +199,7 @@
       </div>
     </div>
   </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    (function () {
-      var t = document.querySelector('.nav-toggle');
-      var m = document.getElementById('mobile-menu');
-      if (!t || !m) return;
-      function set(open) {
-        m.classList.toggle('open', open);
-        t.setAttribute('aria-expanded', open ? 'true' : 'false');
-        t.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      }
-      t.addEventListener('click', function () { set(!m.classList.contains('open')); });
-      m.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
-    })();
-  </script>
+  <script src="/site.v1.js"></script>
   <div id="signals-widget"></div>
   <script src="/signals-widget.v1.js" defer></script>
 </body>
