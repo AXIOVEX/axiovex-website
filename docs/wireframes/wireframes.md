@@ -475,9 +475,10 @@ as accordion rows.
   cards in the region, summary and Pulse band intact) —
   **IMPLEMENTED + LIVE**.
 - **2026-10-06** — AMENDMENT (spec 011-signals-trends-outlook,
-  **Amendment 3**) — **PENDING OWNER APPROVAL (owner
-  direction 2026-10-06; wireframes revised before
-  implementation)**: reviewing the live /signals/ page,
+  **Amendment 3**) — **APPROVED 2026-10-06 · IMPLEMENTED +
+  LIVE (owner direction 2026-10-06; approved by Tristen
+  2026-10-06 ~15:21 EDT; staging `c5b561e`; promotion
+  merge `6561851`)**: reviewing the live /signals/ page,
   Tristen directed the ticker moved: "also move the ticker
   on the signals page. it looks bad there. perhaps at the
   very top above the menu? … It's just that where it sits
@@ -502,6 +503,10 @@ as accordion rows.
   header. **Placement only** — Amendment 2's condensed
   top spacing (A2-2) and the sparkline window % are not
   changed; this supersedes Amendment 2's placement
-  paragraph (A2-1) only. Implementation is spec 011 tasks
-  T011–T015, blocked on the T011 approval gate. Nothing on
-  the live site changes until Tristen approves.
+  paragraph (A2-1) only. Implemented through spec 011
+  tasks T011–T015: approval gate passed 2026-10-06,
+  staging-verified (Playwright ALL PASS incl. the
+  banner → tape → header stacking test; A2-2 spacing
+  exact; no stylesheet change), promoted under the spec
+  010 FR-004 guard proof and production-verified —
+  **IMPLEMENTED + LIVE**.

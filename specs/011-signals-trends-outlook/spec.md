@@ -499,7 +499,12 @@ This amendment supersedes **Amendment 2's placement
 paragraph (A2-1) only**; A2-2, A2-3, and the 13:30 EDT
 static/Signals-only placement decision otherwise stand.
 
-**Status:** **APPROVED by Tristen 2026-10-06 (~15:21 EDT,
-"everything should be approved" — T011 gate passed)**;
-implementation in progress through the spec 010 staging
-flow (tasks T012–T015).
+**Status:** **IMPLEMENTED + LIVE 2026-10-06** — approved
+by Tristen 2026-10-06 (~15:21 EDT, "everything should be
+approved"; T011 gate). Implemented on staging (`c5b561e`:
+pure template relocation of `{{TICKER_HTML}}`, no
+stylesheet change), verified at T013 (Playwright ALL PASS,
+incl. the banner → tape → header stacking test and exact
+A2-2 spacing), promoted to production in merge `6561851`
+under the spec 010 FR-004 guard proof (empty) and
+production-verified live (tasks T011–T015 all checked).
