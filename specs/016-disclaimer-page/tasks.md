@@ -230,7 +230,7 @@ A1-L1–A1-L3).
   both under `x-robots-tag: noindex, nofollow`;
   staging robots still Disallow; staging /signals/
   byte-identical to the committed build.
-- [ ] T009 **Promotion + closeout (spec 010)**:
+- [x] T009 **Promotion + closeout (spec 010)**:
   merge staging → main; FR-004 proofs — `robots.txt`
   diff vs origin/main EMPTY, `_headers` delta EMPTY,
   `data/breaking.json` untouched; production verified
@@ -240,3 +240,24 @@ A1-L1–A1-L3).
   (post-sync branch diff = guard set only); tasks
   checked with records; monitoring state
   `website_commit` advanced to the promotion merge.
+  **Done 2026-10-06:** main was a direct ancestor of
+  staging, so the promotion fast-forwarded; the raw
+  tip carried staging's guard files, so production
+  `robots.txt` + `_headers` were restored in the
+  pre-push guard-restoration commit `e53c0d1` (the
+  spec 013 Amendment 1 precedent). **FR-004 proofs:
+  `git diff origin/main..HEAD -- robots.txt` EMPTY,
+  `-- _headers` EMPTY, `data/breaking.json` untouched;
+  promotion file list = `privacy/index.html`,
+  `scripts/templates/signals.html`, `signals/index.html`,
+  this tasks record.** Production verified: /privacy/
+  serves §13 with the Disclaimer link ("Last updated"
+  unchanged), CSP present, no `x-robots-tag`;
+  /signals/ serves the sources-note sentence and is
+  byte-identical to the promoted build; /disclaimer/
+  §7 hyperlink live; footer Disclaimer link intact;
+  robots `Allow: /`. **Sync back:** staging
+  fast-forwarded to the promotion, both guard files
+  re-applied in `f1e7e5d` before pushing (post-sync
+  branch diff = exactly `_headers` + `robots.txt`).
+  Monitoring state `website_commit` → `e53c0d1`.

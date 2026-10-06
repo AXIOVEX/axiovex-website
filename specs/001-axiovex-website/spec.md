@@ -74,9 +74,10 @@ manifest's "Updated" date advanced.
 
 - **R-1**: The compliance/security/accessibility audit (T013–T016) was
   executed 2026-10-06 (evidence: claims-audit.md in this folder) and the
-  fixes are live. What remains open is owner-gated only:
-  - **R-1a (T017, owner decision)**: whether to add Terms and/or
-    Disclaimer pages. Options memo prepared 2026-10-06.
+  fixes are live. Of the owner-gated residuals, only R-1b remains open:
+  - **R-1a (T017, owner decision)** — CLOSED 2026-10-06: decided
+    (Disclaimer now, Terms deferred) and shipped live via spec 016;
+    see tasks.md T017.
   - **R-1b (owner dashboard action)**: Cloudflare Web Analytics (RUM) is
     configured for the zone with automatic beacon installation armed.
     The beacon does not in fact inject into this Pages-served site
@@ -84,13 +85,18 @@ manifest's "Updated" date advanced.
     it is true regardless — but the durable fix is disabling the
     automatic setup in the dashboard (or extending the ops token with
     Web Analytics edit; the API write is currently denied, 403).
-  - **R-1c (owner-confirmed practice claims)**: two categorical claims
-    remain as the owner wrote them, flagged in claims-audit.md §T016
-    (client data "not shipped to third-party clouds"; "We don't train
-    shared models on client data") — their truth rests on engagement
-    practice only the owner can confirm.
+  - **R-1c (owner-confirmed practice claims)** — CLOSED 2026-10-06:
+    the owner confirmed both categorical claims as accurate (client
+    data "not shipped to third-party clouds"; "We don't train shared
+    models on client data"); verdicts updated to SUBSTANTIATED in
+    claims-audit.md §T016 (restored section — the original table was
+    lost at write time), no copy changed. The jobs-FAQ "partner with
+    educators…" awareness item was narrowed in the same pass
+    ("partner with" → "work with", visible + JSON-LD).
   - **R-1d (design decision)**: breadcrumb links are distinguished by
-    color alone (axe `link-in-text-block`); the remedy changes the
-    approved visual design, so it waits for an owner/design call.
+    color alone (axe `link-in-text-block`); the owner approved the
+    underline remedy 2026-10-06 and the fix ships in the R-1c/R-1d
+    closure pass (styles.v32.css) — closure record follows at
+    promotion.
   No compliance claim may be strengthened on the basis of this audit;
   website hygiene is not organizational compliance (constitution §I).

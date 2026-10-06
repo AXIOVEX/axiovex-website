@@ -219,3 +219,11 @@ Governance: this amendment section + tasks (T007)
 recorded on main before implementation; implementation
 verified on staging (T008); promotion per spec 010
 FR-004 under the standing guard invariant (T009).
+
+**Amendment 1 status: IMPLEMENTED + LIVE 2026-10-06**
+— staging implementation `55e8792`, promotion
+fast-forward with FR-004 guard restoration `e53c0d1`,
+production verified (Privacy §13 live; Signals
+sources-note link live; Disclaimer §7 hyperlink
+re-verified; addition-only diffs and axe parity proven
+in the T008/T009 records).
