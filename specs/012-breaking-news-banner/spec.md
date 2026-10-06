@@ -6,13 +6,16 @@ staging flow in spec 010)
 
 **Created**: 2026-10-06
 
-**Status**: **Implemented on the staging branch 2026-10-06**
-(approved by Tristen 2026-10-06 12:55 EDT — tasks.md T001).
-The mechanism is built and verified locally end to end
-(T002–T006, see the completion record in tasks.md);
-`data/breaking.json` ships as `{ "active": null }`, so staging
-serves no banner. Promotion to production (tasks.md T007) and
-close-out (T008) remain, under spec 010's rules.
+**Status**: **Implemented and live 2026-10-06** (approved
+by Tristen 2026-10-06 12:55 EDT — tasks.md T001). Built and
+verified on staging end to end (T002–T006, see the completion
+record in tasks.md), then promoted to production in merge
+`89c65c1` under spec 010's rules (T007/T008):
+`data/breaking.json` is `{ "active": null }`, so production
+serves the mechanism with no banner and zero layout trace —
+verified on the served site. Amendment 1's hourly check
+(`website-breaking-news-check`) is live; its first
+observation is pending (tasks.md T010).
 
 **Direction (Tristen, 2026-10-06)**: "also add a breaking news
 headliong so when we get breaking news that is applicable to what

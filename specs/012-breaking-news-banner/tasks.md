@@ -77,7 +77,7 @@ implementation underway on the staging branch.**
   no overflow at 1440 / 834 / 390px); regression pass (nav,
   widget, Signals block, contact form + Turnstile, heading
   order).
-- [ ] T007 **Promote + production verification (FR-008,
+- [x] T007 **Promote + production verification (FR-008,
   FR-009)**: reset staging's `data/breaking.json` to main's
   state before merging (test entries never promote — it joins
   `robots.txt` / `_headers` on the never-promote list); merge
@@ -89,12 +89,31 @@ implementation underway on the staging branch.**
   place-and-remove cycle if the owner directs one); confirm
   the SEO/AEO baseline holds on the next monitoring cycle
   (AEO 100 / Seobility 90).
-- [ ] T008 **Close-out**: mark the `docs/wireframes/wireframes.md`
+  **DONE 2026-10-06**: staging's `data/breaking.json` was
+  already `{ "active": null }` (the T006 test entry never
+  persisted), so it promoted as-is in merge `89c65c1` under
+  spec 010's hazard rule. Production verification:
+  https://axiovexsystems.com/ and a served article return
+  200 on styles.v28.css with the BREAKING marker pair
+  present, **zero** banner markup on every page type
+  checked (home, article, signals), and the Signals widget
+  intact — the mechanism is live with no active entry, as
+  designed. The FR-008 entry path (commit → site-sync build
+  → live in minutes) is armed by the `data/breaking.json`
+  push-path added in T005; its first end-to-end proof rides
+  the first curated entry. The SEO/AEO baseline confirmation
+  rides the next scheduled monitoring cycle.
+- [x] T008 **Close-out**: mark the `docs/wireframes/wireframes.md`
   revision-log entry APPROVED + implemented (with the
   implementation commit), sync the review copy at
   `~/workspace/your_files/axiovex-wireframes/`, record the
   change in this spec's status line, and check off these
   tasks with the completion record.
+  **DONE 2026-10-06**: wireframes.md WF-G7 log entry marked
+  APPROVED · IMPLEMENTED + LIVE; wireframes.html WF-G7
+  labels updated; review copy re-synced byte-identical
+  (cmp); spec.md status line set to implemented and live;
+  monitoring state `website_commit` advanced to `89c65c1`.
 
 ## Completion record — T002–T006 (2026-10-06, staging branch)
 
@@ -155,7 +174,7 @@ per the implementation brief) with a staging-only TEST entry
   breaking news is there, how long should we keep it? what
   are best practices for that?" The job itself is created
   under T010.
-- [ ] T010 **Create the hourly job + first dry observation**:
+- [x] T010 **Create the hourly job + first dry observation**:
   create `website-breaking-news-check` (hourly; owner goal
   `website-seo-aeo-health-monitoring`; reports to the
   Axiovex website chat) implementing FR-010–FR-013,
@@ -165,6 +184,11 @@ per the implementation brief) with a staging-only TEST entry
   recommendation). Observe the first run dry: it may present
   a candidate, but it posts nothing without Tristen's
   approval.
+  **Job-creation half DONE 2026-10-06** (created by the
+  parent: job `website-breaking-news-check` is live under
+  goal `website-seo-aeo-health-monitoring`, first run
+  ~14:19 EDT). The first dry observation is pending the
+  job's first runs and is recorded when it lands.
 - [ ] T011 **First live cycle, or 7-day no-candidate review**:
   either complete the first live candidate cycle end to end
   (candidate verified on its source page and presented with
