@@ -1,0 +1,66 @@
+{
+  "blsProjections": {
+    "agency": "U.S. Bureau of Labor Statistics",
+    "agencyShort": "U.S. BLS",
+    "decliningTableUrl": "https://www.bls.gov/emp/tables/fastest-declining-occupations.htm",
+    "fall": [
+      {
+        "jobsChange": -13900,
+        "name": "Word processors and typists",
+        "pctChange": -34.4
+      },
+      {
+        "jobsChange": -1000,
+        "name": "Telephone operators",
+        "pctChange": -27.6
+      },
+      {
+        "jobsChange": -9200,
+        "name": "Switchboard operators, including answering service",
+        "pctChange": -26.0
+      },
+      {
+        "jobsChange": -33600,
+        "name": "Data entry keyers",
+        "pctChange": -25.5
+      },
+      {
+        "jobsChange": -2900,
+        "name": "Foundry mold and coremakers",
+        "pctChange": -23.0
+      }
+    ],
+    "horizon": "2025–35",
+    "publication": "Employment Projections",
+    "retrievedOn": "2026-10-06",
+    "rise": [
+      {
+        "jobsChange": 137800,
+        "name": "Nurse practitioners",
+        "pctChange": 41.0
+      },
+      {
+        "jobsChange": 11300,
+        "name": "Solar photovoltaic installers",
+        "pctChange": 36.5
+      },
+      {
+        "jobsChange": 95400,
+        "name": "Data scientists",
+        "pctChange": 34.6
+      },
+      {
+        "jobsChange": 3500,
+        "name": "Wind turbine service technicians",
+        "pctChange": 29.5
+      },
+      {
+        "jobsChange": 155100,
+        "name": "Medical and health services managers",
+        "pctChange": 24.2
+      }
+    ],
+    "sourceUrl": "https://www.bls.gov/emp/tables/fastest-growing-occupations.htm",
+    "vintage": "2025–35"
+  }
+}
