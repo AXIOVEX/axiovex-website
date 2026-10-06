@@ -124,7 +124,14 @@ T004's documentation updates are handled in the parent thread.
   descendant of `staging`, the sync back fast-forwards and
   would drop the guard files — they were re-applied in a
   dedicated commit (`223f90a`) before the push, so
-  `origin/staging` never carried an unguarded tree. Run one
+  `origin/staging` never carried an unguarded tree.
+  **INVARIANT UPDATED 2026-10-06 (spec 001 T014):** main now
+  carries a production `_headers` (security header set), so
+  the guard rule for `_headers` is no longer "file must not
+  reach main" but "staging's file = main's file + exactly the
+  `X-Robots-Tag: noindex, nofollow` line"; the `robots.txt`
+  rule is unchanged. See plan.md Risks (resolved bullet) and
+  specs/001 tasks.md T014 for the exercised proofs. Run one
   real change through the full flow under supervision — land on
   `staging`, verify per T003, promote per the plan.md checklist
   (including the diff review and the `_headers`/`robots.txt`

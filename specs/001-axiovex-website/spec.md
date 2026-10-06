@@ -72,8 +72,25 @@ manifest's "Updated" date advanced.
 
 ## Open risks (tracked, not hidden)
 
-- **R-1**: Compliance/security/accessibility audit is incomplete: privacy
-  assertions vs actual Cloudflare behavior, security headers, WCAG checks,
-  and substantiation of government/defense-adjacent copy remain open.
-  These are tasks in this spec's tasks.md, and no compliance claim may be
-  strengthened until they close.
+- **R-1**: The compliance/security/accessibility audit (T013–T016) was
+  executed 2026-10-06 (evidence: claims-audit.md in this folder) and the
+  fixes are live. What remains open is owner-gated only:
+  - **R-1a (T017, owner decision)**: whether to add Terms and/or
+    Disclaimer pages. Options memo prepared 2026-10-06.
+  - **R-1b (owner dashboard action)**: Cloudflare Web Analytics (RUM) is
+    configured for the zone with automatic beacon installation armed.
+    The beacon does not in fact inject into this Pages-served site
+    (verified on every page type), and the privacy copy was narrowed so
+    it is true regardless — but the durable fix is disabling the
+    automatic setup in the dashboard (or extending the ops token with
+    Web Analytics edit; the API write is currently denied, 403).
+  - **R-1c (owner-confirmed practice claims)**: two categorical claims
+    remain as the owner wrote them, flagged in claims-audit.md §T016
+    (client data "not shipped to third-party clouds"; "We don't train
+    shared models on client data") — their truth rests on engagement
+    practice only the owner can confirm.
+  - **R-1d (design decision)**: breadcrumb links are distinguished by
+    color alone (axe `link-in-text-block`); the remedy changes the
+    approved visual design, so it waits for an owner/design call.
+  No compliance claim may be strengthened on the basis of this audit;
+  website hygiene is not organizational compliance (constitution §I).

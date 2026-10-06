@@ -162,14 +162,23 @@ caution: never dispatch either workflow manually from the
   staging `robots.txt` carrying its warning as its first line.
   There is no automation guardrail in v1 — the checklist is the
   control, and T005 exists to exercise it once under supervision.
-- **Future `_headers` collision**: spec 001 T014 (security
-  headers) is still open; on Cloudflare Pages those headers
-  conventionally ship as a root `_headers` on `main`. When that
-  lands, the next `main` → `staging` merge will conflict on
-  `_headers`. Resolution rule (FR-004): the staging file becomes
-  `main`'s rules **plus** the staging `/*` noindex block. The
-  combined file must never be promoted back as-is — the noindex
-  block stays staging-only.
+- **`_headers` collision — RESOLVED 2026-10-06 (spec 001 T014)**:
+  main now carries a production root `_headers` (the security
+  header set: CSP, HSTS, Referrer-Policy, Permissions-Policy,
+  X-Content-Type-Options, X-Frame-Options). The guard invariant
+  changed accordingly and is now: **the staging `_headers` is
+  main's file plus exactly one line — the `X-Robots-Tag:
+  noindex, nofollow` guard** — and `robots.txt` remains
+  staging-only as before. Promotion proof: `robots.txt` diff
+  empty; `_headers` diff = exactly the intended production file
+  (no guard line). Sync-back proof: branch diff vs main =
+  exactly the guard line + guard `robots.txt` (exercised in the
+  spec 001 promotion, merge `7bd2cfb`, guard commit `f1f14e9`).
+  One mechanics note from that exercise: the sync back
+  fast-forwarded staging to main (main was a descendant), which
+  replaced BOTH guard files at once — the guard commit must
+  therefore restore the `_headers` line AND the `robots.txt`
+  guard together before pushing.
 - **Staging content drift**: between syncs, staging's documents
   mirror / blog / Signals snapshot age. That is acceptable for a
   preview surface and is cured by the FR-002 sync; it is not a

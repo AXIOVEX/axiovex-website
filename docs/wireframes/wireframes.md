@@ -34,13 +34,21 @@ This file is the index, the gate rule, and the revision log.
   state), LAUS unemployment choropleth, IPEDS institution
   map, PSEO pipeline view (adjusted scope: statewide
   flows + labeled University of Michigan spotlight)
+- WF-14 Disclaimer (added 2026-10-06, spec 016 — owner
+  decision 2026-10-06 (spec 001 T017): Disclaimer page
+  adopted, Terms deferred; drawn on the WF-05 Privacy
+  pattern; footer-reached via WF-G4; implemented on
+  staging — promotion pending the owner's pre-promotion
+  copy approval, spec 016 T005)
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
 - WF-09 Blog / article / privacy — tablet
 - Global components: WF-G1 nav (Signals link added by spec 008 —
   approved + implemented 2026-10-06; Home as the home page's first
   nav item added by spec 009 — approved + implemented 2026-10-06) · WF-G2 strata bar (+ page-head rhythm, spec 003; page-foot
   rhythm proposed by spec 015 — PENDING OWNER APPROVAL) · WF-G3 CTA
-  band · WF-G4 footer · WF-G5 service card · WF-G6 Signals floating
+  band · WF-G4 footer (legal link row gains Disclaimer
+  beside Privacy Policy, spec 016 — owner decision
+  2026-10-06) · WF-G5 service card · WF-G6 Signals floating
   widget (spec 008 — approved + implemented 2026-10-06) · WF-G7
   Breaking news banner (proposed 2026-10-06 by spec 012 —
   PENDING OWNER APPROVAL)
@@ -510,3 +518,41 @@ as accordion rows.
   exact; no stylesheet change), promoted under the spec
   010 FR-004 guard proof and production-verified —
   **IMPLEMENTED + LIVE**.
+- **2026-10-06** — NEW PAGE (spec 016-disclaimer-page) —
+  **DECIDED 2026-10-06 (owner decision, spec 001 T017):
+  a short Disclaimer page is adopted now; a Terms page
+  is DEFERRED.** Tristen decided T017 on the basis of
+  the options memo prepared the same day: the site's
+  genuine exposure is reliance on republished statistics
+  and projections, and one canonical disclaimer gives
+  the existing point-of-use not-a-forecast language a
+  durable home; a Terms page solves problems this site
+  does not yet have (no accounts, no sales, no
+  user content). **NEW WF-14 Disclaimer**, drawn on the
+  WF-05 Privacy pattern exactly — same shell, centered
+  page head ("Legal" eyebrow, "Last updated" line),
+  strata, left-justified prose column, spec 015
+  section-end bottom rhythm, reduced CTA band — with
+  seven short sections whose scope the memo's §B fixes:
+  general information; data republished from primary
+  sources that revise it (source + vintage labels;
+  check the source); projections are the publishing
+  agencies' modeled outlook — not Axiovex forecasts,
+  not advice, not guarantees; nothing on the site is
+  professional advice; CMMC content is readiness
+  information only — not assessment, certification, or
+  a compliance determination; external links are
+  references, not endorsements; and the Privacy Policy
+  governs personal information — cross-referenced,
+  never restated (the memo's standing rule: no new page
+  re-broadens what spec 001 T013 narrowed today).
+  **WF-G4 revised**: the footer Company column's legal
+  link row gains **Disclaimer** beside Privacy Policy
+  on every page; the page is footer-reached, like
+  Privacy — WF-G1 nav unchanged. No new layout, no
+  stylesheet change. Governance: implemented on
+  staging only; the final page text returns to Tristen
+  for a **pre-promotion copy approval** (spec 016
+  T005), and spec 001 T017 closes only when the page is
+  live — **IMPLEMENTED ON STAGING · PROMOTION PENDING
+  OWNER COPY APPROVAL**.
