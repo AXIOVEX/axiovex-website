@@ -705,6 +705,565 @@ function educationHtml(outlook) {
     rows.join('\n') + '\n        </div>';
 }
 
+/* ================= Highlights + Detail (spec 013) =================
+   Two regions on /signals/, rendered from the same committed data
+   as the boards: the Highlights region (generated insights summary
+   + highlight cards) under the page head, and the expandable
+   Detail region ("The full picture") between Trends & outlook and
+   the lanes. FR-002: the summary is templated arithmetic on the
+   committed statistics only — observational language, no causes,
+   no advice, no forecast language beyond the agencies' attributed
+   projections; a clause whose input is missing is omitted, never
+   approximated. FR-007: a missing dataset section removes exactly
+   its dependent cards, blocks, and sentences — never a build
+   failure, never a fabricated value. */
+
+/* Magnitude of a raw trend difference in the tile's display
+   conventions — the same arithmetic deltaHtml renders, as text. */
+function deltaMag(tile, diff) {
+  const mag = Math.abs(diff) >= 10000 ? Math.abs(diff) / 1000 : Math.abs(diff);
+  return mag.toFixed(1) + (/%$/.test(tile.display || '') ? ' pts' : 'k');
+}
+function signedPctText(v) {
+  return (v > 0 ? '+' : v < 0 ? '&minus;' : '') + Math.abs(v).toFixed(1) + '%';
+}
+function signedJobsText(v) {
+  return (v > 0 ? '+' : v < 0 ? '&minus;' : '') + Math.abs(v).toLocaleString('en-US');
+}
+/* Window percent as text (Amendment 2's computation, reused):
+   (last − first) ÷ first across the non-null points. */
+function windowPctText(trend) {
+  const pts = (trend || []).filter(p => p.v !== null && p.v !== undefined);
+  if (pts.length < 2 || !pts[0].v) return null;
+  const pct = ((pts[pts.length - 1].v - pts[0].v) / pts[0].v) * 100;
+  return (pct > 0 ? '+' : pct < 0 ? '&minus;' : '') + Math.abs(pct).toFixed(1) + '%';
+}
+const NUM_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six',
+  'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'];
+function numWord(n) { return NUM_WORDS[n] || String(n); }
+function monthNameOf(ym) {
+  const m = /^(\d{4})-(\d{2})/.exec(String(ym || ''));
+  return m ? MONTHS[+m[2] - 1] : '';
+}
+function ymLabel(ym) {
+  const m = /^(\d{4})-(\d{2})/.exec(String(ym || ''));
+  return m ? MONTHS[+m[2] - 1].slice(0, 3) + ' ' + m[1] : String(ym || '');
+}
+/* The statewide Michigan occupation group (spec 013 dataset).
+   The Detroit Metro group never feeds cards or the summary —
+   it renders only as its own labeled group in the Detail
+   region (FR-005iii: the groups are never blended). */
+function miStatewideGroup(outlook) {
+  const occ = outlook && outlook.michiganOccupations;
+  if (!occ || !Array.isArray(occ.groups)) return null;
+  return occ.groups.find(g => g && g.geography === 'Michigan' &&
+    Array.isArray(g.rows) && g.rows.length) || null;
+}
+function momClause(subject, tile, mom) {
+  if (mom > 0) return subject + ' rose ' + deltaMag(tile, mom) + ' to ' + esc(tile.display);
+  if (mom < 0) return subject + ' fell ' + deltaMag(tile, mom) + ' to ' + esc(tile.display);
+  return subject + ' held at ' + esc(tile.display);
+}
+
+/* FR-002 composer: fixed sentence templates in fixed order, each
+   independently gated on its inputs existing in the committed
+   data. Returns the sentence list; empty when the Pulse snapshot
+   is missing (the region then renders absent, FR-007). */
+function insightsSentences(pulse, outlook) {
+  const out = [];
+  if (!pulse || !pulse.tiles || !pulse.tiles.length) return out;
+  const byId = id => pulse.tiles.find(t => t.id === id);
+  const mfg = byId('SMU26000003000000001');
+  const un = byId('LASST260000000000003');
+  const lf = byId('LASST260000000000006');
+  const nf = byId('SMU26000000000000001');
+
+  /* 1 — Pulse month sentence: latest reference month; the lead
+     series' level + computed MoM wording; an extremum clause
+     only when it is a trend-array fact; then the labor-force
+     and unemployment clauses, each gated on its own delta. */
+  if (mfg) {
+    const d = trendDeltas(mfg.trend);
+    let s = 'In ' + esc(pulse.referenceMonth || '') + ', Michigan manufacturing employment';
+    if (d && d.mom > 0) s += ' rose ' + deltaMag(mfg, d.mom) + ' to ' + esc(mfg.display);
+    else if (d && d.mom < 0) s += ' fell ' + deltaMag(mfg, d.mom) + ' to ' + esc(mfg.display);
+    else s += ' held at ' + esc(mfg.display);
+    let extremum = false;
+    const pts = (mfg.trend || []).filter(p => p.v !== null && p.v !== undefined);
+    if (pts.length >= 3) {
+      const latest = pts[pts.length - 1];
+      let minP = pts[0], maxP = pts[0];
+      for (const p of pts) { if (p.v < minP.v) minP = p; if (p.v > maxP.v) maxP = p; }
+      const yr = p => (String(p.ym).slice(0, 4) !== String(latest.ym).slice(0, 4)
+        ? ' ' + String(p.ym).slice(0, 4) : '');
+      if (latest.v > minP.v) {
+        s += ' &mdash; ' + deltaMag(mfg, latest.v - minP.v) + ' above its ' +
+          monthNameOf(minP.ym) + yr(minP) + ' low &mdash;';
+        extremum = true;
+      } else if (latest.v < maxP.v) {
+        s += ' &mdash; ' + deltaMag(mfg, maxP.v - latest.v) + ' below its ' +
+          monthNameOf(maxP.ym) + yr(maxP) + ' high &mdash;';
+        extremum = true;
+      }
+    }
+    const clauses = [];
+    if (lf) { const dl = trendDeltas(lf.trend); if (dl) clauses.push(momClause('the labor force', lf, dl.mom)); }
+    if (un) { const du = trendDeltas(un.trend); if (du) clauses.push(momClause('the unemployment rate', un, du.mom)); }
+    if (clauses.length) s += (extremum ? ' while ' : ', while ') + clauses.join(' and ');
+    out.push(s + '.');
+  }
+
+  /* 2 — Window sentence: the labor force and total nonfarm
+     window moves (delta + window %, the Amendment-2 figures),
+     each clause gated on its own series' window existing. */
+  {
+    const winClause = (subject, tile) => {
+      if (!tile) return null;
+      const d = trendDeltas(tile.trend);
+      if (!d) return null;
+      if (d.window === 0) return subject + ' is unchanged';
+      const wp = windowPctText(tile.trend);
+      if (!wp) return null;
+      return subject + (d.window > 0 ? ' is up ' : ' is down ') +
+        deltaMag(tile, d.window) + ' (' + wp + ')';
+    };
+    const clauses = [winClause('the labor force', lf), winClause('total nonfarm employment', nf)]
+      .filter(Boolean);
+    if (clauses.length) {
+      const n = Math.max(0, ...pulse.tiles.map(t => (t.trend || []).length));
+      out.push('Across the ' + numWord(n) + ' months in the snapshot, ' +
+        clauses.join(' while ') + '.');
+    }
+  }
+
+  /* 3 — Outlook sentence: top riser per dataset present; the
+     "on both boards" phrasing only when both datasets are
+     present AND the composer has compared the names (FR-002);
+     the shared-faller clause likewise only on a compared fact. */
+  {
+    const miState = miStatewideGroup(outlook);
+    const miRows = miState
+      ? [...miState.rows].sort((a, b) => b.pctChange - a.pctChange) : [];
+    const bls = outlook && outlook.blsProjections;
+    const blsRise = bls && Array.isArray(bls.rise) && bls.rise.length
+      ? [...bls.rise].sort((a, b) => b.pctChange - a.pctChange) : [];
+    const blsFall = bls && Array.isArray(bls.fall) && bls.fall.length
+      ? [...bls.fall].sort((a, b) => a.pctChange - b.pctChange) : [];
+    const verbFor = name => (/s$/i.test(String(name).trim()) ? 'are' : 'is');
+    /* Sentence form: the datasets carry title case (MCDA) and
+       sentence case (BLS); mid-sentence the name lowercases in
+       full — occupation names here carry no proper nouns. */
+    const lowerFirst = name => name.toLowerCase();
+    if (miRows.length && blsRise.length) {
+      const miR = miRows[0], blsR = blsRise[0];
+      const miNeg = new Map(miRows.filter(r => r.pctChange < 0)
+        .map(r => [r.occupation.toLowerCase(), r]));
+      const shared = blsFall.find(r => miNeg.has(r.name.toLowerCase()));
+      let s;
+      if (miR.occupation.toLowerCase() === blsR.name.toLowerCase()) {
+        s = 'In the published outlooks, ' + esc(lowerFirst(miR.occupation)) + ' ' +
+          verbFor(miR.occupation) +
+          ' the fastest-growing occupation on both boards &mdash; ' +
+          signedPctText(miR.pctChange) + ' in Michigan&rsquo;s ' + esc(miState.horizon) +
+          ' projections (MCDA) and ' + signedPctText(blsR.pctChange) +
+          ' nationally for ' + esc(bls.horizon || bls.vintage || '') + ' (U.S. BLS)';
+      } else {
+        s = 'In the published outlooks, ' + esc(lowerFirst(miR.occupation)) + ' ' +
+          verbFor(miR.occupation) +
+          ' the fastest-growing occupation in Michigan&rsquo;s ' + esc(miState.horizon) +
+          ' projections (MCDA) at ' + signedPctText(miR.pctChange) +
+          ', and ' + esc(lowerFirst(blsR.name)) + ' ' + verbFor(blsR.name) +
+          ' the fastest-growing nationally for ' + esc(bls.horizon || bls.vintage || '') +
+          ' (U.S. BLS) at ' + signedPctText(blsR.pctChange);
+      }
+      if (shared) {
+        const miF = miNeg.get(shared.name.toLowerCase());
+        s += ' &mdash; and ' + esc(lowerFirst(shared.name)) + ' ' + verbFor(shared.name) +
+          ' among the fastest-falling on both (' + signedPctText(miF.pctChange) +
+          ' in Michigan, ' + signedPctText(shared.pctChange) + ' nationally)';
+      }
+      out.push(s + '.');
+    } else if (blsRise.length) {
+      let s = 'In the published U.S. outlook (U.S. BLS, ' +
+        esc(bls.horizon || bls.vintage || '') + '), ' +
+        esc(lowerFirst(blsRise[0].name)) + ' ' + verbFor(blsRise[0].name) +
+        ' the fastest-growing occupation at ' + signedPctText(blsRise[0].pctChange);
+      if (blsFall.length) {
+        s += ', and ' + esc(lowerFirst(blsFall[0].name)) + ' ' + verbFor(blsFall[0].name) +
+          ' the fastest-falling at ' + signedPctText(blsFall[0].pctChange);
+      }
+      out.push(s + '.');
+    } else if (miRows.length) {
+      const miF = miRows[miRows.length - 1];
+      let s = 'In Michigan&rsquo;s published outlook (MCDA, ' + esc(miState.horizon) + '), ' +
+        esc(lowerFirst(miRows[0].occupation)) + ' ' + verbFor(miRows[0].occupation) +
+        ' the fastest-growing occupation at ' + signedPctText(miRows[0].pctChange);
+      if (miF.pctChange < 0) {
+        s += ', and ' + esc(lowerFirst(miF.occupation)) + ' ' + verbFor(miF.occupation) +
+          ' the fastest-falling at ' + signedPctText(miF.pctChange);
+      }
+      out.push(s + '.');
+    }
+  }
+
+  /* 4 — Education sentence: the headline figure in its source
+     wording + its prior-class comparison, when present. */
+  {
+    const figs = outlook && outlook.education && Array.isArray(outlook.education.figures)
+      ? outlook.education.figures : [];
+    const head = figs.find(f => f && f.headline && f.valueText);
+    if (head) {
+      let s = 'Michigan&rsquo;s ' + esc(head.period) + ' graduated at ' + esc(head.valueText);
+      if (head.compareText) s += ', ' + esc(head.compareText);
+      out.push(s + '.');
+    }
+  }
+  return out;
+}
+
+/* FR-002e provenance line: snapshot period + the vintages of
+   the outlook datasets actually present. */
+function insightsHtml(pulse, outlook) {
+  const sentences = insightsSentences(pulse, outlook);
+  if (!sentences.length) return '';
+  const prov = ['Generated at build time from the data on this page'];
+  if (pulse.referenceMonth) prov.push('Pulse snapshot: ' + esc(pulse.referenceMonth));
+  const outs = [];
+  const miState = miStatewideGroup(outlook);
+  if (miState) outs.push('Michigan MCDA ' + esc(miState.horizon));
+  const bls = outlook && outlook.blsProjections;
+  if (bls && ((bls.rise || []).length || (bls.fall || []).length)) {
+    outs.push('U.S. BLS ' + esc(bls.horizon || bls.vintage || ''));
+  }
+  if (outs.length) prov.push('Outlooks: ' + outs.join(' &middot; '));
+  prov.push('No forecasts &mdash; forward-looking figures are the publishing agencies&rsquo; projections');
+  return '          <p class="hl-summary">' + sentences.join(' ') + '</p>\n' +
+    '          <p class="hl-prov">' + prov.join(' &middot; ') + '</p>';
+}
+
+/* FR-003 composition rule: the four Pulse cards (latest verbatim
+   + computed MoM), then per outlook dataset present a top riser
+   and top faller card, then the education headline card. A card
+   whose data is absent does not render — no placeholders. */
+function highlightCardsHtml(pulse, outlook) {
+  if (!pulse || !pulse.tiles || !pulse.tiles.length) return '';
+  const cards = [];
+  const card = (label, valueHtml, meta) =>
+    '          <div class="pulse-tile hl-card">\n' +
+    '            <p class="pulse-label">' + label + '</p>\n' + valueHtml + '\n' +
+    '            <p class="pulse-delta">' + meta + '</p>\n          </div>';
+  const refShort = shortMonth(pulse.referenceMonth || '');
+  for (const t of pulse.tiles) {
+    const d = trendDeltas(t.trend);
+    const meta = (d ? deltaHtml(t, d.mom, false) + ' MoM &middot; ' : '') +
+      esc(refShort) + ' &middot; BLS';
+    cards.push(card(esc(t.label) + ' &middot; MI',
+      '            <p class="hl-value">' + esc(t.display) + '</p>', meta));
+  }
+  const miState = miStatewideGroup(outlook);
+  if (miState) {
+    const rows = [...miState.rows].sort((a, b) => b.pctChange - a.pctChange);
+    if (rows.length && rows[0].pctChange > 0) {
+      cards.push(card('Top riser &middot; Michigan outlook',
+        '            <p class="hl-name">' + esc(rows[0].occupation) + '</p>',
+        'projected <b>' + signedPctText(rows[0].pctChange) + '</b> &middot; MCDA ' +
+        esc(miState.horizon)));
+    }
+    const faller = rows[rows.length - 1];
+    if (rows.length && faller.pctChange < 0) {
+      cards.push(card('Top faller &middot; Michigan outlook',
+        '            <p class="hl-name">' + esc(faller.occupation) + '</p>',
+        'projected <b>' + signedPctText(faller.pctChange) + '</b> &middot; MCDA ' +
+        esc(miState.horizon)));
+    }
+  }
+  const bls = outlook && outlook.blsProjections;
+  if (bls && Array.isArray(bls.rise) && bls.rise.length) {
+    const riser = [...bls.rise].sort((a, b) => b.pctChange - a.pctChange)[0];
+    cards.push(card('Top riser &middot; U.S. outlook',
+      '            <p class="hl-name">' + esc(riser.name) + '</p>',
+      'projected <b>' + signedPctText(riser.pctChange) + '</b> &middot; ' +
+      esc(bls.agencyShort || 'U.S. BLS') + ' ' + esc(bls.horizon || bls.vintage || '')));
+  }
+  if (bls && Array.isArray(bls.fall) && bls.fall.length) {
+    const faller = [...bls.fall].sort((a, b) => a.pctChange - b.pctChange)[0];
+    cards.push(card('Top faller &middot; U.S. outlook',
+      '            <p class="hl-name">' + esc(faller.name) + '</p>',
+      'projected <b>' + signedPctText(faller.pctChange) + '</b> &middot; ' +
+      esc(bls.agencyShort || 'U.S. BLS') + ' ' + esc(bls.horizon || bls.vintage || '')));
+  }
+  const figs = outlook && outlook.education && Array.isArray(outlook.education.figures)
+    ? outlook.education.figures : [];
+  const head = figs.find(f => f && f.headline && f.valueText);
+  if (head) {
+    const glyph = head.deltaDirection === 'down' ? '&#9660;' : '&#9650;';
+    const meta = esc(head.period) +
+      (head.deltaText ? ' &middot; ' + glyph + ' ' + esc(head.deltaText) : '') +
+      ' &middot; ' + esc(head.publisher || '');
+    cards.push(card('Education headline &middot; Michigan',
+      '            <p class="hl-name">' + esc(head.cardLabel || head.label) +
+      ' &mdash; ' + esc(head.valueText) + '</p>', meta));
+  }
+  if (!cards.length) return '';
+  return '          <div class="hl-grid">\n' + cards.join('\n') + '\n          </div>';
+}
+
+function highlightsHtml(pulse, outlook) {
+  if (!pulse || !pulse.tiles || !pulse.tiles.length) return '';
+  const ins = insightsHtml(pulse, outlook);
+  const cards = highlightCardsHtml(pulse, outlook);
+  if (!ins && !cards) return '';
+  return '        <div class="highlights">\n' +
+    '          <p class="hl-kicker">Highlights &mdash; the short version</p>\n' +
+    (ins ? ins + '\n' : '') + (cards ? cards + '\n' : '') +
+    '        </div>';
+}
+
+function detailBlock(kicker, inner) {
+  return '          <div class="detail-block">\n' +
+    '          <p class="board-kicker">' + kicker + '</p>\n' + inner + '\n          </div>';
+}
+
+/* FR-005(i): every monthly point of every Pulse series as one
+   table, oldest → newest, latest row marked. A missing month is
+   a gap cell ("—"), captioned as missing in the source — never
+   interpolated (spec 004 FR-006 / spec 011 FR-005d). */
+const DETAIL_TILE_HEADS = {
+  SMU26000003000000001: 'Manufacturing (k)',
+  LASST260000000000003: 'Unemployment',
+  LASST260000000000006: 'Labor force',
+  SMU26000000000000001: 'Nonfarm (k)',
+};
+function detailPulseTable(pulse) {
+  if (!pulse || !pulse.tiles || !pulse.tiles.length) return '';
+  const tiles = pulse.tiles;
+  const months = [];
+  const seen = new Set();
+  for (const t of tiles) {
+    for (const p of (t.trend || [])) {
+      if (!seen.has(p.ym)) { seen.add(p.ym); months.push(p.ym); }
+    }
+  }
+  months.sort();
+  if (!months.length) return '';
+  const cell = (tile, v) => {
+    if (v === null || v === undefined) return '&mdash;';
+    if (/%$/.test(tile.display || '')) return v.toFixed(1) + '%';
+    if (tile.id === 'LASST260000000000006') return Math.round(v).toLocaleString('en-US');
+    return v.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  };
+  const head = tiles.map(t =>
+    '<th scope="col" class="dt-num">' + esc(DETAIL_TILE_HEADS[t.id] || t.label) + '</th>').join('');
+  const lastYm = months[months.length - 1];
+  const rows = months.map(ym => {
+    const tds = tiles.map(t => {
+      const p = (t.trend || []).find(x => x.ym === ym);
+      return '<td class="dt-num">' + cell(t, p ? p.v : null) + '</td>';
+    }).join('');
+    return '            <tr' + (ym === lastYm ? ' class="dt-latest"' : '') +
+      '><td>' + ymLabel(ym) + '</td>' + tds + '</tr>';
+  }).join('\n');
+  const gapAt = ym => tiles.some(t => {
+    const p = (t.trend || []).find(x => x.ym === ym);
+    return !p || p.v === null || p.v === undefined;
+  });
+  const gapMonths = months.filter(gapAt);
+  const shortName = t => String(t.label || '').toLowerCase()
+    .replace(' rate', '').replace(' employment', '').replace('total ', '');
+  const gapSeries = tiles
+    .filter(t => (t.trend || []).some(p => p.v === null || p.v === undefined))
+    .map(shortName);
+  let caption = 'Every point in the snapshot&rsquo;s trend arrays, as a table &mdash; ' +
+    'the same values the sparklines draw.';
+  if (gapMonths.length) {
+    caption += ' &ldquo;&mdash;&rdquo; is a month the published series does not contain (' +
+      gapMonths.map(ymLabel).join(', ') +
+      (gapSeries.length ? ', ' + gapSeries.join(' + ') : '') +
+      '): shown as a gap and captioned as missing in the source, never interpolated.';
+  }
+  return detailBlock(
+    'MICHIGAN PULSE &mdash; ' + months.length + ' MONTHS OF VALUES &middot; ' +
+      esc(String(pulse.source || '').toUpperCase()),
+    '          <div class="detail-scroll">\n' +
+    '          <table class="detail-table">\n' +
+    '            <caption class="visually-hidden">Michigan Pulse monthly values for all four series</caption>\n' +
+    '            <thead><tr><th scope="col">Month</th>' + head + '</tr></thead>\n' +
+    '            <tbody>\n' + rows + '\n            </tbody>\n          </table>\n          </div>\n' +
+    '          <p class="board-note">' + caption + '</p>');
+}
+
+/* FR-005(ii): every committed BLS EP row, rise and fall, with
+   the projected numeric change beside the percentage; the
+   standing projections caption repeats here. */
+function detailBls(outlook) {
+  const bls = outlook && outlook.blsProjections;
+  if (!bls || (!(bls.rise || []).length && !(bls.fall || []).length)) return '';
+  const row = r => '            <p class="proj-row">' + esc(r.name) +
+    ' <b class="proj-pct">' + signedPctText(r.pctChange) + '</b>' +
+    ' <span class="proj-jobs">&middot; ' + signedJobsText(r.jobsChange) + ' jobs</span></p>';
+  const col = (label, rows) => rows.length
+    ? '          <div>\n            <p class="board-sub">' + label + '</p>\n' +
+      rows.map(row).join('\n') + '\n          </div>'
+    : '';
+  const cols = [col('On the rise', bls.rise || []), col('Falling', bls.fall || [])]
+    .filter(Boolean);
+  if (!cols.length) return '';
+  return detailBlock(
+    'U.S. OUTLOOK &mdash; FULL TABLES &middot; U.S. BLS ' +
+      esc(String(bls.publication || '').toUpperCase()) + ' ' +
+      esc(bls.horizon || bls.vintage || ''),
+    '          <div class="detail-cols">\n' + cols.join('\n') + '\n          </div>\n' +
+    '          <p class="board-note">Projections are the publishing agency&rsquo;s modeled outlook, ' +
+    'published with its horizon and vintage &mdash; they are not Axiovex forecasts, ' +
+    'and they are not guarantees.</p>');
+}
+
+/* FR-005(iii): all 36 Michigan occupation rows in their two
+   labeled groups — never blended into one ranking or horizon.
+   Provenance is the via-study label + release tag + the
+   direct-source caveat, stated in the block. */
+function detailMichigan(outlook) {
+  const occ = outlook && outlook.michiganOccupations;
+  if (!occ || !Array.isArray(occ.groups) || !occ.groups.length) return '';
+  const parts = [];
+  for (const g of occ.groups) {
+    const rows = [...(g.rows || [])].sort((a, b) => b.pctChange - a.pctChange);
+    if (!rows.length) continue;
+    const geoLabel = g.geography === 'Michigan' ? 'Michigan statewide' : g.geography;
+    parts.push('          <p class="board-sub">' + esc(geoLabel) + ' &middot; ' +
+      esc(g.horizon || '') + ' &mdash; ' + rows.length +
+      ' occupations, sorted by projected change</p>');
+    parts.push(rows.map(r => '            <p class="proj-row">' + esc(r.occupation) +
+      ' <b class="proj-pct">' + signedPctText(r.pctChange) + '</b>' +
+      ' <span class="proj-jobs">&middot; ' + r.baseEmployment.toLocaleString('en-US') +
+      ' &rarr; ' + r.projectedEmployment.toLocaleString('en-US') +
+      ' &middot; ' + r.annualOpenings.toLocaleString('en-US') +
+      ' openings/yr</span></p>').join('\n'));
+  }
+  if (!parts.length) return '';
+  const prov = 'Provenance: transcribed from the ' + esc(occ.edition || 'September edition') +
+    '&rsquo;s verified projection capture in the ' + esc(occ.studyName || 'Axiovex workforce study') +
+    ' (release tag ' + esc(occ.releaseTag || '') + '), whose underlying files are MCDA&rsquo;s ' +
+    'published statewide and regional workbooks. The figures are labeled &ldquo;via the Axiovex ' +
+    'workforce study, September edition&rdquo; until the pending direct read of MCDA&rsquo;s tables ' +
+    'on michigan.gov supersedes this transcription. The two groups are never blended &mdash; ' +
+    'different geographies, different vintages, separate labels. Annual openings include ' +
+    'replacement demand, not only growth.';
+  return detailBlock(
+    'MICHIGAN OCCUPATIONS &mdash; LONG-TERM PROJECTIONS &middot; MICHIGAN MCDA, VIA THE ' +
+      'AXIOVEX WORKFORCE STUDY (' + esc(String(occ.edition || '').toUpperCase()) + ')',
+    parts.join('\n') + '\n          <p class="board-note">' + prov + '</p>');
+}
+
+/* FR-005(iv): the verified education set only, each figure in
+   its source-published form (valueText) with publisher +
+   vintage; the pupil-membership row keeps its source's
+   "estimate" label. The unverified IPEDS row is absent,
+   captioned as absent — never substituted. */
+function detailEducation(outlook) {
+  const figs = outlook && outlook.education && Array.isArray(outlook.education.figures)
+    ? outlook.education.figures : [];
+  if (!figs.length) return '';
+  const rows = figs.map(f => {
+    let mid = ' &middot; ' + esc(f.period);
+    if (f.priorText) mid += ' &middot; ' + esc(f.priorText);
+    if (f.noteText) {
+      mid += ' &middot; ' + (f.estimate
+        ? esc(f.noteText).replace('estimate', '<b>estimate</b>')
+        : esc(f.noteText));
+    }
+    return '          <p class="edu-row">' + esc(f.label) + ' <b>' + esc(f.valueText) + '</b>' +
+      ' <span class="edu-vintage">' + mid + ' &middot;</span>' +
+      ' <span class="edu-source">' + esc(f.publisherTag || f.publisher || '') + '</span></p>';
+  });
+  return detailBlock('EDUCATION TO CAREER &mdash; MICHIGAN',
+    rows.join('\n') +
+    '\n          <p class="board-note">One row is deliberately absent: postsecondary completions ' +
+    'by field &mdash; no Michigan by-field series has been verified from its source (IPEDS) yet, ' +
+    'so the row does not appear. The block grows by verification, never by substitution.</p>');
+}
+
+/* FR-005(v): link block — the current monthly workforce article
+   resolved from the build's own post list, and the study
+   edition at its immutable release-tag URL from the dataset
+   metadata. Never hand-maintained in the template. */
+function detailGoDeeper(posts, outlook) {
+  const parts = [];
+  const post = (posts || []).find(p => p.slug && p.slug.startsWith('michigan-workforce-'));
+  if (post) {
+    parts.push('          <p class="detail-link"><a href="' + escAttr(post.url) + '">' +
+      esc(post.title) + '</a> <span class="proj-meta">&middot; the current monthly ' +
+      'workforce article on this site</span></p>');
+  }
+  const occ = outlook && outlook.michiganOccupations;
+  if (occ && occ.editionUrl) {
+    parts.push('          <p class="detail-link"><a href="' + escAttr(occ.editionUrl) +
+      '" target="_blank" rel="noopener">The ' + esc(occ.edition || 'September edition') +
+      ' &mdash; ' + esc(occ.studyName || 'Axiovex workforce study') + ' &rarr;</a>' +
+      ' <span class="proj-meta">&middot; the verified research edition behind the Michigan ' +
+      'tables (release tag ' + esc(occ.releaseTag || '') + ')</span></p>');
+  }
+  if (!parts.length) return '';
+  return detailBlock('GO DEEPER', parts.join('\n'));
+}
+
+/* FR-004 disclosure: the markup renders EXPANDED (truthful
+   aria state, content in the DOM, readable with scripts
+   unavailable); the small script emitted with the region
+   collapses it on load when JavaScript is present, then
+   toggles. No persisted state, no requests — expanding and
+   collapsing is the only client behavior. The subtitle is
+   composed from the blocks actually present, so it never
+   names an absent dataset. */
+function detailHtml(pulse, outlook, posts) {
+  const bPulse = detailPulseTable(pulse);
+  const bBls = detailBls(outlook);
+  const bMi = detailMichigan(outlook);
+  const bEdu = detailEducation(outlook);
+  const bGo = detailGoDeeper(posts, outlook);
+  const blocks = [bPulse, bBls, bMi, bEdu, bGo].filter(Boolean);
+  if (!blocks.length) return '';
+  const subParts = [];
+  if (bPulse) {
+    const n = Math.max(0, ...(pulse.tiles || []).map(t => (t.trend || []).length));
+    subParts.push(n + ' months of Pulse values');
+  }
+  if (bBls) subParts.push('the full projection tables');
+  if (bMi) subParts.push('Michigan occupations');
+  if (bEdu) subParts.push('education-to-career figures');
+  const sub = subParts.length
+    ? ' <span class="detail-sub" id="detail-sub" hidden>&middot; the complete tables ' +
+      'behind the boards &mdash; ' + subParts.join(', ') + '</span>'
+    : '';
+  return '        <div class="detail">\n' +
+    '          <div class="detail-head">\n' +
+    '            <p class="detail-title-wrap"><span class="detail-title">The full picture</span>' +
+    sub + '</p>\n' +
+    '            <button type="button" class="detail-toggle" id="detail-toggle" ' +
+    'aria-expanded="true" aria-controls="detail-region">Hide details &minus;</button>\n' +
+    '          </div>\n' +
+    '          <div class="detail-body" id="detail-region">\n' + blocks.join('\n') + '\n          </div>\n' +
+    '        </div>\n' +
+    '        <script>\n' +
+    '          (function () {\n' +
+    '            var b = document.getElementById(\'detail-toggle\');\n' +
+    '            var r = document.getElementById(\'detail-region\');\n' +
+    '            var s = document.getElementById(\'detail-sub\');\n' +
+    '            if (!b || !r) return;\n' +
+    '            function set(open) {\n' +
+    '              b.setAttribute(\'aria-expanded\', open ? \'true\' : \'false\');\n' +
+    '              b.textContent = open ? \'Hide details \\u2212\' : \'Show details +\';\n' +
+    '              r.hidden = !open;\n' +
+    '              if (s) s.hidden = open;\n' +
+    '            }\n' +
+    '            set(false);\n' +
+    '            b.addEventListener(\'click\', function () {\n' +
+    '              set(b.getAttribute(\'aria-expanded\') !== \'true\');\n' +
+    '            });\n' +
+    '          })();\n' +
+    '        </script>';
+}
+
 function fmtUpdated(iso) {
   try {
     const d = new Date(iso);
@@ -769,11 +1328,13 @@ function buildSignals(posts) {
   const tpl = readFileSync(path.join(ROOT, 'scripts', 'templates', 'signals.html'), 'utf8');
   mkdirSync(path.join(ROOT, 'signals'), { recursive: true });
   writeFileSync(path.join(ROOT, 'signals', 'index.html'), fill(tpl, {
+    '{{HIGHLIGHTS_HTML}}': highlightsHtml(snap.pulse, outlook),
     '{{PULSE_HTML}}': pulseTilesHtml(snap.pulse),
     '{{TICKER_HTML}}': trendsParts[0],
     '{{TREND_BOARD_HTML}}': trendsParts[1],
     '{{OUTLOOK_HTML}}': trendsParts[2],
     '{{EDUCATION_HTML}}': trendsParts[3],
+    '{{DETAIL_HTML}}': detailHtml(snap.pulse, outlook, posts),
     '{{LANES_HTML}}': lanesHtml,
     '{{UPDATED_LINE}}': updatedLine,
   }));

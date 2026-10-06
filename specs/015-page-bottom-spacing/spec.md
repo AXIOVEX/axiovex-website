@@ -4,10 +4,12 @@
 
 **Created**: 2026-10-06
 
-**Status**: PROPOSED — **PENDING OWNER APPROVAL**. Wireframes
-revised first (WF-G2 page-foot rhythm; WF-G3, WF-G4, WF-01,
-WF-06); nothing is implemented until Tristen approves
-(tasks.md T001 gate).
+**Status**: APPROVED 2026-10-06 (T001 gate — Tristen:
+"Approve spec 015 wireframes — implement it") ·
+**IMPLEMENTED ON STAGING** (styles.v29.css; tasks
+T002–T004 verified by computed-style measurement).
+Promotion (T005) and closeout (T006) run at this
+spec's own promotion, per spec 010.
 
 **Input**: Tristen Pierson (owner), 2026-10-06: "also there is
 a lot of vertical empty space at the bottom of the pages too.
