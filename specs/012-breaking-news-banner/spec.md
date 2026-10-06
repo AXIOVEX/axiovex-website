@@ -6,10 +6,13 @@ staging flow in spec 010)
 
 **Created**: 2026-10-06
 
-**Status**: **Proposed — PENDING OWNER APPROVAL.** The wireframes
-(new global frame WF-G7) are drawn and marked pending; nothing is
-implemented. Implementation starts only when Tristen approves
-(tasks.md T001).
+**Status**: **Implemented on the staging branch 2026-10-06**
+(approved by Tristen 2026-10-06 12:55 EDT — tasks.md T001).
+The mechanism is built and verified locally end to end
+(T002–T006, see the completion record in tasks.md);
+`data/breaking.json` ships as `{ "active": null }`, so staging
+serves no banner. Promotion to production (tasks.md T007) and
+close-out (T008) remain, under spec 010's rules.
 
 **Direction (Tristen, 2026-10-06)**: "also add a breaking news
 headliong so when we get breaking news that is applicable to what

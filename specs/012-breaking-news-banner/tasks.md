@@ -21,13 +21,13 @@ implementation underway on the staging branch.**
 
 ## Implementation (starts only after T001)
 
-- [ ] T002 **Data file + validation (FR-001, FR-006)**: create
+- [x] T002 **Data file + validation (FR-001, FR-006)**: create
   `data/breaking.json` with `{ "active": null }`; implement
   the entry validation + activeness window in the generator
   (required fields, https URL, `expiresUtc` after
   `publishedUtc` and ≤ +72h; invalid → inactive + a build
   warning naming the defect; expired → dropped).
-- [ ] T003 **Marker contract + generator pass (FR-004)**:
+- [x] T003 **Marker contract + generator pass (FR-004)**:
   insert the `<!-- BREAKING:START -->` / `<!-- BREAKING:END -->`
   pair immediately after `<body id="top">` in all seven page
   sources (`index.html`, `contact/index.html`,
@@ -39,7 +39,7 @@ implementation underway on the staging branch.**
   documents, signals), replacer function not a `$`-string,
   missing markers → build warning naming the file. The
   `blog/post.html` shim is untouched (FR-004 exclusion).
-- [ ] T004 **Banner rendering + dismissal + styles (FR-003,
+- [x] T004 **Banner rendering + dismissal + styles (FR-003,
   FR-005, FR-007)**: the banner markup per plan.md (region
   with `aria-label="Breaking news"`, one link with the
   BREAKING lead-in + verbatim headline + source · ET time,
@@ -51,7 +51,7 @@ implementation underway on the staging branch.**
   the next versioned stylesheet bump (`styles.v27.css` if
   spec 011's v26 lands first), every reference repointed,
   prior file removed.
-- [ ] T005 **Publication path (FR-008)**: add
+- [x] T005 **Publication path (FR-008)**: add
   `'data/breaking.json'` to the push paths in
   `.github/workflows/site-sync.yml` so an entry commit
   triggers the build; confirm the hourly signals-sync build
@@ -59,7 +59,7 @@ implementation underway on the staging branch.**
 
 ## Verification + promotion
 
-- [ ] T006 **Stage + verify (FR-004–FR-007)**: land the work
+- [x] T006 **Stage + verify (FR-004–FR-007)**: land the work
   on the `staging` branch; commit a test entry to staging's
   `data/breaking.json` only (an old, real, applicable
   headline; `reason: "spec 012 staging test"`); verify at
@@ -95,3 +95,46 @@ implementation underway on the staging branch.**
   `~/workspace/your_files/axiovex-wireframes/`, record the
   change in this spec's status line, and check off these
   tasks with the completion record.
+
+## Completion record — T002–T006 (2026-10-06, staging branch)
+
+Implemented on `staging` (commits 78bf5d5, c24f05d, 4c7c2a4):
+`buildBreaking()` is the build's last pass; the BREAKING marker
+pair sits immediately after `<body id="top">` in all seven page
+sources; `data/breaking.json` ships as `{ "active": null }`;
+`breaking.v1.js` carries the per-entry dismissal;
+`styles.v27.css` (v26 removed, all references repointed) carries
+the WF-G7 strip styles; site-sync now triggers on
+`data/breaking.json`.
+
+Verification was run LOCALLY against the built site (Playwright,
+per the implementation brief) with a staging-only TEST entry
+(a real NIST headline from the Signals snapshot, verbatim;
+`reason: "TEST — staging verification only"`):
+
+- Inactive (`active: null`): every page's diff vs its pre-change
+  output is exactly the empty marker line + the v27 repoint —
+  no banner markup, no script, zero layout trace.
+- Active TEST entry: identical banner on all 8 served pages
+  (home, blog index, both articles, documents, signals,
+  contact, privacy) — verbatim headline, click target = the
+  entry URL, source + ET time, region semantics, dismiss button
+  outside the link; `blog/post.html` byte-unchanged and
+  banner-free (FR-004 exclusion). 83/83 browser checks passed.
+- Dismissal: hides immediately, persists across reload and
+  across page types, keyed by entry id; a NEW entry id re-shows
+  the banner (4/4 checks). Headline contrast measured 8.14:1
+  (#F7FCFF on #8C2B2B, ≥ 4.5:1 required). No horizontal
+  overflow at 1440 or 390px; the headline wraps untruncated at
+  390px (banner grows to 103px).
+- Fail-closed passes: expired entry dropped (build logs it);
+  expiry beyond the 72h cap dropped with a warning naming the
+  defect; malformed JSON dropped with a warning naming the
+  defect; the build completes in every case.
+- Regression: spec 011's Trends & outlook section and the home
+  Signals block verified intact with the banner active.
+- Final state: `data/breaking.json` reset to
+  `{ "active": null }`, rebuilt, working tree clean — the
+  branch ships NO active banner. The staging-URL pass at
+  staging.axiovexsystems.com rides the push of these commits
+  and is confirmed by the parent at promotion (T007).
