@@ -25,7 +25,8 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="styles.v24.css">
+  <link rel="stylesheet" href="styles.v25.css">
+  <link rel="stylesheet" href="signals-widget.v1.css">
   <link rel="alternate" type="application/rss+xml" title="Axiovex Systems — Blog" href="/feed.xml">
   <script type="application/ld+json">
   {
@@ -79,6 +80,7 @@
         <a href="#about">About</a>
         <a href="#faq">FAQ</a>
         <a href="/blog/">Blog</a>
+        <a href="/signals/">Signals</a>
         <a href="/documents/">Documents</a>
         <a href="/contact/" class="nav-cta">Contact</a>
       </nav>
@@ -91,6 +93,7 @@
       <a href="#about">About</a>
       <a href="#faq">FAQ</a>
       <a href="/blog/">Blog</a>
+      <a href="/signals/">Signals</a>
       <a href="/documents/">Documents</a>
       <a href="/contact/" class="mobile-cta">Contact</a>
     </nav>
@@ -201,36 +204,18 @@
     <section id="signals" class="section">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow">Signals</p>
+          <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>Axiovex Signals &mdash; Live</p>
           <h2>What we&rsquo;re watching.</h2>
+          <div class="pulse-strip">
+            <span class="ps-label">Michigan Pulse &middot; Aug 2026</span>
+            <span class="ps-dot">&middot;</span>
+            <span class="ps-stat"><b>586.7k</b> MI manufacturing employment</span>
+            <span class="ps-dot">&middot;</span>
+            <span class="ps-stat"><b>5.0%</b> MI unemployment</span>
+            <span class="ps-dot">&middot;</span>
+            <span class="ps-stat"><b>4.85M</b> MI labor force</span>
+          </div>
           <p class="section-lede">Michigan&rsquo;s numbers, and the field items that matter to the people who make things — from primary sources, refreshed automatically.</p>
-        </div>
-        <p class="pulse-kicker">Michigan Pulse &middot; U.S. Bureau of Labor Statistics &middot; August 2026</p>
-        <div class="pulse-grid">
-          <div class="pulse-tile">
-            <p class="pulse-label">Manufacturing employment</p>
-            <p class="pulse-value">586.7k</p>
-            <p class="pulse-delta">&#9650; +1.1k MoM</p>
-            <svg class="spark" viewBox="0 0 120 30" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3.0 8.4 L13.4 6.2 L23.7 12.2 L34.1 7.3 L44.5 27.0 L54.8 25.1 L65.2 22.7 L75.5 21.9 L85.9 10.3 L96.3 3.0 L106.6 6.0 L117.0 3.9"/></svg>
-          </div>
-          <div class="pulse-tile">
-            <p class="pulse-label">Unemployment rate</p>
-            <p class="pulse-value">5.0%</p>
-            <p class="pulse-delta">&#9650; +0.1 pts MoM</p>
-            <svg class="spark" viewBox="0 0 120 30" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3.0 27.0 M23.7 15.0 L34.1 15.0 L44.5 15.0 L54.8 15.0 L65.2 15.0 L75.5 15.0 L85.9 3.0 L96.3 15.0 L106.6 27.0 L117.0 15.0"/></svg>
-          </div>
-          <div class="pulse-tile">
-            <p class="pulse-label">Labor force</p>
-            <p class="pulse-value">4.85M</p>
-            <p class="pulse-delta">August 2026</p>
-            <svg class="spark" viewBox="0 0 120 30" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3.0 3.0 M23.7 3.8 L34.1 3.7 L44.5 4.8 L54.8 6.2 L65.2 8.5 L75.5 11.6 L85.9 14.6 L96.3 18.4 L106.6 23.0 L117.0 27.0"/></svg>
-          </div>
-          <div class="pulse-tile">
-            <p class="pulse-label">Total nonfarm employment</p>
-            <p class="pulse-value">4,505.9k</p>
-            <p class="pulse-delta">August 2026</p>
-            <svg class="spark" viewBox="0 0 120 30" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3.0 10.1 L13.4 8.2 L23.7 10.4 L34.1 13.4 L44.5 27.0 L54.8 24.1 L65.2 21.7 L75.5 15.6 L85.9 6.8 L96.3 3.0 L106.6 10.7 L117.0 9.8"/></svg>
-          </div>
         </div>
         <div class="signal-cards">
           <article class="card signal-card">
@@ -471,5 +456,7 @@
       els.forEach(function (el) { el.classList.add('rv'); io.observe(el); });
     })();
   </script>
+  <div id="signals-widget"></div>
+  <script src="signals-widget.v1.js" defer></script>
 </body>
 </html>

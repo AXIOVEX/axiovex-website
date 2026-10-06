@@ -1,0 +1,121 @@
+{
+  "updatedUtc": "2026-10-06T06:19:33.389Z",
+  "pulse": [
+    {
+      "label": "MI manufacturing",
+      "value": "586.7k",
+      "period": "August 2026"
+    },
+    {
+      "label": "MI unemployment",
+      "value": "5.0%",
+      "period": "August 2026"
+    },
+    {
+      "label": "MI labor force",
+      "value": "4.85M",
+      "period": "August 2026"
+    }
+  ],
+  "pulsePeriod": "August 2026",
+  "pulseSource": "U.S. Bureau of Labor Statistics",
+  "headlines": [
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Your AI strategy is only as good as its first move",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-05",
+      "url": "https://www.manufacturingdive.com/spons/your-ai-strategy-is-only-as-good-as-its-first-move/831591/"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "Made in America Needs More Than Investment. It Needs People.",
+      "source": "Automation Alley",
+      "date": "2026-10-05",
+      "url": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/"
+    },
+    {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Energy Department Announces $4.2 Billion Investment to Boost Nuclear Power and Help Lower Energy Costs in Pennsylvania and Ohio",
+      "source": "U.S. Department of Energy",
+      "date": "2026-10-05",
+      "url": "https://www.energy.gov/articles/energy-department-announces-42-billion-investment-boost-nuclear-power-and-help-lower"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "AI on the shop floor: Manufacturing’s physical AI moment",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-05",
+      "url": "https://www.manufacturingdive.com/spons/ai-on-the-shop-floor-manufacturings-physical-ai-moment/831740/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Iowa governor signs bill allowing $1.4B in tax incentives for steel project",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-05",
+      "url": "https://www.manufacturingdive.com/news/gov-reynolds-signs-bill-1b-tax-incentives-iowa-steel-mill-mesabi-metallics/832126/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Defense, data centers and AI driving private equity manufacturing investments: Report",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-05",
+      "url": "https://www.manufacturingdive.com/news/private-equity-us-manufacturing-defense-ai-data-centers-report-2026/832073/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Made in America Needs More Than Investment. It Needs People.",
+      "source": "Automation Alley",
+      "date": "2026-10-05",
+      "url": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/"
+    },
+    {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Energy Department Announces Alaska Railbelt Transmission Project to Receive Defense Production Act Funding, Securing Alaska Military Installations and Local Communities",
+      "source": "U.S. Department of Energy",
+      "date": "2026-10-05",
+      "url": "https://www.energy.gov/articles/energy-department-announces-alaska-railbelt-transmission-project-receive-defense"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Caterpillar and Ultium Cells make $1B facility investments",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-02",
+      "url": "https://www.manufacturingdive.com/news/caterpillar-ultium-cells-1b-facility-investments-avio-usa-genentech/831996/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Manufacturing industry adds 9K jobs in September",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-02",
+      "url": "https://www.manufacturingdive.com/news/bls-september-manufacturing-employment-situation-august-jolts-2026/831988/"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Armatura LLC Armatura One",
+      "source": "CISA",
+      "date": "2026-10-01",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
+    },
+    {
+      "lane": "ai-standards",
+      "laneLabel": "AI, standards & research",
+      "title": "NIST Awards More Than $1.7 Million to Support Cybersecurity Workforce Development Across 8 States",
+      "source": "NIST",
+      "date": "2026-09-18",
+      "url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development"
+    }
+  ],
+  "signalsUrl": "/signals/"
+}

@@ -22,7 +22,8 @@
   <meta name="twitter:description" content="{{DESCRIPTION}}">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/styles.v24.css">
+  <link rel="stylesheet" href="/styles.v25.css">
+  <link rel="stylesheet" href="/signals-widget.v1.css">
   <link rel="stylesheet" href="/blog/blog.v11.css">
   <link rel="alternate" type="application/rss+xml" title="Axiovex Systems — Blog" href="/feed.xml">
   <script type="application/ld+json">
@@ -50,6 +51,7 @@
         <a href="/#about">About</a>
         <a href="/#faq">FAQ</a>
         <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/signals/">Signals</a>
         <a href="/documents/">Documents</a>
         <a href="/contact/" class="nav-cta">Contact</a>
       </nav>
@@ -63,6 +65,7 @@
       <a href="/#about">About</a>
       <a href="/#faq">FAQ</a>
       <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/signals/">Signals</a>
       <a href="/documents/">Documents</a>
       <a href="/contact/" class="mobile-cta">Contact</a>
     </nav>
@@ -132,5 +135,7 @@
     </div>
   </footer>
   <script src="/blog/blog.v4.js"></script>
+  <div id="signals-widget" data-tags="{{TAGS_DATA}}"></div>
+  <script src="/signals-widget.v1.js" defer></script>
 </body>
 </html>

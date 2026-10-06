@@ -351,6 +351,7 @@ function buildBlog() {
       '{{DATE_ISO}}': post.date,
       '{{DATE_LONG}}': fmtDate(post.date),
       '{{TAGS_HTML}}': tagsHtml,
+      '{{TAGS_DATA}}': escAttr(post.tags.join(', ')),
       '{{SHARE_TOP}}': shareRow(post.title, post.url, true),
       '{{BODY_HTML}}': renderMarkdown(post.bodyMd),
       '{{MORE_HTML}}': moreHtml,
@@ -431,6 +432,40 @@ function pulseTilesHtml(pulse) {
     '        <div class="pulse-grid">\n' + tiles + '\n        </div>';
 }
 
+/* Spec 008 (FR-002, FR-005, FR-007): the three headline Pulse stats,
+   selected by BLS series id, shared by the home mini-strip and the
+   floating widget. Labels are the wireframe-approved short forms
+   (WF-01 / WF-12); display values are the snapshot's, verbatim. */
+const PULSE_HEADLINE_TILES = [
+  { id: 'SMU26000003000000001', stripLabel: 'MI manufacturing employment', widgetLabel: 'MI manufacturing' },
+  { id: 'LASST260000000000003', stripLabel: 'MI unemployment', widgetLabel: 'MI unemployment' },
+  { id: 'LASST260000000000006', stripLabel: 'MI labor force', widgetLabel: 'MI labor force' },
+];
+function pulseHeadlineStats(pulse) {
+  if (!pulse || !pulse.tiles) return [];
+  return PULSE_HEADLINE_TILES
+    .map(spec => {
+      const tile = pulse.tiles.find(t => t.id === spec.id);
+      return tile ? { ...spec, display: tile.display } : null;
+    })
+    .filter(Boolean);
+}
+const MONTH_ABBR = { January: 'Jan', February: 'Feb', March: 'Mar', April: 'Apr', May: 'May', June: 'Jun', July: 'Jul', August: 'Aug', September: 'Sep', October: 'Oct', November: 'Nov', December: 'Dec' };
+function shortMonth(period) {
+  const m = /^([A-Za-z]+)\s+(.*)$/.exec(String(period || ''));
+  return m && MONTH_ABBR[m[1]] ? MONTH_ABBR[m[1]] + ' ' + m[2] : String(period || '');
+}
+function pulseStripHtml(pulse) {
+  const stats = pulseHeadlineStats(pulse);
+  if (!stats.length) return '';
+  const parts = stats.map(s =>
+    '<span class="ps-stat"><b>' + esc(s.display) + '</b> ' + esc(s.stripLabel) + '</span>');
+  return '          <div class="pulse-strip">\n' +
+    '            <span class="ps-label">Michigan Pulse &middot; ' + esc(shortMonth(pulse.referenceMonth)) + '</span>' +
+    parts.map(p => '\n            <span class="ps-dot">&middot;</span>\n            ' + p).join('') + '\n' +
+    '          </div>\n';
+}
+
 function fmtUpdated(iso) {
   try {
     const d = new Date(iso);
@@ -492,11 +527,11 @@ function buildSignals(posts) {
     '    <section id="signals" class="section">\n' +
     '      <div class="container">\n' +
     '        <div class="section-head">\n' +
-    '          <p class="eyebrow">Signals</p>\n' +
+    '          <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>Axiovex Signals &mdash; Live</p>\n' +
     '          <h2>What we&rsquo;re watching.</h2>\n' +
+    pulseStripHtml(snap.pulse) +
     '          <p class="section-lede">Michigan&rsquo;s numbers, and the field items that matter to the people who make things — from primary sources, refreshed automatically.</p>\n' +
     '        </div>\n' +
-    pulseTilesHtml(snap.pulse) + '\n' +
     '        <div class="signal-cards">\n' + cards + '\n        </div>\n' +
     '        <p class="signals-more"><a class="explore" href="/signals/">SEE ALL SIGNALS &rarr;</a></p>\n' +
     '        <p class="signals-updated">' + updatedLine + ' Headline, source, and date only — every card links to the publisher.</p>\n' +
@@ -513,6 +548,44 @@ function buildSignals(posts) {
   } else {
     console.warn('signals: SIGNALS markers not found in index.html — home block skipped');
   }
+  // Spec 008 (FR-005): floating-widget data — a first-party JSON sliced
+  // from this same snapshot (headline Pulse stats by series id; the
+  // freshest items across lanes). Values verbatim from the snapshot;
+  // the widget renders nothing if this file is missing or empty.
+  const allWidgetItems = Object.entries(lanes)
+    .flatMap(([id, l]) => (l.items || []).map(i => ({
+      lane: id, laneLabel: l.title, title: i.title, source: i.source, date: i.date, url: i.link,
+    })))
+    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  // Guarantee every lane's freshest item is present (FR-006 reordering
+  // needs the tag-matched lane available even when it is not among the
+  // very freshest), then fill with the freshest overall, cap 12.
+  const picked = new Map();
+  for (const [id] of Object.entries(lanes)) {
+    const first = allWidgetItems.find(i => i.lane === id);
+    if (first) picked.set(first.lane + '|' + first.url, first);
+  }
+  for (const i of allWidgetItems) {
+    if (picked.size >= 12) break;
+    picked.set(i.lane + '|' + i.url, i);
+  }
+  const widgetHeadlines = [...picked.values()]
+    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
+    .slice(0, 12);
+  const widgetData = {
+    updatedUtc: snap.updatedUtc || null,
+    pulse: pulseHeadlineStats(snap.pulse).map(s => ({
+      label: s.widgetLabel,
+      value: s.display,
+      period: snap.pulse ? (snap.pulse.referenceMonth || null) : null,
+    })),
+    pulsePeriod: snap.pulse ? (snap.pulse.referenceMonth || null) : null,
+    pulseSource: snap.pulse ? (snap.pulse.source || null) : null,
+    headlines: widgetHeadlines,
+    signalsUrl: '/signals/',
+  };
+  writeFileSync(path.join(ROOT, 'signals-widget.json'), JSON.stringify(widgetData, null, 2) + '\n');
+
   const total = Object.values(lanes).reduce((n, l) => n + (l.items ? l.items.length : 0), 0);
   console.log('signals: rendered home block + /signals/ (' + total + ' items, pulse ' +
     (snap.pulse ? snap.pulse.referenceMonth : 'n/a') + ')');

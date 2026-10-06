@@ -21,7 +21,8 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   <link rel="apple-touch-icon" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/styles.v24.css">
+  <link rel="stylesheet" href="/styles.v25.css">
+  <link rel="stylesheet" href="/signals-widget.v1.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,6 +47,7 @@
         <a href="/#about">About</a>
         <a href="/#faq">FAQ</a>
         <a href="/blog/">Blog</a>
+        <a href="/signals/">Signals</a>
         <a href="/documents/">Documents</a>
         <a href="/contact/" class="nav-cta" aria-current="page">Contact</a>
       </nav>
@@ -59,6 +61,7 @@
       <a href="/#about">About</a>
       <a href="/#faq">FAQ</a>
       <a href="/blog/">Blog</a>
+      <a href="/signals/">Signals</a>
       <a href="/documents/">Documents</a>
       <a href="/contact/" class="mobile-cta" aria-current="page">Contact</a>
     </nav>
@@ -343,5 +346,7 @@
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
     })();
   </script>
+  <div id="signals-widget"></div>
+  <script src="/signals-widget.v1.js" defer></script>
 </body>
 </html>

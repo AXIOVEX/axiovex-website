@@ -924,3 +924,46 @@ h2 {
 @media (max-width: 480px) {
   .contact-submit { width: 100%; justify-self: stretch; text-align: center; }
 }
+
+/* ---------- Signals highlight (spec 008): live dot + Pulse mini-strip ---------- */
+.live-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+  margin-right: 10px;
+  vertical-align: 2px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .live-dot { animation: live-pulse 2.4s ease-in-out infinite; }
+  @keyframes live-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
+  }
+}
+
+.pulse-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 14px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 2px auto 24px;
+  padding: 10px 20px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--navy-2);
+}
+.ps-label {
+  color: var(--cyan);
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.ps-stat { color: var(--muted); font-size: 14px; }
+.ps-stat b { color: var(--ink); font-size: 15px; font-weight: 700; }
+.ps-dot { color: var(--faint); }
