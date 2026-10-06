@@ -4,12 +4,14 @@ Proposal package prepared 2026-10-06: wireframes revised
 (`docs/wireframes/wireframes.html` — WF-11 gains the Trends &
 outlook section: ticker strip, trend board, outlook board,
 education analytics block; `wireframes.md` revision log) and
-this spec package written. **PENDING OWNER APPROVAL — nothing
-below the gate is done, and nothing is implemented.**
+this spec package written. **APPROVED 2026-10-06 (T001) —
+implementation under way on the staging branch.**
 
 ## Gate
 
-- [ ] T001 **GATE — Owner approval of the wireframes (Tristen).**
+- [x] T001 **GATE — Owner approval of the wireframes (Tristen).**
+  **APPROVED — Tristen, 2026-10-06 12:38 EDT: "Approve spec 011
+  wireframes — implement it".**
   Scope of the approval: WF-11 revised (Trends & outlook section
   between the Pulse band and the lanes — ticker strip with its
   accessibility mechanics, trend board, outlook board with the
