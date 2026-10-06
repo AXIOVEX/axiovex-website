@@ -5,8 +5,8 @@ Proposal package prepared 2026-10-06: wireframes revised
 talent map + the WF-11 integration note;
 `docs/wireframes/wireframes.md` revision log) and this spec
 package written. **APPROVED 2026-10-06 (T001 below) —
-implementation complete on the staging branch
-2026-10-06; promotion (T009) open.**
+implemented on staging and PROMOTED TO PRODUCTION
+2026-10-06 (T009; merge `44ce7fc`). All tasks complete.**
 
 ## Gate
 
@@ -198,7 +198,7 @@ implementation complete on the staging branch
   (commit `116d4ee`). Selector switching is
   network-silent (no fetch/XHR in the section scripts —
   presentation-only class/attribute toggles).
-- [ ] T009 **Promotion + closeout**: merge `staging` →
+- [x] T009 **Promotion + closeout**: merge `staging` →
   `main` under spec 010 FR-004 (STOP if the diff carries
   staging-only `robots.txt`/`_headers` beyond the intended
   guard state), per the sequencing recorded at T001;
@@ -209,3 +209,52 @@ implementation complete on the staging branch
   `~/workspace/your_files/axiovex-wireframes/wireframes.html`
   re-synced byte-identical; monitoring state
   `website_commit` advanced; spec.md status updated.
+  **Done 2026-10-06.** Promotion merge `44ce7fc`
+  (`12c90ac..44ce7fc` pushed): staging tip `3055283` merged
+  into main; the merge auto-took staging's guard files (the
+  known pattern), so main's `robots.txt` was restored and
+  `_headers` removed from the unpushed merge —
+  **FR-004 guard proof: `git diff origin/main..HEAD --
+  robots.txt _headers` EMPTY**, and neither file appears
+  anywhere in the promotion diff. Main's spec 011
+  Amendment 3 docs package (`12c90ac`, pending owner
+  approval) rode through the merge untouched and
+  unimplemented. Sync back: commit `1e4bd3f` re-applied
+  the guard files on top of the promotion for staging;
+  post-sync diff `main..staging` = exactly `_headers` +
+  staging `robots.txt`. **Production audit repeated live
+  (axiovexsystems.com, all pass)**: `/signals/` serves
+  styles.v31.css; geography subsection inside the Detail
+  region after Education, before Go Deeper — QCEW
+  choropleth defaulting to Manufacturing with the
+  "private ownership" grain label on the block (D1),
+  Wayne County manufacturing table row 89,659 / LQ 1.50;
+  LAUS choropleth labeled August 2026 preliminary, Wayne
+  6.9%; IPEDS view lists all 160 committed institutions
+  (159 dots + the one zero-completions institution named
+  in its "Listed without a dot" note), UMich titled 17,020
+  completions; PSEO statewide flows + UMich spotlight
+  with the coverage label on the panel, medians $53,268 /
+  $78,284 / $106,836; "Not disclosed" state present in
+  suppressed QCEW cells (Keweenaw in Utilities spot-checked
+  live). Spec 013 regression clean: exactly 5 highlight
+  cards, insights summary intact, detail tables intact,
+  ticker/boards/lanes intact, BREAKING markers present
+  with zero banner markup, `data/breaking.json` still
+  `{"active":null}`. Home + article 200 on v31 (stylesheet
+  repoint only, widget intact); production `robots.txt` =
+  Allow version, no `x-robots-tag` on `/`; sitemap + feed
+  200; staging 200 with noindex header + staging robots
+  after sync. **Deviations D1–D7 from `sources.md` are
+  recorded and stand as implemented** — D1 stated
+  plainly: the QCEW sector grain is **private ownership**
+  because the source publishes no total-ownership sector
+  rows; the grain is labeled on the page itself. T007's
+  spec 007 FR-011 / blog-format §3B amendment + the
+  workforce SKILL.md map-refresh step shipped with this
+  spec. WF-13 labels + the WF-11 integration note flipped
+  to APPROVED · IMPLEMENTED + LIVE; review copy re-synced
+  byte-identical; monitoring `state.json` `website_commit`
+  advanced to `44ce7fc`. One by-design residue: the AEO
+  100 / Seobility 90 baseline confirmation rides the next
+  scheduled monitoring cycle.

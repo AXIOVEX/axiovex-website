@@ -27,7 +27,8 @@ This file is the index, the gate rule, and the revision log.
 - WF-12 Signals widget (added 2026-10-06, spec 008 — approved +
   implemented 2026-10-06)
 - WF-13 Michigan talent map (added 2026-10-06, spec 014 —
-  PENDING OWNER APPROVAL): the geography subsection of
+  APPROVED + IMPLEMENTED + LIVE 2026-10-06, promotion
+  merge `44ce7fc`): the geography subsection of
   WF-11's Detail region — QCEW employment-by-industry
   choropleth (committed-layer selector, not-disclosed
   state), LAUS unemployment choropleth, IPEDS institution
@@ -414,6 +415,27 @@ as accordion rows.
   region must exist first) is decided at the approval
   gate (spec 014 tasks.md T001). Nothing on the live
   site changes until Tristen approves.
+  **Closeout 2026-10-06:** approved by Tristen at the
+  spec 014 T001 gate (including the adjusted PSEO
+  design); implemented on staging as styles.v31.css —
+  traceability audit ALL PASS (17/17, specs/014
+  sources.md), Playwright 30/30 at 1440 / 834 / 390 —
+  with the recorded deviations D1–D7 standing as
+  implemented: **D1 — the QCEW sector grain is private
+  ownership, labeled on the page itself, because QCEW
+  publishes no total-ownership county × sector rows**;
+  promoted staging → main in merge `44ce7fc` (spec 010
+  FR-004 guard proof empty) and production-verified
+  live: Wayne manufacturing row 89,659 / LQ 1.50; LAUS
+  August 2026 preliminary (Wayne 6.9%); all 160 IPEDS
+  institutions listed (159 dots + the zero-completions
+  institution's "Listed without a dot" note); PSEO
+  spotlight medians $53,268 / $78,284 / $106,836 with
+  the coverage label on the panel; not-disclosed states
+  present (Keweenaw, Utilities) — specs/014 tasks T009.
+  Spec 007's FR-011 + blog-format §3B and the workforce
+  runbook's map-refresh step shipped with the
+  implementation (spec 014 T007).
 - **2026-10-06** — AMENDMENT (spec 013 **Amendment 1** —
   owner-directed 2026-10-06, after Tristen reviewed the
   live page with a screenshot: "fix repeat cards. cannot

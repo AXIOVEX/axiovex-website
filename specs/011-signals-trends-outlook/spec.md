@@ -499,7 +499,7 @@ This amendment supersedes **Amendment 2's placement
 paragraph (A2-1) only**; A2-2, A2-3, and the 13:30 EDT
 static/Signals-only placement decision otherwise stand.
 
-**Status:** **PENDING OWNER APPROVAL** — wireframe + spec
-package only; nothing implemented. Implementation runs
-through the spec 010 staging flow (tasks T011–T015) once
-the gate passes.
+**Status:** **APPROVED by Tristen 2026-10-06 (~15:21 EDT,
+"everything should be approved" — T011 gate passed)**;
+implementation in progress through the spec 010 staging
+flow (tasks T012–T015).
