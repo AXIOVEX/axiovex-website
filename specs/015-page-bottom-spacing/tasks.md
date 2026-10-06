@@ -8,8 +8,9 @@ wireframes (`docs/wireframes/wireframes.html` — WF-G2
 rhythm addition, WF-G3/WF-G4 spacing captions, WF-01 +
 WF-06 bottoms redrawn with before → after captions;
 `wireframes.md` revision log) and wrote this spec
-package. **PENDING OWNER APPROVAL — nothing below the
-gate is done, and nothing is implemented.**
+package. **APPROVED 2026-10-06 (T001); implemented on
+staging (T002–T004); promoted to production (T005,
+merge `4497704`) and closed out (T006) 2026-10-06.**
 
 ## Gate
 
@@ -85,17 +86,39 @@ gate is done, and nothing is implemented.**
   sanctioned main→staging merge (spec 015 package)
   left the main..staging diff at exactly the guard set
   (`_headers`, `robots.txt`).
-- [ ] T005 **Promotion + production verification
+- [x] T005 **Promotion + production verification
   (FR-006, FR-007)**: merge staging → main under spec
   010's rules (promotion diff checked for the FR-004
   hazard: no staging-only robots.txt / _headers);
   re-measure the production ending stacks after
   deploy; confirm the AEO/SEO baseline (100/90) on the
   next monitoring cycle.
-- [ ] T006 **Closeout**: wireframe revision log marked
+  **Done 2026-10-06:** promoted with spec 013 in merge
+  `4497704` under spec 010's rules — FR-004 hazard
+  checked (guard diff
+  `git diff origin/main..HEAD -- robots.txt _headers`
+  empty; production robots intact, no `_headers`).
+  Production values read from the served
+  `styles.v30.css` (the stylesheet chain reached v30
+  via spec 013's appended block; spec 015's values are
+  unchanged in it): `.section.section-end`
+  padding-bottom **48px**, `.cta-band` padding
+  **56px 0**, `.footer` padding **40px 0 32px** —
+  the approved page-foot rhythm, live. AEO/SEO
+  baseline (100/90) confirmation rides the next
+  monitoring cycle.
+- [x] T006 **Closeout**: wireframe revision log marked
   approved + implemented with the measured values;
   WF-G2/G3/G4 captions updated to the live values;
   review copy
   `~/workspace/your_files/axiovex-wireframes/wireframes.html`
   re-synced byte-identical; monitoring state
   `website_commit` advanced.
+  **Done 2026-10-06:** revision-log closeout recorded
+  in `wireframes.md`; WF-G2 page-foot, WF-G3, and
+  WF-G4 labels flipped to APPROVED · IMPLEMENTED +
+  LIVE in `wireframes.html`, as were the WF-01 and
+  WF-06 page-bottom notes; review copy re-synced
+  byte-identical (cmp verified); monitoring state
+  `website_commit` advanced to `4497704`; spec.md
+  status → implemented and live.
