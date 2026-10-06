@@ -582,7 +582,7 @@ function trendsHeadHtml() {
   return '        <div class="trends-head">\n' +
     '          <p class="eyebrow">Trends &amp; outlook</p>\n' +
     '          <h2>Where it&rsquo;s heading.</h2>\n' +
-    '          <p class="trends-frame">The Pulse series as a trend board, and published projections for what comes next. Every forward-looking figure belongs to the agency that published it — Axiovex publishes no forecasts of its own.</p>\n' +
+    '          <p class="trends-frame">The Pulse series as a trend board, published projections for what comes next, and Michigan education indicators. Every forward-looking figure belongs to the agency that published it — Axiovex publishes no forecasts of its own.</p>\n' +
     '        </div>';
 }
 
@@ -663,8 +663,11 @@ function outlookHtml(outlook) {
 function educationHtml(outlook) {
   const edu = outlook && outlook.education;
   if (!edu || !Array.isArray(edu.indicators) || !edu.indicators.length) return '';
+  // Percent indicators render at the precision the source
+  // publishes (CEPI rates carry two decimals, e.g. 84.01%) —
+  // never a rounded form of the stored value.
   const fmtVal = (ind, v) => ind.unit === 'percent'
-    ? v.toFixed(1) + '%'
+    ? String(parseFloat(v.toFixed(2))) + '%'
     : (Number.isInteger(v) ? v.toLocaleString('en-US') : v.toFixed(1));
   const rows = edu.indicators.map(ind => {
     const src = ' <span class="edu-source">' + esc(String(ind.source || '').toUpperCase()) + '</span>';
