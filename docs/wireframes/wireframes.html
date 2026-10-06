@@ -254,6 +254,54 @@
     <li><strong>Full treatment at WF-12:</strong> the expanded panel, the Michigan Pulse row, headline relevance by page, and the mobile behavior.</li>
   </ul>
 
+  <h2 class="wf-title"><span class="wf-id">WF-G7 · Global — Breaking news banner</span>NEW 2026-10-06 (spec 012 — PENDING OWNER APPROVAL, not approved, not implemented)</h2>
+  <p class="wf-sub">A full-width alert strip that appears <b>above the sticky nav (WF-G1) on every page</b> — home, blog index, every article, Documents, Signals, Contact, Privacy — when, and only when, a curator has placed a breaking item in <span style="color:var(--muted)">data/breaking.json</span>. The whole strip is one link to the source story; a separate dismiss button (not part of the link) hides it for that entry only. When no entry is active, the banner renders nothing at all — <b>zero layout trace</b>. The headline is drawn as a placeholder: a wireframe that invented a &ldquo;breaking&rdquo; headline would itself be making a news claim.</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">all pages · only while an entry is active</span></div>
+    <div class="stage">
+      <div class="blk">
+        <span class="tag">Active banner · desktop · above the nav; scrolls away with the page (the nav still sticks)</span>
+        <div style="position:relative;background:#8C2B2B;color:#F7FCFF;padding:11px 48px 11px 16px;font-size:14.5px;line-height:1.45">
+          <span style="font-weight:800;letter-spacing:.14em;margin-right:10px">BREAKING</span>
+          <span style="text-decoration:underline;text-underline-offset:3px">&lsaquo;Publisher&rsquo;s headline, verbatim — placeholder in this wireframe&rsaquo;</span>
+          <span style="opacity:.75;white-space:nowrap"> · NIST · Oct 6, 2026 at 2:41 PM ET</span>
+          <span style="position:absolute;right:10px;top:50%;transform:translateY(-50%);border:1px solid rgba(247,252,255,.55);border-radius:6px;padding:1px 8px;font-size:13px">&#10005;</span>
+        </div>
+        <div class="navmock">
+          <span class="logo-ph">◆ AXIOVEX <span style="color:var(--faint);font-weight:400">Systems</span></span>
+          <div class="navlinks"><span>Home</span><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Signals</span><span>Documents ↗</span><span class="cta">Contact</span></div>
+        </div>
+        <p style="color:var(--faint);font-size:13.5px;margin-top:10px">Anatomy: <b style="color:var(--muted)">BREAKING</b> lead-in · the publisher&rsquo;s headline <b style="color:var(--muted)">word for word</b> (underlined here to show it is the link) · source name + published time (ET). Everything except the &#10005; is one link — clicking anywhere on the strip opens the source story. The &#10005; is a real <span style="color:var(--muted)">&lt;button&gt;</span> beside the link, never inside it, with the accessible name &ldquo;Dismiss breaking news banner&rdquo;. The source name and time in the mock are anatomy illustration, not a story.</p>
+      </div>
+      <div class="blk">
+        <span class="tag">Active banner · mobile (390px) · headline wraps, &#10005; stays reachable</span>
+        <div style="position:relative;background:#8C2B2B;color:#F7FCFF;padding:11px 48px 11px 16px;font-size:14px;line-height:1.45;max-width:390px">
+          <span style="font-weight:800;letter-spacing:.14em;margin-right:10px">BREAKING</span>
+          <span style="text-decoration:underline;text-underline-offset:3px">&lsaquo;Publisher&rsquo;s headline, verbatim&rsaquo;</span>
+          <span style="opacity:.75"> · NIST · 2:41 PM ET</span>
+          <span style="position:absolute;right:10px;top:10px;border:1px solid rgba(247,252,255,.55);border-radius:6px;padding:1px 8px;font-size:13px">&#10005;</span>
+        </div>
+        <p style="color:var(--faint);font-size:13.5px;margin-top:10px">No truncation of the headline and no shrunken tap target for the &#10005; — a breaking item stays fully readable at 390px; the strip simply grows taller.</p>
+      </div>
+      <div class="blk">
+        <span class="tag">No active entry · the normal state of the site</span>
+        <div class="navmock">
+          <span class="logo-ph">◆ AXIOVEX <span style="color:var(--faint);font-weight:400">Systems</span></span>
+          <div class="navlinks"><span>Home</span><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Signals</span><span>Documents ↗</span><span class="cta">Contact</span></div>
+        </div>
+        <p style="color:var(--faint);font-size:13.5px;margin-top:10px">Nothing renders above the nav — no empty strip, no placeholder space, no script tag. The banner&rsquo;s absence is total, which is what makes its presence mean something.</p>
+      </div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>Curated, never auto-triggered.</strong> An entry exists only because a person put it in <span style="color:var(--muted)">data/breaking.json</span> and committed it — Tristen, or an agent acting under the monitoring runbook — with the reason it applies to Axiovex&rsquo;s audience recorded in the file (not displayed). The commit is the audit trail. No keyword trigger promotes a feed item to the banner in v1: a public breaking banner is a claim, and auto-triggers cry wolf.</li>
+    <li><strong>Verbatim, like Signals.</strong> The headline is the publisher&rsquo;s own words, shown with the source name and published time — the same display rule as the Signals lanes (spec 004). Axiovex adds no summary, no opinion, no rewording, and no urgency of its own; &ldquo;breaking&rdquo; is the curator&rsquo;s recorded judgment, not a style.</li>
+    <li><strong>72-hour maximum life.</strong> Every entry carries an expiry at most 72 hours after the story&rsquo;s published time; the build drops an expired entry on its own. Nothing rides the banner indefinitely.</li>
+    <li><strong>Dismissal is per entry.</strong> The &#10005; hides the banner and the browser remembers the choice keyed by that entry&rsquo;s id — so the next, different breaking item shows again. Dismissing is not unsubscribing.</li>
+    <li><strong>Deliberately off-palette.</strong> The strip is deep red (<span style="color:var(--muted)">#8C2B2B</span> family) with near-white text — the only off-palette element on the site, used nowhere else. An alert has to read as an alert at a glance; brand cyan would make it look like ordinary site furniture and train visitors to ignore it. This is a decision, not drift.</li>
+    <li><strong>Built in, never fetched.</strong> The banner is injected by the site generator at build time from the committed data file (spec 004 architecture) — no client-side fetching, no third-party runtime calls. It is first in reading order: a <span style="color:var(--muted)">role=&quot;region&quot;</span> labeled &ldquo;Breaking news&rdquo;, a visible focus state on the link and the button, and no motion of any kind.</li>
+  </ul>
+
   <!-- ================= HOME ================= -->
   <h2 class="wf-title"><span class="wf-id">WF-01 · Home — Desktop</span>axiovexsystems.com/</h2>
   <p class="wf-sub">The home flow, in Axiovex order: <b>REVISED 2026-10-05 (approved, live):</b> a new Signals + Michigan Pulse block sits between Evidence and About — Pulse tiles, three latest signal cards, and the path to the full Signals page (WF-11). <b>REVISED 2026-10-06 (spec 008 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE (commit ab0e4e5)):</b> the block is highlighted — the eyebrow becomes &ldquo;AXIOVEX SIGNALS — LIVE&rdquo; with a live-dot, and a Michigan Pulse mini-strip (the three headline stats, period-labeled, build-generated) sits directly under the heading; the full Pulse band remains on WF-11 only. <b>REVISED 2026-10-06 (spec 009 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE (commit 11873b1)):</b> the home nav drawn on this frame gains <b>Home</b> as its first item, shown current — see WF-G1 variant (a).</p>
@@ -840,6 +888,7 @@
       <li>WF-G5 — Numbered service cards with accent bar + EXPLORE</li>
       <li>WF-G1 (revised, spec 008) — Signals link after Blog, in the desktop row and the hamburger panel</li>
       <li>WF-G6 / WF-12 (new, spec 008) — Signals floating widget: collapsed live-dot pill + expanded panel (Pulse row, 3 freshest headlines, All signals), every page except /signals/</li>
+      <li>WF-G7 (new, spec 012 — PENDING OWNER APPROVAL) — Breaking news banner: curated deep-red strip above the nav on every page; whole strip links to the source story; verbatim headline + source + published time; dismiss remembered per entry; 72-hour max life; zero layout trace when no entry is active</li>
       <li>WF-01 — Home (desktop): hero → strata → method → services → proof → about → FAQ → CTA → footer</li>
       <li>WF-01 (revised, spec 008) — Signals block highlighted: “AXIOVEX SIGNALS — LIVE” eyebrow + Michigan Pulse mini-strip under the heading</li>
       <li>WF-02 — Home (mobile): stacked, full-width CTAs</li>
