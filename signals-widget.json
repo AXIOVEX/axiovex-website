@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-06T06:19:33.389Z",
+  "updatedUtc": "2026-10-06T14:11:26.509Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -21,6 +21,14 @@
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "New Mexico Institute of Mining and Technology et.al, Notice of Decision on Application for Duty-Free Entry of Scientific Instruments",
+      "source": "Federal Register",
+      "date": "2026-10-06",
+      "url": "https://www.federalregister.gov/documents/2026/10/06/2026-20490/new-mexico-institute-of-mining-and-technology-etal-notice-of-decision-on-application-for-duty-free"
+    },
+    {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
       "title": "Your AI strategy is only as good as its first move",
@@ -35,14 +43,6 @@
       "source": "Automation Alley",
       "date": "2026-10-05",
       "url": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Energy Department Announces $4.2 Billion Investment to Boost Nuclear Power and Help Lower Energy Costs in Pennsylvania and Ohio",
-      "source": "U.S. Department of Energy",
-      "date": "2026-10-05",
-      "url": "https://www.energy.gov/articles/energy-department-announces-42-billion-investment-boost-nuclear-power-and-help-lower"
     },
     {
       "lane": "manufacturing",
@@ -63,7 +63,7 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Defense, data centers and AI driving private equity manufacturing investments: Report",
+      "title": "Defense, data centers and AI driving private equity manufacturing investments",
       "source": "Manufacturing Dive",
       "date": "2026-10-05",
       "url": "https://www.manufacturingdive.com/news/private-equity-us-manufacturing-defense-ai-data-centers-report-2026/832073/"
@@ -75,6 +75,14 @@
       "source": "Automation Alley",
       "date": "2026-10-05",
       "url": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/"
+    },
+    {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Energy Department Announces $4.2 Billion Investment to Boost Nuclear Power and Help Lower Energy Costs in Pennsylvania and Ohio",
+      "source": "U.S. Department of Energy",
+      "date": "2026-10-05",
+      "url": "https://www.energy.gov/articles/energy-department-announces-42-billion-investment-boost-nuclear-power-and-help-lower"
     },
     {
       "lane": "funding-policy",
@@ -91,14 +99,6 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-02",
       "url": "https://www.manufacturingdive.com/news/caterpillar-ultium-cells-1b-facility-investments-avio-usa-genentech/831996/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Manufacturing industry adds 9K jobs in September",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-02",
-      "url": "https://www.manufacturingdive.com/news/bls-september-manufacturing-employment-situation-august-jolts-2026/831988/"
     },
     {
       "lane": "ot-security",

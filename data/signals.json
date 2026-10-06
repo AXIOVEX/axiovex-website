@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-06T06:19:33.389Z",
+  "updatedUtc": "2026-10-06T14:11:26.509Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -29,7 +29,7 @@
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "Defense, data centers and AI driving private equity manufacturing investments: Report",
+          "title": "Defense, data centers and AI driving private equity manufacturing investments",
           "link": "https://www.manufacturingdive.com/news/private-equity-us-manufacturing-defense-ai-data-centers-report-2026/832073/",
           "date": "2026-10-05"
         },
@@ -240,6 +240,13 @@
       "title": "Funding & policy",
       "items": [
         {
+          "source": "Federal Register",
+          "sourceId": "federal-register",
+          "title": "New Mexico Institute of Mining and Technology et.al, Notice of Decision on Application for Duty-Free Entry of Scientific Instruments",
+          "link": "https://www.federalregister.gov/documents/2026/10/06/2026-20490/new-mexico-institute-of-mining-and-technology-etal-notice-of-decision-on-application-for-duty-free",
+          "date": "2026-10-06"
+        },
+        {
           "source": "U.S. Department of Energy",
           "sourceId": "doe",
           "title": "Energy Department Announces $4.2 Billion Investment to Boost Nuclear Power and Help Lower Energy Costs in Pennsylvania and Ohio",
@@ -287,13 +294,6 @@
           "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
           "link": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
           "date": "2026-09-17"
-        },
-        {
-          "source": "NIST",
-          "sourceId": "nist",
-          "title": "NIST Awards More Than $30 Million for MEP Centers in 11 States and Puerto Rico",
-          "link": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-30-million-mep-centers-11-states-and-puerto-rico",
-          "date": "2026-09-15"
         }
       ]
     }
