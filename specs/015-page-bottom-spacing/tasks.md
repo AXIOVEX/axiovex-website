@@ -33,20 +33,29 @@ gate is done, and nothing is implemented.**
 
 ## Implementation (starts only after T001)
 
-- [ ] T002 **Stylesheet (FR-001, FR-006)**: in the next
+- [x] T002 **Stylesheet (FR-001, FR-006)**: in the next
   versioned stylesheet on the staging chain (after
   styles.v28.css), set `.cta-band { padding: 56px 0 }`
   (44px at ≤820px), `.footer { padding: 40px 0 32px }`,
   and add `.section.section-end { padding-bottom: 48px }`
   (40px at ≤820px). Repoint every reference; remove the
-  prior stylesheet file.
-- [ ] T003 **Final-section markers (FR-002)**: add the
+  prior stylesheet file. **Done on staging:**
+  `styles.v29.css` created from v28 with exactly those
+  three changes, v28 removed, every shell/template
+  reference repointed (commit `fd2fcfb`).
+- [x] T003 **Final-section markers (FR-002)**: add the
   `section-end` class to the final content section in
   `index.html` (FAQ section), `contact/index.html`,
   `privacy/index.html`, and the blog-index, documents,
   and signals templates. No marker on article pages
   (their 24px stands, FR-002). No other markup change.
-- [ ] T004 **Rebuild + staging verification (FR-007)**:
+  **Done on staging:** all six markers added — home FAQ
+  (`#faq`), contact form section, privacy prose section,
+  blog-index list section, documents cards section,
+  signals content section (commit `fd2fcfb`). Home diff
+  vs pre-change is exactly the stylesheet repoint + the
+  FAQ marker.
+- [x] T004 **Rebuild + staging verification (FR-007)**:
   rebuild via `scripts/build-site.mjs`; on staging,
   measure the computed ending stack of all seven page
   types at 1440px and 390px against the rhythm table
@@ -55,6 +64,27 @@ gate is done, and nothing is implemented.**
   only); regression-measure mid-page home gaps, the
   spec 003 head values, the signals top values, footer
   internals, and tap targets — all unchanged.
+  **Verified on the staging build (Playwright, computed
+  styles, 1440 + 390):** ending stacks — band pages
+  (home, documents, signals, privacy) **200px / 168px**;
+  blog index **224px / 192px** (incl. the frozen 24px
+  list padding); article **176px / 152px** (its own
+  24px unchanged at both widths); contact **88px /
+  80px**. No horizontal overflow on any page at either
+  width. Regression: home mid-page sections still
+  76px / 60px padding-bottom (only the marked FAQ
+  section is 48 / 40); spec 003 head margins 36px
+  (documents, privacy), signals head 24px (Amendment 2
+  value); signals tape present above the page head with
+  exactly its 16px offset, 4 Pulse tiles, sparkline
+  percentages ▲ +0.4% / ▲ +2.0% / ▼ −3.0% / ▲ +0.0%,
+  MCDA outlook group and the 84.01% education figure
+  intact, lanes intact; contact form + Turnstile script
+  present; footer internals unchanged (grid gap 32px,
+  bottom-row padding-top 20px). Staging sync note: the
+  sanctioned main→staging merge (spec 015 package)
+  left the main..staging diff at exactly the guard set
+  (`_headers`, `robots.txt`).
 - [ ] T005 **Promotion + production verification
   (FR-006, FR-007)**: merge staging → main under spec
   010's rules (promotion diff checked for the FR-004
