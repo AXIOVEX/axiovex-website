@@ -2,7 +2,9 @@
 
 **Status: approved by owner direction 2026-10-06; T001 (this
 plan's branch + spec prep) executes immediately.** The Pages
-project work (T002) is a separate parent task in the browser —
+project work (T002) is a separate parent task — executed via
+the Cloudflare API under the API-first directive (the browser
+route in the original text was superseded before execution) —
 this plan specifies exactly what it must create so the repo side
 and the Cloudflare side meet.
 
@@ -14,7 +16,7 @@ AXIOVEX/axiovex-website
 └── staging  ──► Pages: axiovex-website-staging  ──► staging.axiovexsystems.com
 ```
 
-## The staging Pages project (T002 — parent, browser)
+## The staging Pages project (T002 — parent; executed via the Cloudflare API)
 
 Create in the **Axiovex** Cloudflare account
 (`2f522086aed39057a5c3cc467855a8c9`), connected to

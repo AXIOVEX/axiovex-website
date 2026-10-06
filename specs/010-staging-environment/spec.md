@@ -11,8 +11,12 @@
 staging before production" — recorded below as this spec's
 approval). Spec package + staging branch prepared 2026-10-06
 (tasks.md T001). The Cloudflare Pages project, custom domain, and
-project variables are T002 (parent task, browser); staging
-verification is T003. This spec covers axiovexsystems.com →
+project variables are T002 (parent task — executed via the
+Cloudflare API under the API-first directive, not the
+browser); staging verification is T003. **Close-out
+2026-10-06: T001–T005 all complete (tasks.md) — staging is
+live, and the promotion flow was exercised end to end by the
+specs 011 + 012 promotion (merge `89c65c1`).** This spec covers axiovexsystems.com →
 staging.axiovexsystems.com; the Rockeagle sites' staging domains
 are handled in that project, under the same pattern.
 
