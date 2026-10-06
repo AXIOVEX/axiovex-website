@@ -13,7 +13,7 @@ gate is done, and nothing is implemented.**
 
 ## Gate
 
-- [ ] T001 **GATE — Owner approval of the wireframes
+- [x] T001 **GATE — Owner approval of the wireframes
   (Tristen).** Scope of the approval: WF-G2 as revised
   by spec 015 (the page-foot rhythm: final content
   section padding-bottom 48px, CTA band padding 56px
@@ -26,6 +26,10 @@ gate is done, and nothing is implemented.**
   the live pages, or deployed until Tristen approves;
   if he requests changes, the wireframes are revised
   and re-presented first (constitution §III).
+  **APPROVED — Tristen Pierson (owner), 2026-10-06
+  13:39 EDT: "Approve spec 015 wireframes — implement
+  it".** Implementation proceeds on the staging branch
+  per spec 010.
 
 ## Implementation (starts only after T001)
 

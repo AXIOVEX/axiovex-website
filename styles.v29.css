@@ -231,6 +231,10 @@ h1 {
 
 /* ---------- Sections ---------- */
 .section { padding: 76px 0; }
+/* Page-foot rhythm (spec 015, WF-G2): the final content section of each
+   page carries .section-end and settles at 48px below; mid-page sections
+   keep the shared 76px. */
+.section.section-end { padding-bottom: 48px; }
 /* Keep anchored sections clear of the sticky nav; #top (on body) scrolls to the true top. */
 section[id] { scroll-margin-top: 94px; }
 .faq-item { scroll-margin-top: 94px; }
@@ -386,7 +390,7 @@ h2 {
 /* ---------- Footer (WF-G4: three columns + bottom row) ---------- */
 .footer {
   border-top: 1px solid rgba(247, 252, 255, 0.08);
-  padding: 56px 0 32px;
+  padding: 40px 0 32px;
 }
 
 .footer-grid {
@@ -544,7 +548,7 @@ h2 {
 .cta-band {
   background: var(--navy-2);
   border-top: 1px solid var(--hairline);
-  padding: 76px 0;
+  padding: 56px 0;
   text-align: center;
 }
 .cta-band .section-lede {
@@ -661,7 +665,8 @@ h2 {
 @media (max-width: 820px) {
   .hero { padding: 64px 0 60px; }
   .section { padding: 60px 0; }
-  .cta-band { padding: 60px 0; }
+  .section.section-end { padding-bottom: 40px; }
+  .cta-band { padding: 44px 0; }
 }
 
 /* Tablet + below (<=1240px): nav collapses behind the hamburger (WF-G1) */
