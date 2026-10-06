@@ -355,3 +355,13 @@ computed, never hand-typed (FR-005c); a series with fewer than
 two non-null points renders "—", matching the delta behavior.
 
 The sources & method note is unchanged by this amendment.
+
+**Status (staging):** implemented on the staging branch
+2026-10-06 (commit `cb00d9c`; tasks T009–T010, verification
+record in tasks.md). The tape renders directly under the
+header; the condensed spacing measures exactly per the A2-2
+table; the four sparkline window % values render as drawn
+(▲ +0.4% / ▲ +2.0% / ▼ −3.0% / ▲ +0.0%), each recomputed from
+the snapshot with zero mismatches. Ships in `styles.v28.css`.
+Promotion to production follows the spec 010 flow together
+with spec 011's main body and spec 012.

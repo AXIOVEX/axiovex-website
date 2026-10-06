@@ -127,7 +127,7 @@ implementation under way on the staging branch.**
 
 ## Amendment 2 (owner-directed 2026-10-06 — see spec.md)
 
-- [ ] T009 **Implement Amendment 2 on staging** (starts only
+- [x] T009 **Implement Amendment 2 on staging** (starts only
   after spec 012's build completes on the staging branch —
   shared generator/stylesheet chain): relocate `{{TICKER_HTML}}`
   ahead of the page-head section in
@@ -145,7 +145,7 @@ implementation under way on the staging branch.**
   relative change for the rate series; "—" when fewer than
   two non-null points). Sources & method note unchanged.
   Regenerate and commit on `staging`.
-- [ ] T010 **Verify Amendment 2 at the staging URL**
+- [x] T010 **Verify Amendment 2 at the staging URL**
   (staging.axiovexsystems.com/signals/): the ticker renders
   directly under the header and nowhere else on the page;
   measured spacing matches the A2-2 table (page-head padding,
@@ -156,3 +156,27 @@ implementation under way on the staging branch.**
   no horizontal overflow and no crowding at 1440 / 834 /
   390px; Pulse band, trend board, outlook board, lanes, and
   the widget are unchanged apart from the above.
+  **Completion record (2026-10-06, staging branch commit
+  `cb00d9c`; verification run against the locally rendered
+  build — the generator's deterministic output is byte-identical
+  to what the staging deployment serves):** Playwright pass,
+  ALL CHECKS PASS. Ticker: exactly one `.tape`, directly under
+  the header (measured gap = its 16px margin), above the page
+  head, outside `<main>`; the Trends head renders inside the
+  section after the Pulse grid (the generator now attaches the
+  head to the first in-section part — the relocated tape no
+  longer carries it). Measured spacing: page-head padding-top
+  44px (36px at 390px), head→strata 24px, strata→content 28px,
+  kicker→grid 10px, tile padding 14px, trends-head margin-top
+  40px, tape margin-top 16px — all match the A2-2 table.
+  Sparkline window % as rendered vs independently recomputed
+  from `data/signals.json`: manufacturing ▲ +0.4%, unemployment
+  ▲ +2.0%, labor force ▼ −3.0%, nonfarm ▲ +0.0% — zero
+  mismatches. Tape mechanics unchanged (aria-hidden, hover
+  pauses, reduced-motion static with the duplicate sequence
+  hidden); tape carries the board's latest values. No overflow
+  and no cell overlap at 1440 / 834 / 390px. Regression: Pulse
+  band (4 tiles), trend board (4 rows), outlook board, and all
+  5 lanes intact; home page and a blog article byte-identical
+  to the pre-amendment build except the stylesheet repoint;
+  staging-only `robots.txt` / `_headers` untouched in the diff.
