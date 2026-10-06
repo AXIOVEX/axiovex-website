@@ -4,13 +4,19 @@ Proposal package prepared 2026-10-06: wireframes revised
 (`docs/wireframes/wireframes.html` — NEW WF-13 Michigan
 talent map + the WF-11 integration note;
 `docs/wireframes/wireframes.md` revision log) and this spec
-package written. **PENDING OWNER APPROVAL — nothing below
-the gate is done, and nothing is implemented.**
+package written. **APPROVED 2026-10-06 (T001 below) —
+implementation under way on the staging branch.**
 
 ## Gate
 
-- [ ] T001 **GATE — Owner approval of the wireframes
-  (Tristen).** Scope of the approval: WF-13 as drawn (the
+- [x] T001 **GATE — Owner approval of the wireframes
+  (Tristen).** **APPROVED 2026-10-06** — Tristen:
+  "Approve spec 014 wireframes — implement it", including
+  the adjusted PSEO pipeline design (statewide flows +
+  labeled UMich spotlight). Sequencing recorded at the
+  gate: spec 013 (incl. its Amendment 1) promoted to
+  production first; spec 014 implements on staging on top
+  of the promoted Detail region. Scope of the approval: WF-13 as drawn (the
   geography subsection inside spec 013's Detail region: the
   QCEW industry choropleth with its selector, the LAUS
   unemployment choropleth, the IPEDS institution map, and

@@ -7,11 +7,11 @@ on top of spec 013's Detail region)
 
 **Created**: 2026-10-06
 
-**Status**: **Proposed — PENDING OWNER APPROVAL.** The
+**Status**: **Approved 2026-10-06** (Tristen, at the
+tasks.md T001 gate — including the adjusted PSEO design).
+Implementation in progress on the staging branch; the
 wireframe (new frame WF-13, plus an integration note on
-WF-11) is drawn and marked pending; nothing is implemented.
-Implementation starts only when Tristen approves
-(tasks.md T001).
+WF-11) remains the design of record.
 
 **Direction (Tristen, 2026-10-06)**: "also create geographic
 heap maps showing insite on education and employment related
