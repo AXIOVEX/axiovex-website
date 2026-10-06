@@ -136,7 +136,8 @@ as accordion rows.
   implemented the same day — commit 11873b1; live-verified (served
   `/` carries Home first in both menus, with `aria-current`).
 - **2026-10-06** — REVISION PROPOSED (spec 011-signals-trends-outlook) —
-  **PENDING OWNER APPROVAL — NOT approved, NOT implemented**: WF-11
+  **APPROVED 2026-10-06 · IMPLEMENTED + LIVE** (staging, then
+  promotion merge `89c65c1`): WF-11
   gains a **Trends & outlook** section between the Michigan Pulse
   band and the five lanes: (1) a market-style **ticker strip** —
   decorative echo of the board (Pulse series, latest + MoM),
@@ -161,8 +162,15 @@ as accordion rows.
   No invented or model-generated predictions anywhere; the page's
   "signals, not forecasts" restraint is preserved. Nothing on the
   live site changes until Tristen approves.
+  **Closeout 2026-10-06:** approved by Tristen (12:38 EDT);
+  implemented on staging; the Michigan + education sections
+  were restored after live-browser verification of the sources;
+  promoted to production in merge `89c65c1` and
+  production-verified (figure audit clean) — specs/011 tasks
+  T007/T008.
 - **2026-10-06** — REVISION PROPOSED (spec 012-breaking-news-banner) —
-  **PENDING OWNER APPROVAL — NOT approved, NOT implemented**: NEW
+  **APPROVED 2026-10-06 · IMPLEMENTED + LIVE** (promotion merge
+  `89c65c1`): NEW
   **WF-G7 Breaking news banner** (global). A full-width deep-red
   strip above the sticky nav on every page, present only while a
   curated entry is active in `data/breaking.json`. Curated, never
@@ -184,6 +192,13 @@ as accordion rows.
   fetching); `role="region"` labeled "Breaking news", first in
   reading order, visible focus states, no motion. Nothing on the
   live site changes until Tristen approves.
+  **Closeout 2026-10-06:** approved by Tristen (12:55 EDT);
+  implemented and verified on staging (83/83 checks);
+  `data/breaking.json` promoted as `{ "active": null }`;
+  production serves the mechanism with zero trace — specs/012
+  tasks T007/T008. Amendment 1 (hourly detection check +
+  retention policy) followed the same day; the
+  `website-breaking-news-check` job is live.
 - **2026-10-06** — AMENDMENT (spec 011-signals-trends-outlook,
   Amendment 2) — **OWNER-DIRECTED 2026-10-06 (13:03–13:04 EDT);
   wireframes revised before implementation**: reviewing spec 011
@@ -216,6 +231,14 @@ as accordion rows.
   ▲ +0.0%. Implementation is spec 011 tasks T009–T010, on staging
   after spec 012's in-flight build (shared generator/stylesheet
   chain), promoted under spec 010's rules.
+  **Closeout 2026-10-06:** implemented on staging (tasks
+  T009/T010 — spacing measured exactly per the A2-2 table,
+  sparkline % audit clean) and promoted with spec 011 in merge
+  `89c65c1`; production-verified. **Ticker placement decision
+  (owner, 2026-10-06 13:30 EDT):** the ticker stays static at
+  the top of /signals/ and Signals-only — sticky-on-scroll and
+  site-wide placements were considered and declined; the
+  floating widget remains the site-wide carrier.
 - **2026-10-06** — REVISION PROPOSED (spec
   013-signals-highlights-detail) — **PENDING OWNER APPROVAL —
   NOT approved, NOT implemented**: WF-11 gains two regions.
