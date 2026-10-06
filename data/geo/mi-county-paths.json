@@ -5,6 +5,14 @@
   "vintage": "us-atlas 3.0.1 · counties-10m (most detailed tier; no further simplification)",
   "retrievedOn": "2026-10-06",
   "viewBox": "0 0 640 721",
+  "projection": {
+    "note": "Equirectangular fit used for the paths above; project published lat/lon as x = PAD + (lon * cos(44deg) - minX) * k, y = PAD + (-lat - minY) * k.",
+    "cosLatDeg": 44,
+    "k": 109.81556178871311,
+    "minX": -65.04011742560968,
+    "minY": -48.190593622126215,
+    "pad": 4
+  },
   "counties": [
     {
       "fips": "26001",
