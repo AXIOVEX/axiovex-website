@@ -6,10 +6,11 @@ staging flow in spec 010)
 
 **Created**: 2026-10-06
 
-**Status**: **Proposed — PENDING OWNER APPROVAL.** The wireframes
-(WF-11 revised with the Trends & outlook section) are drawn and
-marked pending; nothing is implemented. Implementation starts
-only when Tristen approves (tasks.md T001).
+**Status**: **Implemented on staging — pending staging-URL
+verification + promotion.** (Approved 2026-10-06, tasks.md
+T001; amended at T002 — see Amendment. T002–T006 complete
+2026-10-06 with local verification; the staging-URL pass and
+T007 promotion remain — see tasks.md.)**
 
 **Direction (Tristen, 2026-10-06)**: "also update the signals page
 to include education analytics and workforce predictions - whats
@@ -17,6 +18,35 @@ on the rise, falling, etc. and everything should look like a stock
 ticker kind of to show where things are currently trending and
 came from. again, we want to show we understand not just the
 current numbers, but predicted future."
+
+## Amendment — T002 source-verification outcome (2026-10-06)
+
+Recorded in full in `sources.md`. Summary:
+
+- **BLS Employment Projections verified** — and the latest
+  vintage is **2025–35** (released August 27, 2026), not the
+  2024–34 the proposal expected. Plan.md's "newer vintage
+  wins" rule applies; FR-003's board head and rows carry
+  2025–35.
+- **FR-003 ships with the national group only.** The Michigan
+  DTMB industry-projections table could not be read on the
+  source through the available channels (publication and
+  2024–34 horizon verified; the table itself not readable —
+  see sources.md §2), so the Michigan group is **dropped for
+  this implementation**, per plan.md Step 0. No secondary
+  figures were substituted. The renderer supports the group
+  the moment a verified `michiganProjections` section is
+  added to `data/outlook.json`.
+- **FR-004's education block is dropped for this
+  implementation.** None of the three indicators could be
+  verified on its source at dataset precision through the
+  available channels (sources.md §3). The renderer supports
+  the block the moment a verified `education` section is
+  added to `data/outlook.json`.
+- Consequential narrowing: the section framing line drops its
+  education clause, and the FR-007 sources-note sentences
+  cover only what ships (BLS projections + computed trend
+  deltas). Narrower than the approved drafts, never broader.
 
 ## What exists today
 
