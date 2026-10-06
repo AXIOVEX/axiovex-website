@@ -941,10 +941,15 @@ function insightsHtml(pulse, outlook) {
     '          <p class="hl-prov">' + prov.join(' &middot; ') + '</p>';
 }
 
-/* FR-003 composition rule: the four Pulse cards (latest verbatim
-   + computed MoM), then per outlook dataset present a top riser
-   and top faller card, then the education headline card. A card
-   whose data is absent does not render — no placeholders. */
+/* FR-003 composition rule, as amended by spec 013 Amendment 1
+   (owner direction 2026-10-06): per outlook dataset present a
+   top riser and top faller card, then the education headline
+   card — five cards with the current data. The four Pulse
+   cards the original rule opened with are REMOVED: the Pulse
+   band directly below the region carries the same values and
+   deltas in fuller form, and the band is the Pulse stats'
+   single home on the page. A card whose data is absent does
+   not render — no placeholders. */
 function highlightCardsHtml(pulse, outlook) {
   if (!pulse || !pulse.tiles || !pulse.tiles.length) return '';
   const cards = [];
@@ -952,14 +957,6 @@ function highlightCardsHtml(pulse, outlook) {
     '          <div class="pulse-tile hl-card">\n' +
     '            <p class="pulse-label">' + label + '</p>\n' + valueHtml + '\n' +
     '            <p class="pulse-delta">' + meta + '</p>\n          </div>';
-  const refShort = shortMonth(pulse.referenceMonth || '');
-  for (const t of pulse.tiles) {
-    const d = trendDeltas(t.trend);
-    const meta = (d ? deltaHtml(t, d.mom, false) + ' MoM &middot; ' : '') +
-      esc(refShort) + ' &middot; BLS';
-    cards.push(card(esc(t.label) + ' &middot; MI',
-      '            <p class="hl-value">' + esc(t.display) + '</p>', meta));
-  }
   const miState = miStatewideGroup(outlook);
   if (miState) {
     const rows = [...miState.rows].sort((a, b) => b.pctChange - a.pctChange);
