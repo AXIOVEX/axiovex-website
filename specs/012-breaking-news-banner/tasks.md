@@ -96,3 +96,40 @@ below the gate is done, and nothing is implemented.**
   `~/workspace/your_files/axiovex-wireframes/`, record the
   change in this spec's status line, and check off these
   tasks with the completion record.
+
+## Amendment 1 (owner direction 2026-10-06) — hourly detection check + retention policy
+
+- [x] T009 **Record Amendment 1** — DONE 2026-10-06 (docs
+  only): spec.md gained "Amendment 1 — owner direction
+  2026-10-06" (FR-010 hourly detection check
+  `website-breaking-news-check`; FR-011 evidence-based
+  candidate criteria; FR-012 owner-approval loop — detection
+  automated, posting still a curated human act, fully
+  automatic posting explicitly not adopted; FR-013 retention
+  policy: default 12h from posting, standard maximum 24h,
+  the FR-001 72h cap as absolute outer bound only, with the
+  reason recorded), per Tristen's direction of 2026-10-06:
+  "add an hourly task to check for breaking news. and once
+  breaking news is there, how long should we keep it? what
+  are best practices for that?" The job itself is created
+  under T010.
+- [ ] T010 **Create the hourly job + first dry observation**:
+  create `website-breaking-news-check` (hourly; owner goal
+  `website-seo-aeo-health-monitoring`; reports to the
+  Axiovex website chat) implementing FR-010–FR-013,
+  including the seen-state file (a candidate is never
+  presented twice) and the active-banner watch (age,
+  resolution, supersession → takedown/replacement
+  recommendation). Observe the first run dry: it may present
+  a candidate, but it posts nothing without Tristen's
+  approval.
+- [ ] T011 **First live cycle, or 7-day no-candidate review**:
+  either complete the first live candidate cycle end to end
+  (candidate verified on its source page and presented with
+  the qualifying reason, source link, and proposed expiry →
+  owner decision → posting via the FR-008 path → takedown
+  per FR-013), or, if no candidate qualifies within 7 days
+  of T010, review the FR-011 criteria against the lanes'
+  actual flow and record whether they are calibrated —
+  neither so loose they cry wolf nor so tight nothing can
+  ever qualify.

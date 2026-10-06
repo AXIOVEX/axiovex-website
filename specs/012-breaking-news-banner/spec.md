@@ -216,7 +216,10 @@ is out of bounds for implementation.
 ## Out of scope
 
 - Automatic detection or triggering from feeds (future
-  amendment only — FR-002).
+  amendment only — FR-002). **Superseded in part by
+  Amendment 1 below**: automated *detection* with owner
+  approval is now specified (FR-010–FR-012); automated
+  *posting* remains out of scope.
 - Multiple simultaneous banners, a banner queue, or a banner
   history page (git history of `data/breaking.json` is the
   record).
@@ -225,3 +228,118 @@ is out of bounds for implementation.
 - Any change to the Signals lanes, the Pulse, the floating
   widget (WF-G6), or the nav (WF-G1).
 - Push notifications, email alerts, or any off-site alerting.
+
+## Amendment 1 — owner direction 2026-10-06: hourly detection check + retention policy
+
+**Direction (Tristen, 2026-10-06)**: "add an hourly task to
+check for breaking news. and once breaking news is there, how
+long should we keep it? what are best practices for that?"
+
+FR-002 barred any automatic banner in v1 and prescribed that
+automated detection "would require a spec amendment with
+evidence-based criteria of its own." **This amendment is that
+amendment.** It changes *detection speed only*: an hourly
+automated check identifies candidate stories and presents them
+for the owner's decision. Posting remains exactly what FR-002
+requires — a curated, committed act by a named human, with the
+reason recorded. What changes is how fast a qualifying story is
+*noticed*, not who judges it. The amendment also answers the
+retention question with a normative policy (FR-013).
+
+### FR-010 — Hourly detection check
+
+A scheduled job, **`website-breaking-news-check`**, runs
+hourly, owned by the `website-seo-aeo-health-monitoring`
+goal and reporting to the Axiovex website chat. Each run:
+
+- Reads the freshest committed `data/signals.json` (produced
+  by the hourly signals-sync build, spec 004 FR-010 cadence —
+  the check is scheduled after that build so it reads the
+  newest snapshot) and the current `data/breaking.json`.
+- Scans items **published within the last 3 hours** against
+  the candidate criteria (FR-011).
+- Keeps a **seen-state file** with the monitoring system's
+  state (the goal's `hidden_files/`, alongside `state.json`)
+  recording every candidate already presented, so a candidate
+  is **never presented twice**.
+- Also watches the **active banner**, if any (FR-013): its
+  age, whether the story has resolved, and whether a newer
+  item supersedes it — and recommends takedown or replacement
+  when warranted.
+
+The check itself never writes `data/breaking.json` and never
+posts anything (FR-012).
+
+### FR-011 — Candidate criteria (evidence-based)
+
+An item qualifies as a candidate only if it meets one of
+these criteria:
+
+- (i) a CISA ICS advisory ≤3h old affecting widely deployed
+  industrial control products, or naming a KEV-listed/actively
+  exploited vulnerability;
+- (ii) a Federal Register final rule or major action ≤3h old
+  in manufacturing, AI, or workforce policy;
+- (iii) a NIST / NSF / DOE item ≤3h old announcing a major
+  program, award round, standard, or incident;
+- (iv) a Michigan-lane item ≤3h old reporting a major plant
+  opening/closing, a state workforce/industry program launch,
+  or an emergency affecting Michigan industry;
+- (v) any lane item reporting an active incident (breach,
+  recall, shutdown, safety alert) affecting manufacturing
+  or OT.
+
+**Mere publication in a lane is NOT sufficient** — the item
+must clear a significance bar above the lane's ordinary daily
+flow. At most **ONE candidate is presented per run** (the
+strongest). These criteria are deliberately narrow: the
+banner's credibility depends on it staying rare (the banner
+fatigue risk named in plan.md).
+
+### FR-012 — Approval loop (the judgment layer is unchanged)
+
+- Before presentation, a qualifying candidate is **verified
+  against its source page**: the headline is confirmed
+  verbatim and the published time confirmed. A candidate that
+  cannot be confirmed on its source page is not presented.
+- The candidate is presented to Tristen in the Axiovex
+  website chat with: the reason it qualifies (which FR-011
+  criterion), the source link, and a **proposed expiry** set
+  per the retention policy (FR-013).
+- Posting happens **only on Tristen's approval**, via the
+  FR-008 commit path — the entry is placed in
+  `data/breaking.json` on `main` (with `addedBy` and the
+  recorded `reason`), site-sync builds, and the banner is
+  live in minutes.
+- **Fully automatic posting is explicitly NOT adopted.** It
+  would require a further owner direction. This preserves
+  FR-002's curation principle: detection is automated, the
+  claim is not.
+
+### FR-013 — Retention policy (normative)
+
+Once a banner is up, its life is governed by these defaults,
+which set the entry's `expiresUtc`:
+
+- **Default life: 12 hours from posting.**
+- **Standard maximum: 24 hours from posting.**
+- The FR-001 cap — `expiresUtc` at most 72 hours after the
+  story's `publishedUtc` — remains only as an **absolute
+  outer bound** for a genuinely developing situation, and
+  using it requires the reason to be recorded in the entry.
+
+Rationale (best practice, recorded at the owner's request):
+newsroom practice keeps a story in "breaking" posture only
+while it is developing — typically a few hours, within the
+same news cycle; design-system guidance for alert banners
+stresses removing them the moment they stop being current.
+A stale banner trains banner blindness and spends
+credibility — and credibility is Axiovex's core asset, the
+thing the curation rules in FR-002/FR-003 exist to protect.
+
+**Event-driven ends beat clock ends**: a banner comes down
+early when the story resolves or is superseded, even with
+time remaining on its expiry. The hourly check's active-
+banner watch (FR-010) is the mechanism that notices: it
+recommends takedown or replacement rather than letting an
+entry ride out its clock by default.
