@@ -6,10 +6,11 @@ staging flow in spec 010)
 
 **Created**: 2026-10-06
 
-**Status**: **Proposed — PENDING OWNER APPROVAL.** The wireframes
-(WF-11 revised with the Trends & outlook section) are drawn and
-marked pending; nothing is implemented. Implementation starts
-only when Tristen approves (tasks.md T001).
+**Status**: **Implemented on staging — pending staging-URL
+verification + promotion.** (Approved 2026-10-06, tasks.md
+T001; amended at T002 — see Amendment. T002–T006 complete
+2026-10-06 with local verification; the staging-URL pass and
+T007 promotion remain — see tasks.md.)**
 
 **Direction (Tristen, 2026-10-06)**: "also update the signals page
 to include education analytics and workforce predictions - whats
@@ -17,6 +18,71 @@ on the rise, falling, etc. and everything should look like a stock
 ticker kind of to show where things are currently trending and
 came from. again, we want to show we understand not just the
 current numbers, but predicted future."
+
+## Amendment — T002 source-verification outcome (2026-10-06)
+
+Recorded in full in `sources.md`. Summary:
+
+- **BLS Employment Projections verified** — and the latest
+  vintage is **2025–35** (released August 27, 2026), not the
+  2024–34 the proposal expected. Plan.md's "newer vintage
+  wins" rule applies; FR-003's board head and rows carry
+  2025–35.
+- **FR-003 ships with the national group only.** The Michigan
+  DTMB industry-projections table could not be read on the
+  source through the available channels (publication and
+  2024–34 horizon verified; the table itself not readable —
+  see sources.md §2), so the Michigan group is **dropped for
+  this implementation**, per plan.md Step 0. No secondary
+  figures were substituted. The renderer supports the group
+  the moment a verified `michiganProjections` section is
+  added to `data/outlook.json`.
+- **FR-004's education block is dropped for this
+  implementation.** None of the three indicators could be
+  verified on its source at dataset precision through the
+  available channels (sources.md §3). The renderer supports
+  the block the moment a verified `education` section is
+  added to `data/outlook.json`.
+- Consequential narrowing: the section framing line drops its
+  education clause, and the FR-007 sources-note sentences
+  cover only what ships (BLS projections + computed trend
+  deltas). Narrower than the approved drafts, never broader.
+
+## Restoration — browser verification (2026-10-06)
+
+The two drops above were reversed the same day, when a
+live-browser pass read both sources on their official pages
+(full record in `sources.md` §§2–3):
+
+- **FR-003's Michigan group is RESTORED.** MCDA Long-Term
+  Industry Employment Projections, horizon **2024–2034** as
+  published (statewide file read in full on michigan.gov;
+  no release date is displayed on the page or file). Top
+  five industries per side by percent change are in
+  `data/outlook.json` (`michiganProjections`) and render as
+  their own labeled group inside the outlook board — never
+  blended with the national BLS ranking.
+- **FR-004's education block is RESTORED with two of its
+  three indicators.** MI School Data (CEPI), read on
+  mischooldata.org: four-year graduation rate, class of
+  2025 **84.01%** (class of 2024: 82.83%); student
+  enrollment **1,419,859** for school year 2025-26
+  (2024-25: 1,427,386) — unduplicated pupil **headcounts,
+  not FTE**, labeled by school year in the dataset and on
+  the page, never as fall counts. The third indicator,
+  IPEDS postsecondary completions by field, **remains
+  dropped**: still unverified on its source, and no figure
+  was substituted.
+- The consequential narrowing above is reversed: the
+  section framing line again carries its education clause
+  (WF-11 as approved), and the FR-007 sources-note sentences
+  again cover the Michigan projections and the education
+  figures (CEPI only — IPEDS is not shown and is not
+  named).
+- One minimal renderer change: education percent values
+  render at the precision the source publishes (two
+  decimals) — the one-decimal format could not carry
+  CEPI's 84.01%. Recorded in `sources.md` item 7.
 
 ## What exists today
 
@@ -325,3 +391,13 @@ computed, never hand-typed (FR-005c); a series with fewer than
 two non-null points renders "—", matching the delta behavior.
 
 The sources & method note is unchanged by this amendment.
+
+**Status (staging):** implemented on the staging branch
+2026-10-06 (commit `cb00d9c`; tasks T009–T010, verification
+record in tasks.md). The tape renders directly under the
+header; the condensed spacing measures exactly per the A2-2
+table; the four sparkline window % values render as drawn
+(▲ +0.4% / ▲ +2.0% / ▼ −3.0% / ▲ +0.0%), each recomputed from
+the snapshot with zero mismatches. Ships in `styles.v28.css`.
+Promotion to production follows the spec 010 flow together
+with spec 011's main body and spec 012.

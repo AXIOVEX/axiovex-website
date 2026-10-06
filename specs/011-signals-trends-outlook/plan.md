@@ -1,10 +1,14 @@
 # Plan: Trends & Outlook on the Signals Page (spec 011)
 
-**Status: proposal only.** This plan executes only after the
-tasks.md T001 gate (Tristen approves the revised WF-11). Nothing
-here has been implemented, and no source below has been fetched
-for this spec yet — verification of the sources is itself a
-task (T002), deliberately sequenced before any build task.
+**Status: executing.** T001 gate passed 2026-10-06 (Tristen
+approved the revised WF-11). T002 source verification is
+complete — outcome recorded in `sources.md` and in the
+Amendment section of spec.md: BLS Employment Projections
+verified at the **2025–35** vintage; the Michigan industry
+group and the education block are dropped for this
+implementation (their tables could not be read on the source;
+the renderers support both sections the moment verified data
+is added to `data/outlook.json`).
 
 ## Step 0 — SOURCE VERIFICATION (tasks.md T002, blocking for T003+)
 

@@ -222,7 +222,8 @@ async function deliverMessage(env, submission) {
   const accessToken = await getGraphToken(env);
   if (!accessToken) return false;
 
-  const subject = `Website contact: ${submission.topic} - ${submission.name}`.replace(/[\r\n]+/g, " ");
+  const subjectPrefix = env.ENVIRONMENT === "staging" ? "[staging] " : "";
+  const subject = `${subjectPrefix}Website contact: ${submission.topic} - ${submission.name}`.replace(/[\r\n]+/g, " ");
   const content = [
     `Name: ${submission.name}`,
     `Email: ${submission.email}`,

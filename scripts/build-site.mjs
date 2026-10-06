@@ -466,6 +466,245 @@ function pulseStripHtml(pulse) {
     '          </div>\n';
 }
 
+/* ================= Trends & outlook (spec 011) =================
+   Renders into /signals/ between the Pulse band and the lanes.
+   Ticker + trend board compute from the same data/signals.json
+   snapshot (deterministic arithmetic on the ingested series,
+   FR-002); the outlook board and education block render from the
+   committed data/outlook.json (FR-003/FR-004), whose figures are
+   transcribed from the verified sources recorded in
+   specs/011-signals-trends-outlook/sources.md. A missing or
+   unreadable outlook file — or a missing section in it — renders
+   no board and never fails the build (FR-005e). */
+function loadOutlook() {
+  const p = path.join(ROOT, 'data', 'outlook.json');
+  if (!existsSync(p)) return null;
+  try { return JSON.parse(readFileSync(p, 'utf8')); }
+  catch { console.warn('signals: data/outlook.json unreadable — outlook boards omitted'); return null; }
+}
+
+/* MoM = last two non-null points; window = first vs last non-null
+   point. Returns raw differences in the series' own units, or
+   null when fewer than two non-null points exist (the board then
+   renders "—", never a fabricated 0). */
+function trendDeltas(trend) {
+  const pts = (trend || []).filter(p => p.v !== null && p.v !== undefined);
+  if (pts.length < 2) return null;
+  return {
+    mom: pts[pts.length - 1].v - pts[pts.length - 2].v,
+    window: pts[pts.length - 1].v - pts[0].v,
+  };
+}
+
+/* Signed delta in the tile's own display conventions: percent
+   series in pts, thousand-unit series in k, and raw-count series
+   (labor force, values in persons) converted to k. Direction is
+   glyph + signed figure, neutral treatment — no red/green. */
+function deltaHtml(tile, diff, upper) {
+  const glyph = diff > 0 ? '&#9650;' : diff < 0 ? '&#9660;' : '&#9644;';
+  const sign = diff > 0 ? '+' : diff < 0 ? '&minus;' : '';
+  const pts = /%$/.test(tile.display || '');
+  const mag = Math.abs(diff) >= 10000 ? Math.abs(diff) / 1000 : Math.abs(diff);
+  const unit = pts ? ' pts' : 'k';
+  return glyph + ' ' + sign + mag.toFixed(1) + (upper ? unit.toUpperCase() : unit);
+}
+
+/* Spec 011 Amendment 2 (A2-3): window percent change —
+   (last − first) ÷ first across the non-null points, one
+   decimal, glyph + signed figure in the tape's neutral
+   treatment. For the rate series this is the RELATIVE change
+   of the rate; its absolute movement stays in the pts delta
+   columns. "—" when fewer than two non-null points exist. */
+function windowPctHtml(trend) {
+  const pts = (trend || []).filter(p => p.v !== null && p.v !== undefined);
+  if (pts.length < 2 || !pts[0].v) return '&mdash;';
+  const pct = ((pts[pts.length - 1].v - pts[0].v) / pts[0].v) * 100;
+  const glyph = pct > 0 ? '&#9650;' : pct < 0 ? '&#9660;' : '&#9644;';
+  const sign = pct > 0 ? '+' : pct < 0 ? '&minus;' : '';
+  return glyph + ' ' + sign + Math.abs(pct).toFixed(1) + '%';
+}
+
+const TAPE_LABELS = {
+  SMU26000003000000001: 'MI MFG EMPLOYMENT',
+  LASST260000000000003: 'MI UNEMPLOYMENT',
+  LASST260000000000006: 'MI LABOR FORCE',
+  SMU26000000000000001: 'MI NONFARM',
+};
+/* FR-001: the tape duplicates trend-board content only (latest +
+   MoM per series), is aria-hidden, and its motion is pure CSS
+   (styles: .tape-track animation, paused on hover/focus-within,
+   static under prefers-reduced-motion). The sequence is emitted
+   twice for the loop. */
+function tickerHtml(pulse) {
+  if (!pulse || !pulse.tiles || !pulse.tiles.length) return '';
+  const items = pulse.tiles.map(t => {
+    const name = TAPE_LABELS[t.id] || esc(String(t.label || '').toUpperCase());
+    const val = esc(String(t.display || '').toUpperCase());
+    const d = trendDeltas(t.trend);
+    if (!d) return '<span class="tape-item">' + name + ' <b>' + val + '</b></span>';
+    const suffix = t.id === 'SMU26000003000000001' ? ' MO-MO' : '';
+    return '<span class="tape-item">' + name + ' <b>' + val + '</b> ' +
+      '<span class="tape-delta">' + deltaHtml(t, d.mom, true) + suffix + '</span></span>';
+  });
+  const seq = '<span class="tape-seq">' +
+    items.join('<span class="tape-sep">&middot;</span>') +
+    '<span class="tape-sep">&middot;</span></span>';
+  return '        <div class="tape" aria-hidden="true">\n' +
+    '          <div class="tape-track">' + seq + seq + '</div>\n        </div>';
+}
+
+function trendBoardHtml(pulse) {
+  if (!pulse || !pulse.tiles || !pulse.tiles.length) return '';
+  const rows = pulse.tiles.map(t => {
+    const d = trendDeltas(t.trend);
+    const mom = d ? deltaHtml(t, d.mom, false) : '&mdash;';
+    const win = d ? deltaHtml(t, d.window, false) : '&mdash;';
+    const pct = d ? windowPctHtml(t.trend) : '&mdash;';
+    return '            <tr><td class="tb-series">' + esc(t.label) + '</td>' +
+      '<td class="tb-latest">' + esc(t.display) + '</td>' +
+      '<td class="tb-delta tb-mom">' + mom + '</td>' +
+      '<td class="tb-delta tb-win">' + win + '</td>' +
+      '<td class="tb-spark"><span class="tb-sparkwrap">' + sparkline(t.trend) +
+      '<span class="tb-pct">' + pct + '</span></span></td></tr>';
+  }).join('\n');
+  return '        <div class="trend-board">\n' +
+    '          <table class="trend-table">\n' +
+    '            <caption class="visually-hidden">Michigan Pulse series: latest value, month-over-month change, and change across the 12-month window</caption>\n' +
+    '            <thead><tr><th scope="col">Series</th><th scope="col">Latest &middot; ' +
+    esc(shortMonth(pulse.referenceMonth)) + '</th><th scope="col">Mo-Mo</th>' +
+    '<th scope="col">12-mo window</th><th scope="col">Trend</th></tr></thead>\n' +
+    '            <tbody>\n' + rows + '\n            </tbody>\n          </table>\n' +
+    '          <p class="board-note">Computed from BLS series — latest values verbatim from the snapshot; both deltas are arithmetic on each series&rsquo; own monthly history. A missing month breaks the trend line; it is never interpolated.</p>\n' +
+    '        </div>';
+}
+
+function trendsHeadHtml() {
+  return '        <div class="trends-head">\n' +
+    '          <p class="eyebrow">Trends &amp; outlook</p>\n' +
+    '          <h2>Where it&rsquo;s heading.</h2>\n' +
+    '          <p class="trends-frame">The Pulse series as a trend board, published projections for what comes next, and Michigan education indicators. Every forward-looking figure belongs to the agency that published it — Axiovex publishes no forecasts of its own.</p>\n' +
+    '        </div>';
+}
+
+/* One projections row. Figures come from data/outlook.json only;
+   the horizon suffix follows the drawn form (jobs + horizon when
+   the table publishes a numeric change, horizon alone when it
+   does not). */
+function projRow(r, horizon) {
+  const pct = (r.pctChange > 0 ? '+' : r.pctChange < 0 ? '&minus;' : '') +
+    Math.abs(r.pctChange).toFixed(1) + '%';
+  const tail = typeof r.jobsChange === 'number'
+    ? (r.jobsChange > 0 ? '+' : r.jobsChange < 0 ? '&minus;' : '') +
+      Math.abs(r.jobsChange).toLocaleString('en-US') + ' jobs, ' + esc(horizon)
+    : esc(horizon);
+  return '          <li class="proj-row"><span class="proj-name">' + esc(r.name) + '</span> ' +
+    '<span class="proj-meta">&middot; projected</span> <b class="proj-pct">' + pct + '</b> ' +
+    '<span class="proj-jobs">&middot; ' + tail + '</span></li>';
+}
+
+function projGroupHtml(sec, kind, itemKind) {
+  const rows = Array.isArray(sec[kind]) ? sec[kind] : [];
+  if (!rows.length) return '';
+  const head = (kind === 'rise'
+    ? 'On the rise — fastest-growing ' + itemKind
+    : 'Falling — fastest-declining ' + itemKind) +
+    ' · ' + (sec.agencyShort || sec.agency || '') + ' ' + (sec.publication || '') +
+    ' ' + (sec.vintage || '');
+  return '          <p class="board-kicker">' + esc(head.toUpperCase()) + '</p>\n' +
+    '          <ul class="proj-list">\n' +
+    rows.map(r => projRow(r, sec.horizon || sec.vintage || '')).join('\n') +
+    '\n          </ul>';
+}
+
+/* FR-003: attributed agency projections. National (BLS) and
+   Michigan groups render as separate labeled groups from their
+   own sections of the dataset — never blended into one ranking.
+   A section that is absent renders nothing. */
+function outlookHtml(outlook) {
+  if (!outlook) return '';
+  const groups = [];
+  const notes = [];
+  const bls = outlook.blsProjections;
+  if (bls && ((bls.rise || []).length || (bls.fall || []).length)) {
+    groups.push(projGroupHtml(bls, 'rise', 'occupations'));
+    groups.push(projGroupHtml(bls, 'fall', 'occupations'));
+    notes.push(esc(bls.agency || '') + ', ' + esc(bls.publication || '') +
+      ' (' + esc(bls.vintage || '') + '), retrieved ' + esc(bls.retrievedOn || '') + '.');
+  }
+  const mi = outlook.michiganProjections;
+  if (mi && ((mi.rise || []).length || (mi.fall || []).length)) {
+    const head = 'Michigan industry outlook — ' + (mi.agencyShort || mi.agency || '') +
+      ' ' + (mi.publication || '') + ' ' + (mi.vintage || '');
+    const sub = (kind, label) => {
+      const rows = Array.isArray(mi[kind]) ? mi[kind] : [];
+      if (!rows.length) return '';
+      return '          <p class="board-sub">' + label + '</p>\n' +
+        '          <ul class="proj-list">\n' +
+        rows.map(r => projRow(r, mi.horizon || mi.vintage || '')).join('\n') +
+        '\n          </ul>';
+    };
+    groups.push('          <p class="board-kicker">' + esc(head.toUpperCase()) + '</p>\n' +
+      sub('rise', 'On the rise') + sub('fall', 'Falling'));
+    notes.push(esc(mi.agency || '') + ', ' + esc(mi.publication || '') +
+      ' (' + esc(mi.vintage || '') + '), retrieved ' + esc(mi.retrievedOn || '') + '.');
+  }
+  const body = groups.filter(Boolean).join('\n');
+  if (!body) return '';
+  return '        <div class="outlook-board">\n' + body + '\n' +
+    '          <p class="board-note">Projections are the publishing agency&rsquo;s modeled outlook, published with its horizon and vintage — they are not Axiovex forecasts, and they are not guarantees. Source: ' +
+    notes.join(' ') + '</p>\n        </div>';
+}
+
+/* FR-004: education indicators from the committed dataset. A
+   history indicator shows its latest value with the delta vs the
+   prior period computed here (points for percent indicators,
+   percent change otherwise); a completions indicator shows its
+   field groups rising / falling. Absent section → no block. */
+function educationHtml(outlook) {
+  const edu = outlook && outlook.education;
+  if (!edu || !Array.isArray(edu.indicators) || !edu.indicators.length) return '';
+  // Percent indicators render at the precision the source
+  // publishes (CEPI rates carry two decimals, e.g. 84.01%) —
+  // never a rounded form of the stored value.
+  const fmtVal = (ind, v) => ind.unit === 'percent'
+    ? String(parseFloat(v.toFixed(2))) + '%'
+    : (Number.isInteger(v) ? v.toLocaleString('en-US') : v.toFixed(1));
+  const rows = edu.indicators.map(ind => {
+    const src = ' <span class="edu-source">' + esc(String(ind.source || '').toUpperCase()) + '</span>';
+    if (Array.isArray(ind.history) && ind.history.length) {
+      const h = ind.history;
+      const last = h[h.length - 1];
+      let delta = '';
+      if (h.length > 1) {
+        const prev = h[h.length - 2].v;
+        const diff = last.v - prev;
+        const glyph = diff > 0 ? '&#9650;' : diff < 0 ? '&#9660;' : '&#9644;';
+        const sign = diff > 0 ? '+' : diff < 0 ? '&minus;' : '';
+        const text = ind.unit === 'percent'
+          ? sign + Math.abs(diff).toFixed(1) + ' pts vs prior class'
+          : sign + Math.abs(prev ? (diff / prev) * 100 : 0).toFixed(1) + '% vs prior period';
+        delta = ' <span class="edu-delta">&middot; ' + glyph + ' ' + text + '</span>';
+      }
+      return '          <p class="edu-row">' + esc(ind.label) + ' <b>' + fmtVal(ind, last.v) + '</b>' +
+        ' <span class="edu-vintage">&middot; ' + esc(ind.vintage || last.period) + '</span>' + delta + src + '</p>';
+    }
+    if ((ind.rise || []).length || (ind.fall || []).length) {
+      const side = (list, glyph) => (list || []).map(f =>
+        esc(f.name) + ' ' + glyph + ' ' + (f.pctChange > 0 ? '+' : f.pctChange < 0 ? '&minus;' : '') +
+        Math.abs(f.pctChange).toFixed(1) + '%').join(' &middot; ');
+      return '          <p class="edu-row">' + esc(ind.label) +
+        ' <span class="edu-vintage">&middot; ' + esc(ind.vintage || '') + '</span>' +
+        ' <span class="edu-delta">&middot; rising: ' + side(ind.rise, '&#9650;') +
+        ' &middot; falling: ' + side(ind.fall, '&#9660;') + '</span>' + src + '</p>';
+    }
+    return '';
+  }).filter(Boolean);
+  if (!rows.length) return '';
+  return '        <div class="education-block">\n' +
+    '          <p class="board-kicker">EDUCATION ANALYTICS — MICHIGAN</p>\n' +
+    rows.join('\n') + '\n        </div>';
+}
+
 function fmtUpdated(iso) {
   try {
     const d = new Date(iso);
@@ -507,11 +746,34 @@ function buildSignals(posts) {
     '          <ul class="signal-list">\n' + l.items.map(itemRow).join('\n') + '\n          </ul>\n        </div>'
   ).join('\n');
 
+  // Spec 011: Trends & outlook section between the Pulse band and
+  // the lanes. The section head attaches to the first in-section
+  // element that renders; absent elements render nothing (FR-005e).
+  // Amendment 2: the tape (part 0) renders at the top of the page,
+  // outside the section — it never carries the section head.
+  const outlook = loadOutlook();
+  const trendsParts = [
+    tickerHtml(snap.pulse),
+    trendBoardHtml(snap.pulse),
+    outlookHtml(outlook),
+    educationHtml(outlook),
+  ];
+  for (let i = 1; i < trendsParts.length; i++) {
+    if (trendsParts[i]) {
+      trendsParts[i] = trendsHeadHtml() + '\n' + trendsParts[i];
+      break;
+    }
+  }
+
   // /signals/ page
   const tpl = readFileSync(path.join(ROOT, 'scripts', 'templates', 'signals.html'), 'utf8');
   mkdirSync(path.join(ROOT, 'signals'), { recursive: true });
   writeFileSync(path.join(ROOT, 'signals', 'index.html'), fill(tpl, {
     '{{PULSE_HTML}}': pulseTilesHtml(snap.pulse),
+    '{{TICKER_HTML}}': trendsParts[0],
+    '{{TREND_BOARD_HTML}}': trendsParts[1],
+    '{{OUTLOOK_HTML}}': trendsParts[2],
+    '{{EDUCATION_HTML}}': trendsParts[3],
     '{{LANES_HTML}}': lanesHtml,
     '{{UPDATED_LINE}}': updatedLine,
   }));
@@ -637,6 +899,125 @@ function writeSitemap(posts, docsInfo, signalsInfo) {
   console.log('sitemap: ' + urls.length + ' urls');
 }
 
+/* ================= Breaking news banner (spec 012) =================
+   The build's LAST pass. Reads data/breaking.json — a single
+   curated `active` entry or null — and rewrites the BREAKING
+   marker region placed immediately after <body id="top"> in the
+   three shells and four templates, in every served page: the
+   shells in place and the generated outputs (blog index, every
+   article, documents, signals). The blog redirect shim
+   (blog/post.html) is the one named exclusion (FR-004) — it
+   carries no chrome to banner.
+
+   This is the one wall-clock-dependent step in an otherwise
+   deterministic build: an entry renders only while
+   publishedUtc <= build time < expiresUtc (FR-006). With no
+   active entry the region collapses to the empty marker pair —
+   zero layout trace, no script (FR-004).
+
+   Validation fails closed (FR-001): a malformed file, an invalid
+   entry, or an expiry more than 72h after publication renders NO
+   banner and logs a warning naming the defect. Missing markers
+   in an output file warn too (the SIGNALS pattern) — a page
+   that lost its markers in an edit is found by the build, not
+   by a visitor. */
+const BREAKING_MAX_MS = 72 * 60 * 60 * 1000;
+
+function breakingEntry() {
+  const p = path.join(ROOT, 'data', 'breaking.json');
+  if (!existsSync(p)) {
+    console.warn('breaking: data/breaking.json not found — banner inactive');
+    return null;
+  }
+  let data;
+  try { data = JSON.parse(readFileSync(p, 'utf8')); }
+  catch (e) {
+    console.warn('breaking: data/breaking.json is not valid JSON (' + e.message + ') — banner inactive');
+    return null;
+  }
+  const entry = data ? data.active : null;
+  if (!entry) return null;
+  const bad = why => {
+    console.warn('breaking: entry invalid — ' + why + ' — banner inactive');
+    return null;
+  };
+  for (const f of ['id', 'headline', 'sourceName', 'url', 'publishedUtc', 'expiresUtc', 'addedBy', 'reason']) {
+    if (typeof entry[f] !== 'string' || !entry[f].trim()) {
+      return bad('missing or empty field "' + f + '"');
+    }
+  }
+  if (!entry.url.startsWith('https://')) return bad('url is not https');
+  const pub = Date.parse(entry.publishedUtc);
+  const exp = Date.parse(entry.expiresUtc);
+  if (Number.isNaN(pub)) return bad('publishedUtc is not a valid timestamp');
+  if (Number.isNaN(exp)) return bad('expiresUtc is not a valid timestamp');
+  if (exp <= pub) return bad('expiresUtc is not after publishedUtc');
+  if (exp - pub > BREAKING_MAX_MS) return bad('expiresUtc is more than 72 hours after publishedUtc');
+  const now = Date.now();
+  if (now < pub) {
+    console.log('breaking: entry "' + entry.id + '" is not yet published — banner inactive');
+    return null;
+  }
+  if (now >= exp) {
+    console.log('breaking: entry "' + entry.id + '" has expired — banner inactive');
+    return null;
+  }
+  return entry;
+}
+
+function breakingHtml(entry) {
+  return '<div class="breaking-banner" role="region" aria-label="Breaking news">\n' +
+    '    <a class="breaking-link" href="' + escAttr(entry.url) + '" target="_blank" rel="noopener">' +
+    '<span class="breaking-lead">BREAKING</span> ' +
+    '<span class="breaking-headline">' + esc(entry.headline) + '</span> ' +
+    '<span class="breaking-meta">&middot; ' + esc(entry.sourceName) + ' &middot; ' +
+    esc(fmtUpdated(entry.publishedUtc)) + '</span></a>\n' +
+    '    <button class="breaking-dismiss" type="button" aria-label="Dismiss breaking news banner" ' +
+    'data-breaking-dismiss="' + escAttr(entry.id) + '">&#10005;</button>\n' +
+    '  </div>\n' +
+    '  <script src="/breaking.v1.js" defer></script>';
+}
+
+function buildBreaking() {
+  const entry = breakingEntry();
+  const inner = entry ? '\n  ' + breakingHtml(entry) + '\n  ' : '';
+  const outputs = [
+    'index.html',
+    path.join('contact', 'index.html'),
+    path.join('privacy', 'index.html'),
+    path.join('blog', 'index.html'),
+    path.join('documents', 'index.html'),
+    path.join('signals', 'index.html'),
+  ];
+  const blogDir = path.join(ROOT, 'blog');
+  for (const name of readdirSync(blogDir, { withFileTypes: true })) {
+    if (!name.isDirectory()) continue;
+    const rel = path.join('blog', name.name, 'index.html');
+    if (existsSync(path.join(ROOT, rel))) outputs.push(rel);
+  }
+  const re = /(<!-- BREAKING:START -->)[\s\S]*?(<!-- BREAKING:END -->)/;
+  let rewritten = 0;
+  for (const rel of outputs) {
+    const file = path.join(ROOT, rel);
+    if (!existsSync(file)) {
+      console.warn('breaking: expected output ' + rel + ' missing — banner skipped for it');
+      continue;
+    }
+    const html = readFileSync(file, 'utf8');
+    if (!re.test(html)) {
+      console.warn('breaking: BREAKING markers not found in ' + rel + ' — banner skipped for that page');
+      continue;
+    }
+    // Replacer function, not a '$1...' string — the banner HTML can
+    // contain literal '$' amounts from a headline (the SIGNALS gotcha).
+    const out = html.replace(re, (m, g1, g2) => g1 + inner + g2);
+    if (out !== html) writeFileSync(file, out);
+    rewritten++;
+  }
+  console.log('breaking: ' + (entry ? 'active banner "' + entry.id + '"' : 'no active entry') +
+    ' — marker region rewritten in ' + rewritten + ' page(s)');
+}
+
 /* ================= Main ================= */
 const sharedDir = process.argv[2] || '/tmp/shared-documents';
 let docsInfo = { maxDate: null, count: 0 };
@@ -649,3 +1030,4 @@ const posts = buildBlog();
 buildFeed(posts);
 const signalsInfo = buildSignals(posts);
 writeSitemap(posts, docsInfo, signalsInfo);
+buildBreaking();

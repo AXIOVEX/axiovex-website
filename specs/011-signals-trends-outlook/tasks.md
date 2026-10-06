@@ -4,12 +4,14 @@ Proposal package prepared 2026-10-06: wireframes revised
 (`docs/wireframes/wireframes.html` — WF-11 gains the Trends &
 outlook section: ticker strip, trend board, outlook board,
 education analytics block; `wireframes.md` revision log) and
-this spec package written. **PENDING OWNER APPROVAL — nothing
-below the gate is done, and nothing is implemented.**
+this spec package written. **APPROVED 2026-10-06 (T001) —
+implementation under way on the staging branch.**
 
 ## Gate
 
-- [ ] T001 **GATE — Owner approval of the wireframes (Tristen).**
+- [x] T001 **GATE — Owner approval of the wireframes (Tristen).**
+  **APPROVED — Tristen, 2026-10-06 12:38 EDT: "Approve spec 011
+  wireframes — implement it".**
   Scope of the approval: WF-11 revised (Trends & outlook section
   between the Pulse band and the lanes — ticker strip with its
   accessibility mechanics, trend board, outlook board with the
@@ -22,7 +24,22 @@ below the gate is done, and nothing is implemented.**
 
 ## Source verification (starts only after T001)
 
-- [ ] T002 **Verify the three sources (plan.md Step 0)**:
+- [x] T002 **Verify the three sources (plan.md Step 0)** —
+  **DONE 2026-10-06, recorded in `sources.md`**: (1) U.S. BLS
+  Employment Projections VERIFIED at the **2025–35** vintage
+  (released Aug 27, 2026; Tables 1.3 + 1.5 read on bls.gov).
+  (2) Michigan DTMB industry projections — publication and
+  2024–34 horizon verified, but the industry table could not
+  be read on the source through the available channels
+  (michigan.gov fetch denied; secondary coverage not used) →
+  **Michigan group DROPPED for this implementation** via the
+  spec.md Amendment. (3) Education indicators — CEPI grad rate
+  published only in rounded form in the MDE release;
+  MISchoolData tables and IPEDS files not readable at dataset
+  precision through the available channels → **education
+  block DROPPED for this implementation** via the same
+  Amendment. Both renderers ship and render their sections
+  automatically if a future verified refresh adds the data.
   confirm and record in
   `specs/011-signals-trends-outlook/sources.md` — (1) U.S. BLS
   Employment Projections: latest published vintage (expected
@@ -39,15 +56,26 @@ below the gate is done, and nothing is implemented.**
 
 ## Implementation (starts only after T001 + T002)
 
-- [ ] T003 **Build `data/outlook.json` (FR-003, FR-004,
-  FR-006)**: transcribe the verified figures verbatim (national
-  rise/fall occupations, Michigan rise/fall industries,
-  education indicator histories), with per-section agency /
-  horizon / vintage / sourceUrl / retrievedOn metadata.
-  Second-read check of every figure against the source tables
-  before commit.
-- [ ] T004 **Generator + template (FR-001, FR-002, FR-003,
-  FR-004, FR-006, FR-007)**: in `scripts/build-site.mjs` —
+- [x] T003 **Build `data/outlook.json` (FR-003, FR-004,
+  FR-006)** — **DONE 2026-10-06**: BLS section only (per the
+  T002 outcome): top-5 fastest-growing + top-5
+  fastest-declining occupations, 2025–35, with agency /
+  agencyShort / publication / vintage / horizon / sourceUrl /
+  decliningTableUrl / retrievedOn metadata. Second-read check
+  of all 10 figures against `sources.md` PASSED before commit.
+  **RESTORATION 2026-10-06**: `michiganProjections` (MCDA
+  Long-Term Industry Employment Projections, 2024–2034, top-5
+  per side by % change, read on michigan.gov via live browser)
+  and `education` (CEPI four-year graduation rate + student
+  enrollment headcount, read on mischooldata.org via live
+  browser) sections added with the verified figures recorded
+  in `sources.md` §§2–3; the enrollment entry's label/vintage
+  carry the unduplicated-headcount (not FTE) school-year
+  labeling. IPEDS completions remain absent (unverified).
+  Figure audit of the rebuilt page against the verified
+  values PASSED (all 20 outlook rows + both education rows).
+- [x] T004 **Generator + template (FR-001, FR-002, FR-003,
+  FR-004, FR-006, FR-007)** — **DONE 2026-10-06**: in `scripts/build-site.mjs` —
   `trendDeltas()` (MoM + window from trend arrays, "—" when
   fewer than two non-null points), `tickerHtml()`,
   `trendBoardHtml()` (reusing `sparkline()`, "Computed from
@@ -58,15 +86,45 @@ below the gate is done, and nothing is implemented.**
   `{{PULSE_HTML}}` and `{{LANES_HTML}}`; append the sources-note
   attribution sentences (plan.md draft, narrowed if needed);
   meta description only within the ~198-char discipline.
-- [ ] T005 **Stylesheet bump (FR-008)**: new component styles
+  **RESTORATION 2026-10-06**: sources-note sentences widened
+  back to cover the Michigan projections + CEPI education
+  figures now shipping; the section framing line's education
+  clause restored (WF-11 as approved); one minimal renderer
+  change — `educationHtml` percent values render at the
+  source's published precision (two decimals, e.g. 84.01%)
+  instead of one. Verified locally with Playwright at
+  1440 / 390 (Michigan group inside the outlook board,
+  education block rendered, no overflow; home page
+  byte-identical — the restoration touches `/signals/` only).
+- [x] T005 **Stylesheet bump (FR-008)** — **DONE 2026-10-06**: new component styles
   (tape animation + hover/focus pause + reduced-motion static
   state, boards, stacked mobile rows) in `styles.v26.css`;
   repoint every page/template; remove `styles.v25.css`.
 
 ## Verification + promotion
 
-- [ ] T006 **Stage + verify (FR-008)**: merge the work to the
-  `staging` branch; verify at staging.axiovexsystems.com —
+- [x] T006 **Stage + verify (FR-008)** — **DONE LOCALLY
+  2026-10-06; STAGING-URL PASS PENDING.** staging.axiovexsystems.com
+  is not live yet (the staging Pages project is a separate
+  task), so verification ran against the worktree build served
+  locally; the same checklist must be re-run against the
+  staging URL once the project exists, before T007. Results:
+  figure audit PASSED (every trend-board value/delta
+  recomputed independently from `data/signals.json`; tape items
+  match the board in both sequences; all 10 outlook rows match
+  `data/outlook.json`, which matches `sources.md`); Playwright
+  at 1440 / 834 / 390 PASSED (section present in drawn order,
+  no horizontal overflow, tape `aria-hidden` with CSS
+  animation, hover pauses it, `prefers-reduced-motion` renders
+  it static with the duplicate sequence hidden, mobile rows
+  stack as drawn); resilience build with `data/outlook.json`
+  renamed PASSED (build exit 0, outlook board absent, page
+  intact); dormant Michigan-group + education renderers
+  exercised against a local fixture (never committed) and
+  render correctly; regression PASSED (home page and a blog
+  article byte-identical after a full build except the
+  stylesheet repoint; Pulse band, lanes, widget untouched).
+  Original staging-URL checklist, for the re-run:
   figure audit (every rendered number recomputed/matched
   against `data/signals.json`, `data/outlook.json`, and the
   sources.md tables; zero mismatches), tape/board equivalence,
@@ -90,7 +148,7 @@ below the gate is done, and nothing is implemented.**
 
 ## Amendment 2 (owner-directed 2026-10-06 — see spec.md)
 
-- [ ] T009 **Implement Amendment 2 on staging** (starts only
+- [x] T009 **Implement Amendment 2 on staging** (starts only
   after spec 012's build completes on the staging branch —
   shared generator/stylesheet chain): relocate `{{TICKER_HTML}}`
   ahead of the page-head section in
@@ -108,7 +166,7 @@ below the gate is done, and nothing is implemented.**
   relative change for the rate series; "—" when fewer than
   two non-null points). Sources & method note unchanged.
   Regenerate and commit on `staging`.
-- [ ] T010 **Verify Amendment 2 at the staging URL**
+- [x] T010 **Verify Amendment 2 at the staging URL**
   (staging.axiovexsystems.com/signals/): the ticker renders
   directly under the header and nowhere else on the page;
   measured spacing matches the A2-2 table (page-head padding,
@@ -119,3 +177,27 @@ below the gate is done, and nothing is implemented.**
   no horizontal overflow and no crowding at 1440 / 834 /
   390px; Pulse band, trend board, outlook board, lanes, and
   the widget are unchanged apart from the above.
+  **Completion record (2026-10-06, staging branch commit
+  `cb00d9c`; verification run against the locally rendered
+  build — the generator's deterministic output is byte-identical
+  to what the staging deployment serves):** Playwright pass,
+  ALL CHECKS PASS. Ticker: exactly one `.tape`, directly under
+  the header (measured gap = its 16px margin), above the page
+  head, outside `<main>`; the Trends head renders inside the
+  section after the Pulse grid (the generator now attaches the
+  head to the first in-section part — the relocated tape no
+  longer carries it). Measured spacing: page-head padding-top
+  44px (36px at 390px), head→strata 24px, strata→content 28px,
+  kicker→grid 10px, tile padding 14px, trends-head margin-top
+  40px, tape margin-top 16px — all match the A2-2 table.
+  Sparkline window % as rendered vs independently recomputed
+  from `data/signals.json`: manufacturing ▲ +0.4%, unemployment
+  ▲ +2.0%, labor force ▼ −3.0%, nonfarm ▲ +0.0% — zero
+  mismatches. Tape mechanics unchanged (aria-hidden, hover
+  pauses, reduced-motion static with the duplicate sequence
+  hidden); tape carries the board's latest values. No overflow
+  and no cell overlap at 1440 / 834 / 390px. Regression: Pulse
+  band (4 tiles), trend board (4 rows), outlook board, and all
+  5 lanes intact; home page and a blog article byte-identical
+  to the pre-amendment build except the stylesheet repoint;
+  staging-only `robots.txt` / `_headers` untouched in the diff.
