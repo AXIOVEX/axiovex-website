@@ -153,3 +153,58 @@ merge `4497704`) and closed out (T007) 2026-10-06.**
   accepted: each is a data-faithfulness call. (§4 also
   records the FR-009 meta-description revision: 194
   characters, claim-free.)
+
+## Amendment 1 — owner direction 2026-10-06 (duplicate Pulse cards removed)
+
+Owner direction (Tristen, 2026-10-06, with a screenshot
+of the live page): "fix repeat cards. cannot do that."
+The four Pulse cards in the Highlights region repeated
+the Pulse band directly below (same values, same
+deltas). Spec record: spec.md Amendment 1. Approval
+basis: owner-directed = approved (the spec 011
+Amendment 2 basis); wireframes revised first.
+
+- [x] T008 **Docs package (wireframes-first)**: WF-11
+  Highlights region revised to the 5-card set in
+  `wireframes.html` (four Pulse cards removed; caption
+  now states the Pulse statistics live in the band
+  below and are not repeated as cards) + revision-log
+  entry in `wireframes.md`; spec.md Amendment 1 added
+  and FR-003 marked amended; review copy
+  `~/workspace/your_files/axiovex-wireframes/
+  wireframes.html` re-synced byte-identical. Committed
+  on `main`.
+- [ ] T009 **Implement on staging**: merge `main` →
+  `staging` (guards win — post-merge diff is exactly
+  `_headers` + staging `robots.txt`);
+  `highlightCardsHtml()` in `scripts/build-site.mjs`
+  emits the 5-card set only (Michigan riser/faller,
+  U.S. riser/faller, education headline; drop-out
+  preserved); regenerate; stylesheet bumped only if
+  the card-grid CSS must change.
+- [ ] T010 **Staging verification**: Highlights region
+  carries exactly 5 cards and none of the four Pulse
+  labels appear inside it; the insights summary text is
+  byte-identical to the current production rendering;
+  Pulse band intact (four tiles + sparklines); Detail
+  region, ticker, boards, lanes intact; no horizontal
+  overflow at 1440 / 834 / 390 (Playwright); drop-out
+  scratch builds re-run with amended expectations
+  (empty outlook → summary only, plus the education
+  card as data allows; `outlook.json` absent → no
+  cards); home byte-identical except any stylesheet
+  repoint; staging serves the fix with
+  `x-robots-tag: noindex, nofollow` intact.
+- [ ] T011 **Promotion**: merge `staging` → `main`
+  under spec 010 FR-004 (guard proof EMPTY before
+  pushing — STOP if the diff carries staging-only
+  `robots.txt`/`_headers` beyond the intended guard
+  state); production verification repeated live
+  (5 cards, no Pulse duplication, summary + band
+  intact); sync back to staging with guards re-applied.
+- [ ] T012 **Closeout**: amendment tasks checked with
+  the production record; wireframe log notes the
+  amendment as implemented + live (WF-11 labels stay
+  APPROVED · IMPLEMENTED + LIVE); review copy re-synced
+  if the wireframes changed; monitoring state
+  `website_commit` advanced to the promotion merge.

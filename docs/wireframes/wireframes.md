@@ -414,3 +414,30 @@ as accordion rows.
   region must exist first) is decided at the approval
   gate (spec 014 tasks.md T001). Nothing on the live
   site changes until Tristen approves.
+- **2026-10-06** — AMENDMENT (spec 013 **Amendment 1** —
+  owner-directed 2026-10-06, after Tristen reviewed the
+  live page with a screenshot: "fix repeat cards. cannot
+  do that."): WF-11's Highlights region loses its four
+  Pulse cards. As shipped, the region opened with the
+  four Pulse headline stats (manufacturing 586.7k,
+  unemployment 5.0%, labor force 4.85M, nonfarm
+  4,505.9k, with their computed MoM deltas) — and the
+  Michigan Pulse band directly below the region carries
+  the same four values and deltas in fuller form, with
+  sparklines. Pure duplication, two adjacent regions
+  saying the same numbers twice. The region now keeps
+  the **generated insights summary, unchanged
+  byte-for-byte** (it narrates the Pulse data; it does
+  not duplicate a display element), plus exactly **five
+  cards**: the Michigan outlook top riser + top faller,
+  the U.S. outlook top riser + top faller, and the
+  education headline. The Pulse statistics live in the
+  band below and are not repeated as cards — the band
+  is their single home on the page. Card drop-out
+  behavior is preserved (a card whose dataset is absent
+  still does not render; the full set is now five).
+  Approval basis: owner direction is the approval (the
+  spec 011 Amendment 2 basis); the wireframe was
+  revised first under the standing wireframes-first
+  rule. Spec record: specs/013-signals-highlights-detail
+  spec.md Amendment 1 + tasks T008–T012.

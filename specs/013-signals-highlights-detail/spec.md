@@ -78,6 +78,9 @@ Two regions on `/signals/`, nothing else moved:
    **highlight cards** (the four Pulse headline stats, the
    top rising + falling entry from each outlook board, and
    the education headline figure when verified data exists).
+   *(Card set amended by Amendment 1, 2026-10-06 — the
+   four Pulse cards are removed; see the amendment
+   section below.)*
 2. An **expandable Detail region** — "The full picture" —
    between Trends & outlook and the lanes: collapsed by
    default, opening to the deeper jobs/economy datasets:
@@ -148,7 +151,10 @@ unchanged.
   summary is permitted for, and confined to, the statistics.
   Any future template clause that editorializes (why a move
   happened, what a reader should do) is out of bounds.
-- **FR-003 — Highlight cards.** Composition rule: the four
+- **FR-003 — Highlight cards.** *(Amended by Amendment 1,
+  2026-10-06 — the opening Pulse clause below is
+  superseded; the card set is the outlook + education set
+  only. See the amendment section.)* Composition rule: the four
   Pulse headline stats (latest verbatim + computed MoM delta,
   labeled with source + reference month); then, **per
   outlook dataset present** in the committed data, one top
@@ -338,3 +344,59 @@ label is a feature, not a hedge.
   for a later cycle, not this spec).
 - Any change to the monthly article format (spec 007) — this
   spec consumes its content families; it does not alter them.
+
+## Amendment 1 — owner direction 2026-10-06 (duplicate Pulse cards removed)
+
+**Direction (Tristen, 2026-10-06):** reviewing the live
+page, with a screenshot of the Highlights region and the
+Pulse band below it: "fix repeat cards. cannot do that."
+**Approval basis:** owner-directed — approved (the same
+basis as spec 011 Amendment 2). The wireframes were
+revised first under the standing wireframes-first rule,
+then implementation followed (tasks T008–T012).
+
+**The defect.** FR-003's composition rule opened the
+highlight cards with the four Pulse headline stats. The
+Michigan Pulse band renders immediately below the
+Highlights region carrying the same four values and the
+same computed MoM deltas, in fuller form (with
+sparklines). The cards were pure duplication — the same
+numbers twice in adjacent regions.
+
+**The change.** FR-003 is amended: the highlight cards
+are exactly the outlook + education set — **per outlook
+dataset present**, one top riser card and one top faller
+card (by projected % change; occupation + projected % +
+agency + horizon); then the **education headline figure**
+when a verified education dataset is present. With the
+current committed data that is **five cards** (Michigan
+riser, Michigan faller, U.S. riser, U.S. faller,
+education headline). The four Pulse cards are removed.
+The Pulse statistics' single home on the page is the
+Pulse band directly below the region; they are not
+repeated as cards.
+
+**Unchanged.** The generated insights summary (FR-002)
+is **byte-for-byte unchanged** — it narrates the Pulse
+data in prose; it does not duplicate a display element,
+and nothing in this amendment touches its templates.
+The Pulse band, the Detail region, and everything else
+on the page are untouched.
+
+**Resilience under the amendment (FR-007).** Card
+drop-out is preserved exactly: a card whose underlying
+data is absent does not render. Two original wordings
+are superseded by this amendment: the card list in
+"What this adds" item 1, and FR-007's "Pulse-only
+highlights" fallback — under the amendment, if the
+entire `data/outlook.json` is absent, the Highlights
+region carries the insights summary alone (its Pulse
+sentences still render per FR-002/FR-007) with **no
+cards**, while the Detail region's Pulse table still
+renders. If the Pulse snapshot itself is missing, both
+regions still render absent, as before.
+
+**Flow.** Docs package on `main` (T008); implementation
+and verification on the staging branch (T009–T010);
+promotion `staging` → `main` under spec 010 FR-004
+(T011); closeout (T012).
