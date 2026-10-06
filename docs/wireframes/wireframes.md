@@ -18,6 +18,8 @@ This file is the index, the gate rule, and the revision log.
 - WF-01 Home — desktop · WF-02 Home — mobile (390px)
 - WF-03 Blog index · WF-04 Blog article · WF-05 Privacy policy
 - WF-06 Contact · WF-10 Documents (added 2026-10-05) · WF-11 Signals
+  (Trends & outlook section proposed 2026-10-06 by spec 011 —
+  PENDING OWNER APPROVAL)
 - WF-12 Signals widget (added 2026-10-06, spec 008 — approved +
   implemented 2026-10-06)
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
@@ -119,3 +121,29 @@ as accordion rows.
   JavaScript. Approved by Tristen 2026-10-06 (11:22 EDT) and
   implemented the same day — commit 11873b1; live-verified (served
   `/` carries Home first in both menus, with `aria-current`).
+- **2026-10-06** — REVISION PROPOSED (spec 011-signals-trends-outlook) —
+  **PENDING OWNER APPROVAL — NOT approved, NOT implemented**: WF-11
+  gains a **Trends & outlook** section between the Michigan Pulse
+  band and the five lanes: (1) a market-style **ticker strip** —
+  decorative echo of the board (Pulse series, latest + MoM),
+  aria-hidden, pausing on hover/focus, static under
+  prefers-reduced-motion; it carries no content the static board
+  doesn't (spec 004's no-ticker-as-carrier rule stands); (2) a
+  **trend board** — the four Pulse series as ticker-style rows
+  (latest verbatim, MoM + 12-month-window deltas computed by the
+  generator from series history and labeled "Computed from BLS
+  series", sparkline per row with missing months as breaks, never
+  interpolated); (3) an **outlook board** — "On the rise" /
+  "Falling" occupation rows from the **U.S. BLS Employment
+  Projections** (latest vintage, 10-year horizon, labeled), plus a
+  separately labeled **Michigan DTMB long-term industry
+  projections** group; every row attributed, with the standing
+  caption that projections are the publishing agency's modeled
+  outlook — not Axiovex forecasts, not guarantees; (4) an
+  **education analytics** block — Michigan graduation rate,
+  enrollment, and postsecondary-completions trend rows from a
+  committed, vintaged dataset (CEPI / MISchoolData, IPEDS),
+  refreshed on the sources' release cycle, never hourly-fetched.
+  No invented or model-generated predictions anywhere; the page's
+  "signals, not forecasts" restraint is preserved. Nothing on the
+  live site changes until Tristen approves.
