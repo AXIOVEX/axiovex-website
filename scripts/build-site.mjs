@@ -1565,31 +1565,7 @@ function geoSectionHtml(geo) {
     'talent is, and where it goes. Shading and dot size are the picture; the table or list beside ' +
     'each map is the record.</p>\n' +
     blocks.join('\n') + '\n' +
-    '          <script>\n' +
-    '          (function () {\n' +
-    '            var sec = document.getElementById(\'geo-section\');\n' +
-    '            if (!sec) return;\n' +
-    '            sec.classList.add(\'geo-js\');\n' +
-    '            function activate(group, key) {\n' +
-    '              sec.querySelectorAll(\'[data-geo-btn]\').forEach(function (b) {\n' +
-    '                var parts = b.getAttribute(\'data-geo-btn\').split(\':\');\n' +
-    '                if (parts[0] === group) b.setAttribute(\'aria-pressed\', parts[1] === key ? \'true\' : \'false\');\n' +
-    '              });\n' +
-    '              sec.querySelectorAll(\'[data-geo-layer]\').forEach(function (l) {\n' +
-    '                var parts = l.getAttribute(\'data-geo-layer\').split(\':\');\n' +
-    '                if (parts[0] === group) l.hidden = parts[1] !== key;\n' +
-    '              });\n' +
-    '            }\n' +
-    '            sec.querySelectorAll(\'[data-geo-btn]\').forEach(function (b) {\n' +
-    '              b.addEventListener(\'click\', function () {\n' +
-    '                var parts = b.getAttribute(\'data-geo-btn\').split(\':\');\n' +
-    '                activate(parts[0], parts[1]);\n' +
-    '              });\n' +
-    '            });\n' +
-    '            activate(\'qcew\', \'31-33\');\n' +
-    '            activate(\'ipeds\', \'ALL\');\n' +
-    '          })();\n' +
-    '          </script>';
+    '          <script src="/signals-geo.v1.js"></script>';
   return '          <div class="detail-block geo" id="geo-section">\n' +
     '          <p class="board-kicker">TALENT GEOGRAPHY &mdash; MICHIGAN</p>\n' +
     inner + '\n          </div>';
@@ -1665,24 +1641,7 @@ function detailHtml(pulse, outlook, posts, geo) {
     '          </div>\n' +
     '          <div class="detail-body" id="detail-region">\n' + blocks.join('\n') + '\n          </div>\n' +
     '        </div>\n' +
-    '        <script>\n' +
-    '          (function () {\n' +
-    '            var b = document.getElementById(\'detail-toggle\');\n' +
-    '            var r = document.getElementById(\'detail-region\');\n' +
-    '            var s = document.getElementById(\'detail-sub\');\n' +
-    '            if (!b || !r) return;\n' +
-    '            function set(open) {\n' +
-    '              b.setAttribute(\'aria-expanded\', open ? \'true\' : \'false\');\n' +
-    '              b.textContent = open ? \'Hide details \\u2212\' : \'Show details +\';\n' +
-    '              r.hidden = !open;\n' +
-    '              if (s) s.hidden = open;\n' +
-    '            }\n' +
-    '            set(false);\n' +
-    '            b.addEventListener(\'click\', function () {\n' +
-    '              set(b.getAttribute(\'aria-expanded\') !== \'true\');\n' +
-    '            });\n' +
-    '          })();\n' +
-    '        </script>';
+    '        <script src="/signals-detail.v1.js"></script>';
 }
 
 function fmtUpdated(iso) {

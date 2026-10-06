@@ -84,6 +84,7 @@
 
     <section class="section section-end" style="padding-top: 40px;">
       <div class="container">
+        <h2 class="visually-hidden">Published documents</h2>
         <div class="proof-grid">
 {{DOC_CARDS}}
         </div>
@@ -117,7 +118,7 @@
           </div>
         </div>
         <nav class="footer-col" aria-label="Explore">
-          <h4>Explore</h4>
+          <h3>Explore</h3>
           <a href="/#what-we-do">What we do</a>
           <a href="/#about">About</a>
           <a href="/#faq">FAQ</a>
@@ -125,7 +126,7 @@
           <a href="/signals/">Signals</a>
         </nav>
         <nav class="footer-col" aria-label="Company">
-          <h4>Company</h4>
+          <h3>Company</h3>
           <a href="/contact/">Contact</a>
           <a href="/documents/" aria-current="page">Documents</a>
           <a href="/privacy/">Privacy Policy</a>
@@ -137,22 +138,7 @@
       </div>
     </div>
   </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    (function () {
-      var t = document.querySelector('.nav-toggle');
-      var m = document.getElementById('mobile-menu');
-      if (!t || !m) return;
-      function set(open) {
-        m.classList.toggle('open', open);
-        t.setAttribute('aria-expanded', open ? 'true' : 'false');
-        t.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      }
-      t.addEventListener('click', function () { set(!m.classList.contains('open')); });
-      m.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
-    })();
-  </script>
+  <script src="/site.v1.js"></script>
   <div id="signals-widget"></div>
   <script src="/signals-widget.v1.js" defer></script>
 </body>

@@ -322,7 +322,7 @@
           </details>
           <details class="faq-item">
             <summary>Do you work with government or defense organizations?</summary>
-            <div class="faq-a"><p>Yes. We&rsquo;re members of the Macomb Regional APEX Accelerator and of Velocity &mdash; the MEDC SmartZone Business Incubator, Accelerator, and International Landing Zone serving Macomb County, Michigan. We support organizations pursuing government contracts &mdash; including CMMC readiness, evidence organization, and AI systems for regulated, high-consequence environments.</p></div>
+            <div class="faq-a"><p>We&rsquo;re members of the Macomb Regional APEX Accelerator and of Velocity &mdash; the MEDC SmartZone Business Incubator, Accelerator, and International Landing Zone serving Macomb County, Michigan &mdash; and we support organizations pursuing government contracts, including CMMC readiness, evidence organization, and AI systems for regulated, high-consequence environments.</p></div>
           </details>
           <details class="faq-item" id="faq-evidence">
             <summary>What are evidence and decision systems?</summary>
@@ -359,7 +359,7 @@
         { "@type": "Question", "name": "We're a small manufacturer. Where do we start with AI?", "acceptedAnswer": { "@type": "Answer", "text": "Start with education, then one contained pilot: AI 101 for the team, then a single high-value workflow (quoting, quality documentation, maintenance triage) with a private, measured AI system before expanding." } },
         { "@type": "Question", "name": "How do you handle our data?", "acceptedAnswer": { "@type": "Answer", "text": "Client data stays private: data stays on the client's floor, under their control, processed locally rather than shipped to third-party clouds. Axiovex doesn't train shared models on client data." } },
         { "@type": "Question", "name": "Do you work on jobs and education pipelines?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Beyond AI 101, Axiovex builds audited workforce intelligence and partners with educators and workforce organizations to connect training pipelines to real manufacturing jobs." } },
-        { "@type": "Question", "name": "Do you work with government or defense organizations?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Axiovex Systems is a member of the Macomb Regional APEX Accelerator and of Velocity, the MEDC SmartZone Business Incubator, Accelerator, and International Landing Zone serving Macomb County, Michigan, supporting organizations pursuing government contracts including CMMC readiness and AI systems for regulated environments." } },
+        { "@type": "Question", "name": "Do you work with government or defense organizations?", "acceptedAnswer": { "@type": "Answer", "text": "Axiovex Systems is a member of the Macomb Regional APEX Accelerator and of Velocity, the MEDC SmartZone Business Incubator, Accelerator, and International Landing Zone serving Macomb County, Michigan, and supports organizations pursuing government contracts, including CMMC readiness and AI systems for regulated environments." } },
         { "@type": "Question", "name": "What are evidence and decision systems?", "acceptedAnswer": { "@type": "Answer", "text": "Systems that make what is known, and what isn't, explicit: the evidence, assumptions, uncertainty, and criteria behind a decision. Axiovex builds audited workforce intelligence and evidence-centered analysis so organizations decide on facts; its public Michigan workforce research is an example." } },
         { "@type": "Question", "name": "Do you build custom software, or only advise?", "acceptedAnswer": { "@type": "Answer", "text": "Both: advising (training, evidence-centered analysis, technical strategy) and building (private AI infrastructure including inference planning, GPU sizing and local AI routing, prototypes, and embedded engineering inside the client's team). The mix depends on the problem." } },
         { "@type": "Question", "name": "What is workforce intelligence?", "acceptedAnswer": { "@type": "Answer", "text": "The practice of turning labor-market evidence into decisions: which skills are genuinely in demand, which training pipelines connect to real jobs, where the gaps are. Axiovex builds audited workforce intelligence systems and publishes its Michigan workforce research openly." } },
@@ -395,7 +395,7 @@
           </div>
         </div>
         <nav class="footer-col" aria-label="Explore">
-          <h4>Explore</h4>
+          <h3>Explore</h3>
           <a href="#what-we-do">What we do</a>
           <a href="#about">About</a>
           <a href="#faq">FAQ</a>
@@ -403,7 +403,7 @@
           <a href="/signals/">Signals</a>
         </nav>
         <nav class="footer-col" aria-label="Company">
-          <h4>Company</h4>
+          <h3>Company</h3>
           <a href="/contact/">Contact</a>
           <a href="/documents/">Documents</a>
           <a href="/privacy/">Privacy Policy</a>
@@ -415,50 +415,7 @@
       </div>
     </div>
   </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    (function () {
-      var t = document.querySelector('.nav-toggle');
-      var m = document.getElementById('mobile-menu');
-      if (!t || !m) return;
-      function set(open) {
-        m.classList.toggle('open', open);
-        t.setAttribute('aria-expanded', open ? 'true' : 'false');
-        t.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      }
-      t.addEventListener('click', function () { set(!m.classList.contains('open')); });
-      m.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
-    })();
-    // FAQ: one open at a time; EXPLORE links land on an open answer.
-    (function () {
-      var items = Array.prototype.slice.call(document.querySelectorAll('.faq-item'));
-      if (!items.length) return;
-      items.forEach(function (d) {
-        d.addEventListener('toggle', function () {
-          if (d.open) items.forEach(function (o) { if (o !== d) o.open = false; });
-        });
-      });
-      function openFromHash() {
-        var el = location.hash && document.querySelector(location.hash);
-        if (el && el.classList && el.classList.contains('faq-item')) el.open = true;
-      }
-      window.addEventListener('hashchange', openFromHash);
-      openFromHash();
-    })();
-    // Scroll reveal (progressive: content is visible if this never runs).
-    (function () {
-      if (!('IntersectionObserver' in window)) return;
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      var els = document.querySelectorAll('main .section, main .cta-band');
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-        });
-      }, { threshold: 0.08 });
-      els.forEach(function (el) { el.classList.add('rv'); io.observe(el); });
-    })();
-  </script>
+  <script src="home.v1.js"></script>
   <div id="signals-widget"></div>
   <script src="signals-widget.v1.js" defer></script>
 </body>
