@@ -129,3 +129,8 @@ the weekly report; the push-triggered check stays as-is.
   (~/workspace/system/website-health/) the same day. A bare code with
   no meaning is a format defect. This strengthens the existing
   plain-English rule; no other format element changed.
+- **Amendment 2 (2026-10-07):** fetcher now splits /api/contact and
+  5xx by hostname (production vs staging) and treats unsampled
+  rollups as authoritative over adaptive samples (phantom-status
+  guard) — implemented after the Oct 6 incident investigation
+  attributed all server failures to staging.
