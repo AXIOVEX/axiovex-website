@@ -1,4 +1,3 @@
+# STAGING ONLY — do not promote to main
 User-agent: *
-Allow: /
-
-Sitemap: https://axiovexsystems.com/sitemap.xml
+Disallow: /
