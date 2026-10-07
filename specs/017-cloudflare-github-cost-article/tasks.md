@@ -34,6 +34,16 @@
   Note: LinkedIn automatically rendered a small preview card wherever
   the axiovexsystems.com domain appears in the approved text — its own
   rendering, not an added attachment.
+  **SUPERSESSION (2026-10-07 evening):** the pair above used the
+  originally approved text. Later the same day Tristen directed "go
+  with the new not the old post" — the re-hooked texts drafted under
+  the hook-first copy standard (~/workspace/your_files/hook-drafts-
+  2026-10-07.md) were posted as the canonical pair and the original
+  pair was deleted (old share already gone when checked; old personal
+  post deleted and verified "Post not found" on both old URLs):
+  - Personal post (NEW text): https://www.linkedin.com/feed/update/urn:li:share:7513738020374650880/
+  - Axiovex Systems share (NEW text): https://www.linkedin.com/feed/update/urn:li:activity:7513738525733920769/
+  Both new URLs verified live after the deletion.
 - [x] T006 **Amendment (Tristen direction 2026-10-07, after publication):**
   expand the article with GoDaddy + Namecheap comparisons and database
   + video-streaming options for all stacks. Built and verified on
