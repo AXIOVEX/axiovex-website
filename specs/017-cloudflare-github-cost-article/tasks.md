@@ -34,8 +34,15 @@
   Note: LinkedIn automatically rendered a small preview card wherever
   the axiovexsystems.com domain appears in the approved text — its own
   rendering, not an added attachment.
-- [ ] T006 **Amendment (Tristen direction 2026-10-07, after publication):**
+- [x] T006 **Amendment (Tristen direction 2026-10-07, after publication):**
   expand the article with GoDaddy + Namecheap comparisons and database
   + video-streaming options for all stacks. Built and verified on
   STAGING (commit `e9b28ee`); staging presentation made 2026-10-07;
-  production promotion awaits Tristen's review approval.
+  **PROMOTED 2026-10-07 on Tristen's approval** — main fast-forwarded
+  to staging tip `55060e5`, guard restoration commit `c5e4e0a`
+  (FR-004 proof: `git diff bb3095a..HEAD -- robots.txt _headers`
+  = 0 lines). Production verified live: amended article serves the
+  GoDaddy/Namecheap + database/video sections, no `x-robots-tag`,
+  production robots `Allow: /`; post-promotion screenshots of the
+  production build at desktop + mobile match the staging captures
+  exactly (page heights 7,495 / 15,431 px, no overflow).
