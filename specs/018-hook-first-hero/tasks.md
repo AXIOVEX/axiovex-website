@@ -41,6 +41,23 @@
   **SATISFIED 2026-10-07**: Tristen reviewed the hero on staging
   (screenshots + staging URL presented) and directed verbatim:
   "Approved" (2026-10-07 ~19:20 EDT). Promotion authorized.
-- [ ] T007 (after T006) Promotion staging → main per spec 010
-  FR-004 (guard proofs), production verification. Blocked on
-  T006.
+- [x] T007 (after T006) Promotion staging → main per spec 010
+  FR-004 (guard proofs), production verification. DONE
+  2026-10-07: approval record `a6569a0` on main; promotion merge
+  `be1d8e0` (staging → main, production guard files restored
+  inside the unpushed merge). FR-004 proofs: `git diff
+  a6569a0..HEAD -- robots.txt _headers` = 0 lines; promotion file
+  list = `index.html` only (2 lines — the hero H1 + lede).
+  Production verified live: https://axiovexsystems.com/ → 200,
+  new H1 + lede served verbatim, NO `x-robots-tag` header,
+  robots.txt = Allow version. Playwright screenshots of the
+  production (main) build: prod-desktop-top/full.png +
+  prod-mobile-top/full.png in `~/workspace/your_files/
+  spec018-review/` — H1 centered, wraps as on staging (4 lines
+  desktop / 6 mobile), no horizontal overflow at either width
+  (scrollWidth == innerWidth). Sync back: main → staging merge
+  `79213e6` + guard re-application commit `1a4a10b` BEFORE push
+  (origin/staging never carried an unguarded tree); staging
+  guards verified after (robots Disallow; `_headers` delta vs
+  production = exactly the one noindex line; live staging 200
+  with `x-robots-tag: noindex, nofollow`).
