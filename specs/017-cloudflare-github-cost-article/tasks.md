@@ -11,7 +11,31 @@
 - [x] T004 **GATE — Tristen reviews the article on staging** (plus the two
   LinkedIn drafts). **SATISFIED 2026-10-07: Tristen reviewed and directed
   "Approve — promote to production, then post both LinkedIn items."**
-- [ ] T005 (after T004) Promotion staging → main per spec 010, production
+- [x] T005 (after T004) Promotion staging → main per spec 010, production
   verification, then LinkedIn: personal post first, Axiovex Systems
   share of it, article URL as first comment — each under Tristen's
   direction at the time.
+  **COMPLETED 2026-10-07.** Promotion: main fast-forwarded to staging;
+  guard restoration commit `566513c` put production `robots.txt` +
+  `_headers` back (spec 010 FR-004 proof: `git diff fed5a56..HEAD --
+  robots.txt _headers` = 0 lines). Production verified live
+  (https://axiovexsystems.com/blog/cloudflare-github-website-costs/ —
+  200, correct title, no `x-robots-tag`, production sitemap contains the
+  article) and screenshot-verified at desktop + mobile against the
+  staging captures (identical build).
+  LinkedIn (posted 2026-10-07 under Tristen's T004 direction, verified
+  live with exact approved text):
+  - Personal post (Tristen Pierson), article link as first comment:
+    https://www.linkedin.com/feed/update/urn:li:share:7513588651642064897/
+  - Axiovex Systems share ("Repost with thoughts"), article link added
+    as the share's first comment (the original's comment does not
+    surface in share view):
+    https://www.linkedin.com/feed/update/urn:li:activity:7513589109395714048/
+  Note: LinkedIn automatically rendered a small preview card wherever
+  the axiovexsystems.com domain appears in the approved text — its own
+  rendering, not an added attachment.
+- [ ] T006 **Amendment (Tristen direction 2026-10-07, after publication):**
+  expand the article with GoDaddy + Namecheap comparisons and database
+  + video-streaming options for all stacks. Built and verified on
+  STAGING (commit `e9b28ee`); staging presentation made 2026-10-07;
+  production promotion awaits Tristen's review approval.
