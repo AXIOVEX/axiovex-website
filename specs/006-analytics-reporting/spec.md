@@ -118,3 +118,14 @@ the weekly report; the push-triggered check stays as-is.
 - Any change to the website itself (this spec is reporting only).
 - Logpush / raw log retention (paid-tier territory; not needed for
   these reports).
+
+## Amendments
+
+- **Amendment 1 (2026-10-07, owner direction):** status codes in the
+  reports must carry their plain-English meaning, not bare numbers.
+  Every individual code named in a report (status lists, the
+  /api/contact breakdown, insights) and in the chat summary is glossed
+  at first use per the status-code glossary added to REPORT-FORMAT.md
+  (~/workspace/system/website-health/) the same day. A bare code with
+  no meaning is a format defect. This strengthens the existing
+  plain-English rule; no other format element changed.
