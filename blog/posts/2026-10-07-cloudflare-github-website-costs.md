@@ -79,6 +79,14 @@ This site is the working example. Its files live in GitHub; Cloudflare delivers 
 
 None of that required finding a host. There is no host. There is a repository and a delivery network, and between them, nothing to patch, reboot, or get billed for at 3 a.m.
 
+## Want to do it yourself? Take the toolkit — it's free.
+
+Everything in this article is a method, and methods shouldn't be secrets. So we packaged ours and published it, free, under an open-source license: **[website-forge](https://github.com/AXIOVEX/website-forge)** — the complete head start for building your website *with your own AI assistant*.
+
+Hand it to Claude Code, Cursor, or ChatGPT and it walks your AI through the same process this site was built with: write the spec before the code, draw the wireframes before the pages, build on a staging copy you review before anything goes live, hold search and AI-answer visibility near perfect with a weekly check, and verify every change with real screenshots instead of hope. It includes the skill file that teaches the AI the method, an MCP server that audits any website and generates the robots/sitemap/llms files for it, ready-to-copy templates, checklists, and the verified cost comparison this article is based on.
+
+Use it to build your own site for the same $0 a month. And if, somewhere in the middle, you decide you'd rather have a person in your corner — that's the offer in the next section.
+
 ## Starting a business? We'll set this up with you.
 
 If you're starting something, your technology foundation should cost you almost nothing to run and exactly nothing to worry about — so your money and attention go to the business itself. That's why we offer a **startup business support package** built on everything above: we get your domain, your website, and your professional email set up properly from day one, make sure Google and the AI answer engines can actually find you, set up your traffic reporting so you can see it's working — and then we stay in your corner as the person you call when something needs changing or stops making sense.
