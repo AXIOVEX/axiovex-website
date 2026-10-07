@@ -46,3 +46,17 @@
   production robots `Allow: /`; post-promotion screenshots of the
   production build at desktop + mobile match the staging captures
   exactly (page heights 7,495 / 15,431 px, no overflow).
+
+- [x] T007 **Restructure (Tristen direction 2026-10-07, after T006):**
+  fold all hosting comparisons into ONE unified table (all five
+  options × cost / domain / bandwidth / firewall / "the honest
+  catch"), keep the database and video tables as the adders, and add
+  a **pricing disclaimer**: all prices as published on October 7,
+  2026, the article's publication date; modeled figures labeled
+  modeled. Built + screenshot-verified on STAGING (commit `98c6d4c`,
+  no overflow desktop/mobile). **PROMOTED 2026-10-07 on Tristen's
+  approval** — guard restoration commit `557437a` (FR-004 proof:
+  `git diff c208b29..HEAD -- robots.txt _headers` = 0 lines).
+  Production verified live (disclaimer serving, no `x-robots-tag`,
+  production robots `Allow: /`); production-build screenshots match
+  the staging captures exactly (page heights 8,153 / 15,168 px).
