@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-06T23:48:18.586Z",
+  "updatedUtc": "2026-10-07T14:46:52.761Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -63,6 +63,14 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
+      "title": "BD strikes $19B supply chain pact with Trump administration",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-06",
+      "url": "https://www.manufacturingdive.com/news/bd-supply-chain-pact-trump-administration/832263/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
       "title": "Bayer to invest $2.2B in Ohio pharmaceutical facility",
       "source": "Manufacturing Dive",
       "date": "2026-10-06",
@@ -99,14 +107,6 @@
       "source": "CISA",
       "date": "2026-10-06",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Hitachi Energy REB500",
-      "source": "CISA",
-      "date": "2026-10-06",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05"
     },
     {
       "lane": "ai-standards",
