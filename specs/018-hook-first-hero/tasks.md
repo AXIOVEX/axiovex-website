@@ -37,8 +37,10 @@
   (6 wrapped lines), lede centered, no horizontal overflow at
   either width (scrollWidth == innerWidth), layout intact — no
   restyle needed. Production verified untouched (old H1 live).
-- [ ] T006 **GATE — Tristen reviews the hero on staging.** OPEN.
-  Promotion does not proceed without his go.
+- [x] T006 **GATE — Tristen reviews the hero on staging.**
+  **SATISFIED 2026-10-07**: Tristen reviewed the hero on staging
+  (screenshots + staging URL presented) and directed verbatim:
+  "Approved" (2026-10-07 ~19:20 EDT). Promotion authorized.
 - [ ] T007 (after T006) Promotion staging → main per spec 010
   FR-004 (guard proofs), production verification. Blocked on
   T006.
