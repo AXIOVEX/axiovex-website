@@ -349,3 +349,27 @@ time remaining on its expiry. The hourly check's active-
 banner watch (FR-010) is the mechanism that notices: it
 recommends takedown or replacement rather than letting an
 entry ride out its clock by default.
+
+## Amendment 2 — Staleness guard for the hourly check (2026-10-07, owner direction)
+
+Context: on 2026-10-07 the hourly check found its input snapshot
+(data/signals.json) ~14.5 hours old. The signals-sync Action is
+scheduled hourly but GitHub fires it only every ~4–8 hours in
+practice, and it writes only on content change — so the check's
+3-hour scan window could not be certified overnight. A fresh
+manual comparison proved nothing qualifying had been missed, and
+a dispatched refresh restored currency, but the gap must not
+rely on luck.
+
+FR-014 (staleness guard): at the start of each run the check
+compares the snapshot's updatedUtc to now. If it is more than
+3 hours old, the run (i) dispatches a refresh through the
+pipeline's own mechanism (`gh workflow run signals-sync.yml`;
+no hand-edits to data files), (ii) records the episode in its
+state file, (iii) reports one short failure line to the owner —
+rate-limited to at most one such line per 6 hours via the state
+file's lastStaleReportUtc, while the dispatch itself happens on
+every stale run — and (iv) logs the run as degraded rather than
+a clean no-candidate. Implemented in the website-breaking-news-check
+job body the same day; the FR-010/FR-012 detection-and-approval
+model is unchanged (the job still never posts).

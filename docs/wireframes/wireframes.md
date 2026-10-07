@@ -624,3 +624,25 @@ as accordion rows.
   records the shipped style so the wireframes stay
   truthful. Promoted per spec 010 (promotion
   `1c2c1ee`, FR-004 proofs empty).
+- **2026-10-07** — REVISION APPROVED by Tristen 2026-10-07
+  (spec 018-hook-first-hero; owner decision verbatim:
+  "Go with the composite — Option 2 headline + Option 1
+  lede"): WF-01 hero copy goes hook-first under the
+  hook-first copy standard adopted the same day (public
+  surfaces open with the outcome in X→Y form). NEW hero
+  H1: "AI your team can actually use. Infrastructure on
+  your floor. Evidence you can defend." NEW lede: "Hand
+  us the problem your team keeps routing around, and
+  you get back a working system, and people who can run
+  it without us." The WF-02 (mobile) and WF-07 (tablet)
+  hero frames draw the same H1. Copy only — hero
+  layout, spacing, and buttons unchanged; no
+  stylesheet change. The replaced H1 line, "Engineering
+  clarity into difficult systems.", remains the site
+  slogan (JSON-LD), the WF-G4 footer mission, and the
+  OG/Twitter descriptions — it is not removed sitewide.
+  Every phrase of the new copy maps to an existing
+  substantiated claim (spec 018 claims C-018-1…5); no
+  new claim is introduced. Implemented on staging per
+  spec 010; promotion awaits Tristen's staging review
+  (spec 018 T006).
