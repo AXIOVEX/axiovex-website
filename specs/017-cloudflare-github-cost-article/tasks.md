@@ -8,9 +8,9 @@
   site built (3 articles, sitemap 10 URLs, feed updated), generated diff
   scoped to the article (new page + blog index/feed/sitemap + the other
   articles' "more analysis" links), committed + pushed to staging.
-- [ ] T004 **GATE — Tristen reviews the article on staging** (plus the two
-  LinkedIn drafts). Production promotion and LinkedIn posting do not
-  start without his go-ahead.
+- [x] T004 **GATE — Tristen reviews the article on staging** (plus the two
+  LinkedIn drafts). **SATISFIED 2026-10-07: Tristen reviewed and directed
+  "Approve — promote to production, then post both LinkedIn items."**
 - [ ] T005 (after T004) Promotion staging → main per spec 010, production
   verification, then LinkedIn: personal post first, Axiovex Systems
   share of it, article URL as first comment — each under Tristen's
