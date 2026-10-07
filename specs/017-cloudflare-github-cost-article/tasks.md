@@ -60,3 +60,11 @@
   Production verified live (disclaimer serving, no `x-robots-tag`,
   production robots `Allow: /`); production-build screenshots match
   the staging captures exactly (page heights 8,153 / 15,168 px).
+
+- [x] T008 **Toolkit link (Tristen direction 2026-10-07):** new section
+  "Want to do it yourself? Take the toolkit — it's free." linking
+  https://github.com/AXIOVEX/website-forge as the AI head start,
+  placed before the startup-package offer. Staging `2ae153f`,
+  screenshot-verified. **PROMOTED 2026-10-07 on Tristen's direction**
+  — guard restoration `19d568a` (FR-004 proof vs `dddf624`: 0 lines).
+  Production verified live (GitHub link serving).
