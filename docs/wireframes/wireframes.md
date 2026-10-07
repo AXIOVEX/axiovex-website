@@ -611,3 +611,16 @@ as accordion rows.
   diffs; axe finding sets unchanged from baseline
   (the signals link uses the existing `.inline-link`
   style — no stylesheet change).
+- **2026-10-06** — Owner-directed accessibility fix
+  (spec 001 residual R-1d; remedy approved by
+  Tristen 2026-10-06): breadcrumb links in the page
+  heads (the `.crumb` pattern under WF-G1) are now
+  underlined — `styles.v32.css` (`.crumb a`:
+  underline in the design's `var(--line)` decoration
+  color, 3px offset; hover cyan) — so crumb links
+  are distinguished by more than color (axe
+  `link-in-text-block` closed). No frame redraw: no
+  layout, spacing, or structure change. This entry
+  records the shipped style so the wireframes stay
+  truthful. Promoted per spec 010 (promotion
+  `1c2c1ee`, FR-004 proofs empty).

@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-06T19:32:17.877Z",
+  "updatedUtc": "2026-10-06T23:48:18.586Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -23,10 +23,10 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "2027 manufacturing conferences and trade shows",
-      "source": "Manufacturing Dive",
+      "title": "Why Supply Chain Automation Depends on Alignment, Not Just Technology",
+      "source": "Automation Alley",
       "date": "2026-10-06",
-      "url": "https://www.manufacturingdive.com/news/2027-manufacturing-conferences-and-trade-shows/832164/"
+      "url": "https://automationalley.com/2026/10/06/why-supply-chain-automation-depends-on-alignment-not-just-technology/"
     },
     {
       "lane": "michigan",
@@ -55,6 +55,14 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
+      "title": "2027 manufacturing conferences and trade shows",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-06",
+      "url": "https://www.manufacturingdive.com/news/2027-manufacturing-conferences-and-trade-shows/832164/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
       "title": "Bayer to invest $2.2B in Ohio pharmaceutical facility",
       "source": "Manufacturing Dive",
       "date": "2026-10-06",
@@ -67,14 +75,6 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-06",
       "url": "https://www.manufacturingdive.com/news/boeing-lockheed-martin-pac-3-mse-seeker-contract-huntsville-alabama/832170/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Why Supply Chain Automation Depends on Alignment, Not Just Technology",
-      "source": "Automation Alley",
-      "date": "2026-10-06",
-      "url": "https://automationalley.com/2026/10/06/why-supply-chain-automation-depends-on-alignment-not-just-technology/"
     },
     {
       "lane": "ot-security",

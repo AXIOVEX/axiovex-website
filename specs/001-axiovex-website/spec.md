@@ -65,8 +65,11 @@ manifest's "Updated" date advanced.
   superintelligence (ANI → AGI → ASI ladder) in the FAQ (visible +
   FAQPage JSON-LD), llms.txt, and the terminology article.
 - **FR-008**: SEO/AEO health monitored weekly + on push against baseline
-  (AEO 100/100, Seobility 91) per the monitoring runbook; safe technical
+  (AEO 100/100, Seobility 90) per the monitoring runbook; safe technical
   fixes may auto-apply; claims/branding changes always surface to Tristen.
+  (Baseline reset, 2026-10-06: the Seobility baseline was formally reset
+  from 91 to 90 at Tristen's direction — the official readings have been
+  90 since 2026-10-05, including the fresh 2026-10-06 rescan.)
 - **FR-009**: No contact form and no invented proof anywhere on the site;
   contact routes are the published mailboxes (start@, legal@).
 
@@ -74,17 +77,21 @@ manifest's "Updated" date advanced.
 
 - **R-1**: The compliance/security/accessibility audit (T013–T016) was
   executed 2026-10-06 (evidence: claims-audit.md in this folder) and the
-  fixes are live. Of the owner-gated residuals, only R-1b remains open:
+  fixes are live. All four owner-gated residuals are now CLOSED:
   - **R-1a (T017, owner decision)** — CLOSED 2026-10-06: decided
     (Disclaimer now, Terms deferred) and shipped live via spec 016;
     see tasks.md T017.
-  - **R-1b (owner dashboard action)**: Cloudflare Web Analytics (RUM) is
-    configured for the zone with automatic beacon installation armed.
-    The beacon does not in fact inject into this Pages-served site
-    (verified on every page type), and the privacy copy was narrowed so
-    it is true regardless — but the durable fix is disabling the
-    automatic setup in the dashboard (or extending the ops token with
-    Web Analytics edit; the API write is currently denied, 403).
+  - **R-1b (owner dashboard action)** — CLOSED 2026-10-06: Cloudflare
+    Web Analytics (RUM) automatic setup for axiovexsystems.com was
+    disabled in the dashboard — the site now runs "Enable with JS
+    Snippet installation" (manual install only), verified persisted in
+    the Web Analytics site list and the Manage site view. The beacon
+    never injected into this Pages-served site (verified on every page
+    type during T013) and the privacy copy had already been narrowed so
+    it was true regardless; the armed auto-install configuration is now
+    off. The API route stays denied (the ops token has no Web Analytics
+    edit permission, 403), so the change was executed in a signed-in
+    browser session under the owner's direction.
   - **R-1c (owner-confirmed practice claims)** — CLOSED 2026-10-06:
     the owner confirmed both categorical claims as accurate (client
     data "not shipped to third-party clouds"; "We don't train shared
@@ -93,10 +100,11 @@ manifest's "Updated" date advanced.
     lost at write time), no copy changed. The jobs-FAQ "partner with
     educators…" awareness item was narrowed in the same pass
     ("partner with" → "work with", visible + JSON-LD).
-  - **R-1d (design decision)**: breadcrumb links are distinguished by
-    color alone (axe `link-in-text-block`); the owner approved the
-    underline remedy 2026-10-06 and the fix ships in the R-1c/R-1d
-    closure pass (styles.v32.css) — closure record follows at
-    promotion.
+  - **R-1d (design decision)** — CLOSED 2026-10-06: the owner
+    approved the underline remedy and it shipped in styles.v32.css
+    (breadcrumb links underlined — `.crumb a`, `var(--line)`
+    decoration, 3px offset; promotion `1c2c1ee`). Axe before/after on
+    the local build: `link-in-text-block` gone from every tested page
+    (privacy, disclaimer, article, home), no new findings.
   No compliance claim may be strengthened on the basis of this audit;
   website hygiene is not organizational compliance (constitution §I).
