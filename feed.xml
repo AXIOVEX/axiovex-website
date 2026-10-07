@@ -6,7 +6,14 @@
   <description>Analysis from Axiovex Systems: AI, manufacturing, and Michigan workforce intelligence.</description>
   <language>en-US</language>
   <atom:link href="https://axiovexsystems.com/feed.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 05 Oct 2026 12:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 07 Oct 2026 12:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Your website doesn't need a cloud bill: what hosting actually costs</title>
+    <link>https://axiovexsystems.com/blog/cloudflare-github-website-costs/</link>
+    <guid isPermaLink="true">https://axiovexsystems.com/blog/cloudflare-github-website-costs/</guid>
+    <pubDate>Wed, 07 Oct 2026 12:00:00 GMT</pubDate>
+    <description>A business website on GitHub + Cloudflare costs $0 a month in hosting and about $10 a year for the domain. The same site on AWS or Azure can run into real money — mostly for power a website never uses. Here is the math, and an offer.</description>
+  </item>
   <item>
     <title>What superintelligence actually means — and why today's AI isn't it</title>
     <link>https://axiovexsystems.com/blog/what-superintelligence-means/</link>
