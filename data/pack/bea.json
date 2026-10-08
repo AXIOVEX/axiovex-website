@@ -1,7 +1,7 @@
 {
   "source": "BEA Regional",
   "publisher": "U.S. Bureau of Economic Analysis",
-  "retrievedUtc": "2026-10-08T20:37:18.000Z",
+  "retrievedUtc": "2026-10-08T20:39:08.000Z",
   "vintage": "BEA Regional dataset, Year=LAST5 request filtered to the latest returned year per table (CAGDP2 year 2024, CAINC1 year 2024)",
   "referencePeriod": "2024",
   "series": [
@@ -685,340 +685,340 @@
     },
     {
       "id": "cainc1-percapita",
-      "label": "County per capita personal income (CAINC1 LineCode 2), Michigan counties, 2024",
+      "label": "County per capita personal income (CAINC1 LineCode 3), Michigan counties, 2024",
       "unit": "Dollars",
       "values": [
         {
           "name": "Alcona",
-          "value": 10624
+          "value": 52130
         },
         {
           "name": "Alger",
-          "value": 8695
+          "value": 46833
         },
         {
           "name": "Allegan",
-          "value": 122429
+          "value": 60514
         },
         {
           "name": "Alpena",
-          "value": 28903
+          "value": 54180
         },
         {
           "name": "Antrim",
-          "value": 24536
+          "value": 63131
         },
         {
           "name": "Arenac",
-          "value": 15087
+          "value": 51950
         },
         {
           "name": "Baraga",
-          "value": 8169
+          "value": 45699
         },
         {
           "name": "Barry",
-          "value": 64025
+          "value": 60378
         },
         {
           "name": "Bay",
-          "value": 102651
+          "value": 55627
         },
         {
           "name": "Benzie",
-          "value": 18520
+          "value": 63595
         },
         {
           "name": "Berrien",
-          "value": 152703
+          "value": 64094
         },
         {
           "name": "Branch",
-          "value": 46187
+          "value": 47018
         },
         {
           "name": "Calhoun",
-          "value": 133785
+          "value": 50199
         },
         {
           "name": "Cass",
-          "value": 51550
+          "value": 59552
         },
         {
           "name": "Charlevoix",
-          "value": 26105
+          "value": 76513
         },
         {
           "name": "Cheboygan",
-          "value": 25964
+          "value": 54043
         },
         {
           "name": "Chippewa",
-          "value": 36253
+          "value": 48932
         },
         {
           "name": "Clare",
-          "value": 31405
+          "value": 45627
         },
         {
           "name": "Clinton",
-          "value": 80050
+          "value": 63057
         },
         {
           "name": "Crawford",
-          "value": 13599
+          "value": 45310
         },
         {
           "name": "Delta",
-          "value": 36687
+          "value": 50325
         },
         {
           "name": "Dickinson",
-          "value": 25995
+          "value": 59204
         },
         {
           "name": "Eaton",
-          "value": 109494
+          "value": 56293
         },
         {
           "name": "Emmet",
-          "value": 33949
+          "value": 80004
         },
         {
           "name": "Genesee",
-          "value": 402279
+          "value": 53595
         },
         {
           "name": "Gladwin",
-          "value": 25995
+          "value": 48540
         },
         {
           "name": "Gogebic",
-          "value": 14217
+          "value": 53587
         },
         {
           "name": "Grand Traverse",
-          "value": 96625
+          "value": 71687
         },
         {
           "name": "Gratiot",
-          "value": 41372
+          "value": 46618
         },
         {
           "name": "Hillsdale",
-          "value": 45590
+          "value": 46827
         },
         {
           "name": "Houghton",
-          "value": 38041
+          "value": 47874
         },
         {
           "name": "Huron",
-          "value": 30780
+          "value": 63026
         },
         {
           "name": "Ingham",
-          "value": 290427
+          "value": 54120
         },
         {
           "name": "Ionia",
-          "value": 66250
+          "value": 45022
         },
         {
           "name": "Iosco",
-          "value": 25361
+          "value": 52230
         },
         {
           "name": "Iron",
-          "value": 11709
+          "value": 53507
         },
         {
           "name": "Isabella",
-          "value": 65072
+          "value": 49936
         },
         {
           "name": "Jackson",
-          "value": 160233
+          "value": 51569
         },
         {
           "name": "Kalamazoo",
-          "value": 264780
+          "value": 65811
         },
         {
           "name": "Kalkaska",
-          "value": 18618
+          "value": 48253
         },
         {
           "name": "Kent",
-          "value": 673002
+          "value": 73492
         },
         {
           "name": "Keweenaw",
-          "value": 2161
+          "value": 62316
         },
         {
           "name": "Lake",
-          "value": 13005
+          "value": 39505
         },
         {
           "name": "Lapeer",
-          "value": 89168
+          "value": 56585
         },
         {
           "name": "Leelanau",
-          "value": 22871
+          "value": 92189
         },
         {
           "name": "Lenawee",
-          "value": 97746
+          "value": 53030
         },
         {
           "name": "Livingston",
-          "value": 196976
+          "value": 75839
         },
         {
           "name": "Luce",
-          "value": 6328
+          "value": 39680
         },
         {
           "name": "Mackinac",
-          "value": 11144
+          "value": 59779
         },
         {
           "name": "Macomb",
-          "value": 886175
+          "value": 60760
         },
         {
           "name": "Manistee",
-          "value": 25519
+          "value": 51847
         },
         {
           "name": "Marquette",
-          "value": 67979
+          "value": 51849
         },
         {
           "name": "Mason",
-          "value": 29093
+          "value": 53069
         },
         {
           "name": "Mecosta",
-          "value": 41947
+          "value": 46058
         },
         {
           "name": "Menominee",
-          "value": 23050
+          "value": 51492
         },
         {
           "name": "Midland",
-          "value": 84022
+          "value": 67162
         },
         {
           "name": "Missaukee",
-          "value": 15239
+          "value": 47035
         },
         {
           "name": "Monroe",
-          "value": 156045
+          "value": 61697
         },
         {
           "name": "Montcalm",
-          "value": 69314
+          "value": 43449
         },
         {
           "name": "Montmorency",
-          "value": 9828
+          "value": 45102
         },
         {
           "name": "Muskegon",
-          "value": 177428
+          "value": 51283
         },
         {
           "name": "Newaygo",
-          "value": 51504
+          "value": 48142
         },
         {
           "name": "Oakland",
-          "value": 1296888
+          "value": 93579
         },
         {
           "name": "Oceana",
-          "value": 27014
+          "value": 50878
         },
         {
           "name": "Ogemaw",
-          "value": 20985
+          "value": 45525
         },
         {
           "name": "Ontonagon",
-          "value": 5824
+          "value": 51710
         },
         {
           "name": "Osceola",
-          "value": 23484
+          "value": 51435
         },
         {
           "name": "Oscoda",
-          "value": 8596
+          "value": 44109
         },
         {
           "name": "Otsego",
-          "value": 26083
+          "value": 52732
         },
         {
           "name": "Ottawa",
-          "value": 306235
+          "value": 66678
         },
         {
           "name": "Presque Isle",
-          "value": 13230
+          "value": 51752
         },
         {
           "name": "Roscommon",
-          "value": 23932
+          "value": 50345
         },
         {
           "name": "Saginaw",
-          "value": 187714
+          "value": 52699
         },
         {
           "name": "Sanilac",
-          "value": 40293
+          "value": 51754
         },
         {
           "name": "Schoolcraft",
-          "value": 8178
+          "value": 52654
         },
         {
           "name": "Shiawassee",
-          "value": 67982
+          "value": 52873
         },
         {
           "name": "St. Clair",
-          "value": 160308
+          "value": 57943
         },
         {
           "name": "St. Joseph",
-          "value": 61171
+          "value": 51660
         },
         {
           "name": "Tuscola",
-          "value": 52757
+          "value": 49841
         },
         {
           "name": "Van Buren",
-          "value": 76129
+          "value": 54912
         },
         {
           "name": "Washtenaw",
-          "value": 373875
+          "value": 79736
         },
         {
           "name": "Wayne",
-          "value": 1771063
+          "value": 55715
         },
         {
           "name": "Wexford",
-          "value": 34460
+          "value": 48149
         }
       ]
     }

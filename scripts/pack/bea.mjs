@@ -13,8 +13,12 @@
  *           current dollars (UnitOfMeasure is read from the rows at
  *           runtime — county GDP is published in thousands of dollars).
  *   CAINC1  County personal income summary. LineCode=1 = total personal
- *           income (thousands of dollars), LineCode=2 = per capita
- *           personal income (dollars). Units likewise read from rows.
+ *           income (thousands of dollars), LineCode=2 = population
+ *           (persons), LineCode=3 = per capita personal income (dollars).
+ *           CORRECTED 2026-10-08 on the first live run: the docs-based
+ *           L2=per-capita assumption was wrong — Oakland County L2 2024
+ *           returned 1,296,888 (its population) and L3 returned $93,579
+ *           (per capita, unit Dollars). Units likewise read from rows.
  *
  * Year semantics (BEA API User Guide): Year accepts a comma list, ALL,
  * LAST10, or LAST5 (the default). There is no bare "LAST". This module
@@ -35,8 +39,16 @@
  *
  * Probe (2026-10-08, placeholder UserID): HTTP 200 with in-body error
  * APIErrorCode 4, "This UserId is not active" — endpoint, dataset and
- * parameter shape accepted; the failure was the key only. KEY PENDING
- * (BEA_API_KEY not yet registered); not verified end-to-end.
+ * parameter shape accepted; the failure was the key only.
+ *
+ * LIVE STATE (2026-10-08): the key BEA emailed for this signup never
+ * activated (API still error 4 after the owner completed activation),
+ * so the committed snapshot is produced by the Secure Vault connector
+ * lane (~/workspace/skills/bea/bin/bea_pack.py), which mirrors this
+ * module's shaping exactly using the owner's vault-stored active key.
+ * This .env route stays as the documented fallback if a .env key is
+ * ever activated. BEA also intermittently returns error 4 on valid
+ * requests under burst load — space calls, do not hammer retries.
  */
 const MI_COUNTY_GEOFIPS = [];
 for (let n = 1; n <= 165; n += 2) MI_COUNTY_GEOFIPS.push('26' + String(n).padStart(3, '0'));
@@ -96,7 +108,7 @@ export default {
     const [gdpRows, incRows, pcRows] = [
       await fetchTable(ctx, key, 'CAGDP2', 1),
       await fetchTable(ctx, key, 'CAINC1', 1),
-      await fetchTable(ctx, key, 'CAINC1', 2),
+      await fetchTable(ctx, key, 'CAINC1', 3),
     ];
     const gdp = latestYearCrossSection(gdpRows);
     const inc = latestYearCrossSection(incRows);
@@ -112,9 +124,9 @@ export default {
       series: [
         mk('cagdp2-total', 'County GDP, all industries (CAGDP2 LineCode 1), Michigan counties, ' + gdp.year, gdp, 'Thousands of current dollars'),
         mk('cainc1-total', 'County total personal income (CAINC1 LineCode 1), Michigan counties, ' + inc.year, inc, 'Thousands of dollars'),
-        mk('cainc1-percapita', 'County per capita personal income (CAINC1 LineCode 2), Michigan counties, ' + pc.year, pc, 'Dollars'),
+        mk('cainc1-percapita', 'County per capita personal income (CAINC1 LineCode 3), Michigan counties, ' + pc.year, pc, 'Dollars'),
       ],
-      notes: 'Cross-section: series use values:[{name, value}] (one value per county, latest year) instead of observations. Geography = all 83 Michigan counties (GeoFips 26001–26165, odd codes). DataValue comma-formatted strings parsed to numbers; ' + suppressedTotal + ' suppressed/unavailable cells (e.g. "(D)") skipped in this pull. Units taken from each row set\u2019s UnitOfMeasure where present. KEY PENDING at first write (2026-10-08): endpoint probed live (in-body key error only), real-key run not yet done.',
+      notes: 'Cross-section: series use values:[{name, value}] (one value per county, latest year) instead of observations. Geography = all 83 Michigan counties (GeoFips 26001–26165, odd codes). DataValue comma-formatted strings parsed to numbers; ' + suppressedTotal + ' suppressed/unavailable cells (e.g. "(D)") skipped in this pull. Units taken from each row set\u2019s UnitOfMeasure where present. Verified live 2026-10-08 via the vault connector lane (see header): all 83 counties, latest year 2024, Oakland GDP $143.1B, per capita personal income $93,579.',
     };
   },
 };
