@@ -6,7 +6,14 @@
   <description>Analysis from Axiovex Systems: AI, manufacturing, and Michigan workforce intelligence.</description>
   <language>en-US</language>
   <atom:link href="https://axiovexsystems.com/feed.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Wed, 07 Oct 2026 12:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 08 Oct 2026 12:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Oakland County is losing jobs. Here is why.</title>
+    <link>https://axiovexsystems.com/blog/oakland-county-job-losses/</link>
+    <guid isPermaLink="true">https://axiovexsystems.com/blog/oakland-county-job-losses/</guid>
+    <pubDate>Thu, 08 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Oakland County has about 9,600 fewer employed residents than a year ago while the rest of metro Detroit edges up. The losses concentrate in engineering services and auto work — an EV pullback, a bank merger, and jobs consolidating out of the county — and part of the August drop may not be real. The numbers, and the evidence behind each cause.</description>
+  </item>
   <item>
     <title>Your website doesn't need a cloud bill: what hosting actually costs</title>
     <link>https://axiovexsystems.com/blog/cloudflare-github-website-costs/</link>
