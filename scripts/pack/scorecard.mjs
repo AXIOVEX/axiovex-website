@@ -49,6 +49,11 @@ const FIELDS = [
   'latest.programs.cip_4_digit',
 ].join(',');
 const PER_PAGE = 100;
+/* Hard pagination ceiling (rate-limit audit S4, 2026-10-08):
+ * 10 pages x 100 = 1,000 institutions, ~6x the current Michigan
+ * total — insurance for the api.data.gov key's shared
+ * 1,000-requests/hour budget against a corrupt/huge metadata.total. */
+const MAX_PAGES = 10;
 
 function programMedianEarnings(p) {
   if (!p || typeof p !== 'object' || !p.earnings) return null;
@@ -96,7 +101,9 @@ export default {
     const key = ctx.env.DATAGOV_API_KEY;
     const schools = [];
     let total = Infinity;
-    for (let page = 0; schools.length < total; page++) {
+    let firstTotal = null;
+    let page = 0;
+    for (; page < MAX_PAGES && schools.length < total; page++) {
       const url = 'https://api.data.gov/ed/collegescorecard/v1/schools.json' +
         '?api_key=' + encodeURIComponent(key) +
         '&school.state=MI&per_page=' + PER_PAGE + '&page=' + page +
@@ -104,10 +111,25 @@ export default {
       const json = await ctx.get(url);
       const batch = Array.isArray(json && json.results) ? json.results : [];
       if (json && json.metadata && Number.isFinite(Number(json.metadata.total))) {
-        total = Number(json.metadata.total);
+        const reported = Number(json.metadata.total);
+        if (firstTotal === null) {
+          firstTotal = reported;
+        } else if (reported > firstTotal) {
+          // S4: a growing total mid-loop means the upstream count
+          // cannot be trusted; abort loudly (last-good is kept).
+          throw new Error('College Scorecard metadata.total grew mid-pagination (' +
+            firstTotal + ' -> ' + reported + '); aborting');
+        }
+        total = reported;
       } else if (!batch.length) break;
       schools.push(...batch);
       if (!batch.length) break;
+    }
+    if (page >= MAX_PAGES && schools.length < total) {
+      // S4: ceiling reached with institutions still outstanding.
+      throw new Error('College Scorecard pagination hit the ' + MAX_PAGES +
+        '-page ceiling with ' + schools.length + ' of ' + total +
+        ' institutions collected; aborting');
     }
     if (!schools.length) throw new Error('College Scorecard returned no Michigan institutions');
 
