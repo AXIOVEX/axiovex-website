@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-07T18:21:22.121Z",
+  "updatedUtc": "2026-10-08T18:25:32.916Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -21,6 +21,62 @@
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Teams often miss preventive maintenance, raising costs and risks: Limble",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-08",
+      "url": "https://www.manufacturingdive.com/news/maintenance-teams-downtime-AI-limble/832416/"
+    },
+    {
+      "lane": "ai-standards",
+      "laneLabel": "AI, standards & research",
+      "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+      "source": "NIST",
+      "date": "2026-10-08",
+      "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+      "source": "Michigan WARN (LEO)",
+      "date": "2026-10-08",
+      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Red Lion Controls N-Tron 700 Series",
+      "source": "CISA",
+      "date": "2026-10-08",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Wolfspeed signs $1.5B DOD loan for semiconductor production, R&D",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-08",
+      "url": "https://www.manufacturingdive.com/news/wolfspeed-dod-defense-war-office-of-strategic-capital-loan/832451/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+      "source": "NIST",
+      "date": "2026-10-08",
+      "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
+      "source": "Michigan WARN (LEO)",
+      "date": "2026-10-08",
+      "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75"
+    },
+    {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
       "title": "Oakland County is losing jobs. Here is why.",
@@ -29,52 +85,28 @@
       "url": "https://axiovexsystems.com/blog/oakland-county-job-losses/"
     },
     {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
-      "source": "Automation Alley",
-      "date": "2026-10-07",
-      "url": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Boston Dynamics hires former Amazon AI leader as CEO",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-07",
-      "url": "https://www.manufacturingdive.com/news/boston-dynamics-hires-ceo-former-amazon-ai-rohit-prasad/832360/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Manufacturability, costing cited as key areas of AI impact: Xometry survey",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-07",
-      "url": "https://www.manufacturingdive.com/news/manufacturability-costing-ai-impact-xometry-survey/832307/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Anduril, US Navy to build $6.6B shipyard in Maryland",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-07",
-      "url": "https://www.manufacturingdive.com/news/anduril-industries-u-s-navy-arsenal-2-shipyard-baltimore-county-maryland/832275/"
-    },
-    {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
-      "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
-      "source": "Automation Alley",
-      "date": "2026-10-07",
-      "url": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/"
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Grid Protection Alliance openPDC and openHistorian",
+      "source": "CISA",
+      "date": "2026-10-08",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02"
     },
     {
       "lane": "ot-security",
       "laneLabel": "OT cybersecurity",
-      "title": "Johnson Controls EasyIO FG",
+      "title": "Satel Netco Design",
       "source": "CISA",
-      "date": "2026-10-06",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01"
+      "date": "2026-10-08",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
+      "source": "Automation Alley",
+      "date": "2026-10-07",
+      "url": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/"
     },
     {
       "lane": "funding-policy",
@@ -83,38 +115,6 @@
       "source": "Federal Register",
       "date": "2026-10-06",
       "url": "https://www.federalregister.gov/documents/2026/10/06/2026-20490/new-mexico-institute-of-mining-and-technology-etal-notice-of-decision-on-application-for-duty-free"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Why Supply Chain Automation Depends on Alignment, Not Just Technology",
-      "source": "Automation Alley",
-      "date": "2026-10-06",
-      "url": "https://automationalley.com/2026/10/06/why-supply-chain-automation-depends-on-alignment-not-just-technology/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "2027 manufacturing conferences and trade shows",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-06",
-      "url": "https://www.manufacturingdive.com/news/2027-manufacturing-conferences-and-trade-shows/832164/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "BD strikes $19B supply chain pact with Trump administration",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-06",
-      "url": "https://www.manufacturingdive.com/news/bd-supply-chain-pact-trump-administration/832263/"
-    },
-    {
-      "lane": "ai-standards",
-      "laneLabel": "AI, standards & research",
-      "title": "NIST Awards More Than $1.7 Million to Support Cybersecurity Workforce Development Across 8 States",
-      "source": "NIST",
-      "date": "2026-09-18",
-      "url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development"
     }
   ],
   "signalsUrl": "/signals/"

@@ -5,9 +5,9 @@ promotion is a separate owner-gated merge `staging` → `main`.
 
 **Created**: 2026-10-07
 
-**Status**: APPROVED — IN IMPLEMENTATION ON STAGING. Production
-promotion is blocked on Tristen's review of the staging hero
-(tasks.md T006).
+**Status**: IMPLEMENTED AND LIVE 2026-10-07. Owner approved the
+staging hero (tasks.md T006); promoted to production in merge
+`be1d8e0` and verified live (see tasks.md T007).
 
 **Origin (external feedback, 2026-10-07)**: feedback received on the
 site's copy — open with a good hook on why Axiovex matters, in

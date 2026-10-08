@@ -1,0 +1,56 @@
+name: Data pack sync (spec 019)
+
+# Keeps the external-data analysis pack current (spec 019):
+#   - scripts/fetch-pack.mjs pulls the configured Tier 1 / Tier 2
+#     sources into data/pack/<source>.json (rewritten only when the
+#     content actually changed; failed sources keep last-good files;
+#     sources whose API key secret is absent are skipped)
+# The bot commits only when something changed. The pack is an
+# analysis input for reporting — it is not rendered on the site.
+
+on:
+  schedule:
+    - cron: '23 12 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-pack-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch analysis pack
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DOL_API_KEY: ${{ secrets.DOL_API_KEY }}
+          CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
+          BEA_API_KEY: ${{ secrets.BEA_API_KEY }}
+          DATAGOV_API_KEY: ${{ secrets.DATAGOV_API_KEY }}
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+        run: node scripts/fetch-pack.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/pack
+          if git diff --cached --quiet; then
+            echo "pack unchanged — nothing to commit"
+            exit 0
+          fi
+          git commit -m "Data pack refresh (automated)"
+          git pull --rebase --quiet origin main || true
+          git push origin main || (git pull --rebase --quiet origin main && git push origin main)

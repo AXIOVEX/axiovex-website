@@ -111,6 +111,25 @@ format):
   arithmetic on the published series; series gaps (missing
   months) are noted, never filled. A sentence states the reading
   rule: arrows show the direction of the number, not a verdict.
+- **Cross-report trend insights (owner rule, 2026-10-08; spec 007
+  FR-012)** — each standing board is read against the PRIOR cycle's
+  report: rises, falls, and holds are called out explicitly, each
+  with a reason that was checked against news sources, official
+  notices (e.g. WARN filings, agency/company releases), and
+  sentiment/context factors. A move with no verified cause is
+  labeled unexplained — causes are never inferred from the numbers
+  alone. Applies to the trend board, the education board, and
+  county-level geography.
+- **Michigan WARN review (owner rule, 2026-10-08; spec 007
+  FR-013)** — the draft's evidence base includes a review of
+  every Michigan WARN (LEO) notice filed since the prior cycle:
+  company, city/county, jobs affected, notice (filed) date, and
+  layoff/closure effective date. Material announced layoffs and
+  closings are cited where they explain a board move (FR-012)
+  or a geography shift (§3B), and the review happens every cycle
+  whether or not a board moved. WARN counts are labeled
+  announced, not completed, with effective dates shown — never
+  written as jobs already lost.
 - **Outlook board** — immediately after the signals section (§3
   item 4). Published projections only (Michigan MCDA statewide
   vintage via the current edition; BLS Employment Projections
@@ -241,6 +260,13 @@ every item passes:
       the article renders at `/blog/<slug>/` (pre-publish drafts
       validate against this checklist without being placed in the
       repo).
+- [ ] **WARN pull (FR-013)**: the Michigan WARN (LEO) listing
+      was pulled this cycle and every notice filed since the
+      prior cycle reviewed (company, city/county, jobs affected,
+      notice date, effective date). Material announced layoffs/
+      closings appear in the evidence base; every WARN figure in
+      the article is labeled announced (not completed) with its
+      effective date.
 - [ ] **Map-refresh verification (FR-011, from the spec 014
       amendment)**: each committed geography dataset in
       `data/geo/` was checked against its source's current

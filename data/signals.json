@@ -1,10 +1,31 @@
 {
-  "updatedUtc": "2026-10-07T18:21:22.121Z",
+  "updatedUtc": "2026-10-08T18:25:32.916Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Teams often miss preventive maintenance, raising costs and risks: Limble",
+          "link": "https://www.manufacturingdive.com/news/maintenance-teams-downtime-AI-limble/832416/",
+          "date": "2026-10-08"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Wolfspeed signs $1.5B DOD loan for semiconductor production, R&D",
+          "link": "https://www.manufacturingdive.com/news/wolfspeed-dod-defense-war-office-of-strategic-capital-loan/832451/",
+          "date": "2026-10-08"
+        },
+        {
+          "source": "NIST",
+          "sourceId": "nist",
+          "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+          "link": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science",
+          "date": "2026-10-08"
+        },
         {
           "source": "Automation Alley",
           "sourceId": "automation-alley",
@@ -39,27 +60,6 @@
           "title": "Why Supply Chain Automation Depends on Alignment, Not Just Technology",
           "link": "https://automationalley.com/2026/10/06/why-supply-chain-automation-depends-on-alignment-not-just-technology/",
           "date": "2026-10-06"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "2027 manufacturing conferences and trade shows",
-          "link": "https://www.manufacturingdive.com/news/2027-manufacturing-conferences-and-trade-shows/832164/",
-          "date": "2026-10-06"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "BD strikes $19B supply chain pact with Trump administration",
-          "link": "https://www.manufacturingdive.com/news/bd-supply-chain-pact-trump-administration/832263/",
-          "date": "2026-10-06"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Bayer to invest $2.2B in Ohio pharmaceutical facility",
-          "link": "https://www.manufacturingdive.com/news/bayer-to-invest-2b-ohio-pharmaceutical-facility-new-albany/832237/",
-          "date": "2026-10-06"
         }
       ]
     },
@@ -67,6 +67,13 @@
       "id": "ai-standards",
       "title": "AI, standards & research",
       "items": [
+        {
+          "source": "NIST",
+          "sourceId": "nist",
+          "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+          "link": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science",
+          "date": "2026-10-08"
+        },
         {
           "source": "NIST",
           "sourceId": "nist",
@@ -96,13 +103,6 @@
           "date": "2026-09-10"
         },
         {
-          "source": "NSF",
-          "sourceId": "nsf",
-          "title": "Eight NSF research institutes to propel U.S. quantum science with $290M investment",
-          "link": "https://www.nsf.gov/news/eight-nsf-research-institutes-propel-us-quantum-science-290m",
-          "date": "2026-08-25"
-        },
-        {
           "source": "NIST",
           "sourceId": "nist",
           "title": "NIST Researchers Supersize Quantum Technology to Help Detect Faint Photons",
@@ -115,6 +115,20 @@
       "id": "michigan",
       "title": "Michigan workforce & industry",
       "items": [
+        {
+          "source": "Michigan WARN (LEO)",
+          "sourceId": "michigan-warn",
+          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
+          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
+          "date": "2026-10-08"
+        },
+        {
+          "source": "Michigan WARN (LEO)",
+          "sourceId": "michigan-warn",
+          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
+          "date": "2026-10-08"
+        },
         {
           "source": "Automation Alley",
           "sourceId": "automation-alley",
@@ -156,20 +170,6 @@
           "title": "Effective Supply Chain Risk Management: An Imperative for Today’s Executives and Leaders",
           "link": "https://automationalley.com/2026/09/30/effective-supply-chain-risk-management-an-imperative-for-todays-executives-and-leaders/",
           "date": "2026-09-30"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "From Lab to Production: Fraunhofer Brings Battery Manufacturing Research to Detroit",
-          "link": "https://automationalley.com/2026/09/30/from-lab-to-production-fraunhofer-brings-battery-manufacturing-research-to-detroit/",
-          "date": "2026-09-30"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "3D Printing in Aerospace: Applications, Materials, and Industry Trends",
-          "link": "https://automationalley.com/2026/09/28/3d-printing-in-aerospace-applications-materials-and-industry-trends/",
-          "date": "2026-09-28"
         }
       ]
     },
@@ -177,6 +177,27 @@
       "id": "ot-security",
       "title": "OT cybersecurity",
       "items": [
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Red Lion Controls N-Tron 700 Series",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01",
+          "date": "2026-10-08"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Grid Protection Alliance openPDC and openHistorian",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02",
+          "date": "2026-10-08"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Satel Netco Design",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03",
+          "date": "2026-10-08"
+        },
         {
           "source": "CISA",
           "sourceId": "cisa-ics",
@@ -211,27 +232,6 @@
           "title": "Hitachi Energy REB500",
           "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05",
           "date": "2026-10-06"
-        },
-        {
-          "source": "CISA",
-          "sourceId": "cisa-ics",
-          "title": "Hitachi Energy RTU500",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06",
-          "date": "2026-10-06"
-        },
-        {
-          "source": "CISA",
-          "sourceId": "cisa-ics",
-          "title": "Armatura LLC Armatura One",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01",
-          "date": "2026-10-01"
-        },
-        {
-          "source": "CISA",
-          "sourceId": "cisa-ics",
-          "title": "Monta monta.app",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02",
-          "date": "2026-10-01"
         }
       ]
     },
