@@ -1,32 +1,32 @@
 {
   "source": "Census API (ACS / CBP / QWI)",
   "publisher": "U.S. Census Bureau",
-  "retrievedUtc": "2026-10-08T20:06:56.912Z",
-  "vintage": "ACS 2023 5-year; QWI 2021-Q3",
-  "referencePeriod": "ACS 2023 5-year; QWI 2021-Q3",
+  "retrievedUtc": "2026-10-08T20:46:39.396Z",
+  "vintage": "ACS 2024 5-year; CBP 2023; QWI 2021-Q4",
+  "referencePeriod": "ACS 2024 5-year; CBP 2023; QWI 2021-Q4",
   "series": [
     {
       "id": "acs5-bachelor-plus-share",
       "label": "Bachelor's degree or higher, share of population 25+ (ACS table B15003)",
       "unit": "percent",
       "geography": "Michigan counties",
-      "vintage": "ACS 2023 5-year",
+      "vintage": "ACS 2024 5-year",
       "values": [
         {
           "name": "Alcona County",
-          "value": 20.6
+          "value": 21.4
         },
         {
           "name": "Alger County",
-          "value": 20.3
+          "value": 21
         },
         {
           "name": "Allegan County",
-          "value": 26.1
+          "value": 27.1
         },
         {
           "name": "Alpena County",
-          "value": 17.7
+          "value": 18.3
         },
         {
           "name": "Antrim County",
@@ -34,287 +34,287 @@
         },
         {
           "name": "Arenac County",
-          "value": 15.8
+          "value": 16
         },
         {
           "name": "Baraga County",
-          "value": 16.1
-        },
-        {
-          "name": "Barry County",
-          "value": 24.3
-        },
-        {
-          "name": "Bay County",
-          "value": 21.4
-        },
-        {
-          "name": "Benzie County",
-          "value": 34.3
-        },
-        {
-          "name": "Berrien County",
-          "value": 30.2
-        },
-        {
-          "name": "Branch County",
-          "value": 16.9
-        },
-        {
-          "name": "Calhoun County",
-          "value": 22.2
-        },
-        {
-          "name": "Cass County",
-          "value": 21.6
-        },
-        {
-          "name": "Charlevoix County",
-          "value": 33.9
-        },
-        {
-          "name": "Cheboygan County",
-          "value": 22.9
-        },
-        {
-          "name": "Chippewa County",
-          "value": 21.9
-        },
-        {
-          "name": "Clare County",
-          "value": 13
-        },
-        {
-          "name": "Clinton County",
-          "value": 34.2
-        },
-        {
-          "name": "Crawford County",
-          "value": 20.2
-        },
-        {
-          "name": "Delta County",
-          "value": 20
-        },
-        {
-          "name": "Dickinson County",
-          "value": 24.3
-        },
-        {
-          "name": "Eaton County",
-          "value": 30.4
-        },
-        {
-          "name": "Emmet County",
-          "value": 40.2
-        },
-        {
-          "name": "Genesee County",
-          "value": 22.8
-        },
-        {
-          "name": "Gladwin County",
-          "value": 15.4
-        },
-        {
-          "name": "Gogebic County",
-          "value": 21.9
-        },
-        {
-          "name": "Grand Traverse County",
-          "value": 40.3
-        },
-        {
-          "name": "Gratiot County",
-          "value": 19
-        },
-        {
-          "name": "Hillsdale County",
-          "value": 20.6
-        },
-        {
-          "name": "Houghton County",
-          "value": 36.6
-        },
-        {
-          "name": "Huron County",
-          "value": 17.6
-        },
-        {
-          "name": "Ingham County",
-          "value": 41.3
-        },
-        {
-          "name": "Ionia County",
-          "value": 18
-        },
-        {
-          "name": "Iosco County",
-          "value": 17.6
-        },
-        {
-          "name": "Iron County",
-          "value": 20.6
-        },
-        {
-          "name": "Isabella County",
-          "value": 30.8
-        },
-        {
-          "name": "Jackson County",
-          "value": 23
-        },
-        {
-          "name": "Kalamazoo County",
-          "value": 40.8
-        },
-        {
-          "name": "Kalkaska County",
-          "value": 18.2
-        },
-        {
-          "name": "Kent County",
-          "value": 39.6
-        },
-        {
-          "name": "Keweenaw County",
-          "value": 43.6
-        },
-        {
-          "name": "Lake County",
-          "value": 12.5
-        },
-        {
-          "name": "Lapeer County",
-          "value": 19.8
-        },
-        {
-          "name": "Leelanau County",
-          "value": 49.9
-        },
-        {
-          "name": "Lenawee County",
-          "value": 22.3
-        },
-        {
-          "name": "Livingston County",
-          "value": 39.2
-        },
-        {
-          "name": "Luce County",
-          "value": 19.3
-        },
-        {
-          "name": "Mackinac County",
-          "value": 23.5
-        },
-        {
-          "name": "Macomb County",
-          "value": 27.2
-        },
-        {
-          "name": "Manistee County",
-          "value": 23.4
-        },
-        {
-          "name": "Marquette County",
-          "value": 35.8
-        },
-        {
-          "name": "Mason County",
-          "value": 25
-        },
-        {
-          "name": "Mecosta County",
-          "value": 22.7
-        },
-        {
-          "name": "Menominee County",
-          "value": 18
-        },
-        {
-          "name": "Midland County",
-          "value": 36.3
-        },
-        {
-          "name": "Missaukee County",
-          "value": 18
-        },
-        {
-          "name": "Monroe County",
-          "value": 23.4
-        },
-        {
-          "name": "Montcalm County",
-          "value": 14.9
-        },
-        {
-          "name": "Montmorency County",
-          "value": 16
-        },
-        {
-          "name": "Muskegon County",
-          "value": 21.4
-        },
-        {
-          "name": "Newaygo County",
-          "value": 18.4
-        },
-        {
-          "name": "Oakland County",
-          "value": 50.2
-        },
-        {
-          "name": "Oceana County",
-          "value": 21
-        },
-        {
-          "name": "Ogemaw County",
-          "value": 15.9
-        },
-        {
-          "name": "Ontonagon County",
-          "value": 16.7
-        },
-        {
-          "name": "Osceola County",
-          "value": 16.4
-        },
-        {
-          "name": "Oscoda County",
           "value": 14.8
         },
         {
-          "name": "Otsego County",
-          "value": 25.8
+          "name": "Barry County",
+          "value": 24.9
         },
         {
-          "name": "Ottawa County",
-          "value": 37.5
+          "name": "Bay County",
+          "value": 22.1
         },
         {
-          "name": "Presque Isle County",
-          "value": 20.2
+          "name": "Benzie County",
+          "value": 36.9
         },
         {
-          "name": "Roscommon County",
+          "name": "Berrien County",
+          "value": 30.9
+        },
+        {
+          "name": "Branch County",
+          "value": 17.3
+        },
+        {
+          "name": "Calhoun County",
+          "value": 22.9
+        },
+        {
+          "name": "Cass County",
+          "value": 21.8
+        },
+        {
+          "name": "Charlevoix County",
+          "value": 35.2
+        },
+        {
+          "name": "Cheboygan County",
+          "value": 24.4
+        },
+        {
+          "name": "Chippewa County",
+          "value": 23.3
+        },
+        {
+          "name": "Clare County",
+          "value": 12.9
+        },
+        {
+          "name": "Clinton County",
+          "value": 35.4
+        },
+        {
+          "name": "Crawford County",
           "value": 20.3
         },
         {
-          "name": "Saginaw County",
+          "name": "Delta County",
+          "value": 20.6
+        },
+        {
+          "name": "Dickinson County",
+          "value": 25.3
+        },
+        {
+          "name": "Eaton County",
+          "value": 30.8
+        },
+        {
+          "name": "Emmet County",
+          "value": 41.6
+        },
+        {
+          "name": "Genesee County",
+          "value": 23.3
+        },
+        {
+          "name": "Gladwin County",
+          "value": 16.9
+        },
+        {
+          "name": "Gogebic County",
+          "value": 22.8
+        },
+        {
+          "name": "Grand Traverse County",
+          "value": 40.6
+        },
+        {
+          "name": "Gratiot County",
+          "value": 18.7
+        },
+        {
+          "name": "Hillsdale County",
+          "value": 21.2
+        },
+        {
+          "name": "Houghton County",
+          "value": 37.2
+        },
+        {
+          "name": "Huron County",
+          "value": 18.5
+        },
+        {
+          "name": "Ingham County",
+          "value": 41.2
+        },
+        {
+          "name": "Ionia County",
+          "value": 18.5
+        },
+        {
+          "name": "Iosco County",
+          "value": 19.3
+        },
+        {
+          "name": "Iron County",
+          "value": 22.5
+        },
+        {
+          "name": "Isabella County",
+          "value": 31.3
+        },
+        {
+          "name": "Jackson County",
           "value": 23.4
         },
         {
-          "name": "Sanilac County",
+          "name": "Kalamazoo County",
+          "value": 41.3
+        },
+        {
+          "name": "Kalkaska County",
+          "value": 19
+        },
+        {
+          "name": "Kent County",
+          "value": 40.8
+        },
+        {
+          "name": "Keweenaw County",
+          "value": 41.2
+        },
+        {
+          "name": "Lake County",
+          "value": 12.7
+        },
+        {
+          "name": "Lapeer County",
+          "value": 20.4
+        },
+        {
+          "name": "Leelanau County",
+          "value": 51.8
+        },
+        {
+          "name": "Lenawee County",
+          "value": 22.7
+        },
+        {
+          "name": "Livingston County",
+          "value": 40.2
+        },
+        {
+          "name": "Luce County",
+          "value": 17.3
+        },
+        {
+          "name": "Mackinac County",
+          "value": 25
+        },
+        {
+          "name": "Macomb County",
+          "value": 27.7
+        },
+        {
+          "name": "Manistee County",
+          "value": 24.9
+        },
+        {
+          "name": "Marquette County",
+          "value": 36.8
+        },
+        {
+          "name": "Mason County",
+          "value": 26.6
+        },
+        {
+          "name": "Mecosta County",
+          "value": 22.5
+        },
+        {
+          "name": "Menominee County",
+          "value": 18.5
+        },
+        {
+          "name": "Midland County",
+          "value": 36.6
+        },
+        {
+          "name": "Missaukee County",
+          "value": 18.8
+        },
+        {
+          "name": "Monroe County",
+          "value": 23.3
+        },
+        {
+          "name": "Montcalm County",
           "value": 16
         },
         {
+          "name": "Montmorency County",
+          "value": 15.6
+        },
+        {
+          "name": "Muskegon County",
+          "value": 21.3
+        },
+        {
+          "name": "Newaygo County",
+          "value": 18.1
+        },
+        {
+          "name": "Oakland County",
+          "value": 51
+        },
+        {
+          "name": "Oceana County",
+          "value": 21.5
+        },
+        {
+          "name": "Ogemaw County",
+          "value": 17.2
+        },
+        {
+          "name": "Ontonagon County",
+          "value": 18.4
+        },
+        {
+          "name": "Osceola County",
+          "value": 16.6
+        },
+        {
+          "name": "Oscoda County",
+          "value": 15.6
+        },
+        {
+          "name": "Otsego County",
+          "value": 26.3
+        },
+        {
+          "name": "Ottawa County",
+          "value": 38.9
+        },
+        {
+          "name": "Presque Isle County",
+          "value": 21.4
+        },
+        {
+          "name": "Roscommon County",
+          "value": 20.2
+        },
+        {
+          "name": "Saginaw County",
+          "value": 24.4
+        },
+        {
+          "name": "Sanilac County",
+          "value": 16.5
+        },
+        {
           "name": "Schoolcraft County",
-          "value": 20.7
+          "value": 21.1
         },
         {
           "name": "Shiawassee County",
-          "value": 19.5
+          "value": 20
         },
         {
           "name": "St. Clair County",
@@ -322,27 +322,709 @@
         },
         {
           "name": "St. Joseph County",
-          "value": 17.1
+          "value": 16.9
         },
         {
           "name": "Tuscola County",
-          "value": 15.5
+          "value": 16.3
         },
         {
           "name": "Van Buren County",
-          "value": 22.9
+          "value": 23
         },
         {
           "name": "Washtenaw County",
-          "value": 58.1
+          "value": 58.7
         },
         {
           "name": "Wayne County",
-          "value": 26.9
+          "value": 27.6
         },
         {
           "name": "Wexford County",
-          "value": 21.2
+          "value": 21.3
+        }
+      ]
+    },
+    {
+      "id": "cbp-manufacturing-employment",
+      "label": "Manufacturing (NAICS 31-33) employment, County Business Patterns",
+      "unit": "employees",
+      "geography": "Michigan counties",
+      "vintage": "CBP 2023",
+      "values": [
+        {
+          "name": "Alcona County",
+          "value": 175
+        },
+        {
+          "name": "Alger County",
+          "value": 460
+        },
+        {
+          "name": "Allegan County",
+          "value": 11953
+        },
+        {
+          "name": "Alpena County",
+          "value": 1817
+        },
+        {
+          "name": "Antrim County",
+          "value": 1188
+        },
+        {
+          "name": "Arenac County",
+          "value": 937
+        },
+        {
+          "name": "Baraga County",
+          "value": 586
+        },
+        {
+          "name": "Barry County",
+          "value": 3672
+        },
+        {
+          "name": "Bay County",
+          "value": 3999
+        },
+        {
+          "name": "Benzie County",
+          "value": 431
+        },
+        {
+          "name": "Berrien County",
+          "value": 10309
+        },
+        {
+          "name": "Branch County",
+          "value": 2564
+        },
+        {
+          "name": "Calhoun County",
+          "value": 12366
+        },
+        {
+          "name": "Cass County",
+          "value": 2626
+        },
+        {
+          "name": "Charlevoix County",
+          "value": 2457
+        },
+        {
+          "name": "Cheboygan County",
+          "value": 270
+        },
+        {
+          "name": "Chippewa County",
+          "value": 653
+        },
+        {
+          "name": "Clare County",
+          "value": 997
+        },
+        {
+          "name": "Clinton County",
+          "value": 2819
+        },
+        {
+          "name": "Crawford County",
+          "value": 743
+        },
+        {
+          "name": "Delta County",
+          "value": 2156
+        },
+        {
+          "name": "Dickinson County",
+          "value": 2726
+        },
+        {
+          "name": "Eaton County",
+          "value": 8438
+        },
+        {
+          "name": "Emmet County",
+          "value": 1202
+        },
+        {
+          "name": "Genesee County",
+          "value": 13047
+        },
+        {
+          "name": "Gladwin County",
+          "value": 1293
+        },
+        {
+          "name": "Gogebic County",
+          "value": 698
+        },
+        {
+          "name": "Grand Traverse County",
+          "value": 5305
+        },
+        {
+          "name": "Gratiot County",
+          "value": 2338
+        },
+        {
+          "name": "Hillsdale County",
+          "value": 3759
+        },
+        {
+          "name": "Houghton County",
+          "value": 1042
+        },
+        {
+          "name": "Huron County",
+          "value": 3442
+        },
+        {
+          "name": "Ingham County",
+          "value": 8255
+        },
+        {
+          "name": "Ionia County",
+          "value": 4099
+        },
+        {
+          "name": "Iosco County",
+          "value": 1351
+        },
+        {
+          "name": "Iron County",
+          "value": 412
+        },
+        {
+          "name": "Isabella County",
+          "value": 3479
+        },
+        {
+          "name": "Jackson County",
+          "value": 9516
+        },
+        {
+          "name": "Kalamazoo County",
+          "value": 19653
+        },
+        {
+          "name": "Kalkaska County",
+          "value": 315
+        },
+        {
+          "name": "Kent County",
+          "value": 70021
+        },
+        {
+          "name": "Keweenaw County",
+          "value": 61
+        },
+        {
+          "name": "Lake County",
+          "value": 101
+        },
+        {
+          "name": "Lapeer County",
+          "value": 5414
+        },
+        {
+          "name": "Leelanau County",
+          "value": 569
+        },
+        {
+          "name": "Lenawee County",
+          "value": 5699
+        },
+        {
+          "name": "Livingston County",
+          "value": 10079
+        },
+        {
+          "name": "Luce County",
+          "value": 219
+        },
+        {
+          "name": "Mackinac County",
+          "value": 148
+        },
+        {
+          "name": "Macomb County",
+          "value": 69940
+        },
+        {
+          "name": "Manistee County",
+          "value": 1029
+        },
+        {
+          "name": "Marquette County",
+          "value": 857
+        },
+        {
+          "name": "Mason County",
+          "value": 2175
+        },
+        {
+          "name": "Mecosta County",
+          "value": 1789
+        },
+        {
+          "name": "Menominee County",
+          "value": 2290
+        },
+        {
+          "name": "Midland County",
+          "value": 6821
+        },
+        {
+          "name": "Missaukee County",
+          "value": 362
+        },
+        {
+          "name": "Monroe County",
+          "value": 7297
+        },
+        {
+          "name": "Montcalm County",
+          "value": 3174
+        },
+        {
+          "name": "Montmorency County",
+          "value": 438
+        },
+        {
+          "name": "Muskegon County",
+          "value": 13336
+        },
+        {
+          "name": "Newaygo County",
+          "value": 2515
+        },
+        {
+          "name": "Oakland County",
+          "value": 56219
+        },
+        {
+          "name": "Oceana County",
+          "value": 1429
+        },
+        {
+          "name": "Ogemaw County",
+          "value": 259
+        },
+        {
+          "name": "Ontonagon County",
+          "value": 34
+        },
+        {
+          "name": "Osceola County",
+          "value": 3091
+        },
+        {
+          "name": "Oscoda County",
+          "value": 366
+        },
+        {
+          "name": "Otsego County",
+          "value": 873
+        },
+        {
+          "name": "Ottawa County",
+          "value": 39492
+        },
+        {
+          "name": "Presque Isle County",
+          "value": 173
+        },
+        {
+          "name": "Roscommon County",
+          "value": 455
+        },
+        {
+          "name": "Saginaw County",
+          "value": 11170
+        },
+        {
+          "name": "Sanilac County",
+          "value": 3031
+        },
+        {
+          "name": "Schoolcraft County",
+          "value": 64
+        },
+        {
+          "name": "Shiawassee County",
+          "value": 2042
+        },
+        {
+          "name": "St. Clair County",
+          "value": 9038
+        },
+        {
+          "name": "St. Joseph County",
+          "value": 8471
+        },
+        {
+          "name": "Tuscola County",
+          "value": 1628
+        },
+        {
+          "name": "Van Buren County",
+          "value": 3533
+        },
+        {
+          "name": "Washtenaw County",
+          "value": 12919
+        },
+        {
+          "name": "Wayne County",
+          "value": 89524
+        },
+        {
+          "name": "Wexford County",
+          "value": 3285
+        }
+      ]
+    },
+    {
+      "id": "cbp-manufacturing-establishments",
+      "label": "Manufacturing (NAICS 31-33) establishments, County Business Patterns",
+      "unit": "establishments",
+      "geography": "Michigan counties",
+      "vintage": "CBP 2023",
+      "values": [
+        {
+          "name": "Alcona County",
+          "value": 17
+        },
+        {
+          "name": "Alger County",
+          "value": 6
+        },
+        {
+          "name": "Allegan County",
+          "value": 224
+        },
+        {
+          "name": "Alpena County",
+          "value": 93
+        },
+        {
+          "name": "Antrim County",
+          "value": 42
+        },
+        {
+          "name": "Arenac County",
+          "value": 29
+        },
+        {
+          "name": "Baraga County",
+          "value": 18
+        },
+        {
+          "name": "Barry County",
+          "value": 60
+        },
+        {
+          "name": "Bay County",
+          "value": 100
+        },
+        {
+          "name": "Benzie County",
+          "value": 21
+        },
+        {
+          "name": "Berrien County",
+          "value": 275
+        },
+        {
+          "name": "Branch County",
+          "value": 68
+        },
+        {
+          "name": "Calhoun County",
+          "value": 146
+        },
+        {
+          "name": "Cass County",
+          "value": 69
+        },
+        {
+          "name": "Charlevoix County",
+          "value": 50
+        },
+        {
+          "name": "Cheboygan County",
+          "value": 31
+        },
+        {
+          "name": "Chippewa County",
+          "value": 24
+        },
+        {
+          "name": "Clare County",
+          "value": 31
+        },
+        {
+          "name": "Clinton County",
+          "value": 61
+        },
+        {
+          "name": "Crawford County",
+          "value": 21
+        },
+        {
+          "name": "Delta County",
+          "value": 63
+        },
+        {
+          "name": "Dickinson County",
+          "value": 39
+        },
+        {
+          "name": "Eaton County",
+          "value": 103
+        },
+        {
+          "name": "Emmet County",
+          "value": 57
+        },
+        {
+          "name": "Genesee County",
+          "value": 266
+        },
+        {
+          "name": "Gladwin County",
+          "value": 30
+        },
+        {
+          "name": "Gogebic County",
+          "value": 21
+        },
+        {
+          "name": "Grand Traverse County",
+          "value": 182
+        },
+        {
+          "name": "Gratiot County",
+          "value": 50
+        },
+        {
+          "name": "Hillsdale County",
+          "value": 66
+        },
+        {
+          "name": "Houghton County",
+          "value": 42
+        },
+        {
+          "name": "Huron County",
+          "value": 60
+        },
+        {
+          "name": "Ingham County",
+          "value": 183
+        },
+        {
+          "name": "Ionia County",
+          "value": 63
+        },
+        {
+          "name": "Iosco County",
+          "value": 33
+        },
+        {
+          "name": "Iron County",
+          "value": 19
+        },
+        {
+          "name": "Isabella County",
+          "value": 58
+        },
+        {
+          "name": "Jackson County",
+          "value": 252
+        },
+        {
+          "name": "Kalamazoo County",
+          "value": 302
+        },
+        {
+          "name": "Kalkaska County",
+          "value": 9
+        },
+        {
+          "name": "Kent County",
+          "value": 1113
+        },
+        {
+          "name": "Keweenaw County",
+          "value": 5
+        },
+        {
+          "name": "Lake County",
+          "value": 7
+        },
+        {
+          "name": "Lapeer County",
+          "value": 130
+        },
+        {
+          "name": "Leelanau County",
+          "value": 43
+        },
+        {
+          "name": "Lenawee County",
+          "value": 109
+        },
+        {
+          "name": "Livingston County",
+          "value": 238
+        },
+        {
+          "name": "Luce County",
+          "value": 5
+        },
+        {
+          "name": "Mackinac County",
+          "value": 15
+        },
+        {
+          "name": "Macomb County",
+          "value": 1487
+        },
+        {
+          "name": "Manistee County",
+          "value": 28
+        },
+        {
+          "name": "Marquette County",
+          "value": 50
+        },
+        {
+          "name": "Mason County",
+          "value": 36
+        },
+        {
+          "name": "Mecosta County",
+          "value": 30
+        },
+        {
+          "name": "Menominee County",
+          "value": 46
+        },
+        {
+          "name": "Midland County",
+          "value": 71
+        },
+        {
+          "name": "Missaukee County",
+          "value": 25
+        },
+        {
+          "name": "Monroe County",
+          "value": 130
+        },
+        {
+          "name": "Montcalm County",
+          "value": 76
+        },
+        {
+          "name": "Montmorency County",
+          "value": 17
+        },
+        {
+          "name": "Muskegon County",
+          "value": 257
+        },
+        {
+          "name": "Newaygo County",
+          "value": 34
+        },
+        {
+          "name": "Oakland County",
+          "value": 1654
+        },
+        {
+          "name": "Oceana County",
+          "value": 33
+        },
+        {
+          "name": "Ogemaw County",
+          "value": 30
+        },
+        {
+          "name": "Ontonagon County",
+          "value": 4
+        },
+        {
+          "name": "Osceola County",
+          "value": 45
+        },
+        {
+          "name": "Oscoda County",
+          "value": 19
+        },
+        {
+          "name": "Otsego County",
+          "value": 29
+        },
+        {
+          "name": "Ottawa County",
+          "value": 601
+        },
+        {
+          "name": "Presque Isle County",
+          "value": 15
+        },
+        {
+          "name": "Roscommon County",
+          "value": 10
+        },
+        {
+          "name": "Saginaw County",
+          "value": 171
+        },
+        {
+          "name": "Sanilac County",
+          "value": 56
+        },
+        {
+          "name": "Schoolcraft County",
+          "value": 9
+        },
+        {
+          "name": "Shiawassee County",
+          "value": 60
+        },
+        {
+          "name": "St. Clair County",
+          "value": 208
+        },
+        {
+          "name": "St. Joseph County",
+          "value": 126
+        },
+        {
+          "name": "Tuscola County",
+          "value": 47
+        },
+        {
+          "name": "Van Buren County",
+          "value": 91
+        },
+        {
+          "name": "Washtenaw County",
+          "value": 312
+        },
+        {
+          "name": "Wayne County",
+          "value": 1386
+        },
+        {
+          "name": "Wexford County",
+          "value": 50
         }
       ]
     },
@@ -351,17 +1033,17 @@
       "label": "Beginning-of-quarter employment (QWI Emp, all private ownership)",
       "unit": "jobs",
       "geography": "Michigan (state)",
-      "vintage": "QWI 2021-Q3",
+      "vintage": "QWI 2021-Q4",
       "values": [
         {
           "name": "Michigan — all industries (private)",
-          "value": 3490493,
-          "period": "2021-Q2"
+          "value": 3665000,
+          "period": "2021-Q4"
         },
         {
           "name": "Michigan — manufacturing NAICS 31-33 (private)",
-          "value": 585682,
-          "period": "2021-Q3"
+          "value": 590648,
+          "period": "2021-Q4"
         }
       ]
     },
@@ -370,39 +1052,20 @@
       "label": "Hires, all (QWI HirA, all private ownership)",
       "unit": "jobs",
       "geography": "Michigan (state)",
-      "vintage": "QWI 2021-Q3",
+      "vintage": "QWI 2021-Q4",
       "values": [
         {
           "name": "Michigan — all industries (private)",
-          "value": 753833,
-          "period": "2021-Q2"
+          "value": 787506,
+          "period": "2021-Q4"
         },
         {
           "name": "Michigan — manufacturing NAICS 31-33 (private)",
-          "value": 77887,
-          "period": "2021-Q3"
-        }
-      ]
-    },
-    {
-      "id": "qwi-separations",
-      "label": "Separations (QWI Sep, all private ownership)",
-      "unit": "jobs",
-      "geography": "Michigan (state)",
-      "vintage": "QWI 2021-Q3",
-      "values": [
-        {
-          "name": "Michigan — all industries (private)",
-          "value": 619146,
-          "period": "2021-Q2"
-        },
-        {
-          "name": "Michigan — manufacturing NAICS 31-33 (private)",
-          "value": 72934,
-          "period": "2021-Q3"
+          "value": 74004,
+          "period": "2021-Q4"
         }
       ]
     }
   ],
-  "notes": "QWI separations (Sep) require a following quarter of data, so the separations series ends at 2021-Q2 / 2021-Q3, one quarter behind employment/hires at 2021-Q3. Partial fetch — failed datasets: CBP: non-JSON response from https://api.census.gov/data/2023/cbp QWI reference quarter 2021-Q3 is the latest Michigan quarter published (Michigan QWI lags other states in the current LEHD release). Scope: private ownership (ownercode A05), all sexes, all ages, not seasonally adjusted."
+  "notes": "QWI reference quarter 2021-Q4 is the latest Michigan quarter published (Michigan QWI lags other states in the current LEHD release). Scope: private ownership (ownercode A05), all sexes, all ages, not seasonally adjusted."
 }
