@@ -1,0 +1,565 @@
+{
+  "source": "DOL UI Weekly Claims",
+  "publisher": "U.S. Department of Labor, Employment and Training Administration",
+  "retrievedUtc": "2026-10-08T20:44:31.834Z",
+  "vintage": "ETA UI National Weekly Claims via DOL Open Data Portal APIv4 (apiprod.dol.gov/v4), latest 26 reported weeks of 3114 rows carrying claims values (3144 dated rows returned, including future seasonal-factor rows)",
+  "referencePeriod": "2026-09-05",
+  "series": [
+    {
+      "id": "initial-nsa",
+      "label": "Initial claims, not seasonally adjusted — United States (national — ETA ui_national_weekly_claims dataset is the national series; no state split)",
+      "unit": "Claims (count)",
+      "observations": [
+        {
+          "period": "2026-03-14",
+          "value": 190982
+        },
+        {
+          "period": "2026-03-21",
+          "value": 186777
+        },
+        {
+          "period": "2026-03-28",
+          "value": 186258
+        },
+        {
+          "period": "2026-04-04",
+          "value": 201757
+        },
+        {
+          "period": "2026-04-11",
+          "value": 215042
+        },
+        {
+          "period": "2026-04-18",
+          "value": 206433
+        },
+        {
+          "period": "2026-04-25",
+          "value": 180670
+        },
+        {
+          "period": "2026-05-02",
+          "value": 180313
+        },
+        {
+          "period": "2026-05-09",
+          "value": 191451
+        },
+        {
+          "period": "2026-05-16",
+          "value": 186338
+        },
+        {
+          "period": "2026-05-23",
+          "value": 188099
+        },
+        {
+          "period": "2026-05-30",
+          "value": 188558
+        },
+        {
+          "period": "2026-06-06",
+          "value": 228955
+        },
+        {
+          "period": "2026-06-13",
+          "value": 220642
+        },
+        {
+          "period": "2026-06-20",
+          "value": 208005
+        },
+        {
+          "period": "2026-06-27",
+          "value": 214616
+        },
+        {
+          "period": "2026-07-04",
+          "value": 226177
+        },
+        {
+          "period": "2026-07-11",
+          "value": 246015
+        },
+        {
+          "period": "2026-07-18",
+          "value": 193403
+        },
+        {
+          "period": "2026-07-25",
+          "value": 176535
+        },
+        {
+          "period": "2026-08-01",
+          "value": 172472
+        },
+        {
+          "period": "2026-08-08",
+          "value": 189203
+        },
+        {
+          "period": "2026-08-15",
+          "value": 173017
+        },
+        {
+          "period": "2026-08-22",
+          "value": 170596
+        },
+        {
+          "period": "2026-08-29",
+          "value": 171403
+        },
+        {
+          "period": "2026-09-05",
+          "value": 177695
+        }
+      ]
+    },
+    {
+      "id": "initial-sa",
+      "label": "Initial claims, seasonally adjusted — United States (national — ETA ui_national_weekly_claims dataset is the national series; no state split)",
+      "unit": "Claims (count)",
+      "observations": [
+        {
+          "period": "2026-03-14",
+          "value": 205000
+        },
+        {
+          "period": "2026-03-21",
+          "value": 211000
+        },
+        {
+          "period": "2026-03-28",
+          "value": 203000
+        },
+        {
+          "period": "2026-04-04",
+          "value": 218000
+        },
+        {
+          "period": "2026-04-11",
+          "value": 208000
+        },
+        {
+          "period": "2026-04-18",
+          "value": 215000
+        },
+        {
+          "period": "2026-04-25",
+          "value": 190000
+        },
+        {
+          "period": "2026-05-02",
+          "value": 199000
+        },
+        {
+          "period": "2026-05-09",
+          "value": 212000
+        },
+        {
+          "period": "2026-05-16",
+          "value": 210000
+        },
+        {
+          "period": "2026-05-23",
+          "value": 212000
+        },
+        {
+          "period": "2026-05-30",
+          "value": 225000
+        },
+        {
+          "period": "2026-06-06",
+          "value": 230000
+        },
+        {
+          "period": "2026-06-13",
+          "value": 227000
+        },
+        {
+          "period": "2026-06-20",
+          "value": 216000
+        },
+        {
+          "period": "2026-06-27",
+          "value": 217000
+        },
+        {
+          "period": "2026-07-04",
+          "value": 217000
+        },
+        {
+          "period": "2026-07-11",
+          "value": 209000
+        },
+        {
+          "period": "2026-07-18",
+          "value": 189000
+        },
+        {
+          "period": "2026-07-25",
+          "value": 198000
+        },
+        {
+          "period": "2026-08-01",
+          "value": 200000
+        },
+        {
+          "period": "2026-08-08",
+          "value": 212000
+        },
+        {
+          "period": "2026-08-15",
+          "value": 207000
+        },
+        {
+          "period": "2026-08-22",
+          "value": 204000
+        },
+        {
+          "period": "2026-08-29",
+          "value": 207000
+        },
+        {
+          "period": "2026-09-05",
+          "value": 207000
+        }
+      ]
+    },
+    {
+      "id": "continued-nsa",
+      "label": "Continued claims (weeks claimed), not seasonally adjusted — United States (national — ETA ui_national_weekly_claims dataset is the national series; no state split)",
+      "unit": "Claims (count)",
+      "observations": [
+        {
+          "period": "2026-03-14",
+          "value": 2033954
+        },
+        {
+          "period": "2026-03-21",
+          "value": 2006576
+        },
+        {
+          "period": "2026-03-28",
+          "value": 1921541
+        },
+        {
+          "period": "2026-04-04",
+          "value": 1883314
+        },
+        {
+          "period": "2026-04-11",
+          "value": 1849143
+        },
+        {
+          "period": "2026-04-18",
+          "value": 1775967
+        },
+        {
+          "period": "2026-04-25",
+          "value": 1727781
+        },
+        {
+          "period": "2026-05-02",
+          "value": 1689422
+        },
+        {
+          "period": "2026-05-09",
+          "value": 1668622
+        },
+        {
+          "period": "2026-05-16",
+          "value": 1657910
+        },
+        {
+          "period": "2026-05-23",
+          "value": 1638338
+        },
+        {
+          "period": "2026-05-30",
+          "value": 1678837
+        },
+        {
+          "period": "2026-06-06",
+          "value": 1677448
+        },
+        {
+          "period": "2026-06-13",
+          "value": 1720948
+        },
+        {
+          "period": "2026-06-20",
+          "value": 1748311
+        },
+        {
+          "period": "2026-06-27",
+          "value": 1773344
+        },
+        {
+          "period": "2026-07-04",
+          "value": 1839692
+        },
+        {
+          "period": "2026-07-11",
+          "value": 1846465
+        },
+        {
+          "period": "2026-07-18",
+          "value": 1842561
+        },
+        {
+          "period": "2026-07-25",
+          "value": 1834915
+        },
+        {
+          "period": "2026-08-01",
+          "value": 1814581
+        },
+        {
+          "period": "2026-08-08",
+          "value": 1794032
+        },
+        {
+          "period": "2026-08-15",
+          "value": 1771025
+        },
+        {
+          "period": "2026-08-22",
+          "value": 1734461
+        },
+        {
+          "period": "2026-08-29",
+          "value": 1668037
+        },
+        {
+          "period": "2026-09-05",
+          "value": 1565675
+        }
+      ]
+    },
+    {
+      "id": "continued-sa",
+      "label": "Continued claims (weeks claimed), seasonally adjusted — United States (national — ETA ui_national_weekly_claims dataset is the national series; no state split)",
+      "unit": "Claims (count)",
+      "observations": [
+        {
+          "period": "2026-03-14",
+          "value": 1816000
+        },
+        {
+          "period": "2026-03-21",
+          "value": 1832000
+        },
+        {
+          "period": "2026-03-28",
+          "value": 1787000
+        },
+        {
+          "period": "2026-04-04",
+          "value": 1809000
+        },
+        {
+          "period": "2026-04-11",
+          "value": 1808000
+        },
+        {
+          "period": "2026-04-18",
+          "value": 1776000
+        },
+        {
+          "period": "2026-04-25",
+          "value": 1758000
+        },
+        {
+          "period": "2026-05-02",
+          "value": 1776000
+        },
+        {
+          "period": "2026-05-09",
+          "value": 1771000
+        },
+        {
+          "period": "2026-05-16",
+          "value": 1785000
+        },
+        {
+          "period": "2026-05-23",
+          "value": 1771000
+        },
+        {
+          "period": "2026-05-30",
+          "value": 1786000
+        },
+        {
+          "period": "2026-06-06",
+          "value": 1800000
+        },
+        {
+          "period": "2026-06-13",
+          "value": 1812000
+        },
+        {
+          "period": "2026-06-20",
+          "value": 1806000
+        },
+        {
+          "period": "2026-06-27",
+          "value": 1821000
+        },
+        {
+          "period": "2026-07-04",
+          "value": 1798000
+        },
+        {
+          "period": "2026-07-11",
+          "value": 1789000
+        },
+        {
+          "period": "2026-07-18",
+          "value": 1777000
+        },
+        {
+          "period": "2026-07-25",
+          "value": 1799000
+        },
+        {
+          "period": "2026-08-01",
+          "value": 1781000
+        },
+        {
+          "period": "2026-08-08",
+          "value": 1796000
+        },
+        {
+          "period": "2026-08-15",
+          "value": 1771000
+        },
+        {
+          "period": "2026-08-22",
+          "value": 1775000
+        },
+        {
+          "period": "2026-08-29",
+          "value": 1765000
+        },
+        {
+          "period": "2026-09-05",
+          "value": 1717000
+        }
+      ]
+    },
+    {
+      "id": "covered-employment",
+      "label": "Covered employment — United States (national — ETA ui_national_weekly_claims dataset is the national series; no state split)",
+      "unit": "Persons (count)",
+      "observations": [
+        {
+          "period": "2026-03-14",
+          "value": 153398888
+        },
+        {
+          "period": "2026-03-21",
+          "value": 153398888
+        },
+        {
+          "period": "2026-03-28",
+          "value": 153398888
+        },
+        {
+          "period": "2026-04-04",
+          "value": 153547535
+        },
+        {
+          "period": "2026-04-11",
+          "value": 153547535
+        },
+        {
+          "period": "2026-04-18",
+          "value": 153547535
+        },
+        {
+          "period": "2026-04-25",
+          "value": 153547535
+        },
+        {
+          "period": "2026-05-02",
+          "value": 153547535
+        },
+        {
+          "period": "2026-05-09",
+          "value": 153547535
+        },
+        {
+          "period": "2026-05-16",
+          "value": 153547535
+        },
+        {
+          "period": "2026-05-23",
+          "value": 153547535
+        },
+        {
+          "period": "2026-05-30",
+          "value": 153547535
+        },
+        {
+          "period": "2026-06-06",
+          "value": 153547535
+        },
+        {
+          "period": "2026-06-13",
+          "value": 153547535
+        },
+        {
+          "period": "2026-06-20",
+          "value": 153547535
+        },
+        {
+          "period": "2026-06-27",
+          "value": 153547535
+        },
+        {
+          "period": "2026-07-04",
+          "value": 153732307
+        },
+        {
+          "period": "2026-07-11",
+          "value": 153732307
+        },
+        {
+          "period": "2026-07-18",
+          "value": 153732307
+        },
+        {
+          "period": "2026-07-25",
+          "value": 153732307
+        },
+        {
+          "period": "2026-08-01",
+          "value": 153732307
+        },
+        {
+          "period": "2026-08-08",
+          "value": 153732307
+        },
+        {
+          "period": "2026-08-15",
+          "value": 153732307
+        },
+        {
+          "period": "2026-08-22",
+          "value": 153732307
+        },
+        {
+          "period": "2026-08-29",
+          "value": 153732307
+        },
+        {
+          "period": "2026-09-05",
+          "value": 153732307
+        }
+      ]
+    }
+  ],
+  "notes": "APIv4 shape verified against the portal documentation (User Guide / API Examples / FAQ, read 2026-10-08): key as X-API-KEY query parameter, limit/offset paging, rate limit 10 requests per 10 minutes — this module makes one request per weekly run. The legacy api.dol.gov/V1 endpoint uniformly rejected the portal-issued key (HTTP 400 on all routes) and is not documented by the portal; superseded. Scope: United States (national — ETA ui_national_weekly_claims dataset is the national series; no state split). Field mapping verified against the dataset metadata endpoint (2026-10-08): rptdate=week-ending date, c4=initial NSA, c5=initial SA, c6=continued NSA, c7=continued SA, c3=covered employment; c1/c2 are seasonal factors (excluded), c8/c9 are SA 4-week moving averages (not carried)."
+}

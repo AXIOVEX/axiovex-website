@@ -34,6 +34,8 @@ jobs:
           node-version: '20'
 
       - name: Fetch signals + Pulse snapshot
+        env:
+          BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
         run: node scripts/fetch-signals.mjs
 
       - name: Rebuild site from snapshot

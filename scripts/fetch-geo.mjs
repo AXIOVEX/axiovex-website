@@ -29,12 +29,28 @@
    committed file exists yet, in which case it exits 1.
    Usage: node scripts/fetch-geo.mjs [laus|qcew|all] */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { homedir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const GEO_DIR = path.join(ROOT, 'data', 'geo');
 const UA = { 'User-Agent': 'axiovex-website-build (spec 014 geo refresh)' };
+
+/* BLS v2 registration key (optional): the process environment
+ * first, then the data-apis key file — the same env sources as
+ * scripts/fetch-pack.mjs (rate-limit audit S1, 2026-10-08). Sent
+ * as the LAUS POST body's registrationkey when present; keyless
+ * behavior is unchanged when it is absent. */
+const envFile = process.env.PACK_ENV_FILE ||
+  path.join(homedir(), 'workspace', 'system', 'data-apis', '.env');
+let BLS_API_KEY = process.env.BLS_API_KEY || null;
+if (!BLS_API_KEY && existsSync(envFile)) {
+  for (const line of readFileSync(envFile, 'utf8').split('\n')) {
+    const m = /^\s*BLS_API_KEY\s*=\s*(.+?)\s*$/.exec(line);
+    if (m) { BLS_API_KEY = m[1].replace(/^["']|["']$/g, ''); break; }
+  }
+}
 
 function todayET() {
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Detroit' })
@@ -47,12 +63,24 @@ function countyFips() {
 async function fetchRetry(url, opts = {}, tries = 4) {
   let lastErr;
   for (let i = 0; i < tries; i++) {
+    let res = null;
     try {
-      const res = await fetch(url, { headers: UA, ...opts });
-      if (res.ok) return res;
-      lastErr = new Error('HTTP ' + res.status + ' for ' + url);
+      res = await fetch(url, { headers: UA, ...opts });
     } catch (e) { lastErr = e; }
-    await new Promise(r => setTimeout(r, 600 * (i + 1)));
+    if (res) {
+      if (res.ok) return res;
+      /* 429 (Too Many Requests) means stop, not retry in a second —
+       * especially for daily-quota APIs (rate-limit audit S5,
+       * 2026-10-08). Surface any Retry-After the server sent. */
+      if (res.status === 429) {
+        const ra = res.headers.get('retry-after');
+        throw new Error('HTTP 429 (Too Many Requests) for ' + url +
+          (ra ? ' — Retry-After: ' + ra : '') + ' (not retried)');
+      }
+      lastErr = new Error('HTTP ' + res.status + ' for ' + url);
+    }
+    /* Backoff floor of 5 s between tries (S5): 5s, 10s, 15s. */
+    if (i < tries - 1) await new Promise(r => setTimeout(r, 5000 * (i + 1)));
   }
   throw lastErr;
 }
@@ -67,10 +95,12 @@ async function refreshLaus() {
   const series = new Map();
   for (let i = 0; i < ids.length; i += 20) {
     const batch = ids.slice(i, i + 20);
+    const body = { seriesid: batch, startyear: '2025', endyear: '2026' };
+    if (BLS_API_KEY) body.registrationkey = BLS_API_KEY;
     const res = await fetchRetry('https://api.bls.gov/publicAPI/v2/timeseries/data/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ seriesid: batch, startyear: '2025', endyear: '2026' }),
+      body: JSON.stringify(body),
     });
     const json = await res.json();
     if (json.status !== 'REQUEST_SUCCEEDED') {

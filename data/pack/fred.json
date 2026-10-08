@@ -1,0 +1,1067 @@
+{
+  "source": "FRED",
+  "publisher": "Federal Reserve Bank of St. Louis",
+  "retrievedUtc": "2026-10-08T20:16:14.799Z",
+  "vintage": "FRED series/observations pull, latest 36 observations per series (mixed frequencies: monthly/quarterly/annual as labeled)",
+  "referencePeriod": "2026-08-01",
+  "series": [
+    {
+      "id": "INDPRO",
+      "label": "Industrial Production: Total Index (US)",
+      "unit": "Index 2017=100, seasonally adjusted",
+      "observations": [
+        {
+          "period": "2023-09-01",
+          "value": 101.0211
+        },
+        {
+          "period": "2023-10-01",
+          "value": 100.4689
+        },
+        {
+          "period": "2023-11-01",
+          "value": 100.8639
+        },
+        {
+          "period": "2023-12-01",
+          "value": 100.6031
+        },
+        {
+          "period": "2024-01-01",
+          "value": 99.2223
+        },
+        {
+          "period": "2024-02-01",
+          "value": 100.285
+        },
+        {
+          "period": "2024-03-01",
+          "value": 100.4575
+        },
+        {
+          "period": "2024-04-01",
+          "value": 100.2434
+        },
+        {
+          "period": "2024-05-01",
+          "value": 100.863
+        },
+        {
+          "period": "2024-06-01",
+          "value": 100.894
+        },
+        {
+          "period": "2024-07-01",
+          "value": 99.9757
+        },
+        {
+          "period": "2024-08-01",
+          "value": 100.4309
+        },
+        {
+          "period": "2024-09-01",
+          "value": 99.8084
+        },
+        {
+          "period": "2024-10-01",
+          "value": 99.4695
+        },
+        {
+          "period": "2024-11-01",
+          "value": 99.2925
+        },
+        {
+          "period": "2024-12-01",
+          "value": 100.3273
+        },
+        {
+          "period": "2025-01-01",
+          "value": 100.0647
+        },
+        {
+          "period": "2025-02-01",
+          "value": 101.0993
+        },
+        {
+          "period": "2025-03-01",
+          "value": 101.0404
+        },
+        {
+          "period": "2025-04-01",
+          "value": 101.1279
+        },
+        {
+          "period": "2025-05-01",
+          "value": 100.9655
+        },
+        {
+          "period": "2025-06-01",
+          "value": 101.4785
+        },
+        {
+          "period": "2025-07-01",
+          "value": 101.894
+        },
+        {
+          "period": "2025-08-01",
+          "value": 101.6247
+        },
+        {
+          "period": "2025-09-01",
+          "value": 101.668
+        },
+        {
+          "period": "2025-10-01",
+          "value": 101.2195
+        },
+        {
+          "period": "2025-11-01",
+          "value": 101.0344
+        },
+        {
+          "period": "2025-12-01",
+          "value": 101.4941
+        },
+        {
+          "period": "2026-01-01",
+          "value": 101.0388
+        },
+        {
+          "period": "2026-02-01",
+          "value": 101.9053
+        },
+        {
+          "period": "2026-03-01",
+          "value": 101.7336
+        },
+        {
+          "period": "2026-04-01",
+          "value": 102.5783
+        },
+        {
+          "period": "2026-05-01",
+          "value": 102.6396
+        },
+        {
+          "period": "2026-06-01",
+          "value": 102.842
+        },
+        {
+          "period": "2026-07-01",
+          "value": 103.0454
+        },
+        {
+          "period": "2026-08-01",
+          "value": 103.0682
+        }
+      ]
+    },
+    {
+      "id": "IPMAN",
+      "label": "Industrial Production: Manufacturing (US)",
+      "unit": "Index 2017=100, seasonally adjusted",
+      "observations": [
+        {
+          "period": "2023-09-01",
+          "value": 97.3037
+        },
+        {
+          "period": "2023-10-01",
+          "value": 96.786
+        },
+        {
+          "period": "2023-11-01",
+          "value": 97.2483
+        },
+        {
+          "period": "2023-12-01",
+          "value": 97.2445
+        },
+        {
+          "period": "2024-01-01",
+          "value": 95.7457
+        },
+        {
+          "period": "2024-02-01",
+          "value": 96.9553
+        },
+        {
+          "period": "2024-03-01",
+          "value": 97.0896
+        },
+        {
+          "period": "2024-04-01",
+          "value": 96.564
+        },
+        {
+          "period": "2024-05-01",
+          "value": 97.1046
+        },
+        {
+          "period": "2024-06-01",
+          "value": 96.9264
+        },
+        {
+          "period": "2024-07-01",
+          "value": 96.1663
+        },
+        {
+          "period": "2024-08-01",
+          "value": 96.6244
+        },
+        {
+          "period": "2024-09-01",
+          "value": 96.0864
+        },
+        {
+          "period": "2024-10-01",
+          "value": 95.4449
+        },
+        {
+          "period": "2024-11-01",
+          "value": 95.7246
+        },
+        {
+          "period": "2024-12-01",
+          "value": 96.1524
+        },
+        {
+          "period": "2025-01-01",
+          "value": 95.7673
+        },
+        {
+          "period": "2025-02-01",
+          "value": 96.9554
+        },
+        {
+          "period": "2025-03-01",
+          "value": 97.3898
+        },
+        {
+          "period": "2025-04-01",
+          "value": 97.3314
+        },
+        {
+          "period": "2025-05-01",
+          "value": 97.2482
+        },
+        {
+          "period": "2025-06-01",
+          "value": 97.5794
+        },
+        {
+          "period": "2025-07-01",
+          "value": 98.0693
+        },
+        {
+          "period": "2025-08-01",
+          "value": 98.084
+        },
+        {
+          "period": "2025-09-01",
+          "value": 98.0473
+        },
+        {
+          "period": "2025-10-01",
+          "value": 97.2128
+        },
+        {
+          "period": "2025-11-01",
+          "value": 97.1299
+        },
+        {
+          "period": "2025-12-01",
+          "value": 96.9857
+        },
+        {
+          "period": "2026-01-01",
+          "value": 97.0786
+        },
+        {
+          "period": "2026-02-01",
+          "value": 97.733
+        },
+        {
+          "period": "2026-03-01",
+          "value": 98.0924
+        },
+        {
+          "period": "2026-04-01",
+          "value": 98.8563
+        },
+        {
+          "period": "2026-05-01",
+          "value": 98.9796
+        },
+        {
+          "period": "2026-06-01",
+          "value": 99.2374
+        },
+        {
+          "period": "2026-07-01",
+          "value": 99.3952
+        },
+        {
+          "period": "2026-08-01",
+          "value": 99.0964
+        }
+      ]
+    },
+    {
+      "id": "MCUMFN",
+      "label": "Capacity Utilization: Manufacturing (US)",
+      "unit": "Percent, seasonally adjusted",
+      "observations": [
+        {
+          "period": "2023-09-01",
+          "value": 76.5797
+        },
+        {
+          "period": "2023-10-01",
+          "value": 76.1299
+        },
+        {
+          "period": "2023-11-01",
+          "value": 76.4498
+        },
+        {
+          "period": "2023-12-01",
+          "value": 76.4022
+        },
+        {
+          "period": "2024-01-01",
+          "value": 75.1799
+        },
+        {
+          "period": "2024-02-01",
+          "value": 76.0838
+        },
+        {
+          "period": "2024-03-01",
+          "value": 76.1421
+        },
+        {
+          "period": "2024-04-01",
+          "value": 75.6821
+        },
+        {
+          "period": "2024-05-01",
+          "value": 76.0561
+        },
+        {
+          "period": "2024-06-01",
+          "value": 75.865
+        },
+        {
+          "period": "2024-07-01",
+          "value": 75.2171
+        },
+        {
+          "period": "2024-08-01",
+          "value": 75.5198
+        },
+        {
+          "period": "2024-09-01",
+          "value": 75.0416
+        },
+        {
+          "period": "2024-10-01",
+          "value": 74.4805
+        },
+        {
+          "period": "2024-11-01",
+          "value": 74.6357
+        },
+        {
+          "period": "2024-12-01",
+          "value": 74.9036
+        },
+        {
+          "period": "2025-01-01",
+          "value": 74.536
+        },
+        {
+          "period": "2025-02-01",
+          "value": 75.3898
+        },
+        {
+          "period": "2025-03-01",
+          "value": 75.6543
+        },
+        {
+          "period": "2025-04-01",
+          "value": 75.5341
+        },
+        {
+          "period": "2025-05-01",
+          "value": 75.393
+        },
+        {
+          "period": "2025-06-01",
+          "value": 75.5712
+        },
+        {
+          "period": "2025-07-01",
+          "value": 75.8707
+        },
+        {
+          "period": "2025-08-01",
+          "value": 75.8014
+        },
+        {
+          "period": "2025-09-01",
+          "value": 75.6918
+        },
+        {
+          "period": "2025-10-01",
+          "value": 74.9662
+        },
+        {
+          "period": "2025-11-01",
+          "value": 74.8205
+        },
+        {
+          "period": "2025-12-01",
+          "value": 74.6279
+        },
+        {
+          "period": "2026-01-01",
+          "value": 74.6388
+        },
+        {
+          "period": "2026-02-01",
+          "value": 75.0712
+        },
+        {
+          "period": "2026-03-01",
+          "value": 75.2802
+        },
+        {
+          "period": "2026-04-01",
+          "value": 75.8027
+        },
+        {
+          "period": "2026-05-01",
+          "value": 75.8339
+        },
+        {
+          "period": "2026-06-01",
+          "value": 75.9676
+        },
+        {
+          "period": "2026-07-01",
+          "value": 76.0242
+        },
+        {
+          "period": "2026-08-01",
+          "value": 75.7309
+        }
+      ]
+    },
+    {
+      "id": "MIPCPI",
+      "label": "Per Capita Personal Income in Michigan",
+      "unit": "Dollars, not seasonally adjusted",
+      "observations": [
+        {
+          "period": "1990-01-01",
+          "value": 19048
+        },
+        {
+          "period": "1991-01-01",
+          "value": 19312
+        },
+        {
+          "period": "1992-01-01",
+          "value": 20265
+        },
+        {
+          "period": "1993-01-01",
+          "value": 21198
+        },
+        {
+          "period": "1994-01-01",
+          "value": 22660
+        },
+        {
+          "period": "1995-01-01",
+          "value": 23767
+        },
+        {
+          "period": "1996-01-01",
+          "value": 24773
+        },
+        {
+          "period": "1997-01-01",
+          "value": 25800
+        },
+        {
+          "period": "1998-01-01",
+          "value": 27286
+        },
+        {
+          "period": "1999-01-01",
+          "value": 28506
+        },
+        {
+          "period": "2000-01-01",
+          "value": 30250
+        },
+        {
+          "period": "2001-01-01",
+          "value": 30694
+        },
+        {
+          "period": "2002-01-01",
+          "value": 30595
+        },
+        {
+          "period": "2003-01-01",
+          "value": 31267
+        },
+        {
+          "period": "2004-01-01",
+          "value": 32092
+        },
+        {
+          "period": "2005-01-01",
+          "value": 32756
+        },
+        {
+          "period": "2006-01-01",
+          "value": 33563
+        },
+        {
+          "period": "2007-01-01",
+          "value": 34669
+        },
+        {
+          "period": "2008-01-01",
+          "value": 35826
+        },
+        {
+          "period": "2009-01-01",
+          "value": 34258
+        },
+        {
+          "period": "2010-01-01",
+          "value": 35648
+        },
+        {
+          "period": "2011-01-01",
+          "value": 37702
+        },
+        {
+          "period": "2012-01-01",
+          "value": 39052
+        },
+        {
+          "period": "2013-01-01",
+          "value": 39300
+        },
+        {
+          "period": "2014-01-01",
+          "value": 40832
+        },
+        {
+          "period": "2015-01-01",
+          "value": 42988
+        },
+        {
+          "period": "2016-01-01",
+          "value": 44085
+        },
+        {
+          "period": "2017-01-01",
+          "value": 45267
+        },
+        {
+          "period": "2018-01-01",
+          "value": 47091
+        },
+        {
+          "period": "2019-01-01",
+          "value": 48582
+        },
+        {
+          "period": "2020-01-01",
+          "value": 52826
+        },
+        {
+          "period": "2021-01-01",
+          "value": 57106
+        },
+        {
+          "period": "2022-01-01",
+          "value": 58083
+        },
+        {
+          "period": "2023-01-01",
+          "value": 61175
+        },
+        {
+          "period": "2024-01-01",
+          "value": 64255
+        },
+        {
+          "period": "2025-01-01",
+          "value": 67245
+        }
+      ]
+    },
+    {
+      "id": "MISTHPI",
+      "label": "All-Transactions House Price Index for Michigan",
+      "unit": "Index 1980:Q1=100, not seasonally adjusted",
+      "observations": [
+        {
+          "period": "2017-07-01",
+          "value": 312.72
+        },
+        {
+          "period": "2017-10-01",
+          "value": 314.53
+        },
+        {
+          "period": "2018-01-01",
+          "value": 318.54
+        },
+        {
+          "period": "2018-04-01",
+          "value": 326.29
+        },
+        {
+          "period": "2018-07-01",
+          "value": 331.51
+        },
+        {
+          "period": "2018-10-01",
+          "value": 332.16
+        },
+        {
+          "period": "2019-01-01",
+          "value": 336.56
+        },
+        {
+          "period": "2019-04-01",
+          "value": 343.42
+        },
+        {
+          "period": "2019-07-01",
+          "value": 347.64
+        },
+        {
+          "period": "2019-10-01",
+          "value": 350.12
+        },
+        {
+          "period": "2020-01-01",
+          "value": 353.45
+        },
+        {
+          "period": "2020-04-01",
+          "value": 357.16
+        },
+        {
+          "period": "2020-07-01",
+          "value": 365.14
+        },
+        {
+          "period": "2020-10-01",
+          "value": 372.68
+        },
+        {
+          "period": "2021-01-01",
+          "value": 380.63
+        },
+        {
+          "period": "2021-04-01",
+          "value": 401.74
+        },
+        {
+          "period": "2021-07-01",
+          "value": 422.52
+        },
+        {
+          "period": "2021-10-01",
+          "value": 431.7
+        },
+        {
+          "period": "2022-01-01",
+          "value": 443.28
+        },
+        {
+          "period": "2022-04-01",
+          "value": 470.82
+        },
+        {
+          "period": "2022-07-01",
+          "value": 475.74
+        },
+        {
+          "period": "2022-10-01",
+          "value": 469.57
+        },
+        {
+          "period": "2023-01-01",
+          "value": 472.28
+        },
+        {
+          "period": "2023-04-01",
+          "value": 495.78
+        },
+        {
+          "period": "2023-07-01",
+          "value": 504.35
+        },
+        {
+          "period": "2023-10-01",
+          "value": 505.7
+        },
+        {
+          "period": "2024-01-01",
+          "value": 511.73
+        },
+        {
+          "period": "2024-04-01",
+          "value": 531.48
+        },
+        {
+          "period": "2024-07-01",
+          "value": 538.85
+        },
+        {
+          "period": "2024-10-01",
+          "value": 538.64
+        },
+        {
+          "period": "2025-01-01",
+          "value": 546.08
+        },
+        {
+          "period": "2025-04-01",
+          "value": 559.18
+        },
+        {
+          "period": "2025-07-01",
+          "value": 566.35
+        },
+        {
+          "period": "2025-10-01",
+          "value": 569.28
+        },
+        {
+          "period": "2026-01-01",
+          "value": 573.51
+        },
+        {
+          "period": "2026-04-01",
+          "value": 584.9
+        }
+      ]
+    },
+    {
+      "id": "MIBPPRIV",
+      "label": "New Private Housing Units Authorized by Building Permits for Michigan",
+      "unit": "Units",
+      "observations": [
+        {
+          "period": "2023-09-01",
+          "value": 1691
+        },
+        {
+          "period": "2023-10-01",
+          "value": 1763
+        },
+        {
+          "period": "2023-11-01",
+          "value": 1759
+        },
+        {
+          "period": "2023-12-01",
+          "value": 1199
+        },
+        {
+          "period": "2024-01-01",
+          "value": 1100
+        },
+        {
+          "period": "2024-02-01",
+          "value": 1405
+        },
+        {
+          "period": "2024-03-01",
+          "value": 1525
+        },
+        {
+          "period": "2024-04-01",
+          "value": 1685
+        },
+        {
+          "period": "2024-05-01",
+          "value": 2065
+        },
+        {
+          "period": "2024-06-01",
+          "value": 1759
+        },
+        {
+          "period": "2024-07-01",
+          "value": 1732
+        },
+        {
+          "period": "2024-08-01",
+          "value": 2109
+        },
+        {
+          "period": "2024-09-01",
+          "value": 1972
+        },
+        {
+          "period": "2024-10-01",
+          "value": 2423
+        },
+        {
+          "period": "2024-11-01",
+          "value": 1749
+        },
+        {
+          "period": "2024-12-01",
+          "value": 1496
+        },
+        {
+          "period": "2025-01-01",
+          "value": 1160
+        },
+        {
+          "period": "2025-02-01",
+          "value": 1467
+        },
+        {
+          "period": "2025-03-01",
+          "value": 1905
+        },
+        {
+          "period": "2025-04-01",
+          "value": 2049
+        },
+        {
+          "period": "2025-05-01",
+          "value": 2046
+        },
+        {
+          "period": "2025-06-01",
+          "value": 2358
+        },
+        {
+          "period": "2025-07-01",
+          "value": 2287
+        },
+        {
+          "period": "2025-08-01",
+          "value": 2234
+        },
+        {
+          "period": "2025-09-01",
+          "value": 2472
+        },
+        {
+          "period": "2025-10-01",
+          "value": 2555
+        },
+        {
+          "period": "2025-11-01",
+          "value": 1491
+        },
+        {
+          "period": "2025-12-01",
+          "value": 1583
+        },
+        {
+          "period": "2026-01-01",
+          "value": 1238
+        },
+        {
+          "period": "2026-02-01",
+          "value": 1369
+        },
+        {
+          "period": "2026-03-01",
+          "value": 1626
+        },
+        {
+          "period": "2026-04-01",
+          "value": 1962
+        },
+        {
+          "period": "2026-05-01",
+          "value": 2118
+        },
+        {
+          "period": "2026-06-01",
+          "value": 2252
+        },
+        {
+          "period": "2026-07-01",
+          "value": 2026
+        },
+        {
+          "period": "2026-08-01",
+          "value": 1836
+        }
+      ]
+    },
+    {
+      "id": "MIPOP",
+      "label": "Resident Population in Michigan",
+      "unit": "Thousands of persons, not seasonally adjusted",
+      "observations": [
+        {
+          "period": "1990-01-01",
+          "value": 9310.462
+        },
+        {
+          "period": "1991-01-01",
+          "value": 9395.022
+        },
+        {
+          "period": "1992-01-01",
+          "value": 9470.323
+        },
+        {
+          "period": "1993-01-01",
+          "value": 9529.24
+        },
+        {
+          "period": "1994-01-01",
+          "value": 9584.481
+        },
+        {
+          "period": "1995-01-01",
+          "value": 9659.871
+        },
+        {
+          "period": "1996-01-01",
+          "value": 9739.184
+        },
+        {
+          "period": "1997-01-01",
+          "value": 9785.45
+        },
+        {
+          "period": "1998-01-01",
+          "value": 9820.231
+        },
+        {
+          "period": "1999-01-01",
+          "value": 9863.775
+        },
+        {
+          "period": "2000-01-01",
+          "value": 9952.45
+        },
+        {
+          "period": "2001-01-01",
+          "value": 9991.12
+        },
+        {
+          "period": "2002-01-01",
+          "value": 10015.71
+        },
+        {
+          "period": "2003-01-01",
+          "value": 10041.152
+        },
+        {
+          "period": "2004-01-01",
+          "value": 10055.315
+        },
+        {
+          "period": "2005-01-01",
+          "value": 10051.137
+        },
+        {
+          "period": "2006-01-01",
+          "value": 10036.081
+        },
+        {
+          "period": "2007-01-01",
+          "value": 10001.284
+        },
+        {
+          "period": "2008-01-01",
+          "value": 9946.889
+        },
+        {
+          "period": "2009-01-01",
+          "value": 9901.591
+        },
+        {
+          "period": "2010-01-01",
+          "value": 9877.597
+        },
+        {
+          "period": "2011-01-01",
+          "value": 9883.053
+        },
+        {
+          "period": "2012-01-01",
+          "value": 9898.289
+        },
+        {
+          "period": "2013-01-01",
+          "value": 9914.802
+        },
+        {
+          "period": "2014-01-01",
+          "value": 9932.033
+        },
+        {
+          "period": "2015-01-01",
+          "value": 9934.483
+        },
+        {
+          "period": "2016-01-01",
+          "value": 9954.117
+        },
+        {
+          "period": "2017-01-01",
+          "value": 9976.752
+        },
+        {
+          "period": "2018-01-01",
+          "value": 9987.286
+        },
+        {
+          "period": "2019-01-01",
+          "value": 9984.795
+        },
+        {
+          "period": "2020-01-01",
+          "value": 10072.294
+        },
+        {
+          "period": "2021-01-01",
+          "value": 10042.362
+        },
+        {
+          "period": "2022-01-01",
+          "value": 10043.906
+        },
+        {
+          "period": "2023-01-01",
+          "value": 10062.124
+        },
+        {
+          "period": "2024-01-01",
+          "value": 10099.962
+        },
+        {
+          "period": "2025-01-01",
+          "value": 10127.884
+        }
+      ]
+    }
+  ],
+  "notes": "Values are FRED strings parsed to numbers; \".\" (missing) observations dropped. Frequencies differ by series — see each series label/unit. KEY PENDING at first write (2026-10-08): endpoint probed live (structured 400 for placeholder key), series pages verified, real-key run not yet done."
+}

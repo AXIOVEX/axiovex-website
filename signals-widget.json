@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-08T18:25:32.916Z",
+  "updatedUtc": "2026-10-08T19:56:52.458Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -111,10 +111,10 @@
     {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
-      "title": "New Mexico Institute of Mining and Technology et.al, Notice of Decision on Application for Duty-Free Entry of Scientific Instruments",
-      "source": "Federal Register",
+      "title": "Department of Veterans Affairs → VETS ACCESS LLC — $16,525 award, October 6, 2026",
+      "source": "USAspending (Treasury)",
       "date": "2026-10-06",
-      "url": "https://www.federalregister.gov/documents/2026/10/06/2026-20490/new-mexico-institute-of-mining-and-technology-etal-notice-of-decision-on-application-for-duty-free"
+      "url": "https://www.usaspending.gov/award/CONT_AWD_36C24827P0029_3600_-NONE-_-NONE-"
     }
   ],
   "signalsUrl": "/signals/"

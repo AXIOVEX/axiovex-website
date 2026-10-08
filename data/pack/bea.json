@@ -1,0 +1,1027 @@
+{
+  "source": "BEA Regional",
+  "publisher": "U.S. Bureau of Economic Analysis",
+  "retrievedUtc": "2026-10-08T20:39:08.000Z",
+  "vintage": "BEA Regional dataset, Year=LAST5 request filtered to the latest returned year per table (CAGDP2 year 2024, CAINC1 year 2024)",
+  "referencePeriod": "2024",
+  "series": [
+    {
+      "id": "cagdp2-total",
+      "label": "County GDP, all industries (CAGDP2 LineCode 1), Michigan counties, 2024",
+      "unit": "Thousands of current dollars",
+      "values": [
+        {
+          "name": "Alcona",
+          "value": 263184
+        },
+        {
+          "name": "Alger",
+          "value": 331727
+        },
+        {
+          "name": "Allegan",
+          "value": 6699359
+        },
+        {
+          "name": "Alpena",
+          "value": 1517342
+        },
+        {
+          "name": "Antrim",
+          "value": 854585
+        },
+        {
+          "name": "Arenac",
+          "value": 602657
+        },
+        {
+          "name": "Baraga",
+          "value": 374485
+        },
+        {
+          "name": "Barry",
+          "value": 2346346
+        },
+        {
+          "name": "Bay",
+          "value": 4724092
+        },
+        {
+          "name": "Benzie",
+          "value": 740735
+        },
+        {
+          "name": "Berrien",
+          "value": 9718372
+        },
+        {
+          "name": "Branch",
+          "value": 1938449
+        },
+        {
+          "name": "Calhoun",
+          "value": 9106912
+        },
+        {
+          "name": "Cass",
+          "value": 1897246
+        },
+        {
+          "name": "Charlevoix",
+          "value": 1720737
+        },
+        {
+          "name": "Cheboygan",
+          "value": 911727
+        },
+        {
+          "name": "Chippewa",
+          "value": 1602948
+        },
+        {
+          "name": "Clare",
+          "value": 1547237
+        },
+        {
+          "name": "Clinton",
+          "value": 3167936
+        },
+        {
+          "name": "Crawford",
+          "value": 562607
+        },
+        {
+          "name": "Delta",
+          "value": 1635247
+        },
+        {
+          "name": "Dickinson",
+          "value": 1761845
+        },
+        {
+          "name": "Eaton",
+          "value": 7448391
+        },
+        {
+          "name": "Emmet",
+          "value": 2559020
+        },
+        {
+          "name": "Genesee",
+          "value": 20159547
+        },
+        {
+          "name": "Gladwin",
+          "value": 698563
+        },
+        {
+          "name": "Gogebic",
+          "value": 648609
+        },
+        {
+          "name": "Grand Traverse",
+          "value": 7470347
+        },
+        {
+          "name": "Gratiot",
+          "value": 1982243
+        },
+        {
+          "name": "Hillsdale",
+          "value": 2201614
+        },
+        {
+          "name": "Houghton",
+          "value": 1588874
+        },
+        {
+          "name": "Huron",
+          "value": 2157937
+        },
+        {
+          "name": "Ingham",
+          "value": 23568547
+        },
+        {
+          "name": "Ionia",
+          "value": 2329180
+        },
+        {
+          "name": "Iosco",
+          "value": 1264999
+        },
+        {
+          "name": "Iron",
+          "value": 419523
+        },
+        {
+          "name": "Isabella",
+          "value": 3265619
+        },
+        {
+          "name": "Jackson",
+          "value": 9060508
+        },
+        {
+          "name": "Kalamazoo",
+          "value": 20706266
+        },
+        {
+          "name": "Kalkaska",
+          "value": 838642
+        },
+        {
+          "name": "Kent",
+          "value": 60316473
+        },
+        {
+          "name": "Keweenaw",
+          "value": 76584
+        },
+        {
+          "name": "Lake",
+          "value": 288926
+        },
+        {
+          "name": "Lapeer",
+          "value": 3257810
+        },
+        {
+          "name": "Leelanau",
+          "value": 1131517
+        },
+        {
+          "name": "Lenawee",
+          "value": 4238659
+        },
+        {
+          "name": "Livingston",
+          "value": 10122407
+        },
+        {
+          "name": "Luce",
+          "value": 209836
+        },
+        {
+          "name": "Mackinac",
+          "value": 692894
+        },
+        {
+          "name": "Macomb",
+          "value": 54177053
+        },
+        {
+          "name": "Manistee",
+          "value": 1160259
+        },
+        {
+          "name": "Marquette",
+          "value": 3596670
+        },
+        {
+          "name": "Mason",
+          "value": 1347252
+        },
+        {
+          "name": "Mecosta",
+          "value": 1626071
+        },
+        {
+          "name": "Menominee",
+          "value": 971196
+        },
+        {
+          "name": "Midland",
+          "value": 7778569
+        },
+        {
+          "name": "Missaukee",
+          "value": 677711
+        },
+        {
+          "name": "Monroe",
+          "value": 8136406
+        },
+        {
+          "name": "Montcalm",
+          "value": 2158121
+        },
+        {
+          "name": "Montmorency",
+          "value": 309841
+        },
+        {
+          "name": "Muskegon",
+          "value": 8392115
+        },
+        {
+          "name": "Newaygo",
+          "value": 2076671
+        },
+        {
+          "name": "Oakland",
+          "value": 143144361
+        },
+        {
+          "name": "Oceana",
+          "value": 832889
+        },
+        {
+          "name": "Ogemaw",
+          "value": 787991
+        },
+        {
+          "name": "Ontonagon",
+          "value": 169197
+        },
+        {
+          "name": "Osceola",
+          "value": 1110869
+        },
+        {
+          "name": "Oscoda",
+          "value": 282829
+        },
+        {
+          "name": "Otsego",
+          "value": 1497909
+        },
+        {
+          "name": "Ottawa",
+          "value": 21043679
+        },
+        {
+          "name": "Presque Isle",
+          "value": 482141
+        },
+        {
+          "name": "Roscommon",
+          "value": 853717
+        },
+        {
+          "name": "Saginaw",
+          "value": 11009590
+        },
+        {
+          "name": "Sanilac",
+          "value": 1746995
+        },
+        {
+          "name": "Schoolcraft",
+          "value": 360135
+        },
+        {
+          "name": "Shiawassee",
+          "value": 2377373
+        },
+        {
+          "name": "St. Clair",
+          "value": 7417446
+        },
+        {
+          "name": "St. Joseph",
+          "value": 2875369
+        },
+        {
+          "name": "Tuscola",
+          "value": 1768657
+        },
+        {
+          "name": "Van Buren",
+          "value": 3313230
+        },
+        {
+          "name": "Washtenaw",
+          "value": 34591665
+        },
+        {
+          "name": "Wayne",
+          "value": 129920105
+        },
+        {
+          "name": "Wexford",
+          "value": 1743521
+        }
+      ]
+    },
+    {
+      "id": "cainc1-total",
+      "label": "County total personal income (CAINC1 LineCode 1), Michigan counties, 2024",
+      "unit": "Thousands of dollars",
+      "values": [
+        {
+          "name": "Alcona",
+          "value": 553826
+        },
+        {
+          "name": "Alger",
+          "value": 407213
+        },
+        {
+          "name": "Allegan",
+          "value": 7408717
+        },
+        {
+          "name": "Alpena",
+          "value": 1565974
+        },
+        {
+          "name": "Antrim",
+          "value": 1548993
+        },
+        {
+          "name": "Arenac",
+          "value": 783773
+        },
+        {
+          "name": "Baraga",
+          "value": 373316
+        },
+        {
+          "name": "Barry",
+          "value": 3865696
+        },
+        {
+          "name": "Bay",
+          "value": 5710140
+        },
+        {
+          "name": "Benzie",
+          "value": 1177788
+        },
+        {
+          "name": "Berrien",
+          "value": 9787397
+        },
+        {
+          "name": "Branch",
+          "value": 2171603
+        },
+        {
+          "name": "Calhoun",
+          "value": 6715861
+        },
+        {
+          "name": "Cass",
+          "value": 3069920
+        },
+        {
+          "name": "Charlevoix",
+          "value": 1997380
+        },
+        {
+          "name": "Cheboygan",
+          "value": 1403162
+        },
+        {
+          "name": "Chippewa",
+          "value": 1773949
+        },
+        {
+          "name": "Clare",
+          "value": 1432904
+        },
+        {
+          "name": "Clinton",
+          "value": 5047746
+        },
+        {
+          "name": "Crawford",
+          "value": 616168
+        },
+        {
+          "name": "Delta",
+          "value": 1846263
+        },
+        {
+          "name": "Dickinson",
+          "value": 1538995
+        },
+        {
+          "name": "Eaton",
+          "value": 6163753
+        },
+        {
+          "name": "Emmet",
+          "value": 2716046
+        },
+        {
+          "name": "Genesee",
+          "value": 21559948
+        },
+        {
+          "name": "Gladwin",
+          "value": 1261794
+        },
+        {
+          "name": "Gogebic",
+          "value": 761847
+        },
+        {
+          "name": "Grand Traverse",
+          "value": 6926731
+        },
+        {
+          "name": "Gratiot",
+          "value": 1928697
+        },
+        {
+          "name": "Hillsdale",
+          "value": 2134856
+        },
+        {
+          "name": "Houghton",
+          "value": 1821186
+        },
+        {
+          "name": "Huron",
+          "value": 1939926
+        },
+        {
+          "name": "Ingham",
+          "value": 15717804
+        },
+        {
+          "name": "Ionia",
+          "value": 2982692
+        },
+        {
+          "name": "Iosco",
+          "value": 1324598
+        },
+        {
+          "name": "Iron",
+          "value": 626516
+        },
+        {
+          "name": "Isabella",
+          "value": 3249420
+        },
+        {
+          "name": "Jackson",
+          "value": 8263126
+        },
+        {
+          "name": "Kalamazoo",
+          "value": 17425313
+        },
+        {
+          "name": "Kalkaska",
+          "value": 898376
+        },
+        {
+          "name": "Kent",
+          "value": 49460483
+        },
+        {
+          "name": "Keweenaw",
+          "value": 134665
+        },
+        {
+          "name": "Lake",
+          "value": 513765
+        },
+        {
+          "name": "Lapeer",
+          "value": 5045551
+        },
+        {
+          "name": "Leelanau",
+          "value": 2108455
+        },
+        {
+          "name": "Lenawee",
+          "value": 5183425
+        },
+        {
+          "name": "Livingston",
+          "value": 14938495
+        },
+        {
+          "name": "Luce",
+          "value": 251092
+        },
+        {
+          "name": "Mackinac",
+          "value": 666172
+        },
+        {
+          "name": "Macomb",
+          "value": 53843586
+        },
+        {
+          "name": "Manistee",
+          "value": 1323084
+        },
+        {
+          "name": "Marquette",
+          "value": 3524672
+        },
+        {
+          "name": "Mason",
+          "value": 1543927
+        },
+        {
+          "name": "Mecosta",
+          "value": 1931974
+        },
+        {
+          "name": "Menominee",
+          "value": 1186891
+        },
+        {
+          "name": "Midland",
+          "value": 5643083
+        },
+        {
+          "name": "Missaukee",
+          "value": 716763
+        },
+        {
+          "name": "Monroe",
+          "value": 9627565
+        },
+        {
+          "name": "Montcalm",
+          "value": 3011592
+        },
+        {
+          "name": "Montmorency",
+          "value": 443263
+        },
+        {
+          "name": "Muskegon",
+          "value": 9099019
+        },
+        {
+          "name": "Newaygo",
+          "value": 2479493
+        },
+        {
+          "name": "Oakland",
+          "value": 121361366
+        },
+        {
+          "name": "Oceana",
+          "value": 1374417
+        },
+        {
+          "name": "Ogemaw",
+          "value": 955348
+        },
+        {
+          "name": "Ontonagon",
+          "value": 301161
+        },
+        {
+          "name": "Osceola",
+          "value": 1207895
+        },
+        {
+          "name": "Oscoda",
+          "value": 379157
+        },
+        {
+          "name": "Otsego",
+          "value": 1375413
+        },
+        {
+          "name": "Ottawa",
+          "value": 20419059
+        },
+        {
+          "name": "Presque Isle",
+          "value": 684684
+        },
+        {
+          "name": "Roscommon",
+          "value": 1204865
+        },
+        {
+          "name": "Saginaw",
+          "value": 9892414
+        },
+        {
+          "name": "Sanilac",
+          "value": 2085340
+        },
+        {
+          "name": "Schoolcraft",
+          "value": 430601
+        },
+        {
+          "name": "Shiawassee",
+          "value": 3594400
+        },
+        {
+          "name": "St. Clair",
+          "value": 9288771
+        },
+        {
+          "name": "St. Joseph",
+          "value": 3160096
+        },
+        {
+          "name": "Tuscola",
+          "value": 2629472
+        },
+        {
+          "name": "Van Buren",
+          "value": 4180368
+        },
+        {
+          "name": "Washtenaw",
+          "value": 29811220
+        },
+        {
+          "name": "Wayne",
+          "value": 98675057
+        },
+        {
+          "name": "Wexford",
+          "value": 1659230
+        }
+      ]
+    },
+    {
+      "id": "cainc1-percapita",
+      "label": "County per capita personal income (CAINC1 LineCode 3), Michigan counties, 2024",
+      "unit": "Dollars",
+      "values": [
+        {
+          "name": "Alcona",
+          "value": 52130
+        },
+        {
+          "name": "Alger",
+          "value": 46833
+        },
+        {
+          "name": "Allegan",
+          "value": 60514
+        },
+        {
+          "name": "Alpena",
+          "value": 54180
+        },
+        {
+          "name": "Antrim",
+          "value": 63131
+        },
+        {
+          "name": "Arenac",
+          "value": 51950
+        },
+        {
+          "name": "Baraga",
+          "value": 45699
+        },
+        {
+          "name": "Barry",
+          "value": 60378
+        },
+        {
+          "name": "Bay",
+          "value": 55627
+        },
+        {
+          "name": "Benzie",
+          "value": 63595
+        },
+        {
+          "name": "Berrien",
+          "value": 64094
+        },
+        {
+          "name": "Branch",
+          "value": 47018
+        },
+        {
+          "name": "Calhoun",
+          "value": 50199
+        },
+        {
+          "name": "Cass",
+          "value": 59552
+        },
+        {
+          "name": "Charlevoix",
+          "value": 76513
+        },
+        {
+          "name": "Cheboygan",
+          "value": 54043
+        },
+        {
+          "name": "Chippewa",
+          "value": 48932
+        },
+        {
+          "name": "Clare",
+          "value": 45627
+        },
+        {
+          "name": "Clinton",
+          "value": 63057
+        },
+        {
+          "name": "Crawford",
+          "value": 45310
+        },
+        {
+          "name": "Delta",
+          "value": 50325
+        },
+        {
+          "name": "Dickinson",
+          "value": 59204
+        },
+        {
+          "name": "Eaton",
+          "value": 56293
+        },
+        {
+          "name": "Emmet",
+          "value": 80004
+        },
+        {
+          "name": "Genesee",
+          "value": 53595
+        },
+        {
+          "name": "Gladwin",
+          "value": 48540
+        },
+        {
+          "name": "Gogebic",
+          "value": 53587
+        },
+        {
+          "name": "Grand Traverse",
+          "value": 71687
+        },
+        {
+          "name": "Gratiot",
+          "value": 46618
+        },
+        {
+          "name": "Hillsdale",
+          "value": 46827
+        },
+        {
+          "name": "Houghton",
+          "value": 47874
+        },
+        {
+          "name": "Huron",
+          "value": 63026
+        },
+        {
+          "name": "Ingham",
+          "value": 54120
+        },
+        {
+          "name": "Ionia",
+          "value": 45022
+        },
+        {
+          "name": "Iosco",
+          "value": 52230
+        },
+        {
+          "name": "Iron",
+          "value": 53507
+        },
+        {
+          "name": "Isabella",
+          "value": 49936
+        },
+        {
+          "name": "Jackson",
+          "value": 51569
+        },
+        {
+          "name": "Kalamazoo",
+          "value": 65811
+        },
+        {
+          "name": "Kalkaska",
+          "value": 48253
+        },
+        {
+          "name": "Kent",
+          "value": 73492
+        },
+        {
+          "name": "Keweenaw",
+          "value": 62316
+        },
+        {
+          "name": "Lake",
+          "value": 39505
+        },
+        {
+          "name": "Lapeer",
+          "value": 56585
+        },
+        {
+          "name": "Leelanau",
+          "value": 92189
+        },
+        {
+          "name": "Lenawee",
+          "value": 53030
+        },
+        {
+          "name": "Livingston",
+          "value": 75839
+        },
+        {
+          "name": "Luce",
+          "value": 39680
+        },
+        {
+          "name": "Mackinac",
+          "value": 59779
+        },
+        {
+          "name": "Macomb",
+          "value": 60760
+        },
+        {
+          "name": "Manistee",
+          "value": 51847
+        },
+        {
+          "name": "Marquette",
+          "value": 51849
+        },
+        {
+          "name": "Mason",
+          "value": 53069
+        },
+        {
+          "name": "Mecosta",
+          "value": 46058
+        },
+        {
+          "name": "Menominee",
+          "value": 51492
+        },
+        {
+          "name": "Midland",
+          "value": 67162
+        },
+        {
+          "name": "Missaukee",
+          "value": 47035
+        },
+        {
+          "name": "Monroe",
+          "value": 61697
+        },
+        {
+          "name": "Montcalm",
+          "value": 43449
+        },
+        {
+          "name": "Montmorency",
+          "value": 45102
+        },
+        {
+          "name": "Muskegon",
+          "value": 51283
+        },
+        {
+          "name": "Newaygo",
+          "value": 48142
+        },
+        {
+          "name": "Oakland",
+          "value": 93579
+        },
+        {
+          "name": "Oceana",
+          "value": 50878
+        },
+        {
+          "name": "Ogemaw",
+          "value": 45525
+        },
+        {
+          "name": "Ontonagon",
+          "value": 51710
+        },
+        {
+          "name": "Osceola",
+          "value": 51435
+        },
+        {
+          "name": "Oscoda",
+          "value": 44109
+        },
+        {
+          "name": "Otsego",
+          "value": 52732
+        },
+        {
+          "name": "Ottawa",
+          "value": 66678
+        },
+        {
+          "name": "Presque Isle",
+          "value": 51752
+        },
+        {
+          "name": "Roscommon",
+          "value": 50345
+        },
+        {
+          "name": "Saginaw",
+          "value": 52699
+        },
+        {
+          "name": "Sanilac",
+          "value": 51754
+        },
+        {
+          "name": "Schoolcraft",
+          "value": 52654
+        },
+        {
+          "name": "Shiawassee",
+          "value": 52873
+        },
+        {
+          "name": "St. Clair",
+          "value": 57943
+        },
+        {
+          "name": "St. Joseph",
+          "value": 51660
+        },
+        {
+          "name": "Tuscola",
+          "value": 49841
+        },
+        {
+          "name": "Van Buren",
+          "value": 54912
+        },
+        {
+          "name": "Washtenaw",
+          "value": 79736
+        },
+        {
+          "name": "Wayne",
+          "value": 55715
+        },
+        {
+          "name": "Wexford",
+          "value": 48149
+        }
+      ]
+    }
+  ],
+  "notes": "Cross-section: series use values:[{name, value}] (one value per county, latest year) instead of observations. Geography = all 83 Michigan counties (GeoFips 26001-26165, odd codes). Suppressed/unavailable cells skipped: 0. Produced via the Secure Vault BEA connector (the emailed key remained inactive at BEA); mirrors scripts/pack/bea.mjs shaping exactly."
+}

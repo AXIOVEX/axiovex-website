@@ -1,8 +1,13 @@
 /*
  * jolts.mjs — JOLTS state estimates for Michigan (spec 019 FR-001).
  *
- * Source: BLS public API v2, no key. Series IDs verified directly
- * against BLS on 2026-10-08:
+ * Source: BLS public API v2. All four series ride in ONE batched
+ * POST (seriesid array; rate-limit audit S1, 2026-10-08). The v2
+ * registration key is optional: when BLS_API_KEY is present in the
+ * runner env it is sent as the POST body's registrationkey (the
+ * registered 500-queries/day tier); keyless behavior is unchanged
+ * when it is absent. Series IDs verified directly against BLS on
+ * 2026-10-08:
  *
  *   BLS JOLTS series IDs are 21 characters (BLS "Changes to JOLTS
  *   Series Codes", 2020-10-06; "Series ID Formats" help page):
@@ -70,18 +75,29 @@ export default {
   requiresKey: null,
 
   async fetch(ctx) {
-    // The pack runner's ctx.get is GET-only, so query one series per
-    // request (the BLS GET form supports startyear/endyear). Ask for
-    // four calendar years so the latest ~24 published months are
-    // always in window even though state data lags (see header).
+    // One batched POST for all four series (the v2 API accepts up to
+    // 50 series per POST registered / 25 unregistered). Ask for four
+    // calendar years so the latest ~24 published months are always
+    // in window even though state data lags (see header).
     const endYear = new Date().getUTCFullYear();
     const startYear = endYear - 3;
-
+    const body = {
+      seriesid: DEFS.map(d => d.id),
+      startyear: String(startYear),
+      endyear: String(endYear),
+    };
+    if (ctx.env && ctx.env.BLS_API_KEY) body.registrationkey = ctx.env.BLS_API_KEY;
+    const res = await ctx.post(API, body);
+    if (res && res.status && res.status !== 'REQUEST_SUCCEEDED') {
+      throw new Error('BLS request failed: ' + res.status + ' ' +
+        ((res.message || []).join('; ') || 'no message'));
+    }
+    const byId = new Map(
+      ((res && res.Results && res.Results.series) || []).map(s => [s.seriesID, s]));
     const series = [];
     for (const def of DEFS) {
-      const url = API + def.id + '?startyear=' + startYear + '&endyear=' + endYear;
-      const res = await ctx.get(url);
-      const raw = res?.Results?.series?.[0]?.data || [];
+      const entry = byId.get(def.id);
+      const raw = (entry && entry.data) || [];
       const observations = raw
         .filter(d => /^M(0[1-9]|1[0-2])$/.test(d.period) && d.value !== '-' && Number.isFinite(Number(d.value)))
         .map(d => ({

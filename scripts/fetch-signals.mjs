@@ -17,6 +17,7 @@
  * Usage: node scripts/fetch-signals.mjs [--config p] [--out p]
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { homedir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -32,15 +33,50 @@ const UA = 'AxiovexSignals/1.0 (+https://axiovexsystems.com/signals/)';
 
 const cfg = JSON.parse(readFileSync(CONFIG, 'utf8'));
 const prev = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')) : null;
+
+/* ---------- env (BLS registration key) ----------
+ * Same sources as scripts/fetch-pack.mjs: the process environment,
+ * falling back to ~/workspace/system/data-apis/.env. The key is
+ * optional — keyless BLS behavior is unchanged when it is absent. */
+const env = { ...process.env };
+const envFile = process.env.PACK_ENV_FILE ||
+  path.join(homedir(), 'workspace', 'system', 'data-apis', '.env');
+if (existsSync(envFile)) {
+  for (const line of readFileSync(envFile, 'utf8').split('\n')) {
+    const m = /^\s*([A-Z0-9_]+)\s*=\s*(.+?)\s*$/.exec(line);
+    if (m && !(m[1] in env)) env[m[1]] = m[2].replace(/^["']|["']$/g, '');
+  }
+}
+const BLS_API_KEY = env.BLS_API_KEY || null;
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
   'August', 'September', 'October', 'November', 'December'];
 
 /* ---------- fetch ---------- */
+/* Per-run call accounting by provider host + distinct 429 logging
+ * (rate-limit audit S5, 2026-10-08): a 429 (Too Many Requests) is
+ * logged with any Retry-After value, then thrown like any other
+ * failure so the source fails soft to last-good. Nothing is ever
+ * retried in-run. */
+const callCounts = new Map();
+function noteCall(url, status, retryAfter) {
+  let host = url;
+  try { host = new URL(url).hostname; } catch { /* keep raw */ }
+  callCounts.set(host, (callCounts.get(host) || 0) + 1);
+  if (status === 429) {
+    console.error('fetch-signals: HTTP 429 (Too Many Requests) from ' + host +
+      ' — rate limited' + (retryAfter ? '; Retry-After: ' + retryAfter : '; no Retry-After header') +
+      ' (failing soft to last-good; no in-run retry)');
+  }
+}
+const callCountsLine = () =>
+  'calls: ' + ([...callCounts.entries()].map(([h, n]) => h + '=' + n).join(' · ') || 'none');
+
 async function get(url, asJson, userAgent) {
   const ctl = new AbortController();
   const t = setTimeout(() => ctl.abort(), 20000);
   try {
     const r = await fetch(url, { headers: { 'User-Agent': userAgent || UA }, signal: ctl.signal });
+    noteCall(url, r.status, r.headers.get('retry-after'));
     if (!r.ok) throw new Error('HTTP ' + r.status);
     return asJson ? await r.json() : await r.text();
   } finally { clearTimeout(t); }
@@ -55,6 +91,7 @@ async function postJson(url, body) {
       body: JSON.stringify(body),
       signal: ctl.signal,
     });
+    noteCall(url, r.status, r.headers.get('retry-after'));
     if (!r.ok) throw new Error('HTTP ' + r.status);
     return await r.json();
   } finally { clearTimeout(t); }
@@ -363,9 +400,25 @@ let pulse = prev ? prev.pulse : null;
 try {
   const tiles = [];
   let referenceMonth = null;
-  for (const s of cfg.blsSeries || []) {
-    const j = await get('https://api.bls.gov/publicAPI/v2/timeseries/data/' + s.id, true);
-    const rows = (j.Results.series[0].data || [])
+  const seriesDefs = cfg.blsSeries || [];
+  /* One batched POST for every Pulse series (rate-limit audit S1,
+   * 2026-10-08): the BLS v2 API accepts a seriesid array (up to 50
+   * registered / 25 unregistered), collapsing the previous 4 GETs
+   * per run to 1 query. The optional registration key (BLS_API_KEY)
+   * rides in the POST body; keyless behavior is unchanged without
+   * it. No startyear/endyear, matching the previous GETs' default
+   * window. */
+  const blsBody = { seriesid: seriesDefs.map(s => s.id) };
+  if (BLS_API_KEY) blsBody.registrationkey = BLS_API_KEY;
+  const j = await postJson('https://api.bls.gov/publicAPI/v2/timeseries/data/', blsBody);
+  if (j && j.status && j.status !== 'REQUEST_SUCCEEDED') {
+    throw new Error('BLS request failed: ' + j.status + ' ' + ((j.message || []).join('; ')));
+  }
+  const byId = new Map(
+    ((j && j.Results && j.Results.series) || []).map(x => [x.seriesID, x]));
+  for (const s of seriesDefs) {
+    const entry = byId.get(s.id);
+    const rows = ((entry && entry.data) || [])
       .filter(d => /^M(0[1-9]|1[0-2])$/.test(d.period))
       .map(d => ({
         ym: d.year + '-' + d.period.slice(1),
@@ -407,16 +460,18 @@ try {
 /* ---------- write only on change ---------- */
 const snapshot = { lanes: lanesOut, pulse };
 if ((!feedSuccess || !anySuccess) && !prev) {
-  console.error('fetch-signals: feed ingest failed wholesale and no previous snapshot exists:', failures.join(' | '));
+  console.error('fetch-signals: feed ingest failed wholesale and no previous snapshot exists: ' +
+    failures.join(' | ') + ' · ' + callCountsLine());
   process.exit(1);
 }
 const stable = JSON.stringify(snapshot);
 if (prev && JSON.stringify({ lanes: prev.lanes, pulse: prev.pulse }) === stable) {
-  console.log('fetch-signals: no change (' + failures.length + ' source failure(s) absorbed: ' + failures.join(' | ') + ')');
+  console.log('fetch-signals: no change (' + failures.length + ' source failure(s) absorbed: ' + failures.join(' | ') + ') · ' + callCountsLine());
   process.exit(0);
 }
 writeFileSync(OUT, JSON.stringify({ updatedUtc: new Date().toISOString(), ...snapshot }, null, 2) + '\n');
 const counts = Object.values(lanesOut).map(l => l.id + '=' + l.items.length).join(' ');
 console.log('fetch-signals: snapshot updated — ' + counts +
   (pulse ? ' · pulse ' + pulse.referenceMonth : '') +
-  (failures.length ? ' · failures absorbed: ' + failures.join(' | ') : ''));
+  (failures.length ? ' · failures absorbed: ' + failures.join(' | ') : '') +
+  ' · ' + callCountsLine());

@@ -1,0 +1,3183 @@
+{
+  "source": "College Scorecard",
+  "publisher": "U.S. Department of Education",
+  "retrievedUtc": "2026-10-08T20:05:28.524Z",
+  "vintage": "College Scorecard \"latest\" snapshot via schools.json (per-metric latest years vary by variable; API metadata carries total/page only, no single release vintage)",
+  "referencePeriod": "latest",
+  "series": [
+    {
+      "id": "student-size",
+      "label": "Enrolled student size, Michigan institutions",
+      "unit": "Students",
+      "values": [
+        {
+          "name": "Michigan State University",
+          "value": 40922
+        },
+        {
+          "name": "University of Michigan-Ann Arbor",
+          "value": 34177
+        },
+        {
+          "name": "Grand Valley State University",
+          "value": 18854
+        },
+        {
+          "name": "Wayne State University",
+          "value": 15587
+        },
+        {
+          "name": "Macomb Community College",
+          "value": 13876
+        },
+        {
+          "name": "Oakland Community College",
+          "value": 12748
+        },
+        {
+          "name": "Western Michigan University",
+          "value": 12568
+        },
+        {
+          "name": "Oakland University",
+          "value": 12351
+        },
+        {
+          "name": "Grand Rapids Community College",
+          "value": 10698
+        },
+        {
+          "name": "Eastern Michigan University",
+          "value": 10055
+        },
+        {
+          "name": "Central Michigan University",
+          "value": 10035
+        },
+        {
+          "name": "Henry Ford College",
+          "value": 8643
+        },
+        {
+          "name": "Lansing Community College",
+          "value": 8207
+        },
+        {
+          "name": "Ferris State University",
+          "value": 8106
+        },
+        {
+          "name": "Washtenaw Community College",
+          "value": 7816
+        },
+        {
+          "name": "Schoolcraft Community College District",
+          "value": 7511
+        },
+        {
+          "name": "Wayne County Community College District",
+          "value": 7423
+        },
+        {
+          "name": "Delta College",
+          "value": 6573
+        },
+        {
+          "name": "Northern Michigan University",
+          "value": 6556
+        },
+        {
+          "name": "Saginaw Valley State University",
+          "value": 5989
+        },
+        {
+          "name": "Michigan Technological University",
+          "value": 5955
+        },
+        {
+          "name": "University of Michigan-Dearborn",
+          "value": 5952
+        },
+        {
+          "name": "Mott Community College",
+          "value": 5251
+        },
+        {
+          "name": "Kalamazoo Valley Community College",
+          "value": 4997
+        },
+        {
+          "name": "University of Michigan-Flint",
+          "value": 4411
+        },
+        {
+          "name": "Jackson College",
+          "value": 3422
+        },
+        {
+          "name": "Hope College",
+          "value": 3288
+        },
+        {
+          "name": "Calvin University",
+          "value": 3193
+        },
+        {
+          "name": "Davenport University",
+          "value": 3134
+        },
+        {
+          "name": "Baker College",
+          "value": 3026
+        },
+        {
+          "name": "Kellogg Community College",
+          "value": 2971
+        },
+        {
+          "name": "Northwestern Michigan College",
+          "value": 2813
+        },
+        {
+          "name": "Muskegon Community College",
+          "value": 2760
+        },
+        {
+          "name": "University of Detroit Mercy",
+          "value": 2438
+        },
+        {
+          "name": "St Clair County Community College",
+          "value": 2138
+        },
+        {
+          "name": "Lake Michigan College",
+          "value": 2105
+        },
+        {
+          "name": "Mid Michigan College",
+          "value": 2098
+        },
+        {
+          "name": "Northwood University",
+          "value": 1974
+        },
+        {
+          "name": "Lawrence Technological University",
+          "value": 1668
+        },
+        {
+          "name": "Madonna University",
+          "value": 1632
+        },
+        {
+          "name": "Adrian College",
+          "value": 1604
+        },
+        {
+          "name": "Hillsdale College",
+          "value": 1573
+        },
+        {
+          "name": "Siena Heights University",
+          "value": 1495
+        },
+        {
+          "name": "Monroe County Community College",
+          "value": 1435
+        },
+        {
+          "name": "Southwestern Michigan College",
+          "value": 1431
+        },
+        {
+          "name": "Universal Technical Institute-Canton",
+          "value": 1417
+        },
+        {
+          "name": "Lake Superior State University",
+          "value": 1325
+        },
+        {
+          "name": "Albion College",
+          "value": 1300
+        },
+        {
+          "name": "Cornerstone University",
+          "value": 1298
+        },
+        {
+          "name": "College for Creative Studies",
+          "value": 1230
+        },
+        {
+          "name": "Andrews University",
+          "value": 1224
+        },
+        {
+          "name": "Bay de Noc Community College",
+          "value": 1223
+        },
+        {
+          "name": "Kettering University",
+          "value": 1205
+        },
+        {
+          "name": "Kalamazoo College",
+          "value": 1149
+        },
+        {
+          "name": "Alma College",
+          "value": 1148
+        },
+        {
+          "name": "Montcalm Community College",
+          "value": 1122
+        },
+        {
+          "name": "Aquinas College",
+          "value": 1083
+        },
+        {
+          "name": "Kirtland Community College",
+          "value": 1023
+        },
+        {
+          "name": "Spring Arbor University",
+          "value": 1010
+        },
+        {
+          "name": "North Central Michigan College",
+          "value": 942
+        },
+        {
+          "name": "The University of Olivet",
+          "value": 892
+        },
+        {
+          "name": "Rochester Christian University",
+          "value": 792
+        },
+        {
+          "name": "West Shore Community College",
+          "value": 782
+        },
+        {
+          "name": "Douglas J Aveda Institute",
+          "value": 777
+        },
+        {
+          "name": "Northwestern Technological Institute",
+          "value": 746
+        },
+        {
+          "name": "Cleary University",
+          "value": 738
+        },
+        {
+          "name": "Alpena Community College",
+          "value": 732
+        },
+        {
+          "name": "Grace Christian University",
+          "value": 716
+        },
+        {
+          "name": "Concordia University Ann Arbor",
+          "value": 702
+        },
+        {
+          "name": "Bay Mills Community College",
+          "value": 662
+        },
+        {
+          "name": "Dorsey College",
+          "value": 643
+        },
+        {
+          "name": "Chamberlain University-Michigan",
+          "value": 629
+        },
+        {
+          "name": "Glen Oaks Community College",
+          "value": 600
+        },
+        {
+          "name": "Arizona College of Nursing-Southfield",
+          "value": 594
+        },
+        {
+          "name": "Gogebic Community College",
+          "value": 511
+        },
+        {
+          "name": "Walsh College",
+          "value": 445
+        },
+        {
+          "name": "Dorsey College-Roseville",
+          "value": 437
+        },
+        {
+          "name": "Dorsey College-Dearborn",
+          "value": 430
+        },
+        {
+          "name": "Ross College-Grand Rapids North",
+          "value": 387
+        },
+        {
+          "name": "Irene's Myomassology Institute",
+          "value": 285
+        },
+        {
+          "name": "Twin City Beauty College",
+          "value": 274
+        },
+        {
+          "name": "L'esprit Academy",
+          "value": 266
+        },
+        {
+          "name": "Empire Beauty School-Michigan",
+          "value": 259
+        },
+        {
+          "name": "Ross Medical Education Center-Warren",
+          "value": 237
+        },
+        {
+          "name": "Michigan College of Beauty-Troy",
+          "value": 230
+        },
+        {
+          "name": "David Pressley School of Cosmetology",
+          "value": 225
+        },
+        {
+          "name": "Dorsey College-Woodhaven",
+          "value": 223
+        },
+        {
+          "name": "Great Lakes Christian College",
+          "value": 197
+        },
+        {
+          "name": "Elevate Salon Institute",
+          "value": 197
+        },
+        {
+          "name": "Dorsey College-Wayne",
+          "value": 196
+        },
+        {
+          "name": "Dorsey College-Saginaw",
+          "value": 183
+        },
+        {
+          "name": "Sacred Heart Major Seminary",
+          "value": 178
+        },
+        {
+          "name": "Dorsey School of Beauty",
+          "value": 164
+        },
+        {
+          "name": "Saginaw Chippewa Tribal College",
+          "value": 164
+        },
+        {
+          "name": "Kuyper College",
+          "value": 145
+        },
+        {
+          "name": "Abcott Institute",
+          "value": 142
+        },
+        {
+          "name": "Keweenaw Bay Ojibwa Community College",
+          "value": 139
+        },
+        {
+          "name": "Paul Mitchell the School-Michigan",
+          "value": 136
+        },
+        {
+          "name": "Ross Medical Education Center-Lansing",
+          "value": 135
+        },
+        {
+          "name": "Ross Medical Education Center-Kentwood",
+          "value": 134
+        },
+        {
+          "name": "DSDT",
+          "value": 132
+        },
+        {
+          "name": "Ross Medical Education Center-Roosevelt Park",
+          "value": 130
+        },
+        {
+          "name": "Detroit Business Institute-Downriver",
+          "value": 124
+        },
+        {
+          "name": "Ross Medical Education Center-Portage",
+          "value": 124
+        },
+        {
+          "name": "Michigan Career and Technical Institute",
+          "value": 118
+        },
+        {
+          "name": "Ross Medical Education Center-Flint",
+          "value": 116
+        },
+        {
+          "name": "Paul Mitchell the School-Farmington Hills",
+          "value": 99
+        },
+        {
+          "name": "Bayshire Academy of Beauty Craft Inc",
+          "value": 97
+        },
+        {
+          "name": "Nuvo College of Cosmetology",
+          "value": 96
+        },
+        {
+          "name": "Carnegie Institute",
+          "value": 93
+        },
+        {
+          "name": "Ross Medical Education Center-Canton",
+          "value": 92
+        },
+        {
+          "name": "P&A Scholars Beauty School",
+          "value": 90
+        },
+        {
+          "name": "Paul Mitchell the School-Grand Rapids",
+          "value": 86
+        },
+        {
+          "name": "Ross Medical Education Center-Saginaw",
+          "value": 84
+        },
+        {
+          "name": "The  Salon Professional Academy of Holland",
+          "value": 82
+        },
+        {
+          "name": "Dorsey College-Grand Rapids",
+          "value": 82
+        },
+        {
+          "name": "Yeshiva Gedolah of Greater Detroit",
+          "value": 75
+        },
+        {
+          "name": "Ross Medical Education Center-Taylor",
+          "value": 75
+        },
+        {
+          "name": "Paul Mitchell the School-Great Lakes",
+          "value": 75
+        },
+        {
+          "name": "Protege Academy",
+          "value": 72
+        },
+        {
+          "name": "Michigan College of Beauty-Monroe",
+          "value": 70
+        },
+        {
+          "name": "Mosley School of Cosmetology",
+          "value": 62
+        },
+        {
+          "name": "Metro Detroit Barber College",
+          "value": 59
+        },
+        {
+          "name": "Ross Medical Education Center-Midland",
+          "value": 57
+        },
+        {
+          "name": "Taylor Andrews Academy of Hair Design-Hair Lab Detroit Barber School",
+          "value": 57
+        },
+        {
+          "name": "Ross Medical Education Center-Davison",
+          "value": 53
+        },
+        {
+          "name": "Motion Picture Institute",
+          "value": 53
+        },
+        {
+          "name": "Ross Medical Education Center-Ann Arbor",
+          "value": 51
+        },
+        {
+          "name": "French Academy of Cosmetology",
+          "value": 51
+        },
+        {
+          "name": "M J Murphy Beauty College of Mount Pleasant",
+          "value": 50
+        },
+        {
+          "name": "Ross Medical Education Center-Battle Creek",
+          "value": 50
+        },
+        {
+          "name": "The Salon Professional Academy-Battle Creek",
+          "value": 49
+        },
+        {
+          "name": "Marketti Academy of Cosmetology",
+          "value": 45
+        },
+        {
+          "name": "Protege Academy",
+          "value": 44
+        },
+        {
+          "name": "Cadillac Institute of Cosmetology",
+          "value": 43
+        },
+        {
+          "name": "Brighton Institute of Cosmetology",
+          "value": 43
+        },
+        {
+          "name": "Ross Medical Education Center-Brighton",
+          "value": 39
+        },
+        {
+          "name": "Creative Hair School of Cosmetology",
+          "value": 38
+        },
+        {
+          "name": "Ross Medical Education Center-Port Huron",
+          "value": 38
+        },
+        {
+          "name": "Port Huron Cosmetology College",
+          "value": 37
+        },
+        {
+          "name": "School of Missionary Aviation Technology",
+          "value": 36
+        },
+        {
+          "name": "Ross Medical Education Center-New Baltimore",
+          "value": 33
+        },
+        {
+          "name": "Dymond Designs Beauty School",
+          "value": 28
+        },
+        {
+          "name": "Hillsdale Beauty College",
+          "value": 26
+        },
+        {
+          "name": "Marine Trades Institute",
+          "value": 26
+        },
+        {
+          "name": "Sharp's Academy of Hairstyling",
+          "value": 16
+        },
+        {
+          "name": "Southwest Michigan Beauty School",
+          "value": 14
+        },
+        {
+          "name": "Ecumenical Theological Seminary",
+          "value": 11
+        },
+        {
+          "name": "Lakewood School of Therapeutic Massage",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "id": "completion-rate",
+      "label": "Completion rate (4-year, 150% of normal time; consumer_rate fallback), Michigan institutions",
+      "unit": "Fraction (0–1)",
+      "values": [
+        {
+          "name": "Chamberlain University-Michigan",
+          "value": 1
+        },
+        {
+          "name": "Brighton Institute of Cosmetology",
+          "value": 0.9649
+        },
+        {
+          "name": "School of Missionary Aviation Technology",
+          "value": 0.9508
+        },
+        {
+          "name": "University of Michigan-Ann Arbor",
+          "value": 0.932
+        },
+        {
+          "name": "M J Murphy Beauty College of Mount Pleasant",
+          "value": 0.9286
+        },
+        {
+          "name": "Marketti Academy of Cosmetology",
+          "value": 0.9118
+        },
+        {
+          "name": "French Academy of Cosmetology",
+          "value": 0.9048
+        },
+        {
+          "name": "Hillsdale College",
+          "value": 0.8971
+        },
+        {
+          "name": "Metro Detroit Barber College",
+          "value": 0.8824
+        },
+        {
+          "name": "L'esprit Academy",
+          "value": 0.8823
+        },
+        {
+          "name": "David Pressley School of Cosmetology",
+          "value": 0.8447
+        },
+        {
+          "name": "Ross Medical Education Center-New Baltimore",
+          "value": 0.8421
+        },
+        {
+          "name": "Carnegie Institute",
+          "value": 0.8387
+        },
+        {
+          "name": "Paul Mitchell the School-Michigan",
+          "value": 0.8298
+        },
+        {
+          "name": "Elevate Salon Institute",
+          "value": 0.8261
+        },
+        {
+          "name": "The  Salon Professional Academy of Holland",
+          "value": 0.8182
+        },
+        {
+          "name": "Michigan State University",
+          "value": 0.8072
+        },
+        {
+          "name": "Hope College",
+          "value": 0.7995
+        },
+        {
+          "name": "Ross Medical Education Center-Midland",
+          "value": 0.7692
+        },
+        {
+          "name": "Bayshire Academy of Beauty Craft Inc",
+          "value": 0.7612
+        },
+        {
+          "name": "Ross Medical Education Center-Port Huron",
+          "value": 0.7612
+        },
+        {
+          "name": "Douglas J Aveda Institute",
+          "value": 0.7606
+        },
+        {
+          "name": "Kalamazoo College",
+          "value": 0.7598
+        },
+        {
+          "name": "Michigan College of Beauty-Monroe",
+          "value": 0.7468
+        },
+        {
+          "name": "Calvin University",
+          "value": 0.7406
+        },
+        {
+          "name": "Paul Mitchell the School-Great Lakes",
+          "value": 0.7385
+        },
+        {
+          "name": "Protege Academy",
+          "value": 0.7369
+        },
+        {
+          "name": "Northwestern Technological Institute",
+          "value": 0.7357
+        },
+        {
+          "name": "Taylor Andrews Academy of Hair Design-Hair Lab Detroit Barber School",
+          "value": 0.7353
+        },
+        {
+          "name": "Andrews University",
+          "value": 0.7153
+        },
+        {
+          "name": "Kettering University",
+          "value": 0.708
+        },
+        {
+          "name": "College for Creative Studies",
+          "value": 0.7061
+        },
+        {
+          "name": "Paul Mitchell the School-Grand Rapids",
+          "value": 0.7059
+        },
+        {
+          "name": "Paul Mitchell the School-Farmington Hills",
+          "value": 0.7059
+        },
+        {
+          "name": "Ross Medical Education Center-Roosevelt Park",
+          "value": 0.7028
+        },
+        {
+          "name": "P&A Scholars Beauty School",
+          "value": 0.697
+        },
+        {
+          "name": "Port Huron Cosmetology College",
+          "value": 0.6923
+        },
+        {
+          "name": "Walsh College",
+          "value": 0.6831
+        },
+        {
+          "name": "Michigan Technological University",
+          "value": 0.6806
+        },
+        {
+          "name": "Ross Medical Education Center-Davison",
+          "value": 0.679
+        },
+        {
+          "name": "Michigan College of Beauty-Troy",
+          "value": 0.6724
+        },
+        {
+          "name": "University of Detroit Mercy",
+          "value": 0.672
+        },
+        {
+          "name": "Grand Valley State University",
+          "value": 0.6701
+        },
+        {
+          "name": "Sacred Heart Major Seminary",
+          "value": 0.6667
+        },
+        {
+          "name": "Ross Medical Education Center-Battle Creek",
+          "value": 0.6588
+        },
+        {
+          "name": "Universal Technical Institute-Canton",
+          "value": 0.6578
+        },
+        {
+          "name": "Ross Medical Education Center-Brighton",
+          "value": 0.6546
+        },
+        {
+          "name": "Aquinas College",
+          "value": 0.6536
+        },
+        {
+          "name": "Ross College-Grand Rapids North",
+          "value": 0.6484
+        },
+        {
+          "name": "Hillsdale Beauty College",
+          "value": 0.64
+        },
+        {
+          "name": "Ross Medical Education Center-Lansing",
+          "value": 0.6356
+        },
+        {
+          "name": "Spring Arbor University",
+          "value": 0.6354
+        },
+        {
+          "name": "Northwood University",
+          "value": 0.6332
+        },
+        {
+          "name": "Alma College",
+          "value": 0.6287
+        },
+        {
+          "name": "Ross Medical Education Center-Taylor",
+          "value": 0.6279
+        },
+        {
+          "name": "Cornerstone University",
+          "value": 0.6187
+        },
+        {
+          "name": "Albion College",
+          "value": 0.6159
+        },
+        {
+          "name": "Ross Medical Education Center-Ann Arbor",
+          "value": 0.6111
+        },
+        {
+          "name": "Ross Medical Education Center-Portage",
+          "value": 0.6111
+        },
+        {
+          "name": "Ross Medical Education Center-Kentwood",
+          "value": 0.6081
+        },
+        {
+          "name": "Lawrence Technological University",
+          "value": 0.6058
+        },
+        {
+          "name": "Madonna University",
+          "value": 0.6
+        },
+        {
+          "name": "Dorsey College",
+          "value": 0.5967
+        },
+        {
+          "name": "Ross Medical Education Center-Flint",
+          "value": 0.5957
+        },
+        {
+          "name": "Central Michigan University",
+          "value": 0.5872
+        },
+        {
+          "name": "Empire Beauty School-Michigan",
+          "value": 0.5872
+        },
+        {
+          "name": "Wayne State University",
+          "value": 0.5844
+        },
+        {
+          "name": "University of Michigan-Dearborn",
+          "value": 0.5798
+        },
+        {
+          "name": "Western Michigan University",
+          "value": 0.5757
+        },
+        {
+          "name": "Protege Academy",
+          "value": 0.5757
+        },
+        {
+          "name": "Oakland University",
+          "value": 0.5756
+        },
+        {
+          "name": "Ross Medical Education Center-Saginaw",
+          "value": 0.5704
+        },
+        {
+          "name": "Dorsey College-Saginaw",
+          "value": 0.5667
+        },
+        {
+          "name": "Davenport University",
+          "value": 0.5659
+        },
+        {
+          "name": "Ross Medical Education Center-Warren",
+          "value": 0.5618
+        },
+        {
+          "name": "Ross Medical Education Center-Canton",
+          "value": 0.5462
+        },
+        {
+          "name": "Dorsey School of Beauty",
+          "value": 0.5241
+        },
+        {
+          "name": "Northern Michigan University",
+          "value": 0.5214
+        },
+        {
+          "name": "Alpena Community College",
+          "value": 0.515
+        },
+        {
+          "name": "Grace Christian University",
+          "value": 0.5104
+        },
+        {
+          "name": "Lake Superior State University",
+          "value": 0.5098
+        },
+        {
+          "name": "Kuyper College",
+          "value": 0.5
+        },
+        {
+          "name": "Dorsey College-Woodhaven",
+          "value": 0.4933
+        },
+        {
+          "name": "DSDT",
+          "value": 0.4844
+        },
+        {
+          "name": "Adrian College",
+          "value": 0.4842
+        },
+        {
+          "name": "Saginaw Valley State University",
+          "value": 0.4825
+        },
+        {
+          "name": "Concordia University Ann Arbor",
+          "value": 0.4764
+        },
+        {
+          "name": "Ferris State University",
+          "value": 0.4687
+        },
+        {
+          "name": "Eastern Michigan University",
+          "value": 0.4644
+        },
+        {
+          "name": "Twin City Beauty College",
+          "value": 0.4601
+        },
+        {
+          "name": "Creative Hair School of Cosmetology",
+          "value": 0.4583
+        },
+        {
+          "name": "Rochester Christian University",
+          "value": 0.4412
+        },
+        {
+          "name": "Michigan Career and Technical Institute",
+          "value": 0.439
+        },
+        {
+          "name": "Cleary University",
+          "value": 0.4146
+        },
+        {
+          "name": "University of Michigan-Flint",
+          "value": 0.4031
+        },
+        {
+          "name": "Yeshiva Gedolah of Greater Detroit",
+          "value": 0.4
+        },
+        {
+          "name": "Abcott Institute",
+          "value": 0.3985
+        },
+        {
+          "name": "Dorsey College-Roseville",
+          "value": 0.3939
+        },
+        {
+          "name": "Dorsey College-Dearborn",
+          "value": 0.3937
+        },
+        {
+          "name": "Siena Heights University",
+          "value": 0.3862
+        },
+        {
+          "name": "Bay de Noc Community College",
+          "value": 0.3651
+        },
+        {
+          "name": "Great Lakes Christian College",
+          "value": 0.36
+        },
+        {
+          "name": "Dorsey College-Wayne",
+          "value": 0.36
+        },
+        {
+          "name": "Baker College",
+          "value": 0.3583
+        },
+        {
+          "name": "The University of Olivet",
+          "value": 0.3527
+        },
+        {
+          "name": "Montcalm Community College",
+          "value": 0.3469
+        },
+        {
+          "name": "Gogebic Community College",
+          "value": 0.3466
+        },
+        {
+          "name": "Nuvo College of Cosmetology",
+          "value": 0.3387
+        },
+        {
+          "name": "Oakland Community College",
+          "value": 0.3158
+        },
+        {
+          "name": "Washtenaw Community College",
+          "value": 0.3112
+        },
+        {
+          "name": "Irene's Myomassology Institute",
+          "value": 0.3091
+        },
+        {
+          "name": "St Clair County Community College",
+          "value": 0.3083
+        },
+        {
+          "name": "North Central Michigan College",
+          "value": 0.3049
+        },
+        {
+          "name": "Southwestern Michigan College",
+          "value": 0.304
+        },
+        {
+          "name": "Bay Mills Community College",
+          "value": 0.3023
+        },
+        {
+          "name": "Ecumenical Theological Seminary",
+          "value": 0.2955
+        },
+        {
+          "name": "Glen Oaks Community College",
+          "value": 0.2876
+        },
+        {
+          "name": "West Shore Community College",
+          "value": 0.2799
+        },
+        {
+          "name": "Northwestern Michigan College",
+          "value": 0.2484
+        },
+        {
+          "name": "Delta College",
+          "value": 0.2384
+        },
+        {
+          "name": "Grand Rapids Community College",
+          "value": 0.2375
+        },
+        {
+          "name": "Monroe County Community College",
+          "value": 0.2356
+        },
+        {
+          "name": "Kirtland Community College",
+          "value": 0.2301
+        },
+        {
+          "name": "Mid Michigan College",
+          "value": 0.2293
+        },
+        {
+          "name": "Lake Michigan College",
+          "value": 0.2252
+        },
+        {
+          "name": "Kalamazoo Valley Community College",
+          "value": 0.2146
+        },
+        {
+          "name": "Mott Community College",
+          "value": 0.2131
+        },
+        {
+          "name": "Muskegon Community College",
+          "value": 0.209
+        },
+        {
+          "name": "Saginaw Chippewa Tribal College",
+          "value": 0.1972
+        },
+        {
+          "name": "Wayne County Community College District",
+          "value": 0.1971
+        },
+        {
+          "name": "Lansing Community College",
+          "value": 0.1921
+        },
+        {
+          "name": "Schoolcraft Community College District",
+          "value": 0.1836
+        },
+        {
+          "name": "Keweenaw Bay Ojibwa Community College",
+          "value": 0.1731
+        },
+        {
+          "name": "Henry Ford College",
+          "value": 0.1723
+        },
+        {
+          "name": "Macomb Community College",
+          "value": 0.1661
+        },
+        {
+          "name": "Jackson College",
+          "value": 0.159
+        },
+        {
+          "name": "Kellogg Community College",
+          "value": 0.1517
+        }
+      ]
+    },
+    {
+      "id": "earnings-6yr",
+      "label": "Median earnings 6 years after entry, Michigan institutions",
+      "unit": "Dollars per year",
+      "values": [
+        {
+          "name": "Chamberlain University-Michigan",
+          "value": 84533
+        },
+        {
+          "name": "Kettering University",
+          "value": 80275
+        },
+        {
+          "name": "University of Michigan-Ann Arbor",
+          "value": 73762
+        },
+        {
+          "name": "Michigan Technological University",
+          "value": 69672
+        },
+        {
+          "name": "University of Detroit Mercy",
+          "value": 64534
+        },
+        {
+          "name": "Walsh College",
+          "value": 64114
+        },
+        {
+          "name": "Lawrence Technological University",
+          "value": 58827
+        },
+        {
+          "name": "Michigan State University",
+          "value": 55084
+        },
+        {
+          "name": "Cleary University",
+          "value": 55077
+        },
+        {
+          "name": "Northwood University",
+          "value": 54058
+        },
+        {
+          "name": "University of Michigan-Dearborn",
+          "value": 50389
+        },
+        {
+          "name": "Siena Heights University",
+          "value": 49913
+        },
+        {
+          "name": "Madonna University",
+          "value": 49871
+        },
+        {
+          "name": "Concordia University Ann Arbor",
+          "value": 49761
+        },
+        {
+          "name": "Hope College",
+          "value": 49727
+        },
+        {
+          "name": "Universal Technical Institute-Canton",
+          "value": 49665
+        },
+        {
+          "name": "Oakland University",
+          "value": 49017
+        },
+        {
+          "name": "Albion College",
+          "value": 48203
+        },
+        {
+          "name": "Calvin University",
+          "value": 48039
+        },
+        {
+          "name": "Calvin University - Handlon Campus",
+          "value": 48039
+        },
+        {
+          "name": "Grand Valley State University",
+          "value": 47840
+        },
+        {
+          "name": "Ferris State University",
+          "value": 47339
+        },
+        {
+          "name": "Davenport University",
+          "value": 47041
+        },
+        {
+          "name": "Davenport University-Warren Location",
+          "value": 47041
+        },
+        {
+          "name": "Davenport University-Kalamazoo Location",
+          "value": 47041
+        },
+        {
+          "name": "Davenport University-Lansing Location",
+          "value": 47041
+        },
+        {
+          "name": "Davenport University-Midland Location",
+          "value": 47041
+        },
+        {
+          "name": "Davenport University-Traverse City Location",
+          "value": 47041
+        },
+        {
+          "name": "Davenport University - Wayne CCCD",
+          "value": 47041
+        },
+        {
+          "name": "Davenport University - Detroit",
+          "value": 47041
+        },
+        {
+          "name": "Central Michigan University",
+          "value": 46567
+        },
+        {
+          "name": "Kalamazoo College",
+          "value": 46137
+        },
+        {
+          "name": "Alma College",
+          "value": 45720
+        },
+        {
+          "name": "Spring Arbor University",
+          "value": 45592
+        },
+        {
+          "name": "University of Michigan-Flint",
+          "value": 45453
+        },
+        {
+          "name": "Western Michigan University",
+          "value": 45356
+        },
+        {
+          "name": "Wayne State University",
+          "value": 45207
+        },
+        {
+          "name": "Detroit Business Institute-Downriver",
+          "value": 44270
+        },
+        {
+          "name": "Saginaw Valley State University",
+          "value": 43530
+        },
+        {
+          "name": "Andrews University",
+          "value": 43254
+        },
+        {
+          "name": "Eastern Michigan University",
+          "value": 43148
+        },
+        {
+          "name": "Adrian College",
+          "value": 42805
+        },
+        {
+          "name": "Lake Superior State University",
+          "value": 42767
+        },
+        {
+          "name": "The University of Olivet",
+          "value": 42637
+        },
+        {
+          "name": "Cornerstone University",
+          "value": 42598
+        },
+        {
+          "name": "Rochester Christian University",
+          "value": 40813
+        },
+        {
+          "name": "Moody Theological Seminary and Graduate School--Michigan",
+          "value": 40210
+        },
+        {
+          "name": "Aquinas College",
+          "value": 40161
+        },
+        {
+          "name": "Northern Michigan University",
+          "value": 37996
+        },
+        {
+          "name": "Monroe County Community College",
+          "value": 36394
+        },
+        {
+          "name": "Carnegie Institute",
+          "value": 36364
+        },
+        {
+          "name": "Grand Rapids Community College",
+          "value": 35623
+        },
+        {
+          "name": "Glen Oaks Community College",
+          "value": 35385
+        },
+        {
+          "name": "Alpena Community College",
+          "value": 35275
+        },
+        {
+          "name": "Lansing Community College",
+          "value": 35174
+        },
+        {
+          "name": "Northwestern Michigan College",
+          "value": 34918
+        },
+        {
+          "name": "West Shore Community College",
+          "value": 34841
+        },
+        {
+          "name": "Schoolcraft Community College District",
+          "value": 34749
+        },
+        {
+          "name": "Kellogg Community College",
+          "value": 34047
+        },
+        {
+          "name": "St Clair County Community College",
+          "value": 33990
+        },
+        {
+          "name": "Kuyper College",
+          "value": 33956
+        },
+        {
+          "name": "Macomb Community College",
+          "value": 33875
+        },
+        {
+          "name": "Bay de Noc Community College",
+          "value": 33829
+        },
+        {
+          "name": "Washtenaw Community College",
+          "value": 33799
+        },
+        {
+          "name": "College for Creative Studies",
+          "value": 33691
+        },
+        {
+          "name": "Baker College",
+          "value": 33619
+        },
+        {
+          "name": "Baker College of Cadillac",
+          "value": 33619
+        },
+        {
+          "name": "Baker College of Jackson",
+          "value": 33619
+        },
+        {
+          "name": "Baker College of Muskegon",
+          "value": 33619
+        },
+        {
+          "name": "Baker College - Royal Oak Campus",
+          "value": 33619
+        },
+        {
+          "name": "Kalamazoo Valley Community College",
+          "value": 33553
+        },
+        {
+          "name": "Northwestern Technological Institute",
+          "value": 33480
+        },
+        {
+          "name": "Southwestern Michigan College",
+          "value": 33204
+        },
+        {
+          "name": "Gogebic Community College",
+          "value": 32998
+        },
+        {
+          "name": "Mid Michigan College",
+          "value": 32868
+        },
+        {
+          "name": "Arizona College of Nursing-Southfield",
+          "value": 32840
+        },
+        {
+          "name": "Montcalm Community College",
+          "value": 32490
+        },
+        {
+          "name": "Jackson College",
+          "value": 31956
+        },
+        {
+          "name": "Kirtland Community College",
+          "value": 31761
+        },
+        {
+          "name": "Muskegon Community College",
+          "value": 31662
+        },
+        {
+          "name": "Delta College",
+          "value": 31651
+        },
+        {
+          "name": "Grace Christian University",
+          "value": 31450
+        },
+        {
+          "name": "North Central Michigan College",
+          "value": 31314
+        },
+        {
+          "name": "Brighton Institute of Cosmetology",
+          "value": 31229
+        },
+        {
+          "name": "Lake Michigan College",
+          "value": 30846
+        },
+        {
+          "name": "Oakland Community College",
+          "value": 29877
+        },
+        {
+          "name": "Michigan Career and Technical Institute",
+          "value": 29458
+        },
+        {
+          "name": "Great Lakes Christian College",
+          "value": 28240
+        },
+        {
+          "name": "Bay Mills Community College",
+          "value": 28213
+        },
+        {
+          "name": "Ross Medical Education Center-Brighton",
+          "value": 28207
+        },
+        {
+          "name": "Ross Medical Education Center-Ann Arbor",
+          "value": 28207
+        },
+        {
+          "name": "Ross Medical Education Center-Davison",
+          "value": 28207
+        },
+        {
+          "name": "Ross Medical Education Center-Midland",
+          "value": 28207
+        },
+        {
+          "name": "Henry Ford College",
+          "value": 28100
+        },
+        {
+          "name": "Ross Medical Education Center-Lansing",
+          "value": 27583
+        },
+        {
+          "name": "Ross Medical Education Center-Kentwood",
+          "value": 27583
+        },
+        {
+          "name": "Ross College-Grand Rapids North",
+          "value": 27583
+        },
+        {
+          "name": "Saginaw Chippewa Tribal College",
+          "value": 27389
+        },
+        {
+          "name": "Mott Community College",
+          "value": 27146
+        },
+        {
+          "name": "Ross Medical Education Center-Warren",
+          "value": 27138
+        },
+        {
+          "name": "Ross Medical Education Center-Taylor",
+          "value": 27138
+        },
+        {
+          "name": "Ross Medical Education Center-New Baltimore",
+          "value": 27138
+        },
+        {
+          "name": "Ross Medical Education Center-Flint",
+          "value": 26485
+        },
+        {
+          "name": "Ross Medical Education Center-Saginaw",
+          "value": 26485
+        },
+        {
+          "name": "Ross Medical Education Center-Port Huron",
+          "value": 26485
+        },
+        {
+          "name": "Ross Medical Education Center-Roosevelt Park",
+          "value": 26485
+        },
+        {
+          "name": "Ross Medical Education Center-Battle Creek",
+          "value": 26485
+        },
+        {
+          "name": "Ross Medical Education Center-Canton",
+          "value": 26485
+        },
+        {
+          "name": "Ross Medical Education Center-Portage",
+          "value": 26485
+        },
+        {
+          "name": "Douglas J Aveda Institute",
+          "value": 24836
+        },
+        {
+          "name": "Taylor Andrews Academy of Hair Design-Hair Lab Detroit Barber School",
+          "value": 24619
+        },
+        {
+          "name": "Paul Mitchell the School-Grand Rapids",
+          "value": 24062
+        },
+        {
+          "name": "Paul Mitchell the School-Michigan",
+          "value": 23724
+        },
+        {
+          "name": "Paul Mitchell the School-Great Lakes",
+          "value": 23173
+        },
+        {
+          "name": "Paul Mitchell the School-Farmington Hills",
+          "value": 23132
+        },
+        {
+          "name": "Irene's Myomassology Institute",
+          "value": 22568
+        },
+        {
+          "name": "Twin City Beauty College",
+          "value": 22381
+        },
+        {
+          "name": "Michigan College of Beauty-Monroe",
+          "value": 21810
+        },
+        {
+          "name": "Protege Academy",
+          "value": 21793
+        },
+        {
+          "name": "Protege Academy",
+          "value": 21793
+        },
+        {
+          "name": "Dorsey College",
+          "value": 21514
+        },
+        {
+          "name": "Dorsey College-Wayne",
+          "value": 21514
+        },
+        {
+          "name": "Dorsey College-Roseville",
+          "value": 21514
+        },
+        {
+          "name": "Dorsey College-Saginaw",
+          "value": 21514
+        },
+        {
+          "name": "Dorsey College-Dearborn",
+          "value": 21514
+        },
+        {
+          "name": "Dorsey College-Woodhaven",
+          "value": 21514
+        },
+        {
+          "name": "Dorsey College-Grand Rapids",
+          "value": 21514
+        },
+        {
+          "name": "Wayne County Community College District",
+          "value": 21336
+        },
+        {
+          "name": "David Pressley School of Cosmetology",
+          "value": 21182
+        },
+        {
+          "name": "Marketti Academy of Cosmetology",
+          "value": 20826
+        },
+        {
+          "name": "Abcott Institute",
+          "value": 20788
+        },
+        {
+          "name": "Michigan College of Beauty-Troy",
+          "value": 19608
+        },
+        {
+          "name": "L'esprit Academy",
+          "value": 19478
+        },
+        {
+          "name": "L'esprit Academy - Southfield",
+          "value": 19478
+        },
+        {
+          "name": "Empire Beauty School-Michigan",
+          "value": 18493
+        },
+        {
+          "name": "Port Huron Cosmetology College",
+          "value": 18314
+        },
+        {
+          "name": "Sharp's Academy of Hairstyling",
+          "value": 18144
+        },
+        {
+          "name": "The Salon Professional Academy-Battle Creek",
+          "value": 17593
+        },
+        {
+          "name": "Elevate Salon Institute",
+          "value": 17197
+        },
+        {
+          "name": "Elevate Salon Institute",
+          "value": 17197
+        },
+        {
+          "name": "M J Murphy Beauty College of Mount Pleasant",
+          "value": 16906
+        },
+        {
+          "name": "P&A Scholars Beauty School",
+          "value": 16883
+        },
+        {
+          "name": "Lakewood School of Therapeutic Massage",
+          "value": 16746
+        },
+        {
+          "name": "Bayshire Academy of Beauty Craft Inc",
+          "value": 15559
+        },
+        {
+          "name": "Cadillac Institute of Cosmetology",
+          "value": 15314
+        },
+        {
+          "name": "Dorsey School of Beauty",
+          "value": 15237
+        },
+        {
+          "name": "French Academy of Cosmetology",
+          "value": 13626
+        },
+        {
+          "name": "Nuvo College of Cosmetology",
+          "value": 11598
+        }
+      ]
+    },
+    {
+      "id": "earnings-10yr",
+      "label": "Median earnings 10 years after entry, Michigan institutions",
+      "unit": "Dollars per year",
+      "values": [
+        {
+          "name": "Kettering University",
+          "value": 94823
+        },
+        {
+          "name": "Chamberlain University-Michigan",
+          "value": 92405
+        },
+        {
+          "name": "University of Michigan-Ann Arbor",
+          "value": 83648
+        },
+        {
+          "name": "Michigan Technological University",
+          "value": 78198
+        },
+        {
+          "name": "Walsh College",
+          "value": 72081
+        },
+        {
+          "name": "University of Detroit Mercy",
+          "value": 71030
+        },
+        {
+          "name": "Lawrence Technological University",
+          "value": 69151
+        },
+        {
+          "name": "Michigan State University",
+          "value": 67253
+        },
+        {
+          "name": "Kalamazoo College",
+          "value": 65590
+        },
+        {
+          "name": "Thomas M Cooley Law School",
+          "value": 63450
+        },
+        {
+          "name": "Northwood University",
+          "value": 63075
+        },
+        {
+          "name": "Universal Technical Institute-Canton",
+          "value": 62575
+        },
+        {
+          "name": "University of Michigan-Dearborn",
+          "value": 59649
+        },
+        {
+          "name": "Madonna University",
+          "value": 59058
+        },
+        {
+          "name": "Albion College",
+          "value": 58799
+        },
+        {
+          "name": "Oakland University",
+          "value": 58612
+        },
+        {
+          "name": "Hope College",
+          "value": 58427
+        },
+        {
+          "name": "Calvin University",
+          "value": 58375
+        },
+        {
+          "name": "Calvin University - Handlon Campus",
+          "value": 58375
+        },
+        {
+          "name": "Siena Heights University",
+          "value": 57529
+        },
+        {
+          "name": "Grand Valley State University",
+          "value": 56118
+        },
+        {
+          "name": "Concordia University Ann Arbor",
+          "value": 56075
+        },
+        {
+          "name": "Central Michigan University",
+          "value": 55874
+        },
+        {
+          "name": "Adrian College",
+          "value": 55504
+        },
+        {
+          "name": "Alma College",
+          "value": 54742
+        },
+        {
+          "name": "Ferris State University",
+          "value": 54735
+        },
+        {
+          "name": "Cleary University",
+          "value": 54186
+        },
+        {
+          "name": "Western Michigan University",
+          "value": 53562
+        },
+        {
+          "name": "Wayne State University",
+          "value": 53493
+        },
+        {
+          "name": "University of Michigan-Flint",
+          "value": 53230
+        },
+        {
+          "name": "Andrews University",
+          "value": 53187
+        },
+        {
+          "name": "Saginaw Valley State University",
+          "value": 51955
+        },
+        {
+          "name": "Eastern Michigan University",
+          "value": 51793
+        },
+        {
+          "name": "Spring Arbor University",
+          "value": 51732
+        },
+        {
+          "name": "Aquinas College",
+          "value": 49584
+        },
+        {
+          "name": "Sacred Heart Major Seminary",
+          "value": 49295
+        },
+        {
+          "name": "Lake Superior State University",
+          "value": 49045
+        },
+        {
+          "name": "Rochester Christian University",
+          "value": 48707
+        },
+        {
+          "name": "The University of Olivet",
+          "value": 47907
+        },
+        {
+          "name": "Cornerstone University",
+          "value": 47314
+        },
+        {
+          "name": "Northern Michigan University",
+          "value": 47107
+        },
+        {
+          "name": "Moody Theological Seminary and Graduate School--Michigan",
+          "value": 45399
+        },
+        {
+          "name": "Davenport University",
+          "value": 45099
+        },
+        {
+          "name": "Davenport University-Warren Location",
+          "value": 45099
+        },
+        {
+          "name": "Davenport University-Kalamazoo Location",
+          "value": 45099
+        },
+        {
+          "name": "Davenport University-Lansing Location",
+          "value": 45099
+        },
+        {
+          "name": "Davenport University-Midland Location",
+          "value": 45099
+        },
+        {
+          "name": "Davenport University-Traverse City Location",
+          "value": 45099
+        },
+        {
+          "name": "Davenport University - Wayne CCCD",
+          "value": 45099
+        },
+        {
+          "name": "Davenport University - Detroit",
+          "value": 45099
+        },
+        {
+          "name": "College for Creative Studies",
+          "value": 44860
+        },
+        {
+          "name": "Schoolcraft Community College District",
+          "value": 42722
+        },
+        {
+          "name": "Grace Christian University",
+          "value": 41663
+        },
+        {
+          "name": "Monroe County Community College",
+          "value": 41646
+        },
+        {
+          "name": "Macomb Community College",
+          "value": 41596
+        },
+        {
+          "name": "Northwestern Technological Institute",
+          "value": 41237
+        },
+        {
+          "name": "Kuyper College",
+          "value": 41066
+        },
+        {
+          "name": "Gogebic Community College",
+          "value": 40950
+        },
+        {
+          "name": "St Clair County Community College",
+          "value": 40177
+        },
+        {
+          "name": "Washtenaw Community College",
+          "value": 39449
+        },
+        {
+          "name": "Lansing Community College",
+          "value": 39206
+        },
+        {
+          "name": "Kalamazoo Valley Community College",
+          "value": 38618
+        },
+        {
+          "name": "Grand Rapids Community College",
+          "value": 38377
+        },
+        {
+          "name": "Kellogg Community College",
+          "value": 38329
+        },
+        {
+          "name": "Carnegie Institute",
+          "value": 38244
+        },
+        {
+          "name": "Northwestern Michigan College",
+          "value": 38167
+        },
+        {
+          "name": "Delta College",
+          "value": 37781
+        },
+        {
+          "name": "Glen Oaks Community College",
+          "value": 37540
+        },
+        {
+          "name": "Oakland Community College",
+          "value": 37395
+        },
+        {
+          "name": "Mid Michigan College",
+          "value": 37319
+        },
+        {
+          "name": "Southwestern Michigan College",
+          "value": 37303
+        },
+        {
+          "name": "Jackson College",
+          "value": 36898
+        },
+        {
+          "name": "North Central Michigan College",
+          "value": 36594
+        },
+        {
+          "name": "Muskegon Community College",
+          "value": 36549
+        },
+        {
+          "name": "Alpena Community College",
+          "value": 36442
+        },
+        {
+          "name": "West Shore Community College",
+          "value": 36115
+        },
+        {
+          "name": "Taylor Andrews Academy of Hair Design-Hair Lab Detroit Barber School",
+          "value": 36048
+        },
+        {
+          "name": "Baker College",
+          "value": 35833
+        },
+        {
+          "name": "Baker College of Cadillac",
+          "value": 35833
+        },
+        {
+          "name": "Baker College of Jackson",
+          "value": 35833
+        },
+        {
+          "name": "Baker College of Muskegon",
+          "value": 35833
+        },
+        {
+          "name": "Baker College - Royal Oak Campus",
+          "value": 35833
+        },
+        {
+          "name": "Kirtland Community College",
+          "value": 35831
+        },
+        {
+          "name": "Montcalm Community College",
+          "value": 35499
+        },
+        {
+          "name": "Bay de Noc Community College",
+          "value": 35090
+        },
+        {
+          "name": "Henry Ford College",
+          "value": 34795
+        },
+        {
+          "name": "Arizona College of Nursing-Southfield",
+          "value": 34657
+        },
+        {
+          "name": "Lake Michigan College",
+          "value": 34466
+        },
+        {
+          "name": "Abcott Institute",
+          "value": 33151
+        },
+        {
+          "name": "Mott Community College",
+          "value": 32538
+        },
+        {
+          "name": "Great Lakes Christian College",
+          "value": 31053
+        },
+        {
+          "name": "Ross Medical Education Center-Warren",
+          "value": 30481
+        },
+        {
+          "name": "Ross Medical Education Center-Taylor",
+          "value": 30481
+        },
+        {
+          "name": "Ross Medical Education Center-New Baltimore",
+          "value": 30481
+        },
+        {
+          "name": "Ross Medical Education Center-Lansing",
+          "value": 30072
+        },
+        {
+          "name": "Ross Medical Education Center-Kentwood",
+          "value": 30072
+        },
+        {
+          "name": "Ross College-Grand Rapids North",
+          "value": 30072
+        },
+        {
+          "name": "Ross Medical Education Center-Flint",
+          "value": 30060
+        },
+        {
+          "name": "Ross Medical Education Center-Saginaw",
+          "value": 30060
+        },
+        {
+          "name": "Ross Medical Education Center-Port Huron",
+          "value": 30060
+        },
+        {
+          "name": "Ross Medical Education Center-Roosevelt Park",
+          "value": 30060
+        },
+        {
+          "name": "Ross Medical Education Center-Battle Creek",
+          "value": 30060
+        },
+        {
+          "name": "Ross Medical Education Center-Canton",
+          "value": 30060
+        },
+        {
+          "name": "Ross Medical Education Center-Portage",
+          "value": 30060
+        },
+        {
+          "name": "Bay Mills Community College",
+          "value": 30048
+        },
+        {
+          "name": "Ross Medical Education Center-Brighton",
+          "value": 29898
+        },
+        {
+          "name": "Ross Medical Education Center-Ann Arbor",
+          "value": 29898
+        },
+        {
+          "name": "Ross Medical Education Center-Davison",
+          "value": 29898
+        },
+        {
+          "name": "Ross Medical Education Center-Midland",
+          "value": 29898
+        },
+        {
+          "name": "Dorsey College",
+          "value": 29392
+        },
+        {
+          "name": "Dorsey College-Wayne",
+          "value": 29392
+        },
+        {
+          "name": "Dorsey College-Roseville",
+          "value": 29392
+        },
+        {
+          "name": "Dorsey College-Saginaw",
+          "value": 29392
+        },
+        {
+          "name": "Dorsey College-Dearborn",
+          "value": 29392
+        },
+        {
+          "name": "Dorsey College-Woodhaven",
+          "value": 29392
+        },
+        {
+          "name": "Dorsey College-Grand Rapids",
+          "value": 29392
+        },
+        {
+          "name": "Michigan Career and Technical Institute",
+          "value": 29376
+        },
+        {
+          "name": "Wayne County Community College District",
+          "value": 29079
+        },
+        {
+          "name": "Paul Mitchell the School-Michigan",
+          "value": 26897
+        },
+        {
+          "name": "Douglas J Aveda Institute",
+          "value": 26849
+        },
+        {
+          "name": "Detroit Business Institute-Downriver",
+          "value": 26702
+        },
+        {
+          "name": "Irene's Myomassology Institute",
+          "value": 26551
+        },
+        {
+          "name": "Bayshire Academy of Beauty Craft Inc",
+          "value": 24471
+        },
+        {
+          "name": "Twin City Beauty College",
+          "value": 23043
+        },
+        {
+          "name": "Port Huron Cosmetology College",
+          "value": 22980
+        },
+        {
+          "name": "David Pressley School of Cosmetology",
+          "value": 22973
+        },
+        {
+          "name": "French Academy of Cosmetology",
+          "value": 22797
+        },
+        {
+          "name": "Michigan College of Beauty-Monroe",
+          "value": 22766
+        },
+        {
+          "name": "L'esprit Academy",
+          "value": 22440
+        },
+        {
+          "name": "L'esprit Academy - Southfield",
+          "value": 22440
+        },
+        {
+          "name": "Empire Beauty School-Michigan",
+          "value": 22377
+        },
+        {
+          "name": "Keweenaw Bay Ojibwa Community College",
+          "value": 22340
+        },
+        {
+          "name": "Michigan College of Beauty-Troy",
+          "value": 22058
+        },
+        {
+          "name": "The Salon Professional Academy-Battle Creek",
+          "value": 21504
+        },
+        {
+          "name": "M J Murphy Beauty College of Mount Pleasant",
+          "value": 20720
+        },
+        {
+          "name": "P&A Scholars Beauty School",
+          "value": 20249
+        },
+        {
+          "name": "Protege Academy",
+          "value": 19499
+        },
+        {
+          "name": "Protege Academy",
+          "value": 19499
+        },
+        {
+          "name": "Nuvo College of Cosmetology",
+          "value": 18159
+        },
+        {
+          "name": "Hillsdale Beauty College",
+          "value": 17793
+        },
+        {
+          "name": "Elevate Salon Institute",
+          "value": 16853
+        },
+        {
+          "name": "Elevate Salon Institute",
+          "value": 16853
+        },
+        {
+          "name": "Paul Mitchell the School-Great Lakes",
+          "value": 16715
+        },
+        {
+          "name": "Lakewood School of Therapeutic Massage",
+          "value": 16682
+        },
+        {
+          "name": "Cadillac Institute of Cosmetology",
+          "value": 16514
+        },
+        {
+          "name": "Sharp's Academy of Hairstyling",
+          "value": 16266
+        },
+        {
+          "name": "Marketti Academy of Cosmetology",
+          "value": 14345
+        },
+        {
+          "name": "Dorsey School of Beauty",
+          "value": 13256
+        }
+      ]
+    },
+    {
+      "id": "top-program-earnings",
+      "label": "Top-earning field of study per institution (median earnings, 1-yr after completion preferred), Michigan institutions",
+      "unit": "Dollars per year",
+      "values": [
+        {
+          "name": "University of Michigan-Ann Arbor",
+          "value": 242474,
+          "program": "Advanced/Graduate Dentistry and Oral Sciences.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "University of Detroit Mercy",
+          "value": 199973,
+          "program": "Advanced/Graduate Dentistry and Oral Sciences.",
+          "credential": "Graduate/Professional Certificate"
+        },
+        {
+          "name": "Lansing Community College",
+          "value": 167092,
+          "program": "Electrical and Power Transmission Installers.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Central Michigan University",
+          "value": 152055,
+          "program": "Health and Medical Administrative Services.",
+          "credential": "Doctoral Degree"
+        },
+        {
+          "name": "Michigan State University",
+          "value": 133992,
+          "program": "Business/Commerce, General.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "University of Michigan-Flint",
+          "value": 128485,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Doctoral Degree"
+        },
+        {
+          "name": "Wayne State University",
+          "value": 128271,
+          "program": "Engineering-Related Fields.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Alpena Community College",
+          "value": 126578,
+          "program": "Electrical and Power Transmission Installers.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Eastern Michigan University",
+          "value": 126145,
+          "program": "Quality Control and Safety Technologies/Technicians.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "University of Michigan-Dearborn",
+          "value": 120972,
+          "program": "Management Information Systems and Services.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Ferris State University",
+          "value": 118364,
+          "program": "Health/Medical Preparatory Programs.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Walsh College",
+          "value": 118221,
+          "program": "Taxation.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Oakland University",
+          "value": 116041,
+          "program": "Medicine.",
+          "credential": "First Professional Degree"
+        },
+        {
+          "name": "Grand Valley State University",
+          "value": 113240,
+          "program": "Allied Health Diagnostic, Intervention, and Treatment Professions.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Madonna University",
+          "value": 112237,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Kettering University",
+          "value": 111776,
+          "program": "Business, Management, Marketing, and Related Support Services, Other.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Concordia University Ann Arbor",
+          "value": 109250,
+          "program": "Allied Health Diagnostic, Intervention, and Treatment Professions.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Saginaw Valley State University",
+          "value": 106840,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Western Michigan University",
+          "value": 102089,
+          "program": "Allied Health Diagnostic, Intervention, and Treatment Professions.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Spring Arbor University",
+          "value": 101688,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Lawrence Technological University",
+          "value": 99853,
+          "program": "Business Administration, Management and Operations.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Davenport University",
+          "value": 98724,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Baker College",
+          "value": 93810,
+          "program": "Business Administration, Management and Operations.",
+          "credential": "Doctoral Degree"
+        },
+        {
+          "name": "Northern Michigan University",
+          "value": 90337,
+          "program": "Computer and Information Sciences, General.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Northwestern Michigan College",
+          "value": 87281,
+          "program": "Marine Transportation.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Michigan Technological University",
+          "value": 86854,
+          "program": "Mechanical Engineering.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Cleary University",
+          "value": 85807,
+          "program": "Management Information Systems and Services.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Arizona College of Nursing-Southfield",
+          "value": 85169,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Chamberlain University-Michigan",
+          "value": 83188,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Andrews University",
+          "value": 82478,
+          "program": "Theological and Ministerial Studies.",
+          "credential": "Doctoral Degree"
+        },
+        {
+          "name": "Oakland Community College",
+          "value": 81626,
+          "program": "Criminal Justice and Corrections.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Alma College",
+          "value": 78690,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Adrian College",
+          "value": 77588,
+          "program": "Accounting and Related Services.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Siena Heights University",
+          "value": 77581,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Lake Superior State University",
+          "value": 77229,
+          "program": "Mechanical Engineering.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Henry Ford College",
+          "value": 76979,
+          "program": "Engineering, General.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Thomas M Cooley Law School",
+          "value": 76326,
+          "program": "Legal Research and Advanced Professional Studies.",
+          "credential": "First Professional Degree"
+        },
+        {
+          "name": "Jackson College",
+          "value": 75953,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Mid Michigan College",
+          "value": 75513,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Schoolcraft Community College District",
+          "value": 75104,
+          "program": "Practical Nursing, Vocational Nursing and Nursing Assistants.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Kellogg Community College",
+          "value": 74860,
+          "program": "Practical Nursing, Vocational Nursing and Nursing Assistants.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Northwood University",
+          "value": 74822,
+          "program": "Business Administration, Management and Operations.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Calvin University",
+          "value": 73682,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Mott Community College",
+          "value": 73034,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Rochester Christian University",
+          "value": 72825,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Hope College",
+          "value": 72146,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Kalamazoo College",
+          "value": 72008,
+          "program": "Computer and Information Sciences, General.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Lake Michigan College",
+          "value": 71432,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Grand Rapids Community College",
+          "value": 70622,
+          "program": "Industrial Production Technologies/Technicians.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Washtenaw Community College",
+          "value": 70145,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "West Shore Community College",
+          "value": 69706,
+          "program": "Practical Nursing, Vocational Nursing and Nursing Assistants.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Sacred Heart Major Seminary",
+          "value": 69654,
+          "program": "Theological and Ministerial Studies.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Macomb Community College",
+          "value": 69619,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "St Clair County Community College",
+          "value": 69590,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Monroe County Community College",
+          "value": 69336,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Montcalm Community College",
+          "value": 68396,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Delta College",
+          "value": 67922,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Kirtland Community College",
+          "value": 67468,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Wayne County Community College District",
+          "value": 67080,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Cornerstone University",
+          "value": 66737,
+          "program": "Business Administration, Management and Operations.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Kalamazoo Valley Community College",
+          "value": 66602,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Muskegon Community College",
+          "value": 65793,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "North Central Michigan College",
+          "value": 65070,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Western Michigan University Homer Stryker M.D. School of Medicine",
+          "value": 64782,
+          "program": "Medicine.",
+          "credential": "Doctoral Degree"
+        },
+        {
+          "name": "School of Missionary Aviation Technology",
+          "value": 64692,
+          "program": "Vehicle Maintenance and Repair Technologies/Technicians.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Glen Oaks Community College",
+          "value": 64466,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Southwestern Michigan College",
+          "value": 64034,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Aquinas College",
+          "value": 63311,
+          "program": "Accounting and Related Services.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Gogebic Community College",
+          "value": 62799,
+          "program": "Practical Nursing, Vocational Nursing and Nursing Assistants.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Albion College",
+          "value": 62266,
+          "program": "Accounting and Related Services.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Ross Medical Education Center-Brighton",
+          "value": 61959,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Bay de Noc Community College",
+          "value": 57430,
+          "program": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "The University of Olivet",
+          "value": 56027,
+          "program": "Insurance.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Detroit Business Institute-Downriver",
+          "value": 52535,
+          "program": "Practical Nursing, Vocational Nursing and Nursing Assistants.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Grace Christian University",
+          "value": 48916,
+          "program": "Pastoral Counseling and Specialized Ministries.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Universal Technical Institute-Canton",
+          "value": 45896,
+          "program": "Vehicle Maintenance and Repair Technologies/Technicians.",
+          "credential": "Associate's Degree"
+        },
+        {
+          "name": "Michigan School of Psychology",
+          "value": 45114,
+          "program": "Clinical, Counseling and Applied Psychology.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "Ross Medical Education Center-Midland",
+          "value": 44383,
+          "program": "Practical Nursing, Vocational Nursing and Nursing Assistants.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Abcott Institute",
+          "value": 41764,
+          "program": "Allied Health Diagnostic, Intervention, and Treatment Professions.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Dorsey College",
+          "value": 41283,
+          "program": "Practical Nursing, Vocational Nursing and Nursing Assistants.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Dorsey College-Wayne",
+          "value": 41283,
+          "program": "Practical Nursing, Vocational Nursing and Nursing Assistants.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Dorsey College-Roseville",
+          "value": 41283,
+          "program": "Practical Nursing, Vocational Nursing and Nursing Assistants.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Dorsey College-Saginaw",
+          "value": 41283,
+          "program": "Practical Nursing, Vocational Nursing and Nursing Assistants.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Dorsey College-Dearborn",
+          "value": 41283,
+          "program": "Practical Nursing, Vocational Nursing and Nursing Assistants.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Dorsey College-Woodhaven",
+          "value": 41283,
+          "program": "Practical Nursing, Vocational Nursing and Nursing Assistants.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Cranbrook Academy of Art",
+          "value": 38290,
+          "program": "Design and Applied Arts.",
+          "credential": "Master's Degree"
+        },
+        {
+          "name": "DSDT",
+          "value": 36781,
+          "program": "Computer Systems Networking and Telecommunications.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Northwestern Technological Institute",
+          "value": 36015,
+          "program": "Environmental Control Technologies/Technicians.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Michigan Career and Technical Institute",
+          "value": 35520,
+          "program": "Electrical/Electronics Maintenance and Repair Technologies/Technicians.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Kuyper College",
+          "value": 35472,
+          "program": "Social Work.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "College for Creative Studies",
+          "value": 32665,
+          "program": "Design and Applied Arts.",
+          "credential": "Bachelor's Degree"
+        },
+        {
+          "name": "Douglas J Aveda Institute",
+          "value": 31535,
+          "program": "Somatic Bodywork and Related Therapeutic Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Sharp's Academy of Hairstyling",
+          "value": 29505,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Marketti Academy of Cosmetology",
+          "value": 29122,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross Medical Education Center-Ann Arbor",
+          "value": 28570,
+          "program": "Health and Medical Administrative Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross Medical Education Center-Davison",
+          "value": 28570,
+          "program": "Health and Medical Administrative Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross Medical Education Center-Lansing",
+          "value": 28495,
+          "program": "Health and Medical Administrative Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross Medical Education Center-Kentwood",
+          "value": 28495,
+          "program": "Health and Medical Administrative Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross College-Grand Rapids North",
+          "value": 28495,
+          "program": "Health and Medical Administrative Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "The Salon Professional Academy-Battle Creek",
+          "value": 26809,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross Medical Education Center-Warren",
+          "value": 26601,
+          "program": "Health and Medical Administrative Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross Medical Education Center-Taylor",
+          "value": 26601,
+          "program": "Health and Medical Administrative Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross Medical Education Center-New Baltimore",
+          "value": 26601,
+          "program": "Health and Medical Administrative Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross Medical Education Center-Flint",
+          "value": 24905,
+          "program": "Allied Health and Medical Assisting Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross Medical Education Center-Saginaw",
+          "value": 24905,
+          "program": "Allied Health and Medical Assisting Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross Medical Education Center-Port Huron",
+          "value": 24905,
+          "program": "Allied Health and Medical Assisting Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross Medical Education Center-Roosevelt Park",
+          "value": 24905,
+          "program": "Allied Health and Medical Assisting Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross Medical Education Center-Battle Creek",
+          "value": 24905,
+          "program": "Allied Health and Medical Assisting Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross Medical Education Center-Canton",
+          "value": 24905,
+          "program": "Allied Health and Medical Assisting Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Ross Medical Education Center-Portage",
+          "value": 24905,
+          "program": "Allied Health and Medical Assisting Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Dorsey College-Grand Rapids",
+          "value": 24379,
+          "program": "Allied Health and Medical Assisting Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Taylor Andrews Academy of Hair Design-Hair Lab Detroit Barber School",
+          "value": 20460,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Creative Hair School of Cosmetology",
+          "value": 20353,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Irene's Myomassology Institute",
+          "value": 19951,
+          "program": "Somatic Bodywork and Related Therapeutic Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Paul Mitchell the School-Great Lakes",
+          "value": 18580,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Paul Mitchell the School-Grand Rapids",
+          "value": 18410,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Twin City Beauty College",
+          "value": 18009,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Paul Mitchell the School-Farmington Hills",
+          "value": 17067,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "L'esprit Academy",
+          "value": 16706,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Michigan College of Beauty-Troy",
+          "value": 16695,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Hillsdale Beauty College",
+          "value": 16576,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Nuvo College of Cosmetology",
+          "value": 16575,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Paul Mitchell the School-Michigan",
+          "value": 16464,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Empire Beauty School-Michigan",
+          "value": 16062,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Elevate Salon Institute",
+          "value": 14296,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "M J Murphy Beauty College of Mount Pleasant",
+          "value": 14261,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Michigan College of Beauty-Monroe",
+          "value": 14062,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "P&A Scholars Beauty School",
+          "value": 13625,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "David Pressley School of Cosmetology",
+          "value": 13360,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Protege Academy",
+          "value": 13261,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Protege Academy",
+          "value": 13261,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "French Academy of Cosmetology",
+          "value": 13181,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Bayshire Academy of Beauty Craft Inc",
+          "value": 10412,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Dorsey School of Beauty",
+          "value": 8615,
+          "program": "Cosmetology and Related Personal Grooming Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        },
+        {
+          "name": "Lakewood School of Therapeutic Massage",
+          "value": 7610,
+          "program": "Somatic Bodywork and Related Therapeutic Services.",
+          "credential": "Undergraduate Certificate or Diploma"
+        }
+      ]
+    }
+  ],
+  "notes": "Cross-section: series use values:[{name, value}] (one value per institution) instead of observations; top-program entries add program + credential fields. 172 Michigan institutions returned by the API metadata total at pull time. Null/suppressed metrics are omitted per series, so series lengths differ. Response shape verified live 2026-10-08 with api.data.gov’s public DEMO_KEY (172 MI institutions); project DATAGOV_API_KEY still KEY PENDING."
+}
