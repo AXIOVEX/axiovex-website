@@ -18,25 +18,24 @@
  *     duoarea: state areas are 'S' + postal code — SMI = Michigan
  *     (attested in EIA's own Michigan price pages / series naming).
  *     Values are dollars per thousand cubic feet ($/Mcf).
- *     PROCESS CODE UNCONFIRMED: EIA docs confirm the sibling code PRS =
- *     price of natural gas delivered to residential consumers on this
- *     route, but the industrial-sector code could not be confirmed
- *     from the documentation without a key (the route's facet listing
- *     itself requires a key). This module tries the documented-pattern
- *     candidates in order — PIS, PDS, PDM — and uses the first that
- *     returns rows, recording which code succeeded in `notes`. If none
- *     returns rows it throws, so a wrong guess fails loudly instead of
- *     publishing an empty or wrong series. Confirm the code on the
- *     first keyed run (GET /v2/natural-gas/pri/sum/ facet metadata)
- *     and pin it here.
+ *     PROCESS CODE CONFIRMED 2026-10-08 (first keyed run): the route's
+ *     own facet metadata (GET /v2/natural-gas/pri/sum/facet/process/,
+ *     key required) lists PIN = "Industrial Price" — pinned below as
+ *     NG_PROCESS. The earlier documented-pattern candidates (PIS, PDS,
+ *     PDM) do not exist on this route; the sibling codes check out
+ *     (PRS = "Price Delivered to Residential Consumers"). duoarea SMI
+ *     verified live the same day (PRS + SMI returns Michigan rows).
+ *     If the pinned code ever returns no rows the module throws, so a
+ *     vocabulary change fails loudly instead of publishing an empty
+ *     or wrong series.
  *
  * Probe (2026-10-08, placeholder key): both routes returned a
  * structured HTTP 403 { error: { code: 'API_KEY_INVALID' } } from
- * api.eia.gov — endpoints live, key required. KEY PENDING
- * (EIA_API_KEY not yet registered); not verified end-to-end.
+ * api.eia.gov — endpoints live, key required. Key registered and
+ * verified end-to-end 2026-10-08.
  */
 const LENGTH = 24;
-const NG_PROCESS_CANDIDATES = ['PIS', 'PDS', 'PDM'];
+const NG_PROCESS = 'PIN'; // "Industrial Price" per the route's facet metadata (confirmed 2026-10-08)
 
 function eiaUrl(route, key, params) {
   const qs = params.map(([k, v]) => encodeURIComponent(k) + '=' + encodeURIComponent(v)).join('&');
@@ -73,25 +72,21 @@ export default {
     const elecObs = toObservations(rowsOf(elecJson), 'price');
     if (!elecObs.length) throw new Error('EIA electricity/retail-sales returned no Michigan industrial price rows');
 
-    // (b) Industrial natural gas price, Michigan (process-code fallback chain).
-    let gasObs = [];
-    let gasProcess = null;
-    for (const proc of NG_PROCESS_CANDIDATES) {
-      const gasJson = await ctx.get(eiaUrl('natural-gas/pri/sum', key, [
-        ['frequency', 'monthly'],
-        ['data[0]', 'value'],
-        ['facets[duoarea][]', 'SMI'],
-        ['facets[process][]', proc],
-        ['sort[0][column]', 'period'],
-        ['sort[0][direction]', 'desc'],
-        ['length', String(LENGTH)],
-      ]));
-      const obs = toObservations(rowsOf(gasJson), 'value');
-      if (obs.length) { gasObs = obs; gasProcess = proc; break; }
-    }
+    // (b) Industrial natural gas price, Michigan (process code PIN,
+    // confirmed against the route's facet metadata 2026-10-08).
+    const gasJson = await ctx.get(eiaUrl('natural-gas/pri/sum', key, [
+      ['frequency', 'monthly'],
+      ['data[0]', 'value'],
+      ['facets[duoarea][]', 'SMI'],
+      ['facets[process][]', NG_PROCESS],
+      ['sort[0][column]', 'period'],
+      ['sort[0][direction]', 'desc'],
+      ['length', String(LENGTH)],
+    ]));
+    const gasObs = toObservations(rowsOf(gasJson), 'value');
     if (!gasObs.length) {
-      throw new Error('EIA natural-gas/pri/sum returned no Michigan rows for any candidate process code (' +
-        NG_PROCESS_CANDIDATES.join(', ') + ') — process code unconfirmed, see module header');
+      throw new Error('EIA natural-gas/pri/sum returned no Michigan rows for process ' +
+        NG_PROCESS + ' (PIN, Industrial Price) — facet vocabulary may have changed, see module header');
     }
 
     const latest = obs => obs[obs.length - 1].period;
@@ -102,7 +97,7 @@ export default {
         { id: 'elec-industrial-mi', label: 'Average retail price of electricity, industrial sector, Michigan', unit: 'Cents per kilowatt-hour', observations: elecObs },
         { id: 'gas-industrial-mi', label: 'Price of natural gas delivered to industrial consumers, Michigan', unit: 'Dollars per thousand cubic feet', observations: gasObs },
       ],
-      notes: 'Electricity route/facets per EIA v2 docs (stateid=MI, sectorid=IND, data=price, cents/kWh). Natural gas: duoarea=SMI (Michigan); industrial process code NOT confirmed from docs without a key — this pull used process="' + gasProcess + '" (first of the candidate chain ' + NG_PROCESS_CANDIDATES.join(' → ') + ' that returned rows); verify against the route facet metadata on the first keyed run and pin the confirmed code in scripts/pack/eia.mjs. KEY PENDING at first write (2026-10-08): both routes probed live (structured 403 API_KEY_INVALID for placeholder key).',
+      notes: 'Electricity route/facets per EIA v2 docs (stateid=MI, sectorid=IND, data=price, cents/kWh). Natural gas: duoarea=SMI (Michigan), process=PIN ("Industrial Price") — confirmed 2026-10-08 against the route\'s keyed facet metadata (GET /v2/natural-gas/pri/sum/facet/process/); duoarea verified live via PRS (residential) rows the same day. Key registered + verified end-to-end 2026-10-08.',
     };
   },
 };
