@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-08T18:25:32.916Z",
+  "updatedUtc": "2026-10-08T19:56:52.458Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -240,6 +240,13 @@
       "title": "Funding & policy",
       "items": [
         {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → VETS ACCESS LLC — $16,525 award, October 6, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C24827P0029_3600_-NONE-_-NONE-",
+          "date": "2026-10-06"
+        },
+        {
           "source": "Federal Register",
           "sourceId": "federal-register",
           "title": "New Mexico Institute of Mining and Technology et.al, Notice of Decision on Application for Duty-Free Entry of Scientific Instruments",
@@ -261,39 +268,32 @@
           "date": "2026-10-05"
         },
         {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces Up to $400 Million for Basic Research to Advance the Frontiers of Science",
-          "link": "https://www.energy.gov/articles/energy-department-announces-400-million-basic-research-advance-frontiers-science",
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Justice → EMERGENCY TECHNOLOGY INC — $13,549 award, October 2, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_15UBAS27F00000012_1542_15UC0C22D00001728_1542",
+          "date": "2026-10-02"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → BOWHEAD CORPORATION — $25,978 award, October 2, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C26227P0053_3600_-NONE-_-NONE-",
+          "date": "2026-10-02"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → RICHARD-ALLAN SCIENTIFIC LLC — $23,136 award, October 1, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C24927N0159_3600_36C24926D0013_3600",
           "date": "2026-10-01"
         },
         {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces Speed to Power Investments Across 26 States to Lower Electricity Costs and Improve Grid Reliability",
-          "link": "https://www.energy.gov/articles/energy-department-announces-speed-power-investments-across-26-states-lower-electricity",
-          "date": "2026-09-24"
-        },
-        {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces $99 Million for 21 Projects to Advance U.S. Geothermal Energy Development",
-          "link": "https://www.energy.gov/articles/energy-department-announces-99-million-21-projects-advance-us-geothermal-energy",
-          "date": "2026-09-21"
-        },
-        {
-          "source": "NIST",
-          "sourceId": "nist",
-          "title": "NIST Awards More Than $1.7 Million to Support Cybersecurity Workforce Development Across 8 States",
-          "link": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development",
-          "date": "2026-09-18"
-        },
-        {
-          "source": "NSF",
-          "sourceId": "nsf",
-          "title": "NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics",
-          "link": "https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor",
-          "date": "2026-09-17"
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → MP ACQUISITION, LLC — $11,000 award, October 1, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C24827P0016_3600_-NONE-_-NONE-",
+          "date": "2026-10-01"
         }
       ]
     }

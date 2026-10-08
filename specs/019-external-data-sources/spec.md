@@ -66,8 +66,10 @@ the pack.
   systematizes the claims cross-check used in the August 2026
   labor-force analysis: announced layoffs (WARN) vs. filed claims.
 - **FR-004 — Census API (U.S. Census Bureau).** Free API key
-  (`CENSUS_API_KEY`); the API also answers limited queries without a
-  key. Three datasets, latest available vintages, labeled: ACS
+  (`CENSUS_API_KEY`) — required: as of the 2026-10-08 wiring, the
+  Census data API rejects keyless data queries (HTTP 302 to a
+  missing-key page); only metadata endpoints answer without a key.
+  Three datasets, latest available vintages, labeled: ACS
   5-year (educational attainment + demographics, Michigan counties),
   County Business Patterns (Michigan county × manufacturing
   establishments and employment), QWI (Michigan workforce flows by
@@ -120,3 +122,65 @@ and (3) at least one value is cross-checked against the publisher's
 own public display or a second route. A source whose key is still
 pending is reported as **key pending** with the single action needed
 to unblock it — never as wired.
+
+## Implementation status (2026-10-08)
+
+- **FR-001 JOLTS — WIRED + VERIFIED.** State series are 21-char IDs:
+  `JTS000000260000000JOL/JOR/LDL/LDR` (Michigan, total nonfarm, SA).
+  Values match BLS's State JOLTS Annual 2025 release (USDL-26-1258)
+  value-for-value. NOTE: BLS now publishes state JOLTS ANNUALLY —
+  the latest reference period is Dec 2025 and no 2026 state data
+  will exist until the July 2027 annual release. The pack snapshot
+  says so in its notes; treat the series as an annual input.
+- **FR-006 USAspending — WIRED + VERIFIED.** Live items in the
+  funding-policy lane locally (screenshot on file); date uses Base
+  Obligation Date (= date signed — the search response's Action
+  Date field is null at award level). NAICS sector prefixes 31/32/33
+  with a $10,000 floor keep micro-purchases out of the lane.
+- **FR-009 GDELT — WIRED (tool).** `scripts/news-check.mjs` verified
+  against real captured API responses. Caveat: GDELT rate-limits
+  this network aggressively (HTTP 429 after a few calls); run
+  interactively at drafting time and rerun by hand if throttled.
+- **FR-002 FRED — WIRED + VERIFIED (2026-10-08).** 7 curated series;
+  MI house-price index 584.90 and MI population 10,127,884 match
+  FRED's published figures.
+- **FR-004 Census — WIRED + VERIFIED (2026-10-08).** Key required
+  (the Census API now requires one) and ACTIVATED via the signup
+  email's validation link before first use. 4 series live.
+- **FR-007 Scorecard — WIRED + VERIFIED (2026-10-08)** via the
+  api.data.gov key (172 MI institutions).
+- **FR-008 EIA — WIRED + VERIFIED (2026-10-08).** Industrial
+  natural-gas process code confirmed as PIN from the route's keyed
+  facet metadata and pinned in the module. MI industrial electricity
+  9.81 ¢/kWh and natural gas $8.48/Mcf (Jul 2026).
+- **FR-005 BEA — WIRED + VERIFIED (2026-10-08), connector lane.**
+  The key BEA emailed never activated (API error 4 through every
+  retry); the owner's vault-stored key (custom.bea connector) is
+  live, and the snapshot is produced by the connector lane script
+  mirroring the module (see the module header). CAINC1 mapping
+  corrected on live data: L1 total, L2 population, L3 per capita.
+  All 83 MI counties, 2024.
+- **FR-003 DOL — WIRED + VERIFIED (2026-10-08), APIv4.** The legacy
+  api.dol.gov/V1 endpoint uniformly rejects the portal-issued key
+  (HTTP 400 on all routes, undocumented by the portal); the module
+  was rewritten to the portal's APIv4 (apiprod.dol.gov/v4, key as
+  X-API-KEY query parameter, rate limit 10 requests/10 minutes —
+  one request per weekly run). Field map verified against the
+  dataset's own metadata endpoint (rptdate, c4/c5/c6/c7 claims,
+  c3 covered employment; c1/c2 are seasonal factors). The dataset
+  is the NATIONAL series — labeled as such, never as Michigan —
+  resolving open item (a) below: there is no state split in this
+  dataset. Freshness: the portal copy lags the weekly release
+  (newest reported week 2026-09-05 at verification).
+- **Open items for the first keyed runs:** (a) DOL — RESOLVED
+  2026-10-08: national dataset confirmed, no Michigan split; see
+  FR-003 above. (b) EIA — RESOLVED 2026-10-08: process code PIN
+  confirmed and pinned. (c) Michigan QWI ends at 2021-Q4
+  in the current LEHD release (a Michigan-specific production gap;
+  other states run to 2025-Q4) — the Census module takes the latest
+  quarter with data and will pick up newer quarters automatically
+  if publication resumes.
+- **CI parity:** add the six key values as GitHub repository
+  secrets under the same variable names so the weekly
+  `data-pack-sync` runs include the keyed sources; until then CI
+  runs JOLTS only.
