@@ -1,0 +1,408 @@
+{
+  "source": "Census API (ACS / CBP / QWI)",
+  "publisher": "U.S. Census Bureau",
+  "retrievedUtc": "2026-10-08T20:06:56.912Z",
+  "vintage": "ACS 2023 5-year; QWI 2021-Q3",
+  "referencePeriod": "ACS 2023 5-year; QWI 2021-Q3",
+  "series": [
+    {
+      "id": "acs5-bachelor-plus-share",
+      "label": "Bachelor's degree or higher, share of population 25+ (ACS table B15003)",
+      "unit": "percent",
+      "geography": "Michigan counties",
+      "vintage": "ACS 2023 5-year",
+      "values": [
+        {
+          "name": "Alcona County",
+          "value": 20.6
+        },
+        {
+          "name": "Alger County",
+          "value": 20.3
+        },
+        {
+          "name": "Allegan County",
+          "value": 26.1
+        },
+        {
+          "name": "Alpena County",
+          "value": 17.7
+        },
+        {
+          "name": "Antrim County",
+          "value": 34.3
+        },
+        {
+          "name": "Arenac County",
+          "value": 15.8
+        },
+        {
+          "name": "Baraga County",
+          "value": 16.1
+        },
+        {
+          "name": "Barry County",
+          "value": 24.3
+        },
+        {
+          "name": "Bay County",
+          "value": 21.4
+        },
+        {
+          "name": "Benzie County",
+          "value": 34.3
+        },
+        {
+          "name": "Berrien County",
+          "value": 30.2
+        },
+        {
+          "name": "Branch County",
+          "value": 16.9
+        },
+        {
+          "name": "Calhoun County",
+          "value": 22.2
+        },
+        {
+          "name": "Cass County",
+          "value": 21.6
+        },
+        {
+          "name": "Charlevoix County",
+          "value": 33.9
+        },
+        {
+          "name": "Cheboygan County",
+          "value": 22.9
+        },
+        {
+          "name": "Chippewa County",
+          "value": 21.9
+        },
+        {
+          "name": "Clare County",
+          "value": 13
+        },
+        {
+          "name": "Clinton County",
+          "value": 34.2
+        },
+        {
+          "name": "Crawford County",
+          "value": 20.2
+        },
+        {
+          "name": "Delta County",
+          "value": 20
+        },
+        {
+          "name": "Dickinson County",
+          "value": 24.3
+        },
+        {
+          "name": "Eaton County",
+          "value": 30.4
+        },
+        {
+          "name": "Emmet County",
+          "value": 40.2
+        },
+        {
+          "name": "Genesee County",
+          "value": 22.8
+        },
+        {
+          "name": "Gladwin County",
+          "value": 15.4
+        },
+        {
+          "name": "Gogebic County",
+          "value": 21.9
+        },
+        {
+          "name": "Grand Traverse County",
+          "value": 40.3
+        },
+        {
+          "name": "Gratiot County",
+          "value": 19
+        },
+        {
+          "name": "Hillsdale County",
+          "value": 20.6
+        },
+        {
+          "name": "Houghton County",
+          "value": 36.6
+        },
+        {
+          "name": "Huron County",
+          "value": 17.6
+        },
+        {
+          "name": "Ingham County",
+          "value": 41.3
+        },
+        {
+          "name": "Ionia County",
+          "value": 18
+        },
+        {
+          "name": "Iosco County",
+          "value": 17.6
+        },
+        {
+          "name": "Iron County",
+          "value": 20.6
+        },
+        {
+          "name": "Isabella County",
+          "value": 30.8
+        },
+        {
+          "name": "Jackson County",
+          "value": 23
+        },
+        {
+          "name": "Kalamazoo County",
+          "value": 40.8
+        },
+        {
+          "name": "Kalkaska County",
+          "value": 18.2
+        },
+        {
+          "name": "Kent County",
+          "value": 39.6
+        },
+        {
+          "name": "Keweenaw County",
+          "value": 43.6
+        },
+        {
+          "name": "Lake County",
+          "value": 12.5
+        },
+        {
+          "name": "Lapeer County",
+          "value": 19.8
+        },
+        {
+          "name": "Leelanau County",
+          "value": 49.9
+        },
+        {
+          "name": "Lenawee County",
+          "value": 22.3
+        },
+        {
+          "name": "Livingston County",
+          "value": 39.2
+        },
+        {
+          "name": "Luce County",
+          "value": 19.3
+        },
+        {
+          "name": "Mackinac County",
+          "value": 23.5
+        },
+        {
+          "name": "Macomb County",
+          "value": 27.2
+        },
+        {
+          "name": "Manistee County",
+          "value": 23.4
+        },
+        {
+          "name": "Marquette County",
+          "value": 35.8
+        },
+        {
+          "name": "Mason County",
+          "value": 25
+        },
+        {
+          "name": "Mecosta County",
+          "value": 22.7
+        },
+        {
+          "name": "Menominee County",
+          "value": 18
+        },
+        {
+          "name": "Midland County",
+          "value": 36.3
+        },
+        {
+          "name": "Missaukee County",
+          "value": 18
+        },
+        {
+          "name": "Monroe County",
+          "value": 23.4
+        },
+        {
+          "name": "Montcalm County",
+          "value": 14.9
+        },
+        {
+          "name": "Montmorency County",
+          "value": 16
+        },
+        {
+          "name": "Muskegon County",
+          "value": 21.4
+        },
+        {
+          "name": "Newaygo County",
+          "value": 18.4
+        },
+        {
+          "name": "Oakland County",
+          "value": 50.2
+        },
+        {
+          "name": "Oceana County",
+          "value": 21
+        },
+        {
+          "name": "Ogemaw County",
+          "value": 15.9
+        },
+        {
+          "name": "Ontonagon County",
+          "value": 16.7
+        },
+        {
+          "name": "Osceola County",
+          "value": 16.4
+        },
+        {
+          "name": "Oscoda County",
+          "value": 14.8
+        },
+        {
+          "name": "Otsego County",
+          "value": 25.8
+        },
+        {
+          "name": "Ottawa County",
+          "value": 37.5
+        },
+        {
+          "name": "Presque Isle County",
+          "value": 20.2
+        },
+        {
+          "name": "Roscommon County",
+          "value": 20.3
+        },
+        {
+          "name": "Saginaw County",
+          "value": 23.4
+        },
+        {
+          "name": "Sanilac County",
+          "value": 16
+        },
+        {
+          "name": "Schoolcraft County",
+          "value": 20.7
+        },
+        {
+          "name": "Shiawassee County",
+          "value": 19.5
+        },
+        {
+          "name": "St. Clair County",
+          "value": 20.3
+        },
+        {
+          "name": "St. Joseph County",
+          "value": 17.1
+        },
+        {
+          "name": "Tuscola County",
+          "value": 15.5
+        },
+        {
+          "name": "Van Buren County",
+          "value": 22.9
+        },
+        {
+          "name": "Washtenaw County",
+          "value": 58.1
+        },
+        {
+          "name": "Wayne County",
+          "value": 26.9
+        },
+        {
+          "name": "Wexford County",
+          "value": 21.2
+        }
+      ]
+    },
+    {
+      "id": "qwi-employment",
+      "label": "Beginning-of-quarter employment (QWI Emp, all private ownership)",
+      "unit": "jobs",
+      "geography": "Michigan (state)",
+      "vintage": "QWI 2021-Q3",
+      "values": [
+        {
+          "name": "Michigan — all industries (private)",
+          "value": 3490493,
+          "period": "2021-Q2"
+        },
+        {
+          "name": "Michigan — manufacturing NAICS 31-33 (private)",
+          "value": 585682,
+          "period": "2021-Q3"
+        }
+      ]
+    },
+    {
+      "id": "qwi-hires",
+      "label": "Hires, all (QWI HirA, all private ownership)",
+      "unit": "jobs",
+      "geography": "Michigan (state)",
+      "vintage": "QWI 2021-Q3",
+      "values": [
+        {
+          "name": "Michigan — all industries (private)",
+          "value": 753833,
+          "period": "2021-Q2"
+        },
+        {
+          "name": "Michigan — manufacturing NAICS 31-33 (private)",
+          "value": 77887,
+          "period": "2021-Q3"
+        }
+      ]
+    },
+    {
+      "id": "qwi-separations",
+      "label": "Separations (QWI Sep, all private ownership)",
+      "unit": "jobs",
+      "geography": "Michigan (state)",
+      "vintage": "QWI 2021-Q3",
+      "values": [
+        {
+          "name": "Michigan — all industries (private)",
+          "value": 619146,
+          "period": "2021-Q2"
+        },
+        {
+          "name": "Michigan — manufacturing NAICS 31-33 (private)",
+          "value": 72934,
+          "period": "2021-Q3"
+        }
+      ]
+    }
+  ],
+  "notes": "QWI separations (Sep) require a following quarter of data, so the separations series ends at 2021-Q2 / 2021-Q3, one quarter behind employment/hires at 2021-Q3. Partial fetch — failed datasets: CBP: non-JSON response from https://api.census.gov/data/2023/cbp QWI reference quarter 2021-Q3 is the latest Michigan quarter published (Michigan QWI lags other states in the current LEHD release). Scope: private ownership (ownercode A05), all sexes, all ages, not seasonally adjusted."
+}
