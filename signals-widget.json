@@ -39,10 +39,10 @@
     {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
-      "source": "Automation Alley",
-      "date": "2026-10-07",
-      "url": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/"
+      "title": "Oakland County is losing jobs. Here is why.",
+      "source": "Axiovex",
+      "date": "2026-10-08",
+      "url": "https://axiovexsystems.com/blog/oakland-county-job-losses/"
     },
     {
       "lane": "manufacturing",
@@ -71,6 +71,14 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
+      "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
+      "source": "Automation Alley",
+      "date": "2026-10-07",
+      "url": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
       "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
       "source": "Automation Alley",
       "date": "2026-10-07",
@@ -107,14 +115,6 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-06",
       "url": "https://www.manufacturingdive.com/news/bd-supply-chain-pact-trump-administration/832263/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Bayer to invest $2.2B in Ohio pharmaceutical facility",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-06",
-      "url": "https://www.manufacturingdive.com/news/bayer-to-invest-2b-ohio-pharmaceutical-facility-new-albany/832237/"
     }
   ],
   "signalsUrl": "/signals/"
