@@ -87,7 +87,7 @@
   per the T004 precedent). Guards verified in the pushed
   tree (robots.txt = staging Disallow version;
   `_headers` carries the one `X-Robots-Tag` line).
-- [ ] T011 Verification + **GATE — Tristen reviews the
+- [x] T011 Verification + **GATE — Tristen reviews the
   service sections on staging**. Verification DONE
   2026-10-08: live staging.axiovexsystems.com → 200,
   all three lead lines served verbatim (1× each),
@@ -99,9 +99,24 @@
   staging-mobile-services.png): cards render cleanly at
   both widths, `scrollWidth == innerWidth` (no
   horizontal overflow), rendered card text matches the
-  approved copy exactly. **Owner review PENDING** —
-  promotion only on Tristen's approval.
-- [ ] T012 (after T011) Promotion staging → main per
+  approved copy exactly. **Owner review APPROVED —
+  Tristen, 2026-10-08 17:34 ET ("Promote to
+  production").**
+- [x] T012 (after T011) Promotion staging → main per
   spec 010 FR-004 (guard proofs), production
-  re-verification. **OPEN — stays open at staging
-  hand-off.**
+  re-verification. **DONE 2026-10-08:** staging first
+  re-synced with main (ab3d555); the sync merge pulled
+  production's guard files into staging (side effect of
+  the amended fast-forward promotion earlier that day)
+  — caught on the pre-push check and repaired by
+  re-asserting staging's guards (808ca5e) before the
+  promotion merge. Merged to main (156b092) with
+  robots.txt and `_headers` diffs vs pre-merge main
+  both EMPTY; production confirmed live serving all
+  three lead lines (1× each), Allow robots.txt, no
+  X-Robots-Tag header. Production desktop verified in
+  the live browser (lead line is the first text of each
+  card, clean equal-width row, arrows render).
+  Production mobile verified on the exact deployed
+  tree at 390px (all three leads present,
+  scrollWidth == innerWidth; prod-mobile-services.png).
