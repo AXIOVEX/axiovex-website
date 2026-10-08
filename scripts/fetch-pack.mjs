@@ -15,8 +15,9 @@
  *     requiresKey: 'FRED_API_KEY',      // env var name, or null
  *     async fetch(ctx) -> { vintage, referencePeriod, series, notes? }
  *   }
- * ctx = { env, get, getText } — get(url) parses JSON, getText returns
- * text; both throw on non-200 with a 30s timeout.
+ * ctx = { env, get, getText, post } — get(url) parses JSON, getText
+ * returns text, post(url, body) POSTs a JSON body and parses the JSON
+ * response; all throw on non-200 with a 30s timeout.
  *
  * Resilience: a failed source keeps its last-good snapshot file; a
  * source whose required key is absent is skipped (logged). The run
@@ -55,24 +56,50 @@ if (existsSync(envFile)) {
 }
 
 /* ---------- fetch helpers ---------- */
-async function getRaw(url, headers) {
+/* Per-run call accounting by provider host + distinct 429 logging
+ * (rate-limit audit S5, 2026-10-08): a 429 (Too Many Requests) is
+ * logged with any Retry-After value, then thrown like any other
+ * failure so the module fails soft to its last-good snapshot.
+ * Nothing is ever retried in-run. */
+const callCounts = new Map();
+function noteCall(url, status, retryAfter) {
+  let host = url;
+  try { host = new URL(url).hostname; } catch { /* keep raw */ }
+  callCounts.set(host, (callCounts.get(host) || 0) + 1);
+  if (status === 429) {
+    console.error('fetch-pack: HTTP 429 (Too Many Requests) from ' + host +
+      ' — rate limited' + (retryAfter ? '; Retry-After: ' + retryAfter : '; no Retry-After header') +
+      ' (failing soft to last-good; no in-run retry)');
+  }
+}
+async function requestRaw(url, headers, init) {
   const ctl = new AbortController();
   const t = setTimeout(() => ctl.abort(), 30000);
   try {
     const r = await fetch(url, {
       headers: { 'User-Agent': UA, ...(headers || {}) },
       signal: ctl.signal,
+      ...(init || {}),
     });
+    noteCall(url, r.status, r.headers.get('retry-after'));
     if (!r.ok) throw new Error('HTTP ' + r.status + ' for ' + url.split('?')[0]);
     return r;
   } finally { clearTimeout(t); }
 }
+const getRaw = (url, headers) => requestRaw(url, headers);
 const get = async (url, headers) => {
   const r = await getRaw(url, headers);
   const text = await r.text();
   try { return JSON.parse(text); } catch { throw new Error('non-JSON response from ' + url.split('?')[0]); }
 };
 const getText = async (url, headers) => (await getRaw(url, headers)).text();
+const post = async (url, body, headers) => {
+  const r = await requestRaw(url,
+    { 'Content-Type': 'application/json', ...(headers || {}) },
+    { method: 'POST', body: JSON.stringify(body) });
+  const text = await r.text();
+  try { return JSON.parse(text); } catch { throw new Error('non-JSON response from ' + url.split('?')[0]); }
+};
 
 /* ---------- discover modules ---------- */
 const only = argVal('--only') ? argVal('--only').split(',').map(s => s.trim()) : null;
@@ -103,7 +130,7 @@ for (const mod of modules) {
   }
   attempted++;
   try {
-    const data = await mod.fetch({ env, get, getText });
+    const data = await mod.fetch({ env, get, getText, post });
     const snapshot = {
       source: mod.name,
       publisher: mod.publisher,
@@ -127,6 +154,8 @@ for (const mod of modules) {
   }
 }
 console.log('fetch-pack: ' + results.join(' · '));
+console.log('fetch-pack: call counts — ' +
+  ([...callCounts.entries()].map(([h, n]) => h + '=' + n).join(' · ') || 'none'));
 if (attempted > 0 && succeeded === 0) {
   console.error('fetch-pack: every attempted source failed');
   process.exit(1);
