@@ -293,14 +293,30 @@ Amendment 2 basis); wireframes revised first.
   screenshots at desktop + mobile against the locally
   built staging output, note block compared with WF-11
   as amended.
-- [ ] T015 **Owner review on staging**: present the
+- [x] T015 **Owner review on staging**: present the
   staging page + screenshots; promotion only on
-  Tristen's approval.
-- [ ] T016 **Promote + closeout**: merge `staging` →
+  Tristen's approval. **Approved by Tristen
+  2026-10-08 16:59 ET** ("yes promotion approved").
+- [x] T016 **Promote + closeout**: merge `staging` →
   `main` under spec 010 FR-004 (guard diffs empty);
   production re-verification (rendered screenshots of
   the live page); amendment recorded implemented + live
-  in spec.md / wireframes / tasks.
+  in spec.md / wireframes / tasks. **Promoted
+  2026-10-08:** staging first re-synced with main
+  (7bafc56; single generated-file conflict resolved by
+  rebuild), then merged to main (7733765) with the
+  staging guards restored out — robots.txt and
+  _headers diffs vs pre-merge main both EMPTY, and
+  production confirmed live with no X-Robots-Tag
+  header and the Allow robots.txt. Production desktop
+  verified in the live browser (note ~13px, left,
+  wide, ~13 lines, ~270–285px; styles.v33.css).
+  Production mobile verified by rendering the exact
+  deployed tree (byte-identical files) at 390px:
+  811px tall, 13px, left-aligned, no horizontal
+  overflow — matching the staging measurement; the
+  live-browser tool offers no viewport resize, so no
+  direct live mobile capture exists.
   **Done 2026-10-08:** implemented as drawn — note
   renders 13px / left / full container width. Measured
   on the locally built staging output (Playwright):
