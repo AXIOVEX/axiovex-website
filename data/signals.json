@@ -1,16 +1,16 @@
 {
-  "updatedUtc": "2026-10-08T11:20:40.130Z",
+  "updatedUtc": "2026-10-08T15:21:09.861Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
         {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
-          "link": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/",
-          "date": "2026-10-07"
+          "source": "NIST",
+          "sourceId": "nist",
+          "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+          "link": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science",
+          "date": "2026-10-08"
         },
         {
           "source": "Manufacturing Dive",
@@ -36,9 +36,9 @@
         {
           "source": "Automation Alley",
           "sourceId": "automation-alley",
-          "title": "Why Supply Chain Automation Depends on Alignment, Not Just Technology",
-          "link": "https://automationalley.com/2026/10/06/why-supply-chain-automation-depends-on-alignment-not-just-technology/",
-          "date": "2026-10-06"
+          "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
+          "link": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/",
+          "date": "2026-10-07"
         },
         {
           "source": "Manufacturing Dive",
@@ -70,6 +70,13 @@
         {
           "source": "NIST",
           "sourceId": "nist",
+          "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+          "link": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science",
+          "date": "2026-10-08"
+        },
+        {
+          "source": "NIST",
+          "sourceId": "nist",
           "title": "NIST Awards More Than $1.7 Million to Support Cybersecurity Workforce Development Across 8 States",
           "link": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development",
           "date": "2026-09-18"
@@ -94,13 +101,6 @@
           "title": "NIST-Developed Quantum Sensors Improve Nuclear Monitoring",
           "link": "https://www.nist.gov/news-events/news/2026/09/nist-developed-quantum-sensors-improve-nuclear-monitoring",
           "date": "2026-09-10"
-        },
-        {
-          "source": "NSF",
-          "sourceId": "nsf",
-          "title": "Eight NSF research institutes to propel U.S. quantum science with $290M investment",
-          "link": "https://www.nsf.gov/news/eight-nsf-research-institutes-propel-us-quantum-science-290m",
-          "date": "2026-08-25"
         },
         {
           "source": "NIST",

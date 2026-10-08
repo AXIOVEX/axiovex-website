@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-08T11:20:40.130Z",
+  "updatedUtc": "2026-10-08T15:21:09.861Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -23,10 +23,18 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
-      "source": "Automation Alley",
-      "date": "2026-10-07",
-      "url": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/"
+      "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+      "source": "NIST",
+      "date": "2026-10-08",
+      "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
+    },
+    {
+      "lane": "ai-standards",
+      "laneLabel": "AI, standards & research",
+      "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+      "source": "NIST",
+      "date": "2026-10-08",
+      "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
     },
     {
       "lane": "michigan",
@@ -61,6 +69,14 @@
       "url": "https://www.manufacturingdive.com/news/anduril-industries-u-s-navy-arsenal-2-shipyard-baltimore-county-maryland/832275/"
     },
     {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
+      "source": "Automation Alley",
+      "date": "2026-10-07",
+      "url": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/"
+    },
+    {
       "lane": "ot-security",
       "laneLabel": "OT cybersecurity",
       "title": "Johnson Controls EasyIO FG",
@@ -75,14 +91,6 @@
       "source": "Federal Register",
       "date": "2026-10-06",
       "url": "https://www.federalregister.gov/documents/2026/10/06/2026-20490/new-mexico-institute-of-mining-and-technology-etal-notice-of-decision-on-application-for-duty-free"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Why Supply Chain Automation Depends on Alignment, Not Just Technology",
-      "source": "Automation Alley",
-      "date": "2026-10-06",
-      "url": "https://automationalley.com/2026/10/06/why-supply-chain-automation-depends-on-alignment-not-just-technology/"
     },
     {
       "lane": "manufacturing",
@@ -107,14 +115,6 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-06",
       "url": "https://www.manufacturingdive.com/news/bayer-to-invest-2b-ohio-pharmaceutical-facility-new-albany/832237/"
-    },
-    {
-      "lane": "ai-standards",
-      "laneLabel": "AI, standards & research",
-      "title": "NIST Awards More Than $1.7 Million to Support Cybersecurity Workforce Development Across 8 States",
-      "source": "NIST",
-      "date": "2026-09-18",
-      "url": "https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development"
     }
   ],
   "signalsUrl": "/signals/"
