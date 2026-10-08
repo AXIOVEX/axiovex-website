@@ -111,6 +111,15 @@ format):
   arithmetic on the published series; series gaps (missing
   months) are noted, never filled. A sentence states the reading
   rule: arrows show the direction of the number, not a verdict.
+- **Cross-report trend insights (owner rule, 2026-10-08; spec 007
+  FR-012)** — each standing board is read against the PRIOR cycle's
+  report: rises, falls, and holds are called out explicitly, each
+  with a reason that was checked against news sources, official
+  notices (e.g. WARN filings, agency/company releases), and
+  sentiment/context factors. A move with no verified cause is
+  labeled unexplained — causes are never inferred from the numbers
+  alone. Applies to the trend board, the education board, and
+  county-level geography.
 - **Outlook board** — immediately after the signals section (§3
   item 4). Published projections only (Michigan MCDA statewide
   vintage via the current edition; BLS Employment Projections

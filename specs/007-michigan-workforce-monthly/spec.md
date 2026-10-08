@@ -378,6 +378,19 @@ when the 15th falls badly.
     extended **for geographic insights only** by the spec 014
     sources (BLS QCEW, BLS LAUS, NCES IPEDS, Census PSEO), each
     cited at first use. All other FR-002 rules apply unchanged.
+- **FR-012 — Cross-report trend insights** (added 2026-10-08,
+  Tristen's direction). Every cycle's article reads its standing
+  boards against the PRIOR cycle's report: when a figure or trend
+  rises, falls, or holds, the article states the move explicitly
+  **and gives the reason why**. Causes are checked before they are
+  stated — against news sources, official notices (WARN filings,
+  agency and company releases), and sentiment/context factors —
+  never inferred from the numbers alone; a move with no verified
+  cause is labeled unexplained. Applies to the trend board, the
+  education analytics board, and county-level geography. Format:
+  `blog-format.md` §3A. (This FR widens FR-002's sourcing for
+  CAUSAL REPORTING only; every figure still traces to an official
+  source per FR-002.)
 
 ## Out of scope
 
