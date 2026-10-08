@@ -245,5 +245,17 @@
       "title": "Funding & policy"
     }
   ],
-  "maxAgeDays": 45
+  "maxAgeDays": 45,
+  "warnApi": {
+    "id": "michigan-warn",
+    "lanes": [
+      {
+        "lane": "michigan"
+      }
+    ],
+    "name": "Michigan WARN (LEO)",
+    "pageUrl": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices",
+    "resultsUrl": "https://www.michigan.gov/leo/sxa/search/results/?v={1FFFCC21-5151-4A2B-ABFC-F7FE4E5C9783}&s={8E97AB1D-D2D4-47F8-8CC4-3F1039C8854F}&p=40&o=Created%20Date%20sort%2CDescending&itemid={BE81F7C2-36A8-4FDE-853C-B05B6E090055}",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+  }
 }

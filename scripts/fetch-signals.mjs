@@ -36,11 +36,11 @@ const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
   'August', 'September', 'October', 'November', 'December'];
 
 /* ---------- fetch ---------- */
-async function get(url, asJson) {
+async function get(url, asJson, userAgent) {
   const ctl = new AbortController();
   const t = setTimeout(() => ctl.abort(), 20000);
   try {
-    const r = await fetch(url, { headers: { 'User-Agent': UA }, signal: ctl.signal });
+    const r = await fetch(url, { headers: { 'User-Agent': userAgent || UA }, signal: ctl.signal });
     if (!r.ok) throw new Error('HTTP ' + r.status);
     return asJson ? await r.json() : await r.text();
   } finally { clearTimeout(t); }
@@ -144,11 +144,84 @@ async function ingestFrApi(fr) {
   }
 }
 
+/* ---------- Michigan WARN (LEO) -> Michigan lane (spec 004 FR-011) ----------
+ * The LEO WARN listing is a Sitecore SXA search page; its results
+ * endpoint returns JSON whose per-result HTML carries the published
+ * notice fields. Headlines are composed ONLY from those fields and
+ * always carry the announced framing (announced != completed). The
+ * item date is the notice's filed (posting) date, taken from the
+ * result's search-data path; the layoff effective date appears in
+ * the headline text only. */
+function warnText(s) {
+  return decode(String(s || '')
+    .replace(/&nbsp;/gi, ' ').replace(/&mdash;/gi, '—').replace(/&ndash;/gi, '–'));
+}
+function parseWarnResult(r, pageUrl) {
+  const html = String((r && r.Html) || '');
+  const company = warnText((/<h3>([\s\S]*?)<\/h3>/i.exec(html) || [])[1] || '');
+  if (!company) return null;
+  const dm = /searchdata\/(\d{4})\/(\d{2})\/(\d{2})/i.exec(String((r && r.Url) || ''));
+  if (!dm) return null;
+  const date = dm[1] + '-' + dm[2] + '-' + dm[3];
+  const fields = {};
+  for (const m of html.matchAll(/<li>([\s\S]*?)<\/li>/gi)) {
+    const kv = /^([^:]{3,40}):\s*([\s\S]*)$/.exec(warnText(m[1]));
+    if (kv) {
+      const key = kv[1].trim().toLowerCase();
+      if (!(key in fields)) fields[key] = kv[2].trim();
+    }
+  }
+  const addr = fields['site address'] || fields['site addresses'] || '';
+  const cityM = /, ([^,]+), MI \d{5}/.exec(addr);
+  let place = cityM ? cityM[1].trim() : '';
+  const countyRaw = fields['county'] || fields['counties'] || '';
+  if (!place && countyRaw && !/,/.test(countyRaw) && !/remote|statewide/i.test(countyRaw)) {
+    place = countyRaw + ' County';
+  }
+  const action = fields['type of company action'] || '';
+  const jobsM = /^(\d[\d,]*)/.exec(fields['number of jobs impacted'] || '');
+  const jobs = jobsM ? parseInt(jobsM[1].replace(/,/g, ''), 10) : null;
+  const dateParts = (fields['layoff date'] || '').match(/\d{1,2}\/\d{1,2}\/\d{4}/g) || [];
+  let effective = '';
+  if (dateParts.length) {
+    const p = dateParts[0].split('/').map(Number);
+    effective = MONTHS[p[0] - 1] + ' ' + p[1] + ', ' + p[2];
+  }
+  let link;
+  const pdfM = /href="([^"]+\.pdf[^"]*)"/i.exec(html);
+  if (pdfM) {
+    link = warnText(pdfM[1]);
+    if (link.startsWith('/')) link = 'https://www.michigan.gov' + link;
+  } else {
+    const slug = company.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    link = pageUrl + '?notice=' + date + '-' + slug;
+  }
+  const segs = [action
+    ? 'announced ' + action.charAt(0).toLowerCase() + action.slice(1)
+    : 'WARN notice announced'];
+  if (place) segs.push(place);
+  if (jobs) segs.push(jobs.toLocaleString('en-US') + (jobs === 1 ? ' job' : ' jobs'));
+  if (effective) segs.push((dateParts.length > 1 ? 'starting ' : 'effective ') + effective);
+  const title = company + ' — ' + segs.join(', ');
+  return { title, link, date, _text: title.toLowerCase() };
+}
+
+async function ingestWarnApi(warn) {
+  const j = await get(warn.resultsUrl, true, warn.userAgent);
+  const items = ((j && j.Results) || []).map(r => parseWarnResult(r, warn.pageUrl)).filter(Boolean);
+  if (!items.length) throw new Error('0 items parsed');
+  anySuccess = true; feedSuccess = true;
+  for (const rule of warn.lanes) {
+    for (const item of items) if (ruleMatch(item, rule)) pushItem(rule.lane, warn.name, warn.id, item);
+  }
+}
+
 const jobs = [];
 for (const feed of cfg.feeds || []) {
   jobs.push(ingestFeed(feed).catch(e => { failures.push(feed.id + ': ' + e.message); }));
 }
 if (cfg.frApi) jobs.push(ingestFrApi(cfg.frApi).catch(e => { failures.push(cfg.frApi.id + ': ' + e.message); }));
+if (cfg.warnApi) jobs.push(ingestWarnApi(cfg.warnApi).catch(e => { failures.push(cfg.warnApi.id + ': ' + e.message); }));
 await Promise.all(jobs);
 
 /* ---------- last-good carry-over for failed sources ---------- */
@@ -166,6 +239,7 @@ if (prev) {
   const laneSources = new Map(cfg.lanes.map(l => [l.id, new Set()]));
   for (const f of cfg.feeds || []) for (const r of f.lanes) laneSources.get(r.lane).add(f.id);
   if (cfg.frApi) for (const r of cfg.frApi.lanes) laneSources.get(r.lane).add(cfg.frApi.id);
+  if (cfg.warnApi) for (const r of cfg.warnApi.lanes) laneSources.get(r.lane).add(cfg.warnApi.id);
   for (const laneCfg of cfg.lanes) {
     const cur = byLane.get(laneCfg.id) || [];
     const prevItems = (prev.lanes && prev.lanes[laneCfg.id] && prev.lanes[laneCfg.id].items) || [];
