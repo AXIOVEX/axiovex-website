@@ -45,6 +45,20 @@ async function get(url, asJson, userAgent) {
     return asJson ? await r.json() : await r.text();
   } finally { clearTimeout(t); }
 }
+async function postJson(url, body) {
+  const ctl = new AbortController();
+  const t = setTimeout(() => ctl.abort(), 30000);
+  try {
+    const r = await fetch(url, {
+      method: 'POST',
+      headers: { 'User-Agent': UA, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+      signal: ctl.signal,
+    });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return await r.json();
+  } finally { clearTimeout(t); }
+}
 
 /* ---------- tiny feed parsing (title / link / date / summary only) ---------- */
 function decode(s) {
@@ -216,12 +230,93 @@ async function ingestWarnApi(warn) {
   }
 }
 
+/* ---------- USAspending -> Funding & policy lane (spec 019 FR-006) ----------
+ * Filter design (verified against the live API 2026-10-08):
+ * - POST /api/v2/search/spending_by_award/ needs no key, but
+ *   award_type_codes is a REQUIRED filter (422 without it): A-D =
+ *   contract awards (grants carry no NAICS, so contracts are the
+ *   manufacturing-relevant award class here).
+ * - Manufacturing relevance via naics_codes as 2-digit SECTOR
+ *   PREFIXES ['31','32','33'] — the Census definition of the
+ *   manufacturing sector. The API accepts prefixes and filters
+ *   server-side (verified: an award with NAICS 339113 and one with
+ *   326199 were kept, one with 485991 was excluded). Full 6-digit
+ *   codes returned 0 rows in the window — too narrow to be useful.
+ *   PSC codes were not used: the search response returns PSC as null
+ *   and PSC mixes product/service categories; NAICS classifies the
+ *   recipient's industry directly. No awarding-agency restriction:
+ *   a Department-of-Defense-only slice returned 0 rows in the window,
+ *   so any awarding agency is accepted.
+ * - Dates: the time_period filter uses date_type 'action_date' over
+ *   the last maxAgeDays (45). The response's 'Action Date' field is
+ *   null at award level (verified for contracts and grants) and is
+ *   rejected as a sort key (HTTP 400), so the item date is
+ *   'Base Obligation Date' — populated on every row, equal to the
+ *   award's date_signed in spot checks — sorted desc server-side
+ *   and re-sorted desc here.
+ * - minAmount floor (config, $10,000): without it the lane fills
+ *   with micro-purchase orders (verified rows of $86 / $190 / $512).
+ * Headlines are facts only, composed from the response fields:
+ * "<Awarding Agency> → <Recipient Name> — $<amount> award, <date>". */
+function usaAmount(n) {
+  if (n >= 1e6) return '$' + (n / 1e6).toFixed(1).replace(/\.0$/, '') + 'M';
+  if (n >= 1e5) return '$' + Math.round(n / 1e3) + 'K';
+  return '$' + Math.round(n).toLocaleString('en-US');
+}
+
+async function ingestUsaSpendingApi(usa) {
+  const end = new Date();
+  const start = new Date(Date.now() - (cfg.maxAgeDays || 45) * 864e5);
+  const iso = d => d.toISOString().slice(0, 10);
+  const j = await postJson(usa.endpoint, {
+    filters: {
+      time_period: [{ start_date: iso(start), end_date: iso(end), date_type: 'action_date' }],
+      recipient_locations: [{ country: 'USA', state: usa.recipientState || 'MI' }],
+      award_type_codes: usa.awardTypeCodes || ['A', 'B', 'C', 'D'],
+      naics_codes: usa.naicsCodes || ['31', '32', '33'],
+    },
+    fields: ['Awarding Agency', 'Recipient Name', 'Award Amount', 'Action Date',
+      'Base Obligation Date', 'generated_internal_id'],
+    page: 1,
+    limit: usa.limit || 100,
+    sort: 'Base Obligation Date',
+    order: 'desc',
+  });
+  const items = ((j && j.results) || []).map(r => {
+    const agency = decode(r['Awarding Agency'] || '');
+    const recipient = decode(r['Recipient Name'] || '');
+    const amount = Number(r['Award Amount']);
+    const date = String(r['Action Date'] || r['Base Obligation Date'] || '').slice(0, 10);
+    const genId = r['generated_internal_id'] || '';
+    if (!agency || !recipient || !genId || !(amount > 0)) return null;
+    if (usa.minAmount && amount < usa.minAmount) return null;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return null;
+    const p = date.split('-').map(Number);
+    const dateLabel = MONTHS[p[1] - 1] + ' ' + p[2] + ', ' + p[0];
+    const title = agency + ' → ' + recipient + ' — ' + usaAmount(amount) + ' award, ' + dateLabel;
+    return {
+      title,
+      link: 'https://www.usaspending.gov/award/' + genId,
+      date,
+      _text: title.toLowerCase(),
+    };
+  }).filter(Boolean)
+    .sort((a, b) => (a.date < b.date ? 1 : -1))
+    .slice(0, usa.maxItems || 6);
+  if (!items.length) throw new Error('0 items parsed');
+  anySuccess = true; feedSuccess = true;
+  for (const rule of usa.lanes) {
+    for (const item of items) if (ruleMatch(item, rule)) pushItem(rule.lane, usa.name, usa.id, item);
+  }
+}
+
 const jobs = [];
 for (const feed of cfg.feeds || []) {
   jobs.push(ingestFeed(feed).catch(e => { failures.push(feed.id + ': ' + e.message); }));
 }
 if (cfg.frApi) jobs.push(ingestFrApi(cfg.frApi).catch(e => { failures.push(cfg.frApi.id + ': ' + e.message); }));
 if (cfg.warnApi) jobs.push(ingestWarnApi(cfg.warnApi).catch(e => { failures.push(cfg.warnApi.id + ': ' + e.message); }));
+if (cfg.usaSpendingApi) jobs.push(ingestUsaSpendingApi(cfg.usaSpendingApi).catch(e => { failures.push(cfg.usaSpendingApi.id + ': ' + e.message); }));
 await Promise.all(jobs);
 
 /* ---------- last-good carry-over for failed sources ---------- */
@@ -240,6 +335,7 @@ if (prev) {
   for (const f of cfg.feeds || []) for (const r of f.lanes) laneSources.get(r.lane).add(f.id);
   if (cfg.frApi) for (const r of cfg.frApi.lanes) laneSources.get(r.lane).add(cfg.frApi.id);
   if (cfg.warnApi) for (const r of cfg.warnApi.lanes) laneSources.get(r.lane).add(cfg.warnApi.id);
+  if (cfg.usaSpendingApi) for (const r of cfg.usaSpendingApi.lanes) laneSources.get(r.lane).add(cfg.usaSpendingApi.id);
   for (const laneCfg of cfg.lanes) {
     const cur = byLane.get(laneCfg.id) || [];
     const prevItems = (prev.lanes && prev.lanes[laneCfg.id] && prev.lanes[laneCfg.id].items) || [];

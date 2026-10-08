@@ -246,6 +246,31 @@
     }
   ],
   "maxAgeDays": 45,
+  "usaSpendingApi": {
+    "awardTypeCodes": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "endpoint": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+    "id": "usaspending-awards",
+    "lanes": [
+      {
+        "lane": "funding-policy"
+      }
+    ],
+    "limit": 100,
+    "maxItems": 6,
+    "minAmount": 10000,
+    "naicsCodes": [
+      "31",
+      "32",
+      "33"
+    ],
+    "name": "USAspending (Treasury)",
+    "recipientState": "MI"
+  },
   "warnApi": {
     "id": "michigan-warn",
     "lanes": [
