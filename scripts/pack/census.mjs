@@ -157,6 +157,22 @@ async function fetchCbp(ctx) {
 
 /* ---------------- QWI ---------------- */
 const QWI_PREDICATES = 'sex=0&agegrp=A00&ownercode=A05&seasonadj=U&periodicity=Q';
+const QWI_WALKBACK_QUARTERS = 8; // S3 bound (was 40)
+
+/* HTTP-layer failures will not heal quarter by quarter, so the
+ * walk-back is skipped for them (rate-limit audit S3, 2026-10-08):
+ * auth failures (401), 403 (Blocked), 429 (Too Many Requests), 5xx
+ * (server errors), and the non-JSON "Missing Key" page Census
+ * serves keyless data queries (an auth failure in HTML form). */
+function isHttpLayerFailure(e) {
+  const m = (e && e.message) || '';
+  const status = /^HTTP (\d{3})\b/.exec(m);
+  if (status) {
+    const s = Number(status[1]);
+    return s === 401 || s === 403 || s === 429 || (s >= 500 && s <= 599);
+  }
+  return m.startsWith('non-JSON response');
+}
 
 async function qwiIndustry(ctx, industry) {
   const base = 'https://api.census.gov/data/timeseries/qwi/sa?get=year,quarter,Emp,HirA,Sep' +
@@ -175,12 +191,18 @@ async function qwiIndustry(ctx, industry) {
       const withSep = usable.filter(r => r.Sep !== null);
       return { latest: usable[usable.length - 1], latestSep: withSep.length ? withSep[withSep.length - 1] : null };
     }
-  } catch { /* fall through to quarter walk-back */ }
+  } catch (e) {
+    // S3: an HTTP-layer failure (auth / 403 / 429 / 5xx) is
+    // deterministic — rethrow instead of burning walk-back calls.
+    if (isHttpLayerFailure(e)) throw e;
+    /* otherwise fall through to quarter walk-back */
+  }
   // Fallback: walk back quarter by quarter from the most recent
-  // plausible quarter (QWI lags ~2 quarters; Michigan much longer).
+  // plausible quarter (QWI lags ~2 quarters; Michigan much longer),
+  // bounded at QWI_WALKBACK_QUARTERS per industry (S3).
   const now = new Date();
   let y = now.getUTCFullYear(), q = Math.floor(now.getUTCMonth() / 3) + 1;
-  for (let i = 0; i < 40; i++) {
+  for (let i = 0; i < QWI_WALKBACK_QUARTERS; i++) {
     q -= 1; if (q === 0) { q = 4; y -= 1; }
     const t = y + '-Q' + q;
     try {
