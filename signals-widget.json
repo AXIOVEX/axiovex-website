@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-08T19:56:52.458Z",
+  "updatedUtc": "2026-10-08T23:21:16.078Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -23,10 +23,10 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Teams often miss preventive maintenance, raising costs and risks: Limble",
-      "source": "Manufacturing Dive",
+      "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+      "source": "NIST",
       "date": "2026-10-08",
-      "url": "https://www.manufacturingdive.com/news/maintenance-teams-downtime-AI-limble/832416/"
+      "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
     },
     {
       "lane": "ai-standards",
@@ -53,20 +53,28 @@
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01"
     },
     {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Energy Department Announces New Genesis Mission Awards to Advance Super Intelligence for Science",
+      "source": "U.S. Department of Energy",
+      "date": "2026-10-08",
+      "url": "https://www.energy.gov/articles/energy-department-announces-new-genesis-mission-awards-advance-super-intelligence-science"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Teams often miss preventive maintenance, raising costs and risks: Limble",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-08",
+      "url": "https://www.manufacturingdive.com/news/maintenance-teams-downtime-AI-limble/832416/"
+    },
+    {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
       "title": "Wolfspeed signs $1.5B DOD loan for semiconductor production, R&D",
       "source": "Manufacturing Dive",
       "date": "2026-10-08",
       "url": "https://www.manufacturingdive.com/news/wolfspeed-dod-defense-war-office-of-strategic-capital-loan/832451/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
-      "source": "NIST",
-      "date": "2026-10-08",
-      "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
     },
     {
       "lane": "michigan",
@@ -101,20 +109,12 @@
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03"
     },
     {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
-      "source": "Automation Alley",
-      "date": "2026-10-07",
-      "url": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/"
-    },
-    {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
-      "title": "Department of Veterans Affairs → VETS ACCESS LLC — $16,525 award, October 6, 2026",
-      "source": "USAspending (Treasury)",
-      "date": "2026-10-06",
-      "url": "https://www.usaspending.gov/award/CONT_AWD_36C24827P0029_3600_-NONE-_-NONE-"
+      "title": "U.S. Department of Energy Awards $96 Million to 67 Early Career Scientists",
+      "source": "U.S. Department of Energy",
+      "date": "2026-10-08",
+      "url": "https://www.energy.gov/articles/us-department-energy-awards-96-million-67-early-career-scientists"
     }
   ],
   "signalsUrl": "/signals/"
