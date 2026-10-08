@@ -657,3 +657,23 @@ as accordion rows.
   page note (WF-10) keeps the standard note style.
   Implemented on staging; promotion awaits Tristen's
   staging review.
+- **2026-10-08** — REVISION APPROVED by Tristen
+  2026-10-08 (spec 018 Amendment 1; owner direction:
+  apply the hook-first standard to the three service
+  sections — the later package named in spec 018
+  FR-008): each WF-01 / WF-G5 service card now opens
+  with a hook-first lead line in X → Y form, ahead of
+  the existing copy, trimmed where the lead takes over
+  its closing clause. NEW leads: 01 AI education &
+  training — "Demos your team watches → AI they use in
+  the work itself, every day." 02 Manufacturing AI
+  infrastructure — "AI on your floor → your data stays
+  on your floor, under your control." 03 Evidence &
+  decision systems — "Uncertainty named, not hidden →
+  decisions that rest on facts." Copy only — card
+  layout, order, numbering, and EXPLORE links
+  unchanged; no stylesheet change. Every Y is an
+  outcome already substantiated on the site (spec 018
+  claims C-018-6…8); no new claim is introduced.
+  Implemented on staging per spec 010; promotion
+  awaits Tristen's staging review (spec 018 T011).

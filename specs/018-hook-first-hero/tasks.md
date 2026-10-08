@@ -61,3 +61,34 @@
   guards verified after (robots Disallow; `_headers` delta vs
   production = exactly the one noindex line; live staging 200
   with `x-robots-tag: noindex, nofollow`).
+
+## Amendment 1 — service-section lead lines (2026-10-08)
+
+- [x] T008 **GATE — owner direction.** **SATISFIED
+  2026-10-08**: Tristen directed "do these now:
+  hook-first lead lines for the three service sections"
+  — the package FR-008 held for later. Approval basis
+  recorded in spec.md Amendment 1.
+- [x] T009 Docs package first (wireframes-first rule):
+  WF-01 services grid + WF-G5 card notes revised in
+  `docs/wireframes/wireframes.html`, revision-log entry
+  in `docs/wireframes/wireframes.md`, review copy
+  re-synced to `~/workspace/your_files/axiovex-wireframes/
+  wireframes.html`; spec.md Amendment 1 + these tasks.
+- [ ] T010 Implementation on staging: the three service
+  cards in `index.html` gain the Amendment-1 lead lines
+  verbatim; existing copy kept, trimmed only where a
+  lead takes over its closing clause; generator re-run;
+  diff scoped to the three card paragraphs; commit +
+  push to `staging` with guards intact.
+- [ ] T011 Verification + **GATE — Tristen reviews the
+  service sections on staging** (live staging fetch:
+  200, lead lines present, `x-robots-tag` noindex
+  intact; Playwright screenshots of the locally built
+  staging output at desktop 1440 and mobile 390 saved to
+  `~/workspace/your_files/services-hook-leads/`).
+  Promotion only on Tristen's approval.
+- [ ] T012 (after T011) Promotion staging → main per
+  spec 010 FR-004 (guard proofs), production
+  re-verification. **OPEN — stays open at staging
+  hand-off.**

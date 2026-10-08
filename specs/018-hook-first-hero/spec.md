@@ -7,7 +7,10 @@ promotion is a separate owner-gated merge `staging` → `main`.
 
 **Status**: IMPLEMENTED AND LIVE 2026-10-07. Owner approved the
 staging hero (tasks.md T006); promoted to production in merge
-`be1d8e0` and verified live (see tasks.md T007).
+`be1d8e0` and verified live (see tasks.md T007). **Amendment 1
+(2026-10-08)**: hook-first lead lines for the three service
+sections — implemented on staging; promotion pending owner
+review (see Amendment 1 below, tasks.md T008–T012).
 
 **Origin (external feedback, 2026-10-07)**: feedback received on the
 site's copy — open with a good hook on why Axiovex matters, in
@@ -102,3 +105,71 @@ substantiated site claim. **No new claim is introduced.**
   (published positioning).
 - C-018-5: No metrics, results, client outcomes, certifications,
   or partnerships are asserted anywhere in the new copy.
+
+## Amendment 1 — owner direction 2026-10-08 (hook-first lead lines for the three service sections)
+
+**Direction.** Tristen directed that the hook-first
+standard adopted in this spec be applied to the three
+homepage service sections under "Three services, one
+method." — the later package this spec's FR-008 named
+and held out of scope. Recorded here as the amendment's
+approval basis, per the owner-directed amendment
+precedent (spec 011 Amendment 2; spec 013 Amendments
+1–2).
+
+**Change (copy only).** Each service card in
+`index.html` (§what-we-do) opens with ONE hook-first
+lead line in X → Y form; the card's existing
+substantiating copy follows, trimmed only where the
+lead takes over its closing clause. No layout, CSS, or
+stylesheet change; card order, numbering, and EXPLORE
+anchors unchanged. The leads, verbatim:
+
+- **01 AI education & training** — "Demos your team
+  watches → AI they use in the work itself, every day."
+  The body keeps the AI 101 course line and the openly
+  shared deck + handout sentence (the relative clause
+  "that take your team past the demos to real, everyday
+  capability…" moves into the lead).
+- **02 Manufacturing AI infrastructure** — "AI on your
+  floor → your data stays on your floor, under your
+  control." The body keeps the means list verbatim:
+  "Private inference planning, GPU sizing, and local AI
+  routing."
+- **03 Evidence & decision systems** — "Uncertainty
+  named, not hidden → decisions that rest on facts."
+  The body keeps "Audited workforce intelligence and
+  evidence-centered analysis that make knowledge,
+  uncertainty, and assumptions explicit." (the trailing
+  "— so decisions rest on facts" moves into the lead).
+
+**Claims (AEE).** No new claim is introduced; every Y
+is an outcome already substantiated on the site.
+
+- C-018-6: "AI they use in the work itself, every day"
+  ↔ the published training outcome "real, everyday
+  capability with modern AI tools" (card + FAQ
+  #faq-training); the openly shared materials are live
+  on /documents/. Status: substantiated (published
+  practice).
+- C-018-7: "your data stays on your floor, under your
+  control" ↔ the card's own published wording and the
+  owner-confirmed data-locality FAQ (C-018-2 basis).
+  Status: substantiated (owner-confirmed practice).
+- C-018-8: "decisions that rest on facts" ↔ the card's
+  published closing clause and FAQ #faq-evidence
+  ("decide on facts instead of vibes"); the live
+  Signals page and the published Michigan workforce
+  research are the working products. Status:
+  substantiated (published practice + live products).
+
+**Flow.** Wireframes first (WF-01 services grid +
+WF-G5 revised; revision-log entry; review copy
+re-synced), implementation on the staging branch per
+spec 010, Playwright screenshots at desktop and mobile
+widths against the locally built staging output, owner
+review on staging, then promotion `staging` → `main`
+under spec 010 FR-004 with production re-verification.
+
+**Status: implemented on staging 2026-10-08; promotion
+pending owner review (tasks.md T011).**
