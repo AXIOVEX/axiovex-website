@@ -37,6 +37,7 @@ the site more useful; he then directed "Do both — Signals/Pulse first"
 | Manufacturing | Manufacturing Dive | `manufacturingdive.com/feeds/news/` (10) | Direct fit, unfiltered |
 | Michigan, Manufacturing | Automation Alley | `automationalley.com/feed/` (10) | Michigan Industry 4.0 voice |
 | OT cybersecurity | CISA ICS | `cisa.gov/cybersecurity-advisories/ics-advisories.xml` (30) | Direct fit, unfiltered |
+| Michigan | Michigan WARN (LEO) | LEO WARN notices listing via its SXA results JSON (added 2026-10-08, see Amendment below) | Announced layoffs/closures; "announced" framing in every headline |
 | Funding & policy | Federal Register API | `federalregister.gov/api/v1/documents.json` | Query-tuned; keyword-filtered |
 
 **Michigan Pulse** — U.S. Bureau of Labor Statistics public API, no key
@@ -104,3 +105,54 @@ v1. Google News RSS — rejected (noise, duplicates, weak provenance).
    displayed only the headline, source, and date.
 4. **Given** a BLS series with a missing month, **When** the Pulse
    renders, **Then** the trend shows a gap and no value is invented.
+
+## Amendment — 2026-10-08: Michigan WARN (LEO) as a Signals source
+
+**Direction**: Tristen Pierson, 2026-10-08 — "We should be using
+WARN data in all our reports and things." This is a back-end data
+change only: WARN items render inside the existing Michigan lane
+exactly like every other item (headline + source + date, link
+out). No layout, copy, or design change — **the wireframe gate
+(FR-009) is not triggered** by this amendment.
+
+- **FR-011 — Michigan WARN ingest.** The Michigan Department of
+  Labor and Economic Opportunity (LEO) public WARN notices are
+  an approved source for the **Michigan lane**, under the standing
+  architecture: build-time ingestion (FR-001), headline + source
+  + date only (FR-002), dedupe / newest-first / lane cap 8 /
+  45-day max age (FR-004), last-good on failure (FR-005), and no
+  summaries or opinions (FR-008). Source label: "Michigan WARN
+  (LEO)".
+  - **Access route (verified live 2026-10-08)**: the listing
+    page (michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices)
+    is a Sitecore SXA search page with no server-rendered list;
+    its results endpoint (`/leo/sxa/search/results/`, with the
+    page's variant/scope identifiers) returns JSON whose
+    per-result HTML carries the published notice fields —
+    company, site address, county, type of company action,
+    layoff date, jobs impacted, and (for most notices) a link to
+    the notice PDF. The notice's posting (filed) date is carried
+    in the result's search-data path. The site's edge rejects
+    non-browser user agents (403), so the WARN request carries a
+    browser user agent; the endpoint and its identifiers are
+    configuration in `data/signal-sources.json` (`warnApi`). If
+    LEO changes the page or its identifiers, the source fails
+    absorbed under FR-005 and is reported in the ingest log —
+    the lane is never blanked and no data is invented.
+  - **Headline discipline**: headlines are composed ONLY from
+    fields the listing itself publishes — company, action type,
+    city (from the site address; county when no city is
+    published), jobs impacted, and the layoff effective date —
+    and always carry the announced framing ("announced facility
+    closure", "announced permanent layoff", …). WARN notices are
+    announcements of intent: **announced ≠ completed**, and no
+    headline may state or imply the jobs are already gone. The
+    item date is the notice's filed (posting) date; the
+    effective date appears in the headline text only. Items link
+    to the notice PDF when the listing exposes one, otherwise to
+    the WARN listing page.
+  - **Interaction with other specs**: WARN items in the snapshot
+    are visible to the spec 012 hourly breaking-news scan, whose
+    FR-011(iv) criterion covers major Michigan plant
+    openings/closings — no change to spec 012 is needed or made.
+    The workforce series' standing WARN pull is spec 007 FR-013.

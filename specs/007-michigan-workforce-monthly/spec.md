@@ -391,6 +391,28 @@ when the 15th falls badly.
   `blog-format.md` §3A. (This FR widens FR-002's sourcing for
   CAUSAL REPORTING only; every figure still traces to an official
   source per FR-002.)
+- **FR-013 — Michigan WARN filings are a standing pull** (added
+  2026-10-08, Tristen's direction: "We should be using WARN data
+  in all our reports and things"). Every draft cycle pulls the
+  current Michigan WARN notices (Michigan Department of Labor
+  and Economic Opportunity — LEO, Workforce Development public
+  WARN notices) and reviews **all notices filed since the prior
+  cycle**: company, city/county, jobs affected, notice (filed)
+  date, and layoff/closure effective date. Material announced
+  layoffs and closings enter the article's evidence base — as
+  evidence for the FR-012 causal checks and, where material to a
+  board or the geography callout, stated in the article itself.
+  WARN figures are always labeled **announced, not completed**,
+  with effective dates shown; an announced layoff is never
+  written as jobs already lost. This FR makes the pull standing
+  rather than incidental: FR-012 names WARN as a cross-check
+  source; FR-013 requires the full since-last-cycle review every
+  cycle, whether or not a board moved. Source: the LEO WARN
+  notices listing
+  (michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices)
+  — the same listing Signals ingests under spec 004's
+  2026-10-08 WARN amendment (FR-011 there). Format:
+  `blog-format.md` §3A + §6 checklist.
 
 ## Out of scope
 
