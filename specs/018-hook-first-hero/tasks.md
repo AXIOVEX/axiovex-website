@@ -75,19 +75,32 @@
   in `docs/wireframes/wireframes.md`, review copy
   re-synced to `~/workspace/your_files/axiovex-wireframes/
   wireframes.html`; spec.md Amendment 1 + these tasks.
-- [ ] T010 Implementation on staging: the three service
+- [x] T010 Implementation on staging: the three service
   cards in `index.html` gain the Amendment-1 lead lines
   verbatim; existing copy kept, trimmed only where a
   lead takes over its closing clause; generator re-run;
   diff scoped to the three card paragraphs; commit +
-  push to `staging` with guards intact.
+  push to `staging` with guards intact. DONE 2026-10-08:
+  docs commit `5740ead`, implementation commit `2433568`
+  (index.html only, 3 lines — one per card; the build's
+  sitemap lastmod artifact was reverted, not committed,
+  per the T004 precedent). Guards verified in the pushed
+  tree (robots.txt = staging Disallow version;
+  `_headers` carries the one `X-Robots-Tag` line).
 - [ ] T011 Verification + **GATE — Tristen reviews the
-  service sections on staging** (live staging fetch:
-  200, lead lines present, `x-robots-tag` noindex
-  intact; Playwright screenshots of the locally built
-  staging output at desktop 1440 and mobile 390 saved to
-  `~/workspace/your_files/services-hook-leads/`).
-  Promotion only on Tristen's approval.
+  service sections on staging**. Verification DONE
+  2026-10-08: live staging.axiovexsystems.com → 200,
+  all three lead lines served verbatim (1× each),
+  `x-robots-tag: noindex, nofollow` intact, stylesheet
+  still v33 (no CSS change). Playwright screenshots of
+  the locally built staging output at desktop 1440 and
+  mobile 390 saved to `~/workspace/your_files/
+  services-hook-leads/` (staging-desktop-services.png,
+  staging-mobile-services.png): cards render cleanly at
+  both widths, `scrollWidth == innerWidth` (no
+  horizontal overflow), rendered card text matches the
+  approved copy exactly. **Owner review PENDING** —
+  promotion only on Tristen's approval.
 - [ ] T012 (after T011) Promotion staging → main per
   spec 010 FR-004 (guard proofs), production
   re-verification. **OPEN — stays open at staging
