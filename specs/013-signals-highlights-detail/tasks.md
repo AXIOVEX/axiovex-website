@@ -275,3 +275,29 @@ Amendment 2 basis); wireframes revised first.
   `website_commit` advanced `4497704` → `462136e` (the
   production tip of this promotion: fast-forward to
   staging tip `29d8edd` + guard restoration `462136e`).
+
+## Amendment 2 — owner direction 2026-10-08 (sources note as fine print)
+
+- [x] T013 **Docs package (wireframes-first)**: WF-11
+  Sources & method note revised to the fine-print
+  presentation in `wireframes.html` (13px, full container
+  width, left-aligned; drawn note block + frame note) +
+  revision-log entry in `wireframes.md`; spec.md
+  Amendment 2 added. Approval basis: Tristen's direction
+  2026-10-08 with screenshot of the live page.
+- [ ] T014 **Implement on staging**: signals template
+  note gains a scoped modifier class; one new rule in
+  `styles.v33.css` (base `.cards-note` untouched — the
+  Documents note renders as before); all templates'
+  stylesheet links advance to v33; rebuild; Playwright
+  screenshots at desktop + mobile against the locally
+  built staging output, note block compared with WF-11
+  as amended.
+- [ ] T015 **Owner review on staging**: present the
+  staging page + screenshots; promotion only on
+  Tristen's approval.
+- [ ] T016 **Promote + closeout**: merge `staging` →
+  `main` under spec 010 FR-004 (guard diffs empty);
+  production re-verification (rendered screenshots of
+  the live page); amendment recorded implemented + live
+  in spec.md / wireframes / tasks.

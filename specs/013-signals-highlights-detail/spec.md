@@ -408,3 +408,41 @@ byte-identical to the pre-fix production rendering,
 drop-out 6/6); promotion fast-forward + FR-004 guard
 restoration `462136e`; production-verified (tasks
 T011–T012).
+
+## Amendment 2 — owner direction 2026-10-08 (sources note as fine print)
+
+**Direction.** Reviewing the live /signals/ page,
+Tristen directed that the sources & method note at the
+foot of the page be set much smaller and across a much
+wider field: at body size in a narrow centered column
+the full methodology text stacks into a tall block that
+"takes up a lot of space and looks awkward" (owner,
+2026-10-08, with screenshot). Recorded here as the
+amendment's approval basis, per the owner-directed
+amendment precedent (spec 011 Amendment 2; spec 013
+Amendment 1 above).
+
+**Change (presentation only).** The note (template
+`scripts/templates/signals.html`, class `.cards-note`)
+gains a scoped modifier class; the stylesheet gains one
+rule: font-size 13px, line-height 1.6, max-width none
+(the full 1100px container), text-align left, muted
+color unchanged. The note's wording is byte-unchanged,
+including the `{{GEO_NOTE}}` and `{{UPDATED_LINE}}`
+expansions and the closing "See our Disclaimer."
+point-of-use link (spec 016 Amendment 1). The shared
+`.cards-note` base style is untouched: the Documents
+page note (WF-10) renders exactly as before. Per the
+stylesheet cache rule the change ships as
+`styles.v33.css` and every template's stylesheet link
+advances to v33.
+
+**Flow.** Docs package + implementation on the staging
+branch (wireframes-first: WF-11 revised before the
+template change); Playwright screenshots at desktop and
+mobile widths against the locally built staging output;
+owner review on staging; promotion `staging` → `main`
+under spec 010 FR-004; production re-verification.
+
+**Status: implemented on staging 2026-10-08; promotion
+pending owner review.**

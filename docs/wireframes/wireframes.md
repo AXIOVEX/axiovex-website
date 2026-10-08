@@ -646,3 +646,14 @@ as accordion rows.
   new claim is introduced. Implemented on staging per
   spec 010; promotion awaits Tristen's staging review
   (spec 018 T006).
+- **2026-10-08** — REVISION APPROVED by Tristen
+  2026-10-08 (owner-directed, with screenshot; spec 013
+  Amendment 2): the WF-11 Sources & method note at the
+  foot of /signals/ becomes fine print — 13px, full
+  container width, left-aligned — instead of 16px
+  centered in a 68ch column, so the methodology text
+  takes a few wide lines instead of a tall narrow block.
+  Wording unchanged (presentation only). The Documents
+  page note (WF-10) keeps the standard note style.
+  Implemented on staging; promotion awaits Tristen's
+  staging review.
