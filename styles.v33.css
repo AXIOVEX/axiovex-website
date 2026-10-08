@@ -1,0 +1,1264 @@
+/* AXIOVEX Systems — axiovex-systems.com
+   Brand: deep navy #081F32 · electric cyan #00DEF6 · near-white #F7FCFF */
+
+:root {
+  --navy: #081F32;
+  --navy-2: #0B2740;
+  --cyan: #00DEF6;
+  --ink: #F7FCFF;
+  --muted: rgba(247, 252, 255, 0.72);
+  --faint: rgba(247, 252, 255, 0.5);
+  --line: rgba(0, 222, 246, 0.16);
+  --hairline: rgba(247, 252, 255, 0.08);
+  --radius: 14px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto,
+           "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+::selection { background: rgba(0, 222, 246, 0.28); color: var(--ink); }
+
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--navy);
+  color: var(--ink);
+  font-family: var(--font);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.center { text-align: center; }
+/* In centered sections the lede block itself must be centered, not just its text. */
+.center .section-lede { margin-left: auto; margin-right: auto; }
+
+/* ---------- Nav ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8, 31, 50, 0.86);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(247, 252, 255, 0.08);
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 24px;
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Brand mark — pinned left, sized to the bar (never grows it) */
+.nav-logo {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+.nav-logo img { height: 30px; width: auto; display: block; }
+
+.nav-links { display: flex; align-items: center; gap: 28px; }
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover { color: var(--ink); }
+
+.nav-cta {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 20px !important;
+  color: var(--ink) !important;
+}
+
+.nav-cta:hover { border-color: var(--cyan); }
+
+/* Mobile menu toggle + dropdown (desktop: hidden) */
+.nav-toggle { display: none; }
+.mobile-menu { display: none; }
+.mobile-menu a.mobile-cta {
+  border: 1.5px solid var(--cyan);
+  border-radius: 999px;
+  color: var(--cyan);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 100;
+  background: var(--cyan);
+  color: #04222B;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus { top: 12px; }
+
+/* ---------- Strata bar (3 segments, one per service) ---------- */
+.strata { display: flex; height: 5px; }
+.strata i { flex: 1; }
+.strata i:nth-child(1) { background: #00DEF6; }
+.strata i:nth-child(2) { background: #2E9DB8; }
+.strata i:nth-child(3) { background: #7FD8E8; }
+
+/* ---------- Breadcrumb (centered, inside page heads) ---------- */
+.crumb { color: var(--faint); font-size: 13.5px; margin-bottom: 18px; }
+.crumb a { color: var(--muted); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+.crumb a:hover { color: var(--cyan); text-decoration-color: var(--cyan); }
+.crumb [aria-current] { color: var(--ink); font-weight: 600; }
+
+/* Section heads that carry an h1 (sub-pages) must not inherit the hero h1 cap */
+.section-head h1 { max-width: none; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 88px 0 80px;
+}
+
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(760px 440px at 50% 0%, rgba(0, 222, 246, 0.13), transparent 65%),
+    radial-gradient(560px 380px at 50% 100%, rgba(0, 222, 246, 0.06), transparent 65%);
+}
+
+/* Centered hero: logo, headline, lede and CTAs share one vertical axis. */
+.hero .container { position: relative; text-align: center; }
+.hero-logo {
+  display: block;
+  height: 84px;
+  width: auto;
+  margin: 0 auto 30px;
+}
+.hero h1 { margin-left: auto; margin-right: auto; max-width: 24ch; }
+.hero .lede { margin-left: auto; margin-right: auto; max-width: 68ch; }
+
+.eyebrow {
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(42px, 6.4vw, 76px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  max-width: 14ch;
+  margin-bottom: 24px;
+  text-wrap: balance;
+}
+
+.lede {
+  font-size: clamp(18px, 2.4vw, 22px);
+  color: var(--muted);
+  max-width: 38ch;
+  margin-bottom: 40px;
+}
+
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 999px;
+  padding: 14px 30px;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--cyan);
+  color: #04222B;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 222, 246, 0.35);
+}
+
+.btn-ghost {
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.btn-ghost:hover { border-color: var(--cyan); }
+
+.btn-large { font-size: 18px; padding: 16px 38px; }
+
+/* ---------- Sections ---------- */
+.section { padding: 76px 0; }
+/* Page-foot rhythm (spec 015, WF-G2): the final content section of each
+   page carries .section-end and settles at 48px below; mid-page sections
+   keep the shared 76px. */
+.section.section-end { padding-bottom: 48px; }
+/* Keep anchored sections clear of the sticky nav; #top (on body) scrolls to the true top. */
+section[id] { scroll-margin-top: 94px; }
+.faq-item { scroll-margin-top: 94px; }
+.section-alt { background: var(--navy-2); }
+.section-alt .eyebrow { color: var(--cyan); }
+
+h2 {
+  font-size: clamp(38px, 5vw, 60px);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 22px;
+  text-wrap: balance;
+}
+
+.section-lede {
+  color: var(--muted);
+  font-size: 18px;
+  margin-bottom: 36px;
+}
+
+/* Centered section header: eyebrow, title and lede share one vertical axis and
+   span the full container width — symmetric, disciplined rhythm. */
+.section-head {
+  text-align: center;
+  margin: 0 auto 56px;
+}
+.section-head .section-lede {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+/* One body-copy size across every section — no section-specific sizing. */
+.about-copy p,
+.card p,
+.faq-a { font-size: 18px; }
+.section p + p { margin-top: 18px; }
+.section-alt p { color: var(--muted); }
+
+/* ---------- About / founders ---------- */
+/* Symmetric About: centered copy block, founder cards in a centered pair. */
+.about-grid { margin-top: 8px; }
+
+.about-copy {
+  max-width: 72ch;
+  margin: 0 auto;
+  text-align: center;
+}
+.about-copy p + p { margin-top: 18px; }
+.about-copy strong { color: var(--ink); font-weight: 600; }
+
+.founders {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 680px;
+  margin: 40px auto 0;
+}
+
+.founder-card { padding: 32px 28px; text-align: center; }
+.founder-card h3 { margin-bottom: 6px; }
+/* Higher specificity than .card h3::before (defined later in source) */
+.card.founder-card h3::before { display: none; }
+
+.founder-card .role {
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin: 0;
+}
+
+/* ---------- Cards ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+}
+
+.cards-note {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 68ch;
+  margin: 28px auto 0;
+}
+
+/* Spec 013 Amendment 2 (owner-directed 2026-10-08): the /signals/
+   sources & method note renders as fine print — small type across
+   the full container instead of a tall, narrow centered column.
+   Scoped to the signals note; the base .cards-note is unchanged. */
+.cards-note.fineprint {
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: left;
+  max-width: none;
+}
+/* Service cards are a semantic list; li is layout-transparent so the
+   article cards remain the grid items (zero visual change). */
+.cards > li { display: contents; }
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  background: rgba(247, 252, 255, 0.02);
+  transition: transform 0.18s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 222, 246, 0.45);
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+/* Numbered service cards (WF-G5): number, accent bar that grows on hover, explore link */
+.card-num {
+  display: block;
+  color: var(--cyan);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+.accent-bar {
+  width: 34px;
+  height: 4px;
+  background: var(--cyan);
+  border-radius: 2px;
+  margin-bottom: 18px;
+  transition: width 0.25s ease;
+}
+.card:hover .accent-bar { width: 64px; }
+.card .explore {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--cyan);
+  font-weight: 700;
+  font-size: 13.5px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+}
+.card .explore:hover { text-decoration: underline; }
+.card-kicker {
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.card p { color: var(--muted); font-size: 16px; }
+.card em { color: var(--ink); font-style: normal; font-weight: 600; }
+
+/* ---------- Footer (WF-G4: three columns + bottom row) ---------- */
+.footer {
+  border-top: 1px solid rgba(247, 252, 255, 0.08);
+  padding: 40px 0 32px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 36px;
+}
+
+.footer-logo { height: 48px; width: auto; }
+.footer-mission {
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 34ch;
+  margin: 16px 0 18px;
+}
+.footer-col h4 {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 14px;
+}
+.footer-col a {
+  display: block;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+  transition: color 0.2s ease;
+}
+.footer-col a:hover { color: var(--ink); }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--hairline);
+  padding-top: 20px;
+}
+.footer-bottom p { color: var(--faint); font-size: 13.5px; }
+/* Social icons: official brand glyphs, grouped as a pair of quiet icon buttons. */
+.social-links { display: flex; gap: 12px; align-items: center; }
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--faint);
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, background 0.2s ease;
+}
+.social-link svg { width: 18px; height: 18px; fill: currentColor; display: block; }
+.social-link:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  background: rgba(0, 222, 246, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ---------- Inline links (body copy) ---------- */
+.inline-link {
+  color: var(--cyan);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1px;
+}
+.inline-link:hover { border-color: var(--cyan); }
+
+/* ---------- Memberships ---------- */
+/* Compact membership row at the foot of About: small badges on white,
+   specific organization names, one shared center axis. */
+.memberships {
+  margin-top: 56px;
+  padding-top: 36px;
+  border-top: 1px solid var(--hairline);
+  text-align: center;
+}
+.memberships-label {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--cyan);
+  margin-bottom: 20px;
+}
+.memberships-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 300px;
+  text-decoration: none;
+}
+.member-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 6px 14px;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+.member-badge img { height: 24px; width: auto; display: block; }
+.member:hover .member-badge {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 222, 246, 0.18);
+}
+.member-name {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+}
+.member-desc {
+  color: var(--faint);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.member:hover .member-name { color: var(--cyan); }
+
+/* ---------- Method (premise) ---------- */
+.method-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+.method-grid h3 { font-size: 19px; letter-spacing: -0.01em; margin-bottom: 10px; }
+.method-grid p { color: var(--muted); font-size: 17px; line-height: 1.7; }
+
+/* ---------- Proof band (Evidence in practice) ---------- */
+.proof-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  text-align: left;
+}
+
+/* "Not sure where your problem fits?" full-width cell under the services grid */
+.not-sure { text-align: center; margin-top: 20px; }
+.not-sure .explore { margin-top: 10px; }
+
+/* ---------- CTA band (WF-G3) ---------- */
+.cta-band {
+  background: var(--navy-2);
+  border-top: 1px solid var(--hairline);
+  padding: 56px 0;
+  text-align: center;
+}
+.cta-band .section-lede {
+  max-width: 62ch;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+.cta-band .eyebrow { margin-bottom: 16px; }
+
+/* ---------- Contact page (WF-06) ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 24px;
+  align-items: start;
+}
+.contact-eyebrow {
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.route-grid { display: grid; gap: 16px; }
+.contact-note { color: var(--faint); font-size: 14.5px; margin-top: 18px; line-height: 1.65; }
+.panels { display: grid; gap: 16px; }
+.panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  background: rgba(247, 252, 255, 0.02);
+}
+.panel h3 { font-size: 18px; margin-bottom: 10px; letter-spacing: -0.01em; }
+.panel p { color: var(--muted); font-size: 16px; line-height: 1.65; }
+.tick-list { list-style: none; }
+.tick-list li {
+  color: var(--muted);
+  font-size: 16px;
+  padding-left: 26px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.tick-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+/* ---------- Scroll reveal (JS adds .rv; no-JS and reduced-motion stay visible) ---------- */
+.rv { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.rv.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .rv { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- FAQ ---------- */
+.faq-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+}
+.faq-item {
+  border: 1px solid rgba(0, 222, 246, 0.14);
+  border-radius: 14px;
+  background: rgba(8, 31, 50, 0.5);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+.faq-item:hover { border-color: rgba(0, 222, 246, 0.32); }
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: block;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 3v10M3 8h10' stroke='%2300DEF6' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") center / 13px 13px no-repeat;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.faq-item[open] summary::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8h10' stroke='%2300DEF6' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-color: rgba(0, 222, 246, 0.12);
+}
+.faq-item summary:hover::after { border-color: var(--cyan); }
+.faq-a { padding: 0 24px 24px; }
+.faq-a p { color: var(--muted); font-size: 18px; margin: 0; }
+.faq-a p + p { margin-top: 12px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .founders { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 820px) {
+  .hero { padding: 64px 0 60px; }
+  .section { padding: 60px 0; }
+  .section.section-end { padding-bottom: 40px; }
+  .cta-band { padding: 44px 0; }
+}
+
+/* Tablet + below (<=1240px): nav collapses behind the hamburger (WF-G1) */
+@media (max-width: 1240px) {
+  .nav-links { display: none; }
+
+  /* Hamburger toggle — pinned right, vertically centered */
+  .nav-inner { position: relative; }
+  .nav-logo img { height: 26px; }
+  .nav-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: var(--ink);
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Dropdown panel — full-width, centered, symmetric */
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 24px 20px;
+    border-top: 1px solid rgba(247, 252, 255, 0.08);
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 17px;
+    padding: 10px 16px;
+    width: 100%;
+    text-align: center;
+  }
+  .mobile-menu a:hover { color: var(--ink); }
+}
+
+/* Tablet grids (<=1080px): two columns; the third service card centers on its
+   own row so the center axis holds (WF-07). Contact stacks: routes and panels
+   each go two-wide (WF-08). */
+@media (max-width: 1080px) {
+  .cards { grid-template-columns: 1fr 1fr; }
+  .cards > li:nth-child(3) > .card {
+    grid-column: 1 / -1;
+    width: calc(50% - 10px);
+    justify-self: center;
+  }
+  .contact-grid { grid-template-columns: 1fr; }
+  .route-grid { grid-template-columns: 1fr 1fr; }
+  .panels { grid-template-columns: 1fr 1fr; }
+}
+
+/* Footer tablet split (WF-07/09): brand centered on top, link columns below */
+@media (max-width: 1240px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; text-align: center; }
+  .footer-brand .footer-mission { margin-left: auto; margin-right: auto; }
+  .footer-brand .social-links { justify-content: center; }
+  .footer-col { text-align: center; }
+}
+
+@media (max-width: 660px) {
+  .cards { grid-template-columns: 1fr; }
+  .cards > li:nth-child(3) > .card { width: auto; }
+  .founders { grid-template-columns: 1fr; }
+  .proof-grid { grid-template-columns: 1fr; }
+  .method-grid { grid-template-columns: 1fr; }
+  .route-grid { grid-template-columns: 1fr; }
+  .panels { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; justify-content: center; text-align: center; gap: 6px; }
+  .hero-logo { height: 64px; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { text-align: center; }
+  .memberships-label { width: 100%; text-align: center; }
+  .memberships-row { gap: 28px; }
+}
+
+/* Very small phones: keep the brand mark clear of the centered Contact pill */
+@media (max-width: 360px) {
+  .nav-logo img { height: 22px; }
+}
+
+/* ---------- v21 (2026-10-05, spec 001 T015): sequential heading order ----------
+   /contact/ card+panel titles are now h2 and footer column titles h3.
+   These rules reproduce the former h3/h4 styling exactly (measured
+   computed values) — zero visual change. .visually-hidden carries
+   descriptive link text for screen readers and anchor disambiguation. */
+.visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.card h2 { font-size: 20px; margin-bottom: 12px; letter-spacing: -0.01em; line-height: 1.6; text-wrap: wrap; }
+.panel h2 { font-size: 18px; margin-bottom: 10px; letter-spacing: -0.01em; line-height: 1.6; text-wrap: wrap; }
+.footer-col h3 { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cyan); margin-bottom: 14px; }
+
+/* ---------- v22 (2026-10-05, spec 003): page-head rhythm ----------
+   Approved rhythm (WF-G2): last head text -> strata bar 36px.
+   The head construction stacks .section-head margin-bottom (56px) on
+   .section padding-bottom (76px) = 132px of void. Scoped to sections
+   immediately preceding a strata bar — home sections never match (the
+   hero is not a .section, and no home .section precedes a strata).
+   Strata -> content (40px) is set in the pages' own post-strata
+   section padding / the privacy strata margin. */
+.section:has(+ .strata) { padding-bottom: 0; }
+.section:has(+ .strata) .section-head { margin-bottom: 36px; }
+
+/* ---------- v23 (2026-10-05, spec 004): Signals + Michigan Pulse ---------- */
+.pulse-kicker {
+  color: var(--cyan); font-size: 12px; letter-spacing: 0.14em; font-weight: 700;
+  text-transform: uppercase; text-align: center; margin-bottom: 14px;
+}
+.pulse-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.pulse-tile {
+  background: var(--panel, rgba(247, 252, 255, 0.03));
+  border: 1px solid var(--line, rgba(247, 252, 255, 0.09));
+  border-radius: 14px; padding: 18px; text-align: left;
+}
+.pulse-label { color: var(--muted); font-size: 13px; }
+.pulse-value { font-size: 30px; font-weight: 700; letter-spacing: -0.01em; margin-top: 6px; }
+.pulse-delta { color: var(--faint); font-size: 13px; margin-top: 2px; }
+.spark { display: block; width: 100%; height: 30px; margin-top: 10px; }
+.spark path { fill: none; stroke: var(--cyan); stroke-width: 1.5; }
+.signal-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; text-align: left; }
+.signal-card h3 { font-size: 17px; line-height: 1.45; margin-top: 8px; }
+.signal-card h3 a { color: var(--ink); text-decoration: none; }
+.signal-card h3 a:hover { color: var(--cyan); }
+.signal-source { color: var(--cyan); font-size: 11.5px; letter-spacing: 0.12em; font-weight: 700; }
+.signal-date { color: var(--faint); font-size: 13px; margin-top: 8px; }
+.signals-more { text-align: center; margin-top: 26px; }
+.signals-more .explore {
+  color: var(--cyan); font-size: 13.5px; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; text-decoration: none;
+}
+.signals-more .explore:hover { text-decoration: underline; }
+.signals-updated { color: var(--faint); font-size: 13px; text-align: center; margin-top: 12px; }
+.signal-lane { margin-top: 44px; text-align: left; }
+.lane-title { font-size: 20px; letter-spacing: -0.01em; margin-bottom: 6px; }
+.signal-list { list-style: none; }
+.signal-list li { padding: 11px 0; border-bottom: 1px solid var(--line, rgba(247, 252, 255, 0.09)); }
+.signal-list a { color: var(--ink); text-decoration: none; }
+.signal-list a:hover .signal-title { color: var(--cyan); }
+.signal-list .signal-date { margin-top: 0; }
+@media (max-width: 900px) {
+  .pulse-grid { grid-template-columns: repeat(2, 1fr); }
+  .signal-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) {
+  .pulse-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- v24 (2026-10-05, spec 005): Turnstile contact form ---------- */
+.contact-stack { display: grid; gap: 16px; }
+.form-card:hover { transform: none; }
+.contact-form { display: grid; gap: 16px; text-align: left; }
+.form-field { display: grid; gap: 7px; }
+.form-field label {
+  color: var(--ink);
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.form-field .optional { color: var(--faint); font-weight: 400; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(127, 216, 232, 0.34);
+  border-radius: 10px;
+  background: rgba(8, 31, 50, 0.74);
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.45;
+  padding: 11px 13px;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: var(--faint); opacity: 1; }
+.contact-form input:hover,
+.contact-form select:hover,
+.contact-form textarea:hover { border-color: rgba(0, 222, 246, 0.52); }
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--cyan);
+  outline: 2px solid rgba(0, 222, 246, 0.28);
+  outline-offset: 1px;
+}
+.contact-form select option { background: var(--ink); color: var(--navy); }
+.contact-form textarea { min-height: 144px; resize: vertical; }
+.contact-form [aria-invalid="true"] { border-color: #FF8A80; }
+.field-error {
+  color: #FFB4AB;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.form-summary {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.55;
+}
+.form-summary:focus { outline: 2px solid var(--cyan); outline-offset: 3px; }
+.form-summary.error {
+  border-color: rgba(255, 138, 128, 0.58);
+  background: rgba(255, 90, 80, 0.08);
+}
+.form-summary.success {
+  border-color: rgba(0, 222, 246, 0.48);
+  background: rgba(0, 222, 246, 0.08);
+}
+.turnstile-box { min-height: 65px; }
+.form-microcopy,
+.form-noscript {
+  color: var(--faint);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+.contact-submit {
+  justify-self: start;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+.contact-submit:disabled {
+  cursor: wait;
+  opacity: 0.55;
+  transform: none;
+  box-shadow: none;
+}
+.honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+@media (max-width: 480px) {
+  .contact-submit { width: 100%; justify-self: stretch; text-align: center; }
+}
+
+/* ---------- Signals highlight (spec 008): live dot + Pulse mini-strip ---------- */
+.live-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+  margin-right: 10px;
+  vertical-align: 2px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .live-dot { animation: live-pulse 2.4s ease-in-out infinite; }
+  @keyframes live-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
+  }
+}
+
+.pulse-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 14px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 2px auto 24px;
+  padding: 10px 20px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--navy-2);
+}
+.ps-label {
+  color: var(--cyan);
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.ps-stat { color: var(--muted); font-size: 14px; }
+.ps-stat b { color: var(--ink); font-size: 15px; font-weight: 700; }
+.ps-dot { color: var(--faint); }
+
+/* ---------- v26 (2026-10-06, spec 011): Trends & outlook on /signals/ ---------- */
+.trends-head { text-align: center; max-width: 760px; margin: 58px auto 0; }
+.trends-frame { color: var(--muted); font-size: 14.5px; line-height: 1.6; margin-top: 8px; }
+
+.tape {
+  border: 1px solid var(--line); border-radius: 6px;
+  padding: 10px 14px; margin-top: 26px; overflow: hidden;
+  text-align: left;
+}
+.tape-track {
+  display: flex; width: max-content;
+  animation: tape-scroll 30s linear infinite;
+}
+.tape:hover .tape-track, .tape:focus-within .tape-track { animation-play-state: paused; }
+.tape-seq {
+  display: inline-flex; align-items: baseline; white-space: nowrap;
+  font-size: 13px; color: var(--muted); letter-spacing: 0.04em;
+}
+.tape-seq b { color: var(--ink); font-weight: 700; }
+.tape-delta { color: var(--faint); }
+.tape-sep { color: var(--faint); padding: 0 10px; }
+@keyframes tape-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tape { overflow: visible; }
+  .tape-track { animation: none; width: auto; }
+  .tape-seq { white-space: normal; flex-wrap: wrap; }
+  .tape-seq + .tape-seq { display: none; }
+}
+
+.trend-board { margin-top: 30px; text-align: left; }
+.trend-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.trend-table th {
+  color: var(--faint); font-size: 11px; letter-spacing: 0.1em; font-weight: 700;
+  text-transform: uppercase; text-align: left; padding: 0 8px 6px 0;
+}
+.trend-table td { padding: 10px 8px 10px 0; border-top: 1px solid var(--line); vertical-align: middle; }
+.tb-series { font-size: 14.5px; }
+.tb-latest { font-size: 15px; font-weight: 700; white-space: nowrap; }
+.tb-delta { color: var(--faint); font-size: 13.5px; white-space: nowrap; }
+.tb-spark .spark { width: 112px; height: 24px; margin-top: 0; }
+.tb-sparkwrap { display: inline-flex; align-items: center; gap: 10px; }
+.tb-pct { color: var(--faint); font-size: 13.5px; white-space: nowrap; }
+.board-note { color: var(--faint); font-size: 12.5px; line-height: 1.6; margin-top: 10px; }
+
+.outlook-board, .education-block { margin-top: 36px; text-align: left; }
+.board-kicker {
+  color: var(--cyan); font-size: 12px; letter-spacing: 0.14em; font-weight: 700;
+  margin: 24px 0 6px;
+}
+.outlook-board .board-kicker:first-child, .education-block .board-kicker:first-child { margin-top: 0; }
+.board-sub {
+  color: var(--faint); font-size: 11.5px; letter-spacing: 0.1em; font-weight: 700;
+  text-transform: uppercase; margin: 14px 0 2px;
+}
+.proj-list { list-style: none; }
+.proj-row { padding: 6px 0; font-size: 14.5px; line-height: 1.5; }
+.proj-meta, .proj-jobs { color: var(--faint); font-size: 13px; }
+.proj-pct { font-weight: 700; }
+.edu-row { padding: 6px 0; font-size: 14.5px; line-height: 1.5; }
+.edu-vintage, .edu-delta { color: var(--faint); font-size: 13px; }
+.edu-source { color: var(--cyan); font-size: 11.5px; letter-spacing: 0.12em; font-weight: 700; }
+
+@media (max-width: 640px) {
+  .trend-table thead { display: none; }
+  .trend-table, .trend-table tbody, .trend-table tr, .trend-table td { display: block; }
+  .trend-table tr {
+    display: grid; padding: 10px 0; border-top: 1px solid var(--line);
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "series latest" "mom win" "spark spark";
+  }
+  .trend-table td { border-top: 0; padding: 2px 0; }
+  .tb-series { grid-area: series; }
+  .tb-latest { grid-area: latest; text-align: right; }
+  .tb-mom { grid-area: mom; }
+  .tb-win { grid-area: win; text-align: right; }
+  .tb-mom::before { content: "Mo-Mo "; color: var(--faint); }
+  .tb-win::before { content: "12-mo "; color: var(--faint); }
+  .tb-spark { grid-area: spark; }
+  .tb-sparkwrap { display: flex; width: 100%; }
+  .tb-spark .spark { flex: 1 1 auto; width: auto; min-width: 0; height: 24px; }
+}
+
+/* ---------- v28 (2026-10-06, spec 011 Amendment 2): ticker at
+   the top of /signals/ + condensed page top. A deliberate
+   signals-only exception to the WF-G2 36/40 rhythm (spec 003):
+   every spacing rule below is scoped to the signals page's body
+   class, so no other page's spacing moves. The tape now renders
+   directly under the site header; its margin-top is the 16px
+   page-top offset. ---------- */
+.signals-page .section { padding-top: 44px; }
+.signals-page .section:has(+ .strata) .section-head { margin-bottom: 24px; }
+.signals-page .pulse-kicker { margin-bottom: 10px; }
+.signals-page .pulse-tile { padding: 14px; }
+.signals-page .trends-head { margin-top: 40px; }
+.signals-page .tape { margin-top: 16px; }
+@media (max-width: 820px) {
+  .signals-page .section { padding-top: 36px; }
+}
+
+/* ---------- Breaking news banner (spec 012, WF-G7) ----------
+   Deliberately off-palette: the deep red is the only non-brand
+   color on the site, used nowhere else — an alert has to read
+   as an alert. The strip is injected at build time above the
+   nav (buildBreaking) and is absent entirely when no entry is
+   active, so these rules style nothing on a normal page. */
+.breaking-banner {
+  position: relative;
+  background: #8C2B2B;
+  color: var(--ink);
+  padding: 11px 52px 11px 16px;
+  font-size: 14.5px;
+  line-height: 1.45;
+}
+.breaking-link { color: inherit; text-decoration: none; }
+.breaking-lead { font-weight: 800; letter-spacing: 0.14em; margin-right: 10px; }
+.breaking-headline { text-decoration: underline; text-underline-offset: 3px; }
+.breaking-meta { opacity: 0.75; }
+.breaking-dismiss {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid rgba(247, 252, 255, 0.55);
+  border-radius: 6px;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+}
+/* Focus must read against the red, not the navy (FR-007). */
+.breaking-link:focus-visible,
+.breaking-dismiss:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+@media (max-width: 640px) {
+  .breaking-banner { font-size: 14px; }
+  .breaking-dismiss { top: 10px; transform: none; }
+}
+
+/* ---------- v30 (2026-10-06, spec 013): Signals Highlights +
+   Detail regions. Existing tokens only (FR-008): the highlight
+   cards are .pulse-tile cards, the kickers/notes/rows reuse
+   .board-kicker / .board-note / .proj-* / .edu-*, the detail
+   table follows .trend-table — no new colors or type styles.
+   The disclosure renders expanded in markup (FR-004); the
+   script emitted with the region applies the collapsed state
+   when JavaScript is present, so .detail-body carries no
+   display rule of its own (the hidden attribute must win). */
+.highlights { text-align: left; margin-bottom: 36px; }
+.hl-kicker {
+  color: var(--cyan); font-size: 12px; letter-spacing: 0.14em; font-weight: 700;
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.hl-summary { font-size: 15px; line-height: 1.65; }
+.hl-prov { color: var(--faint); font-size: 12.5px; line-height: 1.6; margin-top: 8px; }
+.hl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+.hl-value { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin-top: 6px; }
+.hl-name { font-size: 17px; font-weight: 700; line-height: 1.35; margin-top: 6px; }
+.hl-card .pulse-delta { margin-top: 4px; }
+@media (max-width: 900px) {
+  .hl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 420px) {
+  .hl-grid { grid-template-columns: 1fr; }
+}
+
+.detail { margin-top: 44px; text-align: left; }
+.detail-head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px 16px; flex-wrap: wrap;
+  border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px;
+}
+.detail-title { font-size: 15.5px; font-weight: 700; }
+.detail-sub { color: var(--faint); font-size: 13px; }
+.detail-toggle {
+  background: transparent; border: 1px solid var(--line); border-radius: 6px;
+  color: var(--ink); font: inherit; font-size: 13.5px; font-weight: 600;
+  padding: 9px 14px; cursor: pointer; white-space: nowrap;
+}
+.detail-toggle:hover { border-color: var(--cyan); }
+.detail-toggle:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.detail-body { margin-top: 6px; }
+.detail-block { margin-top: 26px; }
+.detail-block .board-kicker { margin-top: 0; }
+.detail-scroll { overflow-x: auto; margin-top: 8px; }
+.detail-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 14px; }
+.detail-table th {
+  color: var(--faint); font-size: 11px; letter-spacing: 0.1em; font-weight: 700;
+  text-transform: uppercase; text-align: left; padding: 0 8px 6px 0;
+}
+.detail-table td { padding: 7px 8px 7px 0; border-top: 1px solid var(--line); }
+.detail-table .dt-num { text-align: right; }
+.detail-table th.dt-num { padding-right: 0; padding-left: 8px; }
+.detail-table td.dt-num { padding-right: 0; padding-left: 8px; }
+.detail-table tr.dt-latest td { font-weight: 700; }
+.detail-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
+.detail-link { font-size: 14.5px; line-height: 1.5; padding: 6px 0; }
+.detail-link a { color: var(--cyan); text-decoration: none; }
+.detail-link a:hover { text-decoration: underline; }
+@media (max-width: 640px) {
+  .detail-cols { grid-template-columns: 1fr; }
+  .detail-toggle { width: 100%; }
+}
+
+/* ---------- v31 (2026-10-06, spec 014): Talent geography —
+   the detail region's geography subsection (WF-13). Appended
+   to v30; every v30 rule is untouched (spec 015 bottom values
+   and Amendment 2 top values included). Existing tokens only:
+   the choropleth ramp is the five-step cyan scale drawn in
+   WF-13; the not-disclosed state is a hatched fill (SVG
+   pattern #geo-hatch, emitted once in the section's <defs>);
+   selector chips follow .detail-toggle. Layers render stacked
+   in markup; the section's script activates one per group
+   (progressive enhancement), so [hidden] must beat the grid. */
+.geo-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+.geo-intro { font-size: 14.5px; line-height: 1.6; margin-top: 8px; max-width: 72ch; }
+.geo-block {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  column-gap: 28px; margin-top: 26px; text-align: left;
+}
+.geo-block > .board-sub, .geo-block > .board-note, .geo-block > .geo-selector,
+.geo-block > .geo-legend, .geo-block > .geo-layer, .geo-block > .geo-caption,
+.geo-block > .pseo-row, .geo-block > .pseo-spot { grid-column: 1 / -1; }
+.geo-block > .board-sub:first-child { margin-top: 0; }
+.geo-caption { color: var(--faint); font-size: 13px; line-height: 1.55; margin-top: 2px; }
+.geo-selector { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 2px; }
+.geo-chip {
+  background: transparent; border: 1px solid var(--line); border-radius: 6px;
+  color: var(--ink); font: inherit; font-size: 13px; font-weight: 600;
+  padding: 7px 12px; cursor: pointer;
+}
+.geo-chip:hover { border-color: var(--cyan); }
+.geo-chip:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.geo-chip[aria-pressed="true"] { border-color: var(--cyan); color: var(--cyan); }
+.geo-legend { color: var(--faint); font-size: 12.5px; line-height: 2; margin-top: 8px; }
+.geo-swatch {
+  display: inline-block; width: 12px; height: 12px; border-radius: 2px;
+  border: 1px solid var(--hairline); vertical-align: -1px; margin-right: 2px;
+}
+.geo-layer {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 6px 28px; margin-top: 12px; align-items: start;
+}
+.geo-layer[hidden] { display: none; }
+.geo-map { width: 100%; height: auto; display: block; }
+.geo-map use { stroke: var(--navy); stroke-width: 0.8; }
+.geo-map use.geo-outline { fill: rgba(247, 252, 255, 0.04); stroke: rgba(247, 252, 255, 0.28); stroke-width: 0.6; }
+.geo-dot { fill: var(--cyan); fill-opacity: 0.8; stroke: var(--navy); stroke-width: 0.5; }
+.geo-tablewrap { overflow: auto; max-height: 470px; }
+.geo-table { width: 100%; min-width: 300px; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 13.5px; }
+.geo-table caption { text-align: left; color: var(--faint); font-size: 12.5px; line-height: 1.5; padding-bottom: 6px; }
+.geo-table th {
+  color: var(--faint); font-size: 11px; letter-spacing: 0.1em; font-weight: 700;
+  text-transform: uppercase; text-align: left; padding: 0 8px 6px 0;
+}
+.geo-table td { padding: 6px 8px 6px 0; border-top: 1px solid var(--hairline); }
+.pseo-row { margin-top: 12px; }
+.pseo-label { font-size: 14.5px; line-height: 1.5; }
+.pseo-bar { height: 8px; background: var(--hairline); border-radius: 4px; overflow: hidden; margin-top: 5px; }
+.pseo-bar span { display: block; height: 100%; background: var(--cyan); }
+.pseo-spot { margin-top: 24px; border: 1px solid var(--line); border-radius: 6px; padding: 4px 16px 14px; }
+.pseo-spot .geo-tablewrap { max-height: none; }
+@media (max-width: 820px) {
+  .geo-block, .geo-layer { grid-template-columns: 1fr; }
+  .geo-map { max-width: 520px; }
+  .geo-tablewrap { max-height: 380px; }
+}

@@ -285,7 +285,7 @@ Amendment 2 basis); wireframes revised first.
   revision-log entry in `wireframes.md`; spec.md
   Amendment 2 added. Approval basis: Tristen's direction
   2026-10-08 with screenshot of the live page.
-- [ ] T014 **Implement on staging**: signals template
+- [x] T014 **Implement on staging**: signals template
   note gains a scoped modifier class; one new rule in
   `styles.v33.css` (base `.cards-note` untouched — the
   Documents note renders as before); all templates'
@@ -301,3 +301,11 @@ Amendment 2 basis); wireframes revised first.
   production re-verification (rendered screenshots of
   the live page); amendment recorded implemented + live
   in spec.md / wireframes / tasks.
+  **Done 2026-10-08:** implemented as drawn — note
+  renders 13px / left / full container width. Measured
+  on the locally built staging output (Playwright):
+  desktop note height 734px → 270px (27 → 13 lines,
+  width 605px → 1052px); mobile 1359px → 811px.
+  Documents page note verified unchanged (16px,
+  centered). Screenshots:
+  ~/workspace/your_files/signals-note-fix/.
