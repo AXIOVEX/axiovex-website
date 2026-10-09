@@ -268,6 +268,42 @@ instead of fetched.
   multiple lists, or segmentation; a daily edition;
   sending without per-issue owner approval.
 
+- **FR-020 — Sender-migration gauge (planning tripwire).**
+  The Microsoft lane is v1's sender; a dedicated sender
+  (Resend, per the Amendment 1 record) is the named
+  successor **when the list outgrows tenant sending** —
+  and the move is planned on evidence, not improvised.
+  The gauge is computed from the sends log (FR-009) and
+  the active-subscriber count:
+  - **PLAN threshold — 750 active subscribers.** When the
+    active list reaches 750, or growth projects crossing
+    750 within 60 days, planning for the migration begins
+    (Axiovex-owned Resend account, domain verification,
+    list migration, dual-run test) as a plan presented to
+    the owner.
+  - **MOVE threshold — 1,500 active subscribers.** The
+    migration completes before the next scheduled send
+    after the list crosses 1,500.
+  - **Health overrides** — any one starts planning
+    immediately, regardless of list size: a spam
+    complaint rate of **0.1% or more** on any single
+    issue; a hard-bounce rate of **2% or more** on any
+    single issue; any **Microsoft throttling event**
+    during a send (Graph throttling or a mailbox sending
+    restriction); or a **send duration over 60 minutes**.
+  - **Observability.** The sends log records, per issue:
+    recipients attempted and sent, send duration, hard
+    bounces, complaints, and throttling events. Every
+    issue's approval request (FR-005) and its post-send
+    summary to the owner carries the gauge line: active
+    subscribers, distance to the PLAN threshold, and any
+    health-override status. When the PLAN threshold or a
+    health override trips, the summary flags it
+    explicitly and a planning task is recorded in this
+    spec's follow-ups (tasks.md). **Nothing auto-starts**:
+    planning is presented to the owner, and the migration
+    itself is a separate owner decision.
+
 ## Claims (AEE)
 
 - C-020-1: **Double opt-in is enforced.** No issue can be
@@ -314,6 +350,8 @@ instead of fetched.
   sending (FR-014's Exchange limits); crossing a stated
   limit stops at an owner decision — the system has no
   code path that buys, upgrades, or charges anything.
+  (The planned exit from this lane, when the list grows,
+  is measured by the FR-020 sender-migration gauge.)
   *Falsifier*: any invoice, paid-tier activation, or a
   send volume above the free-tier caps without a recorded
   owner decision.
