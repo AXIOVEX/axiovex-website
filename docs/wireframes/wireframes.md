@@ -41,6 +41,14 @@ This file is the index, the gate rule, and the revision log.
   IMPLEMENTED + LIVE 2026-10-06** (promotion merge
   `9d7dbba`; copy approval given by Tristen 2026-10-06,
   spec 016 T005))
+- WF-15 Newsletter archive index · WF-16 Newsletter issue
+  page · WF-17 Newsletter landing pages (added 2026-10-09,
+  spec 020-newsletter — **PROPOSED · PENDING OWNER
+  APPROVAL, NOT implemented**: the public archive and web
+  editions of The Axiovex Signal weekly newsletter; WF-15
+  on the WF-03 pattern, WF-16 on the WF-04 article pattern,
+  WF-17 a reduced WF-05-shell state set — confirmed /
+  unsubscribed / expired / already-in-state)
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
 - WF-09 Blog / article / privacy — tablet
 - Global components: WF-G1 nav (Signals link added by spec 008 —
@@ -53,7 +61,11 @@ This file is the index, the gate rule, and the revision log.
   `9d7dbba`) · WF-G5 service card · WF-G6 Signals floating
   widget (spec 008 — approved + implemented 2026-10-06) · WF-G7
   Breaking news banner (proposed 2026-10-06 by spec 012 —
-  PENDING OWNER APPROVAL)
+  PENDING OWNER APPROVAL) · WF-G8 Newsletter signup block
+  (proposed 2026-10-09 by spec 020 — PENDING OWNER APPROVAL:
+  email-only signup for The Axiovex Signal, confirmation-first
+  copy, no-tracking fine print; v1 placement on /signals/ only,
+  drawn in place at WF-11)
 
 Framing decisions baked into the set (2026-10-04): centered axis (standing
 symmetry rule); strata = 3 segments
@@ -677,3 +689,51 @@ as accordion rows.
   claims C-018-6…8); no new claim is introduced.
   Implemented on staging per spec 010; promotion
   awaits Tristen's staging review (spec 018 T011).
+- **2026-10-09** — NEW FRAMES PROPOSED (spec
+  020-newsletter — **PROPOSED · PENDING OWNER APPROVAL —
+  NOT approved, NOT implemented**): Tristen directed a
+  weekly newsletter ("The Axiovex Signal" — corrected
+  from an initial daily idea the same day), staged and
+  tested first. Four draft frames: (1) NEW **WF-G8
+  Newsletter signup block** (global component) — an
+  email-only form with hook-first copy ("The week, in
+  your inbox."), an honest confirmation-first pending
+  state (double opt-in — the block never claims
+  "subscribed" before the click), and a no-tracking
+  fine-print line; Turnstile per spec 005. (2) NEW
+  **WF-15 Newsletter archive index** (/newsletter/, on
+  the WF-03 pattern): reverse-chronological issue rows
+  headlined by each issue's own lede, an empty state
+  before the first send, and the WF-G8 block closing
+  the page; not added to WF-G1 nav in v1. (3) NEW
+  **WF-16 Newsletter issue page**
+  (/newsletter/<yyyy-mm-dd>/, on the WF-04 article
+  pattern — centered head, left-justified editorial
+  column): the web edition of one issue, rendered from
+  the same committed issue source as the email's HTML
+  and plain-text parts (spec 020 FR-006 / claim
+  C-020-3); fixed section order — lede, What changed,
+  Michigan Pulse (vintages attached), Why it matters
+  (causes checked or labeled unexplained), From the
+  blog, Watchlist, colophon — and a WF-G8 block for
+  readers of a shared copy. (4) NEW **WF-17 Newsletter
+  landing pages** (reduced WF-05 shell, no CTA band):
+  the token-link states — confirmed, unsubscribed
+  (the footer-link GET performs the flip before the
+  page renders; no confirmation screen), confirmation
+  expired/unknown, and already-in-state; no full email
+  address shown, no membership hints. Placement note
+  at **WF-11**: the WF-G8 block's v1 slot is on
+  /signals/, below the Sources & method note and above
+  the CTA band — the one drawn change to an existing
+  frame. Related, recorded here per the spec 005
+  precedent: **WF-05 Privacy** gains a newsletter
+  section at implementation (spec 020 FR-016 — what is
+  collected, Resend named as sending processor,
+  Cloudflare D1 as the store, no sale, no per-subscriber
+  tracking, unsubscribe + hashed-suppression retention;
+  no layout change to the frame). Approval gate:
+  spec 020 tasks.md T001; production additionally
+  waits on the FR-018 owner decisions (CAN-SPAM postal
+  address; privacy/footer wording review). Nothing on
+  the live site changes until Tristen approves.

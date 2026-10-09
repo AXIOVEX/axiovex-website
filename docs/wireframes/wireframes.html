@@ -307,6 +307,48 @@
     <li><strong>Built in, never fetched.</strong> The banner is injected by the site generator at build time from the committed data file (spec 004 architecture) — no client-side fetching, no third-party runtime calls. It is first in reading order: a <span style="color:var(--muted)">role=&quot;region&quot;</span> labeled &ldquo;Breaking news&rdquo;, a visible focus state on the link and the button, and no motion of any kind.</li>
   </ul>
 
+  <h2 class="wf-title"><span class="wf-id">WF-G8 · Global — Newsletter signup block</span>PROPOSED 2026-10-09 (spec 020-newsletter) — PENDING OWNER APPROVAL · NOT approved, NOT implemented</h2>
+  <p class="wf-sub">A compact signup block for <b>The Axiovex Signal</b>, Axiovex&rsquo;s weekly email edition of the Signals board. <b>v1 placement: /signals/ only</b> — below the Sources &amp; method note, above the CTA band (drawn in place at WF-11). The block is drawn as a reusable component so a later, separately approved placement (home, article foot) inherits it unchanged; no other page carries it in v1. One field, one button: the form collects an <b>email address only</b>. Subscribing starts a <b>double opt-in</b> — the block never claims &ldquo;you&rsquo;re subscribed&rdquo;; it says a confirmation email is on its way, because until the reader clicks it, they are not subscribed (spec 020 FR-010).</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">component · first placement: /signals/</span></div>
+    <div class="stage">
+      <div class="blk solid" style="text-align:center">
+        <span class="tag">Signup block · default state · desktop</span>
+        <p class="eyebrow">THE AXIOVEX SIGNAL — WEEKLY</p>
+        <p class="h2-real">The week, in your inbox.</p>
+        <p style="color:var(--muted);font-size:14.5px;max-width:56ch;margin:10px auto 0">What changed in Michigan industry and the field &rarr; one email, Wednesdays at 10:00 AM ET, with the numbers, their vintages, and why they matter.</p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px">
+          <span style="border:1px solid var(--line);border-radius:8px;padding:11px 16px;color:var(--faint);font-size:14.5px;min-width:280px;text-align:left">you@example.com</span>
+          <span class="btn fill">Subscribe &rarr;</span>
+        </div>
+        <p style="color:var(--faint);font-size:12.5px;margin-top:14px">One email a week. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. <b style="color:var(--muted)">No tracking pixels, no per-reader analytics</b> (spec 020 FR-015). <a href="#" style="color:var(--cyan)">Privacy policy</a></p>
+        <p style="color:var(--faint);font-size:12.5px;margin-top:8px">Turnstile (Managed) rides with the form, as on Contact (spec 005) — invisible unless challenged; a honeypot field sits off-screen.</p>
+      </div>
+      <div class="blk solid" style="text-align:center">
+        <span class="tag">Signup block · after submit (pending confirmation)</span>
+        <p class="eyebrow">THE AXIOVEX SIGNAL — WEEKLY</p>
+        <p class="h2-real">Check your inbox.</p>
+        <p style="color:var(--muted);font-size:14.5px;max-width:56ch;margin:10px auto 0">We sent a confirmation email to the address you gave us. Click the link in it — good for 48 hours — and the first edition arrives Wednesday at 10:00 AM ET. No click, no emails: that&rsquo;s the deal.</p>
+      </div>
+      <div class="blk" style="text-align:left">
+        <span class="tag">Signup block · mobile (390px) · field and button stack full-width</span>
+        <div style="max-width:390px;margin:0 auto;text-align:center">
+          <p class="eyebrow">THE AXIOVEX SIGNAL — WEEKLY</p>
+          <p style="font-size:19px;font-weight:700">The week, in your inbox.</p>
+          <span style="display:block;border:1px solid var(--line);border-radius:8px;padding:11px 16px;color:var(--faint);font-size:14.5px;text-align:left;margin-top:14px">you@example.com</span>
+          <span class="btn fill" style="display:block;margin-top:10px">Subscribe &rarr;</span>
+          <p style="color:var(--faint);font-size:12.5px;margin-top:12px">One email a week · confirmation first · one-click unsubscribe · no tracking pixels.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>Hook-first, like everything public (spec 018 standard).</strong> The block opens with the outcome in X&rarr;Y form — the Signals material the reader already watches &rarr; one weekly email — and every clause of it is substantiated by the system behind it: weekly (FR-001), confirmation first (FR-010), one-click unsubscribe (FR-011), no tracking (FR-015). No subscriber counts, no social proof, no invented urgency — the site has none to claim and the block invents none.</li>
+    <li><strong>Placement is deliberate.</strong> /signals/ is where the newsletter&rsquo;s readers already are — the block sits at the foot of the board the email editions are assembled from, after the Sources &amp; method note, ahead of the generic CTA band. The CTA band (WF-G3) still follows; the page gains one band, not a redesign.</li>
+    <li><strong>The honest pending state.</strong> After submit, the block says &ldquo;Check your inbox&rdquo; — never &ldquo;Subscribed.&rdquo; An address that is already active gets the same neutral response (the endpoint does not confirm list membership to a form submitter); the confirmation email simply does not re-arrive for an already-active address.</li>
+    <li><strong>Abuse posture inherits spec 005.</strong> Turnstile (Managed, action <span style="color:var(--muted)">newsletter_subscribe</span>) verified server-side, fail-closed; honeypot + timing trap; an edge rate-limit rule on <span style="color:var(--muted)">/api/newsletter/*</span>. A failed challenge shows a plain inline error and sends nothing.</li>
+  </ul>
+
   <!-- ================= HOME ================= -->
   <h2 class="wf-title"><span class="wf-id">WF-01 · Home — Desktop</span>axiovexsystems.com/</h2>
   <p class="wf-sub">The home flow, in Axiovex order: <b>REVISED 2026-10-05 (approved, live):</b> a new Signals + Michigan Pulse block sits between Evidence and About — Pulse tiles, three latest signal cards, and the path to the full Signals page (WF-11). <b>REVISED 2026-10-06 (spec 008 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE (commit ab0e4e5)):</b> the block is highlighted — the eyebrow becomes &ldquo;AXIOVEX SIGNALS — LIVE&rdquo; with a live-dot, and a Michigan Pulse mini-strip (the three headline stats, period-labeled, build-generated) sits directly under the heading; the full Pulse band remains on WF-11 only. <b>REVISED 2026-10-06 (spec 009 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE (commit 11873b1)):</b> the home nav drawn on this frame gains <b>Home</b> as its first item, shown current — see WF-G1 variant (a). <b>REVISED 2026-10-06 (spec 015 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE):</b> the page bottom tightens per the WF-G2 page-foot rhythm — drawn at the foot of this frame; mid-page section spacing is unchanged. <b>REVISED 2026-10-07 (spec 018 — APPROVED by Tristen 2026-10-07; implemented on staging, promotion pending his staging review):</b> the hero copy goes hook-first (X&rarr;Y) — H1 becomes &ldquo;AI your team can actually use. Infrastructure on your floor. Evidence you can defend.&rdquo; and the lede becomes &ldquo;Hand us the problem your team keeps routing around, and you get back a working system, and people who can run it without us.&rdquo; Copy only — hero layout, spacing, logo, and buttons unchanged; the same H1 is drawn on WF-02 and WF-07. The replaced line, &ldquo;Engineering clarity into difficult systems.&rdquo;, remains the site slogan and footer mission (WF-G4 unchanged).</p>
@@ -910,6 +952,12 @@
         <p style="color:var(--muted);font-size:11.5px;line-height:1.6;text-align:left">Signals are headlines from public sources, gathered automatically and filtered to our lanes. Inclusion is not endorsement, and the numbers above are published government statistics with their reference month attached. Snapshot updated timestamp shown here. [The full methodology text follows — wording unchanged; only its presentation changes.]</p>
         <p style="color:var(--faint);font-size:12.5px;margin-top:10px"><b style="color:var(--muted)">Amended 2026-10-08:</b> the note renders as fine print — 13px type, full container width (1100px), left-aligned — instead of body-size type in a centered 68ch column, so the full methodology text takes a few wide lines instead of a tall narrow block. Wording unchanged, including the closing &ldquo;See our Disclaimer.&rdquo; link. The Documents page note (WF-10) keeps the standard note style.</p>
       </div>
+      <div class="blk solid" style="text-align:center">
+        <span class="tag">Newsletter signup block · WF-G8 — PROPOSED 2026-10-09 (spec 020) · PENDING OWNER APPROVAL</span>
+        <p class="eyebrow">THE AXIOVEX SIGNAL — WEEKLY</p>
+        <p class="h2-real">The week, in your inbox.</p>
+        <p style="color:var(--muted);font-size:14.5px">Email field + Subscribe button; confirmation-first (double opt-in); drawn in full at <b style="color:var(--ink)">WF-G8</b>. Placement: here — below the Sources &amp; method note, above the CTA band. v1 places the block on this page only.</p>
+      </div>
       <div class="blk solid" style="text-align:center"><span class="tag">CTA band · WF-G3</span><p class="eyebrow">Next step</p><p class="h2-real">Working on something like this?</p><div class="btnrow"><span class="btn fill">Start a conversation →</span></div></div>
       <div class="blk"><span class="tag">Footer · WF-G4 (+ Signals link in Explore)</span><p style="color:var(--muted);font-size:14px;text-align:center">Three-column footer (see WF-G4); v1 adds a Signals link to the Explore column.</p></div>
     </div>
@@ -1163,6 +1211,130 @@
     <li><strong>Breakpoint summary:</strong> ≥1240px desktop (full nav, 3-col grids) · 661–1240px tablet (hamburger nav, 2-col grids, footer split) · ≤660px mobile (1-col, stacked CTAs).</li>
   </ul>
 
+  <!-- ================= NEWSLETTER (PROPOSED, spec 020) ================= -->
+  <h2 class="wf-title"><span class="wf-id">WF-15 · Newsletter archive index</span>PROPOSED 2026-10-09 (spec 020-newsletter) — PENDING OWNER APPROVAL · axiovexsystems.com/newsletter/</h2>
+  <p class="wf-sub">The public home of <b>The Axiovex Signal</b>: every issue&rsquo;s web edition, newest first, on the WF-03 blog-index pattern — same page head, strata, card rhythm, and page-foot. The archive is the email footer&rsquo;s &ldquo;view in browser&rdquo; family and the durable record of the series; it is generated by the site build from the same committed issue sources as the emails (spec 020 FR-006), so an issue appears here the day it sends and never disagrees with what subscribers received. The WF-G8 signup block closes the page — a reader who lands on a shared issue can subscribe where they read.</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/newsletter/</span></div>
+    <div class="stage">
+      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>Home</span><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Signals</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
+      <div class="blk solid">
+        <span class="tag">Page head · centered</span>
+        <p class="eyebrow">NEWSLETTER</p>
+        <p class="h-real" style="font-size:27px">The Axiovex Signal</p>
+        <p style="color:var(--muted);font-size:14.5px;text-align:center">What changed in Michigan industry and the field — the week&rsquo;s signals, the Michigan numbers with their vintages, and why they matter. Every Wednesday, 10:00 AM ET.</p>
+      </div>
+      <div class="strata"><div style="background:#00DEF6"></div><div style="background:#2E9DB8"></div><div style="background:#7FD8E8"></div></div>
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-bottom:18px">STRATA BAR · WF-G2</p>
+      <div class="blk" style="text-align:left">
+        <span class="tag">Issue list · newest first · rows are placeholders — a wireframe invents no issue content</span>
+        <div class="card" style="margin-bottom:12px"><p style="color:var(--cyan);font-size:12px;letter-spacing:.12em;font-weight:700">WEDNESDAY, &lsaquo;SEND DATE&rsaquo;</p><h3 style="font-size:19px;margin:6px 0">&lsaquo;The issue&rsquo;s hook-first lede line, verbatim&rsaquo;</h3><p style="color:var(--muted);font-size:14px">What changed · Michigan Pulse · Why it matters · Watchlist</p><span class="explore">READ THE WEB EDITION &rarr;</span></div>
+        <div class="card" style="margin-bottom:12px"><p style="color:var(--cyan);font-size:12px;letter-spacing:.12em;font-weight:700">WEDNESDAY, &lsaquo;PRIOR SEND DATE&rsaquo;</p><h3 style="font-size:19px;margin:6px 0">&lsaquo;That issue&rsquo;s lede line, verbatim&rsaquo;</h3><p style="color:var(--muted);font-size:14px">What changed · Michigan Pulse · Why it matters · Watchlist</p><span class="explore">READ THE WEB EDITION &rarr;</span></div>
+        <p style="color:var(--faint);font-size:12.5px;margin-top:6px"><b style="color:var(--muted)">Empty state (before the first send):</b> the list is replaced by one line — &ldquo;No editions yet. The first goes out Wednesday at 10:00 AM ET.&rdquo; — above the signup block. No placeholder issues, ever.</p>
+      </div>
+      <div class="blk solid" style="text-align:center">
+        <span class="tag">Signup block · WF-G8 (drawn in full at WF-G8)</span>
+        <p class="eyebrow">THE AXIOVEX SIGNAL — WEEKLY</p>
+        <p class="h2-real">The week, in your inbox.</p>
+        <p style="color:var(--muted);font-size:14.5px">Email field + Subscribe button; confirmation-first.</p>
+      </div>
+      <div class="blk solid" style="text-align:center"><span class="tag">CTA band · WF-G3</span><p class="eyebrow">Next step</p><p class="h2-real">Working on something like this?</p><div class="btnrow"><span class="btn fill">Start a conversation &rarr;</span></div></div>
+      <div class="blk"><span class="tag">Footer · WF-G4</span><p style="color:var(--muted);font-size:14px;text-align:center">Three-column footer (see WF-G4).</p></div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>Not in the nav (v1).</strong> The archive is reached from the email footer&rsquo;s view-in-browser link, the /signals/ signup block, and the sitemap — WF-G1 is unchanged. A nav entry is a later, separately approved decision, like Signals&rsquo; own path (footer first, nav by spec 008).</li>
+    <li><strong>One list, reverse-chronological, no pagination in v1.</strong> A weekly cadence adds ~52 rows a year; the index carries them all until volume argues otherwise.</li>
+    <li><strong>Each row is the issue&rsquo;s own lede.</strong> The headline of a row is the issue&rsquo;s hook-first lede verbatim — the archive reads as the series&rsquo; own front page, and no second summary is ever written (and none can drift).</li>
+  </ul>
+
+  <h2 class="wf-title"><span class="wf-id">WF-16 · Newsletter issue page</span>PROPOSED 2026-10-09 (spec 020-newsletter) — PENDING OWNER APPROVAL · axiovexsystems.com/newsletter/&lt;yyyy-mm-dd&gt;/</h2>
+  <p class="wf-sub">One issue&rsquo;s web edition — the &ldquo;view in browser&rdquo; target from the email and the archive&rsquo;s destination. Drawn on the <b>WF-04 article pattern</b>: centered title block, then the site&rsquo;s one left-justified editorial column (the standing article exception to the centered axis). The page renders the <b>same committed issue source</b> as the email&rsquo;s HTML and plain-text parts (spec 020 FR-006): same items, same figures, same vintages — the web edition is a rendering of the issue, not a rewrite of it (claim C-020-3). Section order is the issue structure, fixed: lede &rarr; What changed &rarr; Michigan Pulse board &rarr; Why it matters &rarr; Latest article &rarr; Watchlist &rarr; colophon.</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/newsletter/&lt;yyyy-mm-dd&gt;/</span></div>
+    <div class="stage">
+      <div class="blk"><span class="tag">Nav · WF-G1</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>Home</span><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Signals</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
+      <div class="blk solid">
+        <span class="tag">Issue head · centered · breadcrumb back to the archive</span>
+        <p style="color:var(--faint);font-size:12.5px">Home / Newsletter</p>
+        <p class="eyebrow">THE AXIOVEX SIGNAL · WEDNESDAY, &lsaquo;SEND DATE&rsaquo;</p>
+        <p class="h-real" style="font-size:26px">&lsaquo;The issue&rsquo;s hook-first lede, verbatim — the headline of the edition&rsaquo;</p>
+      </div>
+      <div class="strata"><div style="background:#00DEF6"></div><div style="background:#2E9DB8"></div><div style="background:#7FD8E8"></div></div>
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-bottom:18px">STRATA BAR · WF-G2</p>
+      <div class="blk" style="text-align:left">
+        <span class="tag">Editorial column · left-justified (WF-04 exception) · all content is slot-labeled — a wireframe invents no figures or headlines</span>
+        <p style="color:var(--cyan);font-size:12px;letter-spacing:.14em;font-weight:700">WHAT CHANGED</p>
+        <p style="font-size:14.5px;margin-top:8px"><span style="color:var(--cyan);font-size:11.5px;font-weight:700">&lsaquo;LANE&rsaquo;</span> &nbsp;&lsaquo;Publisher&rsquo;s headline, verbatim&rsaquo; <span style="color:var(--faint);font-size:12.5px">· &lsaquo;source&rsaquo; · &lsaquo;date&rsaquo; · links out</span></p>
+        <p style="font-size:14.5px;margin-top:6px"><span style="color:var(--cyan);font-size:11.5px;font-weight:700">&lsaquo;LANE&rsaquo;</span> &nbsp;&lsaquo;Headline&rsaquo; <span style="color:var(--faint);font-size:12.5px">· &lsaquo;source&rsaquo; · &lsaquo;date&rsaquo;</span></p>
+        <p style="color:var(--faint);font-size:12.5px;margin-top:8px">Grouped by lane, headline + source + date only — spec 004&rsquo;s display discipline, identical to the email.</p>
+        <p style="color:var(--cyan);font-size:12px;letter-spacing:.14em;font-weight:700;margin-top:20px">MICHIGAN PULSE</p>
+        <p style="font-size:14.5px;margin-top:8px">&lsaquo;Series name&rsaquo; <b>&lsaquo;value from the pack snapshot&rsaquo;</b> <span style="color:var(--faint);font-size:12.5px">· &lsaquo;vintage / reference period, always attached&rsaquo;</span></p>
+        <p style="font-size:14.5px;margin-top:5px">&lsaquo;Series name&rsaquo; <b>&lsaquo;value&rsaquo;</b> <span style="color:var(--faint);font-size:12.5px">· &lsaquo;vintage&rsaquo;</span></p>
+        <p style="color:var(--cyan);font-size:12px;letter-spacing:.14em;font-weight:700;margin-top:20px">WHY IT MATTERS</p>
+        <p style="font-size:14.5px;margin-top:8px">2–3 short insight lines. Causes are stated only when checked; a move with no verified cause is labeled <b style="color:var(--muted)">unexplained</b> — the in-depth numbers rule, carried into the newsletter unchanged.</p>
+        <p style="color:var(--cyan);font-size:12px;letter-spacing:.14em;font-weight:700;margin-top:20px">FROM THE BLOG</p>
+        <p style="font-size:14.5px;margin-top:8px">&lsaquo;Latest article title&rsaquo; &rarr; <span style="color:var(--faint);font-size:12.5px">· the newest blog / workforce piece, linked</span></p>
+        <p style="color:var(--cyan);font-size:12px;letter-spacing:.14em;font-weight:700;margin-top:20px">WATCHLIST</p>
+        <p style="font-size:14.5px;margin-top:8px">&lsaquo;Release name&rsaquo; — <b>&lsaquo;date&rsaquo;</b> <span style="color:var(--faint);font-size:12.5px">· state employment ~the 20th · county/metro ~the 28th · CPI · FOMC, as scheduled</span></p>
+        <p style="color:var(--faint);font-size:12.5px;margin-top:14px">Colophon: assembled from the committed Signals snapshot and Michigan data pack, with vintages as labeled · <a href="#" style="color:var(--cyan)">All editions</a> · <a href="#" style="color:var(--cyan)">Privacy policy</a></p>
+      </div>
+      <div class="blk solid" style="text-align:center">
+        <span class="tag">Signup block · WF-G8 — a shared issue is the front door</span>
+        <p class="eyebrow">READING SOMEONE ELSE&rsquo;S COPY?</p>
+        <p class="h2-real">Get your own, Wednesdays.</p>
+        <p style="color:var(--muted);font-size:14.5px">Email field + Subscribe button; confirmation-first (drawn in full at WF-G8).</p>
+      </div>
+      <div class="blk solid" style="text-align:center"><span class="tag">CTA band · WF-G3</span><p class="eyebrow">Next step</p><p class="h2-real">Working on something like this?</p><div class="btnrow"><span class="btn fill">Start a conversation &rarr;</span></div></div>
+      <div class="blk"><span class="tag">Footer · WF-G4</span><p style="color:var(--muted);font-size:14px;text-align:center">Three-column footer (see WF-G4).</p></div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>The email and this page are one document, two renderings.</strong> The responsive HTML email is mobile-first and table-safe for mail clients; this page is the same issue in the site&rsquo;s own shell. Neither is edited separately — a correction lands in the committed issue source and both renderings move (claim C-020-3 is the falsifiable form of this).</li>
+    <li><strong>No engagement machinery.</strong> No share counts, no tracking parameters on the page&rsquo;s links, no per-reader anything — the page is a publication, not a funnel (FR-015). Ordinary site analytics see it as a page, as they see an article.</li>
+    <li><strong>At 390px</strong> the column is the page: Pulse rows stack, lane rows wrap, the signup block stacks per WF-G8. Nothing in the issue introduces a new color, type style, or component — it reuses the article pattern throughout.</li>
+  </ul>
+
+  <h2 class="wf-title"><span class="wf-id">WF-17 · Newsletter landing pages — States</span>PROPOSED 2026-10-09 (spec 020-newsletter) — PENDING OWNER APPROVAL · token links from the emails</h2>
+  <p class="wf-sub">The small pages the newsletter&rsquo;s token links land on: confirmation, unsubscribe, and their edge states. Drawn on the WF-05 legal-page shell reduced to its minimum — nav, one centered card, footer; no CTA band (the page&rsquo;s job is already done when it renders). Every state is a plain sentence about what is now true, plus the one useful next link. These pages are reached only from email links carrying an unguessable token; they show <b>no email address in full</b> and confirm nothing about any other address. The RFC 8058 one-click POST path has no page at all — the mail client performs it and the state flips server-side (FR-011); state B below is what the footer-link (GET) path lands on, with the deed already done.</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">token links · /newsletter/confirm · /newsletter/unsubscribe</span></div>
+    <div class="stage">
+      <div class="blk solid" style="text-align:center">
+        <span class="tag">State A · Confirmed (confirmation link redeemed, within 48h)</span>
+        <p class="eyebrow">THE AXIOVEX SIGNAL</p>
+        <p class="h2-real">You&rsquo;re subscribed.</p>
+        <p style="color:var(--muted);font-size:14.5px;max-width:52ch;margin:10px auto 0">The next edition arrives Wednesday at 10:00 AM ET. Until then, the archive has every past edition.</p>
+        <div class="btnrow"><span class="btn fill">Read past editions &rarr;</span></div>
+      </div>
+      <div class="blk solid" style="text-align:center">
+        <span class="tag">State B · Unsubscribed (footer-link path — effect is immediate on arrival)</span>
+        <p class="eyebrow">THE AXIOVEX SIGNAL</p>
+        <p class="h2-real">You&rsquo;ve unsubscribed.</p>
+        <p style="color:var(--muted);font-size:14.5px;max-width:52ch;margin:10px auto 0">Done — effective now. No further editions will be sent to this address. If this was a mistake, subscribing again takes a fresh confirmation, so an address can never be re-added silently.</p>
+        <div class="btnrow"><span class="btn">Subscribe again &rarr;</span></div>
+      </div>
+      <div class="blk solid" style="text-align:center">
+        <span class="tag">State C · Confirmation link expired or unknown</span>
+        <p class="eyebrow">THE AXIOVEX SIGNAL</p>
+        <p class="h2-real">That link has expired.</p>
+        <p style="color:var(--muted);font-size:14.5px;max-width:52ch;margin:10px auto 0">Confirmation links are good for 48 hours. Enter your email again and we&rsquo;ll send a fresh one.</p>
+        <p style="color:var(--faint);font-size:12.5px;margin-top:10px">[ WF-G8 mini form — email field + Subscribe ]</p>
+      </div>
+      <div class="blk solid" style="text-align:center">
+        <span class="tag">State D · Already in that state (repeat click / already unsubscribed)</span>
+        <p class="eyebrow">THE AXIOVEX SIGNAL</p>
+        <p class="h2-real">Nothing to change.</p>
+        <p style="color:var(--muted);font-size:14.5px;max-width:52ch;margin:10px auto 0">This address is already in the state that link asks for. No error, no second email — the record stands as it was.</p>
+      </div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>Immediate means immediate.</strong> The unsubscribe GET performs the status flip before rendering state B — there is no &ldquo;are you sure?&rdquo; screen and no second click. A confirmation screen would make &ldquo;one-click&rdquo; a claim the page itself falsifies (claim C-020-2).</li>
+    <li><strong>Tokens are single-purpose and hashed at rest.</strong> The link carries the only copy of the raw token; the database holds its SHA-256 hash (FR-009). An expired or unknown token lands on state C — never an error page, never a hint about whether an address exists on the list.</li>
+    <li><strong>No address bookkeeping leaks.</strong> The pages never print the subscriber&rsquo;s full address, never say &ldquo;not found,&rdquo; and give the same neutral states to known and unknown tokens alike (state C/D wording covers both).</li>
+  </ul>
+
   <!-- ================= APPROVAL ================= -->
   <div class="approve">
     <h2>Approval checklist</h2>
@@ -1176,6 +1348,8 @@
       <li>WF-G1 (revised, spec 008) — Signals link after Blog, in the desktop row and the hamburger panel</li>
       <li>WF-G6 / WF-12 (new, spec 008) — Signals floating widget: collapsed live-dot pill + expanded panel (Pulse row, 3 freshest headlines, All signals), every page except /signals/</li>
       <li>WF-G7 (new, spec 012 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE) — Breaking news banner: curated deep-red strip above the nav on every page; whole strip links to the source story; verbatim headline + source + published time; dismiss remembered per entry; 72-hour max life; zero layout trace when no entry is active</li>
+      <li>WF-G8 (new, spec 020 — PROPOSED 2026-10-09 · PENDING OWNER APPROVAL) — Newsletter signup block: email-only form, confirmation-first copy, no-tracking fine print; v1 placement /signals/ only (slot drawn at WF-11)</li>
+      <li>WF-15 / WF-16 / WF-17 (new, spec 020 — PROPOSED 2026-10-09 · PENDING OWNER APPROVAL) — Newsletter archive index (WF-03 pattern) · issue page (WF-04 pattern, one committed source with the email) · token landing pages (confirmed / unsubscribed / expired / already-in-state)</li>
       <li>WF-13 (new, spec 014 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE) — Michigan talent map: the Detail region&rsquo;s geography subsection (QCEW industry choropleth with committed-layer selector + not-disclosed state · LAUS unemployment choropleth, monthly · IPEDS institution map with field layers · PSEO pipeline view in adjusted scope — statewide flows + labeled UMich spotlight, no per-school map the data cannot support); every view paired with its full table; static build-generated SVG; monthly-report integration via spec 007 FR-011</li>
       <li>WF-01 — Home (desktop): hero → strata → method → services → proof → about → FAQ → CTA → footer</li>
       <li>WF-01 (revised, spec 008) — Signals block highlighted: “AXIOVEX SIGNALS — LIVE” eyebrow + Michigan Pulse mini-strip under the heading</li>
