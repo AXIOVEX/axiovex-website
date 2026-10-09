@@ -42,6 +42,35 @@ insights from three named computations only — and a map-refresh
 verification step in the cycle checklist. Format placement is
 `blog-format.md` §3B.
 
+**Amendment 4 — 2026-10-09 (Tristen's direction)**: **the date
+rule is replaced — editions are named for their DATA month**, not
+their publication month. The draft is produced after that data
+month's county/metro revision has landed (draft ~the **29th** of
+the following month; February: its last day); **publication
+~the 30th** at ~09:00 ET (the January-data edition publishes
+**Mar 1** — February has no 30th); the **personal LinkedIn post**
+runs on Publish Day **~10:30 ET** (link in the first comment);
+the **company re-share** follows on the **following Tuesday
+~09:30 ET**. The Tuesday-nearest-the-15th rule and the Thursday
+re-share are superseded. Rationale: an edition must be dated
+after the monthly releases it cites have landed — the same
+principle as spec 006 Amendment 3 (monthly analytics report to
+the 30th). **Transition:** the October 2026 cycle's
+advance-approved, October-named draft (an August-data evidence
+check) was stood down unpublished on 2026-10-09 and is
+regenerated as the **September edition** (data month 2026-09;
+draft Oct 29, publish Oct 30, post Oct 30 ~10:30 ET, re-share
+Tue Nov 3 ~09:30 ET; slug `michigan-workforce-september-data-2026`
+— the plain September slug is held by the September-published
+article). The 2026-10-07 advance approval applied to the
+superseded plan only and does **not** carry to the regenerated
+draft (the FR-004 gate applies anew). The **October edition**
+(data month 2026-10) follows: draft Nov 29, publish Nov 30,
+re-share Tue Dec 1. Schedules: `michigan-workforce-draft` fires
+28th–31st with a draft-day gate; `michigan-workforce-publish`
+fires 28th–31st + 1st with a publish-day gate (the 1st acts only
+for the January-data edition).
+
 **Direction (Tristen, 2026-10-06)**: once per month near mid-month,
 publish a Michigan workforce data blog article matching the
 presentation and feel of the first one (2026-09-30); then determine
@@ -73,13 +102,42 @@ activity is unaffected.
 
 ## The date rule (normative)
 
+**As amended by Amendment 4 (2026-10-09)** — editions are named
+for their **DATA month**:
+
+- An edition covers one **data month** (e.g. September 2026) and
+  is titled and slugged for that month.
+- **Draft day** = the **29th** of the following month — after the
+  data month's Michigan state release (~the 20th) and its
+  county/metro revision (~the 28th) have both landed. In
+  February, draft day is February's **last day**.
+- **Publish Day** = the **30th** of the following month; the
+  article is live **~09:00 ET**. (The January-data edition
+  publishes **Mar 1** — February has no 30th.)
+- **Personal LinkedIn post** on Publish Day **~10:30 ET**.
+- **Company page re-share** the **following Tuesday ~09:30 ET**.
+- All weekdays are verified with `date -d` when a cycle is
+  planned — never computed by counting in one's head.
+
+First cycles under this rule (weekdays verified 2026-10-09):
+
+| Edition (data month) | Draft | Publish Day | Personal post | Company re-share |
+|---|---|---|---|---|
+| Sep 2026 | Thu Oct 29 | **Fri Oct 30** | Fri Oct 30 ~10:30 ET | Tue Nov 3 ~09:30 ET |
+| Oct 2026 | Sun Nov 29 | **Mon Nov 30** | Mon Nov 30 ~10:30 ET | Tue Dec 1 ~09:30 ET |
+
+Rationale: the edition is dated after the monthly releases it
+cites have landed, so its analysis rests on the completed data
+for its named month — the same principle as spec 006
+Amendment 3.
+
+### Superseded rule (2026-10-06 — historical)
+
 - **Publish Day** = the **Tuesday nearest the 15th** of the month;
   if two Tuesdays are equidistant, the **earlier** Tuesday wins.
 - Article live **~09:00 ET** on Publish Day.
 - **Personal LinkedIn post** the same Tuesday **~10:30 ET**.
 - **Company page re-share** the **Thursday of the same week ~09:30 ET**.
-- All weekdays are verified with `date -d` when a cycle is planned —
-  never computed by counting in one's head.
 
 First cycles under this rule (weekdays verified 2026-10-06):
 
@@ -97,9 +155,9 @@ when the 15th falls badly.
 ## Functional requirements
 
 - **FR-001 — Monthly cadence + date rule.** One article per month,
-  published per the date rule above (Publish Tuesday ~09:00 ET;
-  personal post same day ~10:30 ET; company re-share that Thursday
-  ~09:30 ET). The cadence runs indefinitely until Tristen changes or
+  published per the date rule above, as amended by Amendment 4
+  (publish ~the 30th ~09:00 ET; personal post same day ~10:30 ET;
+  company re-share the following Tuesday ~09:30 ET). The cadence runs indefinitely until Tristen changes or
   stops it. Months are never silently skipped: a missed cycle is
   reported as missed, with the reason (see FR-008).
 - **FR-002 — Data sourcing.** Figures come from exactly two source
