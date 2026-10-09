@@ -25,13 +25,30 @@
   per the ops record) — if no session is available, this
   task is the recorded blocker and the build proceeds with
   the send leg stubbed to the test allowlist.
-- [ ] T003 (after T001) D1: `axiovex-newsletter-staging` and
+- [x] T003 (after T001) D1: `axiovex-newsletter-staging` and
   `axiovex-newsletter` databases created in the Axiovex
   Cloudflare account; schema applied per FR-009 (subscribers
   with status enum + token SHA-256 hash columns + timestamps
   + source; sends log); staging binding wired to the staging
   Pages project; schema dump filed as C-020-4 evidence (no
   per-subscriber event tables/columns).
+  **Done for staging 2026-10-09:** `axiovex-newsletter-staging`
+  created (uuid a143d549-31d6-4d4e-98a4-503bdae864b7) after the
+  Axiovex Ops token gained D1: Edit; `scripts/newsletter/schema.sql`
+  applied via the D1 API — tables `subscribers`, `sends`,
+  `rate_events` + 4 indexes verified in sqlite_master. Binding
+  `NEWSLETTER_DB` → that uuid merged into the staging Pages
+  project's production deployment config (all existing env
+  vars/secrets preserved — secrets omitted from the PATCH body,
+  never rewritten) and the latest deployment retried so the
+  binding is live. Live probe of POST
+  /api/newsletter/subscribe: empty payload → 422 validation;
+  valid email + token → 200 with `mail: "blocked-allowlist"`
+  (no more 503), the pending-subscriber row + rate_events row
+  confirmed in D1 from the store side, synthetic probe row
+  deleted afterward. The production `axiovex-newsletter`
+  database remains part of the T010/T011 promotion gate —
+  not created here.
 - [x] T004 (after T002, T003) Endpoints on staging:
   subscribe / confirm / unsubscribe (GET + RFC 8058 POST) /
   internal send endpoint (secret-gated), per
