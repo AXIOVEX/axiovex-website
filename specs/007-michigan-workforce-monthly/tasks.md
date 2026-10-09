@@ -77,36 +77,58 @@
   `michigan-workforce-draft` body updated to the study-execution
   steps (schedule/owner/delivery unchanged).
 
-## October 2026 cycle (unexecuted — run by the schedules + gate)
+## October 2026 cycle — SUPERSEDED by Amendment 4 (2026-10-09)
 
-- [ ] T-OCT-01 **Draft** (draft job, Thu Oct 8 ~09:00 ET):
-  **execute the study** per FR-009 (research-repo pull → collect
-  leg → edition if new data supports one → publish/push-back →
-  verify outputs); draft article + LinkedIn post text from the
-  verified study outputs in the model format, validated against
-  `blog-format.md`; save to
-  `files/workforce-drafts/michigan-workforce-2026-10-draft.md`;
+The October-named cycle below was stood down unpublished on
+Tristen's direction (2026-10-09): the advance-approved draft
+(August data, `michigan-workforce-2026-10-draft.md`) never
+published, and no Oct 13/15 firings exist. The cycle runs instead
+as the **September edition** under the Amendment 4 data-month rule
+— see the September-edition cycle section that follows.
+
+- [x] T-OCT-01 **Draft** (executed Thu Oct 8): study executed per
+  FR-009; draft produced and presented. (This draft is the
+  superseded October-named draft; it is not the September edition.)
+- [ ] T-OCT-02 → T-OCT-06 **Cancelled** under Amendment 4 — the
+  October-named publish (Oct 13), personal post (Oct 13), company
+  re-share (Oct 15), and cycle report do not occur.
+
+## September-edition cycle (data month 2026-09 — run by the schedules + gate)
+
+- [ ] T-SEP-01 **Draft** (draft job, Thu Oct 29 ~09:39 ET):
+  **execute the study** per FR-009 on September data (state release
+  Oct 20 + county/metro revision Oct 28 both landed); draft article
+  + LinkedIn post text in the model format per `blog-format.md`,
+  titled "Michigan's September workforce data…", slug
+  `michigan-workforce-september-data-2026`, carrying the required
+  editor's note on the series' new data-month dating; save to
+  `files/workforce-drafts/michigan-workforce-2026-09-draft.md`;
   present to Tristen.
-- [ ] T-OCT-02 **GATE — Tristen approves the October draft.**
-  Blocks T-OCT-03 onward. No approval → nothing publishes, ping sent.
-- [ ] T-OCT-03 **Publish** (Tue Oct 13, article live ~09:00 ET):
+- [ ] T-SEP-02 **GATE — Tristen approves the September-edition
+  draft.** The 2026-10-07 advance approval applied to the
+  superseded October-named draft only and does NOT carry. Blocks
+  T-SEP-03 onward. No approval → nothing publishes, ping sent.
+- [ ] T-SEP-03 **Publish** (Fri Oct 30, article live ~09:00 ET):
   commit approved article to `blog/posts/` on `main`; verify live
   (200 + blog index + sitemap) per FR-007.
-- [ ] T-OCT-04 **Personal LinkedIn post** (Tue Oct 13 ~10:30 ET):
+- [ ] T-SEP-04 **Personal LinkedIn post** (Fri Oct 30 ~10:30 ET):
   post from Tristen Pierson's profile via signed-in browser; no
   link in body; article URL as first comment; hashtags
   `#Michigan #WorkforceDevelopment #Manufacturing #LaborMarket #AI`;
   verify and capture the post URL.
-- [ ] T-OCT-05 **Company re-share** (Thu Oct 15 ~09:30 ET): Axiovex
+- [ ] T-SEP-05 **Company re-share** (Tue Nov 3 ~09:30 ET): Axiovex
   Systems company page re-shares the personal post (one-off job
-  `michigan-workforce-reshare-2026-10`, created by the publish run);
-  verify on the company feed; capture the URL.
-- [ ] T-OCT-06 **Cycle report**: article URL, post URL, re-share
+  created by the publish run); verify on the company feed; capture
+  the URL.
+- [ ] T-SEP-06 **Cycle report**: article URL, post URL, re-share
   URL, actual dates/times, any deviation + reason — delivered to
   Tristen; state file updated.
 
 ## Standing (every cycle)
 
-- [ ] Repeat T-OCT-01 → T-OCT-06 monthly under the date rule
-  (Nov 2026: draft Sun Nov 8, publish Tue Nov 10, reshare Thu Nov 12;
-  Dec 2026: draft Tue Dec 8, publish Tue Dec 15, reshare Thu Dec 17).
+- [ ] Repeat the cycle monthly under the Amendment 4 date rule
+  (editions named for their data month; draft ~the 29th after the
+  county revision; publish ~the 30th; re-share the following
+  Tuesday). Next cycles: October edition — draft Sun Nov 29 2026,
+  publish Mon Nov 30, re-share Tue Dec 1; November edition — draft
+  Tue Dec 29 2026, publish Wed Dec 30, re-share Tue Jan 5 2027.
