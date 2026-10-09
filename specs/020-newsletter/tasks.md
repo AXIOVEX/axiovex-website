@@ -105,8 +105,11 @@
   composed with manage/unsubscribe/view-in-browser/privacy
   links and the postal-address slot (staging placeholder
   clearly marked; no invented address anywhere).
-- [ ] T009 (after T002–T008) **End-to-end test loop on
+- [x] T009 (after T002–T008) **End-to-end test loop on
   staging** (FR-017), sender allowlisted to Tristen's email
+  — DONE 2026-10-09 (see "Live-loop completion" below;
+  the restore step was owner-cancelled — he resubscribes
+  manually).
   only: subscribe → confirmation email received → confirm
   (WF-17 confirmed state) → test issue received, HTML +
   plain-text parts inspected → **C-020-1 falsifier run**
@@ -272,3 +275,74 @@
   reconfirm to restore Active.
 - **T010 stays CLOSED** — not checked, not approached.
 
+
+## Live-loop completion — 2026-10-09 (T009 DONE; restore owner-cancelled)
+
+- **Step 2 resumed + confirm (DONE — by the owner).** The
+  retry confirmation email eventually delivered on the
+  Microsoft side (the provisioning lag above). The owner
+  clicked the confirmation himself: D1 row
+  `confirmed_at = 2026-10-09T21:27:42.761Z`, status
+  `active` (source `live-loop-test-retry`). FR-020 gauge
+  before the issue send: **"Sender gauge: 1 active
+  subscribers (749 below the 750 PLAN threshold); health
+  overrides: none."**
+- **Step 3 — test issue send (DONE).** Issue **2026-10-14**
+  sent 2026-10-09T21:30:25Z→27Z via `scripts/newsletter/
+  send.mjs` (approval basis: owner's 2026-10-09 chat
+  approvals of the staging test send and the live loop).
+  Result: `sent 1, throttled 0, blocked(allowlist) 0,
+  failed 0, remaining 0`. Sends log row id 1: started
+  `2026-10-09T21:30:27.141Z`, finished
+  `2026-10-09T21:30:27.789Z`, duration 648 ms,
+  recipient_count 1, sent_count 1, bounce_count 0,
+  complaint_count 0, throttle_events 0, provider_ref
+  `microsoft-graph`. Delivered message: **From
+  newsletter@axiovexsystems.com, Subject "The Axiovex
+  Signal — October 14, 2026"**. The delivered copy does
+  not appear in the connected Gmail hub's search (checked
+  repeatedly 21:30–21:36Z), so a hub-side arrival
+  timestamp and direct header dump could not be captured;
+  delivery is proven end-to-end by the owner's own action
+  on the delivered email (next step) — arrival therefore
+  no later than 21:33:30Z, ~3 minutes after the send.
+- **List-Unsubscribe header (verified in code + in use).**
+  The send path sets both headers on every message —
+  `functions/api/newsletter/_lib.js`: raw-header form
+  (line 209) and Graph `internetMessageHeaders` form
+  (lines 238–239): `List-Unsubscribe: <personalized-url>`
+  and `List-Unsubscribe-Post: List-Unsubscribe=One-Click`.
+  The owner exercised the unsubscribe from the delivered
+  issue itself (next step), which is the functional proof.
+- **Step 4 — unsubscribe + zero-send (DONE — unsubscribe
+  executed by the OWNER).** At ~17:33 ET the owner
+  directed: he had unsubscribed himself from the
+  delivered test issue and would resubscribe manually;
+  the agent was switched to verify-and-record only. D1
+  verification (verbatim): `status = 'unsubscribed'`,
+  `unsubscribed_at = '2026-10-09T21:33:30.695Z'`,
+  `confirmed_at = '2026-10-09T21:27:42.761Z'`,
+  `source = 'live-loop-test-retry'`; the unsubscribe is
+  carried on the subscriber row (status + timestamp —
+  the schema has no separate suppression table; that row
+  is the suppression record the send path consults).
+  Second send of the same issue (agent-run, state-neutral)
+  at **2026-10-09T21:34:34Z→36Z**: `sent 0, throttled 0,
+  blocked 0, failed 0`; sends log row id 2:
+  recipient_count 0, sent_count 0. Post-send gauge:
+  **"Sender gauge: 0 active subscribers (750 below the
+  750 PLAN threshold); health overrides: none."** The
+  subscriber row was unchanged by the second send
+  (status/timestamp identical on re-query). **Live
+  C-020-2 falsifier: PASS** (the unsubscribed address
+  receives nothing). The remaining C-020-1/C-020-2 paths
+  (pending-address exclusion, resubscribe-without-confirm)
+  stand on the 24/24 harness proof from the build record.
+- **Step 5 — restore: OWNER-CANCELLED.** Per the owner's
+  2026-10-09 ~17:33 ET direction, the agent did NOT
+  resubscribe or reconfirm him. **Final state:
+  `tristen@axiovexsystems.com` = `unsubscribed`
+  (2026-10-09T21:33:30.695Z), awaiting the owner's manual
+  resubscribe.** T009 is checked on the strength of the
+  live send + owner-executed unsubscribe + live
+  zero-send falsifier above.
