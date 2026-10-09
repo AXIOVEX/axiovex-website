@@ -134,3 +134,19 @@ the weekly report; the push-triggered check stays as-is.
   rollups as authoritative over adaptive samples (phantom-status
   guard) — implemented after the Oct 6 incident investigation
   attributed all server failures to staging.
+- **Amendment 3 (2026-10-09, owner direction):** the monthly report
+  moves from the 1st of the month to the **30th** (in February, the
+  month's last day). FR-004's date is superseded accordingly. Reason:
+  the report for a month is produced only after every monthly input
+  it draws on has landed — the Michigan state workforce release
+  (~the 20th of the following month), the county/metro revision
+  (~the 28th), and the month's final weekly report — so its insights
+  can cite checked reasons (per the in-depth numbers rule) instead
+  of preceding the evidence. Implemented in cron
+  `website-analytics-monthly`: scheduled on the 28th–31st with an
+  in-job date gate that produces the report only on the 30th (or
+  February's last day). First run under the new date: the September
+  2026 report on 2026-10-30. The known tradeoff is accepted:
+  Cloudflare's adaptive detail retains 31 days, so the monthly
+  top-content section leans on the stored daily snapshots (the
+  job's existing FR-006 fallback).
