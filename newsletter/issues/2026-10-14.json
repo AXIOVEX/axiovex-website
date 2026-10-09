@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-14",
+  "lede": "Michigan manufacturing is still adding jobs → and the fall calendar already holds 120 announced Michigan losses to weigh against them.",
+  "whatChanged": [
+    {
+      "lane": "Manufacturing & automation",
+      "items": [
+        {
+          "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers",
+          "source": "Manufacturing Dive",
+          "date": "2026-10-09",
+          "url": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/"
+        },
+        {
+          "title": "Thousands of manufacturing layoffs announced in September",
+          "source": "Manufacturing Dive",
+          "date": "2026-10-09",
+          "url": "https://www.manufacturingdive.com/news/manufacturing-layoffs-closures-warn-act-september-2026/832400/"
+        }
+      ]
+    },
+    {
+      "lane": "AI, standards & research",
+      "items": [
+        {
+          "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+          "source": "NIST",
+          "date": "2026-10-08",
+          "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
+        }
+      ]
+    },
+    {
+      "lane": "Michigan workforce & industry",
+      "items": [
+        {
+          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
+          "source": "Michigan WARN (LEO)",
+          "date": "2026-10-08",
+          "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75"
+        },
+        {
+          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+          "source": "Michigan WARN (LEO)",
+          "date": "2026-10-08",
+          "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation"
+        }
+      ]
+    },
+    {
+      "lane": "OT cybersecurity",
+      "items": [
+        {
+          "title": "Red Lion Controls N-Tron 700 Series",
+          "source": "CISA",
+          "date": "2026-10-08",
+          "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01"
+        },
+        {
+          "title": "Grid Protection Alliance openPDC and openHistorian",
+          "source": "CISA",
+          "date": "2026-10-08",
+          "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02"
+        }
+      ]
+    },
+    {
+      "lane": "Funding & policy",
+      "items": [
+        {
+          "title": "Energy Department Announces New Genesis Mission Awards to Advance Super Intelligence for Science",
+          "source": "U.S. Department of Energy",
+          "date": "2026-10-08",
+          "url": "https://www.energy.gov/articles/energy-department-announces-new-genesis-mission-awards-advance-super-intelligence-science"
+        },
+        {
+          "title": "U.S. Department of Energy Awards $96 Million to 67 Early Career Scientists",
+          "source": "U.S. Department of Energy",
+          "date": "2026-10-08",
+          "url": "https://www.energy.gov/articles/us-department-energy-awards-96-million-67-early-career-scientists"
+        }
+      ]
+    }
+  ],
+  "pulse": [
+    {
+      "label": "Manufacturing employment",
+      "display": "586.7k",
+      "delta": "+1.1k MoM",
+      "vintage": "August 2026 · preliminary as published"
+    },
+    {
+      "label": "Unemployment rate",
+      "display": "5.0%",
+      "delta": "+0.1 pts MoM",
+      "vintage": "August 2026 · preliminary as published"
+    },
+    {
+      "label": "Labor force",
+      "display": "4.85M",
+      "delta": null,
+      "vintage": "August 2026 · preliminary as published"
+    },
+    {
+      "label": "Total nonfarm employment",
+      "display": "4,505.9k",
+      "delta": null,
+      "vintage": "August 2026 · preliminary as published"
+    }
+  ],
+  "pulseSource": "U.S. Bureau of Labor Statistics",
+  "insights": [
+    {
+      "text": "Two Michigan WARN filings landed October 8: Lear Corporation's announced Sterling Heights closure (67 jobs, effective November 9) and HealthEdge / UST HealthProof's announced Detroit layoff (53 jobs, effective December 1). Announced is not completed — both are notices with effective dates still ahead, and this series tracks them as such."
+    },
+    {
+      "text": "August's Michigan figures — the newest published — show manufacturing employment up 1,100 on the month to 586,700 while the unemployment rate ticked up a tenth of a point to 5.0%: gains and softening in the same release. September's state figures, out October 20, will arbitrate which way the trend is actually moving."
+    },
+    {
+      "text": "Manufacturing Dive reports thousands of manufacturing layoffs were announced nationally in September. How much of that national total is Michigan is unexplained in the source — the Michigan-specific record this week is the two WARN filings above, not the national headline."
+    }
+  ],
+  "article": {
+    "title": "Oakland County is losing jobs. Here is why.",
+    "date": "2026-10-08",
+    "url": "https://axiovexsystems.com/blog/oakland-county-job-losses/"
+  },
+  "watchlist": [
+    {
+      "label": "Michigan September employment release",
+      "date": "2026-10-20"
+    },
+    {
+      "label": "Michigan county & metro data revision",
+      "date": "2026-10-28"
+    },
+    {
+      "label": "Lear Corporation Sterling Heights closure takes effect (WARN, 67 jobs)",
+      "date": "2026-11-09"
+    }
+  ]
+}
