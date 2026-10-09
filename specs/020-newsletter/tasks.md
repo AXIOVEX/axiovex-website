@@ -32,7 +32,7 @@
   + source; sends log); staging binding wired to the staging
   Pages project; schema dump filed as C-020-4 evidence (no
   per-subscriber event tables/columns).
-- [ ] T004 (after T002, T003) Endpoints on staging:
+- [x] T004 (after T002, T003) Endpoints on staging:
   subscribe / confirm / unsubscribe (GET + RFC 8058 POST) /
   internal send endpoint (secret-gated), per
   FR-008/FR-010/FR-011/FR-014, mirroring
@@ -43,21 +43,21 @@
   oversized payload → rejected; honeypot filled → silently
   dropped; expired confirm token → WF-17 expired state;
   absent/wrong send-endpoint secret → rejected, no send.
-- [ ] T005 (after T004) Signup block (WF-G8) implemented on
+- [x] T005 (after T004) Signup block (WF-G8) implemented on
   staging `/signals/` in its drawn slot (below the Sources &
   method note, above the CTA band), spec 010 guards verified
   after sync; WF-17 landing pages implemented (confirmed /
   unsubscribed / expired / already-known states). Playwright
   screenshots at desktop 1440 + mobile 390 filed to
   `~/workspace/your_files/spec020-review/`.
-- [ ] T006 (after T001) Web editions: generator newsletter
+- [x] T006 (after T001) Web editions: generator newsletter
   pass renders `/newsletter/` (WF-15) and
   `/newsletter/<yyyy-mm-dd>/` (WF-16) from committed issue
   sources under `newsletter/issues/`; sitemap gains the
   archive + issue URLs; empty-archive state renders before
   the first issue. Screenshots at 1440 + 390 filed with
   T005's evidence.
-- [ ] T007 (after T006) Assembly + send tooling
+- [x] T007 (after T006) Assembly + send tooling
   (`scripts/newsletter/`): issue source assembled from the
   current committed snapshots; the three versions rendered
   from it; **C-020-3 audit** (item set + figures + vintages
@@ -66,7 +66,7 @@
   test issue and filed. Send path refuses to run without
   the per-issue approval marker (FR-005) and, in production
   mode, without the FR-018 postal address.
-- [ ] T008 (after T001) Privacy + footer copy on staging:
+- [x] T008 (after T001) Privacy + footer copy on staging:
   the FR-016 newsletter section added to `/privacy/`
   (existing sections unaltered in substance); email footer
   composed with manage/unsubscribe/view-in-browser/privacy
@@ -116,3 +116,63 @@
 
 - (empty — FR-020 gauge trips and other owner-presented
   follow-ups are recorded here when they occur.)
+
+## Build record — staging, 2026-10-09 (T002/T003 blocked; T004–T008 done; T009 harness-proven)
+
+- **T002 BLOCKED (owner step).** Needs Tristen's authenticated
+  tenant-admin session: create the shared mailbox
+  `newsletter@axiovexsystems.com`, the Entra app "Axiovex Website
+  Newsletter" (Mail.Send only), and the ApplicationAccessPolicy
+  scope lock, then place the client secret as Pages secrets on
+  the staging project (NEWSLETTER_GRAPH_TENANT_ID /
+  NEWSLETTER_GRAPH_CLIENT_ID / NEWSLETTER_GRAPH_CLIENT_SECRET).
+  The EXO Security Defaults window is the owner's to open (ops
+  record). Until then the send leg reports `not-configured` and
+  no real email can be sent. No Resend artifact exists or was
+  created (Amendment 1).
+- **T003 PARTIAL (owner step).** Schema written + applied in
+  the local harness (`scripts/newsletter/schema.sql` — the
+  C-020-4 schema evidence: no per-subscriber event tables or
+  columns). The D1 databases cannot be created with the current
+  Axiovex Ops token (no D1 scope — API returns 401): the owner
+  adds **D1: Edit** to the "Axiovex Ops" token in the Cloudflare
+  dashboard (token editing is the sanctioned dashboard use), or
+  creates `axiovex-newsletter-staging` + `axiovex-newsletter`
+  there; the NEWSLETTER_DB binding is then a Pages API call.
+  Live staging endpoints therefore fail closed (503) by design.
+- **T004 DONE** (staging commits 11b6b48): endpoints as specced;
+  Turnstile on staging uses the CF public test pair (the real
+  widget is T011); rate limiting is D1-backed in-endpoint (the
+  zone rule lands at promotion). Negative ladder in the harness:
+  honeypot / oversized / missing token / failing token / no send
+  secret / no approval marker all behave as specced.
+- **T005 DONE** (0e48f86, 89cb848): WF-G8 on /signals/ in its
+  drawn slot; WF-17 states rendered by the endpoints. Screenshots
+  desktop 1440 + mobile 390 in ~/workspace/your_files/spec020-review/.
+- **T006 DONE**: generator newsletter pass; /newsletter/ (WF-15)
+  + /newsletter/2026-10-14/ (WF-16) live on staging; sitemap 13
+  URLs. (The empty-archive state renders when no issue sources
+  exist — same code path, untested with zero issues on staging
+  because the test issue is committed.)
+- **T007 DONE**: assemble/render/send tooling; **C-020-5 audit
+  PASS** (4 Pulse figures + 9 items traced to data/signals.json);
+  **C-020-3 audit PASS** (email HTML / text / web agree); the
+  FR-020 gauge is wired (sends log carries attempted/sent/
+  duration/bounces/complaints/throttle events; gauge line in
+  every send summary and via --gauge-only).
+- **T008 DONE** (3ccdd9c): FR-016 privacy section on staging
+  (§13; Disclaimer renumbered §14); the email footer carries the
+  FR-018 placeholder line verbatim. Legal review stays with
+  T010 (CLOSED).
+- **T009 HARNESS-PROVEN, live loop pending T002+T003.** The full
+  FR-017 loop ran against the real endpoint code with a
+  D1-shim + captured mail (scripts/newsletter/test-harness.mjs):
+  **24/24 checks pass**, including C-020-1 (pending address: 0
+  sent) and C-020-2 (resubscribe-without-confirm: 0 sent;
+  one-click POST and footer GET both flip immediately; fresh
+  confirmation restores delivery). Evidence:
+  ~/workspace/your_files/spec020-review/harness-log.txt +
+  screenshots. The live loop (real D1 + real Graph mail to
+  tristen@axiovexsystems.com) runs the moment T002/T003 clear.
+- **T010 stays CLOSED** — not checked, not approached.
+
