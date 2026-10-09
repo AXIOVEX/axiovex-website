@@ -103,7 +103,7 @@ export async function onRequest(context) {
   for (const email of batch) {
     const token = await unsubscribeToken(env, email);
     const unsubUrl = `${base}/newsletter/unsubscribe?t=${token}`;
-    const personalize = (s) => s.split("{{UNSUBSCRIBE_URL}}").join(unsubUrl).split("{{WEB_URL}}").join(`${base}/newsletter/${issue}/`);
+    const personalize = (s) => s.split("{{UNSUBSCRIBE_URL}}").join(unsubUrl).split("{{WEB_URL}}").join(`${base}/newsletter/${issue}/`).split("{{PRIVACY_URL}}").join(`${base}/privacy/`);
     const status = await sendNewsletterMail(env, {
       to: email,
       subject,

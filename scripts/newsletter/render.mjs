@@ -5,8 +5,10 @@
 //
 // Output: newsletter/issues/<date>.email.json
 //   { subject, html, text, footerAddress }
-// {{UNSUBSCRIBE_URL}} and {{WEB_URL}} stay as placeholders in both
-// parts — the send job personalizes them per recipient (FR-011/14).
+// {{UNSUBSCRIBE_URL}}, {{WEB_URL}}, and {{PRIVACY_URL}} stay as
+// placeholders in both parts — the send job personalizes them per
+// recipient on the environment's site base (FR-011/14; the privacy
+// link is required in every issue footer, owner direction 2026-10-09).
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
@@ -66,7 +68,7 @@ export function renderEmail(issue) {
   t.push('—');
   t.push('Read this edition on the web: {{WEB_URL}}');
   t.push('Unsubscribe in one click: {{UNSUBSCRIBE_URL}}');
-  t.push('Privacy policy: https://axiovexsystems.com/privacy/');
+  t.push('Privacy policy: {{PRIVACY_URL}}');
   t.push('Axiovex Systems, LLC · ' + address);
   const text = t.join('\n');
 
@@ -108,7 +110,7 @@ export function renderEmail(issue) {
     ${sections}
     <div style="border-top:1px solid rgba(0,222,246,.25);margin-top:34px;padding-top:18px;color:rgba(247,252,255,.6);font-size:13px;line-height:1.7">
       <p style="margin:0 0 8px">Assembled from the committed Signals snapshot and the Michigan data pack, with vintages as labeled.</p>
-      <p style="margin:0 0 8px"><a href="{{WEB_URL}}" style="color:#00DEF6">Read this edition on the web</a> · <a href="https://axiovexsystems.com/privacy/" style="color:#00DEF6">Privacy policy</a> · <a href="{{UNSUBSCRIBE_URL}}" style="color:#00DEF6">Unsubscribe in one click</a></p>
+      <p style="margin:0 0 8px"><a href="{{WEB_URL}}" style="color:#00DEF6">Read this edition on the web</a> · <a href="{{PRIVACY_URL}}" style="color:#00DEF6">Privacy policy</a> · <a href="{{UNSUBSCRIBE_URL}}" style="color:#00DEF6">Unsubscribe in one click</a></p>
       <p style="margin:0">Axiovex Systems, LLC · ${esc(address)}</p>
     </div>
   </div>

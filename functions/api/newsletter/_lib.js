@@ -279,6 +279,10 @@ export async function sendNewsletterMail(env, { to, subject, html, text, unsubsc
 
 export function confirmationMail(confirmUrl) {
   const subject = "Confirm your subscription — The Axiovex Signal";
+  // Spec 020 (owner direction 2026-10-09): the confirmation email is
+  // the consent moment, so it carries the privacy policy link next to
+  // the confirm action, on the same site base as the confirm link.
+  const privacyUrl = `${new URL(confirmUrl).origin}/privacy/`;
   const text = [
     "You asked to subscribe to The Axiovex Signal, Axiovex Systems' weekly newsletter.",
     "",
@@ -287,6 +291,9 @@ export function confirmationMail(confirmUrl) {
     "",
     "No click, no emails: until you confirm, nothing is sent to this address.",
     "If you did not ask for this, ignore this message — nothing will be sent.",
+    "",
+    "We collect only your email address. One email a week, no tracking pixels or per-reader analytics, and you can unsubscribe in one click, any time.",
+    `Privacy policy: ${privacyUrl}`,
     "",
     "— Axiovex Systems",
   ].join("\n");
@@ -298,6 +305,7 @@ export function confirmationMail(confirmUrl) {
     <p style="color:rgba(247,252,255,.78);line-height:1.65">You asked to subscribe to The Axiovex Signal, Axiovex Systems&rsquo; weekly newsletter. Click below to confirm — the link is good for 48 hours.</p>
     <p style="margin:24px 0"><a href="${confirmUrl}" style="background:#00DEF6;color:#081F32;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:8px">Confirm subscription &rarr;</a></p>
     <p style="color:rgba(247,252,255,.6);line-height:1.6;font-size:13.5px">No click, no emails: until you confirm, nothing is sent to this address. If you did not ask for this, ignore this message — nothing will be sent.</p>
+    <p style="color:rgba(247,252,255,.6);line-height:1.6;font-size:13.5px">We collect only your email address. One email a week, no tracking pixels or per-reader analytics, and you can unsubscribe in one click, any time. <a href="${privacyUrl}" style="color:#00DEF6">Privacy policy</a></p>
     <p style="color:rgba(247,252,255,.6);font-size:13.5px">— Axiovex Systems</p>
   </div>
 </body></html>`;
