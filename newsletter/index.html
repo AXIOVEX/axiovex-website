@@ -165,6 +165,6 @@
   </footer>
   <script src="/site.v1.js"></script>
   <script src="/newsletter-signup.v1.js" defer></script>
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=initAxiovexNewsletterTurnstile" async defer></script>
+  <!-- No Turnstile script here (spec 020 FR-008): newsletter-signup.v1.js loads it lazily on first interaction with the email field. -->
 </body>
 </html>
