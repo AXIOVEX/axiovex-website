@@ -1,17 +1,10 @@
 {
-  "updatedUtc": "2026-10-09T00:22:18.670Z",
+  "updatedUtc": "2026-10-09T04:20:51.103Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
-        {
-          "source": "NIST",
-          "sourceId": "nist",
-          "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
-          "link": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science",
-          "date": "2026-10-08"
-        },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
@@ -27,11 +20,11 @@
           "date": "2026-10-08"
         },
         {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
-          "link": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/",
-          "date": "2026-10-07"
+          "source": "NIST",
+          "sourceId": "nist",
+          "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+          "link": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science",
+          "date": "2026-10-08"
         },
         {
           "source": "Manufacturing Dive",
@@ -57,8 +50,15 @@
         {
           "source": "Automation Alley",
           "sourceId": "automation-alley",
-          "title": "Why Supply Chain Automation Depends on Alignment, Not Just Technology",
-          "link": "https://automationalley.com/2026/10/06/why-supply-chain-automation-depends-on-alignment-not-just-technology/",
+          "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
+          "link": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/",
+          "date": "2026-10-07"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "2027 manufacturing conferences and trade shows",
+          "link": "https://www.manufacturingdive.com/news/2027-manufacturing-conferences-and-trade-shows/832164/",
           "date": "2026-10-06"
         }
       ]
@@ -249,9 +249,9 @@
         {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → VETS ACCESS LLC — $16,525 award, October 6, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C24827P0029_3600_-NONE-_-NONE-",
-          "date": "2026-10-06"
+          "title": "Department of Veterans Affairs → THE CREATIVE MOBILITY GROUP INC. — $16,960 award, October 7, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0031_3600_-NONE-_-NONE-",
+          "date": "2026-10-07"
         },
         {
           "source": "Federal Register",
@@ -275,18 +275,18 @@
           "date": "2026-10-05"
         },
         {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Justice → EMERGENCY TECHNOLOGY INC — $13,549 award, October 2, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_15UBAS27F00000012_1542_15UC0C22D00001728_1542",
-          "date": "2026-10-02"
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
+          "title": "Energy Department Announces Up to $400 Million for Basic Research to Advance the Frontiers of Science",
+          "link": "https://www.energy.gov/articles/energy-department-announces-400-million-basic-research-advance-frontiers-science",
+          "date": "2026-10-01"
         },
         {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → BOWHEAD CORPORATION — $25,978 award, October 2, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C26227P0053_3600_-NONE-_-NONE-",
-          "date": "2026-10-02"
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
+          "title": "Energy Department Announces Speed to Power Investments Across 26 States to Lower Electricity Costs and Improve Grid Reliability",
+          "link": "https://www.energy.gov/articles/energy-department-announces-speed-power-investments-across-26-states-lower-electricity",
+          "date": "2026-09-24"
         }
       ]
     }
