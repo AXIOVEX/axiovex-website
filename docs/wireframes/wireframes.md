@@ -690,7 +690,7 @@ as accordion rows.
   Implemented on staging per spec 010; promotion
   awaits Tristen's staging review (spec 018 T011).
 - **2026-10-09** — NEW FRAMES PROPOSED (spec
-  020-newsletter — **PROPOSED · PENDING OWNER APPROVAL —
+  020-newsletter — **APPROVED 2026-10-09 (T001) · IMPLEMENTATION ON STAGING —
   NOT approved, NOT implemented**): Tristen directed a
   weekly newsletter ("The Axiovex Signal" — corrected
   from an initial daily idea the same day), staged and
