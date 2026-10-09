@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-09T11:20:53.307Z",
+  "updatedUtc": "2026-10-09T14:22:03.375Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -39,10 +39,10 @@
     {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+      "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
       "source": "Michigan WARN (LEO)",
       "date": "2026-10-08",
-      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation"
+      "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75"
     },
     {
       "lane": "ot-security",
@@ -79,10 +79,10 @@
     {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
+      "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
       "source": "Michigan WARN (LEO)",
       "date": "2026-10-08",
-      "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75"
+      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation"
     },
     {
       "lane": "michigan",
