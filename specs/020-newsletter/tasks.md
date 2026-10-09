@@ -9,7 +9,7 @@
   **APPROVED by Tristen Pierson, 2026-10-09** (Axiovex chat:
   "Approve — build it on staging and send me the test issue").
   T010 (FR-018 launch decisions + promotion) remains CLOSED.
-- [ ] T002 (after T001) Microsoft 365 sending lane
+- [x] T002 (after T001) Microsoft 365 sending lane
   (Amendment 1 — replaces the original Resend task):
   dedicated shared mailbox `newsletter@axiovexsystems.com`
   created (founders Full Access + Send As); dedicated
@@ -25,6 +25,22 @@
   per the ops record) — if no session is available, this
   task is the recorded blocker and the build proceeds with
   the send leg stubbed to the test allowlist.
+  **Done 2026-10-09:** shared mailbox
+  `newsletter@axiovexsystems.com` ("Axiovex Newsletter")
+  created; Entra app **"Axiovex Website Newsletter"**,
+  client ID `f1bbcf9c-cf7b-4340-82fa-b33699e14aaa`,
+  Mail.Send application permission with admin consent
+  granted; client secret (expires 2028-10-08) stored ONLY
+  as Pages secrets on `axiovex-website-staging`
+  (`NEWSLETTER_GRAPH_TENANT_ID` / `NEWSLETTER_GRAPH_CLIENT_ID`
+  / `NEWSLETTER_GRAPH_CLIENT_SECRET`); staging redeployed
+  after the secrets were set. **ApplicationAccessPolicy
+  NOT applied** — Exchange Cloud Shell requires an Azure
+  subscription the tenant does not have; the scope lock is
+  carried as a **pre-production hardening item** (must land
+  before the T011 promotion; the app today holds tenant-wide
+  Mail.Send, mitigated by the secret existing only as a
+  Pages secret on the newsletter projects).
 - [x] T003 (after T001) D1: `axiovex-newsletter-staging` and
   `axiovex-newsletter` databases created in the Axiovex
   Cloudflare account; schema applied per FR-009 (subscribers
@@ -191,5 +207,68 @@
   ~/workspace/your_files/spec020-review/harness-log.txt +
   screenshots. The live loop (real D1 + real Graph mail to
   tristen@axiovexsystems.com) runs the moment T002/T003 clear.
+- **T010 stays CLOSED** — not checked, not approached.
+
+## Live-loop record — staging, 2026-10-09 (T009 PAUSED at step 2 — Microsoft-side delivery lag)
+
+- **Pre-loop prep (same day).** The operator copy of
+  `NEWSLETTER_SEND_SECRET` had not been persisted by the
+  build (Pages secrets are write-only), so the send secret
+  was **rotated**: a fresh value was set on
+  `axiovex-website-staging` via the cf-ops `pages set-env`
+  contract (all other secrets preserved), the operator copy
+  was stored in the ops store (`~/workspace/system/axiovex-ops/.env`,
+  mode 600, presence only), staging was redeployed
+  (deployment `6a1140b6`, success), and the tool verified
+  against the endpoint in `--gauge-only` mode:
+  **"Sender gauge: 0 active subscribers (750 below the 750
+  PLAN threshold); health overrides: none."** D1 baseline:
+  `subscribers` empty.
+- **Step 1 — subscribe (DONE).** POST
+  `https://staging.axiovexsystems.com/api/newsletter/subscribe`
+  for `tristen@axiovexsystems.com` (Turnstile public test
+  token) at **2026-10-09T20:28:01Z** →
+  `{"ok":true, "mail":"sent"}` — the confirmation mail was
+  accepted by Microsoft Graph this time (no `not-configured`).
+  D1 row confirmed: `pending`, `confirm_token_hash` set,
+  expiry 2026-10-11T20:28:03Z.
+- **Step 2 — confirmation delivery (PAUSED).** The
+  confirmation email had **not arrived** in the owner's
+  Gmail hub (which `tristen@` forwards to) after repeated
+  `in:anywhere` searches at 20:29Z, 20:32Z, 20:34Z, 20:36Z,
+  20:38Z, 20:44Z and 20:46Z. Control evidence: other mail
+  to the same address arrives normally (Cloudflare SSO
+  notice 19:03Z; inbox mail 19:54Z), so the hub + forwarding
+  path is healthy — non-delivery is on the Microsoft
+  sending side, consistent with **brand-new shared-mailbox
+  provisioning lag** (mailbox created ~20:17–20:22Z;
+  Microsoft's stated new-shared-mailbox provisioning window
+  runs up to 60 minutes; Graph accepted both sends with
+  HTTP 202, i.e. "sent" at the function layer — no Graph
+  error was surfaced to capture).
+- **Retry (DONE, per protocol — wait + one retry).** Second
+  subscribe POST at **20:34:34Z** → `{"ok":true,
+  "mail":"sent"}`; D1 row refreshed (source
+  `live-loop-test-retry`, new expiry
+  **2026-10-11T20:34:35Z**). NOTE: the retry replaced the
+  confirm token hash — **only the retry email's link can
+  confirm**; the first email's link is dead. Still no
+  delivery by 20:46:54Z (~12 min after the retry, ~29 min
+  after mailbox creation), so the loop was stopped here
+  rather than churning further tokens.
+- **Steps 3–5 NOT RUN** (issue send, unsubscribe falsifier,
+  restore) — they depend on the step-2 confirmation.
+  Nothing was sent from the issue send endpoint; the sends
+  log is untouched.
+- **Resume path.** When either copy of the confirmation
+  email arrives (or Graph delivery is re-verified), resume
+  at step 2 using the **retry** email's link (row is
+  `pending` until 2026-10-11T20:34:35Z; if it lapses, one
+  fresh subscribe POST restarts cleanly). Then: confirm →
+  send issue 2026-10-14 (approval basis: owner approved the
+  staging test send in chat 2026-10-09) → verify delivery +
+  List-Unsubscribe header → unsubscribe from the delivered
+  email → second send must report 0 → resubscribe +
+  reconfirm to restore Active.
 - **T010 stays CLOSED** — not checked, not approached.
 
