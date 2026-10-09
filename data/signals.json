@@ -1,10 +1,31 @@
 {
-  "updatedUtc": "2026-10-09T14:22:03.375Z",
+  "updatedUtc": "2026-10-09T17:22:50.662Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers",
+          "link": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/",
+          "date": "2026-10-09"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Thousands of manufacturing layoffs announced in September",
+          "link": "https://www.manufacturingdive.com/news/manufacturing-layoffs-closures-warn-act-september-2026/832400/",
+          "date": "2026-10-09"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Blue Origin, PPG and more invest in manufacturing facilities",
+          "link": "https://www.manufacturingdive.com/news/blue-origin-ppg-cleveland-cliffs-more-facility-investments/832603/",
+          "date": "2026-10-09"
+        },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
@@ -27,13 +48,6 @@
           "date": "2026-10-08"
         },
         {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
-          "link": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/",
-          "date": "2026-10-07"
-        },
-        {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
           "title": "Boston Dynamics hires former Amazon AI leader as CEO",
@@ -46,20 +60,6 @@
           "title": "Manufacturability, costing cited as key areas of AI impact: Xometry survey",
           "link": "https://www.manufacturingdive.com/news/manufacturability-costing-ai-impact-xometry-survey/832307/",
           "date": "2026-10-07"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Anduril, US Navy to build $6.6B shipyard in Maryland",
-          "link": "https://www.manufacturingdive.com/news/anduril-industries-u-s-navy-arsenal-2-shipyard-baltimore-county-maryland/832275/",
-          "date": "2026-10-07"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Why Supply Chain Automation Depends on Alignment, Not Just Technology",
-          "link": "https://automationalley.com/2026/10/06/why-supply-chain-automation-depends-on-alignment-not-just-technology/",
-          "date": "2026-10-06"
         }
       ]
     },
@@ -111,15 +111,15 @@
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
-          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
-          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
+          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
+          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
           "date": "2026-10-08"
         },
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
-          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
-          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
+          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
           "date": "2026-10-08"
         },
         {

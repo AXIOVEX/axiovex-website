@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-09T14:22:03.375Z",
+  "updatedUtc": "2026-10-09T17:22:50.662Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -23,10 +23,26 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Teams often miss preventive maintenance, raising costs and risks: Limble",
+      "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers",
       "source": "Manufacturing Dive",
-      "date": "2026-10-08",
-      "url": "https://www.manufacturingdive.com/news/maintenance-teams-downtime-AI-limble/832416/"
+      "date": "2026-10-09",
+      "url": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Thousands of manufacturing layoffs announced in September",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-09",
+      "url": "https://www.manufacturingdive.com/news/manufacturing-layoffs-closures-warn-act-september-2026/832400/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Blue Origin, PPG and more invest in manufacturing facilities",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-09",
+      "url": "https://www.manufacturingdive.com/news/blue-origin-ppg-cleveland-cliffs-more-facility-investments/832603/"
     },
     {
       "lane": "ai-standards",
@@ -39,10 +55,10 @@
     {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
+      "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
       "source": "Michigan WARN (LEO)",
       "date": "2026-10-08",
-      "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75"
+      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation"
     },
     {
       "lane": "ot-security",
@@ -63,6 +79,14 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
+      "title": "Teams often miss preventive maintenance, raising costs and risks: Limble",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-08",
+      "url": "https://www.manufacturingdive.com/news/maintenance-teams-downtime-AI-limble/832416/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
       "title": "Wolfspeed signs $1.5B DOD loan for semiconductor production, R&D",
       "source": "Manufacturing Dive",
       "date": "2026-10-08",
@@ -79,10 +103,10 @@
     {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+      "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
       "source": "Michigan WARN (LEO)",
       "date": "2026-10-08",
-      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation"
+      "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75"
     },
     {
       "lane": "michigan",
@@ -91,30 +115,6 @@
       "source": "Axiovex",
       "date": "2026-10-08",
       "url": "https://axiovexsystems.com/blog/oakland-county-job-losses/"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Grid Protection Alliance openPDC and openHistorian",
-      "source": "CISA",
-      "date": "2026-10-08",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Satel Netco Design",
-      "source": "CISA",
-      "date": "2026-10-08",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "U.S. Department of Energy Awards $96 Million to 67 Early Career Scientists",
-      "source": "U.S. Department of Energy",
-      "date": "2026-10-08",
-      "url": "https://www.energy.gov/articles/us-department-energy-awards-96-million-67-early-career-scientists"
     }
   ],
   "signalsUrl": "/signals/"
