@@ -43,8 +43,8 @@ This file is the index, the gate rule, and the revision log.
   spec 016 T005))
 - WF-15 Newsletter archive index · WF-16 Newsletter issue
   page · WF-17 Newsletter landing pages (added 2026-10-09,
-  spec 020-newsletter — **PROPOSED · PENDING OWNER
-  APPROVAL, NOT implemented**: the public archive and web
+  spec 020-newsletter — **APPROVED 2026-10-09
+  (T001) · IMPLEMENTATION ON STAGING**: the public archive and web
   editions of The Axiovex Signal weekly newsletter; WF-15
   on the WF-03 pattern, WF-16 on the WF-04 article pattern,
   WF-17 a reduced WF-05-shell state set — confirmed /
@@ -62,7 +62,7 @@ This file is the index, the gate rule, and the revision log.
   widget (spec 008 — approved + implemented 2026-10-06) · WF-G7
   Breaking news banner (proposed 2026-10-06 by spec 012 —
   PENDING OWNER APPROVAL) · WF-G8 Newsletter signup block
-  (proposed 2026-10-09 by spec 020 — PENDING OWNER APPROVAL:
+  (added 2026-10-09 by spec 020 — APPROVED 2026-10-09 (T001):
   email-only signup for The Axiovex Signal, confirmation-first
   copy, no-tracking fine print; v1 placement on /signals/ only,
   drawn in place at WF-11)

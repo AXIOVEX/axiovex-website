@@ -15,22 +15,29 @@
    **The approval gate (tasks.md T001) is the owner's review of
    this package** — unlike spec 018, no copy or design decision
    has been pre-approved; the frames are drafts for his review.
-2. **Resend account + domain (T002) — CONFLICT FLAGGED.** The
-   Resend credential currently connected in this environment
-   is scoped to a different project's domain (its send tooling
-   requires a From address on that project's verified domain).
-   Axiovex email must not ride another project's account or
-   domain — the isolation rule cuts both ways. **Plan**: a
-   Resend account for Axiovex (free tier), `axiovexsystems.com`
-   verified in it, and Resend's SPF + DKIM records added to
-   the Axiovex Cloudflare zone via the API-first rule (cf-ops;
-   the canonical zone carries no Microsoft 365 mail — M365
-   lives on the hyphenated alias zone, whose records are never
-   touched). The API key lives only as a Pages secret and in
-   the ops store, referred to by presence, never printed.
-   Reply-To: confirm-or-create the `newsletter@` alias /
-   mailbox in the Axiovex tenant so replies land somewhere
-   monitored.
+2. **Microsoft 365 sending lane (T002) — AMENDED
+   2026-10-09 (owner direction).** Resend was considered
+   and replaced by the Axiovex tenant before any build:
+   (a) a dedicated shared mailbox
+   `newsletter@axiovexsystems.com` (founders hold Full
+   Access + Send As, as with Start/Legal; it is both the
+   From and the Reply-To, and the NDR/suppression-evidence
+   inbox per FR-013); (b) a dedicated Entra app
+   registration **"Axiovex Website Newsletter"** —
+   Mail.Send application permission only — scoped to the
+   newsletter mailbox alone by an **Exchange Application
+   Access Policy** (the spec 005 scope-lock pattern: a
+   scope group whose sole member is the newsletter
+   mailbox; verify another mailbox = Denied); (c) the
+   client secret stored only as Pages secrets + the ops
+   store, expiry on the renewal watch. Tenant-admin steps
+   run through the established route (EXO admin with
+   Tristen's authenticated session, per the ops record —
+   the Security Defaults window is his to open, in the
+   moment). **No DNS change**: the tenant already
+   authenticates this domain's mail (SPF/DKIM/DMARC);
+   no other project's account, domain, or credential is
+   touched — the isolation rule cuts both ways.
 3. **Data (T003)**: D1 databases `axiovex-newsletter`
    (production) and `axiovex-newsletter-staging`, schema per
    FR-009 (subscribers + sends log; token columns hold
@@ -69,18 +76,18 @@
    `status = 'active'` at send time, writes the sends log,
    and refuses to run if the approval marker or the
    FR-018 postal address is absent in production mode.
-   **Ceiling arithmetic, flagged honestly**: Resend's free
-   tier is 3,000 emails/month **and 100/day**. The monthly
-   cap fits ~700 subscribers at a weekly cadence; the daily
-   cap binds a single-slot Wednesday send at ~100
-   recipients unless a send is batched across days (which
-   breaks the single send slot) — so the honest single-slot
-   v1 ceiling is ~100 active subscribers, and ~700 only
-   under multi-day batching. Either way, crossing a cap is
-   an owner decision (paid tier vs. cadence change), never
-   an automatic upgrade (C-020-6). At launch scale (an
-   allowlist of one) this is a recorded constraint, not a
-   blocker.
+   **Exchange limits, stated plainly (Amendment 1)**:
+   the send job paces to **at most 30 messages/minute**
+   and Exchange Online's ceiling is **10,000
+   recipients/day**. A 100-recipient send takes ~4
+   minutes at the pacing cap; the list cannot approach
+   the daily ceiling at this series' scale. There is no
+   paid-tier question in this lane — the tenant licensing
+   already in place carries it — and crossing a limit is
+   an owner decision, never an automatic change
+   (C-020-6). Per-recipient sends mean the send job runs
+   in chunks under the pacing cap and records per-chunk
+   results in the sends log.
 7. **Send slot — Wednesday 10:00 AM ET (rationale)**.
    B2B email engagement peaks Tue–Thu, mid-morning local.
    Monday is consumed by the weekly analytics/SEO cycle and
@@ -126,13 +133,22 @@
 
 ## Tradeoffs recorded
 
-- **Resend vs. Microsoft Graph (spec 005's sender).** Graph
-  could send from the tenant with no new processor, but it
-  offers no bounce/complaint webhooks, no List-Unsubscribe
-  support posture, and bulk sending from the tenant puts the
-  domain's everyday mail reputation at risk. Resend is named
-  as a processor in the privacy section instead — the honest
-  cost of the cleaner sending lane.
+- **Sending lane — Resend considered, Graph chosen
+  (owner direction, 2026-10-09).** The package originally
+  specced Resend (a separate free-tier account). Tristen
+  directed sending through the Axiovex Microsoft 365
+  tenant instead: one processor fewer, mail from
+  Axiovex's own tenant and domain, no second account to
+  govern, and the spec 005 mechanism already proven on
+  this site. The honest costs: no bounce/complaint
+  webhooks (suppression consumes mailbox NDR evidence
+  per FR-013, processed on the cycle), no provider
+  List-Unsubscribe machinery (our endpoints carry the
+  RFC 8058 headers and paths themselves — they did
+  anyway), and Exchange's 30/minute pacing (immaterial
+  at this cadence). Graph also offers no open/click
+  tracking — which FR-015 declines on posture grounds
+  regardless.
 - **D1 vs. a managed newsletter platform.** A platform
   (Buttondown/Mailchimp class) would add a monthly cost, a
   second privacy surface, and per-subscriber tracking by

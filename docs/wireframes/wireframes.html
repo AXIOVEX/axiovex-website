@@ -307,7 +307,7 @@
     <li><strong>Built in, never fetched.</strong> The banner is injected by the site generator at build time from the committed data file (spec 004 architecture) — no client-side fetching, no third-party runtime calls. It is first in reading order: a <span style="color:var(--muted)">role=&quot;region&quot;</span> labeled &ldquo;Breaking news&rdquo;, a visible focus state on the link and the button, and no motion of any kind.</li>
   </ul>
 
-  <h2 class="wf-title"><span class="wf-id">WF-G8 · Global — Newsletter signup block</span>PROPOSED 2026-10-09 (spec 020-newsletter) — PENDING OWNER APPROVAL · NOT approved, NOT implemented</h2>
+  <h2 class="wf-title"><span class="wf-id">WF-G8 · Global — Newsletter signup block</span>APPROVED 2026-10-09 (spec 020 T001) · IMPLEMENTATION ON STAGING</h2>
   <p class="wf-sub">A compact signup block for <b>The Axiovex Signal</b>, Axiovex&rsquo;s weekly email edition of the Signals board. <b>v1 placement: /signals/ only</b> — below the Sources &amp; method note, above the CTA band (drawn in place at WF-11). The block is drawn as a reusable component so a later, separately approved placement (home, article foot) inherits it unchanged; no other page carries it in v1. One field, one button: the form collects an <b>email address only</b>. Subscribing starts a <b>double opt-in</b> — the block never claims &ldquo;you&rsquo;re subscribed&rdquo;; it says a confirmation email is on its way, because until the reader clicks it, they are not subscribed (spec 020 FR-010).</p>
   <div class="frame">
     <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">component · first placement: /signals/</span></div>
@@ -953,7 +953,7 @@
         <p style="color:var(--faint);font-size:12.5px;margin-top:10px"><b style="color:var(--muted)">Amended 2026-10-08:</b> the note renders as fine print — 13px type, full container width (1100px), left-aligned — instead of body-size type in a centered 68ch column, so the full methodology text takes a few wide lines instead of a tall narrow block. Wording unchanged, including the closing &ldquo;See our Disclaimer.&rdquo; link. The Documents page note (WF-10) keeps the standard note style.</p>
       </div>
       <div class="blk solid" style="text-align:center">
-        <span class="tag">Newsletter signup block · WF-G8 — PROPOSED 2026-10-09 (spec 020) · PENDING OWNER APPROVAL</span>
+        <span class="tag">Newsletter signup block · WF-G8 — APPROVED 2026-10-09 (spec 020 T001)</span>
         <p class="eyebrow">THE AXIOVEX SIGNAL — WEEKLY</p>
         <p class="h2-real">The week, in your inbox.</p>
         <p style="color:var(--muted);font-size:14.5px">Email field + Subscribe button; confirmation-first (double opt-in); drawn in full at <b style="color:var(--ink)">WF-G8</b>. Placement: here — below the Sources &amp; method note, above the CTA band. v1 places the block on this page only.</p>
@@ -1348,8 +1348,8 @@
       <li>WF-G1 (revised, spec 008) — Signals link after Blog, in the desktop row and the hamburger panel</li>
       <li>WF-G6 / WF-12 (new, spec 008) — Signals floating widget: collapsed live-dot pill + expanded panel (Pulse row, 3 freshest headlines, All signals), every page except /signals/</li>
       <li>WF-G7 (new, spec 012 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE) — Breaking news banner: curated deep-red strip above the nav on every page; whole strip links to the source story; verbatim headline + source + published time; dismiss remembered per entry; 72-hour max life; zero layout trace when no entry is active</li>
-      <li>WF-G8 (new, spec 020 — PROPOSED 2026-10-09 · PENDING OWNER APPROVAL) — Newsletter signup block: email-only form, confirmation-first copy, no-tracking fine print; v1 placement /signals/ only (slot drawn at WF-11)</li>
-      <li>WF-15 / WF-16 / WF-17 (new, spec 020 — PROPOSED 2026-10-09 · PENDING OWNER APPROVAL) — Newsletter archive index (WF-03 pattern) · issue page (WF-04 pattern, one committed source with the email) · token landing pages (confirmed / unsubscribed / expired / already-in-state)</li>
+      <li>WF-G8 (new, spec 020 — APPROVED 2026-10-09 (T001) · IMPLEMENTATION ON STAGING) — Newsletter signup block: email-only form, confirmation-first copy, no-tracking fine print; v1 placement /signals/ only (slot drawn at WF-11)</li>
+      <li>WF-15 / WF-16 / WF-17 (new, spec 020 — APPROVED 2026-10-09 (T001) · IMPLEMENTATION ON STAGING) — Newsletter archive index (WF-03 pattern) · issue page (WF-04 pattern, one committed source with the email) · token landing pages (confirmed / unsubscribed / expired / already-in-state)</li>
       <li>WF-13 (new, spec 014 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE) — Michigan talent map: the Detail region&rsquo;s geography subsection (QCEW industry choropleth with committed-layer selector + not-disclosed state · LAUS unemployment choropleth, monthly · IPEDS institution map with field layers · PSEO pipeline view in adjusted scope — statewide flows + labeled UMich spotlight, no per-school map the data cannot support); every view paired with its full table; static build-generated SVG; monthly-report integration via spec 007 FR-011</li>
       <li>WF-01 — Home (desktop): hero → strata → method → services → proof → about → FAQ → CTA → footer</li>
       <li>WF-01 (revised, spec 008) — Signals block highlighted: “AXIOVEX SIGNALS — LIVE” eyebrow + Michigan Pulse mini-strip under the heading</li>

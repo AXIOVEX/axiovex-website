@@ -9,16 +9,22 @@
   **APPROVED by Tristen Pierson, 2026-10-09** (Axiovex chat:
   "Approve — build it on staging and send me the test issue").
   T010 (FR-018 launch decisions + promotion) remains CLOSED.
-- [ ] T002 (after T001) Resend for Axiovex: Axiovex-owned
-  Resend account (plan.md step 2 — never another project's
-  account/domain); `axiovexsystems.com` verified with SPF +
-  DKIM records added to the Axiovex Cloudflare zone via the
-  API (M365 mail records untouched — they live on the
-  hyphenated alias zone); From `newsletter@axiovexsystems.com`
-  configured; Reply-To mailbox/alias confirmed or created in
-  the Axiovex tenant and verified monitored; API key stored
-  only as a Pages secret + the ops store (presence recorded,
-  value never printed).
+- [ ] T002 (after T001) Microsoft 365 sending lane
+  (Amendment 1 — replaces the original Resend task):
+  dedicated shared mailbox `newsletter@axiovexsystems.com`
+  created (founders Full Access + Send As); dedicated
+  Entra app **"Axiovex Website Newsletter"** (Mail.Send
+  application permission only, admin consent) with an
+  Exchange **ApplicationAccessPolicy** scoping it to the
+  newsletter mailbox alone (verified: newsletter mailbox
+  Granted, another mailbox Denied); client secret stored
+  only as Pages secrets (staging project first) + the ops
+  store (presence recorded, value never printed; expiry on
+  the renewal watch). Tenant-admin steps need Tristen's
+  authenticated session (the EXO Security Defaults window,
+  per the ops record) — if no session is available, this
+  task is the recorded blocker and the build proceeds with
+  the send leg stubbed to the test allowlist.
 - [ ] T003 (after T001) D1: `axiovex-newsletter-staging` and
   `axiovex-newsletter` databases created in the Axiovex
   Cloudflare account; schema applied per FR-009 (subscribers
@@ -28,14 +34,15 @@
   per-subscriber event tables/columns).
 - [ ] T004 (after T002, T003) Endpoints on staging:
   subscribe / confirm / unsubscribe (GET + RFC 8058 POST) /
-  Resend webhook, per FR-008/FR-010/FR-011/FR-013, mirroring
+  internal send endpoint (secret-gated), per
+  FR-008/FR-010/FR-011/FR-014, mirroring
   spec 005's fail-closed patterns; Turnstile widget (action
   `newsletter_subscribe`; staging hostname for staging);
   edge rate-limit rule on `/api/newsletter/*`. Negative
   ladder passes: bad/absent Turnstile token → rejected;
   oversized payload → rejected; honeypot filled → silently
   dropped; expired confirm token → WF-17 expired state;
-  bad webhook signature → rejected, no status change.
+  absent/wrong send-endpoint secret → rejected, no send.
 - [ ] T005 (after T004) Signup block (WF-G8) implemented on
   staging `/signals/` in its drawn slot (below the Sources &
   method note, above the CTA band), spec 010 guards verified

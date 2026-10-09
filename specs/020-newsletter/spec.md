@@ -8,7 +8,15 @@ promotion is a separate owner-gated merge `staging` → `main`.
 **Status**: **APPROVED for staging build (T001, Tristen Pierson,
 2026-10-09).** Build and the allowlisted staging test loop are
 authorized; production promotion and the first production send
-remain gated on T010. Two owner
+remain gated on T010.
+
+**Amendment 1 (owner direction, Tristen Pierson, 2026-10-09)**:
+the sending lane changed before any build. **Resend was
+considered and replaced by the Axiovex Microsoft 365 tenant** —
+issues send through Microsoft Graph Mail.Send from a dedicated
+tenant mailbox, per FR-014 as amended. FR-013, FR-016, and
+claims C-020-4 / C-020-6 are amended to match; no other FR
+changes. Two owner
 decisions are flagged as blocking the first production send (not
 the build): the CAN-SPAM postal address and the privacy/footer
 wording review (FR-018).
@@ -167,26 +175,44 @@ instead of fetched.
   (FR-010). There is no admin reactivate path in v1, and a
   subscribe POST for a known-suppressed address creates a
   `pending` record — never an `active` one (C-020-2).
-- **FR-013 — Bounce / complaint auto-suppression.** A
-  signature-verified Resend webhook endpoint (fail-closed on
-  a bad signature) flips hard-bounce and spam-complaint
-  addresses to `suppressed` on receipt. Soft bounces are
-  counted in the sends log only.
-- **FR-014 — Sending via Resend.** From: `The Axiovex Signal
-  <newsletter@axiovexsystems.com>`. Reply-To: a monitored
-  mailbox or alias in the Axiovex Microsoft 365 tenant
-  (confirm-or-create is a build task, T002 — e.g. a
-  `newsletter@` alias onto a founder-monitored mailbox; no
-  new unmonitored mailbox). The domain is authenticated
-  before any send: Resend's SPF + DKIM records added to the
-  Axiovex Cloudflare zone (API-first, per the Cloudflare
-  rule) and verified in Resend. **Free-tier ceiling, stated
-  plainly**: 3,000 emails/month and 100/day. The weekly
-  cadence fits the monthly cap to roughly 700 subscribers;
-  the 100/day cap's interaction with a single send slot is
-  flagged in plan.md. Exceeding the free tier is a **paid-
-  tier owner decision** — never an automatic upgrade, never
-  a silent cadence change.
+- **FR-013 — Bounce / complaint suppression.** The Graph
+  lane has no provider webhook, so suppression consumes
+  delivery-failure evidence instead: non-delivery reports
+  (NDRs) delivered to the sending mailbox and the send job's
+  per-recipient results are reviewed each cycle (T012); a
+  hard bounce (mailbox not found / address rejected) or a
+  spam complaint flips the address to `suppressed` when
+  processed, and the sends log records the counts. No
+  address in `suppressed` state is ever a recipient
+  (FR-010's send-time query already excludes it).
+- **FR-014 — Sending via the Microsoft 365 tenant
+  (Microsoft Graph).** From: `The Axiovex Signal
+  <newsletter@axiovexsystems.com>` — a dedicated shared
+  mailbox in the Axiovex tenant; Reply-To is the same
+  mailbox, which the founders monitor (shared-mailbox
+  access, as with Start and Legal). Sending uses a
+  **dedicated Entra app registration, "Axiovex Website
+  Newsletter"**, holding the **Mail.Send application
+  permission only**, sending as the newsletter mailbox via
+  Graph `sendMail` — the same mechanism as spec 005's
+  contact app, but a separate app for least-privilege
+  separation, scoped to the newsletter mailbox alone by an
+  **Exchange Application Access Policy** (the spec 005
+  scope-lock pattern). Sends are **per-recipient**: every
+  subscriber receives their own message carrying their own
+  unsubscribe token — never a bulk BCC. The client secret
+  lives only as Pages secrets + the ops store (presence
+  recorded, value never printed), with its expiry on the
+  renewal watch, as spec 005's secret is. **Exchange
+  Online limits, stated plainly**: the send job paces to
+  **at most 30 messages per minute** and the tenant ceiling
+  is **10,000 recipients per day** — a 100-recipient send
+  takes ~4 minutes at the pacing cap, and the daily ceiling
+  sits far above any list this series can grow into;
+  crossing a limit is an owner decision, never an
+  automatic change (C-020-6). No DNS change is needed to
+  send: the tenant's existing SPF / DKIM / DMARC posture
+  already authenticates mail from this domain.
 - **FR-015 — No per-subscriber tracking (v1).** Resend's
   open and click tracking are **disabled**; no tracking
   pixels, no per-recipient link rewriting. The only counts
@@ -198,7 +224,8 @@ instead of fetched.
   existing sections otherwise unaltered): what is collected
   (email address, subscription status, timestamps — nothing
   else), why (to send The Axiovex Signal), the processors
-  named — **Resend** (sending) and **Cloudflare** (the D1
+  named — **Microsoft** (Microsoft 365 — the tenant
+  mailbox and Graph sending) and **Cloudflare** (the D1
   subscriber store and site hosting) — no sale of data and
   no sharing beyond those processors, the no-tracking
   posture (FR-015), and the unsubscribe behavior, including
@@ -267,11 +294,12 @@ instead of fetched.
   the three versions shows a substantive difference.
 - C-020-4: **No per-subscriber tracking events are
   recorded in v1.** The D1 schema holds no open/click
-  event data and Resend's tracking is disabled; only
-  aggregate counts exist (FR-009, FR-015). *Falsifier*:
-  schema inspection finds a per-subscriber event table or
-  column, or provider settings show open/click tracking
-  enabled.
+  event data and the Graph send path attaches no tracking
+  of any kind; only aggregate counts exist (FR-009,
+  FR-015). *Falsifier*: schema inspection finds a
+  per-subscriber event table or column, or the send code
+  is found attaching tracking headers, pixels, or
+  per-recipient link rewriting.
 - C-020-5: **Every figure in an issue traces to a
   committed snapshot.** Each Pulse figure and each dated
   watchlist entry maps to `data/signals.json`,
@@ -280,11 +308,12 @@ instead of fetched.
   pre-send figure audit finds a figure with no snapshot
   source, or a vintage label dropped between snapshot and
   issue.
-- C-020-6: **The system costs $0 within its stated
-  ceiling.** D1 free tier + Resend free tier cover the
-  weekly cadence up to the FR-014 ceiling; crossing it
-  stops at an owner decision — the system has no code
-  path that upgrades a plan or charges a card.
+- C-020-6: **The system adds no new paid service.**
+  D1's free tier holds the subscriber store and the
+  tenant's existing Microsoft 365 licensing carries the
+  sending (FR-014's Exchange limits); crossing a stated
+  limit stops at an owner decision — the system has no
+  code path that buys, upgrades, or charges anything.
   *Falsifier*: any invoice, paid-tier activation, or a
   send volume above the free-tier caps without a recorded
   owner decision.
