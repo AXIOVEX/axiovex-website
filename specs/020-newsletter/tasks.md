@@ -1,11 +1,14 @@
 # Tasks: Spec 020 — The Axiovex Signal (Weekly Newsletter)
 
-- [ ] T001 **GATE — Tristen approves this package.** The spec
+- [x] T001 **GATE — Tristen approves this package.** The spec
   (FR-001…FR-019, claims C-020-1…6) and the draft wireframes
   (WF-G8 signup block, WF-15 archive index, WF-16 issue page,
   WF-17 landing pages — all marked PROPOSED) are his to approve,
   amend, or reject. **Blocks every task below.** No staging
   change, no account change, no DNS change before this gate.
+  **APPROVED by Tristen Pierson, 2026-10-09** (Axiovex chat:
+  "Approve — build it on staging and send me the test issue").
+  T010 (FR-018 launch decisions + promotion) remains CLOSED.
 - [ ] T002 (after T001) Resend for Axiovex: Axiovex-owned
   Resend account (plan.md step 2 — never another project's
   account/domain); `axiovexsystems.com` verified with SPF +

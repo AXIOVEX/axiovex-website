@@ -5,9 +5,10 @@ promotion is a separate owner-gated merge `staging` → `main`.
 
 **Created**: 2026-10-09
 
-**Status**: **PROPOSED — PENDING OWNER APPROVAL (tasks.md T001).**
-Nothing in this package is built. No staging change, no production
-change, no account change happens until the gate passes. Two owner
+**Status**: **APPROVED for staging build (T001, Tristen Pierson,
+2026-10-09).** Build and the allowlisted staging test loop are
+authorized; production promotion and the first production send
+remain gated on T010. Two owner
 decisions are flagged as blocking the first production send (not
 the build): the CAN-SPAM postal address and the privacy/footer
 wording review (FR-018).
