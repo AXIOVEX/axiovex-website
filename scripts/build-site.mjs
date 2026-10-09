@@ -1876,6 +1876,13 @@ function issueBodyHtml(issue) {
   return parts.join('\n');
 }
 
+const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+function fmtDateLong(iso) {
+  const d = new Date((iso || '') + 'T12:00:00Z');
+  if (Number.isNaN(d.getTime())) return fmtDate(iso);
+  return WEEKDAYS[d.getUTCDay()] + ', ' + fmtDate(iso);
+}
+
 function buildNewsletter() {
   const dir = path.join(ROOT, 'newsletter', 'issues');
   const issues = existsSync(dir)
@@ -1888,7 +1895,7 @@ function buildNewsletter() {
   const rows = issues.length
     ? issues.map(issue =>
         '<article class="card nl-card">\n' +
-        '              <p class="nl-card-date">' + esc(fmtDate(issue.date)).toUpperCase() + '</p>\n' +
+        '              <p class="nl-card-date">' + esc(fmtDateLong(issue.date)).toUpperCase() + '</p>\n' +
         '              <h3><a href="/newsletter/' + issue.date + '/">' + esc(issue.lede) + '</a></h3>\n' +
         '              <p class="nl-card-sections">What changed \u00b7 Michigan Pulse \u00b7 Why it matters \u00b7 Watchlist</p>\n' +
         '              <a class="explore" href="/newsletter/' + issue.date + '/">READ THE WEB EDITION \u2192</a>\n' +
@@ -1910,7 +1917,7 @@ function buildNewsletter() {
       '{{CANONICAL}}': SITE + '/newsletter/' + issue.date + '/',
       '{{DATE_ISO}}': issue.date,
       '{{DATE_LONG}}': fmtDate(issue.date),
-      '{{EYEBROW}}': 'THE AXIOVEX SIGNAL \u00b7 ' + fmtDate(issue.date).toUpperCase(),
+      '{{EYEBROW}}': 'THE AXIOVEX SIGNAL \u00b7 ' + fmtDateLong(issue.date).toUpperCase(),
       '{{BODY_HTML}}': issueBodyHtml(issue),
       '{{NEWSLETTER_HTML}}': newsletterBlock('issue'),
     }));
