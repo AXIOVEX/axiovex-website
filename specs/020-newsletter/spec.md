@@ -33,6 +33,20 @@ Implemented and verified on staging the same day (lazy-load
 browser checks on `/signals/` desktop + mobile and `/newsletter/`
 desktop; endpoint harness 24/24 unchanged).
 
+**Amendment 4 (owner direction, Tristen Pierson, 2026-10-09)**:
+the **privacy policy link is required on all three reader
+surfaces** — (a) the WF-G8 signup form (fine print under the
+form), (b) the double opt-in **confirmation email**, next to
+the confirm action with one plain line restating what is
+collected, and (c) **every issue footer** (HTML and plain-text
+parts). Links resolve on the sending environment's own site
+base. FR-016 is amended to state this. Verified on staging the
+same day: the signup block and issue footer already carried
+the link; the confirmation email gained it (with the data
+line), and the issue footer's link moved onto the same
+per-recipient base-URL personalization as its web-edition and
+unsubscribe links; endpoint harness 24/24 unchanged.
+
 **Origin (Tristen, 2026-10-09)**: add a recurring emailed report
 to the Axiovex system — working name "AXIOVEX daily signal" —
 with a website signup, reading versions subscribers can open on
@@ -254,7 +268,15 @@ instead of fetched.
   retention of the suppression record so an unsubscribed
   address cannot be silently re-added. Contact for privacy
   questions stays legal@axiovexsystems.com, as the page
-  already routes.
+  already routes. **Link presence (Amendment 4):** the
+  privacy policy is linked from all three reader surfaces —
+  the WF-G8 signup form's fine print (FR-007), the double
+  opt-in confirmation email beside the confirm action with
+  one plain line restating what is collected (email address
+  only; weekly; no per-reader tracking; unsubscribe any
+  time), and every issue footer in both parts (FR-002 /
+  FR-006) — each resolving on the sending environment's own
+  site base.
 - **FR-017 — Staging-first build + end-to-end test.** All of
   it is built on `staging` per spec 010 (guards verified
   intact), with a staging D1 database and staging bindings,
