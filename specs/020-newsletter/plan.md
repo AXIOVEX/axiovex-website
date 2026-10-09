@@ -56,7 +56,12 @@
    staging hostname on the staging widget, per spec 010
    practice) and an edge rate-limit rule on
    `/api/newsletter/*`. Negative tests fail closed, as the
-   spec 005 ladder did.
+   spec 005 ladder did. The widget is **interaction-triggered**
+   (Amendment 3, owner direction 2026-10-09): the client loads
+   the Turnstile script lazily on the reader's first
+   interaction with the email field, so passive page views run
+   no Turnstile checks and make no `challenges.cloudflare.com`
+   requests; server-side Siteverify is unchanged.
 5. **Pages (T005, T006)**: the WF-G8 block joins the Signals
    page template (`scripts/templates/signals.html`) in its
    drawn slot; WF-17 landing pages are small static-pattern

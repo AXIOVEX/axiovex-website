@@ -21,6 +21,18 @@ decisions are flagged as blocking the first production send (not
 the build): the CAN-SPAM postal address and the privacy/footer
 wording review (FR-018).
 
+**Amendment 3 (owner direction, Tristen Pierson, 2026-10-09)**:
+the WF-G8 signup block's Turnstile is **interaction-triggered**.
+The Turnstile script does not load and no widget renders on page
+view — passive readers make no `challenges.cloudflare.com`
+requests and run no Turnstile checks. The script loads lazily
+and the widget renders on the reader's first interaction with
+the email field (focus). FR-008 is amended to state this; the
+endpoint's server-side verification is unchanged (fail-closed).
+Implemented and verified on staging the same day (lazy-load
+browser checks on `/signals/` desktop + mobile and `/newsletter/`
+desktop; endpoint harness 24/24 unchanged).
+
 **Origin (Tristen, 2026-10-09)**: add a recurring emailed report
 to the Axiovex system — working name "AXIOVEX daily signal" —
 with a website signup, reading versions subscribers can open on
@@ -135,7 +147,17 @@ instead of fetched.
   fail-closed), honeypot + timing trap, an edge rate-limit
   rule on `/api/newsletter/*`, payload caps, non-POST
   rejected. It collects the **email address only** — no name,
-  no company, no preferences in v1.
+  no company, no preferences in v1. Client behavior
+  (Amendment 3): Turnstile is **interaction-triggered** —
+  `newsletter-signup.v1.js` injects the Turnstile script and
+  renders the widget only on the reader's first interaction
+  with the email field (focus; first input covers autofill
+  paths). Nothing Turnstile-related loads on page view. At
+  submit, a widget that is rendered but tokenless or expired
+  (tokens live 300 s) is refreshed and the reader is asked to
+  submit again — never a silent failure; a tokenless post
+  (no JS, or the script blocked) still reaches the endpoint,
+  which rejects it fail-closed.
 - **FR-009 — Subscriber store.** A **Cloudflare D1** database
   (free tier) in the Axiovex Cloudflare account. A
   `subscribers` table: email, status (`pending` / `active` /
