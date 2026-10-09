@@ -104,10 +104,15 @@ as the **September edition** under the Amendment 4 data-month rule
   editor's note on the series' new data-month dating; save to
   `files/workforce-drafts/michigan-workforce-2026-09-draft.md`;
   present to Tristen.
-- [ ] T-SEP-02 **GATE — Tristen approves the September-edition
-  draft.** The 2026-10-07 advance approval applied to the
-  superseded October-named draft only and does NOT carry. Blocks
-  T-SEP-03 onward. No approval → nothing publishes, ping sent.
+- [x] T-SEP-02 **GATE — Tristen approves the September-edition
+  draft.** Advance approval granted by Tristen 2026-10-09
+  ("I approve"), recorded in the workforce state file
+  (draft_approval, 2026-10-09) — the same scope as the October
+  cycle's 2026-10-07 approval: the regenerated draft is still
+  presented on arrival (Oct 29) for visibility, and T-SEP-03
+  onward are authorized on schedule unless he objects after
+  seeing it. (The 2026-10-07 approval applied to the superseded
+  October-named draft only and did not carry.)
 - [ ] T-SEP-03 **Publish** (Fri Oct 30, article live ~09:00 ET):
   commit approved article to `blog/posts/` on `main`; verify live
   (200 + blog index + sitemap) per FR-007.
