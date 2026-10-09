@@ -102,7 +102,17 @@
 - [ ] T012 Standing (every cycle): assemble from the fresh
   committed snapshots after Tuesday's releases; per-issue
   owner approval (FR-005); Wednesday 10:00 AM ET send;
-  sends log + aggregate counts recorded; subscriber count
-  vs. the FR-014 ceiling surfaced in the weekly analytics
-  report; any ceiling approach is an owner decision
-  (C-020-6), never an automatic upgrade.
+  sends log + aggregate counts recorded (attempted / sent /
+  duration / hard bounces / complaints / throttling
+  events); the **sender-migration gauge line (FR-020)** —
+  active subscribers, distance to the 750 PLAN threshold,
+  health-override status — included in every approval
+  request and post-send summary; a tripped threshold or
+  override records a planning task in the Follow-ups
+  section below and flags the owner — planning is
+  presented, never auto-started.
+
+## Follow-ups (spec 020)
+
+- (empty — FR-020 gauge trips and other owner-presented
+  follow-ups are recorded here when they occur.)

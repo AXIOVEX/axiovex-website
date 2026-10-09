@@ -149,6 +149,19 @@
   at this cadence). Graph also offers no open/click
   tracking — which FR-015 declines on posture grounds
   regardless.
+- **The exit is measured, not improvised (FR-020).**
+  Tenant sending shares reputation with the founders'
+  everyday mail — the standing risk of the Graph lane.
+  The sender-migration gauge watches it: planning for a
+  dedicated sender (Resend) starts at 750 active
+  subscribers (or a 60-day projection of crossing), the
+  move completes before the next send after 1,500, and
+  health overrides (complaint rate >=0.1%, hard-bounce
+  rate >=2%, any throttling event, a send over 60
+  minutes) start planning at any size. The sends log
+  carries the fields from day one, and every approval
+  request and post-send summary shows the gauge line —
+  the owner sees the tripwire long before it trips.
 - **D1 vs. a managed newsletter platform.** A platform
   (Buttondown/Mailchimp class) would add a monthly cost, a
   second privacy surface, and per-subscriber tracking by
