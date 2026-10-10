@@ -179,7 +179,7 @@
   platform limitation meeting the loop's pre-amendment
   assertion — the defect T008 resolves by aligning the
   assertions with the owner's Amendment 6 decision.
-- [ ] T008 (2026-10-10, after T007) Owner decision executed:
+- [x] T008 (2026-10-10, after T007) Owner decision executed:
   List-Unsubscribe-Post reconciliation. Owner (Tristen
   Pierson, 2026-10-10, "Resume it") accepted the recommended
   path from the spec 020 follow-up: the footer one-click
@@ -200,5 +200,53 @@
   after the POST; the flip is idempotent, so no second
   probe state is consumed). Spec.md FR-022-1 + FR-022-4
   amendment record the change. No send-path code touched.
-  **Full-green re-run record: appended on completion
-  below.**
+  Harness 38/38 on the amended tree; assertion changes
+  committed as c072842 (with the spec 020 Amendment 6
+  records), deployed to staging (deployment a4c45d7a,
+  success) before the runs below.
+  **Run record — manual run 21:46:57Z vs c072842: verdict
+  FAIL 4/10, attribution matters.** Steps 0/1/2 PASS (probe
+  starts 'active', snapshotted; subscribe HTTP 200, mail
+  leg 'sent'; row 'pending' 21:47:01Z); step 3 DEFERRED —
+  the run's confirmation was not observed in Gmail within
+  900s (and had still not appeared by 22:2xZ — the deferral
+  queue swallowed it entirely); steps 4–7 DEFERRED (not
+  reached); step 8 PASS; step 9 FAIL by concurrent-run
+  interference: the hook woke at 22:06:23Z for this same
+  commit and its run (22:07:19Z) overlapped this run's
+  restore window (the wake guard spaces hook wakes; it
+  cannot see manual runs), consuming/rotating state under
+  the restore — the restore's followed link landed
+  'Nothing to change.' while the probe read 'active'
+  mid-hook-run. The FAIL is the overlap + deferral, not
+  the amended assertions (never reached in this run).
+  **Run record — hook run 22:07:19Z vs c072842: FULL
+  GREEN, 10/10 PASS, exit 0.** Step 0 PASS (probe starts
+  'pending' — the state the manual run's restore had just
+  re-created; snapshotted); step 1 PASS (HTTP 200, mail
+  leg 'sent'); step 2 PASS ('pending' 22:07:24Z); step 3
+  PASS (confirmation dated 22:07:24Z, link followed → WF-17
+  'You're subscribed.'); step 4 PASS ('active',
+  confirmed_at 22:07:59Z); step 5 PASS (issue 2026-10-14
+  dated 22:08:01Z; List-Unsubscribe header present; footer
+  one-click link present; postal footer present;
+  List-Unsubscribe-Post absent — known platform note, spec
+  020 Amendment 6, not a failure); step 6 PASS ((i) RFC
+  8058 one-click POST → HTTP 200 ok; (ii) footer GET link
+  → HTTP 200 WF-17 'already' landing, no second state
+  consumed); step 7 PASS ('unsubscribed' 22:08:36Z; repeat
+  test send → sent 0, suppression holds); step 8 PASS;
+  step 9 PASS (restored to its 'pending' snapshot). The
+  deployment gate's own run is the full-green of record
+  for the amended loop at this commit.
+  **Probe end state**: staging probe rests 'pending' —
+  the hook run's step-9 snapshot state, restored per
+  FR-022-5 semantics; its restore confirmation is
+  outstanding in the deferral queue, and following it via
+  the real path returns the row to the pre-T008 baseline
+  'active' (no D1 forcing — the T007 discipline). No
+  production data was touched by any T008 run (the
+  production env record in the loop state file still
+  stands at the hook's 18:54Z run; both staging runs'
+  step-8 guards passed). Nothing was promoted; the send
+  path is byte-identical to 19c61b4's shipped arrangement.
