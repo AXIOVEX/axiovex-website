@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-10T15:21:11.710Z",
+  "updatedUtc": "2026-10-10T18:35:10.606Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -31,7 +31,7 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers",
+      "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposes",
       "source": "Manufacturing Dive",
       "date": "2026-10-09",
       "url": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/"
@@ -63,10 +63,10 @@
     {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
+      "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
       "source": "Michigan WARN (LEO)",
       "date": "2026-10-08",
-      "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75"
+      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation"
     },
     {
       "lane": "ot-security",
@@ -75,14 +75,6 @@
       "source": "CISA",
       "date": "2026-10-08",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
-      "source": "NIST",
-      "date": "2026-10-08",
-      "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
     },
     {
       "lane": "manufacturing",
@@ -101,12 +93,20 @@
       "url": "https://www.manufacturingdive.com/news/wolfspeed-dod-defense-war-office-of-strategic-capital-loan/832451/"
     },
     {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+      "source": "NIST",
+      "date": "2026-10-08",
+      "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
+    },
+    {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+      "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
       "source": "Michigan WARN (LEO)",
       "date": "2026-10-08",
-      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation"
+      "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75"
     },
     {
       "lane": "michigan",

@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-10T15:21:11.710Z",
+  "updatedUtc": "2026-10-10T18:35:10.606Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -8,7 +8,7 @@
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers",
+          "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposes",
           "link": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/",
           "date": "2026-10-09"
         },
@@ -27,13 +27,6 @@
           "date": "2026-10-09"
         },
         {
-          "source": "NIST",
-          "sourceId": "nist",
-          "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
-          "link": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science",
-          "date": "2026-10-08"
-        },
-        {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
           "title": "Teams often miss preventive maintenance, raising costs and risks: Limble",
@@ -48,17 +41,24 @@
           "date": "2026-10-08"
         },
         {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
-          "link": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/",
-          "date": "2026-10-07"
+          "source": "NIST",
+          "sourceId": "nist",
+          "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+          "link": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science",
+          "date": "2026-10-08"
         },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
           "title": "Boston Dynamics hires former Amazon AI leader as CEO",
           "link": "https://www.manufacturingdive.com/news/boston-dynamics-hires-ceo-former-amazon-ai-rohit-prasad/832360/",
+          "date": "2026-10-07"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Manufacturability, costing cited as key areas of AI impact: Xometry survey",
+          "link": "https://www.manufacturingdive.com/news/manufacturability-costing-ai-impact-xometry-survey/832307/",
           "date": "2026-10-07"
         }
       ]
@@ -111,15 +111,15 @@
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
-          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
-          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
+          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
+          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
           "date": "2026-10-08"
         },
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
-          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
-          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
+          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
           "date": "2026-10-08"
         },
         {
