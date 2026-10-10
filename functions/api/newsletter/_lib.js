@@ -204,10 +204,10 @@ export async function sendNewsletterMail(env, { to, subject, html, text, unsubsc
         `To: ${to}`,
         `Reply-To: ${NEWSLETTER_FROM}`,
         `Subject: ${cleanSubject}`,
-        ...(unsubscribeUrl
-          ? ["List-Unsubscribe-Post: List-Unsubscribe=One-Click", `List-Unsubscribe: <${unsubscribeUrl}>`]
-          : []),
         "MIME-Version: 1.0",
+        ...(unsubscribeUrl
+          ? [`List-Unsubscribe: <${unsubscribeUrl}>`, "List-Unsubscribe-Post: List-Unsubscribe=One-Click"]
+          : []),
         `Content-Type: multipart/alternative; boundary="${boundary}"`,
         "",
         `--${boundary}`,
@@ -223,14 +223,6 @@ export async function sendNewsletterMail(env, { to, subject, html, text, unsubsc
         `--${boundary}--`,
         "",
       ].join("\r\n");
-      // LU-POST DIAGNOSTIC C (2026-10-10): direct MIME sendMail
-      // restored; the List headers now sit immediately after
-      // Subject (List-Unsubscribe-Post first) instead of after
-      // MIME-Version — testing whether Exchange's MIME->MAPI
-      // conversion drops the Post header based on position/order.
-      // (Iteration A draft+send: app lacks draft-create permission.
-      // Iteration B JSON route: Graph 400 InvalidInternetMessageHeader
-      // — internetMessageHeaders names must start with 'x-'.)
       response = await fetch(
         `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(NEWSLETTER_FROM)}/sendMail`,
         {
@@ -241,11 +233,14 @@ export async function sendNewsletterMail(env, { to, subject, html, text, unsubsc
         },
       );
     } else {
-      const headers = [];
-      if (unsubscribeUrl) {
-        headers.push({ name: "List-Unsubscribe", value: `<${unsubscribeUrl}>` });
-        headers.push({ name: "List-Unsubscribe-Post", value: "List-Unsubscribe=One-Click" });
-      }
+      // Single-part mail goes as JSON. List-* headers are NOT set
+      // here: Graph rejects every internetMessageHeaders name that
+      // does not start with "x-" (400 InvalidInternetMessageHeader,
+      // proven 2026-10-10 — see specs/020 tasks.md follow-up), so
+      // the previous construction could only ever hard-fail a send
+      // that carried an unsubscribe URL. No current caller passes
+      // one on this branch (confirmations carry none); issue mail
+      // with an unsubscribe URL always takes the MIME branch above.
       const payload = {
         message: {
           subject: cleanSubject,
@@ -254,7 +249,6 @@ export async function sendNewsletterMail(env, { to, subject, html, text, unsubsc
             : { contentType: "text", content: text || "" },
           toRecipients: [{ emailAddress: { address: to } }],
           replyTo: [{ emailAddress: { address: NEWSLETTER_FROM, name: NEWSLETTER_FROM_NAME } }],
-          internetMessageHeaders: headers.length ? headers : undefined,
         },
         saveToSentItems: false,
       };

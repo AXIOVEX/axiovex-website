@@ -239,6 +239,52 @@
   cycle: determine where the header is dropped and
   restore RFC 8058 one-click on delivered mail; verify
   against a delivered message, not the submitted MIME.
+  **DIAGNOSED 2026-10-10 (staging diagnostics A–D; the
+  header is dropped by the Microsoft platform, and no
+  route available to the current app preserves it):**
+  (1) *MIME sendMail (the shipped route)* — Graph accepts
+  the submission (202), but Exchange's MIME→MAPI
+  conversion on mailbox submission drops
+  `List-Unsubscribe-Post` while keeping `List-Unsubscribe`
+  (delivered production message verified from raw headers,
+  Gmail id 1a127016eeb1288f). (2) *JSON sendMail +
+  internetMessageHeaders* — Graph hard-rejects the call:
+  400 `InvalidInternetMessageHeader`, "The internet
+  message header name 'List-Unsubscribe' should start
+  with 'x-' or 'X-'." (captured verbatim from the staging
+  function log, diagnostic B) — neither List header can
+  be set on this route at all. (3) *Draft + send (MIME
+  $value create, then /send)* — every send failed: the
+  Entra app holds **Mail.Send only**, and creating a
+  draft message requires Mail.ReadWrite, which the
+  FR-014 least-privilege design deliberately withholds
+  (diagnostic A). (4) *MIME header reordering*
+  (List-Unsubscribe-Post first, both headers before
+  MIME-Version — diagnostic C): submission accepted
+  (202, 2/2 sent), but the delivered-copy check could
+  not be completed in the diagnostic window — Gmail
+  deferred issue-shaped mail from this sender for the
+  duration (the baseline and C copies had still not
+  landed 30+ minutes after Graph acceptance while
+  confirmation mail flowed), so the variant is
+  UNVERIFIED, is not counted as a fix, and the shipped
+  header arrangement was restored unchanged.
+  **Landed code change (only one):** the JSON branch of
+  `sendNewsletterMail` no longer constructs List-*
+  internetMessageHeaders — per (2) that construction
+  could only ever hard-fail a send; it is unreachable
+  today (no caller passes an unsubscribe URL on the
+  single-part branch) and behavior is otherwise
+  identical. Harness 38/38. **Status: OPEN — known
+  platform limitation.** Restoring RFC 8058 header
+  one-click needs an owner-level choice: (a) accept the
+  footer one-click GET link as the one-click path
+  (current behavior); (b) widen the newsletter app to
+  Mail.ReadWrite and test the draft route (relaxes the
+  least-privilege stance; the draft route's header
+  survival is itself untested); or (c) revisit the
+  sending lane at the FR-020 thresholds. Any future fix
+  must be verified against a delivered message.
 
 ## Build record — staging, 2026-10-09 (T002/T003 blocked; T004–T008 done; T009 harness-proven)
 
