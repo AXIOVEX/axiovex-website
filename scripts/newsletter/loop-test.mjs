@@ -278,6 +278,39 @@ if (!priorBad()) {
 // the probe's Gmail directly; production searches the
 // probe's M365 mailbox (Outlook web, all folders).
 let confirmFollowed = false;
+// Gmail confirmation hunt used by step 3 and the staging
+// restore step. Follows candidate links until one lands on
+// the WF-17 success page. A candidate landing on 'That link
+// has expired.' is STALE — its token predates this run's
+// subscribe (a confirmation issued moments before the run,
+// inside the poll's clock-skew allowance, can never confirm
+// this run's pending row) — so it is excluded and polling
+// continues instead of failing the step. Returns
+// { ok:true, msg } | { ok:false, msg, status, title } |
+// { ok:false, noLink:true, msg } | { ok:false, expiredOnly }.
+async function pollConfirmAndFollow(notBefore, budgetMs) {
+  const deadline = Date.now() + budgetMs;
+  const stale = new Set();
+  let sawExpired = false;
+  while (Date.now() < deadline) {
+    const msg = await pollMail(
+      (m) => m.subject.includes('Confirm your subscription') && !stale.has(m.id),
+      Math.max(1000, deadline - Date.now()),
+      notBefore,
+    );
+    if (!msg) break;
+    const host = ENV.base.replace('https://', '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const url = (msg.text + '\n' + msg.html).match(new RegExp(`https://${host}/newsletter/confirm\\?t=[a-f0-9]+`))?.[0];
+    if (!url) return { ok: false, noLink: true, msg };
+    const r = await fetch(url);
+    const html = await r.text();
+    if (r.status === 200 && html.includes('You’re subscribed.')) return { ok: true, msg };
+    const title = (html.match(/<h1>([^<]+)<\/h1>/) || [])[1] || '(no h1)';
+    if (title === 'That link has expired.') { sawExpired = true; stale.add(msg.id); continue; }
+    return { ok: false, msg, status: r.status, title };
+  }
+  return { ok: false, expiredOnly: sawExpired };
+}
 async function followConfirm(url, dateNote, sourceNote) {
   const r = await fetch(url);
   const html = await r.text();
@@ -292,17 +325,16 @@ async function followConfirm(url, dateNote, sourceNote) {
 }
 if (!priorBad()) {
   if (envName === 'staging') {
-    const msg = await pollMail((m) => m.subject.includes('Confirm your subscription'));
-    if (!msg) {
-      record(3, 'confirmation email arrives', 'FAIL', `no confirmation dated after run start within 180s (endpoint mail leg: ${mailLeg ?? 'n/a'}); evidence source: Gmail — direct delivery to probe ${PROBE}`);
+    const res3 = await pollConfirmAndFollow(0, 180000);
+    if (res3.ok) {
+      confirmFollowed = true;
+      record(3, 'confirmation email + confirm link', 'PASS', `message dated ${res3.msg.date}; link followed -> HTTP 200 WF-17 'You're subscribed.' landing; evidence source: Gmail — direct delivery to probe ${PROBE}`);
+    } else if (res3.noLink) {
+      record(3, 'confirmation email arrives', 'FAIL', `message ${res3.msg.id} dated ${res3.msg.date} carries no confirm link for this environment; evidence source: Gmail — direct delivery to probe ${PROBE}`);
+    } else if (res3.msg) {
+      record(3, 'confirmation email + confirm link', 'FAIL', `message dated ${res3.msg.date}; link followed -> HTTP ${res3.status}, landing '${res3.title}'; evidence source: Gmail — direct delivery to probe ${PROBE}`);
     } else {
-      const host = ENV.base.replace('https://', '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const url = (msg.text + '\n' + msg.html).match(new RegExp(`https://${host}/newsletter/confirm\\?t=[a-f0-9]+`))?.[0];
-      if (!url) {
-        record(3, 'confirmation email arrives', 'FAIL', `message ${msg.id} dated ${msg.date} carries no confirm link for this environment; evidence source: Gmail — direct delivery to probe ${PROBE}`);
-      } else {
-        await followConfirm(url, `message dated ${msg.date}`, `Gmail — direct delivery to probe ${PROBE}`);
-      }
+      record(3, 'confirmation email arrives', 'FAIL', `no confirmation dated after run start within 180s (endpoint mail leg: ${mailLeg ?? 'n/a'})${res3.expiredOnly ? '; only a stale pre-run confirmation was visible (its token predates this run)' : ''}; evidence source: Gmail — direct delivery to probe ${PROBE}`);
     }
   } else {
     const mb = await mailboxCheck('confirmation');
@@ -465,24 +497,20 @@ if (envName === 'staging') {
         if (!(status === 200 && j.ok)) {
           record(9, RESTORE, 'FAIL', `re-subscribe for restore returned HTTP ${status}: ${JSON.stringify(j).slice(0, 160)}`);
         } else {
-          const msg = await pollMail((m) => m.subject.includes('Confirm your subscription'), 180000, restoreStart - 5000);
-          if (!msg) {
-            record(9, RESTORE, 'FAIL', `restore confirmation did not arrive in Gmail within 180s (endpoint mail leg: ${j.mail ?? 'n/a'}); probe left '${(await probeRow())?.status}'`);
-          } else {
-            const host = ENV.base.replace('https://', '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            const url = (msg.text + '\n' + msg.html).match(new RegExp(`https://${host}/newsletter/confirm\\?t=[a-f0-9]+`))?.[0];
-            if (!url) {
-              record(9, RESTORE, 'FAIL', `restore confirmation dated ${msg.date} carries no confirm link for this environment`);
+          const res9 = await pollConfirmAndFollow(restoreStart - 5000, 180000);
+          if (res9.ok) {
+            const after = await probeRow();
+            if (after?.status === 'active') {
+              record(9, RESTORE, 'PASS', `probe started 'active'; re-subscribed + confirmed via the restore confirmation dated ${res9.msg.date}; probe is 'active' again; evidence source: Gmail — direct delivery to probe ${PROBE}`);
             } else {
-              const r = await fetch(url);
-              const html = await r.text();
-              const after = await probeRow();
-              if (r.status === 200 && html.includes('You’re subscribed.') && after?.status === 'active') {
-                record(9, RESTORE, 'PASS', `probe started 'active'; re-subscribed + confirmed via the restore confirmation dated ${msg.date}; probe is 'active' again; evidence source: Gmail — direct delivery to probe ${PROBE}`);
-              } else {
-                record(9, RESTORE, 'FAIL', `restore confirm link -> HTTP ${r.status}; probe now '${after?.status}'`);
-              }
+              record(9, RESTORE, 'FAIL', `restore confirm link landed on the WF-17 success page but probe now '${after?.status}'`);
             }
+          } else if (res9.noLink) {
+            record(9, RESTORE, 'FAIL', `restore confirmation dated ${res9.msg.date} carries no confirm link for this environment`);
+          } else if (res9.msg) {
+            record(9, RESTORE, 'FAIL', `restore confirm link -> HTTP ${res9.status}, landing '${res9.title}'; probe now '${(await probeRow())?.status}'`);
+          } else {
+            record(9, RESTORE, 'FAIL', `restore confirmation did not arrive in Gmail within 180s (endpoint mail leg: ${j.mail ?? 'n/a'}); probe left '${(await probeRow())?.status}'`);
           }
         }
       }

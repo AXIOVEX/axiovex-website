@@ -83,3 +83,55 @@
    Record what production still needs (the FR-022-3 promotion)
    as an owner-visible follow-up; do not promote in this
    spec's build.
+
+6. **Read-path correction (T007, 2026-10-10).** A later
+   staging run reported the endpoint mail leg `sent` while
+   step 3 still failed — the send was fine, the READ was
+   wrong: probe mail to `tristen@` forwards to a hub gmail
+   the runner cannot read. Fix observability only; loop
+   steps, verdicts, hook trigger, and the FR-022-3 guardrail
+   are unchanged.
+   - **Endpoint**: `LOOP_TEST_RECIPIENT` becomes a
+     per-environment mapping (`loopTestRecipient(env)`):
+     staging → `tristen.pierson@gmail.com`, anything else →
+     `tristen@axiovexsystems.com`. Still exactly one
+     hard-coded recipient per environment, refused otherwise
+     before any send. Harness LT1–LT4 retarget to the staging
+     probe (the harness simulates `ENVIRONMENT: 'staging'`)
+     and re-prove 38/38.
+   - **Runner — staging**: probe = the owner's gmail.
+     `pollMail` gains a `notBefore` floor so the restore
+     poll cannot match the loop's own earlier confirmation.
+     New step 9 (staging only, after the C-022-3 guard):
+     restore the probe to the status snapshotted at step 0 —
+     `active` via re-subscribe + Gmail confirmation + D1
+     verify, `pending` via re-subscribe, `unsubscribed` /
+     absent by resting state (D1 reset of the probe row only
+     if the loop left it elsewhere, named in the ledger).
+     Stored unsubscribe URLs are honored only for the probe
+     they were captured from (state records the probe).
+   - **Runner — production**: probe stays `tristen@`.
+     Steps 3 and 5 stop polling Gmail. Step 5 first checks
+     evidence (a): endpoint `mailStatus === 'sent'` and a
+     `sends` row with `provider_ref = 'loop-test'` for this
+     issue started at/after run start with `sent_count = 1`.
+     Steps 3 and 5 then check evidence (b) via the new
+     `scripts/newsletter/loop-mailbox-browser.py` (Playwright,
+     persistent profile at
+     `~/workspace/tools/loop-test/browser-profile`): Outlook
+     web all-folders search by sender + subject, newest match
+     opened; confirmation mode extracts the confirm link,
+     issue mode extracts the unsubscribe URL + postal-footer
+     presence from the body. Helper outcomes map to the
+     runner's semantics: found → assert, notfound → FAIL,
+     blocked (no signed-in session / UI not drivable) →
+     BLOCKED with the reason.
+   - **Ledger wording**: every delivery assertion names its
+     evidence source (Gmail — direct delivery to the probe /
+     endpoint mailStatus + sends table / M365 mailbox search,
+     Outlook web, all folders).
+   - **Verification**: harness 38/38 locally; staging loop
+     re-run end-to-end against the deployed fix expecting a
+     FULL GREEN, with the probe verified back at its starting
+     status (`active`) afterward; hook dry-run confirms the
+     trigger is untouched (runner path/args unchanged).

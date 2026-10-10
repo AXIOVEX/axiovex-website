@@ -21,6 +21,30 @@ block. The loop's first full green doubles as the mail-heal
 proof for spec 020's open send block. Production step 5
 awaits the owner-gated promotion of the FR-022-3 mode.
 
+**Read-path correction (2026-10-10, T007)**: the step-3
+evidence model above was itself wrong about WHERE probe
+mail can be observed, and a later staging run exposed it:
+the endpoint reported the mail leg `sent` (Graph accepted
+the send, ~17:50Z) yet no confirmation ever appeared in the
+mailbox the runner was polling. Ground truth, established by
+mailbox inspection the same day: Graph sends deliver fine;
+the `tristen@` mailbox forwards to
+`pierson.finance.hub+axiovex@gmail.com` (keep-a-copy on) — a
+different Gmail than the connected `tristen.pierson@gmail.com`
+the runner searches — so probe mail to `tristen@` is simply
+not observable via the Gmail connector. The correction
+keeps the loop's steps, verdicts, and guardrails unchanged
+and fixes only observability, per environment (FR-022-2 as
+amended): staging's probe is now the owner's gmail (direct
+delivery, Gmail-readable) with its starting status
+snapshotted and restored after the loop; production's probe
+stays `tristen@`, with delivery asserted via endpoint mail
+status + the sends table + an all-folders M365 mailbox
+search. The endpoint's hard-coded test recipient became
+per-environment to match (guardrail unchanged: exactly one
+hard-coded recipient per environment, anything else refused
+before any send).
+
 **Amendment to spec 020 (owner direction, Tristen Pierson,
 2026-10-10)**: spec 020 FR-005 requires a per-issue owner
 approval marker for every issue send. This spec records a
@@ -55,14 +79,25 @@ after every deployment and hotfixed if problem."
   unsubscribe via the RFC 8058 one-click POST from the
   delivered issue; (7) verify the row is `unsubscribed` and a
   repeat probe send returns 0 recipients (suppression holds).
-  The probe's final state is always `unsubscribed`.
-- **FR-022-2 — The probe.** The probe subscriber is
-  `tristen@axiovexsystems.com` in both environments (its mail
-  forwards to the owner's Gmail, which the runner reads via
-  the Gmail connector). The runner may write D1 rows for the
-  probe address only; every other row — in particular the
-  owner's real production row (`tristen.pierson@gmail.com`,
-  pending) — is never modified. The runner aborts if its
+  The production probe's final state is always
+  `unsubscribed`; the staging probe's final state is its
+  starting state, restored by the separate restore step
+  (FR-022-5) — restoration is state preservation, not a loop
+  step.
+- **FR-022-2 — The probe (as corrected 2026-10-10).** One
+  probe per environment, chosen by where its delivery is
+  observable. Staging: `tristen.pierson@gmail.com` — direct
+  delivery into the Gmail the runner reads via the Gmail
+  connector (proven <1 min). Production:
+  `tristen@axiovexsystems.com` — its mail is NOT observable
+  via that Gmail (the mailbox forwards to
+  `pierson.finance.hub+axiovex@gmail.com`, keep-a-copy on),
+  so production delivery is asserted by the evidence model
+  in Environment mechanics, never by a Gmail poll. The
+  owner's gmail production row is a REAL subscription and is
+  never churned by the production loop. The runner may write
+  D1 rows for its environment's probe address only; every
+  other row is never modified. The runner aborts if its
   configured probe address is not the hard-coded probe.
 - **FR-022-3 — Probe-only test send.** `POST
   /api/newsletter/send` with `mode: "test"` and
@@ -70,8 +105,9 @@ after every deployment and hotfixed if problem."
   single recipient named, under these guardrails, all
   enforced server-side: (a) the existing
   `NEWSLETTER_SEND_SECRET` gate applies unchanged; (b) the
-  recipient must equal the hard-coded probe address or the
-  request is refused (422) before any send; (c) no approval
+  recipient must equal the environment's hard-coded probe
+  address (one per environment, FR-022-2) or the request is
+  refused (422) before any send; (c) no approval
   marker is required (the standing authorization above), and
   no other mode's behavior changes — the full-list path
   still requires the FR-005 marker; (d) the probe receives
@@ -100,7 +136,14 @@ after every deployment and hotfixed if problem."
   in D1, and that act is named in the ledger. Runs leave no
   state behind except the probe's `unsubscribed` row, the
   `sends` log's `loop-test` rows, and the run record
-  (FR-022-7).
+  (FR-022-7). Staging exception (read-path correction): the
+  staging probe is the owner's gmail, a row with a life
+  outside the test — the runner snapshots its starting
+  status at normalize time and, after the loop, restores it
+  (re-subscribe + confirm when it started `active`) as a
+  final step labeled in the ledger as post-loop state
+  preservation, distinct from the loop steps. A failed
+  restore fails the run.
 - **FR-022-6 — After every deployment.** A hook
   (`newsletter-loop-check`, poll 15 min, mirroring
   `website-push-check`) watches `origin/main` and
@@ -132,17 +175,39 @@ after every deployment and hotfixed if problem."
   POST; the staging subscribe response also reports the mail
   leg's status, which the ledger records as evidence. If the
   API path is ever refused on Turnstile grounds, the runner
-  falls back to the browser path below and says so.
+  falls back to the browser path below and says so. The
+  probe is the owner's gmail, so both mailbox legs (steps 3
+  and 5) read delivery straight from the connected Gmail —
+  the evidence source every staging delivery assertion
+  names.
 - **Production** signup/confirm/unsubscribe form legs run in
   a real browser (Playwright, workspace venv) because the
   production widget is the real Managed Turnstile; a headless
-  refusal is BLOCKED (FR-022-4), never a silent pass. D1 and
-  mailbox legs are API-level, as on staging. Production's
-  step 5 additionally requires the FR-022-3 endpoint mode to
-  be promoted there — until then it reports BLOCKED
-  (`test mode not deployed`), and the unpatched endpoint
-  fails closed (422, FR-005 refusal), so no accidental
-  full-list send is possible from the runner.
+  refusal is BLOCKED (FR-022-4), never a silent pass. D1 legs
+  are API-level, as on staging. **Delivery evidence model
+  (read-path correction)**: the probe's mail cannot be read
+  via Gmail, so steps 3 and 5 assert delivery from
+  (a) endpoint/function mail-status evidence — the test-send
+  endpoint's `mailStatus: 'sent'` (Graph 202) plus the
+  `sends`-table `loop-test` row for the run — and
+  (b) a browser-based mailbox check
+  (`scripts/newsletter/loop-mailbox-browser.py`, Outlook on
+  the web signed in as the probe) that searches ALL folders
+  (Inbox, Archive, Junk Email, and the rest) for the run's
+  confirmation and test-issue messages by subject; presence
+  in any folder counts as delivered, and the opened message
+  supplies the confirm/unsubscribe links and the body-level
+  postal-footer check. (Raw List-Unsubscribe header
+  assertions ride on staging's identical render/send path —
+  headers are not readable in Outlook web.) If the mailbox
+  check's browser session is unavailable (no signed-in
+  session in the check's dedicated profile), the delivery
+  legs report BLOCKED with that reason, per FR-022-4.
+  Production's step 5 additionally requires the FR-022-3
+  endpoint mode to be promoted there — until then it reports
+  BLOCKED (`test mode not deployed`), and the unpatched
+  endpoint fails closed (422, FR-005 refusal), so no
+  accidental full-list send is possible from the runner.
 
 ## Claims (AEE)
 
@@ -164,7 +229,8 @@ after every deployment and hotfixed if problem."
   active, allowlisted address).
 - **C-022-3: The loop test changes nothing it doesn't own.**
   A full run modifies only the probe's row (ending
-  `unsubscribed`), appends `loop-test` rows to `sends`, and
+  `unsubscribed` in production; restored to its starting
+  status on staging), appends `loop-test` rows to `sends`, and
   consumes the probe's own mail. *Falsifier*: any other
   subscriber row differing before/after a run (the runner
   snapshots per-status counts and the owner's real rows'
