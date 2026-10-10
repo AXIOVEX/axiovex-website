@@ -1873,6 +1873,10 @@ function issueBodyHtml(issue) {
       '\n</ul>');
   }
   parts.push('<p class="nl-colophon">Assembled from the committed Signals snapshot and the Michigan data pack, with vintages as labeled \u00b7 <a href="/newsletter/">All editions</a> \u00b7 <a href="/privacy/">Privacy policy</a></p>');
+  // FR-018: the web edition carries the same postal line as the
+  // email footer (issue.footerAddress; staging placeholder only
+  // when the issue source has none designated).
+  parts.push('<p class="nl-colophon">Axiovex Systems, LLC \u00b7 ' + esc(issue.footerAddress || '[Postal address pending \u2014 owner decision, spec 020 FR-018]') + '</p>');
   return parts.join('\n');
 }
 
