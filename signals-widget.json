@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-10T04:21:39.387Z",
+  "updatedUtc": "2026-10-10T08:20:47.301Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -21,9 +21,17 @@
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Notice of Intent To Grant Exclusive Patent License to Zyltech Engineering, LLC; Houston, TX",
+      "source": "Federal Register",
+      "date": "2026-10-13",
+      "url": "https://www.federalregister.gov/documents/2026/10/13/2026-20785/notice-of-intent-to-grant-exclusive-patent-license-to-zyltech-engineering-llc-houston-tx"
+    },
+    {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposes",
+      "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers",
       "source": "Manufacturing Dive",
       "date": "2026-10-09",
       "url": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/"
@@ -67,14 +75,6 @@
       "source": "CISA",
       "date": "2026-10-08",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Energy Department Announces New Genesis Mission Awards to Advance Super Intelligence for Science",
-      "source": "U.S. Department of Energy",
-      "date": "2026-10-08",
-      "url": "https://www.energy.gov/articles/energy-department-announces-new-genesis-mission-awards-advance-super-intelligence-science"
     },
     {
       "lane": "manufacturing",

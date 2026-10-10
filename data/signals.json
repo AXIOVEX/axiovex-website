@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-10T04:21:39.387Z",
+  "updatedUtc": "2026-10-10T08:20:47.301Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -8,7 +8,7 @@
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposes",
+          "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers",
           "link": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/",
           "date": "2026-10-09"
         },
@@ -48,17 +48,17 @@
           "date": "2026-10-08"
         },
         {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Boston Dynamics hires former Amazon AI leader as CEO",
-          "link": "https://www.manufacturingdive.com/news/boston-dynamics-hires-ceo-former-amazon-ai-rohit-prasad/832360/",
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
+          "link": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/",
           "date": "2026-10-07"
         },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "Manufacturability, costing cited as key areas of AI impact: Xometry survey",
-          "link": "https://www.manufacturingdive.com/news/manufacturability-costing-ai-impact-xometry-survey/832307/",
+          "title": "Boston Dynamics hires former Amazon AI leader as CEO",
+          "link": "https://www.manufacturingdive.com/news/boston-dynamics-hires-ceo-former-amazon-ai-rohit-prasad/832360/",
           "date": "2026-10-07"
         }
       ]
@@ -233,6 +233,34 @@
       "title": "Funding & policy",
       "items": [
         {
+          "source": "Federal Register",
+          "sourceId": "federal-register",
+          "title": "Notice of Intent To Grant Exclusive Patent License to Zyltech Engineering, LLC; Houston, TX",
+          "link": "https://www.federalregister.gov/documents/2026/10/13/2026-20785/notice-of-intent-to-grant-exclusive-patent-license-to-zyltech-engineering-llc-houston-tx",
+          "date": "2026-10-13"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → VETS ACCESS LLC — $43,073 award, October 8, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25227P0025_3600_-NONE-_-NONE-",
+          "date": "2026-10-08"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → TETER ORTHOTICS & PROSTHETICS, INC. — $17,550 award, October 8, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0037_3600_-NONE-_-NONE-",
+          "date": "2026-10-08"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Justice → NATIONAL FOOD GROUP INC — $32,133 award, October 8, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_15B40827P00000004_1540_-NONE-_-NONE-",
+          "date": "2026-10-08"
+        },
+        {
           "source": "U.S. Department of Energy",
           "sourceId": "doe",
           "title": "Energy Department Announces New Genesis Mission Awards to Advance Super Intelligence for Science",
@@ -249,44 +277,16 @@
         {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → THE CREATIVE MOBILITY GROUP INC. — $16,960 award, October 7, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0031_3600_-NONE-_-NONE-",
+          "title": "General Services Administration → FORD MOTOR CO — $47,893 award, October 7, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F0002_4732_47QMCA22D000P_4732",
           "date": "2026-10-07"
         },
         {
-          "source": "Federal Register",
-          "sourceId": "federal-register",
-          "title": "New Mexico Institute of Mining and Technology et.al, Notice of Decision on Application for Duty-Free Entry of Scientific Instruments",
-          "link": "https://www.federalregister.gov/documents/2026/10/06/2026-20490/new-mexico-institute-of-mining-and-technology-etal-notice-of-decision-on-application-for-duty-free",
-          "date": "2026-10-06"
-        },
-        {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces $4.2 Billion Investment to Boost Nuclear Power and Help Lower Energy Costs in Pennsylvania and Ohio",
-          "link": "https://www.energy.gov/articles/energy-department-announces-42-billion-investment-boost-nuclear-power-and-help-lower",
-          "date": "2026-10-05"
-        },
-        {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces Alaska Railbelt Transmission Project to Receive Defense Production Act Funding, Securing Alaska Military Installations and Local Communities",
-          "link": "https://www.energy.gov/articles/energy-department-announces-alaska-railbelt-transmission-project-receive-defense",
-          "date": "2026-10-05"
-        },
-        {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces Up to $400 Million for Basic Research to Advance the Frontiers of Science",
-          "link": "https://www.energy.gov/articles/energy-department-announces-400-million-basic-research-advance-frontiers-science",
-          "date": "2026-10-01"
-        },
-        {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces Speed to Power Investments Across 26 States to Lower Electricity Costs and Improve Grid Reliability",
-          "link": "https://www.energy.gov/articles/energy-department-announces-speed-power-investments-across-26-states-lower-electricity",
-          "date": "2026-09-24"
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "General Services Administration → FORD MOTOR CO — $47,893 award, October 7, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F0001_4732_47QMCA22D000P_4732",
+          "date": "2026-10-07"
         }
       ]
     }
