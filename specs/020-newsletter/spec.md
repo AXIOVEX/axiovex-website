@@ -5,10 +5,14 @@ promotion is a separate owner-gated merge `staging` → `main`.
 
 **Created**: 2026-10-09
 
-**Status**: **APPROVED for staging build (T001, Tristen Pierson,
-2026-10-09).** Build and the allowlisted staging test loop are
-authorized; production promotion and the first production send
-remain gated on T010.
+**Status**: **IMPLEMENTED AND LIVE 2026-10-10.** The staging
+build and allowlisted test loop passed, the T010 gate was
+satisfied (postal address designated, factual wording review
+completed, and promotion approved by Tristen Pierson), and
+T011 promoted the newsletter to production with live
+verification. The first production send has **not** been
+run; every send remains subject to the per-issue FR-005
+owner approval, with standing cycles governed by T012.
 
 **Amendment 1 (owner direction, Tristen Pierson, 2026-10-09)**:
 the sending lane changed before any build. **Resend was

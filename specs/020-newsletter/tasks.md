@@ -162,17 +162,53 @@
     T002 above. T011 is unblocked; the first production
     send remains subject to the separate per-issue FR-005
     approval at send time.
-- [ ] T011 (after T010) Promotion per spec 010 FR-004 —
-  **prerequisites in progress** under the owner's
-  2026-10-10 direction (production infrastructure lane);
-  the promotion merge itself remains gated on T010(c).
-  (guard proofs: production `robots.txt` / `_headers`
-  diffs empty; staging guards re-asserted on sync-back),
-  production bindings + production Turnstile widget,
-  production verification (pages live, endpoints negative
-  ladder, sitemap), then the first real cycle: assemble →
-  owner approval → send Wednesday 10:00 AM ET → sends log
-  recorded → cycle reported.
+- [x] T011 (after T010) Promotion per spec 010 FR-004 —
+  **DONE 2026-10-10 (promotion + production verification;
+  no send).** Staging tip `d4a648f` was merged into
+  pre-promotion main `ce7be3a` as merge commit `be863e3`,
+  followed by build commit `834462b`. **FR-004 guard
+  proof:** `git diff ce7be3a..be863e3 -- robots.txt
+  _headers` is empty — production `robots.txt` is the
+  Allow version and production `_headers` is the security
+  file with no `X-Robots-Tag` line. The production
+  Turnstile site key was set in `newsletter-signup.v1.js`
+  (the non-production branch still uses the public test
+  key, so staging behavior is unchanged). Production D1
+  `axiovex-newsletter` (uuid
+  `33ea7d17-46ab-4723-9d30-48fd03992e84`) is bound as
+  `NEWSLETTER_DB`, the production environment is fully
+  configured (secret values recorded by name/presence
+  only), and the production Turnstile widget is in place.
+  Build passed and the endpoint harness passed **24/24**.
+  Cloudflare Pages production deployment
+  `d5668301-fef4-4f40-9f88-48555460ee2b` for `834462b`
+  completed with status **success**. **Live production
+  verification:** `/`, `/signals/`, `/newsletter/`,
+  `/newsletter/2026-10-14/`, `/privacy/`, `/robots.txt`,
+  and `/sitemap.xml` all returned 200 (OK — the request
+  succeeded); the sitemap carries 13 URLs including both
+  newsletter URLs; the 2026-10-14 web edition shows
+  "Axiovex Systems, LLC · 6633 18 Mile Rd, Sterling
+  Heights, MI 48314"; `/signals/` shows the WF-G8 signup
+  block with its privacy fine print; Playwright/Firefox
+  screenshots at desktop 1440 and mobile 390 are filed as
+  `prod-*` in `~/workspace/your_files/spec020-review/`
+  (styles.v35.css, footer and fine print visible, no
+  horizontal overflow). **Endpoint negative ladder:**
+  empty subscribe POST returned 422 (Unprocessable
+  Entity — the request was understood but failed
+  validation); bogus-token confirm and unsubscribe GETs
+  returned 200 (OK — the request succeeded) with graceful
+  WF-17 landings, never 500 (Internal Server Error — a
+  generic server-side failure); GET `/api/contact`
+  returned 405 (Method Not Allowed — the endpoint does
+  not accept that request method), unchanged. After the
+  checks, production D1 counts were subscribers 0, sends
+  0, rate_events 0: **no mail was sent and no subscriber
+  rows were created.** The first real cycle was **not**
+  run as part of this promotion; it remains governed by
+  T012 and requires the separate per-issue FR-005 owner
+  approval at send time.
 - [ ] T012 Standing (every cycle): assemble from the fresh
   committed snapshots after Tuesday's releases; per-issue
   owner approval (FR-005); Wednesday 10:00 AM ET send;
