@@ -91,7 +91,36 @@
   the privacy section + email footer wording (legal@,
   FR-018b); (c) approves promotion staging → production on
   the T009 evidence. Blocks T011.
-- [ ] T011 (after T010) Promotion per spec 010 FR-004
+  - (a) **DONE 2026-10-10** (Amendment 5): the owner
+    designated Axiovex Systems, LLC's Michigan LARA
+    registered-office address — **6633 18 Mile Rd, Sterling
+    Heights, MI 48314**. Applied on staging the same day:
+    issue 2026-10-14's `footerAddress` set, email parts
+    re-rendered (placeholder absent from both parts), the
+    web edition colophon carries the same line; endpoint
+    harness 24/24; live staging verified with desktop +
+    mobile screenshots
+    (`~/workspace/your_files/spec020-review/issue-2026-10-14-footer-address-desktop-1440.png`,
+    `...-mobile-390.png`).
+  - (b) **DONE 2026-10-10** on the owner's direction to
+    proceed with all remaining items: a factual wording
+    review compared the `/privacy/` newsletter section
+    (§13), the WF-G8 signup fine print, the confirmation
+    email copy, and the issue footer against the endpoint
+    code and D1 schema — data collected, processors,
+    double opt-in, no tracking, suppression retention,
+    weekly cadence, one-click unsubscribe. **No factual
+    mismatches found; no copy changed.** This was a
+    factual-consistency review against the implementation,
+    not a review by outside legal counsel.
+  - (c) **PENDING** — promotion approval remains the
+    owner's to give; T011 stays blocked on it, with
+    production prerequisites proceeding in parallel under
+    the owner's 2026-10-10 direction.
+- [ ] T011 (after T010) Promotion per spec 010 FR-004 —
+  **prerequisites in progress** under the owner's
+  2026-10-10 direction (production infrastructure lane);
+  the promotion merge itself remains gated on T010(c).
   (guard proofs: production `robots.txt` / `_headers`
   diffs empty; staging guards re-asserted on sync-back),
   production bindings + production Turnstile widget,

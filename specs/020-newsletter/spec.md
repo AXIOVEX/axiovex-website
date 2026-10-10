@@ -47,6 +47,22 @@ line), and the issue footer's link moved onto the same
 per-recipient base-URL personalization as its web-edition and
 unsubscribe links; endpoint harness 24/24 unchanged.
 
+**Amendment 5 (owner direction, Tristen Pierson, 2026-10-10)**:
+the FR-018(a) CAN-SPAM postal address is **designated**: the
+newsletter footer carries Axiovex Systems, LLC's registered
+office address from the Michigan LARA record — **6633 18 Mile
+Rd, Sterling Heights, MI 48314** (the Velocity registered
+office used for the business registration). The address now
+appears in **both** the email footer (HTML and plain-text
+parts, from the issue source's `footerAddress`) **and** the
+web edition's footer colophon (rendered from the same field;
+the marked placeholder remains only as the fallback for an
+issue with no address designated). Applied and verified on
+staging the same day (issue 2026-10-14; endpoint harness
+24/24; live desktop + mobile screenshots filed with the T010
+evidence). FR-018(a) is satisfied; the production-mode send
+guard now passes on this address.
+
 **Origin (Tristen, 2026-10-09)**: add a recurring emailed report
 to the Axiovex system — working name "AXIOVEX daily signal" —
 with a website signup, reading versions subscribers can open on
@@ -295,6 +311,7 @@ instead of fetched.
   postal address; Axiovex publishes no street address, so
   **the owner designates one (e.g. a PO Box) before the
   first production send**. The agent never invents one.
+  **Designated 2026-10-10 — see Amendment 5.**
   This blocks the first send, not the staging build or the
   allowlisted test loop (staging test sends carry no postal
   line beyond a clearly marked staging placeholder, and
