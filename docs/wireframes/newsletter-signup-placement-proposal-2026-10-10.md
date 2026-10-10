@@ -1,9 +1,21 @@
 # Proposal — Newsletter signup placement expansion
 
-**Status: PROPOSED 2026-10-10 — PENDING OWNER APPROVAL.**
-Wireframes only. Nothing on the live site changes until Tristen
-approves; implementation then runs through the spec-kit + AEE flow
-with this note and the revised frames as its wireframe basis.
+**Status: APPROVED by Tristen Pierson 2026-10-10** — header
+label decided: **Subscribe**. Implementation runs through the
+spec-kit + AEE flow as **spec 021-newsletter-signup-placement**
+(staging first; production promotion is a separate owner
+approval), with this note and the revised frames as its
+wireframe basis.
+
+**Approval record (2026-10-10).** The ranked set is approved
+as drawn. The three flagged items are resolved: (1) the
+header label is **Subscribe** — the "The Signal" alternative
+is declined (naming collision with the nav's existing
+**Signals** item, below); (2) WF-15's v1 "Not in the nav"
+note is **superseded** by the WF-G1 header CTA; (3) the
+homepage section sits **after the Signals + Michigan Pulse
+block**, as drawn (the stricter "immediately after the
+services grid" reading is not taken).
 
 ## Why
 
@@ -146,3 +158,7 @@ label/slot adjustments noted, and an implementation spec follows
 under the SDD flow. Approval covers placements and copy reuse
 only — implementation details (stylesheet bump, generator slots,
 per-placement source values) belong to that spec.
+
+**Satisfied 2026-10-10:** approved as drawn, header label
+**Subscribe**; the implementation spec is
+`specs/021-newsletter-signup-placement/`.

@@ -50,21 +50,20 @@ This file is the index, the gate rule, and the revision log.
   WF-17 a reduced WF-05-shell state set — confirmed /
   unsubscribed / expired / already-in-state; WF-15
   landing-page revision — form above the archive, archive
-  as sample proof — PROPOSED 2026-10-10 — PENDING OWNER
-  APPROVAL)
+  as sample proof — **APPROVED 2026-10-10 (spec 021)**)
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
 - WF-09 Blog / article / privacy — tablet
 - Global components: WF-G1 nav (Signals link added by spec 008 —
   approved + implemented 2026-10-06; Home as the home page's first
   nav item added by spec 009 — approved + implemented 2026-10-06;
-  Subscribe CTA → /newsletter/ PROPOSED 2026-10-10 — PENDING OWNER
-  APPROVAL) · WF-G2 strata bar (+ page-head rhythm, spec 003; page-foot
+  Subscribe CTA → /newsletter/ **APPROVED 2026-10-10 —
+  label: Subscribe (spec 021)**) · WF-G2 strata bar (+ page-head rhythm, spec 003; page-foot
   rhythm proposed by spec 015 — PENDING OWNER APPROVAL) · WF-G3 CTA
   band · WF-G4 footer (legal link row gains Disclaimer
   beside Privacy Policy, spec 016 — owner decision
   2026-10-06; IMPLEMENTED + LIVE 2026-10-06, merge
   `9d7dbba`; newsletter strip — WF-G8 compact variant above the
-  grid — PROPOSED 2026-10-10 — PENDING OWNER APPROVAL) · WF-G5 service card · WF-G6 Signals floating
+  grid — **APPROVED 2026-10-10 (spec 021)**) · WF-G5 service card · WF-G6 Signals floating
   widget (spec 008 — approved + implemented 2026-10-06) · WF-G7
   Breaking news banner (proposed 2026-10-06 by spec 012 —
   PENDING OWNER APPROVAL) · WF-G8 Newsletter signup block
@@ -72,7 +71,7 @@ This file is the index, the gate rule, and the revision log.
   email-only signup for The Axiovex Signal, confirmation-first
   copy, no-tracking fine print; v1 placement on /signals/ only,
   drawn in place at WF-11; placement expansion + compact variant
-  PROPOSED 2026-10-10 — PENDING OWNER APPROVAL: header CTA
+  **APPROVED 2026-10-10 (spec 021)**: header CTA
   (WF-G1), /signals/ head compact block (WF-11), article end
   (WF-04), home section (WF-01), /newsletter/ landing lead
   (WF-15), footer strip (WF-G4) — proposal note
@@ -797,3 +796,21 @@ as accordion rows.
   llms.txt itself is not edited by this revision).
   Nothing on the live site changes until Tristen
   approves.
+- **2026-10-10** — REVISION APPROVED by Tristen
+  2026-10-10 (spec 021-newsletter-signup-placement): the
+  newsletter signup placement expansion proposed above is
+  **APPROVED as drawn**, with the three flagged items
+  resolved as decided here: (1) the header label is
+  **Subscribe** — the "The Signal" alternative is declined
+  (it sits one letter from the nav's existing **Signals**
+  item in the same row); (2) WF-15's v1 "Not in the nav"
+  note is **superseded** by the WF-G1 header CTA (the
+  annotation stands at WF-15; the email-footer and sitemap
+  routes remain); (3) the homepage section sits **after
+  the Signals + Michigan Pulse block**, as drawn. The
+  frames (WF-G1, WF-G4, WF-G8 + compact variant, WF-01,
+  WF-04, WF-11, WF-15) are marked APPROVED 2026-10-10 in
+  `wireframes.html`, and the proposal note carries the
+  approval record. Implementation runs on staging under
+  spec 021; production promotion remains a separate owner
+  approval.
