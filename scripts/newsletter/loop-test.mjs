@@ -9,13 +9,19 @@
 // test send of the current issue -> verify the delivered issue
 // (List-Unsubscribe header, one-click path, FR-018 postal
 // footer) -> one-click unsubscribe -> verify unsubscribed +
-// suppression. Per-step PASS / FAIL / BLOCKED ledger with
-// evidence; exit 0 (all pass), 1 (any FAIL), 2 (BLOCKED, no
-// FAIL). BLOCKED means an automation limit outside the
-// deployed code (production Managed Turnstile vs a headless
-// browser; test-send mode not yet promoted; no signed-in M365
-// session for the production mailbox check) — never a silent
-// pass.
+// suppression. Per-step PASS / FAIL / BLOCKED / DEFERRED
+// ledger with evidence; exit 0 (all pass), 1 (any FAIL),
+// 2 (BLOCKED or DEFERRED, no FAIL). BLOCKED means an
+// automation limit outside the deployed code (production
+// Managed Turnstile vs a headless browser; test-send mode
+// not yet promoted; no signed-in M365 session for the
+// production mailbox check; this runner's own connectivity
+// to the site) — never a silent pass. DEFERRED (added
+// 2026-10-10, T007) means the send was accepted (endpoint /
+// Graph evidence) but delivery was not observed inside the
+// delivery window — receiver-side deferral territory,
+// distinct from a hard FAIL (send rejected, wrong content,
+// D1 mismatch) and never a silent pass either.
 //
 // One probe per environment (FR-022-2, read-path correction
 // 2026-10-10), chosen by where its mail is OBSERVABLE:
@@ -66,6 +72,13 @@ if (!ENVS[envName]) {
 }
 const ENV = ENVS[envName];
 const PROBE = PROBES[envName];
+// Delivery-observation window for the mail legs (spec 022
+// T007): widened from 180s to 900s after the 2026-10-10
+// evidence that this new sender's mail is deferred well past
+// 180s under test bursts (LU-Post diagnostic copies took
+// 10–20 min; issue-shaped copies 30–70+ min, some never
+// in-window). Recorded in spec.md's FR-022-4 addendum.
+const DELIVERY_WINDOW_MS = 900000;
 
 // ---------- ops store (values never printed) ----------
 const ops = {};
@@ -172,7 +185,17 @@ async function browserSubscribe() {
   try {
     const { stdout } = await execFileP(py, [script, '--base', ENV.base, '--email', PROBE, '--env-name', envName], { timeout: 240000, maxBuffer: 4 * 1024 * 1024 });
     const line = stdout.trim().split('\n').pop();
-    return JSON.parse(line);
+    const parsed = JSON.parse(line);
+    // Connectivity classification (T007): a Chromium network
+    // error (tunnel/connection class — e.g. the production
+    // hook run at 18:54Z on 2026-10-10 died with
+    // net::ERR_TUNNEL_CONNECTION_FAILED while the site was
+    // verifiably up) is an environment limit of THIS runner,
+    // not a product failure -> BLOCKED, never FAIL.
+    if (parsed.outcome === 'failed' && /net::ERR_|ERR_TUNNEL|ERR_PROXY/.test(parsed.detail || '')) {
+      return { ...parsed, outcome: 'blocked', detail: `environment connectivity (browser could not reach the site): ${parsed.detail}` };
+    }
+    return parsed;
   } catch (e) {
     return { outcome: 'blocked', detail: `browser leg could not run: ${e.message.slice(0, 200)}`, screenshot: null };
   }
@@ -182,10 +205,10 @@ async function browserSubscribe() {
 async function mailboxCheck(mode, { subject = '' } = {}) {
   const py = path.join(homedir(), 'workspace/venvs/playwright/bin/python');
   const script = path.join(ROOT, 'scripts/newsletter/loop-mailbox-browser.py');
-  const args = [script, '--mode', mode, '--base', ENV.base, '--timeout', '170'];
+  const args = [script, '--mode', mode, '--base', ENV.base, '--timeout', '870'];
   if (mode === 'issue') args.push('--subject', subject, '--postal', POSTAL);
   try {
-    const { stdout } = await execFileP(py, args, { timeout: 300000, maxBuffer: 4 * 1024 * 1024 });
+    const { stdout } = await execFileP(py, args, { timeout: 940000, maxBuffer: 4 * 1024 * 1024 });
     const line = stdout.trim().split('\n').pop();
     return JSON.parse(line);
   } catch (e) {
@@ -255,9 +278,23 @@ if (!priorBad()) {
       record(1, 'subscribe probe', 'FAIL', `HTTP ${status}: ${JSON.stringify(j).slice(0, 200)}`);
     }
   } else {
-    const b = await browserSubscribe();
-    if (b.outcome === 'submitted') record(1, 'subscribe probe (browser, Managed Turnstile)', 'PASS', `${b.detail}; screenshot ${b.screenshot}`);
-    else record(1, 'subscribe probe (browser, Managed Turnstile)', b.outcome === 'blocked' ? 'BLOCKED' : 'FAIL', `${b.detail}; screenshot ${b.screenshot}`);
+    // Connectivity preflight (T007): if this runner cannot
+    // reach the site at all, the browser leg's failure would
+    // be environmental — classify it BLOCKED up front instead
+    // of indicting the deployment.
+    let unreachable = null;
+    try {
+      await fetch(`${ENV.base}/signals/`, { signal: AbortSignal.timeout(20000) });
+    } catch (e) {
+      unreachable = e.message;
+    }
+    if (unreachable) {
+      record(1, 'subscribe probe', 'BLOCKED', `environment connectivity: this runner cannot reach ${ENV.base} (${unreachable.slice(0, 160)}); the deployment is not indicted`);
+    } else {
+      const b = await browserSubscribe();
+      if (b.outcome === 'submitted') record(1, 'subscribe probe (browser, Managed Turnstile)', 'PASS', `${b.detail}; screenshot ${b.screenshot}`);
+      else record(1, 'subscribe probe (browser, Managed Turnstile)', b.outcome === 'blocked' ? 'BLOCKED' : 'FAIL', `${b.detail}; screenshot ${b.screenshot}`);
+    }
   }
 }
 
@@ -325,7 +362,7 @@ async function followConfirm(url, dateNote, sourceNote) {
 }
 if (!priorBad()) {
   if (envName === 'staging') {
-    const res3 = await pollConfirmAndFollow(0, 180000);
+    const res3 = await pollConfirmAndFollow(0, DELIVERY_WINDOW_MS);
     if (res3.ok) {
       confirmFollowed = true;
       record(3, 'confirmation email + confirm link', 'PASS', `message dated ${res3.msg.date}; link followed -> HTTP 200 WF-17 'You're subscribed.' landing; evidence source: Gmail — direct delivery to probe ${PROBE}`);
@@ -333,15 +370,17 @@ if (!priorBad()) {
       record(3, 'confirmation email arrives', 'FAIL', `message ${res3.msg.id} dated ${res3.msg.date} carries no confirm link for this environment; evidence source: Gmail — direct delivery to probe ${PROBE}`);
     } else if (res3.msg) {
       record(3, 'confirmation email + confirm link', 'FAIL', `message dated ${res3.msg.date}; link followed -> HTTP ${res3.status}, landing '${res3.title}'; evidence source: Gmail — direct delivery to probe ${PROBE}`);
+    } else if (mailLeg === 'sent') {
+      record(3, 'confirmation email arrives', 'DEFERRED', `send accepted (endpoint mail leg 'sent') but this run's confirmation was not observed in Gmail within ${DELIVERY_WINDOW_MS / 1000}s${res3.expiredOnly ? '; only a stale pre-run confirmation was visible (its token predates this run)' : ''} — DEFERRED: delivery unobserved, not a send rejection (receiver-side deferral of this new sender was measured at 10–70+ min on 2026-10-10); evidence source: Gmail — direct delivery to probe ${PROBE}`);
     } else {
-      record(3, 'confirmation email arrives', 'FAIL', `no confirmation dated after run start within 180s (endpoint mail leg: ${mailLeg ?? 'n/a'})${res3.expiredOnly ? '; only a stale pre-run confirmation was visible (its token predates this run)' : ''}; evidence source: Gmail — direct delivery to probe ${PROBE}`);
+      record(3, 'confirmation email arrives', 'FAIL', `no confirmation dated after run start within ${DELIVERY_WINDOW_MS / 1000}s and the endpoint mail leg reported '${mailLeg ?? 'n/a'}' — the send itself did not report acceptance; evidence source: Gmail — direct delivery to probe ${PROBE}`);
     }
   } else {
     const mb = await mailboxCheck('confirmation');
     if (mb.outcome === 'blocked') {
       record(3, 'confirmation email + confirm link', 'BLOCKED', `mailbox check unavailable: ${mb.detail}; evidence source: M365 mailbox search (Outlook web, all folders)`);
     } else if (mb.outcome !== 'found') {
-      record(3, 'confirmation email arrives', 'FAIL', `no confirmation found within the window though the D1 pending row was written at step 2 (${mb.detail}); evidence source: M365 mailbox search (Outlook web, all folders)`);
+      record(3, 'confirmation email arrives', 'DEFERRED', `the D1 pending row was written at step 2 (the subscribe leg completed) but no confirmation was observed within ${DELIVERY_WINDOW_MS / 1000}s (${mb.detail}) — DEFERRED: delivery unobserved, not a send rejection; evidence source: M365 mailbox search (Outlook web, all folders)`);
     } else if (!mb.confirmUrl) {
       record(3, 'confirmation email arrives', 'FAIL', `confirmation present in the probe mailbox (header date ${mb.dateText || 'unread'}) but no confirm link for this environment could be extracted from it; evidence source: M365 mailbox search (Outlook web, all folders)`);
     } else {
@@ -398,7 +437,7 @@ if (!priorBad()) {
         if (mb.outcome === 'blocked') {
           record(5, 'test issue delivered + verified', 'BLOCKED', `endpoint + sends table agree the issue was sent (mailStatus 'sent', sends row ${sendRow.id} sent_count 1) but the mailbox leg is unavailable: ${mb.detail}; evidence sources: endpoint mailStatus + sends table (a), M365 mailbox search (b, unavailable)`);
         } else if (mb.outcome !== 'found') {
-          record(5, 'test issue delivered + verified', 'FAIL', `endpoint + sends table agree the issue was sent (mailStatus 'sent', sends row ${sendRow.id} sent_count 1) but no copy was found (${mb.detail}); evidence sources: endpoint mailStatus + sends table, M365 mailbox search (Outlook web, all folders)`);
+          record(5, 'test issue delivered + verified', 'DEFERRED', `endpoint + sends table agree the issue was sent (mailStatus 'sent', sends row ${sendRow.id} sent_count 1) but no copy was observed within the delivery window (${mb.detail}) — DEFERRED: delivery unobserved, not a send rejection; evidence sources: endpoint mailStatus + sends table, M365 mailbox search (Outlook web, all folders)`);
         } else if (!mb.unsubUrl || !mb.hasPostal) {
           record(5, 'test issue delivered + verified', 'FAIL', `issue present in the probe mailbox (header date ${mb.dateText || 'unread'}); postal footer ${mb.hasPostal ? 'present' : 'MISSING'}, unsubscribe URL ${mb.unsubUrl ? 'found' : 'MISSING'} in the message body; evidence source: M365 mailbox search (Outlook web, all folders)`);
         } else {
@@ -407,9 +446,9 @@ if (!priorBad()) {
         }
       }
     } else {
-      const msg = await pollMail((m) => m.subject === subject);
+      const msg = await pollMail((m) => m.subject === subject, DELIVERY_WINDOW_MS);
       if (!msg) {
-        record(5, 'test issue delivered + verified', 'FAIL', `endpoint reports sent=1 but no issue email dated after run start arrived within 180s; evidence source: Gmail — direct delivery to probe ${PROBE}`);
+        record(5, 'test issue delivered + verified', 'DEFERRED', `send accepted (endpoint reports sent=1, mailStatus 'sent') but no issue email dated after run start was observed in Gmail within ${DELIVERY_WINDOW_MS / 1000}s — DEFERRED: delivery unobserved, not a send refusal. Gmail deferred issue-shaped mail from this sender 30–70+ min during the 2026-10-10 LU-Post diagnostic window (Graph accepted every send), while confirmation mail arrived in ~30s; late flushes are recorded in the run record (spec 022 T007); evidence source: Gmail — direct delivery to probe ${PROBE}`);
       } else {
         const lu = msg.headers['list-unsubscribe'] || '';
         const lup = msg.headers['list-unsubscribe-post'] || '';
@@ -497,7 +536,7 @@ if (envName === 'staging') {
         if (!(status === 200 && j.ok)) {
           record(9, RESTORE, 'FAIL', `re-subscribe for restore returned HTTP ${status}: ${JSON.stringify(j).slice(0, 160)}`);
         } else {
-          const res9 = await pollConfirmAndFollow(restoreStart - 5000, 180000);
+          const res9 = await pollConfirmAndFollow(restoreStart - 5000, DELIVERY_WINDOW_MS);
           if (res9.ok) {
             const after = await probeRow();
             if (after?.status === 'active') {
@@ -509,8 +548,10 @@ if (envName === 'staging') {
             record(9, RESTORE, 'FAIL', `restore confirmation dated ${res9.msg.date} carries no confirm link for this environment`);
           } else if (res9.msg) {
             record(9, RESTORE, 'FAIL', `restore confirm link -> HTTP ${res9.status}, landing '${res9.title}'; probe now '${(await probeRow())?.status}'`);
+          } else if (j.mail === 'sent') {
+            record(9, RESTORE, 'DEFERRED', `restore send accepted (endpoint mail leg 'sent') but the restore confirmation was not observed in Gmail within ${DELIVERY_WINDOW_MS / 1000}s — DEFERRED: restore incomplete, delivery unobserved (not a send rejection); probe left '${(await probeRow())?.status}'`);
           } else {
-            record(9, RESTORE, 'FAIL', `restore confirmation did not arrive in Gmail within 180s (endpoint mail leg: ${j.mail ?? 'n/a'}); probe left '${(await probeRow())?.status}'`);
+            record(9, RESTORE, 'FAIL', `restore confirmation did not arrive in Gmail within ${DELIVERY_WINDOW_MS / 1000}s (endpoint mail leg: ${j.mail ?? 'n/a'}); probe left '${(await probeRow())?.status}'`);
           }
         }
       }
@@ -521,7 +562,7 @@ if (envName === 'staging') {
 }
 
 // ---------- verdict + record ----------
-const verdict = steps.some((s) => s.status === 'FAIL') ? 'FAIL' : steps.some((s) => s.status === 'BLOCKED') ? 'BLOCKED' : 'PASS';
+const verdict = steps.some((s) => s.status === 'FAIL') ? 'FAIL' : steps.some((s) => s.status === 'DEFERRED') ? 'DEFERRED' : steps.some((s) => s.status === 'BLOCKED') ? 'BLOCKED' : 'PASS';
 state.envs[envName].probe = PROBE;
 state.envs[envName].probeUnsubUrl = probeUnsubUrl;
 state.envs[envName].lastRunUtc = new Date().toISOString();
@@ -531,4 +572,4 @@ state.runs = state.runs.slice(-50);
 saveState();
 console.log(`\nVERDICT ${verdict} — ${steps.filter((s) => s.status === 'PASS').length}/${steps.length} steps PASS (env=${envName})`);
 if (wantJson) console.log(JSON.stringify({ env: envName, verdict, steps }, null, 2));
-process.exit(verdict === 'PASS' ? 0 : verdict === 'BLOCKED' ? 2 : 1);
+process.exit(verdict === 'PASS' ? 0 : verdict === 'FAIL' ? 1 : 2);

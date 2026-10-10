@@ -135,3 +135,16 @@
      FULL GREEN, with the probe verified back at its starting
      status (`active`) afterward; hook dry-run confirms the
      trigger is untouched (runner path/args unchanged).
+   - **Verdict hardening (same day, from the T007 runs)**:
+     the re-runs collided with two realities the original
+     design didn't price in — spec 020's LU-Post diagnostic
+     changing the staging send path mid-flight, and Gmail
+     deferring this new sender's mail far past 180s. Runner
+     changes: delivery windows 180s → 900s; a DEFERRED step
+     status (send accepted, delivery unobserved in-window)
+     between BLOCKED and FAIL in the verdict precedence;
+     Chromium connectivity errors (`net::ERR_*`) classified
+     BLOCKED with a plain-connectivity preflight on the
+     production subscribe leg; production mailbox-check
+     search window aligned to ~870s. All recorded in
+     spec.md's FR-022-4 addendum; outcomes in T007.

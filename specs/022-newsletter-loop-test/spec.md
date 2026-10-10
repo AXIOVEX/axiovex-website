@@ -128,6 +128,26 @@ after every deployment and hotfixed if problem."
   browser; the test-send mode not yet promoted to that
   environment) and always carries its evidence; a BLOCKED
   step is never reported as a pass.
+  **Addendum (2026-10-10, T007) — DEFERRED + wider window +
+  connectivity classification.** (i) A fourth step status,
+  DEFERRED: the send was accepted (endpoint mail leg `sent`
+  / Graph 202, plus the sends-table row where applicable)
+  but delivery was not observed inside the delivery window.
+  DEFERRED is the verdict when no step FAILs and at least
+  one is DEFERRED (exit 2, like BLOCKED). It separates
+  "delivery slow/unobserved" — receiver-side deferral
+  territory — from a hard FAIL (send rejected, wrong
+  content, D1 mismatch). (ii) The delivery-observation
+  window is 900s (widened from 180s the same day): measured
+  deferral of this new sender ran 10–20 min for diagnostic
+  copies and 30–70+ min for issue-shaped mail, so 180s
+  systematically misread deferral as failure. (iii) Browser
+  legs that die on connectivity errors (Chromium `net::ERR_*`
+  tunnel/connection class, e.g. the hook's 2026-10-10
+  production run against a verifiably-up site) classify as
+  BLOCKED (this runner's environment), never FAIL; the
+  production subscribe leg also preflights plain connectivity
+  to the site before invoking the browser.
 - **FR-022-5 — Repeatable and self-normalizing.** A run may
   start with the probe in any state. The runner first returns
   the probe to `unsubscribed` using the public endpoints
