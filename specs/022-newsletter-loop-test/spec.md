@@ -7,14 +7,19 @@ mode) to production is a separate owner-gated merge
 
 **Created**: 2026-10-10
 
-**Status**: **DIRECTED AND BUILT ON STAGING 2026-10-10.** The
-owner directed this test in chat (see T001). The staging
-execution currently FAILS at the confirmation-email step for
+**Status**: **DIRECTED, BUILT, AND WIRED 2026-10-10; first
+staging execution FAILS at step 3 as expected (see T006).**
+The owner directed this test in chat (see T001). The endpoint
+mode, runner, harness proof (38/38), and the
+`newsletter-loop-check` deployment hook are all live; the
+hook judges every deployment from its creation forward. The
+staging execution FAILS at the confirmation-email step for
 the known tenant-side reason recorded in spec 020 (Graph 403
 ErrorAccessDenied, RAOP replication lag) — that failure, at
 that step, with that evidence, is the test detecting the real
 block. The loop's first full green doubles as the mail-heal
-proof for spec 020's open send block.
+proof for spec 020's open send block. Production step 5
+awaits the owner-gated promotion of the FR-022-3 mode.
 
 **Amendment to spec 020 (owner direction, Tristen Pierson,
 2026-10-10)**: spec 020 FR-005 requires a per-issue owner
