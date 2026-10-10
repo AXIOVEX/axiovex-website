@@ -2201,6 +2201,13 @@ function buildNewsletterChrome() {
   }
   const footerInner = '\n        ' + newsletterBlock('footer', { variant: 'footer' }) + '\n      ';
   const footerRe = /(<!-- NLFOOTER:START -->)[\s\S]*?(<!-- NLFOOTER:END -->)/;
+  /* Owner correction 2026-10-10: the /newsletter/ landing page carries
+     exactly ONE subscribe form — the WF-15 landing form above the
+     archive (WF-15: one form per page) — so the sitewide footer strip
+     is suppressed there and its region is written empty. Issue pages
+     (newsletter/<date>/) are web editions and keep the strip, as does
+     every other page. */
+  const FOOTER_STRIP_EXCLUDED = new Set([path.join('newsletter', 'index.html')]);
   let footers = 0;
   for (const rel of outputs) {
     const file = path.join(ROOT, rel);
@@ -2211,6 +2218,11 @@ function buildNewsletterChrome() {
     const html = readFileSync(file, 'utf8');
     if (!footerRe.test(html)) {
       console.warn('nl-chrome: NLFOOTER markers not found in ' + rel + ' — footer strip skipped for that page');
+      continue;
+    }
+    if (FOOTER_STRIP_EXCLUDED.has(rel)) {
+      const cleared = html.replace(footerRe, (m, g1, g2) => g1 + g2);
+      if (cleared !== html) writeFileSync(file, cleared);
       continue;
     }
     const out = html.replace(footerRe, (m, g1, g2) => g1 + footerInner + g2);

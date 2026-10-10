@@ -16,6 +16,14 @@ The wireframes were approved by Tristen Pierson on 2026-10-10
 with the header button label decided as **Subscribe** (tasks.md
 T001).
 
+**Correction 2026-10-10 (owner-directed, tasks.md T013)**: as
+promoted, `/newsletter/` rendered two subscribe forms — the
+WF-15 landing form and the sitewide WF-G4 footer strip.
+Tristen directed one form on that page: the top (landing) one.
+The footer strip is suppressed on `/newsletter/` only (WF-15
+always specified one form per page); every other page,
+including the newsletter issue pages, keeps its strip.
+
 ## Background
 
 Spec 020 (The Axiovex Signal) shipped the WF-G8 signup block in
