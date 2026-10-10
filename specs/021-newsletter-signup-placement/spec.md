@@ -5,7 +5,10 @@ promotion is a separate owner-gated merge `staging` → `main`.
 
 **Created**: 2026-10-10
 
-**Status**: **APPROVED 2026-10-10 — IMPLEMENTATION ON STAGING.**
+**Status**: **IMPLEMENTED ON STAGING 2026-10-10** (commits
+`9951afb`, `0941851`, `059a837`, `1a66f12`; harness 31/31;
+Playwright-verified against the approved frames — tasks.md
+T009–T011).
 The wireframes were approved by Tristen Pierson on 2026-10-10
 with the header button label decided as **Subscribe** (tasks.md
 T001). Production promotion is NOT part of this spec's approval

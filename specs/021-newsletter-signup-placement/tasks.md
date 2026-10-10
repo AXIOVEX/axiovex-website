@@ -80,7 +80,7 @@
   byte-identical to the pre-021 build apart from its new
   `id="issues"` anchor (C-021-6); second build = zero
   diff.
-- [ ] T010 (after T009) Staging visual verification:
+- [x] T010 (after T009) Staging visual verification:
   Playwright screenshots at desktop and 390px — homepage
   (hero untouched + newsletter section), one article
   (end-of-article block), `/newsletter/` (landing
@@ -89,7 +89,40 @@
   network check: no `challenges.cloudflare.com` request
   on page view (C-021-4), spot-checked on the homepage.
   Screenshots in `~/workspace/your_files/spec021-review/`.
-- [ ] T011 (after T010) Closeout on staging: this file
+  **Done 2026-10-10:** Playwright (Firefox, desktop 1440 +
+  390px, reduced-motion path for final-state captures)
+  against staging — header (Subscribe ghost immediately
+  left of Contact; hero untouched), homepage section
+  (centered, full block; on focus its own Turnstile widget
+  rendered and completed with the test-key Success state),
+  article end block (after body, before More analysis;
+  stacks full-width at 390px), `/newsletter/` landing
+  (lead above the archive, bullets + Every Wednesday
+  cadence at the form, sample-issue anchor, one content
+  form), `/signals/` head compact + unchanged foot block,
+  footer strip above the grid (desktop + mobile), mobile
+  menu order (… Documents · Subscribe · Contact). Cold
+  loads of `/` and `/signals/` made **zero**
+  challenges.cloudflare.com requests, no Turnstile script
+  in the DOM, no widget iframes (C-021-4); focusing an
+  email field fired the lazy load (3 challenges requests).
+  One fix during verification: the ghost treatment's
+  `!important` muted color initially overrode the
+  current state on `/newsletter/` — v36 gained the
+  winning rule (commit `1a66f12`); Subscribe now computes
+  cyan there. Also recorded: v36's nav current-item rule
+  makes the current item cyan sitewide, as WF-G1 draws
+  it — production's v35 CSS never carried that rule, so
+  current items render muted there today; the staging
+  rendering now matches the frame.
+- [x] T011 (after T010) Closeout on staging: this file
   updated with evidence; the owner reviews staging.
   **Production promotion is out of scope** — a separate
-  owner approval under spec 010.
+  owner approval under spec 010. **Closed 2026-10-10:**
+  spec 021 is IMPLEMENTED ON STAGING (commits `9951afb`
+  wireframe approval, `0941851` spec record, `059a837`
+  implementation, `1a66f12` current-state fix); live
+  staging verified by curl (all pages 200 (OK), per-page
+  sources as wireframed, llms.txt lines served,
+  styles.v36.css + newsletter-signup.v2.js 200 (OK)) and
+  by the T010 Playwright pass.
