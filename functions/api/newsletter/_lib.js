@@ -223,36 +223,33 @@ export async function sendNewsletterMail(env, { to, subject, html, text, unsubsc
         `--${boundary}--`,
         "",
       ].join("\r\n");
-      // LU-POST DIAGNOSTIC (2026-10-10): the direct MIME sendMail
-      // conversion dropped List-Unsubscribe-Post on delivery while
-      // List-Unsubscribe survived (first production cycle evidence).
-      // Test the draft + send route: the MIME is stored as a draft
-      // message ($value create), then sent — a different Exchange
-      // conversion path that may preserve both headers.
-      const createResponse = await fetch(
-        `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(NEWSLETTER_FROM)}/messages`,
-        {
-          method: "POST",
-          headers: { authorization: `Bearer ${accessToken}`, "content-type": "text/plain" },
-          body: b64raw(mime),
-          signal: controller.signal,
+      // LU-POST DIAGNOSTIC B (2026-10-10): iteration A (draft+send)
+      // failed — the Mail.Send-only app cannot create drafts.
+      // Diagnostic B temporarily sends the HTML body via the JSON
+      // sendMail route with internetMessageHeaders to test whether
+      // that route preserves List-Unsubscribe-Post on delivery.
+      // (Text part intentionally omitted for this diagnostic only.)
+      const diagHeaders = [];
+      if (unsubscribeUrl) {
+        diagHeaders.push({ name: "List-Unsubscribe", value: `<${unsubscribeUrl}>` });
+        diagHeaders.push({ name: "List-Unsubscribe-Post", value: "List-Unsubscribe=One-Click" });
+      }
+      const diagPayload = {
+        message: {
+          subject: cleanSubject,
+          body: { contentType: "html", content: html },
+          toRecipients: [{ emailAddress: { address: to } }],
+          replyTo: [{ emailAddress: { address: NEWSLETTER_FROM, name: NEWSLETTER_FROM_NAME } }],
+          internetMessageHeaders: diagHeaders.length ? diagHeaders : undefined,
         },
-      );
-      if (createResponse.status !== 201) {
-        const errBody = await createResponse.text().catch(() => "");
-        console.error(`Graph newsletter draft create failed with status ${createResponse.status}: ${errBody.slice(0, 500)}`);
-        return "failed";
-      }
-      const draft = await createResponse.json().catch(() => null);
-      if (!draft || typeof draft.id !== "string") {
-        console.error("Graph newsletter draft create returned no message id");
-        return "failed";
-      }
+        saveToSentItems: false,
+      };
       response = await fetch(
-        `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(NEWSLETTER_FROM)}/messages/${encodeURIComponent(draft.id)}/send`,
+        `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(NEWSLETTER_FROM)}/sendMail`,
         {
           method: "POST",
-          headers: { authorization: `Bearer ${accessToken}` },
+          headers: { authorization: `Bearer ${accessToken}`, "content-type": "application/json" },
+          body: JSON.stringify(diagPayload),
           signal: controller.signal,
         },
       );
