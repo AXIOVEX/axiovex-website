@@ -10,9 +10,12 @@ build and allowlisted test loop passed, the T010 gate was
 satisfied (postal address designated, factual wording review
 completed, and promotion approved by Tristen Pierson), and
 T011 promoted the newsletter to production with live
-verification. The first production send has **not** been
-run; every send remains subject to the per-issue FR-005
-owner approval, with standing cycles governed by T012.
+verification. The **first production send ran
+2026-10-10** under the owner's per-issue FR-005 approval
+(issue 2026-10-14; 1 active recipient; delivered and
+verified — see the first-cycle record in tasks.md). Every
+future send remains subject to the per-issue FR-005 owner
+approval, with standing cycles governed by T012.
 
 **Amendment 1 (owner direction, Tristen Pierson, 2026-10-09)**:
 the sending lane changed before any build. **Resend was

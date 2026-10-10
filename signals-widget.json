@@ -21,6 +21,14 @@
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "Robots can do the work. Almost none of it pays yet.",
+      "source": "Axiovex",
+      "date": "2026-10-15",
+      "url": "https://axiovexsystems.com/blog/robots-can-do-the-work/"
+    },
+    {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
       "title": "Notice of Intent To Grant Exclusive Patent License to Zyltech Engineering, LLC; Houston, TX",
@@ -61,14 +69,6 @@
       "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
     },
     {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
-      "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
-      "source": "Michigan WARN (LEO)",
-      "date": "2026-10-08",
-      "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75"
-    },
-    {
       "lane": "ot-security",
       "laneLabel": "OT cybersecurity",
       "title": "Red Lion Controls N-Tron 700 Series",
@@ -103,18 +103,18 @@
     {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+      "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
       "source": "Michigan WARN (LEO)",
       "date": "2026-10-08",
-      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation"
+      "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75"
     },
     {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "Oakland County is losing jobs. Here is why.",
-      "source": "Axiovex",
+      "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+      "source": "Michigan WARN (LEO)",
       "date": "2026-10-08",
-      "url": "https://axiovexsystems.com/blog/oakland-county-job-losses/"
+      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation"
     }
   ],
   "signalsUrl": "/signals/"

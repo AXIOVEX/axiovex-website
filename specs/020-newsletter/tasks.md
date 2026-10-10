@@ -226,6 +226,19 @@
 
 - (empty — FR-020 gauge trips and other owner-presented
   follow-ups are recorded here when they occur.)
+- **List-Unsubscribe-Post missing on delivery (found
+  2026-10-10, first production cycle).** The delivered
+  2026-10-14 issue message carries `List-Unsubscribe` but
+  **not** `List-Unsubscribe-Post`, although
+  `functions/api/newsletter/_lib.js` places both headers
+  in the submitted MIME (line 209) — the Post header did
+  not survive the Microsoft send path, so the RFC 8058
+  header one-click POST is not offered on the delivered
+  message (the footer one-click GET link is present and
+  is the working unsubscribe path). Fix before the next
+  cycle: determine where the header is dropped and
+  restore RFC 8058 one-click on delivered mail; verify
+  against a delivered message, not the submitted MIME.
 
 ## Build record — staging, 2026-10-09 (T002/T003 blocked; T004–T008 done; T009 harness-proven)
 
@@ -420,3 +433,59 @@
   resubscribe.** T009 is checked on the strength of the
   live send + owner-executed unsubscribe + live
   zero-send falsifier above.
+
+## First production cycle — 2026-10-10 (T012, first execution)
+
+- **Approval (FR-005).** Owner, Axiovex chat, 2026-10-10:
+  "Approve the first production send" — covering exactly
+  the 2026-10-14 issue to the then-current production
+  active subscribers. Send marker recorded by the
+  endpoint: `Tristen Pierson 2026-10-10`.
+- **Preflight (all pass).** (a) Issue source
+  `newsletter/issues/2026-10-14.email.json` matches the
+  live web edition at
+  `https://axiovexsystems.com/newsletter/2026-10-14/`
+  (HTTP 200 — the request succeeded; identical headline;
+  `footerAddress` = the FR-018 designated address, no
+  placeholder). (b) Production D1 active subscribers =
+  exactly **1** (`tristen.pierson@gmail.com`, confirmed
+  2026-10-10T18:06:33Z). (c) Production `sends` table
+  empty — no prior production send (idempotence).
+  (d) FR-020 gauge read via the production endpoint:
+  **"Sender gauge: 1 active subscribers (749 below the
+  750 PLAN threshold); health overrides: none."**
+- **Send (DONE, exactly once).**
+  `scripts/newsletter/send.mjs 2026-10-14 --base
+  https://axiovexsystems.com`, 2026-10-10T18:09:25.528Z →
+  18:09:26.480Z: `sent 1, throttled 0, blocked(allowlist)
+  0, failed 0, remaining 0`. Sends log row id 1:
+  issue_id `2026-10-14`, duration **952 ms**,
+  recipient_count 1, sent_count 1, bounce_count 0,
+  complaint_count 0, throttle_events 0, provider_ref
+  `microsoft-graph`.
+- **Delivery (verified in the recipient mailbox).** The
+  issue arrived in the owner's Gmail at
+  **2026-10-10T18:09:26Z** (2:09 PM ET), From
+  `Axiovex Newsletter <newsletter@axiovexsystems.com>`,
+  Subject "The Axiovex Signal — October 14, 2026".
+  Gmail API inspection: `multipart/alternative` with
+  **text/plain + text/html parts both present**; the
+  postal line "Axiovex Systems, LLC · 6633 18 Mile Rd,
+  Sterling Heights, MI 48314", the Privacy policy link,
+  and the personalized unsubscribe link are present in
+  the footer (both parts); the **`List-Unsubscribe`
+  header is present**. **Finding:** the
+  `List-Unsubscribe-Post` header is **absent** from the
+  delivered message although the submitted MIME carries
+  it — recorded as a Follow-up above; no re-send was
+  attempted (the single FR-005 authorization was consumed
+  by this send).
+- **Post-send gauge + health.** Gauge unchanged: **1
+  active subscriber, 749 below the 750 PLAN threshold,
+  health overrides none.** Bounce/complaint evidence:
+  sends log counts are 0/0, and no bounce or complaint
+  notice from the newsletter system was present in the
+  owner's Gmail when checked at ~18:10Z (scope: that
+  mailbox, that time; at n = 1 with delivery verified
+  one second after the send, no adverse signal exists).
+  T012 remains standing for future cycles.
