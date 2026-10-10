@@ -11,7 +11,10 @@ harness 31/31; Playwright-verified against the approved frames
 — tasks.md T009–T011), then promoted to production on the
 owner's separate approval (tasks.md T012): merge `202a944`,
 post-merge build `b43e0a9`, deployment `f40deb94`,
-production-verified live.
+production-verified live. The T013 owner correction (one
+form on `/newsletter/`) is also live 2026-10-10: merge
+`2e8750d`, deployment `18079295`, production-verified
+(tasks.md T013).
 The wireframes were approved by Tristen Pierson on 2026-10-10
 with the header button label decided as **Subscribe** (tasks.md
 T001).
