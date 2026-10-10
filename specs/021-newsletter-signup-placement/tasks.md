@@ -126,3 +126,39 @@
   sources as wireframed, llms.txt lines served,
   styles.v36.css + newsletter-signup.v2.js 200 (OK)) and
   by the T010 Playwright pass.
+- [x] T012 (after T011; separate owner approval) Production
+  promotion. Owner approved in chat 2026-10-10 ("Promote
+  spec 021 to production"). Executed per the spec 020
+  playbook: pre-promotion main `38c7aaf` (spec 020 closeout
+  `d2c3279` + two automated signals refreshes), staging tip
+  `89d60eb`; merge `202a944` (only conflict
+  `signals/index.html` — regenerated from the merged
+  template + main's snapshot, never hand-picked);
+  post-merge build commit `b43e0a9`; final merged tree
+  build-idempotent (repeat build = zero diff). Guards:
+  `git diff d2c3279..HEAD -- robots.txt _headers` EMPTY —
+  production robots.txt (Allow) and `_headers` (no
+  X-Robots-Tag) were restored into the merge itself;
+  staging's guard versions never left staging. Turnstile
+  v2 verified pre-push: the hostname gate is preserved —
+  axiovexsystems.com loads the production site key, every
+  other host the public test key (v1's mechanism, carried
+  verbatim). Deployment `f40deb94` (`b43e0a9`) success.
+  Live verification: `/`, `/signals/`, `/newsletter/`,
+  `/newsletter/2026-10-14/`, an article page, `/privacy/`,
+  `/robots.txt`, `/sitemap.xml`, `/llms.txt` all 200 (OK);
+  served HTML carries the header Subscribe button (desktop
+  + mobile markup), the footer strip form, the homepage
+  section, the landing form above the archive, both
+  llms.txt newsletter lines, and styles.v36.css +
+  newsletter-signup.v2.js; no X-Robots-Tag on production
+  responses. Endpoint ladder: subscribe empty payload 422,
+  bogus confirm/unsubscribe tokens 200 (OK) graceful
+  landings including the one-click POST, `GET /api/contact`
+  405, never 500. Production D1 unchanged by the promotion:
+  subscribers 1 (the owner's pending row), sends 0.
+  Playwright production screenshots (`prod-*`, desktop
+  1440 + mobile 390) in `~/workspace/your_files/
+  spec021-review/` match the approved frames. Staging
+  sync-back to final main follows this closeout with the
+  staging guards re-asserted, per the playbook.

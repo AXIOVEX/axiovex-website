@@ -5,14 +5,16 @@ promotion is a separate owner-gated merge `staging` → `main`.
 
 **Created**: 2026-10-10
 
-**Status**: **IMPLEMENTED ON STAGING 2026-10-10** (commits
-`9951afb`, `0941851`, `059a837`, `1a66f12`; harness 31/31;
-Playwright-verified against the approved frames — tasks.md
-T009–T011).
+**Status**: **IMPLEMENTED AND LIVE 2026-10-10** — implemented
+on staging (commits `9951afb`, `0941851`, `059a837`, `1a66f12`;
+harness 31/31; Playwright-verified against the approved frames
+— tasks.md T009–T011), then promoted to production on the
+owner's separate approval (tasks.md T012): merge `202a944`,
+post-merge build `b43e0a9`, deployment `f40deb94`,
+production-verified live.
 The wireframes were approved by Tristen Pierson on 2026-10-10
 with the header button label decided as **Subscribe** (tasks.md
-T001). Production promotion is NOT part of this spec's approval
-and remains a separate owner decision.
+T001).
 
 ## Background
 
