@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-10T22:20:53.808Z",
+  "updatedUtc": "2026-10-10T22:30:50.628Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -31,7 +31,7 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers",
+      "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposes",
       "source": "Manufacturing Dive",
       "date": "2026-10-09",
       "url": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/"
