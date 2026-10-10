@@ -168,5 +168,24 @@ const expiredHtml = await res.text();
 writeFileSync(path.join(EVIDENCE, 'landing-expired.html'), expiredHtml);
 check('S9 expired confirm token -> State C page', expiredHtml.includes('That link has expired.'));
 
+// ---------- spec 021 placement sources (FR-009 / C-021-2) ----------
+// Each placement's form submits its own source; the endpoint stores
+// exactly that value. Out-of-set or missing sources coerce to the
+// pre-021 default 'signals'. (These addresses are outside the test
+// allowlist, so their mail is blocked-allowlist by design — the
+// stored row's source is the evidence.)
+for (const src of ['signals-top', 'article', 'landing', 'home', 'footer']) {
+  const addr = 'placement-' + src + '@example.com';
+  res = await subscribe(ctx(formPost(BASE + '/api/newsletter/subscribe', subFields({ email: addr, source: src }))));
+  j = await res.json();
+  check('P1 source ' + src + ' stored verbatim', res.status === 200 && j.ok && rowOf(addr)?.source === src, `stored=${rowOf(addr)?.source}`);
+}
+res = await subscribe(ctx(formPost(BASE + '/api/newsletter/subscribe', subFields({ email: 'placement-bogus@example.com', source: 'billboard' }))));
+j = await res.json();
+check('P2 out-of-set source coerced to signals', res.status === 200 && j.ok && rowOf('placement-bogus@example.com')?.source === 'signals', `stored=${rowOf('placement-bogus@example.com')?.source}`);
+res = await subscribe(ctx(formPost(BASE + '/api/newsletter/subscribe', subFields({ email: 'placement-missing@example.com', source: '' }))));
+j = await res.json();
+check('P3 missing source coerced to signals', res.status === 200 && j.ok && rowOf('placement-missing@example.com')?.source === 'signals', `stored=${rowOf('placement-missing@example.com')?.source}`);
+
 console.log('\n' + results.filter((r) => r.pass).length + '/' + results.length + ' checks passed');
 process.exit(results.every((r) => r.pass) ? 0 : 1);

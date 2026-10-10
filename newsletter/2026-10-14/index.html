@@ -22,7 +22,7 @@
   <meta name="twitter:description" content="The Axiovex Signal, October 14, 2026: Michigan manufacturing is still adding jobs → and the fall calendar already holds 120 announced Michigan losses to weigh against them.">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/styles.v35.css">
+  <link rel="stylesheet" href="/styles.v36.css">
   <link rel="stylesheet" href="/signals-widget.v1.css">
   <link rel="stylesheet" href="/blog/blog.v11.css">
   <link rel="alternate" type="application/rss+xml" title="Axiovex Systems — Blog" href="/feed.xml">
@@ -54,6 +54,7 @@
         <a href="/blog/">Blog</a>
         <a href="/signals/">Signals</a>
         <a href="/documents/">Documents</a>
+        <a href="/newsletter/" class="nav-subscribe" aria-current="page">Subscribe</a>
         <a href="/contact/" class="nav-cta">Contact</a>
       </nav>
       <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
@@ -68,6 +69,7 @@
       <a href="/blog/">Blog</a>
       <a href="/signals/">Signals</a>
       <a href="/documents/">Documents</a>
+      <a href="/newsletter/" class="mobile-subscribe" aria-current="page">Subscribe</a>
       <a href="/contact/" class="mobile-cta">Contact</a>
     </nav>
   </header>
@@ -132,15 +134,15 @@
       </article>
     </div>
 
-<div class="nl-block" id="newsletter">
+<div class="nl-block" data-nl-block>
           <p class="eyebrow">READING SOMEONE ELSE’S COPY?</p>
           <h2 class="nl-heading">Get your own, Wednesdays.</h2>
           <p class="nl-lede">The same edition, in your own inbox — Wednesdays at 10:00 AM ET, with the numbers, their vintages, and why they matter.</p>
           <form class="nl-form" method="post" action="/api/newsletter/subscribe">
-            <label class="visually-hidden" for="nl-email">Email address</label>
-            <input id="nl-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <label class="visually-hidden" for="nl-email-issue">Email address</label>
+            <input id="nl-email-issue" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
             <button class="btn btn-primary" type="submit">Subscribe →</button>
-            <div id="nl-turnstile" class="turnstile-box"></div>
+            <div class="turnstile-box" data-nl-turnstile></div>
             <p class="field-error" data-error-for="email" hidden></p>
             <p class="field-error" data-error-for="turnstile" hidden></p>
             <div class="honeypot" aria-hidden="true"><label>Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
@@ -167,6 +169,31 @@
 
   <footer class="footer">
     <div class="container">
+      <!-- NLFOOTER:START -->
+        <div class="nl-block nl-compact nl-strip" data-nl-block>
+          <div class="nl-compact-head" data-nl-vanish>
+            <p class="nl-compact-heading">The Axiovex Signal — the week, in your inbox.</p>
+            <p class="nl-compact-sub">One email a week, Wednesdays at 10:00 AM ET — Michigan workforce data, manufacturing signals, industrial AI.</p>
+          </div>
+          <form class="nl-form" method="post" action="/api/newsletter/subscribe">
+            <label class="visually-hidden" for="nl-email-footer">Email address</label>
+            <input id="nl-email-footer" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <button class="btn btn-primary" type="submit">Subscribe →</button>
+            <div class="turnstile-box" data-nl-turnstile></div>
+            <p class="field-error" data-error-for="email" hidden></p>
+            <p class="field-error" data-error-for="turnstile" hidden></p>
+            <div class="honeypot" aria-hidden="true"><label>Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+            <input name="startedAt" type="hidden" value="0">
+            <input name="source" type="hidden" value="footer">
+          </form>
+          <p class="nl-summary" role="status" hidden></p>
+          <div class="nl-done" hidden>
+            <h2 class="nl-heading">Check your inbox.</h2>
+            <p class="nl-lede">We sent a confirmation email to the address you gave us. Click the link in it — good for 48 hours — and the first edition arrives Wednesday at 10:00 AM ET. No click, no emails: that’s the deal.</p>
+          </div>
+          <p class="nl-fine nl-fine-compact" data-nl-vanish>One email a week · confirmation first · one-click unsubscribe · <strong>no tracking pixels</strong>. <a href="/privacy/">Privacy policy</a></p>
+        </div>
+      <!-- NLFOOTER:END -->
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" aria-label="Axiovex Systems homepage"><img src="/assets/logo.svg" alt="AXIOVEX Systems" class="footer-logo"></a>
@@ -205,7 +232,7 @@
   <script src="/blog/blog.v4.js"></script>
   <div id="signals-widget" data-tags="{{TAGS_DATA}}"></div>
   <script src="/signals-widget.v1.js" defer></script>
-  <script src="/newsletter-signup.v1.js" defer></script>
-  <!-- No Turnstile script here (spec 020 FR-008): newsletter-signup.v1.js loads it lazily on first interaction with the email field. -->
+  <script src="/newsletter-signup.v2.js" defer></script>
+  <!-- No Turnstile script here (spec 020 FR-008): newsletter-signup.v2.js loads it lazily on first interaction with the email field. -->
 </body>
 </html>

@@ -22,7 +22,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   <link rel="apple-touch-icon" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/styles.v35.css">
+  <link rel="stylesheet" href="/styles.v36.css">
   <link rel="alternate" type="application/rss+xml" title="Axiovex Systems — Blog" href="/feed.xml">
   <script type="application/ld+json">
   {
@@ -54,6 +54,7 @@
         <a href="/blog/">Blog</a>
         <a href="/signals/" aria-current="page">Signals</a>
         <a href="/documents/">Documents</a>
+        <a href="/newsletter/" class="nav-subscribe">Subscribe</a>
         <a href="/contact/" class="nav-cta">Contact</a>
       </nav>
       <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
@@ -68,6 +69,7 @@
       <a href="/blog/">Blog</a>
       <a href="/signals/" aria-current="page">Signals</a>
       <a href="/documents/">Documents</a>
+      <a href="/newsletter/" class="mobile-subscribe">Subscribe</a>
       <a href="/contact/" class="mobile-cta">Contact</a>
     </nav>
   </header>
@@ -86,6 +88,28 @@
 
     <section class="section section-end" style="padding-top: 28px;">
       <div class="container">
+<div class="nl-block nl-compact nl-flush" data-nl-block>
+          <div class="nl-compact-head" data-nl-vanish>
+            <p class="nl-compact-heading">The Axiovex Signal — in your inbox, Wednesdays.</p>
+          </div>
+          <form class="nl-form" method="post" action="/api/newsletter/subscribe">
+            <label class="visually-hidden" for="nl-email-signals-top">Email address</label>
+            <input id="nl-email-signals-top" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <button class="btn btn-primary" type="submit">Subscribe →</button>
+            <div class="turnstile-box" data-nl-turnstile></div>
+            <p class="field-error" data-error-for="email" hidden></p>
+            <p class="field-error" data-error-for="turnstile" hidden></p>
+            <div class="honeypot" aria-hidden="true"><label>Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+            <input name="startedAt" type="hidden" value="0">
+            <input name="source" type="hidden" value="signals-top">
+          </form>
+          <p class="nl-summary" role="status" hidden></p>
+          <div class="nl-done" hidden>
+            <h2 class="nl-heading">Check your inbox.</h2>
+            <p class="nl-lede">We sent a confirmation email to the address you gave us. Click the link in it — good for 48 hours — and the first edition arrives Wednesday at 10:00 AM ET. No click, no emails: that’s the deal.</p>
+          </div>
+          <p class="nl-fine nl-fine-compact" data-nl-vanish>One email a week · confirmation first · one-click unsubscribe · <strong>no tracking pixels</strong>. <a href="/privacy/">Privacy policy</a></p>
+        </div>
         <div class="highlights">
           <p class="hl-kicker">Highlights &mdash; the short version</p>
           <p class="hl-summary">In August 2026, Michigan manufacturing employment rose 1.1k to 586.7k &mdash; 12.3k above its January low &mdash; while the labor force fell 25.5k to 4.85M and the unemployment rate rose 0.1 pts to 5.0%. Across the twelve months in the snapshot, the labor force is down 151.6k (&minus;3.0%) while total nonfarm employment is up 1.5k (+0.0%). In the published outlooks, nurse practitioners are the fastest-growing occupation on both boards &mdash; +41.5% in Michigan&rsquo;s 2024–34 projections (MCDA) and +41.0% nationally for 2025–35 (U.S. BLS) &mdash; and data entry keyers are among the fastest-falling on both (&minus;26.4% in Michigan, &minus;25.5% nationally). Michigan&rsquo;s class of 2025 graduated at just over 84%, up from 82.8% for the class of 2024.</p>
@@ -10000,15 +10024,15 @@
           </ul>
         </div>
         <p class="cards-note fineprint">Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies&rsquo; modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce the committed datasets behind the boards: Michigan occupation projections from the Michigan Center for Data and Analytics, transcribed via the Axiovex workforce study&rsquo;s September edition (a direct read of MCDA&rsquo;s tables is pending and will supersede the transcription), and education figures as published by CEPI via MDE (February 2026), MDE (September 2025), and the House Fiscal Agency (January 2026 consensus; pupil membership is a budget estimate, as its source labels it). Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2024 annual averages; industry rows are private ownership &mdash; the grain at which QCEW publishes them &mdash; and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics&rsquo; IPEDS (2024 survey cycle; completions are 2023&ndash;24 awards); graduate outcomes from the U.S. Census Bureau&rsquo;s Post-Secondary Employment Outcomes (release R2026Q2, cohorts 2001&ndash;2021) &mdash; the University of Michigan is Michigan&rsquo;s only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 10, 2026 at 7:21 AM ET. See our <a class="inline-link" href="/disclaimer/">Disclaimer</a>.</p>
-<div class="nl-block" id="newsletter">
+<div class="nl-block" id="newsletter" data-nl-block>
           <p class="eyebrow">THE AXIOVEX SIGNAL — WEEKLY</p>
           <h2 class="nl-heading">The week, in your inbox.</h2>
           <p class="nl-lede">What changed in Michigan industry and the field → one email, Wednesdays at 10:00 AM ET, with the numbers, their vintages, and why they matter.</p>
           <form class="nl-form" method="post" action="/api/newsletter/subscribe">
-            <label class="visually-hidden" for="nl-email">Email address</label>
-            <input id="nl-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <label class="visually-hidden" for="nl-email-signals">Email address</label>
+            <input id="nl-email-signals" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
             <button class="btn btn-primary" type="submit">Subscribe →</button>
-            <div id="nl-turnstile" class="turnstile-box"></div>
+            <div class="turnstile-box" data-nl-turnstile></div>
             <p class="field-error" data-error-for="email" hidden></p>
             <p class="field-error" data-error-for="turnstile" hidden></p>
             <div class="honeypot" aria-hidden="true"><label>Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
@@ -10037,6 +10061,31 @@
 
   <footer class="footer">
     <div class="container">
+      <!-- NLFOOTER:START -->
+        <div class="nl-block nl-compact nl-strip" data-nl-block>
+          <div class="nl-compact-head" data-nl-vanish>
+            <p class="nl-compact-heading">The Axiovex Signal — the week, in your inbox.</p>
+            <p class="nl-compact-sub">One email a week, Wednesdays at 10:00 AM ET — Michigan workforce data, manufacturing signals, industrial AI.</p>
+          </div>
+          <form class="nl-form" method="post" action="/api/newsletter/subscribe">
+            <label class="visually-hidden" for="nl-email-footer">Email address</label>
+            <input id="nl-email-footer" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <button class="btn btn-primary" type="submit">Subscribe →</button>
+            <div class="turnstile-box" data-nl-turnstile></div>
+            <p class="field-error" data-error-for="email" hidden></p>
+            <p class="field-error" data-error-for="turnstile" hidden></p>
+            <div class="honeypot" aria-hidden="true"><label>Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+            <input name="startedAt" type="hidden" value="0">
+            <input name="source" type="hidden" value="footer">
+          </form>
+          <p class="nl-summary" role="status" hidden></p>
+          <div class="nl-done" hidden>
+            <h2 class="nl-heading">Check your inbox.</h2>
+            <p class="nl-lede">We sent a confirmation email to the address you gave us. Click the link in it — good for 48 hours — and the first edition arrives Wednesday at 10:00 AM ET. No click, no emails: that’s the deal.</p>
+          </div>
+          <p class="nl-fine nl-fine-compact" data-nl-vanish>One email a week · confirmation first · one-click unsubscribe · <strong>no tracking pixels</strong>. <a href="/privacy/">Privacy policy</a></p>
+        </div>
+      <!-- NLFOOTER:END -->
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" aria-label="Axiovex Systems homepage"><img src="/assets/logo.svg" alt="AXIOVEX Systems" class="footer-logo"></a>
@@ -10073,7 +10122,7 @@
     </div>
   </footer>
   <script src="/site.v1.js"></script>
-  <script src="/newsletter-signup.v1.js" defer></script>
-  <!-- No Turnstile script here (spec 020 FR-008): newsletter-signup.v1.js loads it lazily on first interaction with the email field. -->
+  <script src="/newsletter-signup.v2.js" defer></script>
+  <!-- No Turnstile script here (spec 020 FR-008): newsletter-signup.v2.js loads it lazily on first interaction with the email field. -->
 </body>
 </html>

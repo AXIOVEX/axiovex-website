@@ -20,7 +20,7 @@
   2026-10-10 approval and the three resolutions; review
   copy re-synced byte-identically to
   `~/workspace/your_files/axiovex-wireframes/wireframes.html`.
-- [ ] T003 (after T002) Generator: generalize
+- [x] T003 (after T002) Generator: generalize
   `newsletterBlock()` to `(source, opts)` with full /
   compact / landing / footer variants, source-keyed
   element ids, and `data-nl-block` hooks; wire the
@@ -32,7 +32,7 @@
   marker-region step (`buildNewsletterChrome()`) for the
   homepage section (`home`) and the sitewide footer strip
   (`footer`).
-- [ ] T004 (after T003) Client script:
+- [x] T004 (after T003) Client script:
   `newsletter-signup.v2.js` — multi-instance discovery via
   `[data-nl-block]`, per-form Turnstile widgets rendered
   on first interaction with that form's email field, the
@@ -40,7 +40,7 @@
   (submit, errors, token refresh, pending state) preserved
   per instance; compact blocks swap in place. All script
   references move to v2.
-- [ ] T005 (after T002) Shells: the Subscribe ghost button
+- [x] T005 (after T002) Shells: the Subscribe ghost button
   (desktop, immediately left of Contact) and the mobile
   panel Subscribe row (immediately above Contact) in every
   standard shell — `index.html`, `contact/`, `privacy/`,
@@ -51,26 +51,35 @@
   above the footer grid in the same shells; signup script
   includes added to the pages gaining a form that did not
   carry it (blog index, documents, static pages).
-- [ ] T006 (after T002) Endpoint: constrain the subscribe
+- [x] T006 (after T002) Endpoint: constrain the subscribe
   source server-side to the known set (`signals`,
   `signals-top`, `article`, `landing`, `home`, `footer`,
   `archive`, `issue`); out-of-set or missing values coerce
   to `signals`. (Pre-021 finding: the source was stored as
   free text — this task is the change that constrains it.)
-- [ ] T007 (after T003) Stylesheet: `styles.v36.css`
+- [x] T007 (after T003) Stylesheet: `styles.v36.css`
   (v35 + the spec 021 section — nav ghost button, nav
   current-item cyan, compact variant, footer strip,
   landing lead rows, article block margin); every
   stylesheet reference moves to v36. v35 is not edited.
-- [ ] T008 (after T002) llms.txt: add the two approved
+- [x] T008 (after T002) llms.txt: add the two approved
   lines beside the Signals line (latest-issue line →
   `/newsletter/2026-10-14/`).
-- [ ] T009 (after T003–T008) Build + evidence: site build
+- [x] T009 (after T003–T008) Build + evidence: site build
   clean; the spec 020 harness extended with placement /
   source checks (P-series) and fully green; form-count
   and source audit over the built output (C-021-1 /
   C-021-2 / C-021-3); second build produces zero diff
-  (idempotence).
+  (idempotence). **Done 2026-10-10:** harness **31/31**
+  (24 spec-020 checks + P1 ×5 sources stored verbatim,
+  P2 out-of-set → `signals`, P3 missing → `signals`);
+  built-output audit clean on all 13 pages (exactly one
+  desktop + one mobile Subscribe, correctly positioned;
+  sources per page exactly as wireframed; no duplicate
+  element ids); the `/newsletter/` issue list is
+  byte-identical to the pre-021 build apart from its new
+  `id="issues"` anchor (C-021-6); second build = zero
+  diff.
 - [ ] T010 (after T009) Staging visual verification:
   Playwright screenshots at desktop and 390px — homepage
   (hero untouched + newsletter section), one article

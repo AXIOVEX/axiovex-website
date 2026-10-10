@@ -65,7 +65,13 @@ export async function onRequest(context) {
   const token = typeof parsed.data["cf-turnstile-response"] === "string" ? parsed.data["cf-turnstile-response"].trim() : "";
   const honeypot = typeof parsed.data.website === "string" ? parsed.data.website.trim() : "";
   const startedAt = Number(parsed.data.startedAt || 0);
-  const source = cleanText(parsed.data.source, 40) || "signals";
+  // Spec 021 FR-009: the source is constrained to the known
+  // placement set (pre-021 it was stored as free text). Placements
+  // compare per 1,000 visitors, so stored values must stay in the
+  // vocabulary; anything else coerces to the pre-021 default.
+  const KNOWN_SOURCES = new Set(["signals", "signals-top", "article", "landing", "home", "footer", "archive", "issue"]);
+  const rawSource = cleanText(parsed.data.source, 40);
+  const source = KNOWN_SOURCES.has(rawSource) ? rawSource : "signals";
 
   // Honeypot / timing trap: apparent success, nothing stored, nothing sent.
   const submittedTooFast = Number.isFinite(startedAt) && startedAt > 0 && Date.now() - startedAt < 1500;

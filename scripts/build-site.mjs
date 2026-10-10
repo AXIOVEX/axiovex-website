@@ -354,6 +354,7 @@ function buildBlog() {
       '{{TAGS_DATA}}': escAttr(post.tags.join(', ')),
       '{{SHARE_TOP}}': shareRow(post.title, post.url, true),
       '{{BODY_HTML}}': renderMarkdown(post.bodyMd),
+      '{{NEWSLETTER_HTML}}': newsletterBlock('article'),
       '{{MORE_HTML}}': moreHtml,
     });
     const dir = path.join(ROOT, 'blog', post.slug);
@@ -1719,6 +1720,7 @@ function buildSignals(posts) {
     '{{LANES_HTML}}': lanesHtml,
     '{{GEO_NOTE}}': geoNote(geo),
     '{{UPDATED_LINE}}': updatedLine,
+    '{{NEWSLETTER_TOP_HTML}}': newsletterBlock('signals-top', { variant: 'compact' }),
     '{{NEWSLETTER_HTML}}': newsletterBlock('signals'),
   }));
 
@@ -1805,36 +1807,95 @@ function buildSignals(posts) {
    HTML + plain-text parts render from the same sources via
    scripts/newsletter/render.mjs (FR-006 — one source, three
    versions, claim C-020-3). The WF-G8 signup block is rendered
-   by newsletterBlock() and placed on /signals/ (fill above),
-   the archive, and every issue page. */
-function newsletterBlock(variant) {
-  const issue = variant === 'issue';
+   by newsletterBlock() — spec 021 generalized it to every
+   approved placement: /signals/ head + foot, the /newsletter/
+   landing lead, every issue page, every article page, the
+   homepage section, and the sitewide footer strip. */
+/* Spec 021 (FR-007): newsletterBlock(source, opts) is the ONE
+   WF-G8 component. opts.variant: 'full' (default — the spec 020
+   block, copy unchanged), 'compact' (WF-G8's compact variant),
+   'landing' (WF-15 lead: full block + content bullets, the
+   at-form cadence line, and the sample-issue anchor; the proof
+   slot renders nothing — no count or testimonial exists), and
+   'footer' (WF-G4's rendering of the compact variant, with its
+   drawn heading + sub-line). Element ids are source-keyed so a
+   page can carry several instances; behavior binds per instance
+   via data-nl-block (newsletter-signup.v2.js). The
+   id="newsletter" anchor survives on the /signals/ foot block
+   only — the spec 020 emails' CTA links target
+   /signals/#newsletter. */
+const NL_DONE_LEDE = 'We sent a confirmation email to the address you gave us. Click the link in it \u2014 good for 48 hours \u2014 and the first edition arrives Wednesday at 10:00 AM ET. No click, no emails: that\u2019s the deal.';
+const NL_FINE_FULL = 'One email a week. We send a confirmation first \u2014 nothing arrives until you click it. Unsubscribe in one click, any time. <strong>No tracking pixels, no per-reader analytics.</strong> <a href="/privacy/">Privacy policy</a>';
+const NL_FINE_COMPACT = 'One email a week \u00b7 confirmation first \u00b7 one-click unsubscribe \u00b7 <strong>no tracking pixels</strong>. <a href="/privacy/">Privacy policy</a>';
+
+function nlFormHtml(source) {
+  return '          <form class="nl-form" method="post" action="/api/newsletter/subscribe">\n' +
+    '            <label class="visually-hidden" for="nl-email-' + source + '">Email address</label>\n' +
+    '            <input id="nl-email-' + source + '" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>\n' +
+    '            <button class="btn btn-primary" type="submit">Subscribe \u2192</button>\n' +
+    '            <div class="turnstile-box" data-nl-turnstile></div>\n' +
+    '            <p class="field-error" data-error-for="email" hidden></p>\n' +
+    '            <p class="field-error" data-error-for="turnstile" hidden></p>\n' +
+    '            <div class="honeypot" aria-hidden="true"><label>Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>\n' +
+    '            <input name="startedAt" type="hidden" value="0">\n' +
+    '            <input name="source" type="hidden" value="' + escAttr(source) + '">\n' +
+    '          </form>\n' +
+    '          <p class="nl-summary" role="status" hidden></p>\n' +
+    '          <div class="nl-done" hidden>\n' +
+    '            <h2 class="nl-heading">Check your inbox.</h2>\n' +
+    '            <p class="nl-lede">' + NL_DONE_LEDE + '</p>\n' +
+    '          </div>\n';
+}
+
+function newsletterBlock(source, opts) {
+  const variant = (opts && opts.variant) || 'full';
+  if (variant === 'compact' || variant === 'footer') {
+    const head = variant === 'footer'
+      ? '          <div class="nl-compact-head" data-nl-vanish>\n' +
+        '            <p class="nl-compact-heading">The Axiovex Signal \u2014 the week, in your inbox.</p>\n' +
+        '            <p class="nl-compact-sub">One email a week, Wednesdays at 10:00 AM ET \u2014 Michigan workforce data, manufacturing signals, industrial AI.</p>\n' +
+        '          </div>\n'
+      : '          <div class="nl-compact-head" data-nl-vanish>\n' +
+        '            <p class="nl-compact-heading">The Axiovex Signal \u2014 in your inbox, Wednesdays.</p>\n' +
+        '          </div>\n';
+    const cls = variant === 'footer' ? 'nl-block nl-compact nl-strip' : 'nl-block nl-compact nl-flush';
+    return '<div class="' + cls + '" data-nl-block>\n' +
+      head +
+      nlFormHtml(source) +
+      '          <p class="nl-fine nl-fine-compact" data-nl-vanish>' + NL_FINE_COMPACT + '</p>\n' +
+      '        </div>';
+  }
+  const issue = source === 'issue';
   const eyebrow = issue ? 'READING SOMEONE ELSE\u2019S COPY?' : 'THE AXIOVEX SIGNAL \u2014 WEEKLY';
   const heading = issue ? 'Get your own, Wednesdays.' : 'The week, in your inbox.';
   const lede = issue
     ? 'The same edition, in your own inbox \u2014 Wednesdays at 10:00 AM ET, with the numbers, their vintages, and why they matter.'
     : 'What changed in Michigan industry and the field \u2192 one email, Wednesdays at 10:00 AM ET, with the numbers, their vintages, and why they matter.';
-  return '<div class="nl-block" id="newsletter">\n' +
+  const anchor = source === 'signals' ? ' id="newsletter"' : '';
+  const bullets = variant === 'landing'
+    ? '          <div class="nl-bullets"><span>\u00b7 Michigan workforce data, with vintages</span><span>\u00b7 Manufacturing &amp; field signals</span><span>\u00b7 Industrial AI, checked against sources</span></div>\n'
+    : '';
+  const cadence = variant === 'landing'
+    ? '          <p class="nl-cadence"><strong>Every Wednesday</strong> \u2014 one email a week, 10:00 AM ET. Free.</p>\n'
+    : '';
+  // WF-15 proof slot: drawn empty, ships empty — an HTML comment
+  // is all that renders until a real proof exists to claim.
+  const proof = variant === 'landing'
+    ? '          <!-- WF-15 proof slot: ships empty (no subscriber count or testimonial exists to claim). -->\n'
+    : '';
+  const sample = variant === 'landing'
+    ? '          <p class="nl-sample"><a class="explore" href="#issues">READ A SAMPLE ISSUE \u2193</a></p>\n'
+    : '';
+  return '<div class="nl-block' + (variant === 'landing' ? ' nl-landing' : '') + '"' + anchor + ' data-nl-block>\n' +
     '          <p class="eyebrow">' + eyebrow + '</p>\n' +
     '          <h2 class="nl-heading">' + heading + '</h2>\n' +
     '          <p class="nl-lede">' + lede + '</p>\n' +
-    '          <form class="nl-form" method="post" action="/api/newsletter/subscribe">\n' +
-    '            <label class="visually-hidden" for="nl-email">Email address</label>\n' +
-    '            <input id="nl-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>\n' +
-    '            <button class="btn btn-primary" type="submit">Subscribe \u2192</button>\n' +
-    '            <div id="nl-turnstile" class="turnstile-box"></div>\n' +
-    '            <p class="field-error" data-error-for="email" hidden></p>\n' +
-    '            <p class="field-error" data-error-for="turnstile" hidden></p>\n' +
-    '            <div class="honeypot" aria-hidden="true"><label>Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>\n' +
-    '            <input name="startedAt" type="hidden" value="0">\n' +
-    '            <input name="source" type="hidden" value="' + escAttr(variant) + '">\n' +
-    '          </form>\n' +
-    '          <p class="nl-summary" role="status" hidden></p>\n' +
-    '          <div class="nl-done" hidden>\n' +
-    '            <h2 class="nl-heading">Check your inbox.</h2>\n' +
-    '            <p class="nl-lede">We sent a confirmation email to the address you gave us. Click the link in it \u2014 good for 48 hours \u2014 and the first edition arrives Wednesday at 10:00 AM ET. No click, no emails: that\u2019s the deal.</p>\n' +
-    '          </div>\n' +
-    '          <p class="nl-fine">One email a week. We send a confirmation first \u2014 nothing arrives until you click it. Unsubscribe in one click, any time. <strong>No tracking pixels, no per-reader analytics.</strong> <a href="/privacy/">Privacy policy</a></p>\n' +
+    bullets +
+    nlFormHtml(source) +
+    cadence +
+    '          <p class="nl-fine">' + NL_FINE_FULL + '</p>\n' +
+    proof +
+    sample +
     '        </div>';
 }
 
@@ -1908,7 +1969,7 @@ function buildNewsletter() {
   mkdirSync(path.join(ROOT, 'newsletter'), { recursive: true });
   writeFileSync(path.join(ROOT, 'newsletter', 'index.html'), fill(indexTpl, {
     '{{ISSUE_ROWS}}': rows,
-    '{{NEWSLETTER_HTML}}': newsletterBlock('archive'),
+    '{{NEWSLETTER_HTML}}': newsletterBlock('landing', { variant: 'landing' }),
   }));
   for (const issue of issues) {
     const outDir = path.join(ROOT, 'newsletter', issue.date);
@@ -2106,6 +2167,70 @@ function buildBreaking() {
     ' — marker region rewritten in ' + rewritten + ' page(s)');
 }
 
+/* ================= Newsletter chrome (spec 021) =================
+   The homepage signup section (WF-01, source 'home') and the
+   footer signup strip (WF-G4, source 'footer') live in marker
+   regions carried by every shell, filled here after all page
+   generation — the buildBreaking() pattern, so the markup is
+   generated once by newsletterBlock(), identically everywhere,
+   and rebuilds stay idempotent. */
+function buildNewsletterChrome() {
+  const outputs = [
+    'index.html',
+    path.join('contact', 'index.html'),
+    path.join('privacy', 'index.html'),
+    path.join('disclaimer', 'index.html'),
+    path.join('blog', 'index.html'),
+    path.join('documents', 'index.html'),
+    path.join('signals', 'index.html'),
+  ];
+  const blogDir = path.join(ROOT, 'blog');
+  for (const name of readdirSync(blogDir, { withFileTypes: true })) {
+    if (!name.isDirectory()) continue;
+    const rel = path.join('blog', name.name, 'index.html');
+    if (existsSync(path.join(ROOT, rel))) outputs.push(rel);
+  }
+  const nlDir = path.join(ROOT, 'newsletter');
+  if (existsSync(path.join(nlDir, 'index.html'))) outputs.push(path.join('newsletter', 'index.html'));
+  if (existsSync(nlDir)) {
+    for (const name of readdirSync(nlDir, { withFileTypes: true })) {
+      if (!name.isDirectory() || !/^\d{4}-\d{2}-\d{2}$/.test(name.name)) continue;
+      const rel = path.join('newsletter', name.name, 'index.html');
+      if (existsSync(path.join(ROOT, rel))) outputs.push(rel);
+    }
+  }
+  const footerInner = '\n        ' + newsletterBlock('footer', { variant: 'footer' }) + '\n      ';
+  const footerRe = /(<!-- NLFOOTER:START -->)[\s\S]*?(<!-- NLFOOTER:END -->)/;
+  let footers = 0;
+  for (const rel of outputs) {
+    const file = path.join(ROOT, rel);
+    if (!existsSync(file)) {
+      console.warn('nl-chrome: expected output ' + rel + ' missing — footer strip skipped for it');
+      continue;
+    }
+    const html = readFileSync(file, 'utf8');
+    if (!footerRe.test(html)) {
+      console.warn('nl-chrome: NLFOOTER markers not found in ' + rel + ' — footer strip skipped for that page');
+      continue;
+    }
+    const out = html.replace(footerRe, (m, g1, g2) => g1 + footerInner + g2);
+    if (out !== html) writeFileSync(file, out);
+    footers++;
+  }
+  // Homepage section (WF-01): after the Signals block, before About.
+  const homePath = path.join(ROOT, 'index.html');
+  const home = readFileSync(homePath, 'utf8');
+  const homeRe = /(<!-- NLHOME:START -->)[\s\S]*?(<!-- NLHOME:END -->)/;
+  if (homeRe.test(home)) {
+    const section = '\n    <section class="section">\n      <div class="container">\n' +
+      newsletterBlock('home') + '\n      </div>\n    </section>\n    ';
+    writeFileSync(homePath, home.replace(homeRe, (m, g1, g2) => g1 + section + g2));
+  } else {
+    console.warn('nl-chrome: NLHOME markers not found in index.html — home section skipped');
+  }
+  console.log('nl-chrome: footer strip in ' + footers + ' page(s) + homepage section');
+}
+
 /* ================= Main ================= */
 const sharedDir = process.argv[2] || '/tmp/shared-documents';
 let docsInfo = { maxDate: null, count: 0 };
@@ -2119,4 +2244,5 @@ buildFeed(posts);
 const signalsInfo = buildSignals(posts);
 const newsletterIssues = buildNewsletter();
 writeSitemap(posts, docsInfo, signalsInfo, newsletterIssues);
+buildNewsletterChrome();
 buildBreaking();
