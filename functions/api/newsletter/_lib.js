@@ -204,10 +204,10 @@ export async function sendNewsletterMail(env, { to, subject, html, text, unsubsc
         `To: ${to}`,
         `Reply-To: ${NEWSLETTER_FROM}`,
         `Subject: ${cleanSubject}`,
-        "MIME-Version: 1.0",
         ...(unsubscribeUrl
-          ? [`List-Unsubscribe: <${unsubscribeUrl}>`, "List-Unsubscribe-Post: List-Unsubscribe=One-Click"]
+          ? ["List-Unsubscribe-Post: List-Unsubscribe=One-Click", `List-Unsubscribe: <${unsubscribeUrl}>`]
           : []),
+        "MIME-Version: 1.0",
         `Content-Type: multipart/alternative; boundary="${boundary}"`,
         "",
         `--${boundary}`,
@@ -223,33 +223,20 @@ export async function sendNewsletterMail(env, { to, subject, html, text, unsubsc
         `--${boundary}--`,
         "",
       ].join("\r\n");
-      // LU-POST DIAGNOSTIC B (2026-10-10): iteration A (draft+send)
-      // failed — the Mail.Send-only app cannot create drafts.
-      // Diagnostic B temporarily sends the HTML body via the JSON
-      // sendMail route with internetMessageHeaders to test whether
-      // that route preserves List-Unsubscribe-Post on delivery.
-      // (Text part intentionally omitted for this diagnostic only.)
-      const diagHeaders = [];
-      if (unsubscribeUrl) {
-        diagHeaders.push({ name: "List-Unsubscribe", value: `<${unsubscribeUrl}>` });
-        diagHeaders.push({ name: "List-Unsubscribe-Post", value: "List-Unsubscribe=One-Click" });
-      }
-      const diagPayload = {
-        message: {
-          subject: cleanSubject,
-          body: { contentType: "html", content: html },
-          toRecipients: [{ emailAddress: { address: to } }],
-          replyTo: [{ emailAddress: { address: NEWSLETTER_FROM, name: NEWSLETTER_FROM_NAME } }],
-          internetMessageHeaders: diagHeaders.length ? diagHeaders : undefined,
-        },
-        saveToSentItems: false,
-      };
+      // LU-POST DIAGNOSTIC C (2026-10-10): direct MIME sendMail
+      // restored; the List headers now sit immediately after
+      // Subject (List-Unsubscribe-Post first) instead of after
+      // MIME-Version — testing whether Exchange's MIME->MAPI
+      // conversion drops the Post header based on position/order.
+      // (Iteration A draft+send: app lacks draft-create permission.
+      // Iteration B JSON route: Graph 400 InvalidInternetMessageHeader
+      // — internetMessageHeaders names must start with 'x-'.)
       response = await fetch(
         `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(NEWSLETTER_FROM)}/sendMail`,
         {
           method: "POST",
-          headers: { authorization: `Bearer ${accessToken}`, "content-type": "application/json" },
-          body: JSON.stringify(diagPayload),
+          headers: { authorization: `Bearer ${accessToken}`, "content-type": "text/plain" },
+          body: b64raw(mime),
           signal: controller.signal,
         },
       );
