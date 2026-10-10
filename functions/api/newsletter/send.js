@@ -27,8 +27,21 @@ import {
 const CHUNK = 25;
 const PLACEHOLDER_ADDRESS = "[Postal address pending — owner decision, spec 020 FR-018]";
 // Spec 022 FR-022-3: the loop-test probe. Test mode can mail
-// this address and no other — the constant is the guardrail.
-const LOOP_TEST_RECIPIENT = "tristen@axiovexsystems.com";
+// the environment's probe address and no other — the mapping
+// is the guardrail. One probe per environment (spec 022
+// read-path correction, 2026-10-10): staging's probe is the
+// owner's gmail, whose delivery the loop runner can observe
+// directly; production's probe is tristen@axiovexsystems.com,
+// whose delivery the runner asserts via mail-status + sends
+// evidence and an M365 mailbox search. Any ENVIRONMENT other
+// than staging resolves to the production probe.
+const LOOP_TEST_RECIPIENTS = {
+  staging: "tristen.pierson@gmail.com",
+  production: "tristen@axiovexsystems.com",
+};
+function loopTestRecipient(env) {
+  return env.ENVIRONMENT === "staging" ? LOOP_TEST_RECIPIENTS.staging : LOOP_TEST_RECIPIENTS.production;
+}
 
 function secretOk(request, env) {
   const provided = request.headers.get("x-newsletter-send-secret") || "";
@@ -85,13 +98,14 @@ export async function onRequest(context) {
   // list path below. The FR-018 production address rule
   // above applies to test sends exactly as to issue sends.
   if (body.mode === "test") {
+    const probeAddress = loopTestRecipient(env);
     const testRecipient = typeof body.testRecipient === "string" ? body.testRecipient.trim().toLowerCase() : "";
-    if (testRecipient !== LOOP_TEST_RECIPIENT) {
+    if (testRecipient !== probeAddress) {
       return jsonResponse({ ok: false, message: "Refused: test mode sends to the loop-test probe address only." }, 422);
     }
     const probe = await db.prepare(
       "SELECT status FROM subscribers WHERE email = ?",
-    ).bind(LOOP_TEST_RECIPIENT).first();
+    ).bind(probeAddress).first();
     if (!probe || probe.status !== "active") {
       return jsonResponse({
         ok: true, mode: "test", probeActive: false, sent: 0, mailStatus: null,
@@ -104,11 +118,11 @@ export async function onRequest(context) {
     ).bind(issue, new Date(testStartedAt).toISOString()).first();
     const testSendsRowId = testInserted ? testInserted.id : null;
     const testBase = siteBase(env, request);
-    const testToken = await unsubscribeToken(env, LOOP_TEST_RECIPIENT);
+    const testToken = await unsubscribeToken(env, probeAddress);
     const testUnsubUrl = `${testBase}/newsletter/unsubscribe?t=${testToken}`;
     const testPersonalize = (s) => s.split("{{UNSUBSCRIBE_URL}}").join(testUnsubUrl).split("{{WEB_URL}}").join(`${testBase}/newsletter/${issue}/`).split("{{PRIVACY_URL}}").join(`${testBase}/privacy/`);
     const testStatus = await sendNewsletterMail(env, {
-      to: LOOP_TEST_RECIPIENT,
+      to: probeAddress,
       subject,
       html: testPersonalize(html),
       text: testPersonalize(text),
