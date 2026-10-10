@@ -162,3 +162,18 @@
   spec021-review/` match the approved frames. Staging
   sync-back to final main follows this closeout with the
   staging guards re-asserted, per the playbook.
+- [ ] T013 (owner correction 2026-10-10, after T012) One form
+  on `/newsletter/`. As promoted, the landing page rendered
+  two subscribe forms — the WF-15 landing form (source
+  `landing`) and the sitewide WF-G4 footer strip (source
+  `footer`). Tristen directed a single form, the top one.
+  Fix: the generator's newsletter-chrome step suppresses
+  the footer strip on the `/newsletter/` landing page only
+  (explicit per-page exclusion; the NLFOOTER region is
+  written empty there). Issue pages and every other page
+  keep the strip. Wireframes annotated (WF-G4 + WF-15 +
+  revision log, owner correction 2026-10-10). Verify by
+  build audit (form counts per page), harness, staging +
+  production Playwright screenshots; promote under the
+  standing spec 021 promotion approval and close out here
+  with the final main hash.

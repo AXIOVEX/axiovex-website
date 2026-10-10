@@ -50,7 +50,9 @@ This file is the index, the gate rule, and the revision log.
   WF-17 a reduced WF-05-shell state set — confirmed /
   unsubscribed / expired / already-in-state; WF-15
   landing-page revision — form above the archive, archive
-  as sample proof — **APPROVED 2026-10-10 (spec 021)**)
+  as sample proof — **APPROVED 2026-10-10 (spec 021)**;
+  the WF-G4 footer strip does NOT render on this page —
+  one form per page — **owner correction 2026-10-10**)
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
 - WF-09 Blog / article / privacy — tablet
 - Global components: WF-G1 nav (Signals link added by spec 008 —
@@ -63,7 +65,8 @@ This file is the index, the gate rule, and the revision log.
   beside Privacy Policy, spec 016 — owner decision
   2026-10-06; IMPLEMENTED + LIVE 2026-10-06, merge
   `9d7dbba`; newsletter strip — WF-G8 compact variant above the
-  grid — **APPROVED 2026-10-10 (spec 021)**) · WF-G5 service card · WF-G6 Signals floating
+  grid — **APPROVED 2026-10-10 (spec 021)**; strip suppressed on
+  /newsletter/ — **owner correction 2026-10-10**) · WF-G5 service card · WF-G6 Signals floating
   widget (spec 008 — approved + implemented 2026-10-06) · WF-G7
   Breaking news banner (proposed 2026-10-06 by spec 012 —
   PENDING OWNER APPROVAL) · WF-G8 Newsletter signup block
@@ -76,7 +79,8 @@ This file is the index, the gate rule, and the revision log.
   (WF-04), home section (WF-01), /newsletter/ landing lead
   (WF-15), footer strip (WF-G4) — proposal note
   `newsletter-signup-placement-proposal-2026-10-10.md` in this
-  folder)
+  folder; footer strip suppressed on /newsletter/ only —
+  owner correction 2026-10-10)
 
 Framing decisions baked into the set (2026-10-04): centered axis (standing
 symmetry rule); strata = 3 segments
@@ -814,3 +818,16 @@ as accordion rows.
   approval record. Implementation runs on staging under
   spec 021; production promotion remains a separate owner
   approval.
+- **2026-10-10** — OWNER CORRECTION (spec 021): as built,
+  /newsletter/ rendered TWO subscribe forms — the WF-15
+  landing form above the archive and the sitewide WF-G4
+  footer strip. Tristen directed that the page carry only
+  one: the top (landing) form. The WF-G4 footer strip is
+  therefore **suppressed on /newsletter/ only** — the
+  landing page is one form per page, as WF-15 always
+  specified. Every other page keeps its footer strip
+  exactly as approved, including the newsletter issue
+  pages (newsletter/<date>/), which are web editions, not
+  the landing page. Recorded in spec 021's tasks (T013)
+  and implemented in the generator's newsletter-chrome
+  step as an explicit per-page exclusion.
