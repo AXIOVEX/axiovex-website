@@ -70,6 +70,40 @@ staging the same day (issue 2026-10-14; endpoint harness
 evidence). FR-018(a) is satisfied; the production-mode send
 guard now passes on this address.
 
+**Amendment 6 (owner decision, Tristen Pierson, 2026-10-10)**:
+`List-Unsubscribe-Post` is **platform-blocked on the Microsoft
+sending lane**, and FR-011's one-click requirement is
+satisfied on this lane as recorded here. (a) *The block*:
+`functions/api/newsletter/_lib.js` places both
+`List-Unsubscribe` and `List-Unsubscribe-Post:
+List-Unsubscribe=One-Click` in the submitted MIME, but
+Exchange's MIME→MAPI conversion on mailbox submission drops
+`List-Unsubscribe-Post` while keeping `List-Unsubscribe` —
+verified against the delivered first-cycle message's raw
+headers (diagnosis in the tasks.md follow-up record;
+staging diagnostic commits through 19c61b4). The other
+routes are closed to the current app: Graph's JSON sendMail
+rejects List-* `internetMessageHeaders` outright (HTTP 400 —
+request rejected as invalid — `InvalidInternetMessageHeader`),
+and the draft-then-send route requires Mail.ReadWrite, which
+the FR-014 least-privilege app (Mail.Send only) deliberately
+lacks; the app is **not** widened. (b) *How FR-011 is
+satisfied on this lane*: every delivered issue carries the
+`List-Unsubscribe` header **and** the personalized one-click
+GET unsubscribe link in its footer — one click, immediate
+effect, WF-17 unsubscribed page — and that pair is the
+sanctioned one-click path on this lane. (c) *The header POST
+endpoint remains implemented*: `/newsletter/unsubscribe`'s
+RFC 8058 POST handler is live server-side and is verified at
+the endpoint level by the spec 022 loop on every deployment,
+even though mail clients cannot discover it from delivered
+headers on this lane. (d) *Revisit clause*: at the FR-020
+thresholds (750 / 1,500 active subscribers), or on any
+sending-lane change, re-test `List-Unsubscribe-Post` survival
+against a delivered message; a lane that preserves the
+header restores header-based RFC 8058 one-click with no
+further owner decision needed.
+
 **Origin (Tristen, 2026-10-09)**: add a recurring emailed report
 to the Axiovex system — working name "AXIOVEX daily signal" —
 with a website signup, reading versions subscribers can open on
@@ -227,7 +261,13 @@ instead of fetched.
   is retained as a suppression record: the email address is
   kept with its status, and its SHA-256 hash is the
   suppression key, so the address cannot be silently
-  re-added (FR-012).
+  re-added (FR-012). **Amendment 6 (2026-10-10)**: on the
+  Microsoft lane the header leg of (b) is platform-blocked
+  (Exchange strips `List-Unsubscribe-Post` on egress);
+  FR-011 is satisfied on this lane by the `List-Unsubscribe`
+  header + the footer one-click GET link, with the POST
+  endpoint implemented and loop-verified server-side —
+  see Amendment 6 for the record and the revisit clause.
 - **FR-012 — Resubscribe requires fresh confirmation.** An
   unsubscribed or suppressed address returns only through a
   fresh subscribe + a fresh double opt-in confirmation

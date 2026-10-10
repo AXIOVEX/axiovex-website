@@ -169,3 +169,36 @@
   unchanged). Until the deferral clears, honest staging
   verdicts will read DEFERRED — by design, that is now a
   different signal from FAIL.
+  **Post-T007 sequela (hook run, ~21:22Z)**: delivery
+  recovered — the hook's staging run vs 9c60a23 passed
+  steps 0–4 and the test issue was delivered near-instantly,
+  but step 5 FAILed on `One-Click MISSING` (the delivered
+  issue lacked `List-Unsubscribe-Post`; List-Unsubscribe,
+  postal footer, and the unsubscribe URL all verified),
+  leaving steps 6–7 unreached. That is the spec 020
+  platform limitation meeting the loop's pre-amendment
+  assertion — the defect T008 resolves by aligning the
+  assertions with the owner's Amendment 6 decision.
+- [ ] T008 (2026-10-10, after T007) Owner decision executed:
+  List-Unsubscribe-Post reconciliation. Owner (Tristen
+  Pierson, 2026-10-10, "Resume it") accepted the recommended
+  path from the spec 020 follow-up: the footer one-click
+  link is the sanctioned one-click path on the Microsoft
+  lane; the header is platform-blocked; the app is NOT
+  widened to Mail.ReadWrite; revisit at the FR-020
+  thresholds. **Changes**: spec 020 gained **Amendment 6**
+  (the platform block, FR-011's satisfaction on this lane,
+  the POST endpoint's continued implementation, the revisit
+  clause) and its tasks.md follow-up is closed as
+  resolved-by-amendment. Runner step 5 (staging) now
+  asserts List-Unsubscribe header + footer one-click link +
+  postal footer on the delivered issue, logging the Post
+  header's absence as the platform note (not a failure);
+  step 6 verifies (i) the endpoint's RFC 8058 one-click
+  POST handler performs the flip and (ii) the delivered
+  footer GET link resolves to a WF-17 landing (fetched
+  after the POST; the flip is idempotent, so no second
+  probe state is consumed). Spec.md FR-022-1 + FR-022-4
+  amendment record the change. No send-path code touched.
+  **Full-green re-run record: appended on completion
+  below.**

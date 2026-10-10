@@ -230,6 +230,7 @@ console.log(`newsletter loop test — env=${envName} probe=${PROBE} started ${ne
 // was captured from; the staging probe changed in the 2026-10-10
 // read-path correction, so ignore URLs recorded for another probe.
 let probeUnsubUrl = state.envs[envName].probe === PROBE ? state.envs[envName].probeUnsubUrl || null : null;
+let probeFooterUrl = null; // the delivered issue's footer one-click GET link (step 5 captures, step 6 checks)
 let mailLeg = null;
 let startStatus = 'absent';
 
@@ -452,30 +453,73 @@ if (!priorBad()) {
       } else {
         const lu = msg.headers['list-unsubscribe'] || '';
         const lup = msg.headers['list-unsubscribe-post'] || '';
-        const url = lu.match(/<([^>]+)>/)?.[1] || (msg.text + msg.html).match(/\/newsletter\/unsubscribe\?t=[a-f0-9]+/)?.[0];
+        const headerUrl = lu.match(/<([^>]+)>/)?.[1] || null;
+        const footerMatch = (msg.text + '\n' + msg.html).match(/\/newsletter\/unsubscribe\?t=[a-f0-9]+/);
+        const footerUrl = footerMatch ? `${ENV.base}${footerMatch[0]}` : null;
         const hasAddr = (msg.html + msg.text).includes(POSTAL);
-        if (lu && /One-Click/i.test(lup) && url && hasAddr) {
-          probeUnsubUrl = url.startsWith('http') ? url : `${ENV.base}${url}`;
-          record(5, 'test issue delivered + verified', 'PASS', `issue ${issueDate} dated ${msg.date}; List-Unsubscribe + One-Click headers present; postal footer '${POSTAL}…' present; evidence source: Gmail — direct delivery to probe ${PROBE}`);
+        // Spec 020 Amendment 6 (owner decision 2026-10-10):
+        // List-Unsubscribe-Post is platform-blocked on the
+        // Microsoft lane — Exchange's MIME→MAPI egress strips
+        // it while keeping List-Unsubscribe — so its absence in
+        // delivered mail is the recorded platform note, NOT a
+        // failure. FR-011's sanctioned one-click paths on this
+        // lane are the List-Unsubscribe header + the footer
+        // one-click GET link, asserted here; step 6 verifies
+        // the reader's paths at the endpoint.
+        const postNote = /One-Click/i.test(lup)
+          ? 'List-Unsubscribe-Post present (unexpected on this lane — spec 020 Amendment 6 revisit evidence)'
+          : 'List-Unsubscribe-Post absent — known platform note (spec 020 Amendment 6; not a failure)';
+        if (lu && headerUrl && footerUrl && hasAddr) {
+          probeUnsubUrl = headerUrl;
+          probeFooterUrl = footerUrl;
+          record(5, 'test issue delivered + verified', 'PASS', `issue ${issueDate} dated ${msg.date}; List-Unsubscribe header present; footer one-click link present; postal footer '${POSTAL}…' present; ${postNote}; evidence source: Gmail — direct delivery to probe ${PROBE}`);
         } else {
-          record(5, 'test issue delivered + verified', 'FAIL', `issue dated ${msg.date}; List-Unsubscribe ${lu ? 'present' : 'MISSING'}, One-Click ${lup ? 'present' : 'MISSING'}, postal footer ${hasAddr ? 'present' : 'MISSING'}, unsub URL ${url ? 'found' : 'MISSING'}; evidence source: Gmail — direct delivery to probe ${PROBE}`);
+          record(5, 'test issue delivered + verified', 'FAIL', `issue dated ${msg.date}; List-Unsubscribe ${lu ? 'present' : 'MISSING'}, header unsub URL ${headerUrl ? 'found' : 'MISSING'}, footer one-click link ${footerUrl ? 'found' : 'MISSING'}, postal footer ${hasAddr ? 'present' : 'MISSING'}; ${postNote}; evidence source: Gmail — direct delivery to probe ${PROBE}`);
         }
       }
     }
   }
 } else mirrorRecord(5, 'probe-only test send');
 
-// Step 6 — one-click unsubscribe from the delivered issue (RFC 8058).
+// Step 6 — unsubscribe via the paths a reader actually has
+// (spec 020 Amendment 6). The List-Unsubscribe-Post header is
+// stripped in transit on the Microsoft lane, so the loop
+// verifies FR-011's one-click outcome at the endpoint:
+// (i) the RFC 8058 one-click POST handler performs the state
+// change (the server-side capability the header would have
+// invoked), and (ii) the delivered footer GET link resolves
+// into the same working flow. Sequencing: the POST runs
+// first (the actual state change, verified in D1 at step 7);
+// the footer GET runs second — the endpoint's flip is
+// idempotent (a repeat visit lands on the WF-17 'already'
+// page), so the GET check proves the link's target serves
+// the unsubscribe flow without consuming a second probe
+// state. On production, step 5 captures only the body URL
+// (headers are unreadable in Outlook web), so the POST URL
+// IS the footer link there and sub-check (ii) is covered by
+// the POST itself.
 if (!priorBad()) {
   if (!probeUnsubUrl) {
     record(6, 'one-click unsubscribe', 'FAIL', 'no unsubscribe URL captured from the delivered issue');
   } else {
+    const sub = [];
+    let okAll = true;
     const r = await fetch(probeUnsubUrl, { method: 'POST', headers: { 'content-type': 'application/x-www-form-urlencoded' }, body: 'List-Unsubscribe=One-Click' });
     const j = await r.json().catch(() => ({}));
-    if (r.status === 200 && j.ok) record(6, 'one-click unsubscribe (RFC 8058 POST)', 'PASS', `POST ${probeUnsubUrl.split('?')[0]} -> HTTP 200 ok`);
-    else record(6, 'one-click unsubscribe (RFC 8058 POST)', 'FAIL', `HTTP ${r.status}: ${JSON.stringify(j).slice(0, 160)}`);
+    if (r.status === 200 && j.ok) sub.push(`(i) RFC 8058 one-click POST ${probeUnsubUrl.split('?')[0]} -> HTTP 200 ok (endpoint handler performs the flip)`);
+    else { okAll = false; sub.push(`(i) RFC 8058 one-click POST -> HTTP ${r.status}: ${JSON.stringify(j).slice(0, 160)}`); }
+    if (probeFooterUrl) {
+      const g = await fetch(probeFooterUrl, { redirect: 'follow' });
+      const gtext = await g.text().catch(() => '');
+      const wf17 = /Nothing to change\.|You’ve unsubscribed\./.test(gtext);
+      if (g.status === 200 && wf17) sub.push("(ii) footer GET link -> HTTP 200 with WF-17 landing (post-flip 'already' state; idempotent flip — no second state consumed)");
+      else { okAll = false; sub.push(`(ii) footer GET link -> HTTP ${g.status}, WF-17 landing marker ${wf17 ? 'found' : 'NOT found'}`); }
+    } else {
+      sub.push('(ii) footer GET link: on this environment the step-5 URL is the delivered body (footer) URL itself, so the POST in (i) exercised the footer link target');
+    }
+    record(6, 'one-click unsubscribe (endpoint POST + footer link)', okAll ? 'PASS' : 'FAIL', sub.join('; '));
   }
-} else mirrorRecord(6, 'one-click unsubscribe (RFC 8058 POST)');
+} else mirrorRecord(6, 'one-click unsubscribe (endpoint POST + footer link)');
 
 // Step 7 — verify unsubscribed + suppression holds.
 if (!priorBad()) {

@@ -75,9 +75,12 @@ after every deployment and hotfixed if problem."
   the WF-17 success landing; (4) verify the row is `active`
   with `confirmed_at` set; (5) send the current issue to the
   probe only and verify the delivered email (List-Unsubscribe
-  header + one-click path + FR-018 postal footer); (6)
-  unsubscribe via the RFC 8058 one-click POST from the
-  delivered issue; (7) verify the row is `unsubscribed` and a
+  header + footer one-click link + FR-018 postal footer;
+  `List-Unsubscribe-Post`'s absence is the spec 020
+  Amendment 6 platform note, not a failure); (6)
+  unsubscribe via the reader's actual paths — the endpoint's
+  RFC 8058 one-click POST handler, plus the delivered footer
+  GET link's resolution into the WF-17 flow; (7) verify the row is `unsubscribed` and a
   repeat probe send returns 0 recipients (suppression holds).
   The production probe's final state is always
   `unsubscribed`; the staging probe's final state is its
@@ -148,6 +151,29 @@ after every deployment and hotfixed if problem."
   BLOCKED (this runner's environment), never FAIL; the
   production subscribe leg also preflights plain connectivity
   to the site before invoking the browser.
+  **Amendment (2026-10-10, T008) — step 5/6 assertions
+  follow spec 020 Amendment 6.** The owner accepted the
+  footer one-click link as the sanctioned one-click path on
+  the Microsoft lane (Exchange strips
+  `List-Unsubscribe-Post` on egress; the app is not widened
+  to Mail.ReadWrite). Step 5 therefore asserts, on the
+  delivered issue: `List-Unsubscribe` header present, footer
+  one-click unsubscribe link present, FR-018 postal footer
+  present — and logs the Post header's absence as the known
+  platform note, not a failure (if the header ever appears,
+  that is recorded as revisit-clause evidence). Step 6
+  verifies unsubscription through the paths a reader
+  actually has: (i) the endpoint's one-click POST handler
+  (POST to the delivered unsubscribe URL with the RFC 8058
+  body — the server-side capability is verified even though
+  the header is stripped in transit; this performs the
+  state change step 7 checks), and (ii) the footer GET
+  link, fetched after the POST — the endpoint's flip is
+  idempotent, so the GET must land on a WF-17 landing page
+  (HTTP 200) without consuming a second probe state. No
+  assertion was weakened: content, D1, and suppression
+  checks are unchanged; only the transit-stripped header's
+  role changed, per the owner's recorded decision.
 - **FR-022-5 — Repeatable and self-normalizing.** A run may
   start with the probe in any state. The runner first returns
   the probe to `unsubscribed` using the public endpoints

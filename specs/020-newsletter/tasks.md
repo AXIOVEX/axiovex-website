@@ -275,16 +275,20 @@
   could only ever hard-fail a send; it is unreachable
   today (no caller passes an unsubscribe URL on the
   single-part branch) and behavior is otherwise
-  identical. Harness 38/38. **Status: OPEN — known
-  platform limitation.** Restoring RFC 8058 header
-  one-click needs an owner-level choice: (a) accept the
-  footer one-click GET link as the one-click path
-  (current behavior); (b) widen the newsletter app to
-  Mail.ReadWrite and test the draft route (relaxes the
-  least-privilege stance; the draft route's header
-  survival is itself untested); or (c) revisit the
-  sending lane at the FR-020 thresholds. Any future fix
-  must be verified against a delivered message.
+  identical. Harness 38/38. **Status: RESOLVED BY
+  AMENDMENT (2026-10-10).** The owner chose (a): Tristen
+  Pierson accepted the footer one-click GET link as the
+  sanctioned one-click path on this lane ("Resume it",
+  2026-10-10, accepting the recommended option) — the app
+  is NOT widened to Mail.ReadWrite. Spec.md **Amendment 6**
+  records the platform block, how FR-011 is satisfied on
+  this lane (List-Unsubscribe header + footer one-click
+  GET link; the RFC 8058 POST endpoint remains implemented
+  and is verified at the endpoint level by the spec 022
+  loop), and the revisit clause (re-test header survival
+  against a delivered message at the FR-020 thresholds or
+  any sending-lane change). Spec 022's step-5/6 assertions
+  were amended to match (its T008).
 
 ## Build record — staging, 2026-10-09 (T002/T003 blocked; T004–T008 done; T009 harness-proven)
 
