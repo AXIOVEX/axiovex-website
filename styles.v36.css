@@ -1331,3 +1331,4 @@ h2 {
 .nl-sample .explore { display: inline-block; color: var(--cyan); font-weight: 700; font-size: 13.5px; letter-spacing: 0.06em; text-decoration: none; }
 .nl-sample .explore:hover { text-decoration: underline; }
 .post-article .nl-block { margin-bottom: 10px; }
+.nav-links a.nav-subscribe[aria-current="page"] { color: var(--cyan) !important; border-color: rgba(0, 222, 246, 0.45); }
