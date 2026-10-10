@@ -162,18 +162,44 @@
   spec021-review/` match the approved frames. Staging
   sync-back to final main follows this closeout with the
   staging guards re-asserted, per the playbook.
-- [ ] T013 (owner correction 2026-10-10, after T012) One form
+- [x] T013 (owner correction 2026-10-10, after T012) One form
   on `/newsletter/`. As promoted, the landing page rendered
   two subscribe forms — the WF-15 landing form (source
   `landing`) and the sitewide WF-G4 footer strip (source
   `footer`). Tristen directed a single form, the top one.
   Fix: the generator's newsletter-chrome step suppresses
   the footer strip on the `/newsletter/` landing page only
-  (explicit per-page exclusion; the NLFOOTER region is
-  written empty there). Issue pages and every other page
-  keep the strip. Wireframes annotated (WF-G4 + WF-15 +
-  revision log, owner correction 2026-10-10). Verify by
-  build audit (form counts per page), harness, staging +
-  production Playwright screenshots; promote under the
-  standing spec 021 promotion approval and close out here
-  with the final main hash.
+  (explicit `FOOTER_STRIP_EXCLUDED` set in
+  `buildNewsletterChrome()`; the NLFOOTER region is written
+  empty there). Issue pages and every other page keep the
+  strip. Wireframes annotated (WF-G4 + WF-15 + revision
+  log, owner correction 2026-10-10). **Done 2026-10-10:**
+  staging commit `7984699`, deployment `bb4298c4` success.
+  Build audit (built output + live, both environments):
+  `/newsletter/` exactly 1 form (source `landing`, footer
+  source absent); homepage 2 (section + footer); articles
+  2 (end block + footer); `/signals/` 3 (top, foot,
+  footer); issue page 2 (issue block + footer). Build
+  idempotent; harness 31/31 (no harness assertion counts
+  page forms — the P-checks cover endpoint source handling
+  and are unchanged). Promoted under the standing spec 021
+  promotion approval: merge `2e8750d` of staging into
+  pre-promotion main `71db545`, production guard files
+  restored into the merge itself — `git diff 71db545..HEAD
+  -- robots.txt _headers` EMPTY; merged tree
+  build-idempotent with no post-merge build commit needed.
+  Production deployment `18079295` success. Live
+  verification: `/`, `/signals/`, `/newsletter/`,
+  `/newsletter/2026-10-14/`, `/privacy/`, `/robots.txt`,
+  `/sitemap.xml`, `/llms.txt` all 200 (OK); served
+  `/newsletter/` HTML carries exactly one form; homepage
+  keeps section + strip; robots.txt Allow; no X-Robots-Tag.
+  Endpoint ladder: subscribe empty payload 422,
+  `GET /api/contact` 405. Production D1 unchanged:
+  subscribers 1 (owner, pending), sends 0. Playwright
+  screenshots staging (`fix-*`) + production (`prod-fix-*`)
+  in `~/workspace/your_files/spec021-review/`, eyeballed —
+  one landing form, footer grid present with no strip
+  above it. This closeout commit is the final main;
+  staging sync-back with guards re-asserted follows per
+  the playbook.
