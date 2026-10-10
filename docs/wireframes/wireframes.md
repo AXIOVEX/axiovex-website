@@ -48,24 +48,36 @@ This file is the index, the gate rule, and the revision log.
   editions of The Axiovex Signal weekly newsletter; WF-15
   on the WF-03 pattern, WF-16 on the WF-04 article pattern,
   WF-17 a reduced WF-05-shell state set — confirmed /
-  unsubscribed / expired / already-in-state)
+  unsubscribed / expired / already-in-state; WF-15
+  landing-page revision — form above the archive, archive
+  as sample proof — PROPOSED 2026-10-10 — PENDING OWNER
+  APPROVAL)
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
 - WF-09 Blog / article / privacy — tablet
 - Global components: WF-G1 nav (Signals link added by spec 008 —
   approved + implemented 2026-10-06; Home as the home page's first
-  nav item added by spec 009 — approved + implemented 2026-10-06) · WF-G2 strata bar (+ page-head rhythm, spec 003; page-foot
+  nav item added by spec 009 — approved + implemented 2026-10-06;
+  Subscribe CTA → /newsletter/ PROPOSED 2026-10-10 — PENDING OWNER
+  APPROVAL) · WF-G2 strata bar (+ page-head rhythm, spec 003; page-foot
   rhythm proposed by spec 015 — PENDING OWNER APPROVAL) · WF-G3 CTA
   band · WF-G4 footer (legal link row gains Disclaimer
   beside Privacy Policy, spec 016 — owner decision
   2026-10-06; IMPLEMENTED + LIVE 2026-10-06, merge
-  `9d7dbba`) · WF-G5 service card · WF-G6 Signals floating
+  `9d7dbba`; newsletter strip — WF-G8 compact variant above the
+  grid — PROPOSED 2026-10-10 — PENDING OWNER APPROVAL) · WF-G5 service card · WF-G6 Signals floating
   widget (spec 008 — approved + implemented 2026-10-06) · WF-G7
   Breaking news banner (proposed 2026-10-06 by spec 012 —
   PENDING OWNER APPROVAL) · WF-G8 Newsletter signup block
   (added 2026-10-09 by spec 020 — APPROVED 2026-10-09 (T001):
   email-only signup for The Axiovex Signal, confirmation-first
   copy, no-tracking fine print; v1 placement on /signals/ only,
-  drawn in place at WF-11)
+  drawn in place at WF-11; placement expansion + compact variant
+  PROPOSED 2026-10-10 — PENDING OWNER APPROVAL: header CTA
+  (WF-G1), /signals/ head compact block (WF-11), article end
+  (WF-04), home section (WF-01), /newsletter/ landing lead
+  (WF-15), footer strip (WF-G4) — proposal note
+  `newsletter-signup-placement-proposal-2026-10-10.md` in this
+  folder)
 
 Framing decisions baked into the set (2026-10-04): centered axis (standing
 symmetry rule); strata = 3 segments
@@ -737,3 +749,51 @@ as accordion rows.
   waits on the FR-018 owner decisions (CAN-SPAM postal
   address; privacy/footer wording review). Nothing on
   the live site changes until Tristen approves.
+- **2026-10-10** — REVISION PROPOSED (newsletter signup
+  placement — owner-directed research follow-up to spec 020;
+  **PROPOSED 2026-10-10 — PENDING OWNER APPROVAL — NOT
+  approved, NOT implemented**): spec 020 shipped the signup
+  only inside /signals/ content and on the /newsletter/
+  archive; Tristen asked for a more obvious signup, and a
+  placement research report (2026-10-10) ranked a layered,
+  always-visible system. The revision draws it, reusing
+  WF-G8 unchanged in copy and behavior everywhere:
+  (1) **WF-G1** gains a **Subscribe** ghost button →
+  /newsletter/, immediately left of Contact (Contact keeps
+  the stronger treatment and stays visually primary); the
+  hamburger panel gains the matching row above Contact.
+  The label is Subscribe, not "The Signal" — the row
+  already carries **Signals**, and a one-letter difference
+  invites mis-taps (flagged conflict, recorded in the
+  proposal note). (2) **WF-04** gains the WF-G8 block at
+  the end of every article, after the body and before
+  More analysis (WF-16 issue pages already close with
+  it). (3) **WF-15** is rebuilt as a landing page: page
+  head → landing lead (WF-G8 form above the archive,
+  "Every Wednesday" cadence at the form, three factual
+  content bullets, privacy/no-tracking line, a proof slot
+  drawn empty — no count or testimonial exists to claim)
+  → the archive as sample proof; the closing WF-G8 block
+  is removed (one form per page). This supersedes WF-15's
+  v1 "Not in the nav" note if approved. (4) **WF-01**
+  gains a newsletter section (WF-G8 in full) after the
+  Signals + Michigan Pulse block and before About; hero
+  and services CTAs untouched. (5) **WF-G4** gains a
+  centered newsletter strip (WF-G8 compact variant, drawn
+  new at WF-G8) above the footer grid, sitewide — the
+  passive layer. (6) **WF-11** gains the compact variant
+  directly under the page head, ahead of Highlights; the
+  approved full block keeps its foot slot. Each placement
+  records its own signup *source* (signals-top, article,
+  landing, home, footer; the endpoint already stores it)
+  so placements can be compared per 1,000 visitors.
+  **Non-goals, explicit:** no popups, modals, slide-ins,
+  or exit intent (the research's brand-risk finding +
+  owner taste); the homepage hero CTA is unchanged;
+  Contact remains the primary CTA. The proposal note —
+  `newsletter-signup-placement-proposal-2026-10-10.md` in
+  this folder — carries the ranked set, the per-frame
+  changes, and the two llms.txt lines (a proposal only;
+  llms.txt itself is not edited by this revision).
+  Nothing on the live site changes until Tristen
+  approves.
