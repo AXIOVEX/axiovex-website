@@ -187,5 +187,46 @@ res = await subscribe(ctx(formPost(BASE + '/api/newsletter/subscribe', subFields
 j = await res.json();
 check('P3 missing source coerced to signals', res.status === 200 && j.ok && rowOf('placement-missing@example.com')?.source === 'signals', `stored=${rowOf('placement-missing@example.com')?.source}`);
 
+// ---------- spec 022 probe-only test send (FR-022-3) ----------
+// The loop test's send leg. Guardrails under test: the secret
+// gate applies, any recipient but the hard-coded probe is
+// refused before any send, an inactive probe sends 0, and an
+// active probe receives exactly one mail even while another
+// active, allowlisted subscriber exists (C-022-2 falsifier).
+const SECOND = 'second-active@example.com';
+env.NEWSLETTER_TEST_ALLOWLIST = OWNER + ',' + SECOND;
+const lib = await import(path.join(ROOT, 'functions', 'api', 'newsletter', '_lib.js'));
+const secondUnsubHash = await lib.sha256Hex(await lib.unsubscribeToken(env, SECOND));
+raw.prepare("INSERT INTO subscribers (email, status, unsub_token_hash, created_at, source) VALUES (?, 'active', ?, ?, 'harness')")
+  .run(SECOND, secondUnsubHash, new Date().toISOString());
+const testSend = (over = {}) => send(ctx(new Request(BASE + '/api/newsletter/send', {
+  method: 'POST',
+  headers: { 'content-type': 'application/json', 'x-newsletter-send-secret': 'harness-send-secret' },
+  body: JSON.stringify({ mode: 'test', testRecipient: OWNER, issue: '2026-10-14', subject: issueEmail.subject, html: issueEmail.html, text: issueEmail.text, footerAddress: issueEmail.footerAddress, ...over }),
+}))).then((r) => r.json());
+
+res = await send(ctx(new Request(BASE + '/api/newsletter/send', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ mode: 'test', testRecipient: OWNER }) })));
+check('LT1 test mode without secret -> 403', res.status === 403, `status ${res.status}`);
+
+let outboxBefore = outbox.length;
+j = await testSend({ testRecipient: SECOND });
+check('LT2 test mode wrong recipient -> refused, no mail', j.ok === false && outbox.length === outboxBefore, j.message);
+
+j = await testSend();
+check('LT3 test mode with unsubscribed probe -> sent 0, probeActive false', j.ok && j.probeActive === false && j.sent === 0 && outbox.length === outboxBefore, j.reason);
+
+res = await subscribe(ctx(formPost(BASE + '/api/newsletter/subscribe', subFields())));
+const confirmUrl3 = /https:\/\/staging\.axiovexsystems\.com\/newsletter\/confirm\?t=[a-f0-9]+/.exec(outbox[outbox.length - 1].text)?.[0];
+res = await confirm(ctx(new Request(confirmUrl3)));
+check('LT4 setup: probe active again', rowOf(OWNER)?.status === 'active');
+outboxBefore = outbox.length;
+j = await testSend();
+const lt4Mail = outbox[outbox.length - 1];
+check('LT4 test send -> exactly 1 mail, to the probe only', j.ok && j.sent === 1 && j.mailStatus === 'sent' && outbox.length === outboxBefore + 1 && lt4Mail.to === OWNER && lt4Mail.subject === issueEmail.subject, `sent=${j.sent} mail=${j.mailStatus}`);
+const lt4Row = raw.prepare("SELECT * FROM sends WHERE provider_ref = 'loop-test' ORDER BY id DESC LIMIT 1").get();
+check('LT4 sends log marks the test send (provider_ref loop-test)', Boolean(lt4Row) && lt4Row.sent_count === 1 && lt4Row.recipient_count === 1);
+j = await sendIssue();
+check('LT4 control: list send reaches both active subscribers', j.ok && j.sent === 2, `sent=${j.sent}`);
+
 console.log('\n' + results.filter((r) => r.pass).length + '/' + results.length + ' checks passed');
 process.exit(results.every((r) => r.pass) ? 0 : 1);

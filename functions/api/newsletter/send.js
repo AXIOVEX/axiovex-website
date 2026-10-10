@@ -26,6 +26,9 @@ import {
 
 const CHUNK = 25;
 const PLACEHOLDER_ADDRESS = "[Postal address pending — owner decision, spec 020 FR-018]";
+// Spec 022 FR-022-3: the loop-test probe. Test mode can mail
+// this address and no other — the constant is the guardrail.
+const LOOP_TEST_RECIPIENT = "tristen@axiovexsystems.com";
 
 function secretOk(request, env) {
   const provided = request.headers.get("x-newsletter-send-secret") || "";
@@ -66,14 +69,68 @@ export async function onRequest(context) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(issue) || !subject || !html || !text) {
     return jsonResponse({ ok: false, message: "Issue id, subject, html and text parts are required." }, 422);
   }
-  if (!approval) {
-    return jsonResponse({ ok: false, message: "Refused: no per-issue approval marker (FR-005)." }, 422);
-  }
   if (env.ENVIRONMENT === "production" && (!footerAddress || footerAddress === PLACEHOLDER_ADDRESS)) {
     return jsonResponse({ ok: false, message: "Refused: FR-018 postal address missing in production mode." }, 422);
   }
 
   const db = env.NEWSLETTER_DB;
+
+  // Spec 022 FR-022-3 — probe-only test send. The owner
+  // directed the automated full-loop test on 2026-10-10 and
+  // authorized probe-only test sends as a standing act; this
+  // branch is NOT an FR-005 issue approval and cannot reach
+  // the list: the recipient must equal the hard-coded probe
+  // (any other is refused before any send), no approval
+  // marker is consulted, and the branch returns before the
+  // list path below. The FR-018 production address rule
+  // above applies to test sends exactly as to issue sends.
+  if (body.mode === "test") {
+    const testRecipient = typeof body.testRecipient === "string" ? body.testRecipient.trim().toLowerCase() : "";
+    if (testRecipient !== LOOP_TEST_RECIPIENT) {
+      return jsonResponse({ ok: false, message: "Refused: test mode sends to the loop-test probe address only." }, 422);
+    }
+    const probe = await db.prepare(
+      "SELECT status FROM subscribers WHERE email = ?",
+    ).bind(LOOP_TEST_RECIPIENT).first();
+    if (!probe || probe.status !== "active") {
+      return jsonResponse({
+        ok: true, mode: "test", probeActive: false, sent: 0, mailStatus: null,
+        reason: probe ? `probe status is '${probe.status}'` : "probe has no subscriber row",
+      });
+    }
+    const testStartedAt = Date.now();
+    const testInserted = await db.prepare(
+      "INSERT INTO sends (issue_id, started_at, recipient_count, provider_ref) VALUES (?, ?, 1, 'loop-test') RETURNING id",
+    ).bind(issue, new Date(testStartedAt).toISOString()).first();
+    const testSendsRowId = testInserted ? testInserted.id : null;
+    const testBase = siteBase(env, request);
+    const testToken = await unsubscribeToken(env, LOOP_TEST_RECIPIENT);
+    const testUnsubUrl = `${testBase}/newsletter/unsubscribe?t=${testToken}`;
+    const testPersonalize = (s) => s.split("{{UNSUBSCRIBE_URL}}").join(testUnsubUrl).split("{{WEB_URL}}").join(`${testBase}/newsletter/${issue}/`).split("{{PRIVACY_URL}}").join(`${testBase}/privacy/`);
+    const testStatus = await sendNewsletterMail(env, {
+      to: LOOP_TEST_RECIPIENT,
+      subject,
+      html: testPersonalize(html),
+      text: testPersonalize(text),
+      unsubscribeUrl: testUnsubUrl,
+    });
+    const testFinishedAt = Date.now();
+    if (testSendsRowId) {
+      await db.prepare(
+        "UPDATE sends SET sent_count = ?, throttle_events = ?, finished_at = ?, duration_ms = ? WHERE id = ?",
+      ).bind(testStatus === "sent" ? 1 : 0, testStatus === "throttled" ? 1 : 0, new Date(testFinishedAt).toISOString(), testFinishedAt - testStartedAt, testSendsRowId).run();
+    }
+    const testGauge = await senderGauge(env);
+    return jsonResponse({
+      ok: true, mode: "test", probeActive: true,
+      sent: testStatus === "sent" ? 1 : 0, mailStatus: testStatus, gauge: testGauge,
+    });
+  }
+
+  if (!approval) {
+    return jsonResponse({ ok: false, message: "Refused: no per-issue approval marker (FR-005)." }, 422);
+  }
+
   const startedAt = Date.now();
   const rows = await db.prepare(
     "SELECT email FROM subscribers WHERE status = 'active' ORDER BY email",
