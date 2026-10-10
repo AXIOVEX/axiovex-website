@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-10T11:21:28.876Z",
+  "updatedUtc": "2026-10-10T15:21:11.710Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -79,6 +79,14 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
+      "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+      "source": "NIST",
+      "date": "2026-10-08",
+      "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
       "title": "Teams often miss preventive maintenance, raising costs and risks: Limble",
       "source": "Manufacturing Dive",
       "date": "2026-10-08",
@@ -91,14 +99,6 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-08",
       "url": "https://www.manufacturingdive.com/news/wolfspeed-dod-defense-war-office-of-strategic-capital-loan/832451/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
-      "source": "NIST",
-      "date": "2026-10-08",
-      "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
     },
     {
       "lane": "michigan",

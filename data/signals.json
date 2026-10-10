@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-10T11:21:28.876Z",
+  "updatedUtc": "2026-10-10T15:21:11.710Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -27,6 +27,13 @@
           "date": "2026-10-09"
         },
         {
+          "source": "NIST",
+          "sourceId": "nist",
+          "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+          "link": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science",
+          "date": "2026-10-08"
+        },
+        {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
           "title": "Teams often miss preventive maintenance, raising costs and risks: Limble",
@@ -38,13 +45,6 @@
           "sourceId": "manufacturing-dive",
           "title": "Wolfspeed signs $1.5B DOD loan for semiconductor production, R&D",
           "link": "https://www.manufacturingdive.com/news/wolfspeed-dod-defense-war-office-of-strategic-capital-loan/832451/",
-          "date": "2026-10-08"
-        },
-        {
-          "source": "NIST",
-          "sourceId": "nist",
-          "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
-          "link": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science",
           "date": "2026-10-08"
         },
         {
