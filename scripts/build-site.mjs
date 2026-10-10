@@ -1719,6 +1719,7 @@ function buildSignals(posts) {
     '{{LANES_HTML}}': lanesHtml,
     '{{GEO_NOTE}}': geoNote(geo),
     '{{UPDATED_LINE}}': updatedLine,
+    '{{NEWSLETTER_HTML}}': newsletterBlock('signals'),
   }));
 
   // Home block between the SIGNALS markers
@@ -1797,6 +1798,138 @@ function buildSignals(posts) {
   return { updatedDate: String(snap.updatedUtc || '').slice(0, 10) || null };
 }
 
+/* ================= Newsletter (spec 020) =================
+   The Axiovex Signal: issue sources committed under
+   newsletter/issues/<yyyy-mm-dd>.json render the archive index
+   (WF-15) and each issue's web edition (WF-16) here; the email
+   HTML + plain-text parts render from the same sources via
+   scripts/newsletter/render.mjs (FR-006 — one source, three
+   versions, claim C-020-3). The WF-G8 signup block is rendered
+   by newsletterBlock() and placed on /signals/ (fill above),
+   the archive, and every issue page. */
+function newsletterBlock(variant) {
+  const issue = variant === 'issue';
+  const eyebrow = issue ? 'READING SOMEONE ELSE\u2019S COPY?' : 'THE AXIOVEX SIGNAL \u2014 WEEKLY';
+  const heading = issue ? 'Get your own, Wednesdays.' : 'The week, in your inbox.';
+  const lede = issue
+    ? 'The same edition, in your own inbox \u2014 Wednesdays at 10:00 AM ET, with the numbers, their vintages, and why they matter.'
+    : 'What changed in Michigan industry and the field \u2192 one email, Wednesdays at 10:00 AM ET, with the numbers, their vintages, and why they matter.';
+  return '<div class="nl-block" id="newsletter">\n' +
+    '          <p class="eyebrow">' + eyebrow + '</p>\n' +
+    '          <h2 class="nl-heading">' + heading + '</h2>\n' +
+    '          <p class="nl-lede">' + lede + '</p>\n' +
+    '          <form class="nl-form" method="post" action="/api/newsletter/subscribe">\n' +
+    '            <label class="visually-hidden" for="nl-email">Email address</label>\n' +
+    '            <input id="nl-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>\n' +
+    '            <button class="btn btn-primary" type="submit">Subscribe \u2192</button>\n' +
+    '            <div id="nl-turnstile" class="turnstile-box"></div>\n' +
+    '            <p class="field-error" data-error-for="email" hidden></p>\n' +
+    '            <p class="field-error" data-error-for="turnstile" hidden></p>\n' +
+    '            <div class="honeypot" aria-hidden="true"><label>Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>\n' +
+    '            <input name="startedAt" type="hidden" value="0">\n' +
+    '            <input name="source" type="hidden" value="' + escAttr(variant) + '">\n' +
+    '          </form>\n' +
+    '          <p class="nl-summary" role="status" hidden></p>\n' +
+    '          <div class="nl-done" hidden>\n' +
+    '            <h2 class="nl-heading">Check your inbox.</h2>\n' +
+    '            <p class="nl-lede">We sent a confirmation email to the address you gave us. Click the link in it \u2014 good for 48 hours \u2014 and the first edition arrives Wednesday at 10:00 AM ET. No click, no emails: that\u2019s the deal.</p>\n' +
+    '          </div>\n' +
+    '          <p class="nl-fine">One email a week. We send a confirmation first \u2014 nothing arrives until you click it. Unsubscribe in one click, any time. <strong>No tracking pixels, no per-reader analytics.</strong> <a href="/privacy/">Privacy policy</a></p>\n' +
+    '        </div>';
+}
+
+function issueBodyHtml(issue) {
+  const parts = [];
+  if (issue.whatChanged && issue.whatChanged.length) {
+    parts.push('<h2 class="nl-sec">What changed</h2>');
+    for (const group of issue.whatChanged) {
+      parts.push('<h3 class="nl-lane">' + esc(group.lane) + '</h3>\n<ul class="nl-items">\n' +
+        group.items.map(i =>
+          '<li><a href="' + escAttr(i.url) + '" target="_blank" rel="noopener">' + esc(i.title) + '</a> ' +
+          '<span class="nl-meta">\u00b7 ' + esc(i.source) + ' \u00b7 ' + esc(fmtDate(i.date)) + '</span></li>').join('\n') +
+        '\n</ul>');
+    }
+  }
+  if (issue.pulse && issue.pulse.length) {
+    parts.push('<h2 class="nl-sec">Michigan Pulse</h2>\n<ul class="nl-pulse">\n' +
+      issue.pulse.map(f =>
+        '<li><span class="nl-pulse-label">' + esc(f.label) + '</span> <strong>' + esc(f.display) + '</strong>' +
+        (f.delta ? ' <span class="nl-meta">' + esc(f.delta) + '</span>' : '') +
+        ' <span class="nl-meta">\u00b7 ' + esc(f.vintage) + '</span></li>').join('\n') +
+      '\n</ul>' +
+      (issue.pulseSource ? '\n<p class="nl-meta">Source: ' + esc(issue.pulseSource) + '.</p>' : ''));
+  }
+  if (issue.insights && issue.insights.length) {
+    parts.push('<h2 class="nl-sec">Why it matters</h2>\n' +
+      issue.insights.map(t => '<p>' + esc(t.text) + '</p>').join('\n'));
+  }
+  if (issue.article) {
+    parts.push('<h2 class="nl-sec">From the blog</h2>\n<p><a href="' + escAttr(issue.article.url) + '">' +
+      esc(issue.article.title) + '</a> <span class="nl-meta">\u00b7 ' + esc(fmtDate(issue.article.date)) + '</span></p>');
+  }
+  if (issue.watchlist && issue.watchlist.length) {
+    parts.push('<h2 class="nl-sec">Watchlist</h2>\n<ul class="nl-items">\n' +
+      issue.watchlist.map(w => '<li>' + esc(w.label) + ' \u2014 <strong>' + esc(fmtDate(w.date)) + '</strong></li>').join('\n') +
+      '\n</ul>');
+  }
+  parts.push('<p class="nl-colophon">Assembled from the committed Signals snapshot and the Michigan data pack, with vintages as labeled \u00b7 <a href="/newsletter/">All editions</a> \u00b7 <a href="/privacy/">Privacy policy</a></p>');
+  // FR-018: the web edition carries the same postal line as the
+  // email footer (issue.footerAddress; staging placeholder only
+  // when the issue source has none designated).
+  parts.push('<p class="nl-colophon">Axiovex Systems, LLC \u00b7 ' + esc(issue.footerAddress || '[Postal address pending \u2014 owner decision, spec 020 FR-018]') + '</p>');
+  return parts.join('\n');
+}
+
+const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+function fmtDateLong(iso) {
+  const d = new Date((iso || '') + 'T12:00:00Z');
+  if (Number.isNaN(d.getTime())) return fmtDate(iso);
+  return WEEKDAYS[d.getUTCDay()] + ', ' + fmtDate(iso);
+}
+
+function buildNewsletter() {
+  const dir = path.join(ROOT, 'newsletter', 'issues');
+  const issues = existsSync(dir)
+    ? readdirSync(dir).filter(f => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
+        .map(f => JSON.parse(readFileSync(path.join(dir, f), 'utf8')))
+        .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
+    : [];
+  const indexTpl = readFileSync(path.join(ROOT, 'scripts', 'templates', 'newsletter-index.html'), 'utf8');
+  const issueTpl = readFileSync(path.join(ROOT, 'scripts', 'templates', 'newsletter-issue.html'), 'utf8');
+  const rows = issues.length
+    ? issues.map(issue =>
+        '<article class="card nl-card">\n' +
+        '              <p class="nl-card-date">' + esc(fmtDateLong(issue.date)).toUpperCase() + '</p>\n' +
+        '              <h3><a href="/newsletter/' + issue.date + '/">' + esc(issue.lede) + '</a></h3>\n' +
+        '              <p class="nl-card-sections">What changed \u00b7 Michigan Pulse \u00b7 Why it matters \u00b7 Watchlist</p>\n' +
+        '              <a class="explore" href="/newsletter/' + issue.date + '/">READ THE WEB EDITION \u2192</a>\n' +
+        '            </article>').join('\n            ')
+    : '<p class="nl-empty">No editions yet. The first goes out Wednesday at 10:00 AM ET.</p>';
+  mkdirSync(path.join(ROOT, 'newsletter'), { recursive: true });
+  writeFileSync(path.join(ROOT, 'newsletter', 'index.html'), fill(indexTpl, {
+    '{{ISSUE_ROWS}}': rows,
+    '{{NEWSLETTER_HTML}}': newsletterBlock('archive'),
+  }));
+  for (const issue of issues) {
+    const outDir = path.join(ROOT, 'newsletter', issue.date);
+    mkdirSync(outDir, { recursive: true });
+    writeFileSync(path.join(outDir, 'index.html'), fill(issueTpl, {
+      '{{TITLE}}': issue.lede,
+      '{{TITLE_JSON}}': JSON.stringify(issue.lede),
+      '{{DESCRIPTION}}': 'The Axiovex Signal, ' + fmtDate(issue.date) + ': ' + issue.lede,
+      '{{DESCRIPTION_JSON}}': JSON.stringify('The Axiovex Signal, ' + fmtDate(issue.date) + ': ' + issue.lede),
+      '{{CANONICAL}}': SITE + '/newsletter/' + issue.date + '/',
+      '{{DATE_ISO}}': issue.date,
+      '{{DATE_LONG}}': fmtDate(issue.date),
+      '{{EYEBROW}}': 'THE AXIOVEX SIGNAL \u00b7 ' + fmtDateLong(issue.date).toUpperCase(),
+      '{{BODY_HTML}}': issueBodyHtml(issue),
+      '{{NEWSLETTER_HTML}}': newsletterBlock('issue'),
+    }));
+  }
+  console.log('newsletter: archive + ' + issues.length + ' issue page(s)');
+  return issues;
+}
+
 /* ================= Blog RSS feed (spec 004, T009) ================= */
 function buildFeed(posts) {
   const rfc = iso => new Date(iso + 'T12:00:00Z').toUTCString();
@@ -1821,7 +1954,7 @@ function buildFeed(posts) {
 }
 
 /* ================= Sitemap ================= */
-function writeSitemap(posts, docsInfo, signalsInfo) {
+function writeSitemap(posts, docsInfo, signalsInfo, newsletterIssues) {
   const latestPost = posts.length ? posts[0].date : null;
   const e = (loc, lastmod, freq, pri) =>
     '  <url>\n    <loc>' + loc + '</loc>\n' +
@@ -1836,6 +1969,8 @@ function writeSitemap(posts, docsInfo, signalsInfo) {
     e(SITE + '/contact/', gitDate(ROOT, 'contact/index.html'), 'monthly', '0.7'),
     e(SITE + '/privacy/', gitDate(ROOT, 'privacy/index.html'), 'yearly', '0.5'),
     e(SITE + '/disclaimer/', gitDate(ROOT, 'disclaimer/index.html'), 'yearly', '0.5'),
+    e(SITE + '/newsletter/', newsletterIssues && newsletterIssues.length ? newsletterIssues[0].date : null, 'weekly', '0.7'),
+    ...(newsletterIssues || []).map(i => e(SITE + '/newsletter/' + i.date + '/', i.date, 'monthly', '0.6')),
   ];
   writeFileSync(path.join(ROOT, 'sitemap.xml'),
     '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
@@ -1939,6 +2074,15 @@ function buildBreaking() {
     const rel = path.join('blog', name.name, 'index.html');
     if (existsSync(path.join(ROOT, rel))) outputs.push(rel);
   }
+  const nlDir = path.join(ROOT, 'newsletter');
+  if (existsSync(path.join(nlDir, 'index.html'))) outputs.push(path.join('newsletter', 'index.html'));
+  if (existsSync(nlDir)) {
+    for (const name of readdirSync(nlDir, { withFileTypes: true })) {
+      if (!name.isDirectory() || !/^\d{4}-\d{2}-\d{2}$/.test(name.name)) continue;
+      const rel = path.join('newsletter', name.name, 'index.html');
+      if (existsSync(path.join(ROOT, rel))) outputs.push(rel);
+    }
+  }
   const re = /(<!-- BREAKING:START -->)[\s\S]*?(<!-- BREAKING:END -->)/;
   let rewritten = 0;
   for (const rel of outputs) {
@@ -1973,5 +2117,6 @@ if (existsSync(sharedDir)) {
 const posts = buildBlog();
 buildFeed(posts);
 const signalsInfo = buildSignals(posts);
-writeSitemap(posts, docsInfo, signalsInfo);
+const newsletterIssues = buildNewsletter();
+writeSitemap(posts, docsInfo, signalsInfo, newsletterIssues);
 buildBreaking();

@@ -1,42 +1,39 @@
 <!DOCTYPE html>
-<!-- Source template for generated article pages — edit scripts/templates/blog-article.html, not the generated /blog/<slug>/ pages. -->
+<!-- Source template for the generated newsletter archive — edit scripts/templates/newsletter-index.html, not newsletter/index.html. -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{TITLE}} | Axiovex Systems Blog</title>
-  <meta name="description" content="{{DESCRIPTION}}">
-  <link rel="canonical" href="{{CANONICAL}}">
+  <title>The Axiovex Signal — Newsletter | Axiovex Systems</title>
+  <meta name="description" content="The Axiovex Signal: Axiovex Systems’ weekly newsletter — what changed in Michigan industry and the field, the Michigan numbers with their vintages, and why they matter. Every Wednesday, 10:00 AM ET.">
+  <link rel="canonical" href="https://axiovexsystems.com/newsletter/">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#081F32">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Axiovex Systems">
-  <meta property="og:title" content="{{TITLE}} | Axiovex Systems">
-  <meta property="og:description" content="{{DESCRIPTION}}">
-  <meta property="og:url" content="{{CANONICAL}}">
+  <meta property="og:title" content="The Axiovex Signal — Newsletter | Axiovex Systems">
+  <meta property="og:description" content="What changed in Michigan industry and the field — the week’s signals, the Michigan numbers with their vintages, and why they matter. Every Wednesday, 10:00 AM ET.">
+  <meta property="og:url" content="https://axiovexsystems.com/newsletter/">
   <meta property="og:image" content="https://axiovexsystems.com/assets/social-card.png">
-  <meta property="article:published_time" content="{{DATE_ISO}}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{TITLE}} | Axiovex Systems">
-  <meta name="twitter:description" content="{{DESCRIPTION}}">
+  <meta name="twitter:title" content="The Axiovex Signal — Newsletter | Axiovex Systems">
+  <meta name="twitter:description" content="What changed in Michigan industry and the field — the week’s signals, the Michigan numbers with their vintages, and why they matter. Every Wednesday, 10:00 AM ET.">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/favicon.png">
   <link rel="stylesheet" href="/styles.v35.css">
-  <link rel="stylesheet" href="/signals-widget.v1.css">
-  <link rel="stylesheet" href="/blog/blog.v11.css">
   <link rel="alternate" type="application/rss+xml" title="Axiovex Systems — Blog" href="/feed.xml">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": {{TITLE_JSON}},
-    "description": {{DESCRIPTION_JSON}},
-    "datePublished": "{{DATE_ISO}}",
-    "url": "{{CANONICAL}}",
+    "@type": "WebPage",
+    "name": "The Axiovex Signal — Newsletter | Axiovex Systems",
+    "url": "https://axiovexsystems.com/newsletter/",
+    "description": "The Axiovex Signal weekly newsletter archive: every issue's web edition.",
     "inLanguage": "en-US",
-    "author": { "@type": "Organization", "name": "Axiovex Systems", "url": "https://axiovexsystems.com/" },
-    "publisher": { "@type": "Organization", "name": "Axiovex Systems", "url": "https://axiovexsystems.com/" }
+    "isPartOf": { "@type": "WebSite", "name": "Axiovex Systems", "url": "https://axiovexsystems.com/" },
+    "about": { "@type": "Organization", "name": "Axiovex Systems", "url": "https://axiovexsystems.com/" }
   }
   </script>
 </head>
@@ -51,7 +48,7 @@
         <a href="/#what-we-do">What we do</a>
         <a href="/#about">About</a>
         <a href="/#faq">FAQ</a>
-        <a href="/blog/" aria-current="page">Blog</a>
+        <a href="/blog/">Blog</a>
         <a href="/signals/">Signals</a>
         <a href="/documents/">Documents</a>
         <a href="/contact/" class="nav-cta">Contact</a>
@@ -65,38 +62,42 @@
       <a href="/#what-we-do">What we do</a>
       <a href="/#about">About</a>
       <a href="/#faq">FAQ</a>
-      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/blog/">Blog</a>
       <a href="/signals/">Signals</a>
       <a href="/documents/">Documents</a>
       <a href="/contact/" class="mobile-cta">Contact</a>
     </nav>
   </header>
-
   <main id="main">
-    <div class="container">
-      <article class="post-article">
-        <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span aria-current="page">{{TITLE}}</span></nav>
-        <p class="post-date">{{DATE_LONG}}</p>
-        <h1>{{TITLE}}</h1>
-        {{TAGS_HTML}}
-        <div class="strata" aria-hidden="true"><i></i><i></i><i></i></div>
-        {{SHARE_TOP}}
-        <div class="post-body">
-{{BODY_HTML}}
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> / <span aria-current="page">Newsletter</span></nav>
+          <p class="eyebrow">Newsletter</p>
+          <h1>The Axiovex Signal</h1>
+          <p class="section-lede">What changed in Michigan industry and the field — the week&rsquo;s signals, the Michigan numbers with their vintages, and why they matter. Every Wednesday, 10:00 AM ET.</p>
         </div>
-        {{MORE_HTML}}
-        <p class="back-link"><a href="/blog/">&larr; All articles</a></p>
-      </article>
-    </div>
+      </div>
+    </section>
+    <div class="strata" aria-hidden="true"><i></i><i></i><i></i></div>
 
-  <section class="cta-band">
-    <div class="container">
-      <p class="eyebrow">Next step</p>
-      <h2>Questions about this analysis?</h2>
-      <p class="section-lede">If this analysis touches a problem you&rsquo;re facing, we&rsquo;d like to hear about it.</p>
-      <a href="/contact/" class="btn btn-primary btn-large">Start a conversation</a>
-    </div>
-  </section>
+    <section class="section section-end" style="padding-top: 28px;">
+      <div class="container">
+        <div class="nl-issue-list">
+{{ISSUE_ROWS}}
+        </div>
+{{NEWSLETTER_HTML}}
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <p class="eyebrow">Next step</p>
+        <h2>Working on something like this?</h2>
+        <p class="section-lede">Tell us what you&rsquo;re trying to solve.</p>
+        <a href="/contact/" class="btn btn-primary btn-large">Start a conversation</a>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -136,8 +137,8 @@
       </div>
     </div>
   </footer>
-  <script src="/blog/blog.v4.js"></script>
-  <div id="signals-widget" data-tags="{{TAGS_DATA}}"></div>
-  <script src="/signals-widget.v1.js" defer></script>
+  <script src="/site.v1.js"></script>
+  <script src="/newsletter-signup.v1.js" defer></script>
+  <!-- No Turnstile script here (spec 020 FR-008): newsletter-signup.v1.js loads it lazily on first interaction with the email field. -->
 </body>
 </html>
