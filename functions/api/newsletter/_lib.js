@@ -223,12 +223,36 @@ export async function sendNewsletterMail(env, { to, subject, html, text, unsubsc
         `--${boundary}--`,
         "",
       ].join("\r\n");
-      response = await fetch(
-        `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(NEWSLETTER_FROM)}/sendMail`,
+      // LU-POST DIAGNOSTIC (2026-10-10): the direct MIME sendMail
+      // conversion dropped List-Unsubscribe-Post on delivery while
+      // List-Unsubscribe survived (first production cycle evidence).
+      // Test the draft + send route: the MIME is stored as a draft
+      // message ($value create), then sent — a different Exchange
+      // conversion path that may preserve both headers.
+      const createResponse = await fetch(
+        `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(NEWSLETTER_FROM)}/messages`,
         {
           method: "POST",
           headers: { authorization: `Bearer ${accessToken}`, "content-type": "text/plain" },
           body: b64raw(mime),
+          signal: controller.signal,
+        },
+      );
+      if (createResponse.status !== 201) {
+        const errBody = await createResponse.text().catch(() => "");
+        console.error(`Graph newsletter draft create failed with status ${createResponse.status}: ${errBody.slice(0, 500)}`);
+        return "failed";
+      }
+      const draft = await createResponse.json().catch(() => null);
+      if (!draft || typeof draft.id !== "string") {
+        console.error("Graph newsletter draft create returned no message id");
+        return "failed";
+      }
+      response = await fetch(
+        `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(NEWSLETTER_FROM)}/messages/${encodeURIComponent(draft.id)}/send`,
+        {
+          method: "POST",
+          headers: { authorization: `Bearer ${accessToken}` },
           signal: controller.signal,
         },
       );
