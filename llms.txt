@@ -14,6 +14,8 @@ true. Rapid-response engineering is part of how we work.
 - Website: https://axiovexsystems.com/
 - Blog: https://axiovexsystems.com/blog/
 - Signals (Michigan data + field signals from primary sources): https://axiovexsystems.com/signals/
+- Newsletter — The Axiovex Signal (weekly email edition of Signals; subscribe + archive): https://axiovexsystems.com/newsletter/
+- Latest issue of The Axiovex Signal (web edition): https://axiovexsystems.com/newsletter/2026-10-14/
 - Blog RSS feed: https://axiovexsystems.com/feed.xml
 - Privacy Policy: https://axiovexsystems.com/privacy/
 - Disclaimer: https://axiovexsystems.com/disclaimer/

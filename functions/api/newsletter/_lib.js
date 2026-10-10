@@ -265,7 +265,8 @@ export async function sendNewsletterMail(env, { to, subject, html, text, unsubsc
       return "throttled"; // FR-020 health override evidence
     }
     if (response.status !== 202) {
-      console.error(`Graph newsletter sendMail failed with status ${response.status}`);
+      const errBody = await response.text().catch(() => "");
+      console.error(`Graph newsletter sendMail failed with status ${response.status}: ${errBody.slice(0, 500)}`);
       return "failed";
     }
     return "sent";

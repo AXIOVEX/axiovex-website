@@ -22,7 +22,7 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   <link rel="apple-touch-icon" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/styles.v35.css">
+  <link rel="stylesheet" href="/styles.v36.css">
   <link rel="stylesheet" href="/signals-widget.v1.css">
   <script type="application/ld+json">
   {
@@ -51,6 +51,7 @@
         <a href="/blog/">Blog</a>
         <a href="/signals/">Signals</a>
         <a href="/documents/" aria-current="page">Documents</a>
+        <a href="/newsletter/" class="nav-subscribe">Subscribe</a>
         <a href="/contact/" class="nav-cta">Contact</a>
       </nav>
       <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
@@ -65,6 +66,7 @@
       <a href="/blog/">Blog</a>
       <a href="/signals/">Signals</a>
       <a href="/documents/" aria-current="page">Documents</a>
+      <a href="/newsletter/" class="mobile-subscribe">Subscribe</a>
       <a href="/contact/" class="mobile-cta">Contact</a>
     </nav>
   </header>
@@ -104,6 +106,7 @@
 
   <footer class="footer">
     <div class="container">
+      <!-- NLFOOTER:START --><!-- NLFOOTER:END -->
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" aria-label="Axiovex Systems homepage"><img src="/assets/logo.svg" alt="AXIOVEX Systems" class="footer-logo"></a>
@@ -142,5 +145,7 @@
   <script src="/site.v1.js"></script>
   <div id="signals-widget"></div>
   <script src="/signals-widget.v1.js" defer></script>
+  <script src="/newsletter-signup.v2.js" defer></script>
+  <!-- No Turnstile script here (spec 021 FR-008): newsletter-signup.v2.js loads it lazily on first interaction with an email field. -->
 </body>
 </html>
