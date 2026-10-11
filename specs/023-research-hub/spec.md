@@ -144,3 +144,8 @@ production is verified live the same way after the merge.
   was drafted. The frame as approved is unchanged; only its
   number moved. (The T001 bullet above keeps the number the
   owner approved under; this bullet is the renumber record.)
+- 2026-10-11: **implemented and verified on `staging`**
+  (T005/T006; commits `16264e9`, `ee3bcc1`). The page is live
+  at https://staging.axiovexsystems.com/research/ behind
+  staging's noindex guards. **T007 gate pending:** the
+  owner's staging review; `main`/production untouched.

@@ -45,13 +45,30 @@
   print is absent); status panel, method chip row, and the
   three link cards per WF-18; reduced CTA band
   (start@axiovexsystems.com, no button, as drawn).
-- [ ] T006 (after T005) Verify on staging: Playwright renders at
+- [x] T006 (after T005) Verify on staging: Playwright renders at
   desktop + mobile widths, screenshotted against WF-18; served
   HTML carries the noindex meta; a rebuild leaves `sitemap.xml`
   with zero `research` URLs and `llms.txt` byte-unchanged; nav +
   footer contain no Research link; the three outbound links
   resolve from the rendered page; FR-004 content-limit check
-  re-run against the served page text.
+  re-run against the served page text. **Done 2026-10-11:**
+  https://staging.axiovexsystems.com/research/ serves HTTP
+  200, noindex meta in the served HTML, staging
+  `X-Robots-Tag: noindex, nofollow` header present. Playwright
+  full-page screenshots (desktop 1440px, mobile 390px) in
+  `~/workspace/your_files/spec023-review/` inspected against
+  WF-18: blocks in order (head → strata → Program one →
+  status panel → framework + method chips → Program two →
+  link cards → reduced CTA → footer); status panel complete;
+  cards stack on mobile; no small print under the lede;
+  rendered nav + footer carry no Research link; the three
+  card hrefs are exactly the GitHub, OSF, and BitConcepts
+  URLs (all three still live, re-checked 2026-10-11);
+  scratch rebuild → sitemap 14 URLs, zero containing
+  "research", `llms.txt` byte-identical; FR-004 check re-run
+  on the authored page text — no internal labels, scores, or
+  machinery (the copy was verified sentence-by-sentence
+  against the approved draft).
 - [ ] T007 **GATE — Tristen reviews the page on staging.**
   Screenshots + staging URL presented. Promotion proceeds only
   on his approval.
