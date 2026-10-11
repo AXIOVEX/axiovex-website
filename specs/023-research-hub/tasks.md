@@ -1,13 +1,14 @@
 # Tasks: Spec 023 — Research hub page (`/research/`, unlisted)
 
-- [ ] T001 **GATE — Tristen approves the wireframe + copy.**
-  **BLOCKING — nothing below starts until this is satisfied.**
-  The approval covers: WF-15 as drawn in
-  `docs/wireframes/wireframes.html` (layout, status panel, link
-  cards, reduced CTA band), and the full page text in
-  `research-hub-copy.md` verbatim. Owner direction for the page
-  itself ("publish the research hub quietly…", 2026-10-11) is on
-  record in spec.md; this gate approves its concrete form.
+- [x] T001 **GATE — Tristen approves the wireframe + copy.**
+  **SATISFIED 2026-10-11** — Tristen approved WF-15 and the
+  full page text in `research-hub-copy.md`, with one
+  amendment: **remove the "deliberately quiet" small print**
+  (the quiet-page note under the lede). The amendment is
+  applied in `research-hub-copy.md` and in the WF-15 frame;
+  everything else ships as drafted. Owner direction for the
+  page itself ("publish the research hub quietly…",
+  2026-10-11) is on record in spec.md.
 - [x] T002 Spec package on branch `spec/023-research-hub`:
   spec.md (FR-001–FR-006, link registry verified 2026-10-11 —
   all three targets HTTP 200), plan.md, tasks.md, and the full

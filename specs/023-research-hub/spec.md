@@ -6,11 +6,12 @@ hub quietly: plain-English RCPH + framework page at an unlisted URL
 The page concept, the naming of RCPH on the page, and the
 quiet-publication properties below are the owner's own settings,
 given in that direction.
-**Status:** SPECIFIED 2026-10-11 — approval package prepared
-(spec + WF-15 wireframe + full copy draft). **Nothing is
-implemented.** The blocking gate is T001 (owner approval of the
-wireframe + copy). After the gate: implement on `staging`,
-Playwright-verify desktop + mobile, promote per spec 010.
+**Status:** APPROVED 2026-10-11 — Tristen approved WF-15 +
+the copy at the T001 gate, with one amendment (the
+"deliberately quiet" small print under the lede is removed;
+applied in the copy draft and the WF-15 frame). Implementing
+on `staging`, Playwright-verify desktop + mobile; promotion
+waits for the T007 staging review, per spec 010.
 
 ## Scope
 
@@ -130,3 +131,8 @@ production is verified live the same way after the merge.
 - 2026-10-11: spec package + WF-15 + full copy draft prepared on
   branch `spec/023-research-hub` for the T001 approval gate.
   Nothing implemented; staging and main untouched.
+- 2026-10-11: T001 gate satisfied — the owner approved WF-15 +
+  the copy with the small-print removal amendment (applied in
+  `research-hub-copy.md` and the WF-15 frame; the wireframe
+  approval markings updated to APPROVED 2026-10-11).
+  Implementation on staging in progress.

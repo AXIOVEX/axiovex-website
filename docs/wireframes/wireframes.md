@@ -42,7 +42,9 @@ This file is the index, the gate rule, and the revision log.
   `9d7dbba`; copy approval given by Tristen 2026-10-06,
   spec 016 T005))
 - WF-15 Research hub (proposed 2026-10-11 by spec 023 —
-  **PENDING OWNER APPROVAL**): a single unlisted page at
+  **APPROVED 2026-10-11**, spec 023 T001; amendment at
+  approval: the small print under the lede was removed): a
+  single unlisted page at
   `/research/` — NOT in WF-G1 nav, NOT linked from any
   page or from WF-G4, noindex, excluded from the sitemap;
   drawn on the WF-05/WF-14 shell — centered page head,
@@ -706,3 +708,11 @@ as accordion rows.
   llms.txt; production robots.txt is unchanged. Full
   copy drafted in specs/023-research-hub/
   research-hub-copy.md; gate = spec 023 T001.
+- **2026-10-11** — APPROVED by Tristen (spec 023 T001):
+  WF-15 Research hub and the full copy in
+  specs/023-research-hub/research-hub-copy.md, with one
+  amendment — the "deliberately quiet" small print under
+  the lede is removed; the frame above and the copy are
+  updated to the approved form. Implementation proceeds
+  on staging; promotion awaits the staging review gate
+  (spec 023 T007).

@@ -1,6 +1,8 @@
 # Research hub — full page copy draft (spec 023)
 
-> Status: DRAFT for owner approval (tasks.md T001 gate). This is the
+> Status: APPROVED by the owner 2026-10-11 (tasks.md T001), with one
+> amendment: the quiet-page small print under the lede was removed at
+> the owner's direction. This is the
 > complete prose for `/research/` — not placeholders. Bracketed notes
 > are production notes, not page text. Wording follows the owner's
 > content limits for this page: plain English throughout; no internal
@@ -21,11 +23,6 @@ What is time? What is gravity? How did everything start — and why
 are some questions so hard to answer at all? This page says what we
 have learned so far, in plain language, and how we go about learning
 it.
-
-**Quiet-page note** [small print under the lede]: This page is
-deliberately quiet. It is not in the site's navigation and it is not
-listed with search engines. If you are reading it, someone sent you
-the link — that is by design.
 
 ---
 
