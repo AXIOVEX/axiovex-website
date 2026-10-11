@@ -41,6 +41,16 @@ This file is the index, the gate rule, and the revision log.
   IMPLEMENTED + LIVE 2026-10-06** (promotion merge
   `9d7dbba`; copy approval given by Tristen 2026-10-06,
   spec 016 T005))
+- WF-15 Research hub (proposed 2026-10-11 by spec 023 —
+  **PENDING OWNER APPROVAL**): a single unlisted page at
+  `/research/` — NOT in WF-G1 nav, NOT linked from any
+  page or from WF-G4, noindex, excluded from the sitemap;
+  drawn on the WF-05/WF-14 shell — centered page head,
+  strata, findings + framework segments in the ~760px
+  editorial column, a status panel, three primary-material
+  link cards, reduced CTA band; reached only by direct URL
+  and by external cross-links (BitConcepts research page,
+  the epistemic-ledger GitHub repo)
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
 - WF-09 Blog / article / privacy — tablet
 - Global components: WF-G1 nav (Signals link added by spec 008 —
@@ -677,3 +687,22 @@ as accordion rows.
   claims C-018-6…8); no new claim is introduced.
   Implemented on staging per spec 010; promotion
   awaits Tristen's staging review (spec 018 T011).
+- **2026-10-11** — PROPOSED by spec 023 (research hub) —
+  PENDING OWNER APPROVAL: **NEW WF-15 Research hub**, an
+  unlisted page at `/research/` drawn on the WF-05/WF-14
+  shell: WF-G1 nav and WF-G4 footer explicitly UNCHANGED
+  (no Research item, no Research link — the page is
+  reached only by direct URL and by two external
+  cross-links: the BitConcepts research page and the
+  AXIOVEX/epistemic-ledger GitHub repo); centered page
+  head + strata (WF-G2 rhythm) → Program one segments
+  (five plain-English findings) in the ~760px editorial
+  column → status panel → framework segments (five ideas
+  + the four-step register-run-publish method row) →
+  Program two segment → three primary-material link
+  cards (GitHub · OSF · BitConcepts) → reduced CTA band
+  (start@axiovexsystems.com). The page carries a noindex
+  robots meta and is never added to the sitemap or to
+  llms.txt; production robots.txt is unchanged. Full
+  copy drafted in specs/023-research-hub/
+  research-hub-copy.md; gate = spec 023 T001.
