@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-11T01:52:56.163Z",
+  "updatedUtc": "2026-10-11T05:20:33.594Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -8,7 +8,7 @@
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers",
+          "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposes",
           "link": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/",
           "date": "2026-10-09"
         },
@@ -242,9 +242,30 @@
         {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → VETS ACCESS LLC — $43,073 award, October 8, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25227P0025_3600_-NONE-_-NONE-",
-          "date": "2026-10-08"
+          "title": "Department of Veterans Affairs → WRIGHT & FILIPPIS, LLC — $32,674 award, October 9, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027N0073_3600_36C77622A0010_3600",
+          "date": "2026-10-09"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → BREMER PROSTHETIC DESIGN, INC — $17,863 award, October 9, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027N0072_3600_36C25022A0036_3600",
+          "date": "2026-10-09"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $15,752 award, October 9, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C24527P0052_3600_-NONE-_-NONE-",
+          "date": "2026-10-09"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Justice → NATIONAL FOOD GROUP INC — $21,931 award, October 9, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_15B21627P00000003_1540_-NONE-_-NONE-",
+          "date": "2026-10-09"
         },
         {
           "source": "USAspending (Treasury)",
@@ -266,27 +287,6 @@
           "title": "Energy Department Announces New Genesis Mission Awards to Advance Super Intelligence for Science",
           "link": "https://www.energy.gov/articles/energy-department-announces-new-genesis-mission-awards-advance-super-intelligence-science",
           "date": "2026-10-08"
-        },
-        {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "U.S. Department of Energy Awards $96 Million to 67 Early Career Scientists",
-          "link": "https://www.energy.gov/articles/us-department-energy-awards-96-million-67-early-career-scientists",
-          "date": "2026-10-08"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "General Services Administration → FORD MOTOR CO — $47,893 award, October 7, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F0002_4732_47QMCA22D000P_4732",
-          "date": "2026-10-07"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "General Services Administration → FORD MOTOR CO — $47,893 award, October 7, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F0001_4732_47QMCA22D000P_4732",
-          "date": "2026-10-07"
         }
       ]
     }
