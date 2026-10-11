@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-11T08:21:27.472Z",
+  "updatedUtc": "2026-10-11T08:49:33.203Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -48,17 +48,17 @@
           "date": "2026-10-08"
         },
         {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Boston Dynamics hires former Amazon AI leader as CEO",
-          "link": "https://www.manufacturingdive.com/news/boston-dynamics-hires-ceo-former-amazon-ai-rohit-prasad/832360/",
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
+          "link": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/",
           "date": "2026-10-07"
         },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "Manufacturability, costing cited as key areas of AI impact: Xometry survey",
-          "link": "https://www.manufacturingdive.com/news/manufacturability-costing-ai-impact-xometry-survey/832307/",
+          "title": "Boston Dynamics hires former Amazon AI leader as CEO",
+          "link": "https://www.manufacturingdive.com/news/boston-dynamics-hires-ceo-former-amazon-ai-rohit-prasad/832360/",
           "date": "2026-10-07"
         }
       ]
