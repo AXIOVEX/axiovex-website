@@ -53,6 +53,21 @@ This file is the index, the gate rule, and the revision log.
   as sample proof — **APPROVED 2026-10-10 (spec 021)**;
   the WF-G4 footer strip does NOT render on this page —
   one form per page — **owner correction 2026-10-10**)
+- WF-18 Research hub (proposed 2026-10-11 by spec 023 —
+  **APPROVED 2026-10-11**, spec 023 T001; amendment at
+  approval: the small print under the lede was removed): a
+  single unlisted page at
+  `/research/` — NOT in WF-G1 nav, NOT linked from any
+  page or from WF-G4, noindex, excluded from the sitemap;
+  drawn on the WF-05/WF-14 shell — centered page head,
+  strata, findings + framework segments in the ~760px
+  editorial column, a status panel, three primary-material
+  link cards, reduced CTA band; reached only by direct URL
+  and by external cross-links (BitConcepts research page,
+  the epistemic-ledger GitHub repo)
+  (Numbered WF-18 at the staging merge:
+  WF-15/16/17 were already carried by the
+  newsletter frames, spec 020.)
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
 - WF-09 Blog / article / privacy — tablet
 - Global components: WF-G1 nav (Signals link added by spec 008 —
@@ -831,3 +846,33 @@ as accordion rows.
   the landing page. Recorded in spec 021's tasks (T013)
   and implemented in the generator's newsletter-chrome
   step as an explicit per-page exclusion.
+- **2026-10-11** — PROPOSED by spec 023 (research hub) —
+  PENDING OWNER APPROVAL: **NEW WF-18 Research hub**, an
+  unlisted page at `/research/` drawn on the WF-05/WF-14
+  shell: WF-G1 nav and WF-G4 footer explicitly UNCHANGED
+  (no Research item, no Research link — the page is
+  reached only by direct URL and by two external
+  cross-links: the BitConcepts research page and the
+  AXIOVEX/epistemic-ledger GitHub repo); centered page
+  head + strata (WF-G2 rhythm) → Program one segments
+  (five plain-English findings) in the ~760px editorial
+  column → status panel → framework segments (five ideas
+  + the four-step register-run-publish method row) →
+  Program two segment → three primary-material link
+  cards (GitHub · OSF · BitConcepts) → reduced CTA band
+  (start@axiovexsystems.com). The page carries a noindex
+  robots meta and is never added to the sitemap or to
+  llms.txt; production robots.txt is unchanged. Full
+  copy drafted in specs/023-research-hub/
+  research-hub-copy.md; gate = spec 023 T001.
+- **2026-10-11** — APPROVED by Tristen (spec 023 T001):
+  WF-18 Research hub and the full copy in
+  specs/023-research-hub/research-hub-copy.md, with one
+  amendment — the "deliberately quiet" small print under
+  the lede is removed; the frame above and the copy are
+  updated to the approved form. Implementation proceeds
+  on staging; promotion awaits the staging review gate
+  (spec 023 T007).
+  (Numbered WF-18 at the staging merge:
+  WF-15/16/17 were already carried by the
+  newsletter frames, spec 020.)
