@@ -21,15 +21,30 @@
   entries in `docs/wireframes/wireframes.md` marked PROPOSED —
   PENDING OWNER APPROVAL; review copy re-synced byte-identically
   to `~/workspace/your_files/axiovex-wireframes/wireframes.html`.
-- [ ] T004 (after T001) Sync `main` → `staging` per spec 010
+- [x] T004 (after T001) Sync `main` → `staging` per spec 010
   FR-004; staging guards verified after the merge (`robots.txt`
   Disallow; `_headers` = production file + exactly the noindex
-  line).
-- [ ] T005 (after T004) Implement on staging: hand-author
+  line). **Done 2026-10-11:** `main` was already fully
+  contained in `staging` (the sync merge reported "Already up
+  to date"); the spec branch merged as `16264e9`. At the
+  merge the frame was renumbered WF-15 → WF-18 (staging's
+  canonical set already carried WF-15/16/17, spec 020's
+  newsletter frames). Guards verified after the merge:
+  `robots.txt` and `_headers` byte-identical to the
+  pre-merge staging tip; `_headers` diff vs `main` = exactly
+  the one `X-Robots-Tag: noindex, nofollow` line.
+- [x] T005 (after T004) Implement on staging: hand-author
   `research/index.html` on the privacy-page shell with the
   approved copy verbatim; `<meta name="robots" content="noindex">`;
   page-local `<style>` only; no nav, footer, template, generator,
   or stylesheet-release changes; `writeSitemap()` untouched.
+  **Done 2026-10-11:** page authored on the WF-05/WF-14 shell
+  (privacy/disclaimer pattern) with the approved copy —
+  verified sentence-by-sentence against
+  `research-hub-copy.md` as amended (the quiet-page small
+  print is absent); status panel, method chip row, and the
+  three link cards per WF-18; reduced CTA band
+  (start@axiovexsystems.com, no button, as drawn).
 - [ ] T006 (after T005) Verify on staging: Playwright renders at
   desktop + mobile widths, screenshotted against WF-18; served
   HTML carries the noindex meta; a rebuild leaves `sitemap.xml`
