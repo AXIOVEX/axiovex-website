@@ -44,11 +44,25 @@ was inaccurate as well as tally-form.
   form (page-local styles only, per WF-18's Privacy precedent). The
   shared stylesheet is untouched.
 
-## Verification (staging)
+## Verification (staging) — EXECUTED 2026-10-12
 
-- Playwright screenshots of staging `/research/` at desktop (1280)
-  and mobile (390) widths, panel in frame, compared against WF-18
-  as amended.
-- Staging guards re-verified after the change: `robots.txt` is the
-  Disallow version; `_headers` carries the X-Robots-Tag line; the
-  page's own `noindex` robots meta is unchanged.
+- Implemented in commit `2e1f1a5` on `staging`, deployed to
+  staging.axiovexsystems.com; the live staging page serves the new
+  panel and the former tally text is absent (0 matches).
+- Playwright screenshots (local serve of the staging tree, per the
+  standing local-Playwright limitation; deployed staging HTML
+  confirmed identical content by curl): desktop 1280 and mobile 390,
+  full page + panel crops, in `verification-2026-10-12/`. Inspected:
+  the panel renders in WF-18's position and border at both widths;
+  five mechanism statements stack cleanly; the status line closes
+  the panel; no overflow or overlap (the fixed nav and Signals
+  widget appear over the mobile element-crop only — the full-page
+  capture shows the panel itself unobstructed).
+- Guards verified live on staging after deploy: `robots.txt` is
+  the Disallow version ("STAGING ONLY" header intact);
+  `x-robots-tag: noindex, nofollow` response header present
+  (staging `_headers` unchanged); the page's own
+  `<meta name="robots" content="noindex">` is unchanged.
+- Production untouched: `main` not modified; the live production
+  page still serves the previous panel pending the owner's
+  promotion decision.
