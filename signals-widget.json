@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-12T13:22:59.633Z",
+  "updatedUtc": "2026-10-12T15:23:09.622Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -39,6 +39,14 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
+      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
+      "source": "Automation Alley",
+      "date": "2026-10-12",
+      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
       "title": "When agentic AI moves from the cloud to the factory floor",
       "source": "Manufacturing Dive",
       "date": "2026-10-12",
@@ -63,6 +71,22 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
+      "title": "Do you need a chief manufacturing officer?",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-12",
+      "url": "https://www.manufacturingdive.com/news/more-companies-recognize-value-CMO-chief-manufacturing-officer/832300/"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
+      "source": "Automation Alley",
+      "date": "2026-10-12",
+      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
       "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers",
       "source": "Manufacturing Dive",
       "date": "2026-10-09",
@@ -75,30 +99,6 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-09",
       "url": "https://www.manufacturingdive.com/news/manufacturing-layoffs-closures-warn-act-september-2026/832400/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Blue Origin, PPG and more invest in manufacturing facilities",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-09",
-      "url": "https://www.manufacturingdive.com/news/blue-origin-ppg-cleveland-cliffs-more-facility-investments/832603/"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Department of Veterans Affairs → WRIGHT & FILIPPIS, LLC — $32,674 award, October 9, 2026",
-      "source": "USAspending (Treasury)",
-      "date": "2026-10-09",
-      "url": "https://www.usaspending.gov/award/CONT_AWD_36C25027N0073_3600_36C77622A0010_3600"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Department of Veterans Affairs → BREMER PROSTHETIC DESIGN, INC — $17,863 award, October 9, 2026",
-      "source": "USAspending (Treasury)",
-      "date": "2026-10-09",
-      "url": "https://www.usaspending.gov/award/CONT_AWD_36C25027N0072_3600_36C25022A0036_3600"
     },
     {
       "lane": "ai-standards",
