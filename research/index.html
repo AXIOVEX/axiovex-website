@@ -33,8 +33,10 @@
     .research-body p { margin: 0 0 1.1em; line-height: 1.75; color: var(--muted); }
     .research-body strong { color: var(--ink); }
     .status-panel { border: 1px solid var(--cyan); border-radius: var(--radius); padding: 22px 26px; margin: 0 0 1.4em; }
-    .status-panel p { margin: 0; line-height: 2.0; }
-    .status-panel b { color: var(--ink); font-size: 18px; }
+    .status-panel ul { margin: 0 0 1em; padding-left: 1.2em; }
+    .status-panel li { line-height: 1.65; margin-bottom: 0.7em; color: var(--muted); }
+    .status-panel li:last-child { margin-bottom: 0; }
+    .status-panel p { margin: 0; line-height: 1.65; }
     .method-chips { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 1.4em; }
     .method-chips span { border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-size: 12.5px; color: var(--muted); }
     .cards-head { max-width: 760px; margin: 0 auto; text-align: left; }
@@ -122,14 +124,16 @@
 
           <p><strong>Why some questions stay stuck.</strong> After dozens of tests, the failures fell into three piles, and the piles turned out to be more interesting than most of the successes. A question can stay stuck because the thing it asks about is <strong>already maxed out</strong> — like asking whether a full glass can get fuller. It can stay stuck because the answer <strong>isn't in the record</strong> — the window we are allowed to look through was never given that page. Or it can stay stuck because the signal is <strong>too faint to measure</strong> — written down, but below the floor of what any instrument can read. Gravity's extra rule, the feeling side of seeing, the faint perception signals — each of our open questions now has a named wall it is facing. Knowing which wall you are up against is not the same as getting through it, but it beats not knowing.</p>
 
-          <h3>Where this program stands</h3>
+          <h3>What the program has learned so far</h3>
           <div class="status-panel">
-            <p><b>32</b> registered studies run to completion<br>
-            <b>15</b> claims confirmed by their tests<br>
-            <b>11</b> claims falsified — and kept on the public record, with the reasons written down<br>
-            The rest landed in between: weakened, set aside, or undecided by the test as run<br>
-            <b>1</b> study running now<br>
-            <b>1</b> physical experiment designed and registered, awaiting a laboratory partner</p>
+            <ul>
+              <li>Whether a quantum system's record texture survives depends on its coherences staying intact — not on how strongly its dynamics mixes. Rescaling the mixing changes nothing; removing the coherences ends the record.</li>
+              <li>A counting law for how much information fits inside a boundary holds exactly in the model. The extra condition it needs from nature is still open — and we proved the current axioms cannot settle it either way.</li>
+              <li>Two operations that sound alike — averaging away fine detail, and treating symmetric states as identical — are provably not the same operation. One of them is licensed by the axioms; the other is not.</li>
+              <li>For a standard test of whether a noisy quantum channel can be undone, we mapped exactly where it fails as noise grows — and found a second kind of noise that repairs the failure instead of deepening it.</li>
+              <li>A preregistered test of a decision signal in brain recordings closed without a verdict: the signal could not be read from that dataset at the standard fixed in advance. The claim stands unjudged, not falsified.</li>
+            </ul>
+            <p>One further study is designed, registered, and waiting on a laboratory partner.</p>
           </div>
           <p>Every study is registered in advance on the Open Science Framework, with its test and its failure condition written down before the computation starts. The registrations and the verdicts are public — see the links at the bottom of this page.</p>
 
@@ -156,7 +160,7 @@
           <h2>Program two — The epistemic ledger</h2>
           <p>The second program is about evidence itself. In most fields, a claim's credibility lives in people's heads and in the reputations of the people repeating it. The epistemic ledger gives a claim a public, revisable <strong>grade</strong> instead: a score that goes up when evidence survives testing and down when it fails, with the reasons for every change written next to it, in the open, where anyone can argue with them. A grade is never a verdict from authority — it is a running summary of what the evidence has done so far, and it is allowed to move.</p>
 
-          <p>The framework behind the ledger — why grades should move the way they do, and what keeps the bookkeeping honest — is published as a framing paper, and the ledger itself is maintained in a public repository (link below). The same grading discipline runs underneath Program one: it is how we keep score on our own claims, and it is why the confirmed and falsified counts above can be stated as plainly as they are.</p>
+          <p>The framework behind the ledger — why grades should move the way they do, and what keeps the bookkeeping honest — is published as a framing paper, and the ledger itself is maintained in a public repository (link below). The same grading discipline runs underneath Program one: it is how we keep score on our own claims, and it is why every result above is stated with its mechanism and its reasons attached, never as a bare count.</p>
 
           <p>Framing paper published; ledger public and maintained; the method is in active use across both programs.</p>
         </div>

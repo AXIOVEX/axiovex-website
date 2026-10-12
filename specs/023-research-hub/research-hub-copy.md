@@ -2,7 +2,10 @@
 
 > Status: APPROVED by the owner 2026-10-11 (tasks.md T001), with one
 > amendment: the quiet-page small print under the lede was removed at
-> the owner's direction. This is the
+> the owner's direction. AMENDED 2026-10-12 (owner-approved): the
+> status panel's verdict tallies were replaced by mechanism
+> statements under the anti-tally doctrine — see
+> amendment-2026-10-12-anti-tally.md. This is the
 > complete prose for `/research/` — not placeholders. Bracketed notes
 > are production notes, not page text. Wording follows the owner's
 > content limits for this page: plain English throughout; no internal
@@ -107,19 +110,36 @@ perception signals — each of our open questions now has a named
 wall it is facing. Knowing which wall you are up against is not
 the same as getting through it, but it beats not knowing.
 
-### Where this program stands
+### What the program has learned so far
 
-[Status panel — drawn as a bordered panel in WF-18.]
+[Mechanism panel — drawn as a bordered panel in WF-18. Replaced the
+former tally panel 2026-10-12 under the anti-tally amendment (see
+amendment-2026-10-12-anti-tally.md): results are stated as
+mechanisms, never as verdict counts.]
 
-- **32** registered studies run to completion
-- **15** claims confirmed by their tests
-- **11** claims falsified — and kept on the public record, with the
-  reasons written down
-- The rest landed in between: weakened, set aside, or undecided by
-  the test as run
-- **1** study running now
-- **1** physical experiment designed and registered, awaiting a
-  laboratory partner
+- Whether a quantum system's record texture survives depends on
+  its coherences staying intact — not on how strongly its dynamics
+  mixes. Rescaling the mixing changes nothing; removing the
+  coherences ends the record.
+- A counting law for how much information fits inside a boundary
+  holds exactly in the model. The extra condition it needs from
+  nature is still open — and we proved the current axioms cannot
+  settle it either way.
+- Two operations that sound alike — averaging away fine detail,
+  and treating symmetric states as identical — are provably not
+  the same operation. One of them is licensed by the axioms; the
+  other is not.
+- For a standard test of whether a noisy quantum channel can be
+  undone, we mapped exactly where it fails as noise grows — and
+  found a second kind of noise that repairs the failure instead of
+  deepening it.
+- A preregistered test of a decision signal in brain recordings
+  closed without a verdict: the signal could not be read from that
+  dataset at the standard fixed in advance. The claim stands
+  unjudged, not falsified.
+
+**Status line:** One further study is designed, registered, and
+waiting on a laboratory partner.
 
 Every study is registered in advance on the Open Science Framework,
 with its test and its failure condition written down before the
@@ -207,8 +227,8 @@ they do, and what keeps the bookkeeping honest — is published as a
 framing paper, and the ledger itself is maintained in a public
 repository (link below). The same grading discipline runs
 underneath Program one: it is how we keep score on our own claims,
-and it is why the confirmed and falsified counts above can be
-stated as plainly as they are.
+and it is why every result above is stated with its mechanism and
+its reasons attached, never as a bare count.
 
 **Status line:** Framing paper published; ledger public and
 maintained; the method is in active use across both programs.
@@ -258,8 +278,9 @@ three public places:
 - [No share row: this is not an article, and the page is unlisted.]
 - [No "Research" item is added to the nav or the footer anywhere
   on the site — see spec.md FR-001.]
-- [Status counts in the panel are owner-supplied figures for
-  Program one as of 2026-10-11; updating them is a copy change
-  under spec 023, through staging, like any other.]
+- [The panel states Program one's results as mechanisms, not
+  counts, per the 2026-10-12 anti-tally amendment; updating the
+  panel is a copy change under spec 023, through staging, like any
+  other.]
 - [The word "RCPH" appears once, in the Program one intro, per the
   owner's approval to name it on this page.]
