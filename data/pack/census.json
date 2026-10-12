@@ -1,9 +1,9 @@
 {
   "source": "Census API (ACS / CBP / QWI)",
   "publisher": "U.S. Census Bureau",
-  "retrievedUtc": "2026-10-08T20:46:39.396Z",
-  "vintage": "ACS 2024 5-year; CBP 2023; QWI 2021-Q4",
-  "referencePeriod": "ACS 2024 5-year; CBP 2023; QWI 2021-Q4",
+  "retrievedUtc": "2026-10-12T21:18:11.246Z",
+  "vintage": "ACS 2024 5-year; CBP 2023",
+  "referencePeriod": "ACS 2024 5-year; CBP 2023",
   "series": [
     {
       "id": "acs5-bachelor-plus-share",
@@ -1027,45 +1027,7 @@
           "value": 50
         }
       ]
-    },
-    {
-      "id": "qwi-employment",
-      "label": "Beginning-of-quarter employment (QWI Emp, all private ownership)",
-      "unit": "jobs",
-      "geography": "Michigan (state)",
-      "vintage": "QWI 2021-Q4",
-      "values": [
-        {
-          "name": "Michigan — all industries (private)",
-          "value": 3665000,
-          "period": "2021-Q4"
-        },
-        {
-          "name": "Michigan — manufacturing NAICS 31-33 (private)",
-          "value": 590648,
-          "period": "2021-Q4"
-        }
-      ]
-    },
-    {
-      "id": "qwi-hires",
-      "label": "Hires, all (QWI HirA, all private ownership)",
-      "unit": "jobs",
-      "geography": "Michigan (state)",
-      "vintage": "QWI 2021-Q4",
-      "values": [
-        {
-          "name": "Michigan — all industries (private)",
-          "value": 787506,
-          "period": "2021-Q4"
-        },
-        {
-          "name": "Michigan — manufacturing NAICS 31-33 (private)",
-          "value": 74004,
-          "period": "2021-Q4"
-        }
-      ]
     }
   ],
-  "notes": "QWI reference quarter 2021-Q4 is the latest Michigan quarter published (Michigan QWI lags other states in the current LEHD release). Scope: private ownership (ownercode A05), all sexes, all ages, not seasonally adjusted."
+  "notes": "QWI gap: HTTP 500 for https://api.census.gov/data/timeseries/qwi/sa Partial fetch — failed datasets: QWI: HTTP 500 for https://api.census.gov/data/timeseries/qwi/sa"
 }
