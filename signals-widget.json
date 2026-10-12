@@ -21,14 +21,6 @@
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
-      "title": "Robots can do the work. Almost none of it pays yet.",
-      "source": "Axiovex",
-      "date": "2026-10-15",
-      "url": "https://axiovexsystems.com/blog/robots-can-do-the-work/"
-    },
-    {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
       "title": "Notice of Intent To Grant Exclusive Patent License to Zyltech Engineering, LLC; Houston, TX",
@@ -39,6 +31,14 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
+      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
+      "source": "Automation Alley",
+      "date": "2026-10-12",
+      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
       "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
       "source": "Automation Alley",
       "date": "2026-10-12",
@@ -79,10 +79,10 @@
     {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
-      "source": "Automation Alley",
-      "date": "2026-10-12",
-      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
+      "title": "Robots can do the work. Almost none of it pays yet.",
+      "source": "Axiovex",
+      "date": "2026-10-10",
+      "url": "https://axiovexsystems.com/blog/robots-can-do-the-work/"
     },
     {
       "lane": "manufacturing",

@@ -15,6 +15,9 @@
  *
  * All dates come from content or git history — never from the wall clock —
  * so repeated runs on unchanged inputs produce byte-identical output.
+ * Sole exception: the blog build reads today's date for ONE gate — a
+ * future-dated post is held unpublished (see buildBlog's date-discipline
+ * block). Content rendering itself stays wall-clock-free.
  */
 import {
   readFileSync, writeFileSync, readdirSync, copyFileSync, mkdirSync,
@@ -320,10 +323,28 @@ function parsePost(filePath) {
 
 function buildBlog() {
   const postsDir = path.join(ROOT, 'blog', 'posts');
-  const posts = readdirSync(postsDir)
+  let posts = readdirSync(postsDir)
     .filter(f => f.endsWith('.md'))
     .map(f => parsePost(path.join(postsDir, f)))
     .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+
+  // Date discipline (owner rule, 2026-10-12): a post's date is its ACTUAL
+  // release date. A future-dated post is not yet released, so it is held
+  // out of the build entirely (article page, index, cards, sitemap,
+  // widgets) and named here; any previously built page for it is removed
+  // so it cannot deploy. Preview a scheduled post on staging only with
+  // AXIOVEX_BUILD_FUTURE=1. (Incident: the robots article, dated for its
+  // planned Oct 15 release, shipped live on Oct 10 wearing the wrong date.)
+  const todayUtc = new Date().toISOString().slice(0, 10);
+  if (process.env.AXIOVEX_BUILD_FUTURE !== '1') {
+    const held = posts.filter(p => p.date > todayUtc);
+    for (const p of held) {
+      console.log('blog: HELD future-dated post "' + p.slug + '" dated ' + p.date + ' (today ' + todayUtc + ') — excluded from this build; preview with AXIOVEX_BUILD_FUTURE=1');
+      const builtDir = path.join(ROOT, 'blog', p.slug);
+      if (existsSync(builtDir)) { rmSync(builtDir, { recursive: true, force: true }); console.log('blog: removed previously built page for held post "' + p.slug + '"'); }
+    }
+    if (held.length) posts = posts.filter(p => p.date <= todayUtc);
+  }
 
   const articleTpl = readFileSync(path.join(ROOT, 'scripts', 'templates', 'blog-article.html'), 'utf8');
   const indexTpl = readFileSync(path.join(ROOT, 'scripts', 'templates', 'blog-index.html'), 'utf8');
