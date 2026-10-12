@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-10T15:21:11.710Z",
+  "updatedUtc": "2026-10-11T23:42:52.541Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -21,14 +21,6 @@
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
-      "title": "Robots can do the work. Almost none of it pays yet.",
-      "source": "Axiovex",
-      "date": "2026-10-15",
-      "url": "https://axiovexsystems.com/blog/robots-can-do-the-work/"
-    },
-    {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
       "title": "Notice of Intent To Grant Exclusive Patent License to Zyltech Engineering, LLC; Houston, TX",
@@ -39,7 +31,7 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers",
+      "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposes",
       "source": "Manufacturing Dive",
       "date": "2026-10-09",
       "url": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/"
@@ -61,12 +53,52 @@
       "url": "https://www.manufacturingdive.com/news/blue-origin-ppg-cleveland-cliffs-more-facility-investments/832603/"
     },
     {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Department of Veterans Affairs → WRIGHT & FILIPPIS, LLC — $32,674 award, October 9, 2026",
+      "source": "USAspending (Treasury)",
+      "date": "2026-10-09",
+      "url": "https://www.usaspending.gov/award/CONT_AWD_36C25027N0073_3600_36C77622A0010_3600"
+    },
+    {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Department of Veterans Affairs → BREMER PROSTHETIC DESIGN, INC — $17,863 award, October 9, 2026",
+      "source": "USAspending (Treasury)",
+      "date": "2026-10-09",
+      "url": "https://www.usaspending.gov/award/CONT_AWD_36C25027N0072_3600_36C25022A0036_3600"
+    },
+    {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $15,752 award, October 9, 2026",
+      "source": "USAspending (Treasury)",
+      "date": "2026-10-09",
+      "url": "https://www.usaspending.gov/award/CONT_AWD_36C24527P0052_3600_-NONE-_-NONE-"
+    },
+    {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Department of Justice → NATIONAL FOOD GROUP INC — $21,931 award, October 9, 2026",
+      "source": "USAspending (Treasury)",
+      "date": "2026-10-09",
+      "url": "https://www.usaspending.gov/award/CONT_AWD_15B21627P00000003_1540_-NONE-_-NONE-"
+    },
+    {
       "lane": "ai-standards",
       "laneLabel": "AI, standards & research",
       "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
       "source": "NIST",
       "date": "2026-10-08",
       "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
+      "source": "Michigan WARN (LEO)",
+      "date": "2026-10-08",
+      "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75"
     },
     {
       "lane": "ot-security",
@@ -79,42 +111,10 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
-      "source": "NIST",
-      "date": "2026-10-08",
-      "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
       "title": "Teams often miss preventive maintenance, raising costs and risks: Limble",
       "source": "Manufacturing Dive",
       "date": "2026-10-08",
       "url": "https://www.manufacturingdive.com/news/maintenance-teams-downtime-AI-limble/832416/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Wolfspeed signs $1.5B DOD loan for semiconductor production, R&D",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-08",
-      "url": "https://www.manufacturingdive.com/news/wolfspeed-dod-defense-war-office-of-strategic-capital-loan/832451/"
-    },
-    {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
-      "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
-      "source": "Michigan WARN (LEO)",
-      "date": "2026-10-08",
-      "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75"
-    },
-    {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
-      "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
-      "source": "Michigan WARN (LEO)",
-      "date": "2026-10-08",
-      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation"
     }
   ],
   "signalsUrl": "/signals/"
