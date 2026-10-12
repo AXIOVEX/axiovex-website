@@ -69,9 +69,12 @@
   on the authored page text — no internal labels, scores, or
   machinery (the copy was verified sentence-by-sentence
   against the approved draft).
-- [ ] T007 **GATE — Tristen reviews the page on staging.**
+- [x] T007 **GATE — Tristen reviews the page on staging.**
   Screenshots + staging URL presented. Promotion proceeds only
-  on his approval.
+  on his approval. **SATISFIED 2026-10-11** — staging URL +
+  desktop/mobile screenshots presented; Tristen approved
+  ("Approved", 2026-10-11 20:19 EDT). Promotion (T008)
+  proceeds.
 - [ ] T008 (after T007) Promote `staging` → `main` per spec 010:
   `robots.txt` diff empty; `_headers` diff = production's file
   only. Verify production live: HTTP 200 at `/research/`,
