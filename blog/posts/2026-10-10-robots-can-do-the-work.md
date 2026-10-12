@@ -1,6 +1,6 @@
 ---
 title: Robots can do the work. Almost none of it pays yet.
-date: 2026-10-15
+date: 2026-10-10
 description: Anthropic's robot exposure index finds robots and AI together reach about 80% of U.S. job tasks by working time — and that robots are cost-competitive for 0.3% of tasks today. We read the study. Here is what it measured, what holds up, and what it means for Michigan plants.
 tags: manufacturing, automation, AI, workforce, michigan
 slug: robots-can-do-the-work
