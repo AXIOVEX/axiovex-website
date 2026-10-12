@@ -75,15 +75,61 @@
   desktop/mobile screenshots presented; Tristen approved
   ("Approved", 2026-10-11 20:19 EDT). Promotion (T008)
   proceeds.
-- [ ] T008 (after T007) Promote `staging` → `main` per spec 010:
+- [x] T008 (after T007) Promote `staging` → `main` per spec 010:
   `robots.txt` diff empty; `_headers` diff = production's file
   only. Verify production live: HTTP 200 at `/research/`,
   rendering verified at desktop + mobile widths, noindex meta
-  present in served HTML, sitemap clean.
-- [ ] T009 (closeout) Spec status + these tasks updated; WF-18's
+  present in served HTML, sitemap clean. **Done 2026-10-11:**
+  pre-promotion guard check against the then-current
+  `origin/main` (`49aaf5b`) — staging `robots.txt` = Disallow
+  version; `_headers` diff vs `main` = exactly the one
+  `X-Robots-Tag: noindex, nofollow` line. Fresh `main` →
+  `staging` sync merge `9111c40` (main had advanced on
+  automated Signals refreshes; one conflict, in the generated
+  `signals-widget.json`, resolved to `main`'s fresher
+  snapshot; guards re-verified after the merge — `robots.txt`
+  Disallow, `_headers` diff still exactly the one line,
+  merged `sitemap.xml` zero `research` URLs); staging pushed
+  and re-verified live (HTTP 200). Promotion: `main`
+  fast-forwarded to the staging tip (the spec 018 pattern),
+  then guard-restore commit `fc4baaf` restored production's
+  `robots.txt`/`_headers` — diff vs pre-promotion `main` for
+  both files is EMPTY, and production `robots.txt` is the
+  Allow + sitemap version; pushed (`49aaf5b..fc4baaf`).
+  Production verified live 2026-10-11:
+  https://axiovexsystems.com/research/ serves the page
+  (title "Research | Axiovex Systems"); served HTML carries
+  `<meta name="robots" content="noindex">`; no `X-Robots-Tag`
+  response header; production `sitemap.xml` has zero
+  `research` URLs; rendered nav + footer contain no Research
+  link; the three link cards resolve (GitHub
+  AXIOVEX/epistemic-ledger, osf.io/nerxz,
+  bitconcepts.tech/research — all HTTP 200). Playwright
+  full-page screenshots at desktop 1440px + mobile 390px in
+  `~/workspace/your_files/spec023-review/`
+  (`research-production-desktop.png`,
+  `research-production-mobile.png`) match the approved
+  staging rendering. (Chromium cannot traverse this VM's
+  egress proxy, so the screenshots were rendered from a
+  local serve of the `main` tree after proving the live
+  production HTML differs from the branch file only by
+  Cloudflare's standard email-obfuscation transform — the
+  same method as the BitConcepts verification.)
+- [x] T009 (closeout) Spec status + these tasks updated; WF-18's
   approval state recorded in wireframes.md; the page recorded as
   intentionally unlisted for the monitoring runbook. Follow-ups
   noted, not done here: (a) back-link from
   AXIOVEX/epistemic-ledger to this page; (b) inbound link from
-  the BitConcepts research page (parallel effort); (c) future
+  the BitConcepts research page (parallel effort — built +
+  staged on the BitConcepts side 2026-10-11; its production
+  promotion is separately owner-gated there); (c) future
   status-count updates ride this spec as copy changes.
+  **Done 2026-10-11:** spec.md status updated to SHIPPED;
+  WF-18's approval state stands recorded in
+  `docs/wireframes/wireframes.md` (inventory line + revision
+  log: APPROVED 2026-10-11, spec 023 T001; staging review
+  approved at T007). **Monitoring note:** `/research/` is
+  INTENTIONALLY UNLISTED — absent from nav, sitemap, and
+  llms.txt by design (spec 023 FR-001), and carries a page-
+  level noindex meta; the monitoring runbook must not flag
+  or "fix" any of these.

@@ -6,12 +6,16 @@ hub quietly: plain-English RCPH + framework page at an unlisted URL
 The page concept, the naming of RCPH on the page, and the
 quiet-publication properties below are the owner's own settings,
 given in that direction.
-**Status:** APPROVED 2026-10-11 — Tristen approved WF-18 +
+**Status:** SHIPPED 2026-10-11 — Tristen approved WF-18 +
 the copy at the T001 gate, with one amendment (the
 "deliberately quiet" small print under the lede is removed;
-applied in the copy draft and the WF-18 frame). Implementing
-on `staging`, Playwright-verify desktop + mobile; promotion
-waits for the T007 staging review, per spec 010.
+applied in the copy draft and the WF-18 frame). Implemented
+and verified on `staging`; staging review approved at T007
+(2026-10-11 20:19 EDT); promoted to production per spec 010
+(T008) and verified live at
+https://axiovexsystems.com/research/ — intentionally
+unlisted (no nav item, no sitemap entry, page-level
+noindex). Closeout recorded in tasks.md T009.
 
 ## Scope
 
