@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-12T05:56:25.781Z",
+  "updatedUtc": "2026-10-12T09:20:33.167Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -39,7 +39,31 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposes",
+      "title": "When agentic AI moves from the cloud to the factory floor",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-12",
+      "url": "https://www.manufacturingdive.com/spons/when-agentic-ai-moves-from-the-cloud-to-the-factory-floor/831845/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "The manufacturing workforce is changing. Can benefits keep pace?",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-12",
+      "url": "https://www.manufacturingdive.com/spons/the-manufacturing-workforce-is-changing-can-benefits-keep-pace/832425/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Tackling AI security challenges in manufacturing",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-12",
+      "url": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers",
       "source": "Manufacturing Dive",
       "date": "2026-10-09",
       "url": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/"
@@ -77,22 +101,6 @@
       "url": "https://www.usaspending.gov/award/CONT_AWD_36C25027N0072_3600_36C25022A0036_3600"
     },
     {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $15,752 award, October 9, 2026",
-      "source": "USAspending (Treasury)",
-      "date": "2026-10-09",
-      "url": "https://www.usaspending.gov/award/CONT_AWD_36C24527P0052_3600_-NONE-_-NONE-"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Department of Justice → NATIONAL FOOD GROUP INC — $21,931 award, October 9, 2026",
-      "source": "USAspending (Treasury)",
-      "date": "2026-10-09",
-      "url": "https://www.usaspending.gov/award/CONT_AWD_15B21627P00000003_1540_-NONE-_-NONE-"
-    },
-    {
       "lane": "ai-standards",
       "laneLabel": "AI, standards & research",
       "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
@@ -107,14 +115,6 @@
       "source": "CISA",
       "date": "2026-10-08",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Teams often miss preventive maintenance, raising costs and risks: Limble",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-08",
-      "url": "https://www.manufacturingdive.com/news/maintenance-teams-downtime-AI-limble/832416/"
     }
   ],
   "signalsUrl": "/signals/"
