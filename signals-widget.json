@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-13T02:20:58.636Z",
+  "updatedUtc": "2026-10-13T03:33:37.902Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -31,10 +31,10 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "When agentic AI moves from the cloud to the factory floor",
+      "title": "Tackling AI security challenges in manufacturing",
       "source": "Manufacturing Dive",
       "date": "2026-10-12",
-      "url": "https://www.manufacturingdive.com/spons/when-agentic-ai-moves-from-the-cloud-to-the-factory-floor/831845/"
+      "url": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/"
     },
     {
       "lane": "michigan",
@@ -47,18 +47,18 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "The manufacturing workforce is changing. Can benefits keep pace?",
+      "title": "When agentic AI moves from the cloud to the factory floor",
       "source": "Manufacturing Dive",
       "date": "2026-10-12",
-      "url": "https://www.manufacturingdive.com/spons/the-manufacturing-workforce-is-changing-can-benefits-keep-pace/832425/"
+      "url": "https://www.manufacturingdive.com/spons/when-agentic-ai-moves-from-the-cloud-to-the-factory-floor/831845/"
     },
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Tackling AI security challenges in manufacturing",
+      "title": "The manufacturing workforce is changing. Can benefits keep pace?",
       "source": "Manufacturing Dive",
       "date": "2026-10-12",
-      "url": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/"
+      "url": "https://www.manufacturingdive.com/spons/the-manufacturing-workforce-is-changing-can-benefits-keep-pace/832425/"
     },
     {
       "lane": "manufacturing",
