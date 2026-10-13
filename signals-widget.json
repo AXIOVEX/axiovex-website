@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-13T11:20:45.265Z",
+  "updatedUtc": "2026-10-13T11:47:07.053Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -31,10 +31,10 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "When agentic AI moves from the cloud to the factory floor",
-      "source": "Manufacturing Dive",
+      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
+      "source": "Automation Alley",
       "date": "2026-10-12",
-      "url": "https://www.manufacturingdive.com/spons/when-agentic-ai-moves-from-the-cloud-to-the-factory-floor/831845/"
+      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
     },
     {
       "lane": "michigan",
@@ -43,6 +43,14 @@
       "source": "Automation Alley",
       "date": "2026-10-12",
       "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "When agentic AI moves from the cloud to the factory floor",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-12",
+      "url": "https://www.manufacturingdive.com/spons/when-agentic-ai-moves-from-the-cloud-to-the-factory-floor/831845/"
     },
     {
       "lane": "manufacturing",
@@ -63,26 +71,10 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "JE Dunn-Alberici JV breaks ground on $3.2B Texas shipyard",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-12",
-      "url": "https://www.manufacturingdive.com/news/je-dunn-alberici-jv-breaks-ground-texas-shipyard/832718/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
       "title": "Do you need a chief manufacturing officer?",
       "source": "Manufacturing Dive",
       "date": "2026-10-12",
       "url": "https://www.manufacturingdive.com/news/more-companies-recognize-value-CMO-chief-manufacturing-officer/832300/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
-      "source": "Automation Alley",
-      "date": "2026-10-12",
-      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
     },
     {
       "lane": "michigan",
@@ -99,6 +91,14 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-09",
       "url": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Thousands of manufacturing layoffs announced in September",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-09",
+      "url": "https://www.manufacturingdive.com/news/manufacturing-layoffs-closures-warn-act-september-2026/832400/"
     },
     {
       "lane": "ai-standards",
