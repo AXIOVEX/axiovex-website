@@ -21,10 +21,10 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/assets/favicon.png">
   <link rel="apple-touch-icon" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/styles.v37.css">
+  <link rel="stylesheet" href="/styles.v38.css">
   <link rel="stylesheet" href="/signals-widget.v1.css">
   <style>
-    /* Research page: centered header, left-justified readable column — the Privacy/Disclaimer pattern (WF-05 / WF-14); status panel, method chips, and link cards per WF-18 (spec 023). */
+    /* Research page: centered header, left-justified readable column — the Privacy/Disclaimer pattern (WF-05 / WF-14); program-tracker components per WF-18 (revised, spec 024) live in styles.v38.css. */
     .section-head h1 { max-width: none; }
     .research-body { max-width: 760px; margin: 0 auto; text-align: left; }
     .research-body h2 { font-size: 28px; line-height: 1.3; margin: 2em 0 0.7em; color: var(--ink); }
@@ -32,13 +32,6 @@
     .research-body h3 { font-size: 20px; line-height: 1.35; margin: 1.8em 0 0.6em; color: var(--ink); }
     .research-body p { margin: 0 0 1.1em; line-height: 1.75; color: var(--muted); }
     .research-body strong { color: var(--ink); }
-    .status-panel { border: 1px solid var(--cyan); border-radius: var(--radius); padding: 22px 26px; margin: 0 0 1.4em; }
-    .status-panel ul { margin: 0 0 1em; padding-left: 1.2em; }
-    .status-panel li { line-height: 1.65; margin-bottom: 0.7em; color: var(--muted); }
-    .status-panel li:last-child { margin-bottom: 0; }
-    .status-panel p { margin: 0; line-height: 1.65; }
-    .method-chips { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 1.4em; }
-    .method-chips span { border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-size: 12.5px; color: var(--muted); }
     .cards-head { max-width: 760px; margin: 0 auto; text-align: left; }
     .cards-head h2 { font-size: 28px; line-height: 1.3; margin: 2em 0 0.7em; color: var(--ink); }
     .cards-head p { margin: 0 0 1.1em; line-height: 1.75; color: var(--muted); }
@@ -104,11 +97,64 @@
           <h1>Big questions, tested where everyone can check.</h1>
           <p class="section-lede">Alongside our client work, Axiovex Systems runs a small, open research program on the biggest questions we know how to ask: What is time? What is gravity? How did everything start — and why are some questions so hard to answer at all? This page says what we have learned so far, in plain language, and how we go about learning it.</p>
         </div>
+        <div class="record-strip">
+          <span class="rs-date">Program record as of <strong>October 13, 2026</strong></span>
+          <span class="rs-links"><a href="https://osf.io/nerxz/" target="_blank" rel="noopener">The registered studies ↗</a><span class="rs-sep">·</span><a href="https://github.com/AXIOVEX/epistemic-ledger" target="_blank" rel="noopener">The framing paper and the ledger ↗</a><span class="rs-sep">·</span><a href="https://bitconcepts.tech/research/" target="_blank" rel="noopener">Research at BitConcepts ↗</a></span>
+        </div>
       </div>
     </section>
     <div class="strata" aria-hidden="true" style="margin-bottom: 40px;"><i></i><i></i><i></i></div>
     <section class="section section-end" style="padding-top: 0;">
       <div class="container">
+
+        <div class="status-box" role="group" aria-label="Program status">
+          <div class="status-halves">
+            <div class="status-half">
+              <h3>What stands</h3>
+              <ul>
+                <li>Seven of the program's tested claims have been confirmed outright — including the boundary counting law, which held at every scale we measured, and the result that a quantum record's texture does not depend on how strongly its dynamics mixes.</li>
+                <li>The framework's core results stand as proved, with their premises stated openly — including the proof, checked by computer, that gravity's extra rule does <strong>not</strong> follow from the framework's basic assumptions.</li>
+                <li>The method itself: every claim on this page was registered publicly before its test ran, and every verdict — for us or against us — is published at the same size.</li>
+              </ul>
+            </div>
+            <div class="status-half">
+              <h3>What does not stand</h3>
+              <ul>
+                <li>Most claims we have tested have failed their tests. Of the studies closed so far, the rejected and no-effect outcomes outnumber the confirmed ones — that is the record, and this page does not soften it.</li>
+                <li>Our first strong idea about perception — that how reportable an experience is tracks how redundantly its record is spread across the brain — failed in its pooled form (Study 018) and is retired in that form.</li>
+                <li>Nothing on this page is carried as <strong>accepted</strong>. In the program's own five stages, the claims here stand at checked and explained; acceptance requires independent researchers to take them up, and that has not happened yet.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ledger figures are record counts only (spec 024 OQ-1): 19 studies on the
+             register and 18 closed trace to the board array below; 20 public
+             registrations trace to the releases array; 4 = the framing paper +
+             the three dated articles in Latest research. -->
+        <div class="ledger" role="group" aria-label="The program record in numbers">
+          <div class="ledger-cell">
+            <p class="ledger-num">19</p>
+            <p class="ledger-label">Studies on the public register</p>
+            <p class="ledger-note">Studies 011–034 in the program's registered series (011, 012, 018–034)</p>
+          </div>
+          <div class="ledger-cell">
+            <p class="ledger-num">18</p>
+            <p class="ledger-label">Closed with an outcome</p>
+            <p class="ledger-note">Study 034 is still running; every other study on the register has closed with a verdict on the board below</p>
+          </div>
+          <div class="ledger-cell">
+            <p class="ledger-num">20</p>
+            <p class="ledger-label">Public registrations</p>
+            <p class="ledger-note">The parent project + the registration of record for each study — every one fetched and confirmed public</p>
+          </div>
+          <div class="ledger-cell">
+            <p class="ledger-num">4</p>
+            <p class="ledger-label">Papers &amp; dated articles</p>
+            <p class="ledger-note">The framing paper (Program two) + the three dated articles in Latest research below</p>
+          </div>
+        </div>
+
         <div class="research-body">
           <h2>Program one — Projected constraints</h2>
           <p>Most of science describes the world as <em>stuff</em> — particles, fields, forces — and then asks what the stuff does. This program starts one step earlier. It describes a system by the <strong>limits</strong> on it: the rules about what can happen and what cannot. Then it asks a simple question with surprising reach — if all we ever get to see is what those limits allow through, what does the world have to look like? Internally, the program is called <strong>RCPH</strong>. Everything it claims is registered publicly before the test runs, and the result is published either way — including when the answer is "we were wrong."</p>
@@ -123,20 +169,30 @@
           <p><strong>Seeing is a report — and reports can be tested.</strong> Part of this program studies perception: what happens in the brain when a person sees something faintly, at the edge of awareness, and says "I saw it" — or doesn't. That report side of seeing is testable, and we test it in registered studies on public brain-imaging data. Our first strong idea about it failed its test, publicly, and we retired it. But there is a second side — what seeing <em>feels like</em> from the inside — and our work marks a hard boundary there: no record, of any kind, in any experiment, can carry the feeling itself, because records are exactly the things that get reported, stored, and read back. That is not an excuse for not studying it. It is a result about what kind of question it is.</p>
 
           <p><strong>Why some questions stay stuck.</strong> After dozens of tests, the failures fell into three piles, and the piles turned out to be more interesting than most of the successes. A question can stay stuck because the thing it asks about is <strong>already maxed out</strong> — like asking whether a full glass can get fuller. It can stay stuck because the answer <strong>isn't in the record</strong> — the window we are allowed to look through was never given that page. Or it can stay stuck because the signal is <strong>too faint to measure</strong> — written down, but below the floor of what any instrument can read. Gravity's extra rule, the feeling side of seeing, the faint perception signals — each of our open questions now has a named wall it is facing. Knowing which wall you are up against is not the same as getting through it, but it beats not knowing.</p>
+        </div>
 
-          <h3>What the program has learned so far</h3>
-          <div class="status-panel">
-            <ul>
-              <li>Whether a quantum system's record texture survives depends on its coherences staying intact — not on how strongly its dynamics mixes. Rescaling the mixing changes nothing; removing the coherences ends the record.</li>
-              <li>A counting law for how much information fits inside a boundary holds exactly in the model. The extra condition it needs from nature is still open — and we proved the current axioms cannot settle it either way.</li>
-              <li>Two operations that sound alike — averaging away fine detail, and treating symmetric states as identical — are provably not the same operation. One of them is licensed by the axioms; the other is not.</li>
-              <li>For a standard test of whether a noisy quantum channel can be undone, we mapped exactly where it fails as noise grows — and found a second kind of noise that repairs the failure instead of deepening it.</li>
-              <li>A preregistered test of a decision signal in brain recordings closed without a verdict: the signal could not be read from that dataset at the standard fixed in advance. The claim stands unjudged, not falsified.</li>
-            </ul>
-            <p>One further study is designed, registered, and waiting on a laboratory partner.</p>
+        <div class="tracker-block" style="margin-top: 56px;">
+          <div class="tracker-head">
+            <p class="eyebrow">Program one — the studies</p>
+            <h2>The verdict board</h2>
+            <p>Every study below was registered in advance on the Open Science Framework, with its test and its failure condition written down before the computation started. Each card states the outcome as what it means, and what it does not show. The registration link on each card is the evidence address — the public record the card summarizes.</p>
           </div>
-          <p>Every study is registered in advance on the Open Science Framework, with its test and its failure condition written down before the computation starts. The registrations and the verdicts are public — see the links at the bottom of this page.</p>
+          <div class="chips" id="board-chips" role="group" aria-label="Filter the board by outcome"></div>
+          <div class="board-grid" id="board-grid"></div>
+          <noscript><p class="array-note">The board is drawn from a data array on this page and needs scripting to display. The full record — every registration and verdict — is on the Open Science Framework: <a href="https://osf.io/nerxz/" target="_blank" rel="noopener">osf.io/nerxz</a>.</p></noscript>
+        </div>
 
+        <div class="tracker-block">
+          <div class="tracker-head">
+            <p class="eyebrow">Written down before the data</p>
+            <h2>Registered predictions</h2>
+            <p>Before a claim meets new data, the program writes down what it expects — and the result that would prove it wrong. Pending means unplayed: not lost, not won.</p>
+          </div>
+          <div class="pred-grid" id="pred-grid"></div>
+          <noscript><p class="array-note">The predictions are drawn from a data array on this page and need scripting to display. Their registrations are on the Open Science Framework: <a href="https://osf.io/nerxz/" target="_blank" rel="noopener">osf.io/nerxz</a>.</p></noscript>
+        </div>
+
+        <div class="research-body">
           <h2>The framework — projected constraints</h2>
           <p>"Projected constraints" is the name of the framework behind Program one. It has five working ideas. None of them needs mathematics to state, and every one of them is doing real work in the results above.</p>
 
@@ -150,13 +206,113 @@
 
           <p><strong>5. The method: register, run, publish — either way.</strong> Every claim in this program is handled the same way. First, state the claim and the exact test that could kill it, and register both publicly, before any computation runs. Second, run exactly what was registered — no quiet adjustments afterward. Third, publish the verdict whichever way it lands; a falsified claim is listed with the same prominence as a confirmed one. Fourth, have the work audited by reviewers who did not do it. And underneath all of it, the formal mathematics is kept in a form a computer can check, so an argument cannot quietly drift away from its own assumptions. We are loyal to the test, not to the idea. An idea that fails is retired, in public, and the program moves on to a better one.</p>
 
-          <div class="method-chips" aria-hidden="true">
-            <span>1 · Register the claim + the test that could kill it</span>
-            <span>2 · Run exactly what was registered</span>
-            <span>3 · Publish the verdict either way</span>
-            <span>4 · Independent audit · machine-checked math</span>
+          <h3>What the framework has produced</h3>
+          <p>A counting law for how much information fits inside a boundary holds exactly in the model — Study 024 on the board is its registered test. The extra condition it needs from nature is still open — and we proved the current axioms cannot settle it either way.</p>
+          <p>Two operations that sound alike — averaging away fine detail, and treating symmetric states as identical — are provably not the same operation. One of them is licensed by the axioms; the other is not.</p>
+          <p>For the standard recovery test, the derived failure points matched the computations across the whole Petz line (Studies 028–032) — and one knob, disorder in the reference, made violations rarer as it grew: a noise that repairs instead of deepening.</p>
+
+          <h3>The five stages</h3>
+          <p>Every claim in the program passes through the same five stages, and a claim is only ever as settled as its stage.</p>
+          <div class="stage-strip">
+            <span class="stage-chip"><span class="stage-name"><span class="stage-num">1</span>Created</span>The claim is stated, with the test that could kill it.</span>
+            <span class="stage-chip here"><span class="stage-name"><span class="stage-num">2</span>Checked</span>The registered test runs and the verdict is taken.</span>
+            <span class="stage-chip here"><span class="stage-name"><span class="stage-num">3</span>Explained</span>The reasoning is written out so a named reader can follow and challenge it.</span>
+            <span class="stage-chip"><span class="stage-name"><span class="stage-num">4</span>Accepted</span>Independent researchers take the claim up and it survives their hands.</span>
+            <span class="stage-chip"><span class="stage-name"><span class="stage-num">5</span>Digested</span>The claim and its evidence are part of how the field works; nothing about it needs us anymore.</span>
+          </div>
+          <p>The claims on this page stand at <strong>checked</strong> and <strong>explained</strong> — the two marked stages. None is carried as accepted or digested.</p>
+
+          <h3>Two lanes</h3>
+          <p>Checking runs at machine speed — a test can be re-run in an afternoon. Acceptance moves at human pace — it takes other people, reading and judging, over months. The two are tracked separately, and the first is never displayed as the second.</p>
+
+          <h3>Corrections are appended, never rewritten</h3>
+          <p>A changed assessment is a new, dated record laid beside the old one. Original records and issued verdicts are never rewritten.</p>
+
+          <h3>The audit (2026-10-12)</h3>
+          <p>The program turned this discipline on its entire history — every closed study re-examined, every headline result broken into its parts and re-scored part by part, with dated digestion records published for the whole set. Two outcomes are stated on this page: the consciousness contrast claim (on the board above) was found to have survived unjudged rather than failed; and the status counting that used to appear here was retired — verdicts on this page are stated as what they mean, with the count of the record shown once, in the ledger above.</p>
+        </div>
+
+        <div class="tracker-block" style="margin-top: 56px;">
+          <div class="tracker-head">
+            <p class="eyebrow">Dated research notes</p>
+            <h2>Latest research</h2>
+            <p>New entries are added only when a finding closes or a record is published — at most one per day.</p>
           </div>
 
+          <details class="article">
+            <summary>
+              <p class="article-date">October 13, 2026</p>
+              <p class="article-title">No measurable stand-in for the feeling of seeing survives our own rules</p>
+              <p class="article-basis">Basis: the phenomenal-observable study, program record of 2026-10-13.</p>
+              <p class="article-more">Read the full article ↓</p>
+            </summary>
+            <div class="article-body">
+              <p><strong>The question.</strong> The program studies what seeing <em>reports</em> — that side is testable. What seeing <em>feels like</em> is fenced off, unless something measurable could stand in for the feeling without simply being the report renamed. This study asked what such a stand-in would have to look like for the program to adopt one, and scored the serious candidates against the answer.</p>
+              <p><strong>The requirements.</strong> Five, each forced by a rule the program already runs on: a stated measuring procedure anyone can carry out; the quantity must not be report renamed; the link between the quantity and experience (the bridge) must be checkable against evidence that does not come from the quantity itself; the quantity must discriminate what experience is <em>like</em>, not only whether it is present; and it must fit inside the framework's scope.</p>
+              <p><strong>What the candidates did.</strong> The level of consciousness — whether experience is present, and roughly how much — is genuinely measurable. The strongest measure (perturb the brain, and score how complex the echo is) passes the procedure requirement and is plainly not report renamed. But it reaches level and presence only. And every candidate failed the same requirement — the bridge. A bridge can only be checked against an anchor, and the only anchor anyone has is report: what people say they experienced. Where report exists, the stand-in adds nothing the program does not already test directly. Where report is absent — the unresponsive patient, the no-report trial, the non-human system, exactly the cases a stand-in would earn its keep — no check is possible, so no kill condition exists, and the claim cannot be sorted.</p>
+              <p><strong>The verdict.</strong> No candidate survives. One leading candidate (a quantity computed from a system's causal structure) failed the procedure requirement at its own authors' statement. Nothing measurable anywhere in the survey touches phenomenal <em>character</em> — what experience is like, as opposed to whether it is there. This is a verdict about what can be adopted as a measurement — <strong>not</strong> a claim that experience is unreal, or that it is the same thing as a report.</p>
+              <p><strong>What would change it.</strong> The study names its exits: a complexity measure taken while a patient cannot report, registered in advance to predict what the patient later reports on recovery, done to standard across cohorts; a structural prediction made away from the anchor; independent measures converging without recovery cases. Until one of those exists, the fence stands — by result, not by preference.</p>
+            </div>
+          </details>
+
+          <details class="article">
+            <summary>
+              <p class="article-date">October 13, 2026</p>
+              <p class="article-title">The consciousness line reopens</p>
+              <p class="article-basis">Basis: the consciousness-line reactivation report, 2026-10-13.</p>
+              <p class="article-more">Read the full article ↓</p>
+            </summary>
+            <div class="article-body">
+              <p>The line's audit found a consequential bookkeeping error. Study 018 rejected the <em>pooled</em> form of the record-redundancy idea — but the within-person contrast form was never the thing that study's verdict bore on, and the contrast measurement inside it was positive in all 22 subjects. The line had been carried as if the idea had failed wholesale. It had not: the contrast survives, unjudged, at even odds.</p>
+              <p>Study 027's failure was diagnosed properly. Its test asked whether the orientation of a faint stimulus could be read from scalp recordings — and orientation cannot be read from scalp recordings even when the stimulus is plainly visible. The arena failed before the claim could: only 1 of 40 recordings was usable at the standard fixed in advance.</p>
+              <p>The line therefore reopens with readability as its first problem. A pilot on a suitable dataset must show the perception signal can be read at all — a median per-subject reading accuracy of at least 0.60, across at least 30 subjects — before any claim test may be frozen. The dataset deposit for the pilot is authorized; the pilot measures readability only and takes no claim statistics.</p>
+              <p>Two further candidate forms — a no-report variant and a metacognition variant of the surviving claim — are staged for formulation. And the fence question was put and answered the same day: phenomenology stays out of scope, and the companion study (above) shows the program's own rules are what keep it there.</p>
+            </div>
+          </details>
+
+          <details class="article">
+            <summary>
+              <p class="article-date">October 12, 2026</p>
+              <p class="article-title">The whole history, re-examined</p>
+              <p class="article-basis">Basis: the framework realignment and full-history audit, 2026-10-12.</p>
+              <p class="article-more">Read the full article ↓</p>
+            </summary>
+            <div class="article-body">
+              <p>The program adopted a stricter discipline for what counts as settled. A claim passes through five stages — created, checked, explained, accepted, digested — and creation plus checking alone never settles it.</p>
+              <p>Every headline result was broken into its parts: is the statement faithful? is the evidence verified? is the claim genuinely open? is the attribution clean? does it matter? Each part scored on its own, with its own falsifier. Digestion — explanation a named reader can follow and challenge — became first-class tracked work, and a result that is verified but unexplained is now flagged as the risk it is.</p>
+              <p>Checking and acceptance are tracked as two lanes that never merge on paper: machine-speed verification, and human-paced acceptance. Easily graded counts never stand in for understanding, and every verdict states what remains not understood.</p>
+              <p>The discipline was then applied backwards, to the whole history: every closed study re-examined, corrections made only as new dated records beside the old — frozen records and issued verdicts were never altered, and what cannot be fixed is labelled a historical limitation in the open. Two results of that audit are on this page: the consciousness contrast was found unjudged rather than failed, and the verdict tallies that once appeared here were retired.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="tracker-block">
+          <div class="tracker-head">
+            <p class="eyebrow">In motion</p>
+            <h2>Open fronts</h2>
+            <p>What the program is actually working on, and what each line of work is waiting on.</p>
+          </div>
+          <div class="fronts-grid">
+            <div class="front-card">
+              <h3>The consciousness line</h3>
+              <p>The dataset problem comes first: a pilot must show the perception signal can be read from the recordings at all, at a bar fixed in advance (a median per-subject reading accuracy of at least 0.60, across at least 30 subjects), before any claim test is frozen. The dataset deposit for the pilot is authorized; the pilot measures readability only and takes no claim statistics.</p>
+            </div>
+            <div class="front-card">
+              <h3>Study 034 — running</h3>
+              <p>Approved 2026-10-13 and running (on the board above). Studies 032 and 033, once carried here as running, have closed with verdicts — they are on the board. Each closing verdict is published here at the same prominence as every other.</p>
+            </div>
+            <div class="front-card">
+              <h3>Waiting on a laboratory partner</h3>
+              <p>One further study is designed, registered, and waiting on a laboratory partner — the physical-leg prediction among the registered predictions above.</p>
+            </div>
+            <div class="front-card">
+              <h3>Program two — design phase</h3>
+              <p>The epistemic ledger's next stage is design work: the schema, the scoring, and a working prototype.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-body">
           <h2>Program two — The epistemic ledger</h2>
           <p>The second program is about evidence itself. In most fields, a claim's credibility lives in people's heads and in the reputations of the people repeating it. The epistemic ledger gives a claim a public, revisable <strong>grade</strong> instead: a score that goes up when evidence survives testing and down when it fails, with the reasons for every change written next to it, in the open, where anyone can argue with them. A grade is never a verdict from authority — it is a running summary of what the evidence has done so far, and it is allowed to move.</p>
 
@@ -164,6 +320,29 @@
 
           <p>Framing paper published; ledger public and maintained; the method is in active use across both programs.</p>
         </div>
+
+        <div class="tracker-block" style="margin-top: 56px;">
+          <div class="tracker-head">
+            <p class="eyebrow">The public record</p>
+            <h2>Archived releases and study papers</h2>
+            <p>One row per public registration. Every DOI below was fetched and confirmed to resolve to the registration its row names before this page was published — an identifier that does not verify is never listed.</p>
+          </div>
+          <div class="rel-list" id="rel-list"></div>
+          <noscript><p class="array-note">The release rows are drawn from a data array on this page and need scripting to display. They are the registrations under the program parent: <a href="https://osf.io/nerxz/" target="_blank" rel="noopener">osf.io/nerxz</a>.</p></noscript>
+          <p class="papers-note"><strong>Study papers.</strong> The framing paper — <a href="https://github.com/AXIOVEX/epistemic-ledger" target="_blank" rel="noopener">the epistemic-ledger framing paper</a>, published in the public repository — is the program's one paper. Each study's full public record — registration, verdict, and evidence bundle — is on the Open Science Framework; the rows above are the way in.</p>
+        </div>
+
+        <div class="research-body">
+          <h2>How a claim earns its verdict</h2>
+          <div class="step-row">
+            <span class="step-chip"><strong>1</strong> · State the claim — and the test that could kill it</span>
+            <span class="step-chip"><strong>2</strong> · Register both publicly, before any data is touched</span>
+            <span class="step-chip"><strong>3</strong> · Run exactly what was registered — no quiet adjustments</span>
+            <span class="step-chip"><strong>4</strong> · Publish the verdict either way — then explain and digest it</span>
+          </div>
+          <p>Standing rules: a falsifier is written before the test, never after · a rejected claim is published with the same prominence as a confirmed one · corrections are appended, never rewritten in · machine-speed checking is never displayed as human-paced acceptance · what remains not understood is stated with every verdict.</p>
+        </div>
+
         <div class="cards-head">
           <h2>Read the primary material</h2>
           <p>This page is a summary. The work itself lives in three public places:</p>
@@ -185,6 +364,7 @@
             <p>Our sister company runs its own research program — including its work on the undeciphered Indus script. Their page links back here.</p>
           </a>
         </div>
+        <p class="snapshot-line">Snapshot of the program record as of <strong>October 13, 2026</strong>.</p>
       </div>
     </section>
 
@@ -264,5 +444,206 @@
   <script src="/signals-widget.v1.js" defer></script>
   <script src="/newsletter-signup.v2.js" defer></script>
   <!-- No Turnstile script here (spec 021 FR-008): newsletter-signup.v2.js loads it lazily on first interaction with an email field. -->
+  <script>
+  /* Spec 024 — program tracker rendering. The verdict board, the registered
+     predictions, and the archived releases each render from ONE data array
+     below; filter-chip counts are computed from the board array. Content:
+     specs/024-research-hub-tracker-remodel/tracker-content.md (approved
+     2026-10-13). Snapshot date: October 13, 2026. */
+  var STUDIES = [
+    { line: "Study 011", osf: "J6PF9", title: "The cooperative-phenotype claim", outcome: "noeffect", pill: "No effect found",
+      meaning: "We claimed that measured traits and profiles — beyond the game's payoffs — would improve predictions of who cooperates, by a margin fixed in advance. On both adequate datasets the improvement missed the margin, and the claim stands demoted.",
+      boundary: "A real ranking signal exists in the data — the fuller model ranks players well — but not in the form or strength the claim required; the study-level track met its own bar, but was supporting evidence only by design." },
+    { line: "Study 012", osf: "V8HCY", title: "A cooperation-game pattern", outcome: "noeffect", pill: "No effect found",
+      meaning: "A pattern reported in earlier cooperation-game data did not appear when we tested it on the shared dataset (the gap was 0.012, against a bar of 0.05 fixed in advance).",
+      boundary: "The claim stands demoted, not merely unproven." },
+    { line: "Study 018", osf: "GH27R", title: "The pooled perception claim", outcome: "rejected", pill: "Rejected",
+      meaning: "Our first strong idea about seeing — that how reportable an experience is tracks how redundantly its record is spread across brain regions — failed its registered test in its pooled form, and that form is retired.",
+      boundary: "The within-person form of the same idea was never the thing tested here; see the next card." },
+    { line: "Study 018, contrast form", osf: "GH27R", title: "The surviving version", outcome: null, offscale: true, pill: "No verdict — still live",
+      meaning: "The within-person contrast form of the record-redundancy idea survived the audit of the program's whole history untested: in the record it sits at even odds (0.50), and no verdict has ever been taken on it.",
+      boundary: "Unjudged is not supported; it is next in line under the consciousness front below, behind a pilot gate." },
+    { line: "Study 019", osf: "GDN2R", title: "The basis-selectivity claim", outcome: "rejected", pill: "Rejected",
+      meaning: "We claimed the record texture lives in the coherences that one kind of squeezing — pinching, in the pointer basis — does not touch, so it should survive pinching even though dephasing destroyed it. Instead pinching destroyed the texture on every one of the 132 configurations, at the first dose tried: the texture is not selective about which coherence it needs.",
+      boundary: "The death came by the record's onset sliding until the criterion could no longer be met, not by the plateau shrinking in place; the result is scoped to this model family." },
+    { line: "Study 020", osf: "2C9YV", title: "The within-branch claim", outcome: "rejected", pill: "Rejected",
+      meaning: "We claimed each branch of the system carries the record on its own, so deleting only the coherence between the branches would cost nothing. It cost the record in 83 of 132 configurations — the between-branch coherence is load-bearing.",
+      boundary: "Where the record survived, it survived in place — its onset never moved. The coherence permits the record; it does not position it." },
+    { line: "Study 021", osf: "4R9WK", title: "The gradual-blend claim", outcome: "rejected", pill: "Rejected",
+      meaning: "Between the one-shot and the endlessly cycling versions of the early-universe model, we claimed the texture would blend gradually as the redraw chance rose. It switched instead — step-shaped on all eight configurations, gradual on none.",
+      boundary: "The switch is located at the first nonzero step; a finer scale could place it more precisely, but no gradual blend exists at the scale tested." },
+    { line: "Study 022", osf: "NGE74", title: "The gradual-fading claim", outcome: "rejected", pill: "Rejected",
+      meaning: "We claimed the one-shot pattern would fade gradually as disorder weakened toward the orderly limit. It barely changed at all (the pooled movement was 0.002, far under the no-response line of 0.05 fixed in advance), and the curves were non-monotone on all eight configurations: the pattern does not draw its strength from disorder.",
+      boundary: "Scoped to this model class and the range tested; the test was built so that this blindness, if present, would be visible." },
+    { line: "Study 023", osf: "DY7U6", title: "The mixing-strength claim", outcome: "confirmed", pill: "Confirmed",
+      meaning: "We turned the dynamics' flip couplings from a quarter of their strength to double, and the record texture did not degrade, thin out, or move — at any dose. The texture is a property of how the system mixes, not of one lucky strength.",
+      boundary: "Confirmed on this substrate family. Which connections carry the record is a different question — Study 033 took it up and could not separate the candidates." },
+    { line: "Study 024", osf: "67CR9", title: "The boundary counting law", outcome: "confirmed", pill: "Confirmed",
+      meaning: "Count the connections crossing a region's boundary and the count grows by an exact law — with the size of the boundary, not the amount inside it. The measured exponent sat on the predicted value at every scale (0.5126, inside the registered band around one-half), and the law's coefficient matched its prediction as well.",
+      boundary: "The law is confirmed inside this model. Gravity's version needs one extra rule — a limit on what a boundary can carry — which is an open premise this study did not test (see the framework section)." },
+    { line: "Study 025", osf: "8UYJG", title: "The plateau-height claim", outcome: "rejected", pill: "Rejected",
+      meaning: "Building on Study 023, we claimed the record's plateau height would rise gradually with flip strength. Instead the height was already at its maximum at every dose — a total rise of zero. There was no gradual rise to find.",
+      boundary: "A saturation result — the measure had nowhere to rise to. It retires the graded-height claim; Study 023's survival result is untouched." },
+    { line: "Study 026", osf: "SR86P", title: "The single-step death claim", outcome: "rejected", pill: "Rejected",
+      meaning: "On Study 020's records, we claimed deaths would concentrate in a single step at one shared threshold. The deaths were early but spread out, falling short of both registered concentration lines (the largest single step was 0.45, against a 0.50 line).",
+      boundary: "Front-loaded is not the claimed threshold — the record dies early, but not in one step." },
+    { line: "Study 027", osf: "PJE5M", title: "The brain-recording perception test", outcome: "inconclusive", pill: "Inconclusive",
+      meaning: "The test data could not carry the measurement — only 1 of 40 recordings was usable at the standard fixed in advance, so no fair verdict could be taken.",
+      boundary: "The claim stands unjudged, not falsified; the failure was in the dataset's readability, and the consciousness front below exists to fix exactly that. (Registration of record — the final version; two earlier versions are also public.)" },
+    { line: "Study 028", osf: "B8SKX", title: "Petz recovery: the dephasing limit", outcome: "confirmed", pill: "Confirmed",
+      meaning: "The Petz map is the standard operation for undoing a noisy quantum process. From the mathematics alone we derived the exact dephasing level at which recovery stops working, then computed it — the computation landed on the derived level (0.8857288966 computed, against 0.8857288967 derived).",
+      boundary: "A derived-then-computed match inside this model family; it certifies the map of where recovery fails, not any physical device." },
+    { line: "Study 029", osf: "YRCNX", title: "Petz recovery: how the shortfall grows", outcome: "confirmed", pill: "Confirmed",
+      meaning: "We derived that the recovery's shortfall would grow gradually as noise rises, not in a cliff. The computed curve rose steadily (total rise 1.53), with no single step carrying the growth.",
+      boundary: "As Study 028 — the map, inside this model family, not a device." },
+    { line: "Study 030", osf: "JRHUA", title: "Petz recovery: the depolarizing limit", outcome: "confirmed", pill: "Confirmed",
+      meaning: "For a second kind of noise — depolarizing, random errors in every direction — the computation located the failure point exactly where the derivation had put it (0.0212428102, against 0.02124281011 derived).",
+      boundary: "As Study 028." },
+    { line: "Study 031", osf: "R5Y2G", title: "Petz recovery: the widening gap", outcome: "confirmed", pill: "Confirmed",
+      meaning: "The gap between the damaged state and its recovery was derived to widen gradually under depolarizing noise. It did — a steady rise (0.292), with the largest single step carrying about half: graded, as derived.",
+      boundary: "The first submission of this registration failed in the archive and was replaced; the registration listed is the replacement of record." },
+    { line: "Study 032", osf: "Q8TMG", title: "Petz recovery: the ensemble profile", outcome: "confirmed", pill: "Confirmed",
+      meaning: "Across an ensemble of disordered systems, we derived the whole shape of how recovery violations thin out as the noise grows. The campaign reproduced the derived shape count for count — 1,024 draws at each of five amplitudes, matching at every point.",
+      boundary: "Its public registration is the re-registration of record dated 2026-10-12 (see the releases below); the original submission stands as a duplicate and is not the record." },
+    { line: "Study 033", osf: "C5RJM", title: "Which connections carry the record", outcome: "noeffect", pill: "No effect found",
+      meaning: "Every rearrangement of the flip couplings — weaker, tree-shaped, re-paired, one family switched off entirely — left the record in place on all 36 configurations. At the level this test was built to judge, no special carrier showed up, and the claim stands demoted.",
+      boundary: "One guard measurement did move — switching off the z-type couplings shifted where the record starts, on every configuration. The carriers could not be separated here, and that onset signal is what Study 034 is now chasing." },
+    { line: "Study 034", osf: "YWRE8", title: "What holds the record's onset in place", outcome: null, offscale: true, running: true, pill: "Approved — running",
+      meaning: "Approved on 2026-10-13 and running. It swaps the class of dynamics that generates the record and watches whether the record's starting point moves — the question Study 033's guard measurement raised.",
+      boundary: "A running study has no verdict and claims none." }
+  ];
+
+  var PREDICTIONS = [
+    { kicker: "Prediction · The record-redundancy contrast", live: true,
+      title: "Within a person, reportability tracks the redundancy of the record",
+      body: "Within a person, the reportability of a faint experience tracks the redundancy profile of its record across separate brain regions — a sharper claim than the pooled form Study 018 retired. <strong>Falsifier:</strong> a registered test on data that passes the pilot gate below, in which the contrast does not appear at the margin fixed in advance.",
+      status: "Live — unjudged", statusClass: "pill pill-inconclusive",
+      notes: [
+        { date: "2026-10-12", text: "The pooled form of this idea was rejected under Study 018; the contrast form was never verdict-bearing in that study and survives it." },
+        { date: "2026-10-13", text: "The consciousness line was reactivated. This prediction may not be frozen for its test until the dataset pilot gate passes." }
+      ] },
+    { kicker: "Prediction · The physical leg (Study 014's protocol)", live: false,
+      title: "In a physical system, the record texture will show the derived dose pattern",
+      body: "In a physical system — a nitrogen-vacancy center in diamond, where quantum states can be prepared and read one at a time — the record texture will show the dose pattern the models derive, under the conditions written into the registered protocol (<a href=\"https://doi.org/10.17605/OSF.IO/7N42J\" target=\"_blank\" rel=\"noopener\">registration 7N42J</a>). <strong>Falsifier:</strong> the protocol's three registered kill conditions — if the physical record fails them, the bridge from the toy models to the laboratory dies.",
+      status: "Pending — unplayed", statusClass: "pill pill-offscale",
+      notes: [
+        { date: "2026-10-02", text: "Registered publicly; a laboratory inquiry was sent the same day." },
+        { date: "2026-10-13", text: "Still waiting on a laboratory partner. The registration's window runs to October 2027." }
+      ] }
+  ];
+
+  var RELEASES = [
+    { name: "Program parent — all registered studies", href: "https://osf.io/nerxz/", label: "osf.io/nerxz", note: "the public parent project holding the whole series" },
+    { name: "Study 011 registration", doi: "J6PF9", note: "do measured traits improve prediction of cooperative choices?" },
+    { name: "Study 012 registration", doi: "V8HCY", note: "protocol variables in cooperation decisions — a preregistered reanalysis" },
+    { name: "Study 018 registration", doi: "GH27R", note: "redundancy of the neural record in near-threshold seeing" },
+    { name: "Study 019 registration", doi: "GDN2R", note: "is the record texture basis-selective? pinching vs dephasing" },
+    { name: "Study 020 registration", doi: "2C9YV", note: "which coherence carries the record? cross-branch ablation" },
+    { name: "Study 021 registration", doi: "4R9WK", note: "graded or threshold? one-shot to cyclic, interpolated (replacement of record — the original submission failed in the archive)" },
+    { name: "Study 022 registration", doi: "NGE74", note: "does the one-shot law degrade gradually toward the orderly limit? (replacement of record, as Study 021)" },
+    { name: "Study 023 registration", doi: "DY7U6", note: "is the record texture robust to flip-coupling strength?" },
+    { name: "Study 024 registration", doi: "67CR9", note: "boundary or volume? a separator counting law" },
+    { name: "Study 025 registration", doi: "8UYJG", note: "does plateau height build monotonically with flip coupling?" },
+    { name: "Study 026 registration", doi: "SR86P", note: "is plateau death under ablation a threshold event? (registration of record — an earlier submission is dead and never listed)" },
+    { name: "Study 027 registration", doi: "PJE5M", note: "redundancy of orientation information and reports of seeing (registration of record — final version; earlier versions CA6KD and RA8T7 are also public)" },
+    { name: "Study 028 registration", doi: "B8SKX", note: "a sharp dephasing onset for a recovery bound" },
+    { name: "Study 029 registration", doi: "YRCNX", note: "a graded dose–response of the recovery deficit" },
+    { name: "Study 030 registration", doi: "JRHUA", note: "a sharp restoration threshold under depolarizing noise" },
+    { name: "Study 031 registration", doi: "R5Y2G", note: "a graded monotone dose–response of the recovery gap (replacement of record, as Study 021)" },
+    { name: "Study 032 registration", doi: "Q8TMG", note: "a graded dilution of a recovery-bound violation (re-registration of record, 2026-10-12; the original submission is a duplicate, not the record)" },
+    { name: "Study 033 registration", doi: "C5RJM", note: "what carries the record texture's robustness to flip coupling?" },
+    { name: "Study 034 registration", doi: "YWRE8", note: "what holds the record's onset in place?" }
+  ];
+
+  function renderBoard() {
+    var grid = document.getElementById("board-grid");
+    var html = "";
+    STUDIES.forEach(function (s, i) {
+      var pillClass = s.offscale ? "pill pill-offscale" : "pill pill-" + s.outcome;
+      html += '<article class="study-card" data-idx="' + i + '">'
+        + '<div class="card-top"><p class="card-title">' + s.title + '</p>'
+        + '<span class="' + pillClass + '">' + s.pill + '</span></div>'
+        + '<p class="study-line">' + s.line + ' · registration ' + s.osf + ' · <a href="https://doi.org/10.17605/OSF.IO/' + s.osf + '" target="_blank" rel="noopener">DOI ↗</a></p>'
+        + '<p class="card-meaning">' + s.meaning + '</p>'
+        + '<p class="card-boundary"><strong>Boundary:</strong> ' + s.boundary + '</p>'
+        + '</article>';
+    });
+    grid.innerHTML = html;
+  }
+
+  var FILTERS = [
+    { key: "all", label: "All findings" },
+    { key: "confirmed", label: "Confirmed" },
+    { key: "rejected", label: "Rejected" },
+    { key: "noeffect", label: "No effect found" },
+    { key: "inconclusive", label: "Inconclusive" },
+    { key: "running", label: "Still running" },
+    { key: "offscale", label: "Off the scale" }
+  ];
+  function countFor(key) {
+    if (key === "all") return STUDIES.length;
+    if (key === "running") return STUDIES.filter(function (s) { return !!s.running; }).length;
+    if (key === "offscale") return STUDIES.filter(function (s) { return !!s.offscale; }).length;
+    return STUDIES.filter(function (s) { return s.outcome === key; }).length;
+  }
+  function matches(s, key) {
+    if (key === "all") return true;
+    if (key === "running") return !!s.running;
+    if (key === "offscale") return !!s.offscale;
+    return s.outcome === key;
+  }
+  function renderChips() {
+    var box = document.getElementById("board-chips");
+    var html = "";
+    FILTERS.forEach(function (f, i) {
+      html += '<button type="button" class="chip" data-filter="' + f.key + '" aria-pressed="' + (i === 0 ? "true" : "false") + '">' + f.label + ' · ' + countFor(f.key) + '</button>';
+    });
+    box.innerHTML = html;
+    box.addEventListener("click", function (ev) {
+      var btn = ev.target.closest(".chip");
+      if (!btn) return;
+      box.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", "false"); });
+      btn.setAttribute("aria-pressed", "true");
+      var key = btn.getAttribute("data-filter");
+      document.querySelectorAll("#board-grid .study-card").forEach(function (card) {
+        var s = STUDIES[Number(card.getAttribute("data-idx"))];
+        card.hidden = !matches(s, key);
+      });
+    });
+  }
+
+  function renderPredictions() {
+    var grid = document.getElementById("pred-grid");
+    var html = "";
+    PREDICTIONS.forEach(function (p) {
+      html += '<article class="pred-card ' + (p.live ? "live" : "pending") + '">'
+        + '<p class="pred-kicker">' + p.kicker + '</p>'
+        + '<p class="pred-title">' + p.title + '</p>'
+        + '<p class="pred-body">' + p.body + '</p>'
+        + '<p style="margin:0 0 4px"><span class="' + p.statusClass + '">' + p.status + '</span></p>'
+        + '<div class="pred-notes"><h3>Dated status notes</h3><ul>'
+        + p.notes.map(function (n) { return '<li><strong>' + n.date + '</strong> — ' + n.text + '</li>'; }).join("")
+        + '</ul></div></article>';
+    });
+    grid.innerHTML = html;
+  }
+
+  function renderReleases() {
+    var list = document.getElementById("rel-list");
+    var html = "";
+    RELEASES.forEach(function (r) {
+      var link = r.doi
+        ? '<a class="rel-doi" href="https://doi.org/10.17605/OSF.IO/' + r.doi + '" target="_blank" rel="noopener">10.17605/OSF.IO/' + r.doi + ' ↗</a>'
+        : '<a class="rel-doi" href="' + r.href + '" target="_blank" rel="noopener">' + r.label + ' ↗</a>';
+      html += '<div class="rel-row"><span class="rel-name">' + r.name + '</span>' + link + '<span class="rel-note">' + r.note + '</span></div>';
+    });
+    list.innerHTML = html;
+  }
+
+  renderBoard();
+  renderChips();
+  renderPredictions();
+  renderReleases();
+  </script>
 </body>
 </html>
