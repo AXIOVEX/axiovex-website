@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-13T19:16:41.571Z",
+  "updatedUtc": "2026-10-13T22:22:39.114Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -233,6 +233,13 @@
       "title": "Funding & policy",
       "items": [
         {
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
+          "title": "Energy Department Announces 2026 Ernest Orlando Lawrence Award Winners",
+          "link": "https://www.energy.gov/articles/energy-department-announces-2026-ernest-orlando-lawrence-award-winners",
+          "date": "2026-10-13"
+        },
+        {
           "source": "Federal Register",
           "sourceId": "federal-register",
           "title": "Notice of Intent To Grant Exclusive Patent License to Zyltech Engineering, LLC; Houston, TX",
@@ -280,13 +287,6 @@
           "title": "Department of Justice → NATIONAL FOOD GROUP INC — $21,931 award, October 9, 2026",
           "link": "https://www.usaspending.gov/award/CONT_AWD_15B21627P00000003_1540_-NONE-_-NONE-",
           "date": "2026-10-09"
-        },
-        {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces New Genesis Mission Awards to Advance Super Intelligence for Science",
-          "link": "https://www.energy.gov/articles/energy-department-announces-new-genesis-mission-awards-advance-super-intelligence-science",
-          "date": "2026-10-08"
         }
       ]
     }
