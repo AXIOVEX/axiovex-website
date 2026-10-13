@@ -151,8 +151,14 @@
   verification/research-desktop.png, research-mobile.png,
   research-mobile-top.png,
   research-board-filtered-rejected.png. Deployed-staging
-  identity + header check run after the push (see the
-  staging commit record).
+  check after the push (commit a1edde2): staging
+  /research/ serves the new page — HTTP 200 (OK — the
+  page loaded successfully), `X-Robots-Tag: noindex,
+  nofollow` header present, v38 link + verdict-board
+  marker + noindex meta in the served HTML; the only
+  byte difference from the worktree file is Cloudflare's
+  standard email-obfuscation rewrite of the CTA mailto
+  link. styles.v38.css served byte-identical.
 - [ ] T007 **GATE — Tristen reviews the remodeled page on
   staging.** Screenshots + staging URL presented.
   Promotion proceeds only on his approval.
