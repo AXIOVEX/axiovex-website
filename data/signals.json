@@ -1,15 +1,15 @@
 {
-  "updatedUtc": "2026-10-13T11:47:07.053Z",
+  "updatedUtc": "2026-10-13T15:21:14.061Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
         {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
-          "link": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/",
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Tackling AI security challenges in manufacturing",
+          "link": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/",
           "date": "2026-10-12"
         },
         {
@@ -29,8 +29,8 @@
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "Tackling AI security challenges in manufacturing",
-          "link": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/",
+          "title": "JE Dunn-Alberici JV breaks ground on $3.2B Texas shipyard",
+          "link": "https://www.manufacturingdive.com/news/je-dunn-alberici-jv-breaks-ground-texas-shipyard/832718/",
           "date": "2026-10-12"
         },
         {
@@ -38,6 +38,13 @@
           "sourceId": "manufacturing-dive",
           "title": "Do you need a chief manufacturing officer?",
           "link": "https://www.manufacturingdive.com/news/more-companies-recognize-value-CMO-chief-manufacturing-officer/832300/",
+          "date": "2026-10-12"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
+          "link": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/",
           "date": "2026-10-12"
         },
         {
@@ -52,13 +59,6 @@
           "sourceId": "manufacturing-dive",
           "title": "Thousands of manufacturing layoffs announced in September",
           "link": "https://www.manufacturingdive.com/news/manufacturing-layoffs-closures-warn-act-september-2026/832400/",
-          "date": "2026-10-09"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Blue Origin, PPG and more invest in manufacturing facilities",
-          "link": "https://www.manufacturingdive.com/news/blue-origin-ppg-cleveland-cliffs-more-facility-investments/832603/",
           "date": "2026-10-09"
         }
       ]
@@ -118,15 +118,15 @@
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
-          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
-          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
+          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
           "date": "2026-10-08"
         },
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
-          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
-          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
+          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
+          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
           "date": "2026-10-08"
         },
         {

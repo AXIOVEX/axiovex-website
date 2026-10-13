@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-13T11:47:07.053Z",
+  "updatedUtc": "2026-10-13T15:21:14.061Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -31,10 +31,10 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
-      "source": "Automation Alley",
+      "title": "Tackling AI security challenges in manufacturing",
+      "source": "Manufacturing Dive",
       "date": "2026-10-12",
-      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
+      "url": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/"
     },
     {
       "lane": "michigan",
@@ -63,10 +63,10 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Tackling AI security challenges in manufacturing",
+      "title": "JE Dunn-Alberici JV breaks ground on $3.2B Texas shipyard",
       "source": "Manufacturing Dive",
       "date": "2026-10-12",
-      "url": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/"
+      "url": "https://www.manufacturingdive.com/news/je-dunn-alberici-jv-breaks-ground-texas-shipyard/832718/"
     },
     {
       "lane": "manufacturing",
@@ -75,6 +75,14 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-12",
       "url": "https://www.manufacturingdive.com/news/more-companies-recognize-value-CMO-chief-manufacturing-officer/832300/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
+      "source": "Automation Alley",
+      "date": "2026-10-12",
+      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
     },
     {
       "lane": "michigan",
@@ -91,14 +99,6 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-09",
       "url": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Thousands of manufacturing layoffs announced in September",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-09",
-      "url": "https://www.manufacturingdive.com/news/manufacturing-layoffs-closures-warn-act-september-2026/832400/"
     },
     {
       "lane": "ai-standards",
