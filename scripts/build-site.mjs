@@ -2222,14 +2222,22 @@ function buildNewsletterChrome() {
   }
   const footerInner = '\n        ' + newsletterBlock('footer', { variant: 'footer' }) + '\n      ';
   const footerRe = /(<!-- NLFOOTER:START -->)[\s\S]*?(<!-- NLFOOTER:END -->)/;
-  /* Owner correction 2026-10-10: the /newsletter/ landing page carries
-     exactly ONE subscribe form — the WF-15 landing form above the
-     archive (WF-15: one form per page) — so the sitewide footer strip
-     is suppressed there and its region is written empty. Issue pages
-     (newsletter/<date>/) are web editions and keep the strip, as does
-     every other page. */
-  const FOOTER_STRIP_EXCLUDED = new Set([path.join('newsletter', 'index.html')]);
+  /* One form per page (WF-15). Owner correction 2026-10-10 suppressed
+     the strip on the /newsletter/ landing; owner directive 2026-10-13
+     generalizes it: ANY page that already carries a dedicated
+     newsletter block (article block, issue block, Signals blocks,
+     landing form) must not also carry the sitewide footer strip —
+     readers were seeing two (on Signals, three) signup forms per page.
+     The rule is content-aware so future pages inherit it: if the page
+     outside the NLFOOTER region already contains a newsletter block,
+     the strip region is written empty. The homepage is excluded
+     explicitly — its dedicated NLHOME section is injected below, after
+     this loop, so it is not yet visible to the content check. Pages
+     with no block of their own (blog index, contact, documents,
+     privacy, disclaimer) keep the strip as their one form. */
+  const FOOTER_STRIP_EXCLUDED = new Set([path.join('newsletter', 'index.html'), 'index.html']);
   let footers = 0;
+  let suppressed = 0;
   for (const rel of outputs) {
     const file = path.join(ROOT, rel);
     if (!existsSync(file)) {
@@ -2241,15 +2249,18 @@ function buildNewsletterChrome() {
       console.warn('nl-chrome: NLFOOTER markers not found in ' + rel + ' — footer strip skipped for that page');
       continue;
     }
-    if (FOOTER_STRIP_EXCLUDED.has(rel)) {
+    const outsideFooter = html.replace(footerRe, '');
+    if (FOOTER_STRIP_EXCLUDED.has(rel) || outsideFooter.includes('data-nl-block')) {
       const cleared = html.replace(footerRe, (m, g1, g2) => g1 + g2);
       if (cleared !== html) writeFileSync(file, cleared);
+      suppressed++;
       continue;
     }
     const out = html.replace(footerRe, (m, g1, g2) => g1 + footerInner + g2);
     if (out !== html) writeFileSync(file, out);
     footers++;
   }
+  if (suppressed) console.log('nl-chrome: footer strip suppressed on ' + suppressed + ' page(s) that carry their own newsletter block (one form per page)');
   // Homepage section (WF-01): after the Signals block, before About.
   const homePath = path.join(ROOT, 'index.html');
   const home = readFileSync(homePath, 'utf8');
