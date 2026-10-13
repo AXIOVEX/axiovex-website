@@ -10,10 +10,14 @@ page is a **design model only**: its anatomy, structure, and
 design language transfer; none of its content does. No Indus
 material of any kind appears on the Axiovex page.
 
-**Status:** PROPOSED 2026-10-13 — spec package + WF-18 revised
-frame drafted; **nothing implemented**. Implementation is
-blocked on the T001 approval gate (tasks.md), which also
-decides the two open questions recorded below (OQ-1, OQ-2).
+**Status:** APPROVED 2026-10-13 (T001 gate) — Tristen approved
+WF-18 (revised) and both gate recommendations. **OQ-1:**
+the numbers ledger carries RECORD COUNTS ONLY; the
+outcome-split bar is removed (anti-tally). **OQ-2:** board
+cards may carry the public OSF registration id + DOI link
+as provenance; FR-004's other limits stand. Implementation
+proceeds on staging under T004–T006; production promotion
+remains a separate gate (T007/T008).
 
 ## What the remodel is
 
@@ -103,6 +107,18 @@ tracker anatomy the model page uses:
   the number is how a reader finds the registration. No
   internal codenames, claim labels, or machinery are added.
   The gate confirms or declines this delta.
+
+**Decisions recorded at the gate (2026-10-13):** OQ-1 —
+option (b): the ledger is restricted to record-scale
+numbers (studies registered, studies closed, public
+registrations, papers); the outcome split and its stacked
+bar are removed, and FR-005 is read accordingly. OQ-2 —
+confirmed: board cards carry the public study number, the
+registration id, and the DOI link as provenance; the
+meaning sentence still leads every card, and FR-004's
+other limits (no internal claim labels, no grades or
+scores of claims, no internal process jargon, no staging
+or generator identifiers) stand unchanged.
 
 ## Functional requirements
 

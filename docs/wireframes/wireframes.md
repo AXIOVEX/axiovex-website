@@ -69,8 +69,12 @@ This file is the index, the gate rule, and the revision log.
   WF-15/16/17 were already carried by the
   newsletter frames, spec 020.)
 - WF-18 (revised) Research hub — program tracker
-  (proposed 2026-10-13 by spec 024 — **PENDING OWNER
-  APPROVAL**): the same unlisted page re-housed in the
+  (proposed 2026-10-13 by spec 024 — **APPROVED
+  2026-10-13 (spec 024 T001)**, with the two gate
+  decisions recorded in the revision log: OQ-1 ledger =
+  record counts only, outcome split removed; OQ-2 board
+  cards carry the public OSF registration id + DOI link
+  as provenance): the same unlisted page re-housed in the
   program-tracker anatomy of the BitConcepts Indus
   tracker page (design model only — no content crosses
   over): record strip in the head ("Program record as
@@ -92,11 +96,12 @@ This file is the index, the gate rule, and the revision log.
   reduced CTA / WF-G4); tracker sections at the ~1120px
   container measure, prose at the ~760px editorial
   column; new component CSS ships as the versioned
-  bump `styles.v38.css`. Two gate decisions ride with
-  the proposal (spec 024 OQ-1/OQ-2): the ledger's
-  outcome split vs the 2026-10-12 anti-tally amendment,
-  and public study numbers on board cards vs spec 023
-  FR-004. Gate = spec 024 T001.
+  bump `styles.v38.css`. Two gate decisions rode with
+  the proposal (spec 024 OQ-1/OQ-2) and were decided at
+  approval (see the revision log, 2026-10-13): the
+  ledger's outcome split is removed in favour of record
+  counts only, and public study numbers (registration
+  id + DOI) are carried on board cards as provenance.
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
 - WF-09 Blog / article / privacy — tablet
 - Global components: WF-G1 nav (Signals link added by spec 008 —
@@ -949,3 +954,29 @@ as accordion rows.
   (gaps marked as placeholders, resolved from program
   records before the gate closes); gate = spec 024
   T001.
+- **2026-10-13** — APPROVED (spec 024 T001): Tristen
+  approved **WF-18 (revised)** and both gate
+  recommendations. **OQ-1:** the numbers ledger carries
+  RECORD COUNTS ONLY (registered / closed /
+  registrations / papers) — the outcome-split bar drawn
+  in the proposal is REMOVED (anti-tally; outcomes live
+  on the verdict board as per-study cards). **OQ-2:**
+  board cards carry the public OSF registration id +
+  DOI link as provenance (the evidence address);
+  FR-004's other limits stand (no effect-size headlines,
+  no raw framework values; the meaning sentence leads).
+  The frame drawing is updated to the approved form.
+  Content gaps G-1..G-6 were resolved from the program
+  records before implementation; the resolution also
+  corrected several pre-filled draft labels and glosses
+  that contradicted the records (Studies 021/022 KILL
+  not NULL; Study 024 CONFIRMED not rejected; the Petz
+  line 028–032 CONFIRMED; Study 033 closed NULL;
+  Study 011 carded as its NULL verdict, not a control) —
+  the full correction list is at the head of
+  tracker-content.md. Every listed DOI was verified
+  against the OSF API + doi.org (tasks.md T003);
+  Study 033's identifier resolved to C5RJM (the EPHF7
+  in hand belongs to a different program's Spec 033).
+  Implementation proceeds on staging (T004–T006);
+  production promotion stays a separate gate (T007).
