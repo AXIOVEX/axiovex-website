@@ -1,17 +1,10 @@
 {
-  "updatedUtc": "2026-10-13T07:21:05.357Z",
+  "updatedUtc": "2026-10-13T11:20:45.265Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
-          "link": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/",
-          "date": "2026-10-12"
-        },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
@@ -36,8 +29,22 @@
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
+          "title": "JE Dunn-Alberici JV breaks ground on $3.2B Texas shipyard",
+          "link": "https://www.manufacturingdive.com/news/je-dunn-alberici-jv-breaks-ground-texas-shipyard/832718/",
+          "date": "2026-10-12"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
           "title": "Do you need a chief manufacturing officer?",
           "link": "https://www.manufacturingdive.com/news/more-companies-recognize-value-CMO-chief-manufacturing-officer/832300/",
+          "date": "2026-10-12"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
+          "link": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/",
           "date": "2026-10-12"
         },
         {
@@ -52,13 +59,6 @@
           "sourceId": "manufacturing-dive",
           "title": "Thousands of manufacturing layoffs announced in September",
           "link": "https://www.manufacturingdive.com/news/manufacturing-layoffs-closures-warn-act-september-2026/832400/",
-          "date": "2026-10-09"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Blue Origin, PPG and more invest in manufacturing facilities",
-          "link": "https://www.manufacturingdive.com/news/blue-origin-ppg-cleveland-cliffs-more-facility-investments/832603/",
           "date": "2026-10-09"
         }
       ]
@@ -242,6 +242,20 @@
         {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
+          "title": "General Services Administration → FORD MOTOR CO — $39,542 award, October 9, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F000B_4732_47QMCA22D000P_4732",
+          "date": "2026-10-09"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "General Services Administration → FCA US LLC — $43,782 award, October 9, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F000A_4732_47QMCA22D000N_4732",
+          "date": "2026-10-09"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
           "title": "Department of Veterans Affairs → WRIGHT & FILIPPIS, LLC — $32,674 award, October 9, 2026",
           "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027N0073_3600_36C77622A0010_3600",
           "date": "2026-10-09"
@@ -266,20 +280,6 @@
           "title": "Department of Justice → NATIONAL FOOD GROUP INC — $21,931 award, October 9, 2026",
           "link": "https://www.usaspending.gov/award/CONT_AWD_15B21627P00000003_1540_-NONE-_-NONE-",
           "date": "2026-10-09"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → TETER ORTHOTICS & PROSTHETICS, INC. — $17,550 award, October 8, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0037_3600_-NONE-_-NONE-",
-          "date": "2026-10-08"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Justice → NATIONAL FOOD GROUP INC — $32,133 award, October 8, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_15B40827P00000004_1540_-NONE-_-NONE-",
-          "date": "2026-10-08"
         },
         {
           "source": "U.S. Department of Energy",
