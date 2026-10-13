@@ -1,10 +1,31 @@
 {
-  "updatedUtc": "2026-10-13T15:21:14.061Z",
+  "updatedUtc": "2026-10-13T19:16:41.571Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Northrop Grumman, Air Force start on $4.5B facility expansion",
+          "link": "https://www.manufacturingdive.com/news/northrop-grumman-air-force-expansion-plant-42/832844/",
+          "date": "2026-10-13"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "GSK to invest $800M in Pennsylvania expansion",
+          "link": "https://www.manufacturingdive.com/news/biopharma-gsk-invest-800m-pennsylvania-expansion-montgomery-county/832846/",
+          "date": "2026-10-13"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Raytheon secures 2 Pentagon contracts worth $30.7B combined",
+          "link": "https://www.manufacturingdive.com/news/rtx-raytheon-dod-defense-war-sm3-ib-sm-6-missile-interceptors/832760/",
+          "date": "2026-10-13"
+        },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
@@ -39,27 +60,6 @@
           "title": "Do you need a chief manufacturing officer?",
           "link": "https://www.manufacturingdive.com/news/more-companies-recognize-value-CMO-chief-manufacturing-officer/832300/",
           "date": "2026-10-12"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
-          "link": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/",
-          "date": "2026-10-12"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers",
-          "link": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/",
-          "date": "2026-10-09"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Thousands of manufacturing layoffs announced in September",
-          "link": "https://www.manufacturingdive.com/news/manufacturing-layoffs-closures-warn-act-september-2026/832400/",
-          "date": "2026-10-09"
         }
       ]
     },
@@ -118,15 +118,15 @@
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
-          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
-          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
+          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
+          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
           "date": "2026-10-08"
         },
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
-          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
-          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
+          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
           "date": "2026-10-08"
         },
         {
@@ -170,6 +170,13 @@
       "id": "ot-security",
       "title": "OT cybersecurity",
       "items": [
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Swann Communications SWIFI-SE2KIC",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02",
+          "date": "2026-10-13"
+        },
         {
           "source": "CISA",
           "sourceId": "cisa-ics",
@@ -217,13 +224,6 @@
           "sourceId": "cisa-ics",
           "title": "Hitachi Energy SOI",
           "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04",
-          "date": "2026-10-06"
-        },
-        {
-          "source": "CISA",
-          "sourceId": "cisa-ics",
-          "title": "Hitachi Energy REB500",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05",
           "date": "2026-10-06"
         }
       ]

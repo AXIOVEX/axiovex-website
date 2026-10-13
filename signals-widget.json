@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-13T15:21:14.061Z",
+  "updatedUtc": "2026-10-13T19:16:41.571Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -21,6 +21,22 @@
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Northrop Grumman, Air Force start on $4.5B facility expansion",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-13",
+      "url": "https://www.manufacturingdive.com/news/northrop-grumman-air-force-expansion-plant-42/832844/"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Swann Communications SWIFI-SE2KIC",
+      "source": "CISA",
+      "date": "2026-10-13",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
+    },
+    {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
       "title": "Notice of Intent To Grant Exclusive Patent License to Zyltech Engineering, LLC; Houston, TX",
@@ -31,10 +47,18 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Tackling AI security challenges in manufacturing",
+      "title": "GSK to invest $800M in Pennsylvania expansion",
       "source": "Manufacturing Dive",
-      "date": "2026-10-12",
-      "url": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/"
+      "date": "2026-10-13",
+      "url": "https://www.manufacturingdive.com/news/biopharma-gsk-invest-800m-pennsylvania-expansion-montgomery-county/832846/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Raytheon secures 2 Pentagon contracts worth $30.7B combined",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-13",
+      "url": "https://www.manufacturingdive.com/news/rtx-raytheon-dod-defense-war-sm3-ib-sm-6-missile-interceptors/832760/"
     },
     {
       "lane": "michigan",
@@ -43,6 +67,14 @@
       "source": "Automation Alley",
       "date": "2026-10-12",
       "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Tackling AI security challenges in manufacturing",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-12",
+      "url": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/"
     },
     {
       "lane": "manufacturing",
@@ -77,44 +109,12 @@
       "url": "https://www.manufacturingdive.com/news/more-companies-recognize-value-CMO-chief-manufacturing-officer/832300/"
     },
     {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
-      "source": "Automation Alley",
-      "date": "2026-10-12",
-      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
-    },
-    {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
-      "title": "Robots can do the work. Almost none of it pays yet.",
-      "source": "Axiovex",
-      "date": "2026-10-10",
-      "url": "https://axiovexsystems.com/blog/robots-can-do-the-work/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-09",
-      "url": "https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/"
-    },
-    {
       "lane": "ai-standards",
       "laneLabel": "AI, standards & research",
       "title": "NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
       "source": "NIST",
       "date": "2026-10-08",
       "url": "https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Red Lion Controls N-Tron 700 Series",
-      "source": "CISA",
-      "date": "2026-10-08",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01"
     }
   ],
   "signalsUrl": "/signals/"
