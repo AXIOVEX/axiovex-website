@@ -68,6 +68,35 @@ This file is the index, the gate rule, and the revision log.
   (Numbered WF-18 at the staging merge:
   WF-15/16/17 were already carried by the
   newsletter frames, spec 020.)
+- WF-18 (revised) Research hub — program tracker
+  (proposed 2026-10-13 by spec 024 — **PENDING OWNER
+  APPROVAL**): the same unlisted page re-housed in the
+  program-tracker anatomy of the BitConcepts Indus
+  tracker page (design model only — no content crosses
+  over): record strip in the head ("Program record as
+  of <date>" + the three primary-record links) · status
+  box in two equal halves (what stands / what does not
+  stand) · program-numbers ledger strip · verdict board
+  rendered from one data array (filter chips; honest
+  off-scale labels for the control, the live unjudged
+  claim, and the running studies) · registered
+  predictions with dated status notes · framework
+  section extended with the five stages + two lanes +
+  append-only corrections + the 2026-10-12 audit ·
+  Latest research (collapsible dated articles, newest
+  first) · open fronts · Program two retained ·
+  archived releases (OSF registrations, one DOI row
+  each, from one data array) + study papers · method
+  section ("How a claim earns its verdict") · snapshot
+  line at the foot. Shell unchanged (WF-G1 / strata /
+  reduced CTA / WF-G4); tracker sections at the ~1120px
+  container measure, prose at the ~760px editorial
+  column; new component CSS ships as the versioned
+  bump `styles.v38.css`. Two gate decisions ride with
+  the proposal (spec 024 OQ-1/OQ-2): the ledger's
+  outcome split vs the 2026-10-12 anti-tally amendment,
+  and public study numbers on board cards vs spec 023
+  FR-004. Gate = spec 024 T001.
 - WF-07 Home — tablet (834px) · WF-08 Contact — tablet
 - WF-09 Blog / article / privacy — tablet
 - Global components: WF-G1 nav (Signals link added by spec 008 —
@@ -876,3 +905,47 @@ as accordion rows.
   (Numbered WF-18 at the staging merge:
   WF-15/16/17 were already carried by the
   newsletter frames, spec 020.)
+- **2026-10-13** — PROPOSED by spec 024 (research hub
+  tracker remodel) — **PENDING OWNER APPROVAL**:
+  **WF-18 (revised)** re-houses `/research/` in the
+  program-tracker anatomy of the BitConcepts Indus
+  tracker page — the model contributes structure and
+  design language only; no Indus content crosses over.
+  New against the approved WF-18: a record strip under
+  the page head ("Program record as of <date>" + links
+  to the registered studies, the framing paper and
+  ledger, and the sister program) · a status box in two
+  equal halves — what stands / what does not stand ·
+  a program-numbers ledger strip · a **verdict board**
+  rendered from one data array, with filter chips and
+  honest off-scale labels (the positive control, the
+  still-live unjudged contrast claim, and the running
+  studies are labelled as what they are, never counted
+  as verdicts) · registered predictions with dated
+  status notes · the framework section extended with
+  the five stages (created · checked · explained ·
+  accepted · digested), the two lanes, append-only
+  corrections, and the 2026-10-12 full-history audit ·
+  Latest research as collapsible dated articles, newest
+  first · open fronts · Program two retained ·
+  archived releases (one DOI row per public OSF
+  registration, from one data array; every DOI verified
+  resolving before listing) beside the study papers ·
+  the method section, "How a claim earns its verdict" ·
+  a snapshot line closing the content column. The
+  unlisted mechanics are unchanged (no nav item, no
+  internal link, noindex, no sitemap or llms.txt
+  entry); both programs and all current copy rules are
+  kept, with two deltas put to the gate (spec 024
+  OQ-1: the ledger's outcome split, against the
+  2026-10-12 anti-tally amendment; OQ-2: public study
+  numbers on board cards, against spec 023 FR-004).
+  Tracker sections are drawn at the site container
+  measure (~1120px) with prose at the ~760px editorial
+  column; new component CSS ships as the versioned
+  bump `styles.v38.css` (never an in-place edit).
+  Draft content in
+  specs/024-research-hub-tracker-remodel/tracker-content.md
+  (gaps marked as placeholders, resolved from program
+  records before the gate closes); gate = spec 024
+  T001.

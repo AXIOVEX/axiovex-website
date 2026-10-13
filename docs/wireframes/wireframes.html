@@ -804,6 +804,220 @@
     <li><strong>Amendment 2026-10-12 (owner-approved):</strong> the status panel&rsquo;s verdict tallies are replaced by the mechanism panel drawn above (spec 023 amendment-2026-10-12-anti-tally.md). Panel position, border, and column are unchanged; copy only. Implemented on staging only — production promotion is a separate owner-gated step.</li>
   </ul>
 
+  <!-- ================= RESEARCH HUB — TRACKER REMODEL (PROPOSED) ================= -->
+  <h2 class="wf-title"><span class="wf-id">WF-18 (revised) · Research hub — program tracker</span>PROPOSED 2026-10-13 (spec 024) — PENDING OWNER APPROVAL · axiovexsystems.com/research/</h2>
+  <p class="wf-sub">The frame above is the approved, live design; this frame proposes its remodel. Owner direction 2026-10-13: remodel the hub after the BitConcepts research tracker page — the model contributes <b>anatomy and design language only</b>; no Indus content crosses over, and the hub&rsquo;s own content, both programs, and every spec 023 rule carry over except the two gate deltas noted below. The shell is untouched: WF-G1 nav with <b>no</b> Research item, strata WF-G2, reduced CTA band, WF-G4 footer with <b>no</b> Research link; the page stays <b>unlisted + noindex</b>, out of the sitemap and llms.txt. What changes is the interior: the prose page becomes a program record — record strip, two-half status box, numbers ledger, a verdict board rendered from <b>one data array</b> with filter chips and honest off-scale labels, registered predictions with dated notes, the framework extended with the five stages, collapsible dated articles, open fronts, archived releases from <b>one data array</b>, and a method section. Tracker sections sit at the site container measure (~1120px); prose keeps the centered ~760px editorial column. New component CSS ships as the versioned bump <b>styles.v38.css</b> — a new filename, never an in-place edit. Full draft content: specs/024-research-hub-tracker-remodel/tracker-content.md; the gate is spec 024 T001.</p>
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">axiovexsystems.com/research/</span></div>
+    <div class="stage">
+      <div class="blk"><span class="tag">Nav · WF-G1 — UNCHANGED (no Research item)</span><div class="navmock"><span class="logo-ph">◆ AXIOVEX</span><div class="navlinks"><span>What we do</span><span>About</span><span>FAQ</span><span>Blog</span><span>Signals</span><span>Documents ↗</span><span class="cta">Contact</span></div></div></div>
+      <div class="blk solid">
+        <span class="tag">Page head · centered — RETAINED</span>
+        <p class="crumb" style="text-align:center">Home / <b>Research</b></p>
+        <p class="eyebrow">Research at Axiovex</p>
+        <p class="h-real">Big questions, tested where everyone can check.</p>
+        <p class="lede-c">The current lede, retained: the program in plain language — time, gravity, origins, and why some questions stay stuck.</p>
+      </div>
+      <div class="blk" style="border-style:dashed">
+        <span class="tag">Record strip · NEW — under the head, container measure (~1120px)</span>
+        <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 22px;align-items:baseline">
+          <p style="font-size:13.5px;color:var(--muted);margin:0">Program record as of <b style="color:var(--ink)">October 13, 2026</b></p>
+          <p style="font-size:13.5px;margin:0"><span style="color:var(--cyan)">The registered studies ↗</span> &nbsp;·&nbsp; <span style="color:var(--cyan)">The framing paper and the ledger ↗</span> &nbsp;·&nbsp; <span style="color:var(--cyan)">Research at BitConcepts ↗</span></p>
+        </div>
+        <p style="color:var(--faint);font-size:12.5px;margin:8px 0 0">The same three primary-record targets as the link cards at the foot — the page&rsquo;s only outbound links, verified resolving before listing. Mobile: date line, then the links, stacked and centered.</p>
+      </div>
+      <div class="strata"><div style="background:#00DEF6"></div><div style="background:#2E9DB8"></div><div style="background:#7FD8E8"></div></div>
+      <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-bottom:18px">STRATA BAR · WF-G2 — head rhythm per spec 003. No share row: this is not an article.</p>
+      <div class="blk" style="border:1px solid var(--cyan,#00DEF6)">
+        <span class="tag">Status box · NEW FORM — bordered panel, two EQUAL halves, container measure</span>
+        <div class="grid2" style="align-items:start;gap:16px">
+          <div class="blk solid" style="margin-bottom:0;text-align:left">
+            <p style="font-weight:700;margin-bottom:8px">What stands</p>
+            <div class="bar"></div><div class="bar med"></div><div class="bar short"></div>
+            <p style="color:var(--faint);font-size:13px;margin-top:8px">One confirmed claim (the disagreement-pair pattern) · the framework&rsquo;s proved results, premises stated openly · the method itself — registered before the test, published either way.</p>
+          </div>
+          <div class="blk solid" style="margin-bottom:0;text-align:left">
+            <p style="font-weight:700;margin-bottom:8px">What does not stand</p>
+            <div class="bar"></div><div class="bar med"></div><div class="bar short"></div>
+            <p style="color:var(--faint);font-size:13px;margin-top:8px">Most tested claims failed — rejected and no-effect outcomes outnumber confirmed · the pooled perception idea is retired · nothing is carried as <b>accepted</b>: claims stand at checked / explained.</p>
+          </div>
+        </div>
+        <p style="color:var(--faint);font-size:12.5px;margin-top:10px">Same size, same weight — the model&rsquo;s honesty rule. Mobile: the halves stack, What stands first.</p>
+      </div>
+      <div class="blk">
+        <span class="tag">Numbers ledger · NEW — one strip, four cells, container measure</span>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;text-align:left">
+          <div style="padding:6px 14px;border-right:1px solid var(--line,#2a4a5e)"><p class="num" style="font-size:34px;margin:0">19</p><p style="font-weight:600;font-size:13.5px;margin:2px 0">Studies on the public register</p><p style="color:var(--faint);font-size:12.5px;margin:0">Studies 011–034 in the registered series</p></div>
+          <div style="padding:6px 14px;border-right:1px solid var(--line,#2a4a5e)"><p class="num" style="font-size:34px;margin:0">16</p><p style="font-weight:600;font-size:13.5px;margin:2px 0">Closed with an outcome</p><div style="display:flex;height:8px;border:1px solid var(--faint);border-radius:3px;overflow:hidden;margin:6px 0"><span style="width:12%;background:#57c785"></span><span style="width:38%;background:#f0937e"></span><span style="width:19%;background:#7FD8E8"></span><span style="width:6%;background:#e8bc5a"></span><span style="width:25%;background:#4b565f"></span></div><p style="color:var(--faint);font-size:12px;margin:0">confirmed 1 · control passed 1 · rejected 6 · no effect 3 · inconclusive 1 · Petz line 4 (split pending) — GATE DECISION OQ-1</p></div>
+          <div style="padding:6px 14px;border-right:1px solid var(--line,#2a4a5e)"><p class="num" style="font-size:34px;margin:0">—</p><p style="font-weight:600;font-size:13.5px;margin:2px 0">Public registrations</p><p style="color:var(--faint);font-size:12.5px;margin:0">Parent project + per-study registrations (count taken from OSF at verification — placeholder in the draft)</p></div>
+          <div style="padding:6px 14px"><p class="num" style="font-size:34px;margin:0">—</p><p style="font-weight:600;font-size:13.5px;margin:2px 0">Papers &amp; dated articles</p><p style="color:var(--faint);font-size:12.5px;margin:0">The framing paper + the Latest research articles below (placeholder in the draft)</p></div>
+        </div>
+        <p style="color:var(--faint);font-size:12.5px;margin-top:10px">Every figure is a count of the <b>public record</b> as of the snapshot date — never a grade or a success rate. Mobile: 2×2 at tablet width, one column under ~520px. <b>OQ-1 for the gate:</b> the outcome split as drawn, against the 2026-10-12 anti-tally amendment — or record-scale numbers only.</p>
+      </div>
+      <div class="blk leftcol" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">Program one · findings — RETAINED prose, editorial column</span>
+        <p style="font-weight:600;margin-bottom:8px">Program one — Projected constraints (RCPH named once, as approved)</p>
+        <div class="bar"></div><div class="bar med"></div>
+        <p style="font-weight:600;margin:14px 0 6px">Time is a pattern, not a metronome · Gravity may be counting · Everything may have started by un-squishing · Seeing is a report — and reports can be tested · Why some questions stay stuck</p>
+        <p style="color:var(--faint);font-size:13px">The five findings segments carry over in substance. The current mechanism panel&rsquo;s five statements move: study results become verdict-board cards below; framework results move into the framework section. No approved sentence is dropped.</p>
+      </div>
+      <div class="blk">
+        <span class="tag">Verdict board · NEW — rendered from ONE data array, container measure</span>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
+          <span class="btn fill" style="padding:5px 13px;font-size:12.5px">All findings · 17</span>
+          <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Confirmed · 1</span>
+          <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Rejected · 6+</span>
+          <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">No effect found · 3</span>
+          <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Inconclusive · 1</span>
+          <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Still running · 3</span>
+          <span class="btn ghost" style="padding:5px 13px;font-size:12.5px">Off the scale · noted on card</span>
+        </div>
+        <div class="grid2" style="align-items:start;gap:14px">
+          <div class="blk solid" style="margin-bottom:0;text-align:left">
+            <p style="margin:0 0 4px"><b>The disagreement-pair pattern</b> &nbsp;<span style="border:1px solid #57c785;color:#57c785;font-size:11px;padding:3px 8px;border-radius:3px">CONFIRMED</span></p>
+            <p style="color:var(--faint);font-size:12.5px;margin:0 0 8px">Study 023 · registered study — OSF ↗</p>
+            <div class="bar"></div><div class="bar med"></div>
+            <p style="color:var(--faint);font-size:12.5px;margin-top:8px;border-top:1px dashed var(--faint);padding-top:8px"><b>Boundary:</b> confirmed = survived its registered test; acceptance is a later stage.</p>
+          </div>
+          <div class="blk solid" style="margin-bottom:0;text-align:left">
+            <p style="margin:0 0 4px"><b>The pooled perception claim</b> &nbsp;<span style="border:1px solid #f0937e;color:#f0937e;font-size:11px;padding:3px 8px;border-radius:3px">REJECTED</span></p>
+            <p style="color:var(--faint);font-size:12.5px;margin:0 0 8px">Study 018 · registered study — OSF ↗</p>
+            <div class="bar"></div><div class="bar short"></div>
+            <p style="color:var(--faint);font-size:12.5px;margin-top:8px;border-top:1px dashed var(--faint);padding-top:8px"><b>Boundary:</b> the within-person form was not the thing tested — see its own card.</p>
+          </div>
+          <div class="blk solid" style="margin-bottom:0;text-align:left">
+            <p style="margin:0 0 4px"><b>The positive control</b> &nbsp;<span style="border:1px dashed var(--muted);color:var(--muted);font-size:11px;padding:3px 8px;border-radius:3px">CONTROL — PASSED · OFF THE SCALE</span></p>
+            <p style="color:var(--faint);font-size:12.5px;margin:0 0 8px">Study 011 · a planted effect, planted on purpose</p>
+            <div class="bar"></div><div class="bar med"></div>
+            <p style="color:var(--faint);font-size:12.5px;margin-top:8px;border-top:1px dashed var(--faint);padding-top:8px"><b>Honest label:</b> a control certifies the bench — it is not a claim, and it is counted as no verdict.</p>
+          </div>
+          <div class="blk solid" style="margin-bottom:0;text-align:left">
+            <p style="margin:0 0 4px"><b>Studies 032–034</b> &nbsp;<span style="border:1px dashed #e8bc5a;color:#e8bc5a;font-size:11px;padding:3px 8px;border-radius:3px">REGISTERED / APPROVED — RUNNING</span></p>
+            <p style="color:var(--faint);font-size:12.5px;margin:0 0 8px">One card each on the page · OSF ↗</p>
+            <div class="bar"></div><div class="bar short"></div>
+            <p style="color:var(--faint);font-size:12.5px;margin-top:8px;border-top:1px dashed var(--faint);padding-top:8px"><b>Honest label:</b> a running study has no verdict and claims none. The surviving consciousness contrast draws the same way — NO VERDICT — STILL LIVE.</p>
+          </div>
+        </div>
+        <p style="color:var(--faint);font-size:12.5px;margin-top:10px">Card anatomy: plain claim title · outcome pill · study line (public number — <b>OQ-2 for the gate</b>, against spec 023 FR-004) · the meaning sentence (never a bare verdict; a technical value at most once, in parentheses) · a boundary line. Chips filter the array; counts are computed from it. Mobile: one column.</p>
+      </div>
+      <div class="blk">
+        <span class="tag">Registered predictions · NEW — cards + dated notes, container measure</span>
+        <div class="grid3" style="align-items:start;gap:14px">
+          <div class="blk solid" style="margin-bottom:0;text-align:left;border-top:3px solid #e8bc5a">
+            <p style="color:var(--faint);font-size:12.5px;margin:0 0 6px">PREDICTION · THE RECORD-REDUNDANCY CONTRAST</p>
+            <p style="font-weight:600;margin:0 0 8px">Within a person, reportability tracks the redundancy of the record</p>
+            <div class="bar short"></div>
+            <p style="margin-top:8px"><span style="border:1px dashed #e8bc5a;color:#e8bc5a;font-size:11px;padding:3px 8px;border-radius:3px">LIVE — UNJUDGED</span></p>
+          </div>
+          <div class="blk solid" style="margin-bottom:0;text-align:left;border-top:3px solid var(--faint)">
+            <p style="color:var(--faint);font-size:12.5px;margin:0 0 6px">FURTHER PREDICTIONS</p>
+            <p style="font-weight:600;margin:0 0 8px">Enumerated from the program&rsquo;s prediction register at copy drafting</p>
+            <p style="color:var(--faint);font-size:12.5px;margin:0">Placeholder in the draft (gap G-5) — no prediction is invented to fill the grid.</p>
+          </div>
+          <div class="blk solid" style="margin-bottom:0;text-align:left">
+            <p style="color:var(--faint);font-size:12.5px;margin:0 0 6px">THE RULE</p>
+            <p style="font-weight:600;margin:0 0 8px">Pending means unplayed — not lost, not won</p>
+            <p style="color:var(--faint);font-size:12.5px;margin:0">Each card states its falsifier: the result that would prove it wrong, fixed in advance.</p>
+          </div>
+        </div>
+        <p style="color:var(--faint);font-size:12.5px;margin-top:10px;text-align:left"><b>Dated status notes</b> (appended, never rewritten): 2026-10-12 — the pooled form was rejected under Study 018; the contrast form survives it, unjudged. · 2026-10-13 — the consciousness line reactivated; this prediction may not be frozen until the dataset pilot gate passes.</p>
+      </div>
+      <div class="blk leftcol" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">Framework · RETAINED + EXTENDED, editorial column</span>
+        <p style="font-weight:600;margin-bottom:8px">The five working ideas, retained</p>
+        <div class="bar"></div><div class="bar short"></div>
+        <p style="font-weight:600;margin:16px 0 8px">The five stages a claim passes through · NEW</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span class="btn ghost" style="padding:6px 11px;font-size:12.5px">1 · Created</span>
+          <span class="btn ghost" style="padding:6px 11px;font-size:12.5px">2 · Checked</span>
+          <span class="btn ghost" style="padding:6px 11px;font-size:12.5px">3 · Explained</span>
+          <span class="btn ghost" style="padding:6px 11px;font-size:12.5px">4 · Accepted</span>
+          <span class="btn ghost" style="padding:6px 11px;font-size:12.5px">5 · Digested</span>
+        </div>
+        <p style="color:var(--faint);font-size:13px;margin-top:8px">One line of definition each; the strip marks the program&rsquo;s position: claims here stand at <b>checked</b> and <b>explained</b> — none carried as accepted or digested. Stated without attribution, as program method.</p>
+        <p style="font-weight:600;margin:14px 0 6px">Two lanes · Append-only corrections · The 2026-10-12 audit · NEW</p>
+        <div class="bar"></div><div class="bar med"></div>
+        <p style="color:var(--faint);font-size:13px">Checking runs at machine speed; acceptance moves at human pace; the first is never displayed as the second. A changed assessment is a new dated record beside the old one — originals are never rewritten. On 2026-10-12 the whole history was re-examined under this discipline, with dated digestion records.</p>
+      </div>
+      <div class="blk">
+        <span class="tag">Latest research · NEW — collapsible dated articles, newest first, container measure</span>
+        <div class="blk solid" style="text-align:left;margin-bottom:10px">
+          <p style="color:var(--cyan);font-size:12.5px;font-weight:600;margin:0 0 4px">OCTOBER 13, 2026</p>
+          <p style="font-weight:700;font-size:17px;margin:0 0 6px">No measurable stand-in for the feeling of seeing survives our own rules</p>
+          <p style="color:var(--faint);font-size:12.5px;margin:0 0 8px">Basis: the phenomenal-observable study, program record of 2026-10-13.</p>
+          <p style="color:var(--cyan);font-size:13px;font-weight:600;margin:0">Read the full article ↓ &nbsp;(collapsible — &lt;details&gt;, no script needed)</p>
+        </div>
+        <div class="blk solid" style="text-align:left;margin-bottom:10px">
+          <p style="color:var(--cyan);font-size:12.5px;font-weight:600;margin:0 0 4px">OCTOBER 13, 2026</p>
+          <p style="font-weight:700;font-size:17px;margin:0 0 6px">The consciousness line reopens</p>
+          <p style="color:var(--faint);font-size:12.5px;margin:0">Basis: the consciousness-line reactivation report, 2026-10-13.</p>
+        </div>
+        <div class="blk solid" style="text-align:left;margin-bottom:0">
+          <p style="color:var(--cyan);font-size:12.5px;font-weight:600;margin:0 0 4px">OCTOBER 12, 2026</p>
+          <p style="font-weight:700;font-size:17px;margin:0 0 6px">The whole history, re-examined</p>
+          <p style="color:var(--faint);font-size:12.5px;margin:0">Basis: the framework realignment and full-history audit, 2026-10-12.</p>
+        </div>
+        <p style="color:var(--faint);font-size:12.5px;margin-top:10px">Article bodies are drafted from the named program documents (placeholder in the draft content, gap G-6). New articles: at most one per day, only when a finding closes or a record publishes.</p>
+      </div>
+      <div class="blk">
+        <span class="tag">Open fronts · NEW — what is in motion, and what it waits on, container measure</span>
+        <div class="grid2" style="align-items:start;gap:14px">
+          <div class="blk solid" style="margin-bottom:0;text-align:left"><p style="font-weight:600;margin:0 0 6px">The consciousness line</p><p style="color:var(--muted);font-size:13.5px;margin:0">The dataset problem first: a pilot must show the signal can be read at all, at a bar fixed in advance, before any claim test is frozen.</p></div>
+          <div class="blk solid" style="margin-bottom:0;text-align:left"><p style="font-weight:600;margin:0 0 6px">Studies 032–034</p><p style="color:var(--muted);font-size:13.5px;margin:0">Registered / approved on the public record; running. Each closes with a verdict published at the same prominence as every other.</p></div>
+          <div class="blk solid" style="margin-bottom:0;text-align:left"><p style="font-weight:600;margin:0 0 6px">Waiting on a laboratory partner</p><p style="color:var(--muted);font-size:13.5px;margin:0">One further study is designed, registered, and waiting (carried from the current page).</p></div>
+          <div class="blk solid" style="margin-bottom:0;text-align:left"><p style="font-weight:600;margin:0 0 6px">Program two — design phase</p><p style="color:var(--muted);font-size:13.5px;margin:0">The epistemic ledger&rsquo;s next stage: the schema, the scoring, and a working prototype.</p></div>
+        </div>
+      </div>
+      <div class="blk leftcol" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">Program two · The epistemic ledger — RETAINED, editorial column</span>
+        <p style="font-weight:600;margin-bottom:8px">Claims carry a public, revisable grade — with the reasons written next to it</p>
+        <div class="bar"></div><div class="bar med"></div><div class="bar short"></div>
+        <p style="color:var(--faint);font-size:13.5px;margin-top:8px">Status line retained: framing paper published; ledger public and maintained; the method in active use across both programs.</p>
+      </div>
+      <div class="blk">
+        <span class="tag">Archived releases + study papers · NEW — rows rendered from ONE data array, container measure</span>
+        <div style="text-align:left;border:1px solid var(--line,#2a4a5e);border-radius:8px;overflow:hidden">
+          <p style="margin:0;padding:10px 16px;border-bottom:1px solid var(--line,#2a4a5e);font-size:13.5px"><b>Program parent</b> &nbsp;<span style="color:var(--cyan)">osf.io/nerxz ↗</span> <span style="color:var(--faint);float:right">all registered studies</span></p>
+          <p style="margin:0;padding:10px 16px;border-bottom:1px solid var(--line,#2a4a5e);font-size:13.5px"><b>Study 023</b> &nbsp;<span style="color:var(--cyan)">10.17605/OSF.IO/DY7U6 ↗</span> <span style="color:var(--faint);float:right">registration — verified before listing</span></p>
+          <p style="margin:0;padding:10px 16px;border-bottom:1px solid var(--line,#2a4a5e);font-size:13.5px"><b>Study 026</b> &nbsp;<span style="color:var(--cyan)">10.17605/OSF.IO/SR86P ↗</span> <span style="color:var(--faint);float:right">registration of record (an earlier dead submission is never listed)</span></p>
+          <p style="margin:0;padding:10px 16px;font-size:13.5px"><b>Studies 011, 018, 028–031, 033</b> &nbsp;<span style="color:var(--faint)">identifiers taken from the OSF parent at verification — placeholder rows in the draft (gap G-3)</span></p>
+        </div>
+        <p style="color:var(--faint);font-size:12.5px;margin-top:10px;text-align:left"><b>Study papers &amp; key links:</b> the framing paper (GitHub) first; further study papers as they exist on the public record. Rule: an identifier ships only after it has been fetched and seen to resolve to the registration its row names.</p>
+      </div>
+      <div class="blk leftcol" style="max-width:760px;margin-left:auto;margin-right:auto">
+        <span class="tag">Method · How a claim earns its verdict — step row, editorial column</span>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+          <span class="btn ghost" style="padding:6px 12px;font-size:12.5px">1 · State the claim + the test that could kill it</span>
+          <span class="btn ghost" style="padding:6px 12px;font-size:12.5px">2 · Register both publicly, before any data</span>
+          <span class="btn ghost" style="padding:6px 12px;font-size:12.5px">3 · Run exactly what was registered</span>
+          <span class="btn ghost" style="padding:6px 12px;font-size:12.5px">4 · Publish the verdict either way — then explain and digest</span>
+        </div>
+        <p style="color:var(--faint);font-size:13px">Standing rules under the steps: falsifier first · rejections at the same prominence as confirmations · corrections appended, never rewritten · machine-speed checking never displayed as acceptance · what remains not understood is stated with every verdict. (The current page&rsquo;s method chip row is absorbed here.)</p>
+      </div>
+      <div class="blk">
+        <span class="tag">Primary material · link cards — RETAINED (the page&rsquo;s only outbound links, with the record strip)</span>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <div class="blk solid" style="flex:1;min-width:200px;text-align:left"><p style="font-weight:600">The framing paper and the ledger</p><p style="color:var(--muted);font-size:13.5px">GitHub — github.com/AXIOVEX/epistemic-ledger</p></div>
+          <div class="blk solid" style="flex:1;min-width:200px;text-align:left"><p style="font-weight:600">The registered studies</p><p style="color:var(--muted);font-size:13.5px">Open Science Framework — osf.io/nerxz</p></div>
+          <div class="blk solid" style="flex:1;min-width:200px;text-align:left"><p style="font-weight:600">Research at BitConcepts</p><p style="color:var(--muted);font-size:13.5px">bitconcepts.tech/research/ — the sister program; their page links back here</p></div>
+        </div>
+        <p style="color:var(--faint);font-size:12.5px;text-align:center;margin-top:12px">Snapshot of the program record as of <b>October 13, 2026</b> — the same date as the record strip and the ledger; one snapshot, one date (spec 024 C-024-4).</p>
+      </div>
+      <div class="blk solid" style="text-align:center"><span class="tag">CTA band · WF-G3 (reduced, as WF-05) — RETAINED</span><p class="eyebrow">Next step</p><p class="h2-real">Questions about this research?</p><p class="lede-c">start@axiovexsystems.com</p></div>
+      <div class="blk"><span class="tag">Footer · WF-G4 — UNCHANGED (no Research link)</span><p style="color:var(--muted);font-size:14px;text-align:center">Three-column footer (see WF-G4), exactly as live — including the newsletter strip, so the page&rsquo;s form count is unchanged (one). The Signals floating widget (WF-G6) follows the global rule; it links out to Signals, never into this page.</p></div>
+    </div>
+  </div>
+  <ul class="notes">
+    <li><strong>Layout intent, per section (desktop):</strong> record strip one row (date left, links right) at container measure; status box two equal halves side by side; ledger four cells in one row, the outcome split as a labelled stacked bar inside its cell; findings prose at the ~760px editorial column; board two card columns with the chip row above; predictions three card columns with dated notes full-width below; framework prose at editorial measure with the five-stage strip as a wrapping chip row; articles full container width, collapsed by default; fronts two card columns; Program two at editorial measure; releases as full-width rows with the papers list beneath; method steps as a wrapping row at editorial measure; cards, snapshot line, CTA, footer as today.</li>
+    <li><strong>Mobile:</strong> same order, one column — record strip stacks (date, then links, centered); status halves stack (stands first); ledger 2×2 at tablet width (WF-09), one column under ~520px; chips wrap; board, predictions, and fronts single-column; stage and method chips wrap; release rows stack their note under the DOI. Tablet follows the shared sub-page behavior (WF-09).</li>
+    <li><strong>One data source per component:</strong> the board (cards + chip counts + the ledger&rsquo;s split) renders from a single array in the page; releases from a single array; predictions likewise. The approved text of specs/024-research-hub-tracker-remodel/tracker-content.md is what gets transcribed into them — a rendered figure that cannot be traced to its array entry fails verification (spec 024 C-024-1). With scripting off, the array-driven regions show a plain note pointing to the OSF record rather than rendering empty; the collapsible articles need no script.</li>
+    <li><strong>CSS:</strong> the tracker components are new CSS and ship as <b>styles.v38.css</b> — a new versioned filename, never an in-place edit of v37 (the site&rsquo;s cache-busting rule); the research page links v38, other pages keep their current link in this spec.</li>
+    <li><strong>Gate deltas (spec 024 OQ-1 / OQ-2):</strong> two standing rules are put to the owner with this frame — (1) the ledger&rsquo;s outcome split vs the 2026-10-12 anti-tally amendment to spec 023 (approve as drawn, or record-scale numbers only); (2) public study numbers on board cards vs spec 023 FR-004 (the numbers are the ones on the public OSF registrations; no internal labels, grades, or machinery are added either way). Everything else in FR-004 stands.</li>
+    <li><strong>Unlisted mechanics (carried from spec 023 FR-001):</strong> noindex robots meta on the page; never added to the sitemap list in the generator or to llms.txt; production robots.txt deliberately unchanged. Verification re-runs the full spec 023 check set on staging and again on production (spec 024 T006/T008), including the unchanged form count.</li>
+    <li><strong>Currency rule:</strong> at every later update, statuses are refreshed from the program records and the snapshot date moves with them — the record strip, the ledger/board snapshot, and the closing snapshot line always carry one date (spec 024 FR-016 / C-024-4).</li>
+    <li><strong>Gate:</strong> this frame and the draft content in tracker-content.md are Tristen&rsquo;s to approve, amend, or reject (spec 024 T001). Until then the approved WF-18 frame above remains the design of record and the live page is untouched.</li>
+  </ul>
+
   <!-- ================= CONTACT ================= -->
   <h2 class="wf-title"><span class="wf-id">WF-06 · Contact (new page)</span>axiovexsystems.com/contact/</h2>
   <p class="wf-sub">Contact layout: page head, then two columns — note-sending left, context panels right. No CTA band; the page is the CTA. <b>REVISED 2026-10-05 (approved 2026-10-05):</b> head rhythm per WF-G2 — lede &rarr; strata 132px &rarr; 36px; strata &rarr; cards ~8px &rarr; 40px. <b>REVISED 2026-10-05 (approved 2026-10-05; implemented and live):</b> spec 005 — the left column&rsquo;s primary route becomes a contact form protected by Cloudflare Turnstile (Managed), delivered to the Start mailbox; the email routes stay as fallback, and the privacy policy&rsquo;s &ldquo;no form&rdquo; wording is updated to match (exact copy in spec 005). <b>REVISED 2026-10-06 (spec 015 — APPROVED 2026-10-06 · IMPLEMENTED + LIVE):</b> the page bottom tightens per the WF-G2 page-foot rhythm — drawn at the foot of this frame.</p>
