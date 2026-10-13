@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-13T22:22:39.114Z",
+  "updatedUtc": "2026-10-13T23:18:29.302Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -15,7 +15,7 @@
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "GSK to invest $800M in Pennsylvania expansion",
+          "title": "GSK to invest $800M on Pennsylvania expansion",
           "link": "https://www.manufacturingdive.com/news/biopharma-gsk-invest-800m-pennsylvania-expansion-montgomery-county/832846/",
           "date": "2026-10-13"
         },
@@ -25,6 +25,13 @@
           "title": "Raytheon secures 2 Pentagon contracts worth $30.7B combined",
           "link": "https://www.manufacturingdive.com/news/rtx-raytheon-dod-defense-war-sm3-ib-sm-6-missile-interceptors/832760/",
           "date": "2026-10-13"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
+          "link": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/",
+          "date": "2026-10-12"
         },
         {
           "source": "Manufacturing Dive",
@@ -52,13 +59,6 @@
           "sourceId": "manufacturing-dive",
           "title": "JE Dunn-Alberici JV breaks ground on $3.2B Texas shipyard",
           "link": "https://www.manufacturingdive.com/news/je-dunn-alberici-jv-breaks-ground-texas-shipyard/832718/",
-          "date": "2026-10-12"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Do you need a chief manufacturing officer?",
-          "link": "https://www.manufacturingdive.com/news/more-companies-recognize-value-CMO-chief-manufacturing-officer/832300/",
           "date": "2026-10-12"
         }
       ]
@@ -233,17 +233,17 @@
       "title": "Funding & policy",
       "items": [
         {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces 2026 Ernest Orlando Lawrence Award Winners",
-          "link": "https://www.energy.gov/articles/energy-department-announces-2026-ernest-orlando-lawrence-award-winners",
-          "date": "2026-10-13"
-        },
-        {
           "source": "Federal Register",
           "sourceId": "federal-register",
           "title": "Notice of Intent To Grant Exclusive Patent License to Zyltech Engineering, LLC; Houston, TX",
           "link": "https://www.federalregister.gov/documents/2026/10/13/2026-20785/notice-of-intent-to-grant-exclusive-patent-license-to-zyltech-engineering-llc-houston-tx",
+          "date": "2026-10-13"
+        },
+        {
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
+          "title": "Energy Department Announces 2026 Ernest Orlando Lawrence Award Winners",
+          "link": "https://www.energy.gov/articles/energy-department-announces-2026-ernest-orlando-lawrence-award-winners",
           "date": "2026-10-13"
         },
         {
