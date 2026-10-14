@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-14T19:22:54.791Z",
+  "updatedUtc": "2026-10-14T23:13:43.422Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -95,18 +95,18 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Tackling AI security challenges in manufacturing",
-      "source": "Manufacturing Dive",
+      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
+      "source": "Automation Alley",
       "date": "2026-10-12",
-      "url": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/"
+      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
     },
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "When agentic AI moves from the cloud to the factory floor",
+      "title": "Tackling AI security challenges in manufacturing",
       "source": "Manufacturing Dive",
       "date": "2026-10-12",
-      "url": "https://www.manufacturingdive.com/spons/when-agentic-ai-moves-from-the-cloud-to-the-factory-floor/831845/"
+      "url": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/"
     },
     {
       "lane": "ai-standards",
