@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-13T23:18:29.302Z",
+  "updatedUtc": "2026-10-14T02:21:30.115Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -31,10 +31,10 @@
     {
       "lane": "ot-security",
       "laneLabel": "OT cybersecurity",
-      "title": "Swann Communications SWIFI-SE2KIC",
+      "title": "Inductive Automation Ignition Software",
       "source": "CISA",
       "date": "2026-10-13",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01"
     },
     {
       "lane": "funding-policy",
@@ -59,6 +59,14 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-13",
       "url": "https://www.manufacturingdive.com/news/rtx-raytheon-dod-defense-war-sm3-ib-sm-6-missile-interceptors/832760/"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Swann Communications SWIFI-SE2KIC",
+      "source": "CISA",
+      "date": "2026-10-13",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
     },
     {
       "lane": "funding-policy",
@@ -99,14 +107,6 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-12",
       "url": "https://www.manufacturingdive.com/spons/when-agentic-ai-moves-from-the-cloud-to-the-factory-floor/831845/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "The manufacturing workforce is changing. Can benefits keep pace?",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-12",
-      "url": "https://www.manufacturingdive.com/spons/the-manufacturing-workforce-is-changing-can-benefits-keep-pace/832425/"
     },
     {
       "lane": "ai-standards",
