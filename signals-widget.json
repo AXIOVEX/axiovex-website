@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-14T02:21:30.115Z",
+  "updatedUtc": "2026-10-14T04:52:23.186Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -47,7 +47,7 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "GSK to invest $800M on Pennsylvania expansion",
+      "title": "GSK to invest $800M in Pennsylvania expansion",
       "source": "Manufacturing Dive",
       "date": "2026-10-13",
       "url": "https://www.manufacturingdive.com/news/biopharma-gsk-invest-800m-pennsylvania-expansion-montgomery-county/832846/"
@@ -87,14 +87,6 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
-      "source": "Automation Alley",
-      "date": "2026-10-12",
-      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
       "title": "Tackling AI security challenges in manufacturing",
       "source": "Manufacturing Dive",
       "date": "2026-10-12",
@@ -107,6 +99,14 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-12",
       "url": "https://www.manufacturingdive.com/spons/when-agentic-ai-moves-from-the-cloud-to-the-factory-floor/831845/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "The manufacturing workforce is changing. Can benefits keep pace?",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-12",
+      "url": "https://www.manufacturingdive.com/spons/the-manufacturing-workforce-is-changing-can-benefits-keep-pace/832425/"
     },
     {
       "lane": "ai-standards",
