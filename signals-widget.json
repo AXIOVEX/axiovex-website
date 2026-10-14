@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-14T15:08:43.870Z",
+  "updatedUtc": "2026-10-14T19:22:54.791Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -27,6 +27,14 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-14",
       "url": "https://www.manufacturingdive.com/news/micron-doe-genesis-mission-graduate-fellowship-pilot-program/832895/"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "Kern J.G. Enterprise, Inc. — announced permanent layoff, Sterling Heights, 156 jobs, effective August 17, 2026",
+      "source": "Michigan WARN (LEO)",
+      "date": "2026-10-14",
+      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-14-kern-j-g-enterprise-inc"
     },
     {
       "lane": "ot-security",
@@ -85,28 +93,20 @@
       "url": "https://www.energy.gov/articles/energy-department-announces-2026-ernest-orlando-lawrence-award-winners"
     },
     {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
-      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
-      "source": "Automation Alley",
-      "date": "2026-10-12",
-      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
-      "source": "Automation Alley",
-      "date": "2026-10-12",
-      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
-    },
-    {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
       "title": "Tackling AI security challenges in manufacturing",
       "source": "Manufacturing Dive",
       "date": "2026-10-12",
       "url": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "When agentic AI moves from the cloud to the factory floor",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-12",
+      "url": "https://www.manufacturingdive.com/spons/when-agentic-ai-moves-from-the-cloud-to-the-factory-floor/831845/"
     },
     {
       "lane": "ai-standards",
