@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-15T07:25:46.492Z",
+  "updatedUtc": "2026-10-15T13:25:29.703Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -23,10 +23,10 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Micron pledges $50M to support DOE’s Genesis Mission",
+      "title": "What manufacturing plant managers think of the AI and automation boom",
       "source": "Manufacturing Dive",
-      "date": "2026-10-14",
-      "url": "https://www.manufacturingdive.com/news/micron-doe-genesis-mission-graduate-fellowship-pilot-program/832895/"
+      "date": "2026-10-15",
+      "url": "https://www.manufacturingdive.com/news/what-manufacturing-plant-managers-think-of-the-ai-and-automation-boom/832776/"
     },
     {
       "lane": "michigan",
@@ -35,6 +35,22 @@
       "source": "Michigan WARN (LEO)",
       "date": "2026-10-14",
       "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-14-kern-j-g-enterprise-inc"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "GlobalFoundries building $21B New York fabs under US-Japan trade deal",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-14",
+      "url": "https://www.manufacturingdive.com/news/globalfoundries-us-japan-trade-deal-chips-malta-new-york-fabs/832953/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Micron pledges $50M to support DOE’s Genesis Mission",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-14",
+      "url": "https://www.manufacturingdive.com/news/micron-doe-genesis-mission-graduate-fellowship-pilot-program/832895/"
     },
     {
       "lane": "ot-security",
@@ -91,22 +107,6 @@
       "source": "Federal Register",
       "date": "2026-10-13",
       "url": "https://www.federalregister.gov/documents/2026/10/13/2026-20785/notice-of-intent-to-grant-exclusive-patent-license-to-zyltech-engineering-llc-houston-tx"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Energy Department Announces 2026 Ernest Orlando Lawrence Award Winners",
-      "source": "U.S. Department of Energy",
-      "date": "2026-10-13",
-      "url": "https://www.energy.gov/articles/energy-department-announces-2026-ernest-orlando-lawrence-award-winners"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Tackling AI security challenges in manufacturing",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-12",
-      "url": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/"
     },
     {
       "lane": "ai-standards",

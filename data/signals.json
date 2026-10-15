@@ -1,10 +1,24 @@
 {
-  "updatedUtc": "2026-10-15T07:25:46.492Z",
+  "updatedUtc": "2026-10-15T13:25:29.703Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "What manufacturing plant managers think of the AI and automation boom",
+          "link": "https://www.manufacturingdive.com/news/what-manufacturing-plant-managers-think-of-the-ai-and-automation-boom/832776/",
+          "date": "2026-10-15"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "GlobalFoundries building $21B New York fabs under US-Japan trade deal",
+          "link": "https://www.manufacturingdive.com/news/globalfoundries-us-japan-trade-deal-chips-malta-new-york-fabs/832953/",
+          "date": "2026-10-14"
+        },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
@@ -34,10 +48,10 @@
           "date": "2026-10-13"
         },
         {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Tackling AI security challenges in manufacturing",
-          "link": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/",
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
+          "link": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/",
           "date": "2026-10-12"
         },
         {
@@ -45,20 +59,6 @@
           "sourceId": "manufacturing-dive",
           "title": "When agentic AI moves from the cloud to the factory floor",
           "link": "https://www.manufacturingdive.com/spons/when-agentic-ai-moves-from-the-cloud-to-the-factory-floor/831845/",
-          "date": "2026-10-12"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "The manufacturing workforce is changing. Can benefits keep pace?",
-          "link": "https://www.manufacturingdive.com/spons/the-manufacturing-workforce-is-changing-can-benefits-keep-pace/832425/",
-          "date": "2026-10-12"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "JE Dunn-Alberici JV breaks ground on $3.2B Texas shipyard",
-          "link": "https://www.manufacturingdive.com/news/je-dunn-alberici-jv-breaks-ground-texas-shipyard/832718/",
           "date": "2026-10-12"
         }
       ]
