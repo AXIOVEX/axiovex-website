@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-15T13:25:29.703Z",
+  "updatedUtc": "2026-10-15T18:17:50.737Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -29,6 +29,54 @@
       "url": "https://www.manufacturingdive.com/news/what-manufacturing-plant-managers-think-of-the-ai-and-automation-boom/832776/"
     },
     {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Eclipse Foundation Eclipse Milo",
+      "source": "CISA",
+      "date": "2026-10-15",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Nestlé to spend additional $1B on manufacturing operations in Mexico",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-15",
+      "url": "https://www.manufacturingdive.com/news/nestle-investment-mexico-coffee-pet-food-emerging-markets/833093/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Applied Materials opens $5B semiconductor innovation center",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-15",
+      "url": "https://www.manufacturingdive.com/news/applied-materials-epic-semiconductor-innovation-center/833029/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Campbell’s funds new advanced manufacturing training program in Milwaukee",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-15",
+      "url": "https://www.manufacturingdive.com/news/campbells-co-per-scholas-advanced-manufacturing-training-wisconsin/833022/"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Guangzhou Juan IoT Technology EseeCloud",
+      "source": "CISA",
+      "date": "2026-10-15",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "CISA Malcolm",
+      "source": "CISA",
+      "date": "2026-10-15",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+    },
+    {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
       "title": "Kern J.G. Enterprise, Inc. — announced permanent layoff, Sterling Heights, 156 jobs, effective August 17, 2026",
@@ -53,60 +101,12 @@
       "url": "https://www.manufacturingdive.com/news/micron-doe-genesis-mission-graduate-fellowship-pilot-program/832895/"
     },
     {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Inductive Automation Ignition Software",
-      "source": "CISA",
-      "date": "2026-10-13",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01"
-    },
-    {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
       "title": "Department of Veterans Affairs → TRILLAMED LLC — $156K award, October 13, 2026",
       "source": "USAspending (Treasury)",
       "date": "2026-10-13",
       "url": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0015_3600_36C10G22D0029_3600"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Northrop Grumman, Air Force start on $4.5B facility expansion",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-13",
-      "url": "https://www.manufacturingdive.com/news/northrop-grumman-air-force-expansion-plant-42/832844/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "GSK to invest $800M in Pennsylvania expansion",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-13",
-      "url": "https://www.manufacturingdive.com/news/biopharma-gsk-invest-800m-pennsylvania-expansion-montgomery-county/832846/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Raytheon secures 2 Pentagon contracts worth $30.7B combined",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-13",
-      "url": "https://www.manufacturingdive.com/news/rtx-raytheon-dod-defense-war-sm3-ib-sm-6-missile-interceptors/832760/"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Swann Communications SWIFI-SE2KIC",
-      "source": "CISA",
-      "date": "2026-10-13",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Notice of Intent To Grant Exclusive Patent License to Zyltech Engineering, LLC; Houston, TX",
-      "source": "Federal Register",
-      "date": "2026-10-13",
-      "url": "https://www.federalregister.gov/documents/2026/10/13/2026-20785/notice-of-intent-to-grant-exclusive-patent-license-to-zyltech-engineering-llc-houston-tx"
     },
     {
       "lane": "ai-standards",
