@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-16T16:38:46.320Z",
+  "updatedUtc": "2026-10-16T19:58:02.886Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -39,7 +39,7 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Manufacturing tech orders hit 3rd-highest monthly total, AMT says",
+      "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
       "source": "Manufacturing Dive",
       "date": "2026-10-16",
       "url": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/"
@@ -51,6 +51,14 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-16",
       "url": "https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Avio’s plan to meet the US’ solid rocket motors demand",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-16",
+      "url": "https://www.manufacturingdive.com/news/avio-usa-ceo-james-syring-solid-rocket-motor-manufacturing-plant-virginia/832755/"
     },
     {
       "lane": "ot-security",
@@ -91,14 +99,6 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-15",
       "url": "https://www.manufacturingdive.com/news/campbells-co-per-scholas-advanced-manufacturing-training-wisconsin/833022/"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Guangzhou Juan IoT Technology EseeCloud",
-      "source": "CISA",
-      "date": "2026-10-15",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
     },
     {
       "lane": "funding-policy",

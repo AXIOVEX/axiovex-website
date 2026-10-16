@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-16T16:38:46.320Z",
+  "updatedUtc": "2026-10-16T19:58:02.886Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -15,7 +15,7 @@
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "Manufacturing tech orders hit 3rd-highest monthly total, AMT says",
+          "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
           "link": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/",
           "date": "2026-10-16"
         },
@@ -24,6 +24,13 @@
           "sourceId": "manufacturing-dive",
           "title": "Alcoa plans to sell part of its Massena East site for $315M",
           "link": "https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/",
+          "date": "2026-10-16"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Avio’s plan to meet the US’ solid rocket motors demand",
+          "link": "https://www.manufacturingdive.com/news/avio-usa-ceo-james-syring-solid-rocket-motor-manufacturing-plant-virginia/832755/",
           "date": "2026-10-16"
         },
         {
@@ -53,13 +60,6 @@
           "title": "Campbell’s funds new advanced manufacturing training program in Milwaukee",
           "link": "https://www.manufacturingdive.com/news/campbells-co-per-scholas-advanced-manufacturing-training-wisconsin/833022/",
           "date": "2026-10-15"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "GlobalFoundries building $21B New York fabs under US-Japan trade deal",
-          "link": "https://www.manufacturingdive.com/news/globalfoundries-us-japan-trade-deal-chips-malta-new-york-fabs/832953/",
-          "date": "2026-10-14"
         }
       ]
     },
