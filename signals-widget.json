@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-15T22:16:59.353Z",
+  "updatedUtc": "2026-10-16T05:51:38.950Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -85,6 +85,14 @@
       "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-08-28_WARN-Notice_Kern-JG-Enterprise.pdf?rev=dada26e68a0c4d0a999c5310d4a234ae&hash=4BDEA76ACA8C76587B0610D053D6557F"
     },
     {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Department of Veterans Affairs → TRILLAMED LLC — $58,908 award, October 14, 2026",
+      "source": "USAspending (Treasury)",
+      "date": "2026-10-14",
+      "url": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0057_3600_36C10G25D0026_3600"
+    },
+    {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
       "title": "GlobalFoundries building $21B New York fabs under US-Japan trade deal",
@@ -99,14 +107,6 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-14",
       "url": "https://www.manufacturingdive.com/news/micron-doe-genesis-mission-graduate-fellowship-pilot-program/832895/"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Department of Veterans Affairs → TRILLAMED LLC — $156K award, October 13, 2026",
-      "source": "USAspending (Treasury)",
-      "date": "2026-10-13",
-      "url": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0015_3600_36C10G22D0029_3600"
     },
     {
       "lane": "ai-standards",
