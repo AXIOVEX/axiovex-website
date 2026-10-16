@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-16T19:58:02.886Z",
+  "updatedUtc": "2026-10-16T22:51:16.919Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -132,15 +132,15 @@
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
-          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
-          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
+          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
+          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
           "date": "2026-10-08"
         },
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
-          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
-          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
+          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
           "date": "2026-10-08"
         },
         {
@@ -233,6 +233,13 @@
       "title": "Funding & policy",
       "items": [
         {
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
+          "title": "Energy Department Announces Virginia and West Virginia Transmission Project to Receive Defense Production Act Funding, Strengthening National Security and Grid Reliability",
+          "link": "https://www.energy.gov/articles/energy-department-announces-virginia-and-west-virginia-transmission-project-receive",
+          "date": "2026-10-16"
+        },
+        {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
           "title": "Department of Veterans Affairs → TRILLAMED LLC — $58,908 award, October 14, 2026",
@@ -280,13 +287,6 @@
           "title": "Energy Department Announces 2026 Ernest Orlando Lawrence Award Winners",
           "link": "https://www.energy.gov/articles/energy-department-announces-2026-ernest-orlando-lawrence-award-winners",
           "date": "2026-10-13"
-        },
-        {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces New Genesis Mission Awards to Advance Super Intelligence for Science",
-          "link": "https://www.energy.gov/articles/energy-department-announces-new-genesis-mission-awards-advance-super-intelligence-science",
-          "date": "2026-10-08"
         }
       ]
     }

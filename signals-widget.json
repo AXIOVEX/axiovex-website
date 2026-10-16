@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-16T19:58:02.886Z",
+  "updatedUtc": "2026-10-16T22:51:16.919Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -35,6 +35,14 @@
       "source": "Automation Alley",
       "date": "2026-10-16",
       "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
+    },
+    {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Energy Department Announces Virginia and West Virginia Transmission Project to Receive Defense Production Act Funding, Strengthening National Security and Grid Reliability",
+      "source": "U.S. Department of Energy",
+      "date": "2026-10-16",
+      "url": "https://www.energy.gov/articles/energy-department-announces-virginia-and-west-virginia-transmission-project-receive"
     },
     {
       "lane": "manufacturing",
@@ -99,14 +107,6 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-15",
       "url": "https://www.manufacturingdive.com/news/campbells-co-per-scholas-advanced-manufacturing-training-wisconsin/833022/"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Department of Veterans Affairs → TRILLAMED LLC — $58,908 award, October 14, 2026",
-      "source": "USAspending (Treasury)",
-      "date": "2026-10-14",
-      "url": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0057_3600_36C10G25D0026_3600"
     },
     {
       "lane": "ai-standards",
