@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-16T05:51:38.950Z",
+  "updatedUtc": "2026-10-16T16:38:46.320Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -23,10 +23,34 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "What manufacturing plant managers think of the AI and automation boom",
+      "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
+      "source": "Automation Alley",
+      "date": "2026-10-16",
+      "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
+      "source": "Automation Alley",
+      "date": "2026-10-16",
+      "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Manufacturing tech orders hit 3rd-highest monthly total, AMT says",
       "source": "Manufacturing Dive",
-      "date": "2026-10-15",
-      "url": "https://www.manufacturingdive.com/news/what-manufacturing-plant-managers-think-of-the-ai-and-automation-boom/832776/"
+      "date": "2026-10-16",
+      "url": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Alcoa plans to sell part of its Massena East site for $315M",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-16",
+      "url": "https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/"
     },
     {
       "lane": "ot-security",
@@ -35,6 +59,14 @@
       "source": "CISA",
       "date": "2026-10-15",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "What manufacturing plant managers think of the AI and automation boom",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-15",
+      "url": "https://www.manufacturingdive.com/news/what-manufacturing-plant-managers-think-of-the-ai-and-automation-boom/832776/"
     },
     {
       "lane": "manufacturing",
@@ -69,44 +101,12 @@
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
     },
     {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "CISA Malcolm",
-      "source": "CISA",
-      "date": "2026-10-15",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
-    },
-    {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
-      "title": "Kern J.G. Enterprise, Inc. — announced permanent layoff, Sterling Heights, 156 jobs, effective August 17, 2026",
-      "source": "Michigan WARN (LEO)",
-      "date": "2026-10-14",
-      "url": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-08-28_WARN-Notice_Kern-JG-Enterprise.pdf?rev=dada26e68a0c4d0a999c5310d4a234ae&hash=4BDEA76ACA8C76587B0610D053D6557F"
-    },
-    {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
       "title": "Department of Veterans Affairs → TRILLAMED LLC — $58,908 award, October 14, 2026",
       "source": "USAspending (Treasury)",
       "date": "2026-10-14",
       "url": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0057_3600_36C10G25D0026_3600"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "GlobalFoundries building $21B New York fabs under US-Japan trade deal",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-14",
-      "url": "https://www.manufacturingdive.com/news/globalfoundries-us-japan-trade-deal-chips-malta-new-york-fabs/832953/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Micron pledges $50M to support DOE’s Genesis Mission",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-14",
-      "url": "https://www.manufacturingdive.com/news/micron-doe-genesis-mission-graduate-fellowship-pilot-program/832895/"
     },
     {
       "lane": "ai-standards",

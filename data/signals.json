@@ -1,10 +1,31 @@
 {
-  "updatedUtc": "2026-10-16T05:51:38.950Z",
+  "updatedUtc": "2026-10-16T16:38:46.320Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
+          "link": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/",
+          "date": "2026-10-16"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Manufacturing tech orders hit 3rd-highest monthly total, AMT says",
+          "link": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/",
+          "date": "2026-10-16"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Alcoa plans to sell part of its Massena East site for $315M",
+          "link": "https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/",
+          "date": "2026-10-16"
+        },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
@@ -39,27 +60,6 @@
           "title": "GlobalFoundries building $21B New York fabs under US-Japan trade deal",
           "link": "https://www.manufacturingdive.com/news/globalfoundries-us-japan-trade-deal-chips-malta-new-york-fabs/832953/",
           "date": "2026-10-14"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Micron pledges $50M to support DOE’s Genesis Mission",
-          "link": "https://www.manufacturingdive.com/news/micron-doe-genesis-mission-graduate-fellowship-pilot-program/832895/",
-          "date": "2026-10-14"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Northrop Grumman, Air Force start on $4.5B facility expansion",
-          "link": "https://www.manufacturingdive.com/news/northrop-grumman-air-force-expansion-plant-42/832844/",
-          "date": "2026-10-13"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "GSK to invest $800M in Pennsylvania expansion",
-          "link": "https://www.manufacturingdive.com/news/biopharma-gsk-invest-800m-pennsylvania-expansion-montgomery-county/832846/",
-          "date": "2026-10-13"
         }
       ]
     },
@@ -109,6 +109,13 @@
       "title": "Michigan workforce & industry",
       "items": [
         {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
+          "link": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/",
+          "date": "2026-10-16"
+        },
+        {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
           "title": "Kern J.G. Enterprise, Inc. — announced permanent layoff, Sterling Heights, 156 jobs, effective August 17, 2026",
@@ -156,13 +163,6 @@
           "title": "Made in America Needs More Than Investment. It Needs People.",
           "link": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/",
           "date": "2026-10-05"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "WCC Expands Microelectronics and Semiconductor Workforce Training with New Classroom, NSF Grant",
-          "link": "https://automationalley.com/2026/10/02/wcc-expands-microelectronics-and-semiconductor-workforce-training-with-new-classroom-nsf-grant/",
-          "date": "2026-10-02"
         }
       ]
     },
