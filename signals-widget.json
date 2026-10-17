@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-16T22:51:16.919Z",
+  "updatedUtc": "2026-10-17T06:56:40.866Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -21,6 +21,14 @@
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Bulk Manufacturer of Controlled Substances Application: Scottsdale Research Institute",
+      "source": "Federal Register",
+      "date": "2026-10-19",
+      "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21360/bulk-manufacturer-of-controlled-substances-application-scottsdale-research-institute"
+    },
+    {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
       "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
@@ -35,14 +43,6 @@
       "source": "Automation Alley",
       "date": "2026-10-16",
       "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Energy Department Announces Virginia and West Virginia Transmission Project to Receive Defense Production Act Funding, Strengthening National Security and Grid Reliability",
-      "source": "U.S. Department of Energy",
-      "date": "2026-10-16",
-      "url": "https://www.energy.gov/articles/energy-department-announces-virginia-and-west-virginia-transmission-project-receive"
     },
     {
       "lane": "manufacturing",
@@ -67,6 +67,14 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-16",
       "url": "https://www.manufacturingdive.com/news/avio-usa-ceo-james-syring-solid-rocket-motor-manufacturing-plant-virginia/832755/"
+    },
+    {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Energy Department Announces Virginia and West Virginia Transmission Project to Receive Defense Production Act Funding, Strengthening National Security and Grid Reliability",
+      "source": "U.S. Department of Energy",
+      "date": "2026-10-16",
+      "url": "https://www.energy.gov/articles/energy-department-announces-virginia-and-west-virginia-transmission-project-receive"
     },
     {
       "lane": "ot-security",
@@ -99,14 +107,6 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-15",
       "url": "https://www.manufacturingdive.com/news/applied-materials-epic-semiconductor-innovation-center/833029/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Campbell’s funds new advanced manufacturing training program in Milwaukee",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-15",
-      "url": "https://www.manufacturingdive.com/news/campbells-co-per-scholas-advanced-manufacturing-training-wisconsin/833022/"
     },
     {
       "lane": "ai-standards",

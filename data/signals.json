@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-16T22:51:16.919Z",
+  "updatedUtc": "2026-10-17T06:56:40.866Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -132,15 +132,15 @@
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
-          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
-          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
+          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
           "date": "2026-10-08"
         },
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
-          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
-          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
+          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
+          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
           "date": "2026-10-08"
         },
         {
@@ -233,6 +233,13 @@
       "title": "Funding & policy",
       "items": [
         {
+          "source": "Federal Register",
+          "sourceId": "federal-register",
+          "title": "Bulk Manufacturer of Controlled Substances Application: Scottsdale Research Institute",
+          "link": "https://www.federalregister.gov/documents/2026/10/19/2026-21360/bulk-manufacturer-of-controlled-substances-application-scottsdale-research-institute",
+          "date": "2026-10-19"
+        },
+        {
           "source": "U.S. Department of Energy",
           "sourceId": "doe",
           "title": "Energy Department Announces Virginia and West Virginia Transmission Project to Receive Defense Production Act Funding, Strengthening National Security and Grid Reliability",
@@ -242,44 +249,23 @@
         {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → TRILLAMED LLC — $58,908 award, October 14, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0057_3600_36C10G25D0026_3600",
-          "date": "2026-10-14"
+          "title": "Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $46,457 award, October 15, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C26127P0069_3600_-NONE-_-NONE-",
+          "date": "2026-10-15"
         },
         {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → TRILLAMED LLC — $37,125 award, October 14, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0054_3600_36C10G26D0005_3600",
-          "date": "2026-10-14"
+          "title": "Department of Veterans Affairs → WRIGHT & FILIPPIS, LLC — $20,246 award, October 15, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027N0083_3600_36C25025A0066_3600",
+          "date": "2026-10-15"
         },
         {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → TRILLAMED LLC — $836K award, October 14, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0053_3600_36C10G23D0003_3600",
-          "date": "2026-10-14"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → ELECTRA-MED CORPORATION — $768K award, October 14, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0052_3600_36C10G25D0022_3600",
-          "date": "2026-10-14"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → TRILLAMED LLC — $7.4M award, October 14, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0046_3600_36C10G22D0032_3600",
-          "date": "2026-10-14"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Justice → NATIONAL FOOD GROUP INC — $48,390 award, October 14, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_15B31527P00000011_1540_-NONE-_-NONE-",
-          "date": "2026-10-14"
+          "title": "Department of Veterans Affairs → ELECTRA-MED CORPORATION — $21,507 award, October 15, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0056_3600_36C10G24D0057_3600",
+          "date": "2026-10-15"
         },
         {
           "source": "U.S. Department of Energy",
@@ -287,6 +273,20 @@
           "title": "Energy Department Announces 2026 Ernest Orlando Lawrence Award Winners",
           "link": "https://www.energy.gov/articles/energy-department-announces-2026-ernest-orlando-lawrence-award-winners",
           "date": "2026-10-13"
+        },
+        {
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
+          "title": "Energy Department Announces New Genesis Mission Awards to Advance Super Intelligence for Science",
+          "link": "https://www.energy.gov/articles/energy-department-announces-new-genesis-mission-awards-advance-super-intelligence-science",
+          "date": "2026-10-08"
+        },
+        {
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
+          "title": "U.S. Department of Energy Awards $96 Million to 67 Early Career Scientists",
+          "link": "https://www.energy.gov/articles/us-department-energy-awards-96-million-67-early-career-scientists",
+          "date": "2026-10-08"
         }
       ]
     }
