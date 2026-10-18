@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-17T21:27:57.056Z",
+  "updatedUtc": "2026-10-18T04:31:51.322Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -31,10 +31,10 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
-      "source": "Automation Alley",
+      "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
+      "source": "Manufacturing Dive",
       "date": "2026-10-16",
-      "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
+      "url": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/"
     },
     {
       "lane": "michigan",
@@ -43,14 +43,6 @@
       "source": "Automation Alley",
       "date": "2026-10-16",
       "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-16",
-      "url": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/"
     },
     {
       "lane": "manufacturing",
@@ -67,6 +59,14 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-16",
       "url": "https://www.manufacturingdive.com/news/avio-usa-ceo-james-syring-solid-rocket-motor-manufacturing-plant-virginia/832755/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
+      "source": "Automation Alley",
+      "date": "2026-10-16",
+      "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
     },
     {
       "lane": "funding-policy",
