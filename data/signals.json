@@ -1,10 +1,17 @@
 {
-  "updatedUtc": "2026-10-18T04:31:51.322Z",
+  "updatedUtc": "2026-10-18T09:37:20.688Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
+          "link": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/",
+          "date": "2026-10-16"
+        },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
@@ -24,13 +31,6 @@
           "sourceId": "manufacturing-dive",
           "title": "Avio’s plan to meet the US’ solid rocket motors demand",
           "link": "https://www.manufacturingdive.com/news/avio-usa-ceo-james-syring-solid-rocket-motor-manufacturing-plant-virginia/832755/",
-          "date": "2026-10-16"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
-          "link": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/",
           "date": "2026-10-16"
         },
         {
