@@ -1,6 +1,6 @@
 # Staging alignment with the October 19 business thesis
 
-Status: WF-19 prepared; awaiting owner approval before website implementation.
+Status: WF-19 explicitly approved by Tristen for staging on October 19, 2026. Implemented locally; deployment verification pending.
 
 Owner request: update the Axiovex staging website to align with the attached thesis.
 
@@ -24,3 +24,14 @@ Verification: source-to-copy review; generated output reproducibility; HTML and
 JSON-LD validation; desktop/mobile visual inspection and overflow check; real
 staging HTTP/content/noindex checks. Keep the original production deployment
 unchanged by this feature.
+
+
+Local verification: HTML-Validate 10.5.0 reports no errors on home, contact
+and newsletter landing. Rebuilding identical inputs produces identical page
+hashes. Browser checks at 1280px and 390px found no horizontal overflow; all
+home anchors resolve and the eight FAQ answers exactly match structured data.
+Mobile navigation opens, and contact field names/actions remain unchanged.
+The existing public research link responds HTTP 200; /research/ stays unlisted.
+The generator owns new home/contact templates, and styles.v41.css scopes the
+approved hero fit. Staging newsletter copy now follows the previously approved
+monthly cadence; this does not alter production or send mail.
