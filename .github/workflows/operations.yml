@@ -2,8 +2,12 @@ name: Website operations (Meta Muse replacement)
 on:
   schedule:
     # Both UTC offsets; calendar.mjs gates by America/New_York local hour.
-    - cron: '39 12,13,14,15 * * *'
-    - cron: '0 14,15 * * 3'
+    - cron: '39 12 * * *'
+    - cron: '39 13 * * *'
+    - cron: '39 14 * * *'
+    - cron: '39 15 * * *'
+    - cron: '0 14 * * 3'
+    - cron: '0 15 * * 3'
   workflow_dispatch:
     inputs:
       task:
@@ -45,6 +49,7 @@ jobs:
       - id: calendar
         env:
           REQUESTED_TASK: ${{ github.event_name == 'push' && 'health' || inputs.task }}
+          SCHEDULE_CRON: ${{ github.event.schedule }}
         run: node scripts/ops/calendar.mjs
   report:
     needs: calendar

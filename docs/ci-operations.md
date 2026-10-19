@@ -27,7 +27,8 @@ Actions schedules are approximate. The runner fires at :39 in UTC hours
 12–15 (:00 in UTC hours 14/15 on Wednesday for newsletter sending), then gates
 on America/New_York local hour and minute. Both DST offsets are
 covered with one eligible slot per task per day. Manual dispatch recovers
-missed schedules. Dispatching reports uses the current date; historical
+missed schedules. Gates use the nominal UTC cron slot so runner queue delays
+within the day do not silently drop the task. Dispatching reports uses the current date; historical
 backfill is not implemented. Concurrency serializes each task.
 
 ## Outputs and failures

@@ -22,6 +22,16 @@ export function due(now = new Date()) {
   if (hour === 10 && p.minute === '00' && p.weekday === 'Wed') tasks.push('newsletter-send');
   return tasks;
 }
+export function scheduledTime(cron, now = new Date()) {
+  // GitHub can queue a run past its scheduled hour. Gate using the nominal
+  // slot, not the eventual runner start minute, or jobs silently disappear.
+  const match = /^(\d{1,2}) (\d{1,2}) \* \* (?:\*|3)$/.exec(cron || '');
+  if (!match || +match[1] > 59 || +match[2] > 23) throw new Error('Unsupported operations schedule');
+  const slot = new Date(now);
+  slot.setUTCHours(+match[2], +match[1], 0, 0);
+  if (slot > now) slot.setUTCDate(slot.getUTCDate() - 1);
+  return slot;
+}
 export function shift(date, days) {
   return new Date(Date.parse(date + 'T12:00:00Z') + days * 86400000).toISOString().slice(0, 10);
 }
@@ -53,7 +63,7 @@ export function windows(cadence, now = new Date()) {
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const manual = process.env.REQUESTED_TASK;
-  const tasks = manual ? [manual] : due();
+  const tasks = manual ? [manual] : due(process.env.SCHEDULE_CRON ? scheduledTime(process.env.SCHEDULE_CRON) : new Date());
   if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, `tasks=${JSON.stringify(tasks)}\nactive=${tasks.length > 0}\n`);
   console.log(JSON.stringify(tasks));
 }

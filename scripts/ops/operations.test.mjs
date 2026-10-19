@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { due, midnight, windows } from './calendar.mjs';
+import { due, midnight, windows, scheduledTime } from './calendar.mjs';
 import { aggregate, delta, statusLabel } from './analytics.mjs';
 import { verifyApproval } from './newsletter.mjs';
 import { inspect } from './health.mjs';
@@ -17,6 +17,13 @@ test('ET schedules run once across both UTC offsets', () => {
   assert.deepEqual(due(new Date('2026-10-21T15:00:00Z')), []);
   assert.deepEqual(due(new Date('2026-12-09T15:00:00Z')), ['newsletter-send']);
   assert.deepEqual(due(new Date('2026-10-20T13:39:00Z')), ['newsletter-draft']);
+});
+test('runner queue delays do not lose a scheduled task', () => {
+  const slot = scheduledTime('39 12 * * *', new Date('2026-10-19T16:17:22Z'));
+  assert.equal(slot.toISOString(), '2026-10-19T12:39:00.000Z');
+  assert.deepEqual(due(slot), ['daily']);
+  assert.deepEqual(due(scheduledTime('0 14 * * 3', new Date('2026-10-21T18:20:00Z'))), ['newsletter-send']);
+  assert.throws(() => scheduledTime('39 12,13 * * *'));
 });
 test('monthly amendments include leap years and February last day', () => {
   assert.deepEqual(due(new Date('2027-02-28T14:39:00Z')), ['monthly', 'workforce']);
