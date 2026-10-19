@@ -19,7 +19,7 @@ on:
         options: [all, bea, census, dol-claims, eia, fred, jolts, scorecard]
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: data-pack-sync
@@ -30,8 +30,18 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
+      - name: Create scoped website publisher token
+        id: publisher
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.AXIOVEX_PUBLISH_APP_ID }}
+          private-key: ${{ secrets.AXIOVEX_PUBLISH_PRIVATE_KEY }}
+          owner: AXIOVEX
+          repositories: axiovex-website
+          permission-contents: write
       - uses: actions/checkout@v4
         with:
+          token: ${{ steps.publisher.outputs.token || github.token }}
           fetch-depth: 0
 
       - uses: actions/setup-node@v4

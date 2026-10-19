@@ -31,7 +31,7 @@ jobs:
       - run: node --test scripts/ops/*.test.mjs
   calendar:
     needs: test
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && (github.event_name != 'push' || github.actor != vars.AXIOVEX_PUBLISH_BOT_LOGIN)
     runs-on: ubuntu-latest
     outputs:
       tasks: ${{ steps.calendar.outputs.tasks }}

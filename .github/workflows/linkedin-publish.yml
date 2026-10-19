@@ -9,7 +9,7 @@ on:
         default: preflight
         options: [preflight, publish]
 permissions:
-  contents: write
+  contents: read
   actions: read
 concurrency:
   group: linkedin-publication
@@ -28,8 +28,19 @@ jobs:
       LINKEDIN_PERSON_URN: ${{ vars.LINKEDIN_PERSON_URN }}
       LINKEDIN_EXPIRES_AT: ${{ vars.LINKEDIN_EXPIRES_AT }}
     steps:
+      - name: Create scoped website publisher token
+        if: inputs.action != 'preflight'
+        id: publisher
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.AXIOVEX_PUBLISH_APP_ID }}
+          private-key: ${{ secrets.AXIOVEX_PUBLISH_PRIVATE_KEY }}
+          owner: AXIOVEX
+          repositories: axiovex-website
+          permission-contents: write
       - uses: actions/checkout@v4
         with:
+          token: ${{ steps.publisher.outputs.token || github.token }}
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:

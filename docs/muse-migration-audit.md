@@ -80,3 +80,13 @@ An explicit Tristen-only test verifies real receipt, and the monthly subscriber
 release can require that matching inbox receipt via NEWSLETTER_VERIFY_INBOX.
 BLS annual CI now uses the keyed API if its public download hosts reject runners;
 the verified occupation universe is explicitly dated and guarded against a new year.
+
+
+The audit exposed a separate publication blocker: the owner-only all-branch rule
+rejected actual CI writes. The approved fix uses an AXIOVEX-owned app exception
+for normal main updates only, retaining the remaining owner-only restrictions.
+A real bot publication and deployment must pass before calling that blocker closed.
+
+Real inbox evidence is now verified (run 39324152242) and required for the final
+monthly preview. This closes external inbox observation for release checks; the
+production Managed Turnstile challenge remains distinct from isolated browser CI.

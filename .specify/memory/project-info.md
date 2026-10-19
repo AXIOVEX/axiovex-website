@@ -85,3 +85,14 @@
   XLSX and bulk download requests, so CI uses its keyed named-measure API across
   all 831 verified 2025–35 occupations. A new base year requires a newly verified
   occupation universe before ranking; no fixed list is called timeless/latest.
+
+- Real newsletter inbox proof passed GitHub run 39324152242: received October 19
+  at 21:01:42 UTC, only Tristen; all eight delivery/content checks passed.
+  NEWSLETTER_VERIFY_INBOX=true is enabled. Month-end subscriber distribution
+  now requires the matching final-preview inbox receipt, not Graph acceptance alone.
+- CI publication identity decision: docs/decisions/2026-10-19-ci-publisher.md.
+  The owner approved a private AXIOVEX-owned repository-scoped publisher app after
+  GitHub rejected its built-in Actions app as a ruleset bypass actor. Preserve
+  owner-only other branches and main creation/deletion/force-push protections.
+  The dedicated app gets only normal main-update exception. Never replace this
+  with an owner's personal access token or a global branch-protection disable.
