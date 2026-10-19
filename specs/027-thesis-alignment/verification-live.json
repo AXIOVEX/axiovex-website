@@ -1,0 +1,49 @@
+{
+  "checkedUtc": "2026-10-19T21:33:41.207Z",
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "bytes": 31217
+    },
+    {
+      "path": "/contact/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "bytes": 16194
+    },
+    {
+      "path": "/newsletter/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "bytes": 11644
+    },
+    {
+      "path": "/llms.txt",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "bytes": 3826
+    },
+    {
+      "path": "/styles.v41.css",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "bytes": 45976
+    }
+  ],
+  "robotsDisallowAll": true,
+  "deployedContentCommit": "8fb2730",
+  "pullRequest": "https://github.com/AXIOVEX/axiovex-website/pull/21",
+  "cloudflareProductionAndStagingChecks": "success",
+  "browser": {
+    "desktopWidth": 1280,
+    "mobileWidth": 390,
+    "horizontalOverflow": false,
+    "faqCount": 9,
+    "faqSchemaMatchesVisibleCopy": true
+  },
+  "production": "Original homepage retained; HTTP 200, no noindex header",
+  "mailSent": false,
+  "thesisPdfUploaded": false
+}

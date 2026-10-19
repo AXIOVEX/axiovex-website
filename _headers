@@ -10,3 +10,6 @@
   X-Robots-Tag: noindex
 /llms-full.txt
   Content-Type: text/plain; charset=utf-8
+
+/research/*
+  X-Robots-Tag: noindex

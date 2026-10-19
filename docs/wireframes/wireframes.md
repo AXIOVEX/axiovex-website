@@ -1028,3 +1028,23 @@ labels itself an automated data brief and preserves source vintages.
 Newsletter browser-loop verification found overflow in the existing WF-17
 landing card at 390px. Keep its current anatomy and palette, but include the
 card padding inside its declared width so it fits the viewport.
+
+
+## WF-19 — Thesis alignment (October 19, 2026; approved for staging)
+
+Review drawing and exact proposed copy: `thesis-alignment-2026-10-19.html`.
+Source: owner's attached October 19 business thesis. Lead with the Michigan
+flagship; group its five functions into three pilot paths. Keep PCE development,
+data rights, financing and delivery commitments explicitly conditional. Preserve
+brand, founders, existing evidence assets, contact behavior and staging guards.
+Homepage metadata/FAQ and contact positioning follow the visible copy. No thesis
+PDF, internal financing details or new partner claims are published. Tristen approved WF-19 for staging in this chat on October 19, 2026.
+Production promotion remains separate.
+
+
+WF-19 owner amendment, October 19: change the AI question to “Do you offer AI
+training and engineering?” Add exploratory startup/growth packages (websites,
+corporate operating systems and Michigan business-resource guidance), including
+existing companies. The package scope, pricing, access, eligibility and funding
+remain unconfirmed. This specific amendment was directed by Tristen in chat.
+

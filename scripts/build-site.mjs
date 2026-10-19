@@ -1857,6 +1857,7 @@ function buildSignals(posts) {
    only — the spec 020 emails' CTA links target
    /signals/#newsletter. */
 const NL_DONE_LEDE = 'We sent a confirmation email to the address you gave us. Click the link in it \u2014 good for 48 hours \u2014 and the first edition arrives after the monthly economic releases. No click, no emails: that\u2019s the deal.';
+
 const NL_FINE_FULL = 'One email a month. We send a confirmation first \u2014 nothing arrives until you click it. Unsubscribe in one click, any time. <strong>No tracking pixels, no per-reader analytics.</strong> <a href="/privacy/">Privacy policy</a>';
 const NL_FINE_COMPACT = 'One email a month \u00b7 confirmation first \u00b7 one-click unsubscribe \u00b7 <strong>no tracking pixels</strong>. <a href="/privacy/">Privacy policy</a>';
 
@@ -1900,6 +1901,7 @@ function newsletterBlock(source, opts) {
   const issue = source === 'issue';
   const eyebrow = issue ? 'READING SOMEONE ELSE\u2019S COPY?' : 'THE AXIOVEX SIGNAL \u2014 MONTHLY';
   const heading = issue ? 'Get the monthly edition.' : 'The month, in your inbox.';
+
   const lede = issue
     ? 'The same edition, in your own inbox \u2014 after the monthly economic releases, with the numbers, their vintages, and why they matter.'
     : 'What changed in Michigan industry and the field \u2192 one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.';
@@ -1998,6 +2000,7 @@ function buildNewsletter() {
         '              <a class="explore" href="/newsletter/' + issue.date + '/">READ THE WEB EDITION \u2192</a>\n' +
         '            </article>').join('\n            ')
     : '<p class="nl-empty">No editions yet. The first goes out after the monthly economic releases.</p>';
+
   mkdirSync(path.join(ROOT, 'newsletter'), { recursive: true });
   writeFileSync(path.join(ROOT, 'newsletter', 'index.html'), fill(indexTpl, {
     '{{ISSUE_ROWS}}': rows,
@@ -2289,6 +2292,11 @@ function buildNewsletterChrome() {
 }
 
 /* ================= Main ================= */
+// Static page sources join the same generator as Signals, newsletter and chrome.
+for (const [template, output] of [['home.html', 'index.html'], ['contact.html', 'contact/index.html']]) {
+  writeFileSync(path.join(ROOT, output), readFileSync(path.join(ROOT, 'scripts', 'templates', template), 'utf8'));
+}
+
 const sharedDir = process.argv[2] || '/tmp/shared-documents';
 let docsInfo = { maxDate: null, count: 0 };
 if (existsSync(sharedDir)) {

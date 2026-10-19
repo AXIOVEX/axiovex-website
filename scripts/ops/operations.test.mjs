@@ -73,3 +73,13 @@ test('research noindex is intentional; public pages must stay indexable', () => 
   assert.equal(inspect(html, 'https://axiovexsystems.com/').checks.indexingPolicy, false);
   assert.equal(inspect('', 'https://axiovexsystems.com/research/').checks.indexingPolicy, false);
 });
+
+
+test('BitConcepts and internal research discovery links are confined to research', () => {
+  const link = '<a href="https://bitconcepts.tech/research/">Research</a>';
+  assert.equal(inspect(link, 'https://axiovexsystems.com/').checks.bitConceptsLinkPolicy, false);
+  assert.equal(inspect(link, 'https://axiovexsystems.com/research/').checks.bitConceptsLinkPolicy, true);
+  assert.equal(inspect('<a href="https://www.bitconcepts.tech/">External</a>', 'https://axiovexsystems.com/blog/').checks.bitConceptsLinkPolicy, false);
+  assert.equal(inspect('<a href="/research/">Hub</a>', 'https://axiovexsystems.com/').checks.researchUnlistedLinks, false);
+  assert.equal(inspect('<a href="/research/records/evidence.json">Evidence</a>', 'https://axiovexsystems.com/research/').checks.researchUnlistedLinks, true);
+});

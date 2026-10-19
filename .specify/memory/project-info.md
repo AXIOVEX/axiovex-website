@@ -107,3 +107,11 @@
   the validated parser succeeds for every retained geography. Historical study
   links remain background reading. Signals source notes use current pupil
   metadata instead of the obsolete January estimate label.
+
+- October 19: Tristen approved thesis-aligned staging and directed production
+  promotion, including the “Do you offer” AI FAQ and exploratory startup/growth
+  packages (websites, corporate operating systems and Michigan resources).
+- BitConcepts links are permitted only on /research/. Research remains a special
+  unlisted page: no internal discovery links, sitemap/llms entries or robots.txt
+  entry; page meta and research-only response headers require noindex. Public
+  pages remain indexable. CI checks enforce the link boundary.

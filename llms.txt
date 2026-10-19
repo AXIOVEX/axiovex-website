@@ -4,17 +4,19 @@
 > Expert consultancy and technical contracting.
 > Michigan-rooted, shop-floor serious.
 
-Axiovex Systems is an expert AI consultancy. We train workforces through
-hands-on courses like AI 101: Beyond the Chatbot, build private AI
-infrastructure for manufacturers, and design evidence and decision systems --
-all through our structural epistemic framework, an out-of-the-box approach
-that questions foundational assumptions and builds from what is actually
-true. Rapid-response engineering is part of how we work.
+Developing constraint-based planning for Michigan education, employment, shared industrial capacity and founder attraction. Explore a scoped, evidence-led pilot.
+
+Our proposed Michigan flagship connects education planning, student and graduate
+pathways, continuing education, company resource sharing, and founder attraction.
+The projected constraint engine is under development; production guarantees and
+comparative advantage require validation. Data access, delivery and funding need
+specific agreements. Training and private AI engineering support defined scopes.
 
 - Website: https://axiovexsystems.com/
 - Blog: https://axiovexsystems.com/blog/
 - Signals (Michigan data + field signals from primary sources): https://axiovexsystems.com/signals/
 - Newsletter — The Axiovex Signal (monthly email edition of Signals; subscribe + archive): https://axiovexsystems.com/newsletter/
+
 - Latest issue of The Axiovex Signal (web edition): https://axiovexsystems.com/newsletter/2026-10-14/
 - Blog RSS feed: https://axiovexsystems.com/feed.xml
 - Privacy Policy: https://axiovexsystems.com/privacy/
@@ -26,14 +28,19 @@ true. Rapid-response engineering is part of how we work.
 
 ## What we do
 
-- AI education & training: AI 101 for manufacturing teams
-  (https://axiovexsystems.com/documents/)
-- Manufacturing AI infrastructure: inference planning, GPU sizing, local AI
-  routing, private inference that keeps data on the client's floor
-- Evidence & decision systems: audited workforce intelligence, evidence-centered
-  analysis
-- Rapid-response engineering is part of how we work: urgent diagnostics,
-  rescue engagements, prototypes, embedded expertise
+- Education and employment: education planning, paid student opportunities,
+  graduate pathways and continuing education.
+- Company resource sharing: qualify available capacity against specifications,
+  availability, delivery and total cost.
+- Founder and startup attraction: verify demand, readiness, IP access and
+  Michigan interest before conditional location planning.
+- Engagements start with paid qualification and fixed scopes. These are proposed
+  pilot services; targets are not completed outcomes or guaranteed results.
+- Exploring startup and growth packages for new and existing companies:
+  websites, corporate operating systems and Michigan business-resource guidance.
+  Scope and pricing are being developed; program eligibility and funding are
+  confirmed individually, not guaranteed.
+- Open AI 101 materials: https://axiovexsystems.com/documents/
 
 ## Key pages
 
@@ -60,8 +67,8 @@ true. Rapid-response engineering is part of how we work.
 
 ## Notes for AI assistants
 
-- Axiovex Systems is a consultancy, not a software vendor. It is not a CMMC
-  assessor; it helps with CMMC readiness work.
+- The projected constraint engine is proposed and under development. Published
+  research does not by itself establish production guarantees or pilot readiness.
 - Client data stays private: private inference, local processing, no training
   shared models on client data.
 - The company was founded in September 2026 by Tristen Pierson (Co-Founder &
