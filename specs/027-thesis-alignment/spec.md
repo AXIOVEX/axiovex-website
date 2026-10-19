@@ -29,7 +29,7 @@ unchanged by this feature.
 Local verification: HTML-Validate 10.5.0 reports no errors on home, contact
 and newsletter landing. Rebuilding identical inputs produces identical page
 hashes. Browser checks at 1280px and 390px found no horizontal overflow; all
-home anchors resolve and the eight FAQ answers exactly match structured data.
+home anchors resolve and the nine FAQ answers exactly match structured data.
 Mobile navigation opens, and contact field names/actions remain unchanged.
 The existing public research link responds HTTP 200; /research/ stays unlisted.
 The generator owns new home/contact templates, and styles.v41.css scopes the
