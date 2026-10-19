@@ -39,8 +39,10 @@ Download these artifacts to preserve a longer audit trail. They are not
 committed or published as website content. GitHub failure notifications
 depend on the repository watchers' Actions notification settings.
 
-Missing configuration fails visibly. Analytics exit 2 means partial evidence,
-not success. Raw responses survive report/API errors. Official checker scores
+Missing configuration fails visibly. The analytics collector's exit 2 means
+partial evidence. The report runner labels that report PARTIAL and lets it be
+delivered; actual API failures, failed health checks and email failures fail
+the job. Raw responses survive report/API errors. Official checker scores
 are never replaced by a made-up local score. Live health checks preserve the
 intentional `/research/` noindex and sitemap/llms exclusion (specs 023/024).
 
@@ -63,18 +65,33 @@ with the raw responses retained (spec 006 phantom-status guard).
 
 - `CLOUDFLARE_ANALYTICS_TOKEN`: the existing zone-only Analytics Read + Zone
   Read token from the Muse vault; do not use an account administrator token.
-- `REPORT_GMAIL_CLIENT_ID`, `REPORT_GMAIL_CLIENT_SECRET`,
-  `REPORT_GMAIL_REFRESH_TOKEN`: an OAuth grant with Gmail send access for
-  tristen.pierson@gmail.com. The mail step sends the full report to
-  tristen@axiovexsystems.com and rockson@axiovexsystems.com. Gmail API
-  acceptance is not proof of inbox delivery. No newsletter credential is
-  reused for these reports.
-- `NEWSLETTER_SEND_SECRET`: the existing production endpoint shared secret.
+- `NEWSLETTER_SEND_SECRET`: the production automation shared secret, already
+  configured. It authenticates newsletter sending and the fixed-recipient
+  founder report endpoint. No Gmail credentials are used or required.
 - `BLS_API_KEY` already exists and is passed to the workforce collector.
   The pack sync's existing keys are unchanged.
 
 Do not paste credentials into issues, PRs, reports or chat. Use GitHub's
 Actions secret settings or `gh secret set NAME` with secure stdin.
+
+## Microsoft 365 founder report delivery
+
+CI posts reports to `/api/ops/report`. The endpoint sends from
+`newsletter@axiovexsystems.com` to tristen@axiovexsystems.com and
+rockson@axiovexsystems.com only. The existing dedicated Newsletter application
+and its mail-enabled security scope group remain unchanged. Its
+`NEWSLETTER_GRAPH_TENANT_ID`, `NEWSLETTER_GRAPH_CLIENT_ID` and
+`NEWSLETTER_GRAPH_CLIENT_SECRET` stay encrypted/configured in Cloudflare Pages;
+they are not copied into GitHub. The Contact app and Start mailbox are untouched.
+The endpoint refuses unauthenticated requests, staging sends, recipient/sender
+overrides and oversized bodies. These internal report emails do not touch the
+subscriber list, send ledger, subscriber approval or unsubscribe state.
+
+Daily/weekly/monthly, workforce execution and newsletter preparation reports
+are emailed to both founders. Weekly/monthly reports include live technical
+health. `mail-delivery.json` records Microsoft acceptance, sender, recipients
+and time; the message is saved in Newsletter Sent Items. Graph acceptance is
+not proof of inbox delivery. No retry is made after an uncertain mail result.
 
 ## Newsletter review and send
 

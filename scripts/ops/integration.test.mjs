@@ -22,7 +22,7 @@ function run(mode, { key = '', apiError = false } = {}) {
   `);
   const child = spawnSync(process.execPath, ['--import', pathToFileURL(hook).href, 'scripts/ops/analytics.mjs', mode], {
     encoding: 'utf8', env: { ...process.env, CLOUDFLARE_ANALYTICS_TOKEN: key, OPS_OUTPUT: temp, GITHUB_STEP_SUMMARY: '',
-      REPORT_GMAIL_CLIENT_ID: '', REPORT_GMAIL_CLIENT_SECRET: '', REPORT_GMAIL_REFRESH_TOKEN: '' },
+      NEWSLETTER_SEND_SECRET: '' },
   });
   return { ...child, temp, report: readFileSync(path.join(temp, 'report.md'), 'utf8') };
 }

@@ -21,7 +21,7 @@ on:
     branches: [main]
     paths: ['**.html', '**.js', '**.mjs', 'robots.txt', 'sitemap.xml', 'llms.txt', '.github/workflows/operations*.yml']
   pull_request:
-    paths: ['scripts/ops/**', '.github/workflows/operations*.yml']
+    paths: ['scripts/ops/**', 'functions/api/ops/**', '.github/workflows/operations*.yml']
 permissions:
   contents: read
   actions: read
@@ -73,10 +73,8 @@ jobs:
         env:
           CADENCE: ${{ matrix.task }}
           CLOUDFLARE_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
-          REPORT_GMAIL_CLIENT_ID: ${{ secrets.REPORT_GMAIL_CLIENT_ID }}
-          REPORT_GMAIL_CLIENT_SECRET: ${{ secrets.REPORT_GMAIL_CLIENT_SECRET }}
-          REPORT_GMAIL_REFRESH_TOKEN: ${{ secrets.REPORT_GMAIL_REFRESH_TOKEN }}
-        run: node scripts/ops/analytics.mjs "$CADENCE"
+          NEWSLETTER_SEND_SECRET: ${{ secrets.NEWSLETTER_SEND_SECRET }}
+        run: node scripts/ops/run-report.mjs "$CADENCE"
       - name: Live technical SEO and crawler checks
         if: matrix.task == 'health'
         run: node scripts/ops/health.mjs
@@ -137,12 +135,11 @@ jobs:
         env:
           BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
         run: bash scripts/ops/workforce.sh
-      - name: Email founder analytics report
-        if: always() && contains(fromJSON('["daily","weekly","monthly"]'), matrix.task)
+      - name: Email report to founders through Microsoft 365
+        if: always() && contains(fromJSON('["daily","weekly","monthly","workforce","newsletter-draft"]'), matrix.task)
         env:
-          REPORT_GMAIL_CLIENT_ID: ${{ secrets.REPORT_GMAIL_CLIENT_ID }}
-          REPORT_GMAIL_CLIENT_SECRET: ${{ secrets.REPORT_GMAIL_CLIENT_SECRET }}
-          REPORT_GMAIL_REFRESH_TOKEN: ${{ secrets.REPORT_GMAIL_REFRESH_TOKEN }}
+          NEWSLETTER_SEND_SECRET: ${{ secrets.NEWSLETTER_SEND_SECRET }}
+          REPORT_KIND: ${{ matrix.task }}
         run: node scripts/ops/mail.mjs
       - name: Preserve report and raw evidence even on failure
         if: always()

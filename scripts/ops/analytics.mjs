@@ -63,7 +63,7 @@ async function main() {
   if (!/^[a-f0-9]{32}$/.test(zone)) throw new Error('Invalid zone ID');
   const gaps = ['Distinct visitors unavailable: summing hourly uniques would double-count people.'];
   if (cadence !== 'daily') gaps.push('Official AEO/Seobility scores unavailable: Muse checker access and score history have not been migrated. Baselines: AEO 100, Seobility 90.');
-  if (['REPORT_GMAIL_CLIENT_ID', 'REPORT_GMAIL_CLIENT_SECRET', 'REPORT_GMAIL_REFRESH_TOKEN'].some(k => !process.env[k])) gaps.push('Report email delivery unavailable until Gmail OAuth credentials are configured (see operations runbook).');
+  if (!process.env.NEWSLETTER_SEND_SECRET) gaps.push('Report email delivery is not configured: NEWSLETTER_SEND_SECRET is absent.');
   const range = (start, end) => `datetime_geq: ${JSON.stringify(midnight(start))}, datetime_lt: ${JSON.stringify(midnight(end))}`;
   const totals = {};
   const series = {};
