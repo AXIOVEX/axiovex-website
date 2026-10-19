@@ -51,3 +51,8 @@ execution; shared-document synchronization; blog/feed/sitemap generation.
 These are explicit residual duties, not a claim that every old Muse activity
 has become fully unattended. The current implementation removes Muse from
 automatic website monitoring and deterministic publication.
+
+Live verification also exposed GitHub concurrency pending-run replacement when
+unrelated writers shared one group. Each workflow keeps its own queue so a
+new site-sync cannot cancel a pending economic refresh. Git rebase/push errors
+remain visible rather than being ignored.
