@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-13T23:18:29.302Z",
+  "updatedUtc": "2026-10-19T13:27:47.017Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -23,90 +23,90 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Northrop Grumman, Air Force start on $4.5B facility expansion",
+      "title": "From Auburn Hills to Luxembourg: Christian Lopez’s Co-op experience",
       "source": "Manufacturing Dive",
-      "date": "2026-10-13",
-      "url": "https://www.manufacturingdive.com/news/northrop-grumman-air-force-expansion-plant-42/832844/"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Swann Communications SWIFI-SE2KIC",
-      "source": "CISA",
-      "date": "2026-10-13",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
+      "date": "2026-10-19",
+      "url": "https://www.manufacturingdive.com/spons/from-auburn-hills-to-luxembourg-christian-lopezs-co-op-experience/832608/"
     },
     {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
-      "title": "Notice of Intent To Grant Exclusive Patent License to Zyltech Engineering, LLC; Houston, TX",
+      "title": "Bulk Manufacturer of Controlled Substances Application: Scottsdale Research Institute",
       "source": "Federal Register",
-      "date": "2026-10-13",
-      "url": "https://www.federalregister.gov/documents/2026/10/13/2026-20785/notice-of-intent-to-grant-exclusive-patent-license-to-zyltech-engineering-llc-houston-tx"
+      "date": "2026-10-19",
+      "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21360/bulk-manufacturer-of-controlled-substances-application-scottsdale-research-institute"
     },
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "GSK to invest $800M on Pennsylvania expansion",
+      "title": "How AI, digital twins and real-time simulation are accelerating manufacturing innovation",
       "source": "Manufacturing Dive",
-      "date": "2026-10-13",
-      "url": "https://www.manufacturingdive.com/news/biopharma-gsk-invest-800m-pennsylvania-expansion-montgomery-county/832846/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Raytheon secures 2 Pentagon contracts worth $30.7B combined",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-13",
-      "url": "https://www.manufacturingdive.com/news/rtx-raytheon-dod-defense-war-sm3-ib-sm-6-missile-interceptors/832760/"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Energy Department Announces 2026 Ernest Orlando Lawrence Award Winners",
-      "source": "U.S. Department of Energy",
-      "date": "2026-10-13",
-      "url": "https://www.energy.gov/articles/energy-department-announces-2026-ernest-orlando-lawrence-award-winners"
+      "date": "2026-10-19",
+      "url": "https://www.manufacturingdive.com/spons/how-ai-digital-twins-and-real-time-simulation-are-accelerating-manufacturi/833255/"
     },
     {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
+      "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
       "source": "Automation Alley",
-      "date": "2026-10-12",
-      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
+      "date": "2026-10-16",
+      "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
     },
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
+      "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-16",
+      "url": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Alcoa plans to sell part of its Massena East site for $315M",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-16",
+      "url": "https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Avio’s plan to meet the US’ solid rocket motors demand",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-16",
+      "url": "https://www.manufacturingdive.com/news/avio-usa-ceo-james-syring-solid-rocket-motor-manufacturing-plant-virginia/832755/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
       "source": "Automation Alley",
-      "date": "2026-10-12",
-      "url": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/"
+      "date": "2026-10-16",
+      "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
     },
     {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Tackling AI security challenges in manufacturing",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-12",
-      "url": "https://www.manufacturingdive.com/spons/tackling-ai-security-challenges-in-manufacturing/832453/"
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
+      "source": "USAspending (Treasury)",
+      "date": "2026-10-16",
+      "url": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0054_3600_-NONE-_-NONE-"
     },
     {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "When agentic AI moves from the cloud to the factory floor",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-12",
-      "url": "https://www.manufacturingdive.com/spons/when-agentic-ai-moves-from-the-cloud-to-the-factory-floor/831845/"
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
+      "source": "USAspending (Treasury)",
+      "date": "2026-10-16",
+      "url": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0053_3600_-NONE-_-NONE-"
     },
     {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "The manufacturing workforce is changing. Can benefits keep pace?",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-12",
-      "url": "https://www.manufacturingdive.com/spons/the-manufacturing-workforce-is-changing-can-benefits-keep-pace/832425/"
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Eclipse Foundation Eclipse Milo",
+      "source": "CISA",
+      "date": "2026-10-15",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
     },
     {
       "lane": "ai-standards",
