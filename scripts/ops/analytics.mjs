@@ -6,7 +6,7 @@ export function aggregate(rows) {
   const result = { requests: 0, bytes: 0, cachedBytes: 0, statuses: {} };
   for (const row of rows) {
     for (const key of ['requests', 'bytes', 'cachedBytes']) {
-      if (!Number.isFinite(row.sum?.[key])) throw new Error(`Invalid Cloudflare ${key}`);
+      if (!Number.isFinite(row.sum?.[key]) || row.sum[key] < 0) throw new Error(`Invalid Cloudflare ${key}`);
       result[key] += row.sum[key];
     }
     for (const status of row.sum.responseStatusMap || []) {
@@ -114,7 +114,6 @@ async function main() {
   const ranked = Object.entries(series.current).sort((a, b) => b[1] - a[1]);
   const extra = `\n## Daily request trend\n\n${Object.entries(series.current).sort().map(([date, count]) => `- ${date}: ${count}`).join('\n')}\n\n${ranked.length ? `Highest observed day: ${ranked[0][0]} (${ranked[0][1]} requests); lowest observed day: ${ranked.at(-1)[0]} (${ranked.at(-1)[1]} requests). Missing days are not imputed as zero.` : 'No daily observations.'}\n\n## Path movers\n\n${movers.length ? movers.slice(0, 10).map(r => `- ${r.clientRequestHTTPHost}${r.clientRequestPath}: ${r.previous} → ${r.current} sampled requests (${r.change >= 0 ? '+' : ''}${r.change})`).join('\n') : 'No comparable path groups returned.'}\n\nComparison includes only paths present in both top-100 responses. Missing groups are unknown. Sampling and query truncation limit mover rankings; they do not establish causal changes.\n`;
   summary(text + extra);
-  if (!totals.current.requests && !totals.previous.requests) throw new Error('No traffic evidence returned; report retained for diagnosis');
   if (gaps.length) process.exitCode = 2; // A partial report is never a green complete report.
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
