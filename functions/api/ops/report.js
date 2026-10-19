@@ -1,5 +1,6 @@
 // CI -> Cloudflare -> Microsoft Graph. Microsoft application credentials stay
 // in Pages; the existing Newsletter app remains scoped to the Newsletter mailbox.
+import { renderReportEmail } from './_report-email.js';
 const FROM = 'newsletter@axiovexsystems.com';
 const RECIPIENTS = ['tristen@axiovexsystems.com', 'rockson@axiovexsystems.com'];
 const KINDS = new Set(['daily', 'weekly', 'monthly', 'health', 'workforce', 'newsletter-draft']);
@@ -45,12 +46,13 @@ export async function onRequest({ request, env }) {
     const token = await tokenResponse.json();
     if (!token.access_token) return json({ ok: false, message: 'Microsoft authentication returned no token' }, 502);
     const date = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York' }).format(new Date());
+    const rendered = renderReportEmail({ report: body.report, kind: body.kind, runUrl: body.runUrl });
     const response = await fetch(`https://graph.microsoft.com/v1.0/users/${encodeURIComponent(FROM)}/sendMail`, {
       method: 'POST', signal: AbortSignal.timeout(20000),
       headers: { Authorization: `Bearer ${token.access_token}`, 'content-type': 'application/json' },
       body: JSON.stringify({ message: {
         subject: `Axiovex website — ${body.kind} report ${date}`,
-        body: { contentType: 'Text', content: body.report + (body.runUrl ? `\n\nCI evidence: ${body.runUrl}` : '') },
+        body: { contentType: 'HTML', content: rendered.html },
         toRecipients: RECIPIENTS.map(address => ({ emailAddress: { address } })),
       }, saveToSentItems: true }),
     });

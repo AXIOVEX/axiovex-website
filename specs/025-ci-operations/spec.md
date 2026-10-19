@@ -46,3 +46,19 @@ Weekly/monthly analytics include live technical health. Expected dataset gaps
 produce clearly marked PARTIAL reports; actual API failures and failed email
 delivery remain failed jobs. This follows spec 006 FR-006's unavailable-section
 rule instead of making every valid partial report a permanently failing job.
+
+## Readable email amendment — 2026-10-19
+
+Owner rejects raw Markdown in email and requests a customer newsletter review
+sent only to Tristen. Reports render to HTML on the server: branded Outlook-safe
+table shell, real headings/lists/tables, rounded numbers, KB/MB units and a
+coverage badge. Markdown and exact source JSON remain audit artifacts. The
+newsletter uses the same solid-color table shell, keeping the issue's facts,
+vintages, postal address and production unsubscribe links intact.
+
+The separate authenticated preview route fixes its recipient to Tristen,
+prefixes REVIEW ONLY, sends HTML plus plain text, and never reads/writes the
+subscriber store. Preview unsubscribe is explicitly disabled. Review the
+latest committed October 14 edition as that edition, not as a new issue.
+Verify desktop and 390/320px rendering before sending. Internal report
+formatting is deployed for future sends; no customer distribution is approved.
