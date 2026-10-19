@@ -1,0 +1,4164 @@
+{
+  "baseYear": 2025,
+  "projectionYear": 2035,
+  "retrievedOn": "2026-10-19",
+  "source": "https://download.bls.gov/pub/time.series/ep/",
+  "selection": "National all-industries TE1000, detailed occupations occ_type L; a newer API base year requires a newly verified occupation universe before ranking.",
+  "rows": [
+    {
+      "id": "EPU111011TE1000",
+      "soc": "11-1011",
+      "name": "Chief executives"
+    },
+    {
+      "id": "EPU111021TE1000",
+      "soc": "11-1021",
+      "name": "General and operations managers"
+    },
+    {
+      "id": "EPU112011TE1000",
+      "soc": "11-2011",
+      "name": "Advertising and promotions managers"
+    },
+    {
+      "id": "EPU112021TE1000",
+      "soc": "11-2021",
+      "name": "Marketing managers"
+    },
+    {
+      "id": "EPU112022TE1000",
+      "soc": "11-2022",
+      "name": "Sales managers"
+    },
+    {
+      "id": "EPU112032TE1000",
+      "soc": "11-2032",
+      "name": "Public relations managers"
+    },
+    {
+      "id": "EPU112033TE1000",
+      "soc": "11-2033",
+      "name": "Fundraising managers"
+    },
+    {
+      "id": "EPU113012TE1000",
+      "soc": "11-3012",
+      "name": "Administrative services managers"
+    },
+    {
+      "id": "EPU113013TE1000",
+      "soc": "11-3013",
+      "name": "Facilities managers"
+    },
+    {
+      "id": "EPU113021TE1000",
+      "soc": "11-3021",
+      "name": "Computer and information systems managers"
+    },
+    {
+      "id": "EPU113031TE1000",
+      "soc": "11-3031",
+      "name": "Financial managers"
+    },
+    {
+      "id": "EPU113051TE1000",
+      "soc": "11-3051",
+      "name": "Industrial production managers"
+    },
+    {
+      "id": "EPU113061TE1000",
+      "soc": "11-3061",
+      "name": "Purchasing managers"
+    },
+    {
+      "id": "EPU113071TE1000",
+      "soc": "11-3071",
+      "name": "Transportation, storage, and distribution managers"
+    },
+    {
+      "id": "EPU113111TE1000",
+      "soc": "11-3111",
+      "name": "Compensation and benefits managers"
+    },
+    {
+      "id": "EPU113121TE1000",
+      "soc": "11-3121",
+      "name": "Human resources managers"
+    },
+    {
+      "id": "EPU113131TE1000",
+      "soc": "11-3131",
+      "name": "Training and development managers"
+    },
+    {
+      "id": "EPU119013TE1000",
+      "soc": "11-9013",
+      "name": "Farmers, ranchers, and other agricultural managers"
+    },
+    {
+      "id": "EPU119021TE1000",
+      "soc": "11-9021",
+      "name": "Construction managers"
+    },
+    {
+      "id": "EPU119031TE1000",
+      "soc": "11-9031",
+      "name": "Education and childcare administrators, preschool and daycare"
+    },
+    {
+      "id": "EPU119032TE1000",
+      "soc": "11-9032",
+      "name": "Education administrators, kindergarten through secondary"
+    },
+    {
+      "id": "EPU119033TE1000",
+      "soc": "11-9033",
+      "name": "Education administrators, postsecondary"
+    },
+    {
+      "id": "EPU119039TE1000",
+      "soc": "11-9039",
+      "name": "Education administrators, all other"
+    },
+    {
+      "id": "EPU119041TE1000",
+      "soc": "11-9041",
+      "name": "Architectural and engineering managers"
+    },
+    {
+      "id": "EPU119051TE1000",
+      "soc": "11-9051",
+      "name": "Food service managers"
+    },
+    {
+      "id": "EPU119071TE1000",
+      "soc": "11-9071",
+      "name": "Gambling managers"
+    },
+    {
+      "id": "EPU119072TE1000",
+      "soc": "11-9072",
+      "name": "Entertainment and recreation managers, except gambling"
+    },
+    {
+      "id": "EPU119081TE1000",
+      "soc": "11-9081",
+      "name": "Lodging managers"
+    },
+    {
+      "id": "EPU119111TE1000",
+      "soc": "11-9111",
+      "name": "Medical and health services managers"
+    },
+    {
+      "id": "EPU119121TE1000",
+      "soc": "11-9121",
+      "name": "Natural sciences managers"
+    },
+    {
+      "id": "EPU119131TE1000",
+      "soc": "11-9131",
+      "name": "Postmasters and mail superintendents"
+    },
+    {
+      "id": "EPU119141TE1000",
+      "soc": "11-9141",
+      "name": "Property, real estate, and community association managers"
+    },
+    {
+      "id": "EPU119151TE1000",
+      "soc": "11-9151",
+      "name": "Social and community service managers"
+    },
+    {
+      "id": "EPU119161TE1000",
+      "soc": "11-9161",
+      "name": "Emergency management directors"
+    },
+    {
+      "id": "EPU119171TE1000",
+      "soc": "11-9171",
+      "name": "Funeral home managers"
+    },
+    {
+      "id": "EPU119179TE1000",
+      "soc": "11-9179",
+      "name": "Personal service managers, all other"
+    },
+    {
+      "id": "EPU119199TE1000",
+      "soc": "11-9199",
+      "name": "Managers, all other"
+    },
+    {
+      "id": "EPU131011TE1000",
+      "soc": "13-1011",
+      "name": "Agents and business managers of artists, performers, and athletes"
+    },
+    {
+      "id": "EPU131020TE1000",
+      "soc": "13-1020",
+      "name": "Buyers and purchasing agents"
+    },
+    {
+      "id": "EPU131031TE1000",
+      "soc": "13-1031",
+      "name": "Claims adjusters, examiners, and investigators"
+    },
+    {
+      "id": "EPU131032TE1000",
+      "soc": "13-1032",
+      "name": "Insurance appraisers, auto damage"
+    },
+    {
+      "id": "EPU131041TE1000",
+      "soc": "13-1041",
+      "name": "Compliance officers"
+    },
+    {
+      "id": "EPU131051TE1000",
+      "soc": "13-1051",
+      "name": "Cost estimators"
+    },
+    {
+      "id": "EPU131071TE1000",
+      "soc": "13-1071",
+      "name": "Human resources specialists"
+    },
+    {
+      "id": "EPU131074TE1000",
+      "soc": "13-1074",
+      "name": "Farm labor contractors"
+    },
+    {
+      "id": "EPU131075TE1000",
+      "soc": "13-1075",
+      "name": "Labor relations specialists"
+    },
+    {
+      "id": "EPU131081TE1000",
+      "soc": "13-1081",
+      "name": "Logisticians"
+    },
+    {
+      "id": "EPU131082TE1000",
+      "soc": "13-1082",
+      "name": "Project management specialists"
+    },
+    {
+      "id": "EPU131111TE1000",
+      "soc": "13-1111",
+      "name": "Management analysts"
+    },
+    {
+      "id": "EPU131121TE1000",
+      "soc": "13-1121",
+      "name": "Meeting, convention, and event planners"
+    },
+    {
+      "id": "EPU131131TE1000",
+      "soc": "13-1131",
+      "name": "Fundraisers"
+    },
+    {
+      "id": "EPU131141TE1000",
+      "soc": "13-1141",
+      "name": "Compensation, benefits, and job analysis specialists"
+    },
+    {
+      "id": "EPU131151TE1000",
+      "soc": "13-1151",
+      "name": "Training and development specialists"
+    },
+    {
+      "id": "EPU131161TE1000",
+      "soc": "13-1161",
+      "name": "Market research analysts and marketing specialists"
+    },
+    {
+      "id": "EPU131199TE1000",
+      "soc": "13-1199",
+      "name": "Business operations specialists, all other"
+    },
+    {
+      "id": "EPU132011TE1000",
+      "soc": "13-2011",
+      "name": "Accountants and auditors"
+    },
+    {
+      "id": "EPU132020TE1000",
+      "soc": "13-2020",
+      "name": "Property appraisers and assessors"
+    },
+    {
+      "id": "EPU132031TE1000",
+      "soc": "13-2031",
+      "name": "Budget analysts"
+    },
+    {
+      "id": "EPU132041TE1000",
+      "soc": "13-2041",
+      "name": "Credit analysts"
+    },
+    {
+      "id": "EPU132051TE1000",
+      "soc": "13-2051",
+      "name": "Financial and investment analysts"
+    },
+    {
+      "id": "EPU132052TE1000",
+      "soc": "13-2052",
+      "name": "Personal financial advisors"
+    },
+    {
+      "id": "EPU132053TE1000",
+      "soc": "13-2053",
+      "name": "Insurance underwriters"
+    },
+    {
+      "id": "EPU132054TE1000",
+      "soc": "13-2054",
+      "name": "Financial risk specialists"
+    },
+    {
+      "id": "EPU132061TE1000",
+      "soc": "13-2061",
+      "name": "Financial examiners"
+    },
+    {
+      "id": "EPU132071TE1000",
+      "soc": "13-2071",
+      "name": "Credit counselors"
+    },
+    {
+      "id": "EPU132072TE1000",
+      "soc": "13-2072",
+      "name": "Loan officers"
+    },
+    {
+      "id": "EPU132081TE1000",
+      "soc": "13-2081",
+      "name": "Tax examiners and collectors, and revenue agents"
+    },
+    {
+      "id": "EPU132082TE1000",
+      "soc": "13-2082",
+      "name": "Tax preparers"
+    },
+    {
+      "id": "EPU132099TE1000",
+      "soc": "13-2099",
+      "name": "Financial specialists, all other"
+    },
+    {
+      "id": "EPU151211TE1000",
+      "soc": "15-1211",
+      "name": "Computer systems analysts"
+    },
+    {
+      "id": "EPU151212TE1000",
+      "soc": "15-1212",
+      "name": "Information security analysts"
+    },
+    {
+      "id": "EPU151221TE1000",
+      "soc": "15-1221",
+      "name": "Computer and information research scientists"
+    },
+    {
+      "id": "EPU151231TE1000",
+      "soc": "15-1231",
+      "name": "Computer network support specialists"
+    },
+    {
+      "id": "EPU151232TE1000",
+      "soc": "15-1232",
+      "name": "Computer user support specialists"
+    },
+    {
+      "id": "EPU151241TE1000",
+      "soc": "15-1241",
+      "name": "Computer network architects"
+    },
+    {
+      "id": "EPU151242TE1000",
+      "soc": "15-1242",
+      "name": "Database administrators"
+    },
+    {
+      "id": "EPU151243TE1000",
+      "soc": "15-1243",
+      "name": "Database architects"
+    },
+    {
+      "id": "EPU151244TE1000",
+      "soc": "15-1244",
+      "name": "Network and computer systems administrators"
+    },
+    {
+      "id": "EPU151251TE1000",
+      "soc": "15-1251",
+      "name": "Computer programmers"
+    },
+    {
+      "id": "EPU151252TE1000",
+      "soc": "15-1252",
+      "name": "Software developers"
+    },
+    {
+      "id": "EPU151253TE1000",
+      "soc": "15-1253",
+      "name": "Software quality assurance analysts and testers"
+    },
+    {
+      "id": "EPU151254TE1000",
+      "soc": "15-1254",
+      "name": "Web developers"
+    },
+    {
+      "id": "EPU151255TE1000",
+      "soc": "15-1255",
+      "name": "Web and digital interface designers"
+    },
+    {
+      "id": "EPU151299TE1000",
+      "soc": "15-1299",
+      "name": "Computer occupations, all other"
+    },
+    {
+      "id": "EPU152011TE1000",
+      "soc": "15-2011",
+      "name": "Actuaries"
+    },
+    {
+      "id": "EPU152021TE1000",
+      "soc": "15-2021",
+      "name": "Mathematicians"
+    },
+    {
+      "id": "EPU152031TE1000",
+      "soc": "15-2031",
+      "name": "Operations research analysts"
+    },
+    {
+      "id": "EPU152041TE1000",
+      "soc": "15-2041",
+      "name": "Statisticians"
+    },
+    {
+      "id": "EPU152051TE1000",
+      "soc": "15-2051",
+      "name": "Data scientists"
+    },
+    {
+      "id": "EPU152099TE1000",
+      "soc": "15-2099",
+      "name": "Mathematical science occupations, all other"
+    },
+    {
+      "id": "EPU171011TE1000",
+      "soc": "17-1011",
+      "name": "Architects, except landscape and naval"
+    },
+    {
+      "id": "EPU171012TE1000",
+      "soc": "17-1012",
+      "name": "Landscape architects"
+    },
+    {
+      "id": "EPU171021TE1000",
+      "soc": "17-1021",
+      "name": "Cartographers and photogrammetrists"
+    },
+    {
+      "id": "EPU171022TE1000",
+      "soc": "17-1022",
+      "name": "Surveyors"
+    },
+    {
+      "id": "EPU172011TE1000",
+      "soc": "17-2011",
+      "name": "Aerospace engineers"
+    },
+    {
+      "id": "EPU172021TE1000",
+      "soc": "17-2021",
+      "name": "Agricultural engineers"
+    },
+    {
+      "id": "EPU172031TE1000",
+      "soc": "17-2031",
+      "name": "Bioengineers and biomedical engineers"
+    },
+    {
+      "id": "EPU172041TE1000",
+      "soc": "17-2041",
+      "name": "Chemical engineers"
+    },
+    {
+      "id": "EPU172051TE1000",
+      "soc": "17-2051",
+      "name": "Civil engineers"
+    },
+    {
+      "id": "EPU172061TE1000",
+      "soc": "17-2061",
+      "name": "Computer hardware engineers"
+    },
+    {
+      "id": "EPU172071TE1000",
+      "soc": "17-2071",
+      "name": "Electrical engineers"
+    },
+    {
+      "id": "EPU172072TE1000",
+      "soc": "17-2072",
+      "name": "Electronics engineers, except computer"
+    },
+    {
+      "id": "EPU172081TE1000",
+      "soc": "17-2081",
+      "name": "Environmental engineers"
+    },
+    {
+      "id": "EPU172111TE1000",
+      "soc": "17-2111",
+      "name": "Health and safety engineers, except mining safety engineers and inspectors"
+    },
+    {
+      "id": "EPU172112TE1000",
+      "soc": "17-2112",
+      "name": "Industrial engineers"
+    },
+    {
+      "id": "EPU172121TE1000",
+      "soc": "17-2121",
+      "name": "Marine engineers and naval architects"
+    },
+    {
+      "id": "EPU172131TE1000",
+      "soc": "17-2131",
+      "name": "Materials engineers"
+    },
+    {
+      "id": "EPU172141TE1000",
+      "soc": "17-2141",
+      "name": "Mechanical engineers"
+    },
+    {
+      "id": "EPU172151TE1000",
+      "soc": "17-2151",
+      "name": "Mining and geological engineers, including mining safety engineers"
+    },
+    {
+      "id": "EPU172161TE1000",
+      "soc": "17-2161",
+      "name": "Nuclear engineers"
+    },
+    {
+      "id": "EPU172171TE1000",
+      "soc": "17-2171",
+      "name": "Petroleum engineers"
+    },
+    {
+      "id": "EPU172199TE1000",
+      "soc": "17-2199",
+      "name": "Engineers, all other"
+    },
+    {
+      "id": "EPU173011TE1000",
+      "soc": "17-3011",
+      "name": "Architectural and civil drafters"
+    },
+    {
+      "id": "EPU173012TE1000",
+      "soc": "17-3012",
+      "name": "Electrical and electronics drafters"
+    },
+    {
+      "id": "EPU173013TE1000",
+      "soc": "17-3013",
+      "name": "Mechanical drafters"
+    },
+    {
+      "id": "EPU173019TE1000",
+      "soc": "17-3019",
+      "name": "Drafters, all other"
+    },
+    {
+      "id": "EPU173021TE1000",
+      "soc": "17-3021",
+      "name": "Aerospace engineering and operations technologists and technicians"
+    },
+    {
+      "id": "EPU173022TE1000",
+      "soc": "17-3022",
+      "name": "Civil engineering technologists and technicians"
+    },
+    {
+      "id": "EPU173023TE1000",
+      "soc": "17-3023",
+      "name": "Electrical and electronic engineering technologists and technicians"
+    },
+    {
+      "id": "EPU173024TE1000",
+      "soc": "17-3024",
+      "name": "Electro-mechanical and mechatronics technologists and technicians"
+    },
+    {
+      "id": "EPU173025TE1000",
+      "soc": "17-3025",
+      "name": "Environmental engineering technologists and technicians"
+    },
+    {
+      "id": "EPU173026TE1000",
+      "soc": "17-3026",
+      "name": "Industrial engineering technologists and technicians"
+    },
+    {
+      "id": "EPU173027TE1000",
+      "soc": "17-3027",
+      "name": "Mechanical engineering technologists and technicians"
+    },
+    {
+      "id": "EPU173028TE1000",
+      "soc": "17-3028",
+      "name": "Calibration technologists and technicians"
+    },
+    {
+      "id": "EPU173029TE1000",
+      "soc": "17-3029",
+      "name": "Engineering technologists and technicians, except drafters, all other"
+    },
+    {
+      "id": "EPU173031TE1000",
+      "soc": "17-3031",
+      "name": "Surveying and mapping technicians"
+    },
+    {
+      "id": "EPU191011TE1000",
+      "soc": "19-1011",
+      "name": "Animal scientists"
+    },
+    {
+      "id": "EPU191012TE1000",
+      "soc": "19-1012",
+      "name": "Food scientists and technologists"
+    },
+    {
+      "id": "EPU191013TE1000",
+      "soc": "19-1013",
+      "name": "Soil and plant scientists"
+    },
+    {
+      "id": "EPU191021TE1000",
+      "soc": "19-1021",
+      "name": "Biochemists and biophysicists"
+    },
+    {
+      "id": "EPU191022TE1000",
+      "soc": "19-1022",
+      "name": "Microbiologists"
+    },
+    {
+      "id": "EPU191023TE1000",
+      "soc": "19-1023",
+      "name": "Zoologists and wildlife biologists"
+    },
+    {
+      "id": "EPU191029TE1000",
+      "soc": "19-1029",
+      "name": "Biological scientists, all other"
+    },
+    {
+      "id": "EPU191031TE1000",
+      "soc": "19-1031",
+      "name": "Conservation scientists"
+    },
+    {
+      "id": "EPU191032TE1000",
+      "soc": "19-1032",
+      "name": "Foresters"
+    },
+    {
+      "id": "EPU191041TE1000",
+      "soc": "19-1041",
+      "name": "Epidemiologists"
+    },
+    {
+      "id": "EPU191042TE1000",
+      "soc": "19-1042",
+      "name": "Medical scientists, except epidemiologists"
+    },
+    {
+      "id": "EPU191099TE1000",
+      "soc": "19-1099",
+      "name": "Life scientists, all other"
+    },
+    {
+      "id": "EPU192011TE1000",
+      "soc": "19-2011",
+      "name": "Astronomers"
+    },
+    {
+      "id": "EPU192012TE1000",
+      "soc": "19-2012",
+      "name": "Physicists"
+    },
+    {
+      "id": "EPU192021TE1000",
+      "soc": "19-2021",
+      "name": "Atmospheric and space scientists"
+    },
+    {
+      "id": "EPU192031TE1000",
+      "soc": "19-2031",
+      "name": "Chemists"
+    },
+    {
+      "id": "EPU192032TE1000",
+      "soc": "19-2032",
+      "name": "Materials scientists"
+    },
+    {
+      "id": "EPU192041TE1000",
+      "soc": "19-2041",
+      "name": "Environmental scientists and specialists, including health"
+    },
+    {
+      "id": "EPU192042TE1000",
+      "soc": "19-2042",
+      "name": "Geoscientists, except hydrologists and geographers"
+    },
+    {
+      "id": "EPU192043TE1000",
+      "soc": "19-2043",
+      "name": "Hydrologists"
+    },
+    {
+      "id": "EPU192099TE1000",
+      "soc": "19-2099",
+      "name": "Physical scientists, all other"
+    },
+    {
+      "id": "EPU193011TE1000",
+      "soc": "19-3011",
+      "name": "Economists"
+    },
+    {
+      "id": "EPU193022TE1000",
+      "soc": "19-3022",
+      "name": "Survey researchers"
+    },
+    {
+      "id": "EPU193032TE1000",
+      "soc": "19-3032",
+      "name": "Industrial-organizational psychologists"
+    },
+    {
+      "id": "EPU193033TE1000",
+      "soc": "19-3033",
+      "name": "Clinical and counseling psychologists"
+    },
+    {
+      "id": "EPU193034TE1000",
+      "soc": "19-3034",
+      "name": "School psychologists"
+    },
+    {
+      "id": "EPU193039TE1000",
+      "soc": "19-3039",
+      "name": "Psychologists, all other"
+    },
+    {
+      "id": "EPU193041TE1000",
+      "soc": "19-3041",
+      "name": "Sociologists"
+    },
+    {
+      "id": "EPU193051TE1000",
+      "soc": "19-3051",
+      "name": "Urban and regional planners"
+    },
+    {
+      "id": "EPU193091TE1000",
+      "soc": "19-3091",
+      "name": "Anthropologists and archeologists"
+    },
+    {
+      "id": "EPU193092TE1000",
+      "soc": "19-3092",
+      "name": "Geographers"
+    },
+    {
+      "id": "EPU193093TE1000",
+      "soc": "19-3093",
+      "name": "Historians"
+    },
+    {
+      "id": "EPU193094TE1000",
+      "soc": "19-3094",
+      "name": "Political scientists"
+    },
+    {
+      "id": "EPU193099TE1000",
+      "soc": "19-3099",
+      "name": "Social scientists and related workers, all other"
+    },
+    {
+      "id": "EPU194012TE1000",
+      "soc": "19-4012",
+      "name": "Agricultural technicians"
+    },
+    {
+      "id": "EPU194013TE1000",
+      "soc": "19-4013",
+      "name": "Food science technicians"
+    },
+    {
+      "id": "EPU194021TE1000",
+      "soc": "19-4021",
+      "name": "Biological technicians"
+    },
+    {
+      "id": "EPU194031TE1000",
+      "soc": "19-4031",
+      "name": "Chemical technicians"
+    },
+    {
+      "id": "EPU194042TE1000",
+      "soc": "19-4042",
+      "name": "Environmental science and protection technicians, including health"
+    },
+    {
+      "id": "EPU194043TE1000",
+      "soc": "19-4043",
+      "name": "Geological technicians, except hydrologic technicians"
+    },
+    {
+      "id": "EPU194044TE1000",
+      "soc": "19-4044",
+      "name": "Hydrologic technicians"
+    },
+    {
+      "id": "EPU194051TE1000",
+      "soc": "19-4051",
+      "name": "Nuclear technicians"
+    },
+    {
+      "id": "EPU194061TE1000",
+      "soc": "19-4061",
+      "name": "Social science research assistants"
+    },
+    {
+      "id": "EPU194071TE1000",
+      "soc": "19-4071",
+      "name": "Forest and conservation technicians"
+    },
+    {
+      "id": "EPU194092TE1000",
+      "soc": "19-4092",
+      "name": "Forensic science technicians"
+    },
+    {
+      "id": "EPU194099TE1000",
+      "soc": "19-4099",
+      "name": "Life, physical, and social science technicians, all other"
+    },
+    {
+      "id": "EPU195011TE1000",
+      "soc": "19-5011",
+      "name": "Occupational health and safety specialists"
+    },
+    {
+      "id": "EPU195012TE1000",
+      "soc": "19-5012",
+      "name": "Occupational health and safety technicians"
+    },
+    {
+      "id": "EPU211012TE1000",
+      "soc": "21-1012",
+      "name": "Educational, guidance, and career counselors and advisors"
+    },
+    {
+      "id": "EPU211013TE1000",
+      "soc": "21-1013",
+      "name": "Marriage and family therapists"
+    },
+    {
+      "id": "EPU211015TE1000",
+      "soc": "21-1015",
+      "name": "Rehabilitation counselors"
+    },
+    {
+      "id": "EPU211018TE1000",
+      "soc": "21-1018",
+      "name": "Substance abuse, behavioral disorder, and mental health counselors"
+    },
+    {
+      "id": "EPU211019TE1000",
+      "soc": "21-1019",
+      "name": "Counselors, all other"
+    },
+    {
+      "id": "EPU211021TE1000",
+      "soc": "21-1021",
+      "name": "Child, family, and school social workers"
+    },
+    {
+      "id": "EPU211022TE1000",
+      "soc": "21-1022",
+      "name": "Healthcare social workers"
+    },
+    {
+      "id": "EPU211023TE1000",
+      "soc": "21-1023",
+      "name": "Mental health and substance abuse social workers"
+    },
+    {
+      "id": "EPU211029TE1000",
+      "soc": "21-1029",
+      "name": "Social workers, all other"
+    },
+    {
+      "id": "EPU211091TE1000",
+      "soc": "21-1091",
+      "name": "Health education specialists"
+    },
+    {
+      "id": "EPU211092TE1000",
+      "soc": "21-1092",
+      "name": "Probation officers and correctional treatment specialists"
+    },
+    {
+      "id": "EPU211093TE1000",
+      "soc": "21-1093",
+      "name": "Social and human service assistants"
+    },
+    {
+      "id": "EPU211094TE1000",
+      "soc": "21-1094",
+      "name": "Community health workers"
+    },
+    {
+      "id": "EPU211099TE1000",
+      "soc": "21-1099",
+      "name": "Community and social service specialists, all other"
+    },
+    {
+      "id": "EPU212011TE1000",
+      "soc": "21-2011",
+      "name": "Clergy"
+    },
+    {
+      "id": "EPU212021TE1000",
+      "soc": "21-2021",
+      "name": "Directors, religious activities and education"
+    },
+    {
+      "id": "EPU212099TE1000",
+      "soc": "21-2099",
+      "name": "Religious workers, all other"
+    },
+    {
+      "id": "EPU231011TE1000",
+      "soc": "23-1011",
+      "name": "Lawyers"
+    },
+    {
+      "id": "EPU231012TE1000",
+      "soc": "23-1012",
+      "name": "Judicial law clerks"
+    },
+    {
+      "id": "EPU231021TE1000",
+      "soc": "23-1021",
+      "name": "Administrative law judges, adjudicators, and hearing officers"
+    },
+    {
+      "id": "EPU231022TE1000",
+      "soc": "23-1022",
+      "name": "Arbitrators, mediators, and conciliators"
+    },
+    {
+      "id": "EPU231023TE1000",
+      "soc": "23-1023",
+      "name": "Judges, magistrate judges, and magistrates"
+    },
+    {
+      "id": "EPU232011TE1000",
+      "soc": "23-2011",
+      "name": "Paralegals and legal assistants"
+    },
+    {
+      "id": "EPU232093TE1000",
+      "soc": "23-2093",
+      "name": "Title examiners, abstractors, and searchers"
+    },
+    {
+      "id": "EPU232099TE1000",
+      "soc": "23-2099",
+      "name": "Legal support workers, all other"
+    },
+    {
+      "id": "EPU251011TE1000",
+      "soc": "25-1011",
+      "name": "Business teachers, postsecondary"
+    },
+    {
+      "id": "EPU251021TE1000",
+      "soc": "25-1021",
+      "name": "Computer science teachers, postsecondary"
+    },
+    {
+      "id": "EPU251022TE1000",
+      "soc": "25-1022",
+      "name": "Mathematical science teachers, postsecondary"
+    },
+    {
+      "id": "EPU251031TE1000",
+      "soc": "25-1031",
+      "name": "Architecture teachers, postsecondary"
+    },
+    {
+      "id": "EPU251032TE1000",
+      "soc": "25-1032",
+      "name": "Engineering teachers, postsecondary"
+    },
+    {
+      "id": "EPU251041TE1000",
+      "soc": "25-1041",
+      "name": "Agricultural sciences teachers, postsecondary"
+    },
+    {
+      "id": "EPU251042TE1000",
+      "soc": "25-1042",
+      "name": "Biological science teachers, postsecondary"
+    },
+    {
+      "id": "EPU251043TE1000",
+      "soc": "25-1043",
+      "name": "Forestry and conservation science teachers, postsecondary"
+    },
+    {
+      "id": "EPU251051TE1000",
+      "soc": "25-1051",
+      "name": "Atmospheric, earth, marine, and space sciences teachers, postsecondary"
+    },
+    {
+      "id": "EPU251052TE1000",
+      "soc": "25-1052",
+      "name": "Chemistry teachers, postsecondary"
+    },
+    {
+      "id": "EPU251053TE1000",
+      "soc": "25-1053",
+      "name": "Environmental science teachers, postsecondary"
+    },
+    {
+      "id": "EPU251054TE1000",
+      "soc": "25-1054",
+      "name": "Physics teachers, postsecondary"
+    },
+    {
+      "id": "EPU251061TE1000",
+      "soc": "25-1061",
+      "name": "Anthropology and archeology teachers, postsecondary"
+    },
+    {
+      "id": "EPU251062TE1000",
+      "soc": "25-1062",
+      "name": "Area, ethnic, and cultural studies teachers, postsecondary"
+    },
+    {
+      "id": "EPU251063TE1000",
+      "soc": "25-1063",
+      "name": "Economics teachers, postsecondary"
+    },
+    {
+      "id": "EPU251064TE1000",
+      "soc": "25-1064",
+      "name": "Geography teachers, postsecondary"
+    },
+    {
+      "id": "EPU251065TE1000",
+      "soc": "25-1065",
+      "name": "Political science teachers, postsecondary"
+    },
+    {
+      "id": "EPU251066TE1000",
+      "soc": "25-1066",
+      "name": "Psychology teachers, postsecondary"
+    },
+    {
+      "id": "EPU251067TE1000",
+      "soc": "25-1067",
+      "name": "Sociology teachers, postsecondary"
+    },
+    {
+      "id": "EPU251069TE1000",
+      "soc": "25-1069",
+      "name": "Social sciences teachers, postsecondary, all other"
+    },
+    {
+      "id": "EPU251071TE1000",
+      "soc": "25-1071",
+      "name": "Health specialties teachers, postsecondary"
+    },
+    {
+      "id": "EPU251072TE1000",
+      "soc": "25-1072",
+      "name": "Nursing instructors and teachers, postsecondary"
+    },
+    {
+      "id": "EPU251081TE1000",
+      "soc": "25-1081",
+      "name": "Education teachers, postsecondary"
+    },
+    {
+      "id": "EPU251082TE1000",
+      "soc": "25-1082",
+      "name": "Library science teachers, postsecondary"
+    },
+    {
+      "id": "EPU251111TE1000",
+      "soc": "25-1111",
+      "name": "Criminal justice and law enforcement teachers, postsecondary"
+    },
+    {
+      "id": "EPU251112TE1000",
+      "soc": "25-1112",
+      "name": "Law teachers, postsecondary"
+    },
+    {
+      "id": "EPU251113TE1000",
+      "soc": "25-1113",
+      "name": "Social work teachers, postsecondary"
+    },
+    {
+      "id": "EPU251121TE1000",
+      "soc": "25-1121",
+      "name": "Art, drama, and music teachers, postsecondary"
+    },
+    {
+      "id": "EPU251122TE1000",
+      "soc": "25-1122",
+      "name": "Communications teachers, postsecondary"
+    },
+    {
+      "id": "EPU251123TE1000",
+      "soc": "25-1123",
+      "name": "English language and literature teachers, postsecondary"
+    },
+    {
+      "id": "EPU251124TE1000",
+      "soc": "25-1124",
+      "name": "Foreign language and literature teachers, postsecondary"
+    },
+    {
+      "id": "EPU251125TE1000",
+      "soc": "25-1125",
+      "name": "History teachers, postsecondary"
+    },
+    {
+      "id": "EPU251126TE1000",
+      "soc": "25-1126",
+      "name": "Philosophy and religion teachers, postsecondary"
+    },
+    {
+      "id": "EPU251192TE1000",
+      "soc": "25-1192",
+      "name": "Family and consumer sciences teachers, postsecondary"
+    },
+    {
+      "id": "EPU251193TE1000",
+      "soc": "25-1193",
+      "name": "Recreation and fitness studies teachers, postsecondary"
+    },
+    {
+      "id": "EPU251194TE1000",
+      "soc": "25-1194",
+      "name": "Career/technical education teachers, postsecondary"
+    },
+    {
+      "id": "EPU251199TE1000",
+      "soc": "25-1199",
+      "name": "Postsecondary teachers, all other"
+    },
+    {
+      "id": "EPU252011TE1000",
+      "soc": "25-2011",
+      "name": "Preschool teachers, except special education"
+    },
+    {
+      "id": "EPU252012TE1000",
+      "soc": "25-2012",
+      "name": "Kindergarten teachers, except special education"
+    },
+    {
+      "id": "EPU252021TE1000",
+      "soc": "25-2021",
+      "name": "Elementary school teachers, except special education"
+    },
+    {
+      "id": "EPU252022TE1000",
+      "soc": "25-2022",
+      "name": "Middle school teachers, except special and career/technical education"
+    },
+    {
+      "id": "EPU252023TE1000",
+      "soc": "25-2023",
+      "name": "Career/technical education teachers, middle school"
+    },
+    {
+      "id": "EPU252031TE1000",
+      "soc": "25-2031",
+      "name": "Secondary school teachers, except special and career/technical education"
+    },
+    {
+      "id": "EPU252032TE1000",
+      "soc": "25-2032",
+      "name": "Career/technical education teachers, secondary school"
+    },
+    {
+      "id": "EPU252051TE1000",
+      "soc": "25-2051",
+      "name": "Special education teachers, preschool"
+    },
+    {
+      "id": "EPU252052TE1000",
+      "soc": "25-2052",
+      "name": "Special education teachers, kindergarten and elementary school"
+    },
+    {
+      "id": "EPU252057TE1000",
+      "soc": "25-2057",
+      "name": "Special education teachers, middle school"
+    },
+    {
+      "id": "EPU252058TE1000",
+      "soc": "25-2058",
+      "name": "Special education teachers, secondary school"
+    },
+    {
+      "id": "EPU252059TE1000",
+      "soc": "25-2059",
+      "name": "Special education teachers, all other"
+    },
+    {
+      "id": "EPU253011TE1000",
+      "soc": "25-3011",
+      "name": "Adult basic education, adult secondary education, and english as a second language instructors"
+    },
+    {
+      "id": "EPU253021TE1000",
+      "soc": "25-3021",
+      "name": "Self-enrichment teachers"
+    },
+    {
+      "id": "EPU253031TE1000",
+      "soc": "25-3031",
+      "name": "Substitute teachers, short-term"
+    },
+    {
+      "id": "EPU253041TE1000",
+      "soc": "25-3041",
+      "name": "Tutors"
+    },
+    {
+      "id": "EPU253099TE1000",
+      "soc": "25-3099",
+      "name": "Teachers and instructors, all other"
+    },
+    {
+      "id": "EPU254011TE1000",
+      "soc": "25-4011",
+      "name": "Archivists"
+    },
+    {
+      "id": "EPU254012TE1000",
+      "soc": "25-4012",
+      "name": "Curators"
+    },
+    {
+      "id": "EPU254013TE1000",
+      "soc": "25-4013",
+      "name": "Museum technicians and conservators"
+    },
+    {
+      "id": "EPU254022TE1000",
+      "soc": "25-4022",
+      "name": "Librarians and media collections specialists"
+    },
+    {
+      "id": "EPU254031TE1000",
+      "soc": "25-4031",
+      "name": "Library technicians"
+    },
+    {
+      "id": "EPU259021TE1000",
+      "soc": "25-9021",
+      "name": "Farm and home management educators"
+    },
+    {
+      "id": "EPU259031TE1000",
+      "soc": "25-9031",
+      "name": "Instructional coordinators"
+    },
+    {
+      "id": "EPU259044TE1000",
+      "soc": "25-9044",
+      "name": "Teaching assistants, postsecondary"
+    },
+    {
+      "id": "EPU259045TE1000",
+      "soc": "25-9045",
+      "name": "Teaching assistants, except postsecondary"
+    },
+    {
+      "id": "EPU259099TE1000",
+      "soc": "25-9099",
+      "name": "Educational instruction and library workers, all other"
+    },
+    {
+      "id": "EPU271011TE1000",
+      "soc": "27-1011",
+      "name": "Art directors"
+    },
+    {
+      "id": "EPU271012TE1000",
+      "soc": "27-1012",
+      "name": "Craft artists"
+    },
+    {
+      "id": "EPU271013TE1000",
+      "soc": "27-1013",
+      "name": "Fine artists, including painters, sculptors, and illustrators"
+    },
+    {
+      "id": "EPU271014TE1000",
+      "soc": "27-1014",
+      "name": "Special effects artists and animators"
+    },
+    {
+      "id": "EPU271019TE1000",
+      "soc": "27-1019",
+      "name": "Artists and related workers, all other"
+    },
+    {
+      "id": "EPU271021TE1000",
+      "soc": "27-1021",
+      "name": "Commercial and industrial designers"
+    },
+    {
+      "id": "EPU271022TE1000",
+      "soc": "27-1022",
+      "name": "Fashion designers"
+    },
+    {
+      "id": "EPU271023TE1000",
+      "soc": "27-1023",
+      "name": "Floral designers"
+    },
+    {
+      "id": "EPU271024TE1000",
+      "soc": "27-1024",
+      "name": "Graphic designers"
+    },
+    {
+      "id": "EPU271025TE1000",
+      "soc": "27-1025",
+      "name": "Interior designers"
+    },
+    {
+      "id": "EPU271026TE1000",
+      "soc": "27-1026",
+      "name": "Merchandise displayers and window trimmers"
+    },
+    {
+      "id": "EPU271027TE1000",
+      "soc": "27-1027",
+      "name": "Set and exhibit designers"
+    },
+    {
+      "id": "EPU271029TE1000",
+      "soc": "27-1029",
+      "name": "Designers, all other"
+    },
+    {
+      "id": "EPU272011TE1000",
+      "soc": "27-2011",
+      "name": "Actors"
+    },
+    {
+      "id": "EPU272012TE1000",
+      "soc": "27-2012",
+      "name": "Producers and directors"
+    },
+    {
+      "id": "EPU272021TE1000",
+      "soc": "27-2021",
+      "name": "Athletes and sports competitors"
+    },
+    {
+      "id": "EPU272022TE1000",
+      "soc": "27-2022",
+      "name": "Coaches and scouts"
+    },
+    {
+      "id": "EPU272023TE1000",
+      "soc": "27-2023",
+      "name": "Umpires, referees, and other sports officials"
+    },
+    {
+      "id": "EPU272031TE1000",
+      "soc": "27-2031",
+      "name": "Dancers"
+    },
+    {
+      "id": "EPU272032TE1000",
+      "soc": "27-2032",
+      "name": "Choreographers"
+    },
+    {
+      "id": "EPU272041TE1000",
+      "soc": "27-2041",
+      "name": "Music directors and composers"
+    },
+    {
+      "id": "EPU272042TE1000",
+      "soc": "27-2042",
+      "name": "Musicians and singers"
+    },
+    {
+      "id": "EPU272091TE1000",
+      "soc": "27-2091",
+      "name": "Disc jockeys, except radio"
+    },
+    {
+      "id": "EPU272099TE1000",
+      "soc": "27-2099",
+      "name": "Entertainers and performers, sports and related workers, all other"
+    },
+    {
+      "id": "EPU273011TE1000",
+      "soc": "27-3011",
+      "name": "Broadcast announcers and radio disc jockeys"
+    },
+    {
+      "id": "EPU273023TE1000",
+      "soc": "27-3023",
+      "name": "News analysts, reporters, and journalists"
+    },
+    {
+      "id": "EPU273031TE1000",
+      "soc": "27-3031",
+      "name": "Public relations specialists"
+    },
+    {
+      "id": "EPU273041TE1000",
+      "soc": "27-3041",
+      "name": "Editors"
+    },
+    {
+      "id": "EPU273042TE1000",
+      "soc": "27-3042",
+      "name": "Technical writers"
+    },
+    {
+      "id": "EPU273043TE1000",
+      "soc": "27-3043",
+      "name": "Writers and authors"
+    },
+    {
+      "id": "EPU273091TE1000",
+      "soc": "27-3091",
+      "name": "Interpreters and translators"
+    },
+    {
+      "id": "EPU273092TE1000",
+      "soc": "27-3092",
+      "name": "Court reporters and simultaneous captioners"
+    },
+    {
+      "id": "EPU273099TE1000",
+      "soc": "27-3099",
+      "name": "Media and communication workers, all other"
+    },
+    {
+      "id": "EPU274011TE1000",
+      "soc": "27-4011",
+      "name": "Audio and video technicians"
+    },
+    {
+      "id": "EPU274012TE1000",
+      "soc": "27-4012",
+      "name": "Broadcast technicians"
+    },
+    {
+      "id": "EPU274014TE1000",
+      "soc": "27-4014",
+      "name": "Sound engineering technicians"
+    },
+    {
+      "id": "EPU274015TE1000",
+      "soc": "27-4015",
+      "name": "Lighting technicians"
+    },
+    {
+      "id": "EPU274021TE1000",
+      "soc": "27-4021",
+      "name": "Photographers"
+    },
+    {
+      "id": "EPU274031TE1000",
+      "soc": "27-4031",
+      "name": "Camera operators, television, video, and film"
+    },
+    {
+      "id": "EPU274032TE1000",
+      "soc": "27-4032",
+      "name": "Film and video editors"
+    },
+    {
+      "id": "EPU274099TE1000",
+      "soc": "27-4099",
+      "name": "Media and communication equipment workers, all other"
+    },
+    {
+      "id": "EPU291011TE1000",
+      "soc": "29-1011",
+      "name": "Chiropractors"
+    },
+    {
+      "id": "EPU291021TE1000",
+      "soc": "29-1021",
+      "name": "Dentists, general"
+    },
+    {
+      "id": "EPU291022TE1000",
+      "soc": "29-1022",
+      "name": "Oral and maxillofacial surgeons"
+    },
+    {
+      "id": "EPU291023TE1000",
+      "soc": "29-1023",
+      "name": "Orthodontists"
+    },
+    {
+      "id": "EPU291024TE1000",
+      "soc": "29-1024",
+      "name": "Prosthodontists"
+    },
+    {
+      "id": "EPU291029TE1000",
+      "soc": "29-1029",
+      "name": "Dentists, all other specialists"
+    },
+    {
+      "id": "EPU291031TE1000",
+      "soc": "29-1031",
+      "name": "Dietitians and nutritionists"
+    },
+    {
+      "id": "EPU291041TE1000",
+      "soc": "29-1041",
+      "name": "Optometrists"
+    },
+    {
+      "id": "EPU291051TE1000",
+      "soc": "29-1051",
+      "name": "Pharmacists"
+    },
+    {
+      "id": "EPU291071TE1000",
+      "soc": "29-1071",
+      "name": "Physician assistants"
+    },
+    {
+      "id": "EPU291081TE1000",
+      "soc": "29-1081",
+      "name": "Podiatrists"
+    },
+    {
+      "id": "EPU291122TE1000",
+      "soc": "29-1122",
+      "name": "Occupational therapists"
+    },
+    {
+      "id": "EPU291123TE1000",
+      "soc": "29-1123",
+      "name": "Physical therapists"
+    },
+    {
+      "id": "EPU291124TE1000",
+      "soc": "29-1124",
+      "name": "Radiation therapists"
+    },
+    {
+      "id": "EPU291125TE1000",
+      "soc": "29-1125",
+      "name": "Recreational therapists"
+    },
+    {
+      "id": "EPU291126TE1000",
+      "soc": "29-1126",
+      "name": "Respiratory therapists"
+    },
+    {
+      "id": "EPU291127TE1000",
+      "soc": "29-1127",
+      "name": "Speech-language pathologists"
+    },
+    {
+      "id": "EPU291128TE1000",
+      "soc": "29-1128",
+      "name": "Exercise physiologists"
+    },
+    {
+      "id": "EPU291129TE1000",
+      "soc": "29-1129",
+      "name": "Therapists, all other"
+    },
+    {
+      "id": "EPU291131TE1000",
+      "soc": "29-1131",
+      "name": "Veterinarians"
+    },
+    {
+      "id": "EPU291141TE1000",
+      "soc": "29-1141",
+      "name": "Registered nurses"
+    },
+    {
+      "id": "EPU291151TE1000",
+      "soc": "29-1151",
+      "name": "Nurse anesthetists"
+    },
+    {
+      "id": "EPU291161TE1000",
+      "soc": "29-1161",
+      "name": "Nurse midwives"
+    },
+    {
+      "id": "EPU291171TE1000",
+      "soc": "29-1171",
+      "name": "Nurse practitioners"
+    },
+    {
+      "id": "EPU291181TE1000",
+      "soc": "29-1181",
+      "name": "Audiologists"
+    },
+    {
+      "id": "EPU291211TE1000",
+      "soc": "29-1211",
+      "name": "Anesthesiologists"
+    },
+    {
+      "id": "EPU291212TE1000",
+      "soc": "29-1212",
+      "name": "Cardiologists"
+    },
+    {
+      "id": "EPU291213TE1000",
+      "soc": "29-1213",
+      "name": "Dermatologists"
+    },
+    {
+      "id": "EPU291214TE1000",
+      "soc": "29-1214",
+      "name": "Emergency medicine physicians"
+    },
+    {
+      "id": "EPU291215TE1000",
+      "soc": "29-1215",
+      "name": "Family medicine physicians"
+    },
+    {
+      "id": "EPU291216TE1000",
+      "soc": "29-1216",
+      "name": "General internal medicine physicians"
+    },
+    {
+      "id": "EPU291217TE1000",
+      "soc": "29-1217",
+      "name": "Neurologists"
+    },
+    {
+      "id": "EPU291218TE1000",
+      "soc": "29-1218",
+      "name": "Obstetricians and gynecologists"
+    },
+    {
+      "id": "EPU291221TE1000",
+      "soc": "29-1221",
+      "name": "Pediatricians, general"
+    },
+    {
+      "id": "EPU291222TE1000",
+      "soc": "29-1222",
+      "name": "Physicians, pathologists"
+    },
+    {
+      "id": "EPU291223TE1000",
+      "soc": "29-1223",
+      "name": "Psychiatrists"
+    },
+    {
+      "id": "EPU291224TE1000",
+      "soc": "29-1224",
+      "name": "Radiologists"
+    },
+    {
+      "id": "EPU291229TE1000",
+      "soc": "29-1229",
+      "name": "Physicians, all other"
+    },
+    {
+      "id": "EPU291241TE1000",
+      "soc": "29-1241",
+      "name": "Ophthalmologists, except pediatric"
+    },
+    {
+      "id": "EPU291242TE1000",
+      "soc": "29-1242",
+      "name": "Orthopedic surgeons, except pediatric"
+    },
+    {
+      "id": "EPU291243TE1000",
+      "soc": "29-1243",
+      "name": "Pediatric surgeons"
+    },
+    {
+      "id": "EPU291249TE1000",
+      "soc": "29-1249",
+      "name": "Surgeons, all other"
+    },
+    {
+      "id": "EPU291291TE1000",
+      "soc": "29-1291",
+      "name": "Acupuncturists"
+    },
+    {
+      "id": "EPU291292TE1000",
+      "soc": "29-1292",
+      "name": "Dental hygienists"
+    },
+    {
+      "id": "EPU291299TE1000",
+      "soc": "29-1299",
+      "name": "Healthcare diagnosing or treating practitioners, all other"
+    },
+    {
+      "id": "EPU292010TE1000",
+      "soc": "29-2010",
+      "name": "Clinical laboratory technologists and technicians"
+    },
+    {
+      "id": "EPU292031TE1000",
+      "soc": "29-2031",
+      "name": "Cardiovascular technologists and technicians"
+    },
+    {
+      "id": "EPU292032TE1000",
+      "soc": "29-2032",
+      "name": "Diagnostic medical sonographers"
+    },
+    {
+      "id": "EPU292033TE1000",
+      "soc": "29-2033",
+      "name": "Nuclear medicine technologists"
+    },
+    {
+      "id": "EPU292034TE1000",
+      "soc": "29-2034",
+      "name": "Radiologic technologists and technicians"
+    },
+    {
+      "id": "EPU292035TE1000",
+      "soc": "29-2035",
+      "name": "Magnetic resonance imaging technologists"
+    },
+    {
+      "id": "EPU292036TE1000",
+      "soc": "29-2036",
+      "name": "Medical dosimetrists"
+    },
+    {
+      "id": "EPU292042TE1000",
+      "soc": "29-2042",
+      "name": "Emergency medical technicians"
+    },
+    {
+      "id": "EPU292043TE1000",
+      "soc": "29-2043",
+      "name": "Paramedics"
+    },
+    {
+      "id": "EPU292051TE1000",
+      "soc": "29-2051",
+      "name": "Dietetic technicians"
+    },
+    {
+      "id": "EPU292052TE1000",
+      "soc": "29-2052",
+      "name": "Pharmacy technicians"
+    },
+    {
+      "id": "EPU292053TE1000",
+      "soc": "29-2053",
+      "name": "Psychiatric technicians"
+    },
+    {
+      "id": "EPU292055TE1000",
+      "soc": "29-2055",
+      "name": "Surgical technologists"
+    },
+    {
+      "id": "EPU292056TE1000",
+      "soc": "29-2056",
+      "name": "Veterinary technologists and technicians"
+    },
+    {
+      "id": "EPU292057TE1000",
+      "soc": "29-2057",
+      "name": "Ophthalmic medical technicians"
+    },
+    {
+      "id": "EPU292061TE1000",
+      "soc": "29-2061",
+      "name": "Licensed practical and licensed vocational nurses"
+    },
+    {
+      "id": "EPU292072TE1000",
+      "soc": "29-2072",
+      "name": "Medical records specialists"
+    },
+    {
+      "id": "EPU292081TE1000",
+      "soc": "29-2081",
+      "name": "Opticians, dispensing"
+    },
+    {
+      "id": "EPU292091TE1000",
+      "soc": "29-2091",
+      "name": "Orthotists and prosthetists"
+    },
+    {
+      "id": "EPU292092TE1000",
+      "soc": "29-2092",
+      "name": "Hearing aid specialists"
+    },
+    {
+      "id": "EPU292099TE1000",
+      "soc": "29-2099",
+      "name": "Health technologists and technicians, all other"
+    },
+    {
+      "id": "EPU299021TE1000",
+      "soc": "29-9021",
+      "name": "Health information technologists and medical registrars"
+    },
+    {
+      "id": "EPU299091TE1000",
+      "soc": "29-9091",
+      "name": "Athletic trainers"
+    },
+    {
+      "id": "EPU299092TE1000",
+      "soc": "29-9092",
+      "name": "Genetic counselors"
+    },
+    {
+      "id": "EPU299093TE1000",
+      "soc": "29-9093",
+      "name": "Surgical assistants"
+    },
+    {
+      "id": "EPU299099TE1000",
+      "soc": "29-9099",
+      "name": "Healthcare practitioners and technical workers, all other"
+    },
+    {
+      "id": "EPU311120TE1000",
+      "soc": "31-1120",
+      "name": "Home health and personal care aides"
+    },
+    {
+      "id": "EPU311131TE1000",
+      "soc": "31-1131",
+      "name": "Nursing assistants"
+    },
+    {
+      "id": "EPU311132TE1000",
+      "soc": "31-1132",
+      "name": "Orderlies"
+    },
+    {
+      "id": "EPU311133TE1000",
+      "soc": "31-1133",
+      "name": "Psychiatric aides"
+    },
+    {
+      "id": "EPU312011TE1000",
+      "soc": "31-2011",
+      "name": "Occupational therapy assistants"
+    },
+    {
+      "id": "EPU312012TE1000",
+      "soc": "31-2012",
+      "name": "Occupational therapy aides"
+    },
+    {
+      "id": "EPU312021TE1000",
+      "soc": "31-2021",
+      "name": "Physical therapist assistants"
+    },
+    {
+      "id": "EPU312022TE1000",
+      "soc": "31-2022",
+      "name": "Physical therapist aides"
+    },
+    {
+      "id": "EPU319011TE1000",
+      "soc": "31-9011",
+      "name": "Massage therapists"
+    },
+    {
+      "id": "EPU319091TE1000",
+      "soc": "31-9091",
+      "name": "Dental assistants"
+    },
+    {
+      "id": "EPU319092TE1000",
+      "soc": "31-9092",
+      "name": "Medical assistants"
+    },
+    {
+      "id": "EPU319093TE1000",
+      "soc": "31-9093",
+      "name": "Medical equipment preparers"
+    },
+    {
+      "id": "EPU319094TE1000",
+      "soc": "31-9094",
+      "name": "Medical transcriptionists"
+    },
+    {
+      "id": "EPU319095TE1000",
+      "soc": "31-9095",
+      "name": "Pharmacy aides"
+    },
+    {
+      "id": "EPU319096TE1000",
+      "soc": "31-9096",
+      "name": "Veterinary assistants and laboratory animal caretakers"
+    },
+    {
+      "id": "EPU319097TE1000",
+      "soc": "31-9097",
+      "name": "Phlebotomists"
+    },
+    {
+      "id": "EPU319099TE1000",
+      "soc": "31-9099",
+      "name": "Healthcare support workers, all other"
+    },
+    {
+      "id": "EPU331011TE1000",
+      "soc": "33-1011",
+      "name": "First-line supervisors of correctional officers"
+    },
+    {
+      "id": "EPU331012TE1000",
+      "soc": "33-1012",
+      "name": "First-line supervisors of police and detectives"
+    },
+    {
+      "id": "EPU331021TE1000",
+      "soc": "33-1021",
+      "name": "First-line supervisors of firefighting and prevention workers"
+    },
+    {
+      "id": "EPU331091TE1000",
+      "soc": "33-1091",
+      "name": "First-line supervisors of security workers"
+    },
+    {
+      "id": "EPU331099TE1000",
+      "soc": "33-1099",
+      "name": "First-line supervisors of protective service workers, all other"
+    },
+    {
+      "id": "EPU332011TE1000",
+      "soc": "33-2011",
+      "name": "Firefighters"
+    },
+    {
+      "id": "EPU332021TE1000",
+      "soc": "33-2021",
+      "name": "Fire inspectors and investigators"
+    },
+    {
+      "id": "EPU332022TE1000",
+      "soc": "33-2022",
+      "name": "Forest fire inspectors and prevention specialists"
+    },
+    {
+      "id": "EPU333011TE1000",
+      "soc": "33-3011",
+      "name": "Bailiffs"
+    },
+    {
+      "id": "EPU333012TE1000",
+      "soc": "33-3012",
+      "name": "Correctional officers and jailers"
+    },
+    {
+      "id": "EPU333021TE1000",
+      "soc": "33-3021",
+      "name": "Detectives and criminal investigators"
+    },
+    {
+      "id": "EPU333031TE1000",
+      "soc": "33-3031",
+      "name": "Fish and game wardens"
+    },
+    {
+      "id": "EPU333041TE1000",
+      "soc": "33-3041",
+      "name": "Parking enforcement workers"
+    },
+    {
+      "id": "EPU333051TE1000",
+      "soc": "33-3051",
+      "name": "Police and sheriff's patrol officers"
+    },
+    {
+      "id": "EPU333052TE1000",
+      "soc": "33-3052",
+      "name": "Transit and railroad police"
+    },
+    {
+      "id": "EPU339011TE1000",
+      "soc": "33-9011",
+      "name": "Animal control workers"
+    },
+    {
+      "id": "EPU339021TE1000",
+      "soc": "33-9021",
+      "name": "Private detectives and investigators"
+    },
+    {
+      "id": "EPU339031TE1000",
+      "soc": "33-9031",
+      "name": "Gambling surveillance officers and gambling investigators"
+    },
+    {
+      "id": "EPU339032TE1000",
+      "soc": "33-9032",
+      "name": "Security guards"
+    },
+    {
+      "id": "EPU339091TE1000",
+      "soc": "33-9091",
+      "name": "Crossing guards and flaggers"
+    },
+    {
+      "id": "EPU339092TE1000",
+      "soc": "33-9092",
+      "name": "Lifeguards, ski patrol, and other recreational protective service workers"
+    },
+    {
+      "id": "EPU339093TE1000",
+      "soc": "33-9093",
+      "name": "Transportation security screeners"
+    },
+    {
+      "id": "EPU339094TE1000",
+      "soc": "33-9094",
+      "name": "School bus monitors"
+    },
+    {
+      "id": "EPU339099TE1000",
+      "soc": "33-9099",
+      "name": "Protective service workers, all other"
+    },
+    {
+      "id": "EPU351011TE1000",
+      "soc": "35-1011",
+      "name": "Chefs and head cooks"
+    },
+    {
+      "id": "EPU351012TE1000",
+      "soc": "35-1012",
+      "name": "First-line supervisors of food preparation and serving workers"
+    },
+    {
+      "id": "EPU352011TE1000",
+      "soc": "35-2011",
+      "name": "Cooks, fast food"
+    },
+    {
+      "id": "EPU352012TE1000",
+      "soc": "35-2012",
+      "name": "Cooks, institution and cafeteria"
+    },
+    {
+      "id": "EPU352013TE1000",
+      "soc": "35-2013",
+      "name": "Cooks, private household"
+    },
+    {
+      "id": "EPU352014TE1000",
+      "soc": "35-2014",
+      "name": "Cooks, restaurant"
+    },
+    {
+      "id": "EPU352015TE1000",
+      "soc": "35-2015",
+      "name": "Cooks, short order"
+    },
+    {
+      "id": "EPU352019TE1000",
+      "soc": "35-2019",
+      "name": "Cooks, all other"
+    },
+    {
+      "id": "EPU352021TE1000",
+      "soc": "35-2021",
+      "name": "Food preparation workers"
+    },
+    {
+      "id": "EPU353011TE1000",
+      "soc": "35-3011",
+      "name": "Bartenders"
+    },
+    {
+      "id": "EPU353023TE1000",
+      "soc": "35-3023",
+      "name": "Fast food and counter workers"
+    },
+    {
+      "id": "EPU353031TE1000",
+      "soc": "35-3031",
+      "name": "Waiters and waitresses"
+    },
+    {
+      "id": "EPU353041TE1000",
+      "soc": "35-3041",
+      "name": "Food servers, nonrestaurant"
+    },
+    {
+      "id": "EPU359011TE1000",
+      "soc": "35-9011",
+      "name": "Dining room and cafeteria attendants and bartender helpers"
+    },
+    {
+      "id": "EPU359021TE1000",
+      "soc": "35-9021",
+      "name": "Dishwashers"
+    },
+    {
+      "id": "EPU359031TE1000",
+      "soc": "35-9031",
+      "name": "Hosts and hostesses, restaurant, lounge, and coffee shop"
+    },
+    {
+      "id": "EPU359099TE1000",
+      "soc": "35-9099",
+      "name": "Food preparation and serving related workers, all other"
+    },
+    {
+      "id": "EPU371011TE1000",
+      "soc": "37-1011",
+      "name": "First-line supervisors of housekeeping and janitorial workers"
+    },
+    {
+      "id": "EPU371012TE1000",
+      "soc": "37-1012",
+      "name": "First-line supervisors of landscaping, lawn service, and groundskeeping workers"
+    },
+    {
+      "id": "EPU372011TE1000",
+      "soc": "37-2011",
+      "name": "Janitors and cleaners, except maids and housekeeping cleaners"
+    },
+    {
+      "id": "EPU372012TE1000",
+      "soc": "37-2012",
+      "name": "Maids and housekeeping cleaners"
+    },
+    {
+      "id": "EPU372019TE1000",
+      "soc": "37-2019",
+      "name": "Building cleaning workers, all other"
+    },
+    {
+      "id": "EPU372021TE1000",
+      "soc": "37-2021",
+      "name": "Pest control workers"
+    },
+    {
+      "id": "EPU373011TE1000",
+      "soc": "37-3011",
+      "name": "Landscaping and groundskeeping workers"
+    },
+    {
+      "id": "EPU373012TE1000",
+      "soc": "37-3012",
+      "name": "Pesticide handlers, sprayers, and applicators, vegetation"
+    },
+    {
+      "id": "EPU373013TE1000",
+      "soc": "37-3013",
+      "name": "Tree trimmers and pruners"
+    },
+    {
+      "id": "EPU373019TE1000",
+      "soc": "37-3019",
+      "name": "Grounds maintenance workers, all other"
+    },
+    {
+      "id": "EPU391013TE1000",
+      "soc": "39-1013",
+      "name": "First-line supervisors of gambling services workers"
+    },
+    {
+      "id": "EPU391014TE1000",
+      "soc": "39-1014",
+      "name": "First-line supervisors of entertainment and recreation workers, except gambling services"
+    },
+    {
+      "id": "EPU391022TE1000",
+      "soc": "39-1022",
+      "name": "First-line supervisors of personal service workers"
+    },
+    {
+      "id": "EPU392011TE1000",
+      "soc": "39-2011",
+      "name": "Animal trainers"
+    },
+    {
+      "id": "EPU392021TE1000",
+      "soc": "39-2021",
+      "name": "Animal caretakers"
+    },
+    {
+      "id": "EPU393011TE1000",
+      "soc": "39-3011",
+      "name": "Gambling dealers"
+    },
+    {
+      "id": "EPU393012TE1000",
+      "soc": "39-3012",
+      "name": "Gambling and sports book writers and runners"
+    },
+    {
+      "id": "EPU393019TE1000",
+      "soc": "39-3019",
+      "name": "Gambling service workers, all other"
+    },
+    {
+      "id": "EPU393021TE1000",
+      "soc": "39-3021",
+      "name": "Motion picture projectionists"
+    },
+    {
+      "id": "EPU393031TE1000",
+      "soc": "39-3031",
+      "name": "Ushers, lobby attendants, and ticket takers"
+    },
+    {
+      "id": "EPU393091TE1000",
+      "soc": "39-3091",
+      "name": "Amusement and recreation attendants"
+    },
+    {
+      "id": "EPU393092TE1000",
+      "soc": "39-3092",
+      "name": "Costume attendants"
+    },
+    {
+      "id": "EPU393093TE1000",
+      "soc": "39-3093",
+      "name": "Locker room, coatroom, and dressing room attendants"
+    },
+    {
+      "id": "EPU393099TE1000",
+      "soc": "39-3099",
+      "name": "Entertainment attendants and related workers, all other"
+    },
+    {
+      "id": "EPU394011TE1000",
+      "soc": "39-4011",
+      "name": "Embalmers"
+    },
+    {
+      "id": "EPU394012TE1000",
+      "soc": "39-4012",
+      "name": "Crematory operators"
+    },
+    {
+      "id": "EPU394021TE1000",
+      "soc": "39-4021",
+      "name": "Funeral attendants"
+    },
+    {
+      "id": "EPU394031TE1000",
+      "soc": "39-4031",
+      "name": "Morticians, undertakers, and funeral arrangers"
+    },
+    {
+      "id": "EPU395011TE1000",
+      "soc": "39-5011",
+      "name": "Barbers"
+    },
+    {
+      "id": "EPU395012TE1000",
+      "soc": "39-5012",
+      "name": "Hairdressers, hairstylists, and cosmetologists"
+    },
+    {
+      "id": "EPU395091TE1000",
+      "soc": "39-5091",
+      "name": "Makeup artists, theatrical and performance"
+    },
+    {
+      "id": "EPU395092TE1000",
+      "soc": "39-5092",
+      "name": "Manicurists and pedicurists"
+    },
+    {
+      "id": "EPU395093TE1000",
+      "soc": "39-5093",
+      "name": "Shampooers"
+    },
+    {
+      "id": "EPU395094TE1000",
+      "soc": "39-5094",
+      "name": "Skincare specialists"
+    },
+    {
+      "id": "EPU396011TE1000",
+      "soc": "39-6011",
+      "name": "Baggage porters and bellhops"
+    },
+    {
+      "id": "EPU396012TE1000",
+      "soc": "39-6012",
+      "name": "Concierges"
+    },
+    {
+      "id": "EPU397010TE1000",
+      "soc": "39-7010",
+      "name": "Tour and travel guides"
+    },
+    {
+      "id": "EPU399011TE1000",
+      "soc": "39-9011",
+      "name": "Childcare workers"
+    },
+    {
+      "id": "EPU399031TE1000",
+      "soc": "39-9031",
+      "name": "Exercise trainers and group fitness instructors"
+    },
+    {
+      "id": "EPU399032TE1000",
+      "soc": "39-9032",
+      "name": "Recreation workers"
+    },
+    {
+      "id": "EPU399041TE1000",
+      "soc": "39-9041",
+      "name": "Residential advisors"
+    },
+    {
+      "id": "EPU399099TE1000",
+      "soc": "39-9099",
+      "name": "Personal care and service workers, all other"
+    },
+    {
+      "id": "EPU411011TE1000",
+      "soc": "41-1011",
+      "name": "First-line supervisors of retail sales workers"
+    },
+    {
+      "id": "EPU411012TE1000",
+      "soc": "41-1012",
+      "name": "First-line supervisors of non-retail sales workers"
+    },
+    {
+      "id": "EPU412011TE1000",
+      "soc": "41-2011",
+      "name": "Cashiers"
+    },
+    {
+      "id": "EPU412012TE1000",
+      "soc": "41-2012",
+      "name": "Gambling change persons and booth cashiers"
+    },
+    {
+      "id": "EPU412021TE1000",
+      "soc": "41-2021",
+      "name": "Counter and rental clerks"
+    },
+    {
+      "id": "EPU412022TE1000",
+      "soc": "41-2022",
+      "name": "Parts salespersons"
+    },
+    {
+      "id": "EPU412031TE1000",
+      "soc": "41-2031",
+      "name": "Retail salespersons"
+    },
+    {
+      "id": "EPU413011TE1000",
+      "soc": "41-3011",
+      "name": "Advertising sales agents"
+    },
+    {
+      "id": "EPU413021TE1000",
+      "soc": "41-3021",
+      "name": "Insurance sales agents"
+    },
+    {
+      "id": "EPU413031TE1000",
+      "soc": "41-3031",
+      "name": "Securities, commodities, and financial services sales agents"
+    },
+    {
+      "id": "EPU413041TE1000",
+      "soc": "41-3041",
+      "name": "Travel agents"
+    },
+    {
+      "id": "EPU413091TE1000",
+      "soc": "41-3091",
+      "name": "Sales representatives of services, except advertising, insurance, financial services, and travel"
+    },
+    {
+      "id": "EPU414011TE1000",
+      "soc": "41-4011",
+      "name": "Sales representatives, wholesale and manufacturing, technical and scientific products"
+    },
+    {
+      "id": "EPU414012TE1000",
+      "soc": "41-4012",
+      "name": "Sales representatives, wholesale and manufacturing, except technical and scientific products"
+    },
+    {
+      "id": "EPU419011TE1000",
+      "soc": "41-9011",
+      "name": "Demonstrators and product promoters"
+    },
+    {
+      "id": "EPU419012TE1000",
+      "soc": "41-9012",
+      "name": "Models"
+    },
+    {
+      "id": "EPU419021TE1000",
+      "soc": "41-9021",
+      "name": "Real estate brokers"
+    },
+    {
+      "id": "EPU419022TE1000",
+      "soc": "41-9022",
+      "name": "Real estate sales agents"
+    },
+    {
+      "id": "EPU419031TE1000",
+      "soc": "41-9031",
+      "name": "Sales engineers"
+    },
+    {
+      "id": "EPU419041TE1000",
+      "soc": "41-9041",
+      "name": "Telemarketers"
+    },
+    {
+      "id": "EPU419091TE1000",
+      "soc": "41-9091",
+      "name": "Door-to-door sales workers, news and street vendors, and related workers"
+    },
+    {
+      "id": "EPU419099TE1000",
+      "soc": "41-9099",
+      "name": "Sales and related workers, all other"
+    },
+    {
+      "id": "EPU431011TE1000",
+      "soc": "43-1011",
+      "name": "First-line supervisors of office and administrative support workers"
+    },
+    {
+      "id": "EPU432011TE1000",
+      "soc": "43-2011",
+      "name": "Switchboard operators, including answering service"
+    },
+    {
+      "id": "EPU432021TE1000",
+      "soc": "43-2021",
+      "name": "Telephone operators"
+    },
+    {
+      "id": "EPU432099TE1000",
+      "soc": "43-2099",
+      "name": "Communications equipment operators, all other"
+    },
+    {
+      "id": "EPU433011TE1000",
+      "soc": "43-3011",
+      "name": "Bill and account collectors"
+    },
+    {
+      "id": "EPU433021TE1000",
+      "soc": "43-3021",
+      "name": "Billing and posting clerks"
+    },
+    {
+      "id": "EPU433031TE1000",
+      "soc": "43-3031",
+      "name": "Bookkeeping, accounting, and auditing clerks"
+    },
+    {
+      "id": "EPU433041TE1000",
+      "soc": "43-3041",
+      "name": "Gambling cage workers"
+    },
+    {
+      "id": "EPU433051TE1000",
+      "soc": "43-3051",
+      "name": "Payroll and timekeeping clerks"
+    },
+    {
+      "id": "EPU433061TE1000",
+      "soc": "43-3061",
+      "name": "Procurement clerks"
+    },
+    {
+      "id": "EPU433071TE1000",
+      "soc": "43-3071",
+      "name": "Tellers"
+    },
+    {
+      "id": "EPU433099TE1000",
+      "soc": "43-3099",
+      "name": "Financial clerks, all other"
+    },
+    {
+      "id": "EPU434011TE1000",
+      "soc": "43-4011",
+      "name": "Brokerage clerks"
+    },
+    {
+      "id": "EPU434021TE1000",
+      "soc": "43-4021",
+      "name": "Correspondence clerks"
+    },
+    {
+      "id": "EPU434031TE1000",
+      "soc": "43-4031",
+      "name": "Court, municipal, and license clerks"
+    },
+    {
+      "id": "EPU434041TE1000",
+      "soc": "43-4041",
+      "name": "Credit authorizers, checkers, and clerks"
+    },
+    {
+      "id": "EPU434051TE1000",
+      "soc": "43-4051",
+      "name": "Customer service representatives"
+    },
+    {
+      "id": "EPU434061TE1000",
+      "soc": "43-4061",
+      "name": "Eligibility interviewers, government programs"
+    },
+    {
+      "id": "EPU434071TE1000",
+      "soc": "43-4071",
+      "name": "File clerks"
+    },
+    {
+      "id": "EPU434081TE1000",
+      "soc": "43-4081",
+      "name": "Hotel, motel, and resort desk clerks"
+    },
+    {
+      "id": "EPU434111TE1000",
+      "soc": "43-4111",
+      "name": "Interviewers, except eligibility and loan"
+    },
+    {
+      "id": "EPU434121TE1000",
+      "soc": "43-4121",
+      "name": "Library assistants, clerical"
+    },
+    {
+      "id": "EPU434131TE1000",
+      "soc": "43-4131",
+      "name": "Loan interviewers and clerks"
+    },
+    {
+      "id": "EPU434141TE1000",
+      "soc": "43-4141",
+      "name": "New accounts clerks"
+    },
+    {
+      "id": "EPU434151TE1000",
+      "soc": "43-4151",
+      "name": "Order clerks"
+    },
+    {
+      "id": "EPU434161TE1000",
+      "soc": "43-4161",
+      "name": "Human resources assistants, except payroll and timekeeping"
+    },
+    {
+      "id": "EPU434171TE1000",
+      "soc": "43-4171",
+      "name": "Receptionists and information clerks"
+    },
+    {
+      "id": "EPU434181TE1000",
+      "soc": "43-4181",
+      "name": "Reservation and transportation ticket agents and travel clerks"
+    },
+    {
+      "id": "EPU434199TE1000",
+      "soc": "43-4199",
+      "name": "Information and record clerks, all other"
+    },
+    {
+      "id": "EPU435011TE1000",
+      "soc": "43-5011",
+      "name": "Cargo and freight agents"
+    },
+    {
+      "id": "EPU435021TE1000",
+      "soc": "43-5021",
+      "name": "Couriers and messengers"
+    },
+    {
+      "id": "EPU435031TE1000",
+      "soc": "43-5031",
+      "name": "Public safety telecommunicators"
+    },
+    {
+      "id": "EPU435032TE1000",
+      "soc": "43-5032",
+      "name": "Dispatchers, except police, fire, and ambulance"
+    },
+    {
+      "id": "EPU435041TE1000",
+      "soc": "43-5041",
+      "name": "Meter readers, utilities"
+    },
+    {
+      "id": "EPU435051TE1000",
+      "soc": "43-5051",
+      "name": "Postal service clerks"
+    },
+    {
+      "id": "EPU435052TE1000",
+      "soc": "43-5052",
+      "name": "Postal service mail carriers"
+    },
+    {
+      "id": "EPU435053TE1000",
+      "soc": "43-5053",
+      "name": "Postal service mail sorters, processors, and processing machine operators"
+    },
+    {
+      "id": "EPU435061TE1000",
+      "soc": "43-5061",
+      "name": "Production, planning, and expediting clerks"
+    },
+    {
+      "id": "EPU435071TE1000",
+      "soc": "43-5071",
+      "name": "Shipping, receiving, and inventory clerks"
+    },
+    {
+      "id": "EPU435111TE1000",
+      "soc": "43-5111",
+      "name": "Weighers, measurers, checkers, and samplers, recordkeeping"
+    },
+    {
+      "id": "EPU436011TE1000",
+      "soc": "43-6011",
+      "name": "Executive secretaries and executive administrative assistants"
+    },
+    {
+      "id": "EPU436012TE1000",
+      "soc": "43-6012",
+      "name": "Legal secretaries and administrative assistants"
+    },
+    {
+      "id": "EPU436013TE1000",
+      "soc": "43-6013",
+      "name": "Medical secretaries and administrative assistants"
+    },
+    {
+      "id": "EPU436014TE1000",
+      "soc": "43-6014",
+      "name": "Secretaries and administrative assistants, except legal, medical, and executive"
+    },
+    {
+      "id": "EPU439021TE1000",
+      "soc": "43-9021",
+      "name": "Data entry keyers"
+    },
+    {
+      "id": "EPU439022TE1000",
+      "soc": "43-9022",
+      "name": "Word processors and typists"
+    },
+    {
+      "id": "EPU439031TE1000",
+      "soc": "43-9031",
+      "name": "Desktop publishers"
+    },
+    {
+      "id": "EPU439041TE1000",
+      "soc": "43-9041",
+      "name": "Insurance claims and policy processing clerks"
+    },
+    {
+      "id": "EPU439051TE1000",
+      "soc": "43-9051",
+      "name": "Mail clerks and mail machine operators, except postal service"
+    },
+    {
+      "id": "EPU439061TE1000",
+      "soc": "43-9061",
+      "name": "Office clerks, general"
+    },
+    {
+      "id": "EPU439071TE1000",
+      "soc": "43-9071",
+      "name": "Office machine operators, except computer"
+    },
+    {
+      "id": "EPU439081TE1000",
+      "soc": "43-9081",
+      "name": "Proofreaders and copy markers"
+    },
+    {
+      "id": "EPU439111TE1000",
+      "soc": "43-9111",
+      "name": "Statistical assistants"
+    },
+    {
+      "id": "EPU439199TE1000",
+      "soc": "43-9199",
+      "name": "Office and administrative support workers, all other"
+    },
+    {
+      "id": "EPU451011TE1000",
+      "soc": "45-1011",
+      "name": "First-line supervisors of farming, fishing, and forestry workers"
+    },
+    {
+      "id": "EPU452011TE1000",
+      "soc": "45-2011",
+      "name": "Agricultural inspectors"
+    },
+    {
+      "id": "EPU452021TE1000",
+      "soc": "45-2021",
+      "name": "Animal breeders"
+    },
+    {
+      "id": "EPU452041TE1000",
+      "soc": "45-2041",
+      "name": "Graders and sorters, agricultural products"
+    },
+    {
+      "id": "EPU452091TE1000",
+      "soc": "45-2091",
+      "name": "Agricultural equipment operators"
+    },
+    {
+      "id": "EPU452092TE1000",
+      "soc": "45-2092",
+      "name": "Farmworkers and laborers, crop, nursery, and greenhouse"
+    },
+    {
+      "id": "EPU452093TE1000",
+      "soc": "45-2093",
+      "name": "Farmworkers, farm, ranch, and aquacultural animals"
+    },
+    {
+      "id": "EPU452099TE1000",
+      "soc": "45-2099",
+      "name": "Agricultural workers, all other"
+    },
+    {
+      "id": "EPU453031TE1000",
+      "soc": "45-3031",
+      "name": "Fishing and hunting workers"
+    },
+    {
+      "id": "EPU454011TE1000",
+      "soc": "45-4011",
+      "name": "Forest and conservation workers"
+    },
+    {
+      "id": "EPU454021TE1000",
+      "soc": "45-4021",
+      "name": "Fallers"
+    },
+    {
+      "id": "EPU454022TE1000",
+      "soc": "45-4022",
+      "name": "Logging equipment operators"
+    },
+    {
+      "id": "EPU454023TE1000",
+      "soc": "45-4023",
+      "name": "Log graders and scalers"
+    },
+    {
+      "id": "EPU454029TE1000",
+      "soc": "45-4029",
+      "name": "Logging workers, all other"
+    },
+    {
+      "id": "EPU471011TE1000",
+      "soc": "47-1011",
+      "name": "First-line supervisors of construction trades and extraction workers"
+    },
+    {
+      "id": "EPU472011TE1000",
+      "soc": "47-2011",
+      "name": "Boilermakers"
+    },
+    {
+      "id": "EPU472021TE1000",
+      "soc": "47-2021",
+      "name": "Brickmasons and blockmasons"
+    },
+    {
+      "id": "EPU472022TE1000",
+      "soc": "47-2022",
+      "name": "Stonemasons"
+    },
+    {
+      "id": "EPU472031TE1000",
+      "soc": "47-2031",
+      "name": "Carpenters"
+    },
+    {
+      "id": "EPU472041TE1000",
+      "soc": "47-2041",
+      "name": "Carpet installers"
+    },
+    {
+      "id": "EPU472042TE1000",
+      "soc": "47-2042",
+      "name": "Floor layers, except carpet, wood, and hard tiles"
+    },
+    {
+      "id": "EPU472043TE1000",
+      "soc": "47-2043",
+      "name": "Floor sanders and finishers"
+    },
+    {
+      "id": "EPU472044TE1000",
+      "soc": "47-2044",
+      "name": "Tile and stone setters"
+    },
+    {
+      "id": "EPU472051TE1000",
+      "soc": "47-2051",
+      "name": "Cement masons and concrete finishers"
+    },
+    {
+      "id": "EPU472053TE1000",
+      "soc": "47-2053",
+      "name": "Terrazzo workers and finishers"
+    },
+    {
+      "id": "EPU472061TE1000",
+      "soc": "47-2061",
+      "name": "Construction laborers"
+    },
+    {
+      "id": "EPU472071TE1000",
+      "soc": "47-2071",
+      "name": "Paving, surfacing, and tamping equipment operators"
+    },
+    {
+      "id": "EPU472072TE1000",
+      "soc": "47-2072",
+      "name": "Pile driver operators"
+    },
+    {
+      "id": "EPU472073TE1000",
+      "soc": "47-2073",
+      "name": "Operating engineers and other construction equipment operators"
+    },
+    {
+      "id": "EPU472081TE1000",
+      "soc": "47-2081",
+      "name": "Drywall and ceiling tile installers"
+    },
+    {
+      "id": "EPU472082TE1000",
+      "soc": "47-2082",
+      "name": "Tapers"
+    },
+    {
+      "id": "EPU472111TE1000",
+      "soc": "47-2111",
+      "name": "Electricians"
+    },
+    {
+      "id": "EPU472121TE1000",
+      "soc": "47-2121",
+      "name": "Glaziers"
+    },
+    {
+      "id": "EPU472131TE1000",
+      "soc": "47-2131",
+      "name": "Insulation workers, floor, ceiling, and wall"
+    },
+    {
+      "id": "EPU472132TE1000",
+      "soc": "47-2132",
+      "name": "Insulation workers, mechanical"
+    },
+    {
+      "id": "EPU472141TE1000",
+      "soc": "47-2141",
+      "name": "Painters, construction and maintenance"
+    },
+    {
+      "id": "EPU472142TE1000",
+      "soc": "47-2142",
+      "name": "Paperhangers"
+    },
+    {
+      "id": "EPU472151TE1000",
+      "soc": "47-2151",
+      "name": "Pipelayers"
+    },
+    {
+      "id": "EPU472152TE1000",
+      "soc": "47-2152",
+      "name": "Plumbers, pipefitters, and steamfitters"
+    },
+    {
+      "id": "EPU472161TE1000",
+      "soc": "47-2161",
+      "name": "Plasterers and stucco masons"
+    },
+    {
+      "id": "EPU472171TE1000",
+      "soc": "47-2171",
+      "name": "Reinforcing iron and rebar workers"
+    },
+    {
+      "id": "EPU472181TE1000",
+      "soc": "47-2181",
+      "name": "Roofers"
+    },
+    {
+      "id": "EPU472211TE1000",
+      "soc": "47-2211",
+      "name": "Sheet metal workers"
+    },
+    {
+      "id": "EPU472221TE1000",
+      "soc": "47-2221",
+      "name": "Structural iron and steel workers"
+    },
+    {
+      "id": "EPU472231TE1000",
+      "soc": "47-2231",
+      "name": "Solar photovoltaic installers"
+    },
+    {
+      "id": "EPU473011TE1000",
+      "soc": "47-3011",
+      "name": "Helpers--brickmasons, blockmasons, stonemasons, and tile and marble setters"
+    },
+    {
+      "id": "EPU473012TE1000",
+      "soc": "47-3012",
+      "name": "Helpers--carpenters"
+    },
+    {
+      "id": "EPU473013TE1000",
+      "soc": "47-3013",
+      "name": "Helpers--electricians"
+    },
+    {
+      "id": "EPU473014TE1000",
+      "soc": "47-3014",
+      "name": "Helpers--painters, paperhangers, plasterers, and stucco masons"
+    },
+    {
+      "id": "EPU473015TE1000",
+      "soc": "47-3015",
+      "name": "Helpers--pipelayers, plumbers, pipefitters, and steamfitters"
+    },
+    {
+      "id": "EPU473016TE1000",
+      "soc": "47-3016",
+      "name": "Helpers--roofers"
+    },
+    {
+      "id": "EPU473019TE1000",
+      "soc": "47-3019",
+      "name": "Helpers, construction trades, all other"
+    },
+    {
+      "id": "EPU474011TE1000",
+      "soc": "47-4011",
+      "name": "Construction and building inspectors"
+    },
+    {
+      "id": "EPU474021TE1000",
+      "soc": "47-4021",
+      "name": "Elevator and escalator installers and repairers"
+    },
+    {
+      "id": "EPU474031TE1000",
+      "soc": "47-4031",
+      "name": "Fence erectors"
+    },
+    {
+      "id": "EPU474041TE1000",
+      "soc": "47-4041",
+      "name": "Hazardous materials removal workers"
+    },
+    {
+      "id": "EPU474051TE1000",
+      "soc": "47-4051",
+      "name": "Highway maintenance workers"
+    },
+    {
+      "id": "EPU474061TE1000",
+      "soc": "47-4061",
+      "name": "Rail-track laying and maintenance equipment operators"
+    },
+    {
+      "id": "EPU474071TE1000",
+      "soc": "47-4071",
+      "name": "Septic tank servicers and sewer pipe cleaners"
+    },
+    {
+      "id": "EPU474090TE1000",
+      "soc": "47-4090",
+      "name": "Miscellaneous construction and related workers"
+    },
+    {
+      "id": "EPU475011TE1000",
+      "soc": "47-5011",
+      "name": "Derrick operators, oil and gas"
+    },
+    {
+      "id": "EPU475012TE1000",
+      "soc": "47-5012",
+      "name": "Rotary drill operators, oil and gas"
+    },
+    {
+      "id": "EPU475013TE1000",
+      "soc": "47-5013",
+      "name": "Service unit operators, oil and gas"
+    },
+    {
+      "id": "EPU475022TE1000",
+      "soc": "47-5022",
+      "name": "Excavating and loading machine and dragline operators, surface mining"
+    },
+    {
+      "id": "EPU475023TE1000",
+      "soc": "47-5023",
+      "name": "Earth drillers, except oil and gas"
+    },
+    {
+      "id": "EPU475032TE1000",
+      "soc": "47-5032",
+      "name": "Explosives workers, ordnance handling experts, and blasters"
+    },
+    {
+      "id": "EPU475041TE1000",
+      "soc": "47-5041",
+      "name": "Continuous mining machine operators"
+    },
+    {
+      "id": "EPU475043TE1000",
+      "soc": "47-5043",
+      "name": "Roof bolters, mining"
+    },
+    {
+      "id": "EPU475044TE1000",
+      "soc": "47-5044",
+      "name": "Loading and moving machine operators, underground mining"
+    },
+    {
+      "id": "EPU475049TE1000",
+      "soc": "47-5049",
+      "name": "Underground mining machine operators, all other"
+    },
+    {
+      "id": "EPU475051TE1000",
+      "soc": "47-5051",
+      "name": "Rock splitters, quarry"
+    },
+    {
+      "id": "EPU475071TE1000",
+      "soc": "47-5071",
+      "name": "Roustabouts, oil and gas"
+    },
+    {
+      "id": "EPU475081TE1000",
+      "soc": "47-5081",
+      "name": "Helpers--extraction workers"
+    },
+    {
+      "id": "EPU475099TE1000",
+      "soc": "47-5099",
+      "name": "Extraction workers, all other"
+    },
+    {
+      "id": "EPU491011TE1000",
+      "soc": "49-1011",
+      "name": "First-line supervisors of mechanics, installers, and repairers"
+    },
+    {
+      "id": "EPU492011TE1000",
+      "soc": "49-2011",
+      "name": "Computer, automated teller, and office machine repairers"
+    },
+    {
+      "id": "EPU492021TE1000",
+      "soc": "49-2021",
+      "name": "Radio, cellular, and tower equipment installers and repairers"
+    },
+    {
+      "id": "EPU492022TE1000",
+      "soc": "49-2022",
+      "name": "Telecommunications equipment installers and repairers, except line installers"
+    },
+    {
+      "id": "EPU492091TE1000",
+      "soc": "49-2091",
+      "name": "Avionics technicians"
+    },
+    {
+      "id": "EPU492092TE1000",
+      "soc": "49-2092",
+      "name": "Electric motor, power tool, and related repairers"
+    },
+    {
+      "id": "EPU492093TE1000",
+      "soc": "49-2093",
+      "name": "Electrical and electronics installers and repairers, transportation equipment"
+    },
+    {
+      "id": "EPU492094TE1000",
+      "soc": "49-2094",
+      "name": "Electrical and electronics repairers, commercial and industrial equipment"
+    },
+    {
+      "id": "EPU492095TE1000",
+      "soc": "49-2095",
+      "name": "Electrical and electronics repairers, powerhouse, substation, and relay"
+    },
+    {
+      "id": "EPU492096TE1000",
+      "soc": "49-2096",
+      "name": "Electronic equipment installers and repairers, motor vehicles"
+    },
+    {
+      "id": "EPU492097TE1000",
+      "soc": "49-2097",
+      "name": "Audiovisual equipment installers and repairers"
+    },
+    {
+      "id": "EPU492098TE1000",
+      "soc": "49-2098",
+      "name": "Security and fire alarm systems installers"
+    },
+    {
+      "id": "EPU493011TE1000",
+      "soc": "49-3011",
+      "name": "Aircraft mechanics and service technicians"
+    },
+    {
+      "id": "EPU493021TE1000",
+      "soc": "49-3021",
+      "name": "Automotive body and related repairers"
+    },
+    {
+      "id": "EPU493022TE1000",
+      "soc": "49-3022",
+      "name": "Automotive glass installers and repairers"
+    },
+    {
+      "id": "EPU493023TE1000",
+      "soc": "49-3023",
+      "name": "Automotive service technicians and mechanics"
+    },
+    {
+      "id": "EPU493031TE1000",
+      "soc": "49-3031",
+      "name": "Bus and truck mechanics and diesel engine specialists"
+    },
+    {
+      "id": "EPU493041TE1000",
+      "soc": "49-3041",
+      "name": "Farm equipment mechanics and service technicians"
+    },
+    {
+      "id": "EPU493042TE1000",
+      "soc": "49-3042",
+      "name": "Mobile heavy equipment mechanics, except engines"
+    },
+    {
+      "id": "EPU493043TE1000",
+      "soc": "49-3043",
+      "name": "Rail car repairers"
+    },
+    {
+      "id": "EPU493051TE1000",
+      "soc": "49-3051",
+      "name": "Motorboat mechanics and service technicians"
+    },
+    {
+      "id": "EPU493052TE1000",
+      "soc": "49-3052",
+      "name": "Motorcycle mechanics"
+    },
+    {
+      "id": "EPU493053TE1000",
+      "soc": "49-3053",
+      "name": "Outdoor power equipment and other small engine mechanics"
+    },
+    {
+      "id": "EPU493091TE1000",
+      "soc": "49-3091",
+      "name": "Bicycle repairers"
+    },
+    {
+      "id": "EPU493092TE1000",
+      "soc": "49-3092",
+      "name": "Recreational vehicle service technicians"
+    },
+    {
+      "id": "EPU493093TE1000",
+      "soc": "49-3093",
+      "name": "Tire repairers and changers"
+    },
+    {
+      "id": "EPU499011TE1000",
+      "soc": "49-9011",
+      "name": "Mechanical door repairers"
+    },
+    {
+      "id": "EPU499012TE1000",
+      "soc": "49-9012",
+      "name": "Control and valve installers and repairers, except mechanical door"
+    },
+    {
+      "id": "EPU499021TE1000",
+      "soc": "49-9021",
+      "name": "Heating, air conditioning, and refrigeration mechanics and installers"
+    },
+    {
+      "id": "EPU499031TE1000",
+      "soc": "49-9031",
+      "name": "Home appliance repairers"
+    },
+    {
+      "id": "EPU499041TE1000",
+      "soc": "49-9041",
+      "name": "Industrial machinery mechanics"
+    },
+    {
+      "id": "EPU499043TE1000",
+      "soc": "49-9043",
+      "name": "Maintenance workers, machinery"
+    },
+    {
+      "id": "EPU499044TE1000",
+      "soc": "49-9044",
+      "name": "Millwrights"
+    },
+    {
+      "id": "EPU499045TE1000",
+      "soc": "49-9045",
+      "name": "Refractory materials repairers, except brickmasons"
+    },
+    {
+      "id": "EPU499051TE1000",
+      "soc": "49-9051",
+      "name": "Electrical power-line installers and repairers"
+    },
+    {
+      "id": "EPU499052TE1000",
+      "soc": "49-9052",
+      "name": "Telecommunications line installers and repairers"
+    },
+    {
+      "id": "EPU499061TE1000",
+      "soc": "49-9061",
+      "name": "Camera and photographic equipment repairers"
+    },
+    {
+      "id": "EPU499062TE1000",
+      "soc": "49-9062",
+      "name": "Medical equipment repairers"
+    },
+    {
+      "id": "EPU499063TE1000",
+      "soc": "49-9063",
+      "name": "Musical instrument repairers and tuners"
+    },
+    {
+      "id": "EPU499064TE1000",
+      "soc": "49-9064",
+      "name": "Watch and clock repairers"
+    },
+    {
+      "id": "EPU499069TE1000",
+      "soc": "49-9069",
+      "name": "Precision instrument and equipment repairers, all other"
+    },
+    {
+      "id": "EPU499071TE1000",
+      "soc": "49-9071",
+      "name": "Maintenance and repair workers, general"
+    },
+    {
+      "id": "EPU499081TE1000",
+      "soc": "49-9081",
+      "name": "Wind turbine service technicians"
+    },
+    {
+      "id": "EPU499091TE1000",
+      "soc": "49-9091",
+      "name": "Coin, vending, and amusement machine servicers and repairers"
+    },
+    {
+      "id": "EPU499092TE1000",
+      "soc": "49-9092",
+      "name": "Commercial divers"
+    },
+    {
+      "id": "EPU499094TE1000",
+      "soc": "49-9094",
+      "name": "Locksmiths and safe repairers"
+    },
+    {
+      "id": "EPU499095TE1000",
+      "soc": "49-9095",
+      "name": "Manufactured building and mobile home installers"
+    },
+    {
+      "id": "EPU499096TE1000",
+      "soc": "49-9096",
+      "name": "Riggers"
+    },
+    {
+      "id": "EPU499097TE1000",
+      "soc": "49-9097",
+      "name": "Signal and track switch repairers"
+    },
+    {
+      "id": "EPU499098TE1000",
+      "soc": "49-9098",
+      "name": "Helpers--installation, maintenance, and repair workers"
+    },
+    {
+      "id": "EPU499099TE1000",
+      "soc": "49-9099",
+      "name": "Installation, maintenance, and repair workers, all other"
+    },
+    {
+      "id": "EPU511011TE1000",
+      "soc": "51-1011",
+      "name": "First-line supervisors of production and operating workers"
+    },
+    {
+      "id": "EPU512011TE1000",
+      "soc": "51-2011",
+      "name": "Aircraft structure, surfaces, rigging, and systems assemblers"
+    },
+    {
+      "id": "EPU512021TE1000",
+      "soc": "51-2021",
+      "name": "Coil winders, tapers, and finishers"
+    },
+    {
+      "id": "EPU512028TE1000",
+      "soc": "51-2028",
+      "name": "Electrical, electronic, and electromechanical assemblers, except coil winders, tapers, and finishers"
+    },
+    {
+      "id": "EPU512031TE1000",
+      "soc": "51-2031",
+      "name": "Engine and other machine assemblers"
+    },
+    {
+      "id": "EPU512041TE1000",
+      "soc": "51-2041",
+      "name": "Structural metal fabricators and fitters"
+    },
+    {
+      "id": "EPU512051TE1000",
+      "soc": "51-2051",
+      "name": "Fiberglass laminators and fabricators"
+    },
+    {
+      "id": "EPU512061TE1000",
+      "soc": "51-2061",
+      "name": "Timing device assemblers and adjusters"
+    },
+    {
+      "id": "EPU512090TE1000",
+      "soc": "51-2090",
+      "name": "Miscellaneous assemblers and fabricators"
+    },
+    {
+      "id": "EPU513011TE1000",
+      "soc": "51-3011",
+      "name": "Bakers"
+    },
+    {
+      "id": "EPU513021TE1000",
+      "soc": "51-3021",
+      "name": "Butchers and meat cutters"
+    },
+    {
+      "id": "EPU513022TE1000",
+      "soc": "51-3022",
+      "name": "Meat, poultry, and fish cutters and trimmers"
+    },
+    {
+      "id": "EPU513023TE1000",
+      "soc": "51-3023",
+      "name": "Slaughterers and meat packers"
+    },
+    {
+      "id": "EPU513091TE1000",
+      "soc": "51-3091",
+      "name": "Food and tobacco roasting, baking, and drying machine operators and tenders"
+    },
+    {
+      "id": "EPU513092TE1000",
+      "soc": "51-3092",
+      "name": "Food batchmakers"
+    },
+    {
+      "id": "EPU513093TE1000",
+      "soc": "51-3093",
+      "name": "Food cooking machine operators and tenders"
+    },
+    {
+      "id": "EPU513099TE1000",
+      "soc": "51-3099",
+      "name": "Food processing workers, all other"
+    },
+    {
+      "id": "EPU514021TE1000",
+      "soc": "51-4021",
+      "name": "Extruding and drawing machine setters, operators, and tenders, metal and plastic"
+    },
+    {
+      "id": "EPU514022TE1000",
+      "soc": "51-4022",
+      "name": "Forging machine setters, operators, and tenders, metal and plastic"
+    },
+    {
+      "id": "EPU514023TE1000",
+      "soc": "51-4023",
+      "name": "Rolling machine setters, operators, and tenders, metal and plastic"
+    },
+    {
+      "id": "EPU514031TE1000",
+      "soc": "51-4031",
+      "name": "Cutting, punching, and press machine setters, operators, and tenders, metal and plastic"
+    },
+    {
+      "id": "EPU514032TE1000",
+      "soc": "51-4032",
+      "name": "Drilling and boring machine tool setters, operators, and tenders, metal and plastic"
+    },
+    {
+      "id": "EPU514033TE1000",
+      "soc": "51-4033",
+      "name": "Grinding, lapping, polishing, and buffing machine tool setters, operators, and tenders, metal and plastic"
+    },
+    {
+      "id": "EPU514034TE1000",
+      "soc": "51-4034",
+      "name": "Lathe and turning machine tool setters, operators, and tenders, metal and plastic"
+    },
+    {
+      "id": "EPU514035TE1000",
+      "soc": "51-4035",
+      "name": "Milling and planing machine setters, operators, and tenders, metal and plastic"
+    },
+    {
+      "id": "EPU514041TE1000",
+      "soc": "51-4041",
+      "name": "Machinists"
+    },
+    {
+      "id": "EPU514051TE1000",
+      "soc": "51-4051",
+      "name": "Metal-refining furnace operators and tenders"
+    },
+    {
+      "id": "EPU514052TE1000",
+      "soc": "51-4052",
+      "name": "Pourers and casters, metal"
+    },
+    {
+      "id": "EPU514061TE1000",
+      "soc": "51-4061",
+      "name": "Model makers, metal and plastic"
+    },
+    {
+      "id": "EPU514062TE1000",
+      "soc": "51-4062",
+      "name": "Patternmakers, metal and plastic"
+    },
+    {
+      "id": "EPU514071TE1000",
+      "soc": "51-4071",
+      "name": "Foundry mold and coremakers"
+    },
+    {
+      "id": "EPU514072TE1000",
+      "soc": "51-4072",
+      "name": "Molding, coremaking, and casting machine setters, operators, and tenders, metal and plastic"
+    },
+    {
+      "id": "EPU514081TE1000",
+      "soc": "51-4081",
+      "name": "Multiple machine tool setters, operators, and tenders, metal and plastic"
+    },
+    {
+      "id": "EPU514111TE1000",
+      "soc": "51-4111",
+      "name": "Tool and die makers"
+    },
+    {
+      "id": "EPU514121TE1000",
+      "soc": "51-4121",
+      "name": "Welders, cutters, solderers, and brazers"
+    },
+    {
+      "id": "EPU514122TE1000",
+      "soc": "51-4122",
+      "name": "Welding, soldering, and brazing machine setters, operators, and tenders"
+    },
+    {
+      "id": "EPU514191TE1000",
+      "soc": "51-4191",
+      "name": "Heat treating equipment setters, operators, and tenders, metal and plastic"
+    },
+    {
+      "id": "EPU514192TE1000",
+      "soc": "51-4192",
+      "name": "Layout workers, metal and plastic"
+    },
+    {
+      "id": "EPU514193TE1000",
+      "soc": "51-4193",
+      "name": "Plating machine setters, operators, and tenders, metal and plastic"
+    },
+    {
+      "id": "EPU514194TE1000",
+      "soc": "51-4194",
+      "name": "Tool grinders, filers, and sharpeners"
+    },
+    {
+      "id": "EPU514199TE1000",
+      "soc": "51-4199",
+      "name": "Metal workers and plastic workers, all other"
+    },
+    {
+      "id": "EPU515111TE1000",
+      "soc": "51-5111",
+      "name": "Prepress technicians and workers"
+    },
+    {
+      "id": "EPU515112TE1000",
+      "soc": "51-5112",
+      "name": "Printing press operators"
+    },
+    {
+      "id": "EPU515113TE1000",
+      "soc": "51-5113",
+      "name": "Print binding and finishing workers"
+    },
+    {
+      "id": "EPU516011TE1000",
+      "soc": "51-6011",
+      "name": "Laundry and dry-cleaning workers"
+    },
+    {
+      "id": "EPU516021TE1000",
+      "soc": "51-6021",
+      "name": "Pressers, textile, garment, and related materials"
+    },
+    {
+      "id": "EPU516031TE1000",
+      "soc": "51-6031",
+      "name": "Sewing machine operators"
+    },
+    {
+      "id": "EPU516041TE1000",
+      "soc": "51-6041",
+      "name": "Shoe and leather workers and repairers"
+    },
+    {
+      "id": "EPU516042TE1000",
+      "soc": "51-6042",
+      "name": "Shoe machine operators and tenders"
+    },
+    {
+      "id": "EPU516051TE1000",
+      "soc": "51-6051",
+      "name": "Sewers, hand"
+    },
+    {
+      "id": "EPU516052TE1000",
+      "soc": "51-6052",
+      "name": "Tailors, dressmakers, and custom sewers"
+    },
+    {
+      "id": "EPU516061TE1000",
+      "soc": "51-6061",
+      "name": "Textile bleaching and dyeing machine operators and tenders"
+    },
+    {
+      "id": "EPU516062TE1000",
+      "soc": "51-6062",
+      "name": "Textile cutting machine setters, operators, and tenders"
+    },
+    {
+      "id": "EPU516063TE1000",
+      "soc": "51-6063",
+      "name": "Textile knitting and weaving machine setters, operators, and tenders"
+    },
+    {
+      "id": "EPU516064TE1000",
+      "soc": "51-6064",
+      "name": "Textile winding, twisting, and drawing out machine setters, operators, and tenders"
+    },
+    {
+      "id": "EPU516091TE1000",
+      "soc": "51-6091",
+      "name": "Extruding and forming machine setters, operators, and tenders, synthetic and glass fibers"
+    },
+    {
+      "id": "EPU516092TE1000",
+      "soc": "51-6092",
+      "name": "Fabric and apparel patternmakers"
+    },
+    {
+      "id": "EPU516093TE1000",
+      "soc": "51-6093",
+      "name": "Upholsterers"
+    },
+    {
+      "id": "EPU516099TE1000",
+      "soc": "51-6099",
+      "name": "Textile, apparel, and furnishings workers, all other"
+    },
+    {
+      "id": "EPU517011TE1000",
+      "soc": "51-7011",
+      "name": "Cabinetmakers and bench carpenters"
+    },
+    {
+      "id": "EPU517021TE1000",
+      "soc": "51-7021",
+      "name": "Furniture finishers"
+    },
+    {
+      "id": "EPU517031TE1000",
+      "soc": "51-7031",
+      "name": "Model makers, wood"
+    },
+    {
+      "id": "EPU517032TE1000",
+      "soc": "51-7032",
+      "name": "Patternmakers, wood"
+    },
+    {
+      "id": "EPU517041TE1000",
+      "soc": "51-7041",
+      "name": "Sawing machine setters, operators, and tenders, wood"
+    },
+    {
+      "id": "EPU517042TE1000",
+      "soc": "51-7042",
+      "name": "Woodworking machine setters, operators, and tenders, except sawing"
+    },
+    {
+      "id": "EPU517099TE1000",
+      "soc": "51-7099",
+      "name": "Woodworkers, all other"
+    },
+    {
+      "id": "EPU518011TE1000",
+      "soc": "51-8011",
+      "name": "Nuclear power reactor operators"
+    },
+    {
+      "id": "EPU518012TE1000",
+      "soc": "51-8012",
+      "name": "Power distributors and dispatchers"
+    },
+    {
+      "id": "EPU518013TE1000",
+      "soc": "51-8013",
+      "name": "Power plant operators"
+    },
+    {
+      "id": "EPU518021TE1000",
+      "soc": "51-8021",
+      "name": "Stationary engineers and boiler operators"
+    },
+    {
+      "id": "EPU518031TE1000",
+      "soc": "51-8031",
+      "name": "Water and wastewater treatment plant and system operators"
+    },
+    {
+      "id": "EPU518091TE1000",
+      "soc": "51-8091",
+      "name": "Chemical plant and system operators"
+    },
+    {
+      "id": "EPU518092TE1000",
+      "soc": "51-8092",
+      "name": "Gas plant operators"
+    },
+    {
+      "id": "EPU518093TE1000",
+      "soc": "51-8093",
+      "name": "Petroleum pump system operators, refinery operators, and gaugers"
+    },
+    {
+      "id": "EPU518099TE1000",
+      "soc": "51-8099",
+      "name": "Plant and system operators, all other"
+    },
+    {
+      "id": "EPU519011TE1000",
+      "soc": "51-9011",
+      "name": "Chemical equipment operators and tenders"
+    },
+    {
+      "id": "EPU519012TE1000",
+      "soc": "51-9012",
+      "name": "Separating, filtering, clarifying, precipitating, and still machine setters, operators, and tenders"
+    },
+    {
+      "id": "EPU519021TE1000",
+      "soc": "51-9021",
+      "name": "Crushing, grinding, and polishing machine setters, operators, and tenders"
+    },
+    {
+      "id": "EPU519022TE1000",
+      "soc": "51-9022",
+      "name": "Grinding and polishing workers, hand"
+    },
+    {
+      "id": "EPU519023TE1000",
+      "soc": "51-9023",
+      "name": "Mixing and blending machine setters, operators, and tenders"
+    },
+    {
+      "id": "EPU519031TE1000",
+      "soc": "51-9031",
+      "name": "Cutters and trimmers, hand"
+    },
+    {
+      "id": "EPU519032TE1000",
+      "soc": "51-9032",
+      "name": "Cutting and slicing machine setters, operators, and tenders"
+    },
+    {
+      "id": "EPU519041TE1000",
+      "soc": "51-9041",
+      "name": "Extruding, forming, pressing, and compacting machine setters, operators, and tenders"
+    },
+    {
+      "id": "EPU519051TE1000",
+      "soc": "51-9051",
+      "name": "Furnace, kiln, oven, drier, and kettle operators and tenders"
+    },
+    {
+      "id": "EPU519061TE1000",
+      "soc": "51-9061",
+      "name": "Inspectors, testers, sorters, samplers, and weighers"
+    },
+    {
+      "id": "EPU519071TE1000",
+      "soc": "51-9071",
+      "name": "Jewelers and precious stone and metal workers"
+    },
+    {
+      "id": "EPU519081TE1000",
+      "soc": "51-9081",
+      "name": "Dental laboratory technicians"
+    },
+    {
+      "id": "EPU519082TE1000",
+      "soc": "51-9082",
+      "name": "Medical appliance technicians"
+    },
+    {
+      "id": "EPU519083TE1000",
+      "soc": "51-9083",
+      "name": "Ophthalmic laboratory technicians"
+    },
+    {
+      "id": "EPU519111TE1000",
+      "soc": "51-9111",
+      "name": "Packaging and filling machine operators and tenders"
+    },
+    {
+      "id": "EPU519123TE1000",
+      "soc": "51-9123",
+      "name": "Painting, coating, and decorating workers"
+    },
+    {
+      "id": "EPU519124TE1000",
+      "soc": "51-9124",
+      "name": "Coating, painting, and spraying machine setters, operators, and tenders"
+    },
+    {
+      "id": "EPU519141TE1000",
+      "soc": "51-9141",
+      "name": "Semiconductor processing technicians"
+    },
+    {
+      "id": "EPU519151TE1000",
+      "soc": "51-9151",
+      "name": "Photographic process workers and processing machine operators"
+    },
+    {
+      "id": "EPU519161TE1000",
+      "soc": "51-9161",
+      "name": "Computer numerically controlled tool operators"
+    },
+    {
+      "id": "EPU519162TE1000",
+      "soc": "51-9162",
+      "name": "Computer numerically controlled tool programmers"
+    },
+    {
+      "id": "EPU519191TE1000",
+      "soc": "51-9191",
+      "name": "Adhesive bonding machine operators and tenders"
+    },
+    {
+      "id": "EPU519192TE1000",
+      "soc": "51-9192",
+      "name": "Cleaning, washing, and metal pickling equipment operators and tenders"
+    },
+    {
+      "id": "EPU519193TE1000",
+      "soc": "51-9193",
+      "name": "Cooling and freezing equipment operators and tenders"
+    },
+    {
+      "id": "EPU519194TE1000",
+      "soc": "51-9194",
+      "name": "Etchers and engravers"
+    },
+    {
+      "id": "EPU519195TE1000",
+      "soc": "51-9195",
+      "name": "Molders, shapers, and casters, except metal and plastic"
+    },
+    {
+      "id": "EPU519196TE1000",
+      "soc": "51-9196",
+      "name": "Paper goods machine setters, operators, and tenders"
+    },
+    {
+      "id": "EPU519197TE1000",
+      "soc": "51-9197",
+      "name": "Tire builders"
+    },
+    {
+      "id": "EPU519198TE1000",
+      "soc": "51-9198",
+      "name": "Helpers--production workers"
+    },
+    {
+      "id": "EPU519199TE1000",
+      "soc": "51-9199",
+      "name": "Production workers, all other"
+    },
+    {
+      "id": "EPU531041TE1000",
+      "soc": "53-1041",
+      "name": "Aircraft cargo handling supervisors"
+    },
+    {
+      "id": "EPU531047TE1000",
+      "soc": "53-1047",
+      "name": "First-line supervisors of transportation and material moving workers, except aircraft cargo handling supervisors"
+    },
+    {
+      "id": "EPU532011TE1000",
+      "soc": "53-2011",
+      "name": "Airline pilots, copilots, and flight engineers"
+    },
+    {
+      "id": "EPU532012TE1000",
+      "soc": "53-2012",
+      "name": "Commercial pilots"
+    },
+    {
+      "id": "EPU532021TE1000",
+      "soc": "53-2021",
+      "name": "Air traffic controllers"
+    },
+    {
+      "id": "EPU532022TE1000",
+      "soc": "53-2022",
+      "name": "Airfield operations specialists"
+    },
+    {
+      "id": "EPU532031TE1000",
+      "soc": "53-2031",
+      "name": "Flight attendants"
+    },
+    {
+      "id": "EPU533011TE1000",
+      "soc": "53-3011",
+      "name": "Ambulance drivers and attendants, except emergency medical technicians"
+    },
+    {
+      "id": "EPU533031TE1000",
+      "soc": "53-3031",
+      "name": "Driver/sales workers"
+    },
+    {
+      "id": "EPU533032TE1000",
+      "soc": "53-3032",
+      "name": "Heavy and tractor-trailer truck drivers"
+    },
+    {
+      "id": "EPU533033TE1000",
+      "soc": "53-3033",
+      "name": "Light truck drivers"
+    },
+    {
+      "id": "EPU533051TE1000",
+      "soc": "53-3051",
+      "name": "Bus drivers, school"
+    },
+    {
+      "id": "EPU533052TE1000",
+      "soc": "53-3052",
+      "name": "Bus drivers, transit and intercity"
+    },
+    {
+      "id": "EPU533053TE1000",
+      "soc": "53-3053",
+      "name": "Shuttle drivers and chauffeurs"
+    },
+    {
+      "id": "EPU533054TE1000",
+      "soc": "53-3054",
+      "name": "Taxi drivers"
+    },
+    {
+      "id": "EPU533099TE1000",
+      "soc": "53-3099",
+      "name": "Motor vehicle operators, all other"
+    },
+    {
+      "id": "EPU534011TE1000",
+      "soc": "53-4011",
+      "name": "Locomotive engineers"
+    },
+    {
+      "id": "EPU534013TE1000",
+      "soc": "53-4013",
+      "name": "Rail yard engineers, dinkey operators, and hostlers"
+    },
+    {
+      "id": "EPU534022TE1000",
+      "soc": "53-4022",
+      "name": "Railroad brake, signal, and switch operators and locomotive firers"
+    },
+    {
+      "id": "EPU534031TE1000",
+      "soc": "53-4031",
+      "name": "Railroad conductors and yardmasters"
+    },
+    {
+      "id": "EPU534041TE1000",
+      "soc": "53-4041",
+      "name": "Subway and streetcar operators"
+    },
+    {
+      "id": "EPU534099TE1000",
+      "soc": "53-4099",
+      "name": "Rail transportation workers, all other"
+    },
+    {
+      "id": "EPU535011TE1000",
+      "soc": "53-5011",
+      "name": "Sailors and marine oilers"
+    },
+    {
+      "id": "EPU535021TE1000",
+      "soc": "53-5021",
+      "name": "Captains, mates, and pilots of water vessels"
+    },
+    {
+      "id": "EPU535022TE1000",
+      "soc": "53-5022",
+      "name": "Motorboat operators"
+    },
+    {
+      "id": "EPU535031TE1000",
+      "soc": "53-5031",
+      "name": "Ship engineers"
+    },
+    {
+      "id": "EPU536011TE1000",
+      "soc": "53-6011",
+      "name": "Bridge and lock tenders"
+    },
+    {
+      "id": "EPU536021TE1000",
+      "soc": "53-6021",
+      "name": "Parking attendants"
+    },
+    {
+      "id": "EPU536031TE1000",
+      "soc": "53-6031",
+      "name": "Automotive and watercraft service attendants"
+    },
+    {
+      "id": "EPU536032TE1000",
+      "soc": "53-6032",
+      "name": "Aircraft service attendants"
+    },
+    {
+      "id": "EPU536041TE1000",
+      "soc": "53-6041",
+      "name": "Traffic technicians"
+    },
+    {
+      "id": "EPU536051TE1000",
+      "soc": "53-6051",
+      "name": "Transportation inspectors"
+    },
+    {
+      "id": "EPU536061TE1000",
+      "soc": "53-6061",
+      "name": "Passenger attendants"
+    },
+    {
+      "id": "EPU536099TE1000",
+      "soc": "53-6099",
+      "name": "Transportation workers, all other"
+    },
+    {
+      "id": "EPU537011TE1000",
+      "soc": "53-7011",
+      "name": "Conveyor operators and tenders"
+    },
+    {
+      "id": "EPU537021TE1000",
+      "soc": "53-7021",
+      "name": "Crane and tower operators"
+    },
+    {
+      "id": "EPU537031TE1000",
+      "soc": "53-7031",
+      "name": "Dredge operators"
+    },
+    {
+      "id": "EPU537041TE1000",
+      "soc": "53-7041",
+      "name": "Hoist and winch operators"
+    },
+    {
+      "id": "EPU537051TE1000",
+      "soc": "53-7051",
+      "name": "Industrial truck and tractor operators"
+    },
+    {
+      "id": "EPU537061TE1000",
+      "soc": "53-7061",
+      "name": "Cleaners of vehicles and equipment"
+    },
+    {
+      "id": "EPU537062TE1000",
+      "soc": "53-7062",
+      "name": "Laborers and freight, stock, and material movers, hand"
+    },
+    {
+      "id": "EPU537063TE1000",
+      "soc": "53-7063",
+      "name": "Machine feeders and offbearers"
+    },
+    {
+      "id": "EPU537064TE1000",
+      "soc": "53-7064",
+      "name": "Packers and packagers, hand"
+    },
+    {
+      "id": "EPU537065TE1000",
+      "soc": "53-7065",
+      "name": "Stockers and order fillers"
+    },
+    {
+      "id": "EPU537071TE1000",
+      "soc": "53-7071",
+      "name": "Gas compressor and gas pumping station operators"
+    },
+    {
+      "id": "EPU537072TE1000",
+      "soc": "53-7072",
+      "name": "Pump operators, except wellhead pumpers"
+    },
+    {
+      "id": "EPU537073TE1000",
+      "soc": "53-7073",
+      "name": "Wellhead pumpers"
+    },
+    {
+      "id": "EPU537081TE1000",
+      "soc": "53-7081",
+      "name": "Refuse and recyclable material collectors"
+    },
+    {
+      "id": "EPU537121TE1000",
+      "soc": "53-7121",
+      "name": "Tank car, truck, and ship loaders"
+    },
+    {
+      "id": "EPU537199TE1000",
+      "soc": "53-7199",
+      "name": "Material moving workers, all other"
+    }
+  ]
+}

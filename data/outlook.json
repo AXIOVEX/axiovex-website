@@ -32,7 +32,7 @@
     ],
     "horizon": "2025–35",
     "publication": "Employment Projections",
-    "retrievedOn": "2026-10-06",
+    "retrievedOn": "2026-10-19",
     "rise": [
       {
         "name": "Nurse practitioners",
@@ -61,7 +61,8 @@
       }
     ],
     "sourceUrl": "https://www.bls.gov/emp/tables/fastest-growing-occupations.htm",
-    "vintage": "2025–35"
+    "vintage": "2025–35",
+    "sourceFileUrl": "https://download.bls.gov/pub/time.series/ep/"
   },
   "education": {
     "assembledOn": "2026-10-06",
