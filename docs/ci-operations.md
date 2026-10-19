@@ -1,5 +1,34 @@
 # Website operations after Meta Muse
 
+## Authoritative amendment — October 19, 2026
+
+Supersedes conflicting earlier weekly/Wednesday and unconditional calendar
+release rules below. Owner directs automatic monthly report and customer
+newsletter release after economic releases, normally near the 30th at 10 ET
+(February last day), with catch-up through the 7th. The month-end runner
+checks actual target-month state + 83-county availability before sending.
+Decision OPS-2026-10-19-MONTH-END is recorded in
+`docs/decisions/2026-10-19-month-end-publication.md` and project info; executable
+policy is `data/publication-policy.json`. Standing authorization covers the
+deterministic source-only monthly edition. Discretionary editorial/research,
+blog and LinkedIn work retains review; do not manufacture issue approval.
+
+The owner's October 12 .msg is the founder report presentation reference.
+Include current subscriber counts, dated net changes and latest-timestamp
+flows. Missing history is unavailable, never an assumed zero. Aggregate daily
+snapshots begin with this implementation; no reader tracking is added.
+Cloudflare traffic uses matching UTC daily windows with daily uniques summed
+as visitor-days, complete day coverage and reconciled status totals. Preserve
+raw API contradictions and exclude impossible adaptive status findings.
+Daily/weekly/monthly reports include a live technical SEO/AEO audit; pinned
+aeo.js 0.0.16 supplies independently labeled readiness/citability scores.
+Seobility's historical 90 is never represented as a current reading.
+
+Economic/API-secret source inventory: `data/report-sources.json` and
+`docs/report-data-sources.md`. All existing pack keys are injected in CI; BEA
+key is absent as of Oct 19. Actual source vintages remain visible.
+
+
 The source inventory is specs 006 (analytics + SEO/AEO), 007 (monthly
 workforce study/article/social), 014 (map vintages), 019 (analysis pack),
 020 (newsletter), 022 (newsletter loop test), 023/024 (unlisted research hub).
@@ -12,19 +41,19 @@ No Muse service is required by the new Actions runners.
 |---|---|---|
 | Daily analytics | Every day 08:39, prior day vs trailing 7-day average | `operations.yml`, daily report |
 | Weekly analytics + SEO/AEO | Monday 09:39, last 7 days vs previous 7 | weekly report + live technical health |
-| Monthly analytics | 30th 09:39; February last day; prior calendar month | monthly report |
+| Monthly report + newsletter | Near 30th 10 ET, February last day; wait for source release | monthly-publication.yml; check daily through the 7th |
 | Push health | Website changes on main | live technical health |
 | Workforce study/draft | 29th 09:39; February last day; prior data month | Docker collect/analyze/build, reviewed-edition verification, LAUS refresh, review artifacts |
 | Workforce publication | 30th 09:00; January data publishes March 1 | Human editorial/publication gate; see below |
 | LinkedIn personal/company | Publication day 10:30 / following Tuesday 09:30 | Human signed-in steps; no CI browser session migrated |
-| Newsletter preparation | Before Wednesday issue | Tuesday 09:39 candidate/evidence artifacts |
-| Newsletter delivery | Wednesday 10:00 | Wednesday 10:00 slot; exact-byte per-issue approval required |
+| Newsletter preparation | 29th 09:39; February last day | workforce + candidate artifacts |
+| Newsletter delivery | Monthly, after verified economic releases | monthly-publication.yml; deterministic source-only standing authorization |
 | Signals/Pulse | Hourly | Existing `signals-sync.yml`, unchanged |
 | Shared documents/blog | Push / every 15 minutes | Existing `site-sync.yml`, unchanged |
 | Analysis pack | Monday 12:23 UTC | Existing `data-pack-sync.yml`, unchanged |
 
 Actions schedules are approximate. The runner fires at :39 in UTC hours
-12–15 (:00 in UTC hours 14/15 on Wednesday for newsletter sending), then gates
+12–15; monthly release checks run at :00 in UTC hours 14/15 daily, then gates
 on America/New_York local hour and minute. Both DST offsets are
 covered with one eligible slot per task per day. Manual dispatch recovers
 missed schedules. Gates use the nominal UTC cron slot so runner queue delays
@@ -104,11 +133,11 @@ sending. Add `--send` only when the owner requests a preview. The authenticated
 `/api/ops/preview` route hardcodes tristen@axiovexsystems.com, uses the dedicated
 Newsletter sender, and does not access subscriber storage or issue approvals.
 The preview is labeled REVIEW ONLY and cannot unsubscribe or distribute to the
-list. Customer sends continue to require their existing exact-issue approval.
+list. Monthly source-only editions follow the standing authorization above; discretionary editorial sends require exact-issue approval.
 
-## Newsletter review and send
+## Discretionary editorial review and manual send (no weekly timer)
 
-1. Download Tuesday's candidate snapshot and editorial template. Complete
+1. Download the month-end candidate snapshot and editorial template. Complete
    editorial review, source/cause checks, NDR suppression review and address.
 2. Run `node scripts/newsletter/assemble.mjs YYYY-MM-DD editorial.json`.
    Review the rendered email and web edition. The source and email live at
@@ -122,7 +151,7 @@ list. Customer sends continue to require their existing exact-issue approval.
 
    Compute the hash with `sha256sum newsletter/issues/YYYY-MM-DD.email.json`.
    Never manufacture an approval. The approval file records an actual review.
-4. Merge the reviewed files before Wednesday. The scheduled send only accepts
+4. Merge the reviewed files before manual dispatch. The manual CLI only accepts
    today's issue, checks the exact-byte approval and calls the existing
    production sender. Missing approval or secret blocks all sending.
 
@@ -159,3 +188,23 @@ Merge the CI branch to main to activate schedules. Run the `health`, `daily`,
 credentials before considering the migration complete. Old Muse timers
 cannot be disabled from this checkout; disable them in Muse if it returns,
 especially subscriber sends and article/social publishing.
+
+## Monthly release operation
+
+`monthly-publication.yml` owns the release; `operations.yml` cannot dispatch
+a monthly/customer send. On each eligible day: refresh existing keyed sources;
+verify state + county target month; generate and email the founder report;
+render/commit the monthly issue + web edition; wait for verified deployment;
+reserve `month-end-attempt-YYYY-MM` before calling the existing active-only
+sender. The reservation prevents automatic replay after partial uncertainty.
+Manual dispatch respects the same date and source gates. A held source gate
+writes evidence and sends nothing; an execution failure fails the job. The
+first eligible cycle is September data on October 30. API keys remain in
+GitHub; no new Microsoft/Cloudflare administrator permissions are needed.
+
+Subscriber measurements use an authenticated production-only endpoint. It
+returns aggregate counts/source totals, latest-timestamp flows, sender gauge
+and dated net active changes from saved aggregate snapshots. It never returns
+subscriber addresses, confirmation tokens or unsubscribe tokens. Repeated
+confirm/unsubscribe history is not reconstructable from the existing schema;
+first baseline net change is explicitly unknown.

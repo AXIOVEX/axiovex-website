@@ -287,7 +287,7 @@ export function confirmationMail(confirmUrl) {
   // the confirm action, on the same site base as the confirm link.
   const privacyUrl = `${new URL(confirmUrl).origin}/privacy/`;
   const text = [
-    "You asked to subscribe to The Axiovex Signal, Axiovex Systems' weekly newsletter.",
+    "You asked to subscribe to The Axiovex Signal, Axiovex Systems' monthly newsletter.",
     "",
     "Confirm your subscription by opening this link (good for 48 hours):",
     confirmUrl,
@@ -295,7 +295,7 @@ export function confirmationMail(confirmUrl) {
     "No click, no emails: until you confirm, nothing is sent to this address.",
     "If you did not ask for this, ignore this message — nothing will be sent.",
     "",
-    "We collect only your email address. One email a week, no tracking pixels or per-reader analytics, and you can unsubscribe in one click, any time.",
+    "We collect only your email address. One email a month, no tracking pixels or per-reader analytics, and you can unsubscribe in one click, any time.",
     `Privacy policy: ${privacyUrl}`,
     "",
     "— Axiovex Systems",
@@ -303,12 +303,12 @@ export function confirmationMail(confirmUrl) {
   const html = `<!doctype html>
 <html lang="en"><body style="margin:0;background:#081F32;color:#F7FCFF;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Arial,sans-serif">
   <div style="max-width:620px;margin:0 auto;padding:36px 24px">
-    <p style="color:#00DEF6;font-size:12px;letter-spacing:.14em;font-weight:700;margin:0 0 10px">THE AXIOVEX SIGNAL — WEEKLY</p>
+    <p style="color:#00DEF6;font-size:12px;letter-spacing:.14em;font-weight:700;margin:0 0 10px">THE AXIOVEX SIGNAL — MONTHLY</p>
     <h1 style="font-size:26px;line-height:1.25;margin:0 0 14px">Confirm your subscription</h1>
-    <p style="color:rgba(247,252,255,.78);line-height:1.65">You asked to subscribe to The Axiovex Signal, Axiovex Systems&rsquo; weekly newsletter. Click below to confirm — the link is good for 48 hours.</p>
+    <p style="color:rgba(247,252,255,.78);line-height:1.65">You asked to subscribe to The Axiovex Signal, Axiovex Systems&rsquo; monthly newsletter. Click below to confirm — the link is good for 48 hours.</p>
     <p style="margin:24px 0"><a href="${confirmUrl}" style="background:#00DEF6;color:#081F32;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:8px">Confirm subscription &rarr;</a></p>
     <p style="color:rgba(247,252,255,.6);line-height:1.6;font-size:13.5px">No click, no emails: until you confirm, nothing is sent to this address. If you did not ask for this, ignore this message — nothing will be sent.</p>
-    <p style="color:rgba(247,252,255,.6);line-height:1.6;font-size:13.5px">We collect only your email address. One email a week, no tracking pixels or per-reader analytics, and you can unsubscribe in one click, any time. <a href="${privacyUrl}" style="color:#00DEF6">Privacy policy</a></p>
+    <p style="color:rgba(247,252,255,.6);line-height:1.6;font-size:13.5px">We collect only your email address. One email a month, no tracking pixels or per-reader analytics, and you can unsubscribe in one click, any time. <a href="${privacyUrl}" style="color:#00DEF6">Privacy policy</a></p>
     <p style="color:rgba(247,252,255,.6);font-size:13.5px">— Axiovex Systems</p>
   </div>
 </body></html>`;
@@ -320,7 +320,7 @@ export function confirmationMail(confirmUrl) {
 const LANDING_STATES = {
   confirmed: {
     title: "You\u2019re subscribed.",
-    body: "The next edition arrives Wednesday at 10:00 AM ET. Until then, the archive has every past edition.",
+    body: "The next edition arrives after the monthly economic releases. Until then, the archive has every past edition.",
     cta: { href: "/newsletter/", label: "Read past editions \u2192", primary: true },
   },
   unsubscribed: {

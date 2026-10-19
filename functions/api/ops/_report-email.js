@@ -1,4 +1,4 @@
-import { esc, href, emailLayout, sectionHeading } from './_email-layout.js';
+import { esc, href, sectionHeading } from './_email-layout.js';
 export function count(value) {
   return new Intl.NumberFormat('en-US', { maximumFractionDigits: Number.isInteger(Number(value)) ? 0 : 1 }).format(Number(value));
 }
@@ -22,7 +22,7 @@ function inline(text) {
   }
   return html + esc(text.slice(cursor));
 }
-const names = { requests: 'Requests', bytes: 'Data transferred', cachedBytes: 'Served from cache' };
+const names = { requests: 'Requests', bytes: 'Bandwidth', cachedBytes: 'Served from cache' };
 function tableCell(value, rowLabel, column) {
   if (column === 0) return names[value] || value;
   if (/^-?\d+(?:\.\d+)?$/.test(value)) return /bytes/i.test(rowLabel) ? bytes(value) : count(value);
@@ -31,10 +31,14 @@ function tableCell(value, rowLabel, column) {
 function table(lines, kind) {
   const rows = lines.map(line => line.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim())).filter(row => !row.every(c => /^:?-+:?$/.test(c)));
   const headers = rows.shift() || [];
-  const header = headers.map((cell, i) => `<th scope="col" align="${i ? 'right' : 'left'}" style="padding:11px 7px;background-color:#eaf2f6;border-bottom:1px solid #cbdce5;color:#294454;font-size:12px;line-height:1.35;">${esc(cell === 'Comparison' && kind === 'daily' ? '7-day avg.' : cell === 'Computed change' ? 'Change' : cell)}</th>`).join('');
+  if (headers[0] === 'Path / host') {
+    const maximum = Math.max(1, ...rows.map(r => Number(r[1]) || 0));
+    return `<table width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;">${rows.map(row => `<tr><td style="padding:6px 4px 6px 0;width:50%;font-size:12px;overflow-wrap:anywhere;word-break:break-word;">${esc(row[0])}</td><td style="padding:6px 4px;width:30%;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td width="${Math.max(1, Math.round((Number(row[1]) || 0) / maximum * 100))}%" bgcolor="#0093ad" style="height:12px;font-size:0;line-height:0;">&nbsp;</td><td></td></tr></table></td><td align="right" style="width:20%;font-size:13px;">${esc(Number.isFinite(Number(row[1])) ? count(row[1]) : row[1])}</td></tr>`).join('')}</table>`;
+  }
+  const header = headers.map((cell, i) => `<th scope="col" align="${i ? 'right' : 'left'}" style="padding:8px 6px;background-color:#081F32;border:1px solid #081F32;color:#F7FCFF;font-size:12px;line-height:1.35;">${esc(cell === 'Comparison' && kind === 'daily' ? '7-day avg.' : cell === 'Computed change' ? 'Change' : cell)}</th>`).join('');
   return `<table width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;table-layout:fixed;border-collapse:collapse;margin:14px 0 18px;"><thead><tr>${header}</tr></thead><tbody>${rows.map((row, r) => `<tr>${row.map((cell, i) => `<td align="${i ? 'right' : 'left'}" style="padding:12px 7px;border-bottom:1px solid #e2e9ee;vertical-align:top;background-color:${r % 2 ? '#f6f9fb' : '#ffffff'};font-size:13px;line-height:1.4;${i ? 'font-variant-numeric:tabular-nums;' : 'font-weight:bold;color:#294454;'}">${inline(tableCell(cell, row[0], i))}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
 }
-const sections = { 'Measured facts': 'Traffic overview', 'Adaptive detail': 'Sampled traffic detail', 'Insights': 'What changed', 'Suggestions': 'Recommended actions', 'Unavailable / migration gaps': 'Coverage and method', 'Daily request trend': 'Daily traffic', 'Path movers': 'Content movement' };
+const sections = { 'Measured facts': 'Traffic overview', 'Adaptive detail': 'Sampled traffic detail', 'Insights': 'Insights', 'Suggestions': 'Suggestions', 'Unavailable / migration gaps': 'Coverage and method', 'Daily request trend': 'Daily traffic', 'Path movers': 'Content movement' };
 const subheads = { paths: 'Top pages', countries: 'Top countries', contact: 'Contact form', 'server-errors': 'Server errors', 'previous-paths': 'Prior-period top pages' };
 export function markdownEmail(markdown, kind) {
   const lines = markdown.replace(/\r/g, '').split('\n');
@@ -69,16 +73,19 @@ export function markdownEmail(markdown, kind) {
 export function renderReportEmail({ report, kind = 'daily', runUrl }) {
   const status = /Report status:\s*\*\*(FAILED|PARTIAL|COMPLETE)/.exec(report)?.[1] || (/^# .*(?:failed|blocked)/im.test(report) ? 'FAILED' : 'COMPLETE');
   const label = status === 'PARTIAL' ? 'Partial data coverage' : status === 'FAILED' ? 'Action required' : 'Report complete';
-  const title = `${kind === 'newsletter-draft' ? 'Newsletter preparation' : kind.charAt(0).toUpperCase() + kind.slice(1)} ${kind === 'newsletter-draft' ? '' : 'report'}`.trim();
+  const title = kind === 'newsletter-draft' ? 'Newsletter preparation' : `Axiovex website — ${kind} report`;
   const period = /(\d{4}-\d{2}-\d{2}) through (\d{4}-\d{2}-\d{2})/.exec(report);
   const longDate = date => new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(date + 'T12:00:00Z'));
   const end = period ? new Date(Date.parse(period[2] + 'T12:00:00Z') - 86400000).toISOString().slice(0, 10) : null;
-  const eyebrow = period ? `${longDate(period[1])}${end === period[1] ? '' : ' – ' + longDate(end)} · Eastern Time` : 'Website operations · Founder briefing';
+  const timezone = /UTC calendar days/.test(report) ? 'UTC calendar days' : 'Eastern Time';
+  const eyebrow = period ? `${longDate(period[1])}${end === period[1] ? '' : ' – ' + longDate(end)} · ${timezone}` : 'Website operations · Founder briefing';
   let cleaned = report.replace(/^\d{4}-\d{2}-\d{2} through .*?\n/m, '');
   const intro = status === 'PARTIAL' ? 'Available measurements are shown below. Source gaps and comparison limitations are listed under Coverage and method.' : status === 'FAILED' ? 'This run could not complete. The report below records what failed and any evidence that was retained.' : 'The latest website measurements and operational findings.';
   const content = `<p style="margin:0 0 14px;"><span style="background-color:${status === 'COMPLETE' ? '#e5f4ed' : '#fff1d8'};color:${status === 'COMPLETE' ? '#22543d' : '#805514'};padding:6px 9px;font-size:12px;font-weight:bold;">${esc(label)}</span></p><p style="margin:0 0 20px;color:#536979;font-size:14px;">${esc(intro)}</p>` + markdownEmail(cleaned, kind);
   const footer = `<strong>Axiovex Systems · Website operations</strong><br>Measurements and interpretations are distinguished in this report.${runUrl ? `<br><a href="${href(runUrl)}" style="color:#07647c;">Open CI evidence and source snapshots</a>` : ''}`;
-  const html = emailLayout({ title, eyebrow, preheader: `${title}: ${label.toLowerCase()}. ${eyebrow}`, content, footer });
+  // Match the owner's October 12 reference: white editorial column and compact
+  // navy tables. The customer newsletter retains its separate branded masthead.
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title></head><body style="margin:0;padding:0;background-color:#ffffff;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="padding:20px 12px;"><!--[if mso]><table role="presentation" width="720"><tr><td><![endif]--><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:720px;font-family:'Segoe UI',Arial,sans-serif;color:#1a2b3c;font-size:15px;line-height:1.55;overflow-wrap:anywhere;"><tr><td><h1 style="font-size:22px;line-height:1.3;color:#081F32;border-bottom:3px solid #00DEF6;padding-bottom:8px;margin:0 0 12px;">${esc(title)}</h1><p style="font-size:13px;color:#536979;margin:8px 0 18px;">Window: ${esc(eyebrow)}</p>${content}<p style="border-top:1px solid #d5dde3;padding-top:14px;color:#536979;font-size:12px;">${footer}</p></td></tr></table><!--[if mso]></td></tr></table><![endif]--></td></tr></table></body></html>`;
   const text = report.replace(/\*\*([^*]+)\*\*/g, '$1').replace(/^#{1,3}\s+/gm, '');
   return { html, text, title };
 }

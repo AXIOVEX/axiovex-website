@@ -1,5 +1,34 @@
 # Feature Specification: Analytics Reporting (Cloudflare API + SEO/AEO)
 
+## Authoritative amendment — October 19, 2026
+
+Supersedes conflicting earlier weekly/Wednesday and unconditional calendar
+release rules below. Owner directs automatic monthly report and customer
+newsletter release after economic releases, normally near the 30th at 10 ET
+(February last day), with catch-up through the 7th. The month-end runner
+checks actual target-month state + 83-county availability before sending.
+Decision OPS-2026-10-19-MONTH-END is recorded in
+`docs/decisions/2026-10-19-month-end-publication.md` and project info; executable
+policy is `data/publication-policy.json`. Standing authorization covers the
+deterministic source-only monthly edition. Discretionary editorial/research,
+blog and LinkedIn work retains review; do not manufacture issue approval.
+
+The owner's October 12 .msg is the founder report presentation reference.
+Include current subscriber counts, dated net changes and latest-timestamp
+flows. Missing history is unavailable, never an assumed zero. Aggregate daily
+snapshots begin with this implementation; no reader tracking is added.
+Cloudflare traffic uses matching UTC daily windows with daily uniques summed
+as visitor-days, complete day coverage and reconciled status totals. Preserve
+raw API contradictions and exclude impossible adaptive status findings.
+Daily/weekly/monthly reports include a live technical SEO/AEO audit; pinned
+aeo.js 0.0.16 supplies independently labeled readiness/citability scores.
+Seobility's historical 90 is never represented as a current reading.
+
+Economic/API-secret source inventory: `data/report-sources.json` and
+`docs/report-data-sources.md`. All existing pack keys are injected in CI; BEA
+key is absent as of Oct 19. Actual source vintages remain visible.
+
+
 **Feature Branch**: `006-analytics-reporting` (docs/tooling — no website
 branch needed until implementation)
 

@@ -1,0 +1,57 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { cycle, checkEconomicData, makeIssue, policy } from './month-end.mjs';
+import { windows } from './calendar.mjs';
+import { validateDailyRows, measuredInsights } from './analytics.mjs';
+test('monthly publication waits for month end and preserves data month during catch-up', () => {
+  assert.equal(cycle(new Date('2026-10-21T14:00:00Z')).active, false);
+  assert.equal(cycle(new Date('2026-10-29T14:00:00Z')).active, false);
+  assert.deepEqual(cycle(new Date('2026-10-30T14:00:00Z')), { active: true, date: '2026-10-30', releaseMonth: '2026-10', dataMonth: '2026-09' });
+  assert.equal(cycle(new Date('2026-11-07T15:00:00Z')).dataMonth, '2026-09');
+  assert.equal(cycle(new Date('2026-11-08T15:00:00Z')).active, false);
+  assert.equal(cycle(new Date('2027-02-28T15:00:00Z')).dataMonth, '2027-01');
+  assert.equal(cycle(new Date('2028-02-29T15:00:00Z')).active, true);
+  assert.equal(cycle(new Date('2027-03-01T15:00:00Z')).dataMonth, '2027-01');
+  assert.deepEqual(windows('monthly', new Date('2027-03-01T15:00:00Z'), '2027-01'), { start: '2027-01-01', end: '2027-02-01', previous: '2026-12-01' });
+  assert.throws(() => windows('monthly', new Date(), '2027-13'));
+});
+test('release gate refuses stale, missing, duplicate and null observations', () => {
+  const s = JSON.parse(readFileSync('data/signals.json', 'utf8'));
+  const g = JSON.parse(readFileSync('data/geo/laus-county.json', 'utf8'));
+  for (const tile of s.pulse.tiles) tile.trend = [{ ym: '2026-09', v: 1 }];
+  g.referenceMonth = '2026-09';
+  assert.deepEqual(checkEconomicData(s, g, '2026-09'), []);
+  s.pulse.tiles[0].trend[0].ym = '2026-08';
+  assert.ok(checkEconomicData(s, g, '2026-09').length);
+  s.pulse.tiles[0].trend[0] = { ym: '2026-09', v: null };
+  assert.ok(checkEconomicData(s, g, '2026-09').length);
+  s.pulse.tiles[0].trend[0].v = 0;
+  assert.deepEqual(checkEconomicData(s, g, '2026-09'), []);
+  g.counties[1].fips = g.counties[0].fips;
+  assert.ok(checkEconomicData(s, g, '2026-09').length);
+  g.counties.pop();
+  assert.ok(checkEconomicData(s, g, '2026-09').length);
+  assert.equal(policy.requiredStateSeries.length, 4);
+});
+test('automatic issue keeps source values and actual context dates', () => {
+  const s = JSON.parse(readFileSync('data/signals.json', 'utf8'));
+  const g = JSON.parse(readFileSync('data/geo/laus-county.json', 'utf8'));
+  const issue = makeIssue(s, g, { date: '2026-10-30', dataMonth: '2026-09' });
+  assert.equal(issue.pulse[0].display, s.pulse.tiles[0].display);
+  assert.equal(issue.dataMonth, '2026-09');
+  assert.ok(issue.insights.some(i => i.text.includes('FRED')));
+  assert.ok(issue.insights.some(i => i.text.includes('own release schedule')));
+});
+test('daily coverage and reconciliations prevent silent zero or malformed rollups', () => {
+  const row = { dimensions: { date: '2026-10-18' }, uniq: { uniques: 3 }, sum: { requests: 10, bytes: 100, cachedBytes: 50, responseStatusMap: [{ edgeResponseStatus: 200, requests: 10 }] } };
+  assert.deepEqual(validateDailyRows([row], '2026-10-18', '2026-10-19'), [row]);
+  assert.throws(() => validateDailyRows([], '2026-10-18', '2026-10-19'));
+  assert.throws(() => validateDailyRows([row, row], '2026-10-18', '2026-10-19'));
+  row.sum.cachedBytes = 101;
+  assert.throws(() => validateDailyRows([row], '2026-10-18', '2026-10-19'));
+  row.sum.cachedBytes = 50; row.sum.requests = 11;
+  assert.throws(() => validateDailyRows([row], '2026-10-18', '2026-10-19'));
+  const facts = { requests: 10, bytes: 100, cacheRatio: 0.5, statuses: { 200: 10 } };
+  assert.match(measuredInsights(facts, facts).join(' '), /zero 5xx/);
+});

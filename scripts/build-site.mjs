@@ -1845,9 +1845,9 @@ function buildSignals(posts) {
    id="newsletter" anchor survives on the /signals/ foot block
    only — the spec 020 emails' CTA links target
    /signals/#newsletter. */
-const NL_DONE_LEDE = 'We sent a confirmation email to the address you gave us. Click the link in it \u2014 good for 48 hours \u2014 and the first edition arrives Wednesday at 10:00 AM ET. No click, no emails: that\u2019s the deal.';
-const NL_FINE_FULL = 'One email a week. We send a confirmation first \u2014 nothing arrives until you click it. Unsubscribe in one click, any time. <strong>No tracking pixels, no per-reader analytics.</strong> <a href="/privacy/">Privacy policy</a>';
-const NL_FINE_COMPACT = 'One email a week \u00b7 confirmation first \u00b7 one-click unsubscribe \u00b7 <strong>no tracking pixels</strong>. <a href="/privacy/">Privacy policy</a>';
+const NL_DONE_LEDE = 'We sent a confirmation email to the address you gave us. Click the link in it \u2014 good for 48 hours \u2014 and the first edition arrives after the monthly economic releases. No click, no emails: that\u2019s the deal.';
+const NL_FINE_FULL = 'One email a month. We send a confirmation first \u2014 nothing arrives until you click it. Unsubscribe in one click, any time. <strong>No tracking pixels, no per-reader analytics.</strong> <a href="/privacy/">Privacy policy</a>';
+const NL_FINE_COMPACT = 'One email a month \u00b7 confirmation first \u00b7 one-click unsubscribe \u00b7 <strong>no tracking pixels</strong>. <a href="/privacy/">Privacy policy</a>';
 
 function nlFormHtml(source) {
   return '          <form class="nl-form" method="post" action="/api/newsletter/subscribe">\n' +
@@ -1873,11 +1873,11 @@ function newsletterBlock(source, opts) {
   if (variant === 'compact' || variant === 'footer') {
     const head = variant === 'footer'
       ? '          <div class="nl-compact-head" data-nl-vanish>\n' +
-        '            <p class="nl-compact-heading">The Axiovex Signal \u2014 the week, in your inbox.</p>\n' +
-        '            <p class="nl-compact-sub">One email a week, Wednesdays at 10:00 AM ET \u2014 Michigan workforce data, manufacturing signals, industrial AI.</p>\n' +
+        '            <p class="nl-compact-heading">The Axiovex Signal \u2014 the month, in your inbox.</p>\n' +
+        '            <p class="nl-compact-sub">One email a month, after the monthly economic releases \u2014 Michigan workforce data, manufacturing signals, industrial AI.</p>\n' +
         '          </div>\n'
       : '          <div class="nl-compact-head" data-nl-vanish>\n' +
-        '            <p class="nl-compact-heading">The Axiovex Signal \u2014 in your inbox, Wednesdays.</p>\n' +
+        '            <p class="nl-compact-heading">The Axiovex Signal \u2014 in your inbox, monthly.</p>\n' +
         '          </div>\n';
     const cls = variant === 'footer' ? 'nl-block nl-compact nl-strip' : 'nl-block nl-compact nl-flush';
     return '<div class="' + cls + '" data-nl-block>\n' +
@@ -1887,17 +1887,17 @@ function newsletterBlock(source, opts) {
       '        </div>';
   }
   const issue = source === 'issue';
-  const eyebrow = issue ? 'READING SOMEONE ELSE\u2019S COPY?' : 'THE AXIOVEX SIGNAL \u2014 WEEKLY';
-  const heading = issue ? 'Get your own, Wednesdays.' : 'The week, in your inbox.';
+  const eyebrow = issue ? 'READING SOMEONE ELSE\u2019S COPY?' : 'THE AXIOVEX SIGNAL \u2014 MONTHLY';
+  const heading = issue ? 'Get the monthly edition.' : 'The month, in your inbox.';
   const lede = issue
-    ? 'The same edition, in your own inbox \u2014 Wednesdays at 10:00 AM ET, with the numbers, their vintages, and why they matter.'
-    : 'What changed in Michigan industry and the field \u2192 one email, Wednesdays at 10:00 AM ET, with the numbers, their vintages, and why they matter.';
+    ? 'The same edition, in your own inbox \u2014 after the monthly economic releases, with the numbers, their vintages, and why they matter.'
+    : 'What changed in Michigan industry and the field \u2192 one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.';
   const anchor = source === 'signals' ? ' id="newsletter"' : '';
   const bullets = variant === 'landing'
     ? '          <div class="nl-bullets"><span>\u00b7 Michigan workforce data, with vintages</span><span>\u00b7 Manufacturing &amp; field signals</span><span>\u00b7 Industrial AI, checked against sources</span></div>\n'
     : '';
   const cadence = variant === 'landing'
-    ? '          <p class="nl-cadence"><strong>Every Wednesday</strong> \u2014 one email a week, 10:00 AM ET. Free.</p>\n'
+    ? '          <p class="nl-cadence"><strong>Monthly, after economic releases</strong> \u2014 one email a month. Free.</p>\n'
     : '';
   // WF-15 proof slot: drawn empty, ships empty — an HTML comment
   // is all that renders until a real proof exists to claim.
@@ -1986,7 +1986,7 @@ function buildNewsletter() {
         '              <p class="nl-card-sections">What changed \u00b7 Michigan Pulse \u00b7 Why it matters \u00b7 Watchlist</p>\n' +
         '              <a class="explore" href="/newsletter/' + issue.date + '/">READ THE WEB EDITION \u2192</a>\n' +
         '            </article>').join('\n            ')
-    : '<p class="nl-empty">No editions yet. The first goes out Wednesday at 10:00 AM ET.</p>';
+    : '<p class="nl-empty">No editions yet. The first goes out after the monthly economic releases.</p>';
   mkdirSync(path.join(ROOT, 'newsletter'), { recursive: true });
   writeFileSync(path.join(ROOT, 'newsletter', 'index.html'), fill(indexTpl, {
     '{{ISSUE_ROWS}}': rows,
@@ -2051,7 +2051,7 @@ function writeSitemap(posts, docsInfo, signalsInfo, newsletterIssues) {
     e(SITE + '/contact/', gitDate(ROOT, 'contact/index.html'), 'monthly', '0.7'),
     e(SITE + '/privacy/', gitDate(ROOT, 'privacy/index.html'), 'yearly', '0.5'),
     e(SITE + '/disclaimer/', gitDate(ROOT, 'disclaimer/index.html'), 'yearly', '0.5'),
-    e(SITE + '/newsletter/', newsletterIssues && newsletterIssues.length ? newsletterIssues[0].date : null, 'weekly', '0.7'),
+    e(SITE + '/newsletter/', newsletterIssues && newsletterIssues.length ? newsletterIssues[0].date : null, 'monthly', '0.7'),
     ...(newsletterIssues || []).map(i => e(SITE + '/newsletter/' + i.date + '/', i.date, 'monthly', '0.6')),
   ];
   writeFileSync(path.join(ROOT, 'sitemap.xml'),

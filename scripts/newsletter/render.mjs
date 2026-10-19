@@ -33,7 +33,7 @@ export function renderEmail(issue) {
 
   // ---------- plain text ----------
   const t = [];
-  t.push('THE AXIOVEX SIGNAL — WEEKLY');
+  t.push('THE AXIOVEX SIGNAL — MONTHLY');
   t.push(dateLong);
   t.push('');
   t.push(issue.lede);
