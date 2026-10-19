@@ -1047,4 +1047,3 @@ training and engineering?” Add exploratory startup/growth packages (websites,
 corporate operating systems and Michigan business-resource guidance), including
 existing companies. The package scope, pricing, access, eligibility and funding
 remain unconfirmed. This specific amendment was directed by Tristen in chat.
-
