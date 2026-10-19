@@ -980,3 +980,15 @@ as accordion rows.
   in hand belongs to a different program's Spec 033).
   Implementation proceeds on staging (T004–T006);
   production promotion stays a separate gate (T007).
+
+## WF-11 amendment — October 19, owner-directed refresh timestamp
+
+Tristen requests a visible last-refresh date/time on Signals. Add one small,
+centered metadata line directly below the introductory lede and above the
+newsletter/Highlights region: **Last refreshed: October 19, 2026 at 9:27 AM ET**
+(example only). Use existing signals-updated typography and an accessible
+`time` element carrying the original UTC timestamp. The value comes from
+`data/signals.json.updatedUtc`, the last snapshot update, never page-load or
+build time. Keep each economic dataset's own published reference vintage.
+No stylesheet changes are required. This direct owner request authorizes
+the placement and wording; update this frame before implementing it.

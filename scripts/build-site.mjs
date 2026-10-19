@@ -1741,6 +1741,9 @@ function buildSignals(posts) {
     '{{LANES_HTML}}': lanesHtml,
     '{{GEO_NOTE}}': geoNote(geo),
     '{{UPDATED_LINE}}': updatedLine,
+    '{{REFRESHED_LINE}}': Number.isFinite(Date.parse(snap.updatedUtc))
+      ? '<p class="signals-updated" title="Time of the latest Signals snapshot update; individual economic figures retain their published vintages."><strong>Last refreshed:</strong> <time datetime="' + escAttr(snap.updatedUtc) + '">' + esc(fmtUpdated(snap.updatedUtc)) + '</time></p>'
+      : '<p class="signals-updated">Last refresh time unavailable.</p>',
     '{{NEWSLETTER_TOP_HTML}}': newsletterBlock('signals-top', { variant: 'compact' }),
     '{{NEWSLETTER_HTML}}': newsletterBlock('signals'),
   }));
