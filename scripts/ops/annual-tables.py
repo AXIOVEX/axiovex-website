@@ -66,6 +66,22 @@ def mcda():
         source['period'] = group['period']
     save('data/outlook.json',outlook)
 
+def bls():
+    outlook=load('data/outlook.json')
+    wb=openpyxl.load_workbook(INPUT/'bls-occupations.xlsx',read_only=True,data_only=True)
+    horizons=[]
+    for name,key in [('Table 1.3','rise'),('Table 1.5','fall')]:
+        rows=list(wb[name].values)
+        years=re.search(r'(20\d\d).*?(20\d\d)',str(rows[0][0]))
+        if not years or int(years[2])-int(years[1])!=10: raise ValueError('BLS workbook horizon changed')
+        horizons.append(f'{years[1]}–{years[2][-2:]}')
+        selected=[r for r in rows[2:] if re.fullmatch(r'\d{2}-\d{4}',str(r[1])) and r[1]!='00-0000'][:5]
+        if len(selected)!=5: raise ValueError('BLS workbook table coverage changed')
+        outlook['blsProjections'][key]=[{'name':re.sub(r'\(\d+\)','',str(r[0])).strip(),'jobsChange':round(number(r[4])*1000),'pctChange':number(r[5])} for r in selected]
+    if horizons[0]!=horizons[1]: raise ValueError('BLS workbook horizons disagree')
+    outlook['blsProjections'].update(horizon=horizons[0],vintage=horizons[0],sourceFileUrl='https://www.bls.gov/emp/ind-occ-matrix/occupation.xlsx')
+    save('data/outlook.json',outlook)
+
 def industry():
     outlook=load('data/outlook.json')
     rows=list(openpyxl.load_workbook(INPUT/'mcda-industry.xlsx',read_only=True,data_only=True).worksheets[0].values)
@@ -164,6 +180,7 @@ def pseo():
 if __name__=='__main__':
     mode=sys.argv[1]
     if mode=='mcda': mcda()
+    elif mode=='bls': bls()
     elif mode=='industry': industry()
     elif mode=='pupils': pupils()
     elif mode=='ipeds': ipeds(int(sys.argv[2]))

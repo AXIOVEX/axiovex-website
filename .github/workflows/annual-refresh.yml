@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '23 11 * * 2'
   workflow_dispatch:
+    inputs:
+      publish:
+        type: boolean
+        default: false
+        description: Commit verified data changes (scheduled runs always publish)
 permissions:
   contents: write
 concurrency:
@@ -38,6 +43,7 @@ jobs:
           path: ops-output/annual-sources/
           retention-days: 90
       - name: Commit verified changed data
+        if: github.event_name == 'schedule' || inputs.publish
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

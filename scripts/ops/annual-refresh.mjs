@@ -34,12 +34,25 @@ async function main() {
     const old = JSON.parse(readFileSync(file));
     if (JSON.stringify(old) !== JSON.stringify(obj)) writeFileSync(file, JSON.stringify(obj, null, 2) + '\n');
   };
+  const failures=[];
+  async function check(name, fn) { try { await fn(); } catch(e) { failures.push(`${name}: ${e.message}`); console.error(failures.at(-1)); } }
   try {
     let outlook = JSON.parse(readFileSync('data/outlook.json'));
-    const growing = blsTable((await download(outlook.blsProjections.sourceUrl, 'bls-growing.html')).toString());
-    const declining = blsTable((await download(outlook.blsProjections.decliningTableUrl, 'bls-declining.html')).toString());
-    if (growing.horizon !== declining.horizon) throw Error('BLS projection horizons differ');
-    Object.assign(outlook.blsProjections, { rise: growing.rows, fall: declining.rows, horizon: growing.horizon, vintage: growing.horizon });
+    await check('BLS projections', async () => {
+      try {
+        const growing = blsTable((await download(outlook.blsProjections.sourceUrl, 'bls-growing.html')).toString());
+        const declining = blsTable((await download(outlook.blsProjections.decliningTableUrl, 'bls-declining.html')).toString());
+        if (growing.horizon !== declining.horizon) throw Error('BLS projection horizons differ');
+        Object.assign(outlook.blsProjections, { rise: growing.rows, fall: declining.rows, horizon: growing.horizon, vintage: growing.horizon });
+        save('data/outlook.json',outlook);
+      } catch(e) {
+        if (!/HTTP 403/.test(e.message)) throw e;
+        // The HTML table links this official workbook. No third-party substitute.
+        await download('https://www.bls.gov/emp/ind-occ-matrix/occupation.xlsx','bls-occupations.xlsx');
+        py('bls'); outlook=JSON.parse(readFileSync('data/outlook.json'));
+      }
+    });
+    await check('MCDA projections', async () => {
     const landingUrl = outlook.michiganProjections.sourceUrl;
     const mcdaLinks = links((await download(landingUrl, 'mcda.html')).toString(), landingUrl);
     for (const [i, s] of outlook.michiganOccupations.sourceFiles.entries()) {
@@ -54,10 +67,14 @@ async function main() {
     await download(industry.url, 'mcda-industry.xlsx');
     outlook.michiganProjections.sourceFileUrl = industry.url;
     save('data/outlook.json', outlook); py('mcda'); py('industry');
+    });
 
+    await check('Census PSEO', async () => {
     const pseo = 'https://lehd.ces.census.gov/data/pseo/latest_release/mi/';
     for (const [remote, local] of [['version_pseo.txt','pseo-version.txt'],['pseo_mi_partners.txt','pseo-partners.txt'],['pseoe_mi.csv.gz','pseoe_mi.csv.gz'],['pseof_mi.csv.gz','pseof_mi.csv.gz']]) await download(pseo + remote, local);
     py('pseo');
+    });
+    await check('NCES IPEDS', async () => {
     const ipeds = JSON.parse(readFileSync('data/geo/ipeds-institutions.json'));
     let year = Number(ipeds.source.match(/HD(20\d\d)/)?.[1]);
     if (!year) throw Error('IPEDS committed survey year absent');
@@ -67,6 +84,8 @@ async function main() {
     if (hd && completions) { year = next; writeFileSync(`${dir}/ipeds-hd.zip`, hd); writeFileSync(`${dir}/ipeds-completions.zip`, completions); }
     else { await download(`https://nces.ed.gov/ipeds/datacenter/data/HD${year}.zip`, 'ipeds-hd.zip'); await download(`https://nces.ed.gov/ipeds/datacenter/data/C${year}_A.zip`, 'ipeds-completions.zip'); }
     py('ipeds', String(year));
+    });
+    await check('MDE teacher table', async () => {
 
     outlook = JSON.parse(readFileSync('data/outlook.json'));
     const teachers = outlook.education.figures.find(f => f.id === 'teacher-enrollees');
@@ -75,17 +94,25 @@ async function main() {
     const row = teacherRows[0];
     if (!row || row.length !== 4 || +row[1].replaceAll(',','') + +row[2].replaceAll(',','') !== +row[3].replaceAll(',','')) throw Error('MDE enrollment/completion table reconciliation failed');
     for (const [id,col] of [['teacher-enrollees',1],['teacher-completers',2]]) Object.assign(outlook.education.figures.find(f => f.id === id), { value: Number(row[col].replaceAll(',','')), valueText: row[col], period: row[0] });
+    save('data/outlook.json',outlook);
+    });
+    await check('Treasury pupil estimates', async () => {
+    outlook=JSON.parse(readFileSync('data/outlook.json'));
     const treasury = 'https://www.michigan.gov/treasury/consensus-revenue-estimating-conference';
     const pupilLink = links((await download(treasury, 'treasury.html')).toString(), treasury).find(l => /^Pupil Count Estimates/i.test(l.text));
     if (!pupilLink) throw Error('Treasury current pupil estimate link missing');
     await download(pupilLink.url, 'pupils.pdf');
     writeFileSync(`${dir}/pupil-source.json`, JSON.stringify(pupilLink));
     save('data/outlook.json', outlook); py('pupils');
+    });
+    await check('BLS QCEW', async () => {
     const qcew = JSON.parse(readFileSync('data/geo/qcew-county-industry.json'));
     const candidate = new Date().getUTCFullYear() - 1;
     const probe = await download(`https://data.bls.gov/cew/data/api/${candidate}/a/area/26099.csv`, null, true);
     execFileSync(process.execPath, ['scripts/fetch-geo.mjs','qcew'], { stdio: 'inherit', env: { ...process.env, QCEW_YEAR: String(probe ? candidate : qcew.vintage.match(/20\d\d/)?.[0]), GEO_STATUS_FILE: `${dir}/qcew-status.json` } });
     if (JSON.parse(readFileSync(`${dir}/qcew-status.json`)).failed) throw Error('Annual QCEW collector retained last-good after a source failure');
+    });
+    if (failures.length) throw Error(failures.join('; '));
   } catch (e) { evidence.failed = true; evidence.error = e.message; throw e; }
   finally { writeFileSync(`${dir}/status.json`, JSON.stringify(evidence, null, 2) + '\n'); }
 }
