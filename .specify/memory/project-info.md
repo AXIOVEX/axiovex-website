@@ -23,3 +23,7 @@
 - Traffic reports use consistent UTC calendar windows (per that reference),
   daily-unique visitor-days for multi-day periods, and complete unsampled
   rollups. Sampled estimates cannot override authoritative totals.
+
+- Persist validated aggregate daily Cloudflare rollups in D1 via the private
+  ops traffic-archive endpoint. Missing historical dates yield unavailable
+  monthly totals, never an assumed zero or a complete-month claim.

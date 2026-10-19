@@ -6,7 +6,7 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { spawnSync } from 'node:child_process';
 
-function run(mode, { key = '', apiError = false } = {}) {
+function run(mode, { key = '', apiError = false, missingRows = false } = {}) {
   const temp = mkdtempSync(path.join(tmpdir(), 'axiovex-ops-test-'));
   const hook = path.join(temp, 'mock.mjs');
   writeFileSync(hook, `
@@ -21,6 +21,7 @@ function run(mode, { key = '', apiError = false } = {}) {
         for(let d = new Date(start + 'T00:00:00Z'); d.toISOString().slice(0,10) < end; d.setUTCDate(d.getUTCDate()+1)) {
           rows.push({dimensions:{date:d.toISOString().slice(0,10)},uniq:{uniques:3},sum:{requests:10,bytes:200,cachedBytes:50,responseStatusMap:[{edgeResponseStatus:200,requests:10}],countryMap:[{clientCountryName:'US',requests:10}]}});
         }
+        if (${missingRows}) rows = rows.slice(0, 2);
       } else rows = [{count:5,dimensions:{clientRequestHTTPHost:'axiovexsystems.com',clientRequestPath:'/signals/'}}];
       return Response.json({data:{viewer:{zones:[{rows}]}},errors:null});
     };
@@ -35,6 +36,17 @@ test('missing credentials produce a saved failed report', () => {
   const result = run('daily');
   assert.equal(result.status, 1);
   assert.match(result.report, /Missing CLOUDFLARE_ANALYTICS_TOKEN/);
+});
+test('incomplete monthly windows produce unavailable totals and a usable partial report, not false zero baselines', () => {
+  const result = run('monthly', { key: 'test-only', missingRows: true });
+  assert.equal(result.status, 2);
+  assert.match(result.report, /\| Requests \| Unavailable \| Unavailable \| Unavailable \|/);
+  assert.match(result.report, /observed subset/);
+  assert.match(result.report, /cannot establish zero 5xx/);
+  const data = JSON.parse(readFileSync(path.join(result.temp, 'window.json'), 'utf8'));
+  assert.equal(data.totals.previous.requests, null);
+  assert.equal(data.totals.current.complete, false);
+  assert.equal(data.totals.current.observed.requests, 20);
 });
 test('API errors preserve raw evidence and fail closed', () => {
   const result = run('weekly', { key: 'test-only', apiError: true });

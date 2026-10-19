@@ -220,3 +220,19 @@ passed because some did. Manual data-pack dispatch accepts a single source
 for isolated verification. The monthly founder report consumes this manifest.
 An EIA parsing defect was also corrected: null/blank prices no longer become
 zero; actual zero values remain valid.
+
+## Historical traffic coverage correction — October 19
+
+Inspection of the old monthly artifacts found only two returned September
+dates and an empty August result. Those are not complete monthly totals or
+a zero baseline. Reports now keep observed subsets separate from headline
+metrics: a missing full window is unavailable, with no percentage change or
+zero-5xx claim manufactured. A partial report can still be delivered.
+
+Authenticated `/api/ops/traffic-archive` saves validated aggregate UTC daily
+rollups in D1 and restores them on later runs. The API stores only counts,
+status totals, country totals and daily uniques, with a capture timestamp;
+no visitor identifiers, URLs, addresses or tracking are stored there. Fresh
+Cloudflare rows supersede the same archived day. Raw responses and merged
+day evidence remain in CI artifacts. Retained evidence improves future
+monthly coverage; it cannot recover data absent before collection began.
