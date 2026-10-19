@@ -1164,7 +1164,9 @@ function detailMichigan(outlook) {
       ' openings/yr</span></p>').join('\n'));
   }
   if (!parts.length) return '';
-  const prov = 'Provenance: transcribed from the ' + esc(occ.edition || 'September edition') +
+  const prov = occ.viaStudy === false
+    ? 'Provenance: selected occupations refreshed directly from MCDA&rsquo;s published statewide and regional workbooks. Each geography retains its own projection horizon. Annual openings include replacement demand, not only growth.'
+    : 'Provenance: transcribed from the ' + esc(occ.edition || 'September edition') +
     '&rsquo;s verified projection capture in the ' + esc(occ.studyName || 'Axiovex workforce study') +
     ' (release tag ' + esc(occ.releaseTag || '') + '), whose underlying files are MCDA&rsquo;s ' +
     'published statewide and regional workbooks. The figures are labeled &ldquo;via the Axiovex ' +
@@ -1173,8 +1175,8 @@ function detailMichigan(outlook) {
     'different geographies, different vintages, separate labels. Annual openings include ' +
     'replacement demand, not only growth.';
   return detailBlock(
-    'MICHIGAN OCCUPATIONS &mdash; LONG-TERM PROJECTIONS &middot; MICHIGAN MCDA, VIA THE ' +
-      'AXIOVEX WORKFORCE STUDY (' + esc(String(occ.edition || '').toUpperCase()) + ')',
+    'MICHIGAN OCCUPATIONS &mdash; LONG-TERM PROJECTIONS &middot; MICHIGAN MCDA' +
+      (occ.viaStudy === false ? ' &middot; DIRECT WORKBOOK REFRESH' : ', VIA THE AXIOVEX WORKFORCE STUDY (' + esc(String(occ.edition || '').toUpperCase()) + ')'),
     parts.join('\n') + '\n          <p class="board-note">' + prov + '</p>');
 }
 
@@ -1745,6 +1747,7 @@ function buildSignals(posts) {
     '{{DETAIL_HTML}}': detailHtml(snap.pulse, outlook, posts, geo),
     '{{LANES_HTML}}': lanesHtml,
     '{{GEO_NOTE}}': geoNote(geo),
+    '{{SOURCE_NOTE}}': 'The detail tables reproduce selected MCDA occupation projections with their stated provenance and separate geographic horizons. Education figures retain each publisher and source period. Pupil membership: ' + esc((outlook.education.figures.find(f => f.id === 'pupil-membership') || {}).publisherTag || 'source unavailable') + ' &mdash; a proposed conference estimate, not an audited count.',
     '{{UPDATED_LINE}}': updatedLine,
     '{{REFRESHED_LINE}}': Number.isFinite(Date.parse(snap.updatedUtc))
       ? '<p class="signals-updated" title="Time of the latest Signals snapshot update; individual economic figures retain their published vintages."><strong>Last refreshed:</strong> <time datetime="' + escAttr(snap.updatedUtc) + '">' + esc(fmtUpdated(snap.updatedUtc)) + '</time></p>'

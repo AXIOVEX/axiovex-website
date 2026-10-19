@@ -96,3 +96,14 @@
   owner-only other branches and main creation/deletion/force-push protections.
   The dedicated app gets only normal main-update exception. Never replace this
   with an owner's personal access token or a global branch-protection disable.
+
+- Live app-authenticated publication proof after concurrency repair: Signals
+  39326016092, document sync 39326021925, economic pack 39326027076 and
+  annual sources with publish=true 39326031925 all passed. Main advanced through
+  20c2d7e to 0778a1a; Cloudflare production and staging deployments passed.
+  Nine-workflow migration audit 39326180523 passed. PR #19 supplies bounded
+  rebase/rebuild publication for every writer; conflicting source data stops.
+- MCDA occupation detail provenance now switches to direct-workbook only after
+  the validated parser succeeds for every retained geography. Historical study
+  links remain background reading. Signals source notes use current pupil
+  metadata instead of the obsolete January estimate label.
