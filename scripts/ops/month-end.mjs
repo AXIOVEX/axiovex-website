@@ -5,6 +5,7 @@ import { localParts, shift, scheduledTime } from './calendar.mjs';
 import { save, summary } from './io.mjs';
 import { renderEmail } from '../newsletter/render.mjs';
 import { prepareBrief } from './workforce-brief.mjs';
+import { verifyInboxReceipt } from './mailbox-check.mjs';
 export const policy = JSON.parse(readFileSync(new URL('../../data/publication-policy.json', import.meta.url), 'utf8'));
 export function cycle(now = new Date()) {
   const p = localParts(now), day = +p.day;
@@ -119,6 +120,7 @@ async function main() {
     const hash = createHash('sha256').update(JSON.stringify(email)).digest('hex');
     const preview = JSON.parse(readFileSync('ops-output/email-review/newsletter-receipt.json', 'utf8'));
     verifyFinalPreview(preview, plan.date, hash);
+    if(process.env.NEWSLETTER_VERIFY_INBOX==='true')verifyInboxReceipt(JSON.parse(readFileSync('ops-output/email-review/inbox-receipt.json','utf8')),preview);
     execute(process.execPath, ['scripts/newsletter/send.mjs', plan.date, '--base', 'https://axiovexsystems.com', '--approved-by', `${policy.authorization}; decision=${policy.decisionId}; dataMonth=${plan.dataMonth}; emailSHA256=${hash}`]);
     save('customer-send.json', { dataMonth: plan.dataMonth, date: plan.date, decisionId: policy.decisionId, sha256: hash, status: 'sender completed' }); return;
   }

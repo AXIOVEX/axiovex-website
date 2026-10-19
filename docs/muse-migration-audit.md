@@ -59,7 +59,7 @@ execution; shared-document synchronization; blog/feed/sitemap generation.
 - Historical Muse SEO score state and pre-baseline subscriber history were not
   exported. Missing historical evidence remains unavailable.
 
-The daily audit now checks eight execution workflows, including the three new
+The daily audit now checks nine execution workflows, including the three new
 jobs. Passing workflow execution is not a claim of company-product approval,
 external inbox delivery, or new editorial review.
 
@@ -72,3 +72,11 @@ Economic refresh verification found FRED HTTP 502 and EIA timeout despite the
 outer job succeeding. The CI wrapper now retries only transient failed sources
 once, preserves both attempts, and fails the job if any requested source is
 still failed or skipped. Successful sources and last-good snapshots survive.
+
+
+Read-only mailbox authorization is now configured with owner consent; company
+LinkedIn access shows Review in progress. The daily mailbox check sends no mail.
+An explicit Tristen-only test verifies real receipt, and the monthly subscriber
+release can require that matching inbox receipt via NEWSLETTER_VERIFY_INBOX.
+BLS annual CI now uses the keyed API if its public download hosts reject runners;
+the verified occupation universe is explicitly dated and guarded against a new year.
