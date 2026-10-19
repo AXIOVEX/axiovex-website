@@ -37,7 +37,7 @@ if (args.includes('--send')) {
     method: 'POST', headers: { 'content-type': 'application/json', 'x-website-ops-secret': process.env.NEWSLETTER_SEND_SECRET }, body: JSON.stringify(body),
   });
   const receipt = await response.json().catch(() => ({}));
-  writeFileSync(`${directory}/${kind}-receipt.json`, JSON.stringify({ ...receipt, date, emailSHA256: createHash('sha256').update(JSON.stringify(rendered)).digest('hex'), httpStatus: response.status, sentAt: new Date().toISOString() }, null, 2));
+  writeFileSync(`${directory}/${kind}-receipt.json`, JSON.stringify({ ...receipt, date, subject: '[REVIEW ONLY] '+rendered.subject, emailSHA256: createHash('sha256').update(JSON.stringify(rendered)).digest('hex'), httpStatus: response.status, sentAt: new Date().toISOString() }, null, 2));
   if (response.status !== 202 || !receipt.ok || receipt.recipient !== 'tristen@axiovexsystems.com' || receipt.sent !== 1) throw new Error(`Review send failed: HTTP ${response.status}`);
   console.log(`${kind} review accepted by Microsoft for tristen@axiovexsystems.com only.`);
 } else console.log(`${kind} review generated; nothing sent.`);

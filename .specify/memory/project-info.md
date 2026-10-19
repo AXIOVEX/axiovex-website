@@ -64,3 +64,24 @@
   never claim the whole education source universe is automatically refreshed.
 - Newsletter browser evidence uses public test Turnstile and captured messages;
   it does not represent real inbox receipt. No production bot bypass.
+
+- Owner approved Microsoft Platform Policies and delegated Mail.Read/User.Read/
+  offline_access for Tristen only on October 19. App: Axiovex Newsletter Delivery
+  Verification, client ID 832e46b9-6552-4ee3-a4ab-5d58f97cae5d; single Axiovex
+  tenant 7792b718-1c9e-4924-b52d-37b846119458. No application-wide Mail.Read.
+  Authorization uses a temporary localhost PKCE callback only. Production checks
+  run on GitHub; the owner's computer need not stay on. Refresh token is only in
+  NEWSLETTER_MAILBOX_REFRESH_TOKEN Actions secret; identifiers/date are variables.
+- newsletter-mailbox.yml: daily read-only preflight, no scheduled test mail.
+  Manual delivery_test sends one fixed-recipient review to Tristen and verifies
+  matching sender/recipient/subject/time plus HTML tables, postal footer and review
+  notice. No raw received messages are retained. After successful proof, enable
+  NEWSLETTER_VERIFY_INBOX=true so month-end distribution requires this receipt.
+  Expired/withdrawn authorization fails visibly; renew via mailbox-authorize.mjs.
+- LinkedIn company app status observed October 19: Review in progress. Association
+  and business email verified. Personal auth passed GitHub run 39321252983. Company
+  OAuth cannot be completed until LinkedIn approves the requested product.
+- Annual source main-branch proof passed run 39322836382. BLS blocks GitHub HTML,
+  XLSX and bulk download requests, so CI uses its keyed named-measure API across
+  all 831 verified 2025–35 occupations. A new base year requires a newly verified
+  occupation universe before ranking; no fixed list is called timeless/latest.

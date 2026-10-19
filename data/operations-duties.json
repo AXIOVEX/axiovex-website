@@ -74,7 +74,7 @@
     "source": "scripts/newsletter/browser-loop.py",
     "workflow": "newsletter-browser.yml",
     "mode": "automatic",
-    "description": "Weekly real browser/function lifecycle with official test Turnstile and captured mail; production Managed challenge and external inbox observation remain separate evidence"
+    "description": "Weekly browser/function signup-confirm-send-unsubscribe lifecycle with official test Turnstile; live inbox evidence is handled by the separate mailbox job. Production Managed challenge remains an interactive observation."
   },
   {
     "id": "annual-outlook-map-vintages",
@@ -82,5 +82,12 @@
     "workflow": "annual-refresh.yml",
     "mode": "automatic",
     "description": "Weekly discovered MCDA/BLS/PSEO/IPEDS/QCEW and pupil-source refresh; pinned MDE releases reconciled; CEPI interactive indicators remain dated reviewed inputs"
+  },
+  {
+    "id": "newsletter-inbox-delivery",
+    "source": "scripts/ops/mailbox-check.mjs",
+    "workflow": "newsletter-mailbox.yml",
+    "mode": "automatic",
+    "description": "Daily read-only authorization check; explicit manual Tristen-only delivery test; monthly final preview receipt gate once enabled after CI proof"
   }
 ]

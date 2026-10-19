@@ -301,3 +301,32 @@ Local authorization: `node scripts/ops/linkedin-authorize.mjs` (personal) or
 `--company` (company). Use only localhost's setup form; it saves tokens directly
 to Actions secrets. Register `http://localhost:8766/callback` on each app. Never
 paste client secrets into terminal command arguments or commit them.
+
+
+## Read-only inbox verification
+
+Owner-approved Microsoft app `832e46b9-6552-4ee3-a4ab-5d58f97cae5d` uses delegated
+Mail.Read, User.Read and offline access for Tristen. It has no tenant-wide mailbox
+permission or send/delete scope. Run `node scripts/ops/mailbox-authorize.mjs CLIENT_ID`
+for a temporary localhost PKCE callback. The server closes on completion and saves
+the refresh token directly to repository Actions secrets. GitHub checks run with
+the owner's computer off. Reauthorization may be needed when Microsoft expires or
+revokes the original session; the daily preflight fails visibly and warns at 75 days.
+
+`newsletter-mailbox.yml` runs a daily read-only preflight. Manual `delivery_test`
+first checks authorization, sends the current source-based newsletter only to
+Tristen through the existing fixed-recipient preview endpoint, then searches only
+matching Axiovex review mail. Sender, recipient, subject, timestamp, HTML tables,
+postal footer and review notice must all pass within two minutes. Artifacts retain
+boolean checks and a hashed message identifier, never raw received mail or tokens.
+
+After initial CI delivery proof, `NEWSLETTER_VERIFY_INBOX=true` enables this gate
+between the final monthly preview and customer send. It is bound to that preview's
+send time and exact outbound email hash. The server acceptance receipt remains
+separate from inbox evidence. This does not automate a real production Managed
+Turnstile challenge; the isolated browser job covers lifecycle logic separately.
+
+Annual BLS fallback: the official HTML, workbook and bulk hosts may reject GitHub
+runners. The keyed API returns named measures for every member of the verified
+831-occupation 2025–35 universe. Missing measures, missing occupations or a newer
+base year fail until a new universe is verified. Other providers continue to run.

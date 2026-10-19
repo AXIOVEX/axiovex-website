@@ -40,6 +40,7 @@ jobs:
       NEWSLETTER_SEND_SECRET: ${{ secrets.NEWSLETTER_SEND_SECRET }}
       PACK_STATUS_FILE: ops-output/economic-refresh.json
       REPORT_DATA_MONTH: ${{ needs.plan.outputs.dataMonth }}
+      NEWSLETTER_VERIFY_INBOX: ${{ vars.NEWSLETTER_VERIFY_INBOX }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -97,6 +98,14 @@ jobs:
       - name: Send the exact final edition to Tristen first
         if: steps.economic.outputs.ready == 'true'
         run: node scripts/ops/month-end.mjs preview
+      - name: Observe the exact review delivery before customer sending
+        if: steps.economic.outputs.ready == 'true' && vars.NEWSLETTER_VERIFY_INBOX == 'true'
+        env:
+          NEWSLETTER_MAILBOX_CLIENT_ID: ${{ vars.NEWSLETTER_MAILBOX_CLIENT_ID }}
+          NEWSLETTER_MAILBOX_TENANT_ID: ${{ vars.NEWSLETTER_MAILBOX_TENANT_ID }}
+          NEWSLETTER_MAILBOX_AUTHORIZED_AT: ${{ vars.NEWSLETTER_MAILBOX_AUTHORIZED_AT }}
+          NEWSLETTER_MAILBOX_REFRESH_TOKEN: ${{ secrets.NEWSLETTER_MAILBOX_REFRESH_TOKEN }}
+        run: node scripts/ops/mailbox-check.mjs
       - name: Prepare durable reservation before customer sending
         if: steps.economic.outputs.ready == 'true'
         run: |
