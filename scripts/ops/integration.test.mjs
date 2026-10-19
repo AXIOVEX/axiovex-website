@@ -51,3 +51,15 @@ test('measured reports save normalized responses and disclose missing sections',
   assert.equal(snapshot.movers[0].change, 0);
   assert.ok(!result.report.includes('test-only'));
 });
+test('legacy sender fails rather than reporting recipient failures as complete', () => {
+  const temp = mkdtempSync(path.join(tmpdir(), 'axiovex-send-test-'));
+  const hook = path.join(temp, 'mock.mjs');
+  writeFileSync(hook, `globalThis.fetch = async () => Response.json({ ok:true, offset:0, sent:0, throttled:0, blockedAllowlist:0, failed:1, remaining:0, batch:1, gauge:{line:'test gauge',healthOverrides:[]} });`);
+  const child = spawnSync(process.execPath, ['--import', pathToFileURL(hook).href,
+    'scripts/newsletter/send.mjs', '2026-10-14', '--approved-by', 'test-only', '--base', 'https://axiovexsystems.com'], {
+    encoding: 'utf8', env: { ...process.env, NEWSLETTER_SEND_SECRET: 'test-only' },
+  });
+  assert.equal(child.status, 1);
+  assert.match(child.stderr, /Newsletter delivery incomplete/);
+  assert.ok(!child.stdout.includes('send complete'));
+});

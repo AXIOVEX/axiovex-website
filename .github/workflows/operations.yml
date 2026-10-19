@@ -123,6 +123,10 @@ jobs:
           repository: AXIOVEX/michigan-workforce-intelligence
           path: workforce-source
           persist-credentials: false
+      - uses: actions/setup-python@v5
+        if: matrix.task == 'workforce'
+        with:
+          python-version: '3.12'
       - name: Execute workforce study
         if: matrix.task == 'workforce'
         env:

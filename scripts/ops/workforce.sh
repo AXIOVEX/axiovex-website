@@ -28,6 +28,10 @@ cp reports/current-edition.json "$root/ops-output/current-edition.json"
 cp -R output/pdf "$root/ops-output/study-reports"
 cp reports/2026-09-13-job-continuity/analysis-snapshot.json "$root/ops-output/"
 cp reports/2026-09-13-job-continuity/data-reanalysis.md "$root/ops-output/"
+docker run --rm \
+  --mount "type=volume,src=$MIJOBS_EVIDENCE_VOLUME,dst=/data,readonly" \
+  --mount "type=bind,src=$root/ops-output,dst=/out" \
+  michigan-workforce-reports:local cp -R /data/artifacts /out/collected-artifacts
 cd "$root"
 node scripts/fetch-geo.mjs laus 2>&1 | tee ops-output/geo-refresh.log
 cp -R data/geo ops-output/geo
