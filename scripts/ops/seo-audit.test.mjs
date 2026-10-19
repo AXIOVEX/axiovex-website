@@ -26,3 +26,10 @@ test('real missing-page and machine-text assets prevent homepage fallback regres
   assert.ok(!/<(?:!doctype|html)\b/i.test(machine));
   assert.ok(!readFileSync('sitemap.xml', 'utf8').includes('/404.html'));
 });
+
+
+test('transport failures remain unavailable and get a bounded retry, never a fabricated SEO defect', async () => {
+  const { transientLighthouse } = await import('./seo-audit.mjs');
+  assert.equal(transientLighthouse({ audits: { 'robots-txt': { score: 0, explanation: 'Fetch of robots.txt failed: Timed out fetching resource' } } }), true);
+  assert.equal(transientLighthouse({ audits: { 'robots-txt': { score: 0, explanation: 'Invalid directive' } } }), false);
+});

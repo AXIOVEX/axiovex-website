@@ -10,7 +10,7 @@ name: Data pack sync (spec 019)
 
 on:
   schedule:
-    - cron: '23 12 * * 1'
+    - cron: '23 12 * * *'
   workflow_dispatch:
     inputs:
       source:
@@ -35,9 +35,11 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Fetch analysis pack
+        id: pack
+        continue-on-error: true
         env:
           BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
@@ -55,23 +57,38 @@ jobs:
             node scripts/fetch-pack.mjs --only "$SOURCE_ID"
           fi
 
+      - name: Refresh county data and rebuild public Signals insights
+        id: geo
+        continue-on-error: true
+        env:
+          BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
+        run: |
+          GEO_STATUS_FILE=ops-output/geo-refresh.json node scripts/fetch-geo.mjs laus
+
+      - name: Recompute insights from all successful refreshed inputs
+        run: node scripts/build-site.mjs
+
       - name: Preserve source refresh status
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: economic-refresh-${{ github.run_id }}-${{ github.run_attempt }}
-          path: ops-output/economic-refresh.json
+          path: ops-output/*refresh.json
           retention-days: 90
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/pack
+          git add -u
           if git diff --cached --quiet; then
             echo "pack unchanged — nothing to commit"
             exit 0
           fi
           git commit -m "Data pack refresh (automated)"
-          git pull --rebase --quiet origin main || true
+          git pull --rebase --quiet origin main
           git push origin main || (git pull --rebase --quiet origin main && git push origin main)
+
+      - name: Fail visibly on collector failure after preserving last-good content
+        if: steps.pack.outcome == 'failure' || steps.geo.outcome == 'failure'
+        run: exit 1

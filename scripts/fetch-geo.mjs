@@ -137,10 +137,6 @@ async function refreshLaus() {
   }
   const sortedMonths = [...months].sort();
   const latest = sortedMonths[sortedMonths.length - 1];
-  if (committed && committed.referenceMonth === latest) {
-    console.log('laus: committed file already at latest month ' + latest + ' — untouched');
-    return;
-  }
   // Statewide hole months: every county valueless that month.
   const holeMonths = sortedMonths.filter(ym =>
     counties.every(c => {
@@ -163,6 +159,10 @@ async function refreshLaus() {
       return { fips: c.fips, name: c.name, rate: p && p.v !== null ? p.v : null };
     }),
   };
+  if (committed && JSON.stringify({ ...committed, retrievedOn: null, sourceUrl: null }) === JSON.stringify({ ...out, retrievedOn: null, sourceUrl: null })) {
+    console.log('laus: same published values and month; no content rewrite');
+    return;
+  }
   writeFileSync(LAUS_OUT, JSON.stringify(out, null, 2) + '\n');
   console.log('laus: wrote ' + out.counties.length + ' counties, reference month ' +
     latest + (out.preliminary ? ' (preliminary)' : '') +
@@ -321,5 +321,10 @@ if (which === 'qcew' || which === 'all') {
     console.warn('qcew: refresh failed, committed file kept — ' + e.message);
     if (!existsSync(QCEW_OUT)) process.exitCode = 1;
   }
+}
+if (process.env.GEO_STATUS_FILE) {
+  writeFileSync(process.env.GEO_STATUS_FILE, JSON.stringify({ checkedUtc: new Date().toISOString(), failed, requested: which,
+    referenceMonth: existsSync(LAUS_OUT) ? JSON.parse(readFileSync(LAUS_OUT, 'utf8')).referenceMonth : null }, null, 2) + '\n');
+  if (failed) process.exitCode = 1;
 }
 if (!failed) console.log('fetch-geo: done');

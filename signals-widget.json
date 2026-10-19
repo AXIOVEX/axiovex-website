@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-19T17:36:52.361Z",
+  "updatedUtc": "2026-10-19T18:29:51.120Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -39,10 +39,26 @@
     {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
-      "title": "Bulk Manufacturer of Controlled Substances Application: Scottsdale Research Institute",
-      "source": "Federal Register",
+      "title": "Energy Department Advances Constitution Pipeline Project with $42 Million in Defense Production Act Funding",
+      "source": "U.S. Department of Energy",
       "date": "2026-10-19",
-      "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21360/bulk-manufacturer-of-controlled-substances-application-scottsdale-research-institute"
+      "url": "https://www.energy.gov/articles/energy-department-advances-constitution-pipeline-project-42-million-defense-production-act"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Cleveland-Cliffs CEO blames Canada for Stelco layoffs",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-19",
+      "url": "https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "MIT’s TechAMP finds early success after first year, could expand",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-19",
+      "url": "https://www.manufacturingdive.com/news/mit-techamp-finds-early-success-after-first-year-expansion-teledyne-defense/833324/"
     },
     {
       "lane": "manufacturing",
@@ -61,28 +77,12 @@
       "url": "https://www.manufacturingdive.com/spons/how-ai-digital-twins-and-real-time-simulation-are-accelerating-manufacturi/833255/"
     },
     {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "MIT’s TechAMP finds early success after first year, could expand",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-19",
-      "url": "https://www.manufacturingdive.com/news/mit-techamp-finds-early-success-after-first-year-expansion-teledyne-defense/833324/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Cleveland-Cliffs CEO blames Canada for Stelco layoffs",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-19",
-      "url": "https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/"
-    },
-    {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
-      "title": "Energy Department Advances Constitution Pipeline Project with $42 Million in Defense Production Act Funding",
-      "source": "U.S. Department of Energy",
+      "title": "Bulk Manufacturer of Controlled Substances Application: Scottsdale Research Institute",
+      "source": "Federal Register",
       "date": "2026-10-19",
-      "url": "https://www.energy.gov/articles/energy-department-advances-constitution-pipeline-project-42-million-defense-production-act"
+      "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21360/bulk-manufacturer-of-controlled-substances-application-scottsdale-research-institute"
     },
     {
       "lane": "manufacturing",
@@ -95,18 +95,18 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
+      "title": "Alcoa plans to sell part of its Massena East site for $315M",
       "source": "Manufacturing Dive",
       "date": "2026-10-16",
-      "url": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/"
+      "url": "https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/"
     },
     {
       "lane": "ot-security",
       "laneLabel": "OT cybersecurity",
-      "title": "Eclipse Foundation Eclipse Milo",
+      "title": "CISA Malcolm",
       "source": "CISA",
       "date": "2026-10-15",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
     },
     {
       "lane": "ai-standards",

@@ -1,4 +1,4 @@
-import { readFileSync, existsSync, mkdirSync } from 'node:fs';
+import { readFileSync, existsSync, mkdirSync, copyFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -10,6 +10,9 @@ export function lighthouseFindings(lhr) {
     return audit && (audit.scoreDisplayMode === 'error' || (audit.score !== null && audit.score < 1))
       ? [{ id, title: audit.title, explanation: audit.explanation || audit.displayValue || '', details: audit.details || null }] : [];
   });
+}
+export function transientLighthouse(lhr) {
+  return /timed out|timeout|net::ERR_|PROTOCOL_TIMEOUT/i.test(JSON.stringify([lhr.runtimeError, ...Object.values(lhr.audits || {}).map(a => a.explanation || '')]));
 }
 async function main() {
   mkdirSync(output, { recursive: true });
@@ -38,17 +41,25 @@ async function main() {
     if (path === '/research/') entry.lighthouse = { available: true, excluded: 'Intentional unlisted/noindex research page; indexing-policy checked separately' };
     else {
       const filename = resolve(output, `lighthouse-${index}.json`);
+      for (let attempt = 1; attempt <= 2; attempt++) {
       const child = spawnSync(process.env.OPS_AUDIT_NODE || process.execPath, [resolve(root, 'lighthouse/cli/index.js'), url,
         '--only-categories=seo', '--chrome-flags=--headless=new --no-sandbox --disable-dev-shm-usage',
         '--max-wait-for-load=15000', '--max-wait-for-fcp=15000', '--output=json', `--output-path=${filename}`, '--quiet'],
       { encoding: 'utf8', timeout: 60000, maxBuffer: 1024 * 1024 });
-      save(`lighthouse-${index}.log`, child.stderr || '');
+      save(`lighthouse-${index}-attempt-${attempt}.log`, child.stderr || '');
+      if (existsSync(filename)) copyFileSync(filename, resolve(output, `lighthouse-${index}-attempt-${attempt}.json`));
       try {
         if (child.status !== 0 || !existsSync(filename)) throw new Error('Lighthouse failed or timed out');
         const lhr = JSON.parse(readFileSync(filename, 'utf8'));
+        if (transientLighthouse(lhr)) {
+          if (attempt === 1) continue;
+          throw new Error('Lighthouse transport timeout after two attempts; no reliable score');
+        }
         const findings = lighthouseFindings(lhr);
         entry.lighthouse = { available: true, score: Math.round(lhr.categories.seo.score * 100), findings, version: lhr.lighthouseVersion, checkedAt: lhr.fetchTime };
       } catch (error) { entry.lighthouse.error = error.message; }
+      break;
+      }
     }
     results.push(entry);
     console.log(`SEO audit: ${url} — HTML ${entry.html.available ? entry.html.errors + ' errors' : 'unavailable'}; Lighthouse ${entry.lighthouse.excluded ? 'intentionally excluded' : entry.lighthouse.available ? entry.lighthouse.score + '/100' : 'unavailable'}`);

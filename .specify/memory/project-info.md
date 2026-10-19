@@ -34,3 +34,11 @@
   first, then active subscribers, with a matching date/hash and Microsoft
   acceptance receipt. Today's October 19 test is only to Tristen and uses
   current snapshots with actual data vintages; it is not a customer release.
+
+- Signals refreshes actual feed content every 15 minutes and BLS Pulse hourly;
+  its insight arithmetic is rebuilt from published inputs. County and economic
+  pack inputs refresh daily, with their true source vintages retained.
+- Breaking-news CI polls configured feeds every five minutes and source-verifies
+  narrow significant candidates before activating the existing banner; expiry,
+  deduplication and partial coverage are recorded. Decision:
+  docs/decisions/2026-10-19-breaking-news-ci.md supersedes Meta Muse approval loop.

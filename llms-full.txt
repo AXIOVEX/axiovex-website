@@ -182,13 +182,13 @@ October 8, 2026
 
 CISA
 
-Eclipse Foundation Eclipse Milo (https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01)
+CISA Malcolm (https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01)
 
 October 15, 2026
 
 SEE ALL SIGNALS &rarr;
 
-Snapshot updated October 19, 2026 at 1:36 PM ET. Headline, source, and date only — every card links to the publisher.
+Snapshot updated October 19, 2026 at 2:29 PM ET. Headline, source, and date only — every card links to the publisher.
 
 THE AXIOVEX SIGNAL — MONTHLY
 
@@ -1291,7 +1291,7 @@ What we're watching.
 Michigan's numbers and the field items that matter — manufacturing, AI, workforce, and industrial security — gathered from primary sources and refreshed automatically.
 
 Last refreshed:
-October 19, 2026 at 1:36 PM ET
+October 19, 2026 at 2:29 PM ET
 
 The Axiovex Signal — in your inbox, monthly.
 
@@ -1301,6 +1301,10 @@ One email a month · confirmation first · one-click unsubscribe · no tracking 
 Highlights — the short version
 
 In August 2026, Michigan manufacturing employment rose 1.1k to 586.7k — 12.3k above its January low — while the labor force fell 25.5k to 4.85M and the unemployment rate rose 0.1 pts to 5.0%. Across the twelve months in the snapshot, the labor force is down 151.6k (&minus;3.0%) while total nonfarm employment is up 1.5k (+0.0%). In the published outlooks, nurse practitioners are the fastest-growing occupation on both boards — +41.5% in Michigan's 2024–34 projections (MCDA) and +41.0% nationally for 2025–35 (U.S. BLS) — and data entry keyers are among the fastest-falling on both (&minus;26.4% in Michigan, &minus;25.5% nationally). Michigan's class of 2025 graduated at just over 84%, up from 82.8% for the class of 2024.
+
+U.S. manufacturing production rose 0.3% from 2026-08 to 2026-09 (FRED IPMAN, seasonally adjusted). This is national context, not a Michigan measure. FRED IPMAN (https://fred.stlouisfed.org/series/IPMAN)
+
+Across all 83 Michigan counties in 2026-08, unemployment ranged from 3.5% (Grand Traverse, Mackinac) to 8.6% (Oscoda), a 5.1 percentage-point spread (BLS LAUS, not seasonally adjusted, preliminary). BLS county data (https://www.bls.gov/lau/)
 
 Generated at build time from the data on this page &middot; Pulse snapshot: August 2026 &middot; Outlooks: Michigan MCDA 2024–34 &middot; U.S. BLS 2025–35 &middot; No forecasts — forward-looking figures are the publishing agencies' projections
 
@@ -10149,6 +10153,14 @@ Why Digital Leadership Fails When Decisions Drift Away From Operational Reality
 (https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/) &middot; October 19, 2026
 
 MANUFACTURING DIVE
+Cleveland-Cliffs CEO blames Canada for Stelco layoffs
+(https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/) &middot; October 19, 2026
+
+MANUFACTURING DIVE
+MIT’s TechAMP finds early success after first year, could expand
+(https://www.manufacturingdive.com/news/mit-techamp-finds-early-success-after-first-year-expansion-teledyne-defense/833324/) &middot; October 19, 2026
+
+MANUFACTURING DIVE
 From Auburn Hills to Luxembourg: Christian Lopez’s Co-op experience
 (https://www.manufacturingdive.com/spons/from-auburn-hills-to-luxembourg-christian-lopezs-co-op-experience/832608/) &middot; October 19, 2026
 
@@ -10156,25 +10168,17 @@ MANUFACTURING DIVE
 How AI, digital twins and real-time simulation are accelerating manufacturing innovation
 (https://www.manufacturingdive.com/spons/how-ai-digital-twins-and-real-time-simulation-are-accelerating-manufacturi/833255/) &middot; October 19, 2026
 
-MANUFACTURING DIVE
-MIT’s TechAMP finds early success after first year, could expand
-(https://www.manufacturingdive.com/news/mit-techamp-finds-early-success-after-first-year-expansion-teledyne-defense/833324/) &middot; October 19, 2026
-
-MANUFACTURING DIVE
-Cleveland-Cliffs CEO blames Canada for Stelco layoffs
-(https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/) &middot; October 19, 2026
-
 AUTOMATION ALLEY
 Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity
 (https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/) &middot; October 16, 2026
 
 MANUFACTURING DIVE
-Manufacturing tech orders hit 3rd-highest monthly total: AMT
-(https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/) &middot; October 16, 2026
-
-MANUFACTURING DIVE
 Alcoa plans to sell part of its Massena East site for $315M
 (https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/) &middot; October 16, 2026
+
+MANUFACTURING DIVE
+Manufacturing tech orders hit 3rd-highest monthly total: AMT
+(https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/) &middot; October 16, 2026
 
 AI, standards & research
 
@@ -10221,12 +10225,12 @@ Robots can do the work. Almost none of it pays yet.
 (https://axiovexsystems.com/blog/robots-can-do-the-work/) &middot; October 10, 2026
 
 MICHIGAN WARN (LEO)
-HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026
-(https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75) &middot; October 8, 2026
-
-MICHIGAN WARN (LEO)
 Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026
 (https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation) &middot; October 8, 2026
+
+MICHIGAN WARN (LEO)
+HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026
+(https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75) &middot; October 8, 2026
 
 AXIOVEX
 Oakland County is losing jobs. Here is why.
@@ -10235,16 +10239,16 @@ Oakland County is losing jobs. Here is why.
 OT cybersecurity
 
 CISA
+CISA Malcolm
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01) &middot; October 15, 2026
+
+CISA
 Eclipse Foundation Eclipse Milo
 (https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01) &middot; October 15, 2026
 
 CISA
 Guangzhou Juan IoT Technology EseeCloud
 (https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02) &middot; October 15, 2026
-
-CISA
-CISA Malcolm
-(https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01) &middot; October 15, 2026
 
 CISA
 Inductive Automation Ignition Software
@@ -10268,39 +10272,39 @@ Satel Netco Design
 
 Funding & policy
 
-FEDERAL REGISTER
-Bulk Manufacturer of Controlled Substances Application: Scottsdale Research Institute
-(https://www.federalregister.gov/documents/2026/10/19/2026-21360/bulk-manufacturer-of-controlled-substances-application-scottsdale-research-institute) &middot; October 19, 2026
-
 U.S. DEPARTMENT OF ENERGY
 Energy Department Advances Constitution Pipeline Project with $42 Million in Defense Production Act Funding
 (https://www.energy.gov/articles/energy-department-advances-constitution-pipeline-project-42-million-defense-production-act) &middot; October 19, 2026
 
-USASPENDING (TREASURY)
-Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026
-(https://www.usaspending.gov/award/CONT_AWD_36C25027P0054_3600_-NONE-_-NONE-) &middot; October 16, 2026
-
-USASPENDING (TREASURY)
-Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026
-(https://www.usaspending.gov/award/CONT_AWD_36C25027P0053_3600_-NONE-_-NONE-) &middot; October 16, 2026
+FEDERAL REGISTER
+Bulk Manufacturer of Controlled Substances Application: Scottsdale Research Institute
+(https://www.federalregister.gov/documents/2026/10/19/2026-21360/bulk-manufacturer-of-controlled-substances-application-scottsdale-research-institute) &middot; October 19, 2026
 
 U.S. DEPARTMENT OF ENERGY
 Energy Department Announces Virginia and West Virginia Transmission Project to Receive Defense Production Act Funding, Strengthening National Security and Grid Reliability
 (https://www.energy.gov/articles/energy-department-announces-virginia-and-west-virginia-transmission-project-receive) &middot; October 16, 2026
 
 USASPENDING (TREASURY)
-Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $46,457 award, October 15, 2026
-(https://www.usaspending.gov/award/CONT_AWD_36C26127P0069_3600_-NONE-_-NONE-) &middot; October 15, 2026
+Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C25027P0053_3600_-NONE-_-NONE-) &middot; October 16, 2026
+
+USASPENDING (TREASURY)
+Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C25027P0054_3600_-NONE-_-NONE-) &middot; October 16, 2026
+
+USASPENDING (TREASURY)
+Department of Veterans Affairs → ELECTRA-MED CORPORATION — $21,507 award, October 15, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C10X27K0056_3600_36C10G24D0057_3600) &middot; October 15, 2026
 
 USASPENDING (TREASURY)
 Department of Veterans Affairs → WRIGHT & FILIPPIS, LLC — $20,246 award, October 15, 2026
 (https://www.usaspending.gov/award/CONT_AWD_36C25027N0083_3600_36C25025A0066_3600) &middot; October 15, 2026
 
 USASPENDING (TREASURY)
-Department of Veterans Affairs → ELECTRA-MED CORPORATION — $21,507 award, October 15, 2026
-(https://www.usaspending.gov/award/CONT_AWD_36C10X27K0056_3600_36C10G24D0057_3600) &middot; October 15, 2026
+Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $46,457 award, October 15, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C26127P0069_3600_-NONE-_-NONE-) &middot; October 15, 2026
 
-Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce the committed datasets behind the boards: Michigan occupation projections from the Michigan Center for Data and Analytics, transcribed via the Axiovex workforce study's September edition (a direct read of MCDA's tables is pending and will supersede the transcription), and education figures as published by CEPI via MDE (February 2026), MDE (September 2025), and the House Fiscal Agency (January 2026 consensus; pupil membership is a budget estimate, as its source labels it). Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2024 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023–24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (release R2026Q2, cohorts 2001–2021) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 19, 2026 at 1:36 PM ET. See our Disclaimer
+Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce the committed datasets behind the boards: Michigan occupation projections from the Michigan Center for Data and Analytics, transcribed via the Axiovex workforce study's September edition (a direct read of MCDA's tables is pending and will supersede the transcription), and education figures as published by CEPI via MDE (February 2026), MDE (September 2025), and the House Fiscal Agency (January 2026 consensus; pupil membership is a budget estimate, as its source labels it). Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2024 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023–24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (release R2026Q2, cohorts 2001–2021) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 19, 2026 at 2:29 PM ET. See our Disclaimer
 .
 
 THE AXIOVEX SIGNAL — MONTHLY
