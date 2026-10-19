@@ -88,6 +88,6 @@
     "source": "scripts/ops/mailbox-check.mjs",
     "workflow": "newsletter-mailbox.yml",
     "mode": "automatic",
-    "description": "Daily read-only authorization check; explicit manual Tristen-only delivery test; monthly final preview receipt gate once enabled after CI proof"
+    "description": "Daily read-only authorization check; explicit manual Tristen-only delivery test; monthly final preview receipt gate enabled after verified CI inbox delivery"
   }
 ]
