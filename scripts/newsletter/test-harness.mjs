@@ -10,7 +10,7 @@
 import { DatabaseSync } from 'node:sqlite';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const EVIDENCE = process.env.HARNESS_EVIDENCE || '/tmp/spec020-harness';
@@ -46,11 +46,11 @@ const env = {
   NEWSLETTER_MAIL_CAPTURE: outbox,
 };
 
-const subscribe = (await import(path.join(ROOT, 'functions', 'api', 'newsletter', 'subscribe.js'))).onRequest;
-const send = (await import(path.join(ROOT, 'functions', 'api', 'newsletter', 'send.js'))).onRequest;
-const confirm = (await import(path.join(ROOT, 'functions', 'newsletter', 'confirm.js'))).onRequest;
-const unsubGet = (await import(path.join(ROOT, 'functions', 'newsletter', 'unsubscribe.js'))).onRequestGet;
-const unsubPost = (await import(path.join(ROOT, 'functions', 'newsletter', 'unsubscribe.js'))).onRequestPost;
+const subscribe = (await import(pathToFileURL(path.join(ROOT, 'functions', 'api', 'newsletter', 'subscribe.js')).href)).onRequest;
+const send = (await import(pathToFileURL(path.join(ROOT, 'functions', 'api', 'newsletter', 'send.js')).href)).onRequest;
+const confirm = (await import(pathToFileURL(path.join(ROOT, 'functions', 'newsletter', 'confirm.js')).href)).onRequest;
+const unsubGet = (await import(pathToFileURL(path.join(ROOT, 'functions', 'newsletter', 'unsubscribe.js')).href)).onRequestGet;
+const unsubPost = (await import(pathToFileURL(path.join(ROOT, 'functions', 'newsletter', 'unsubscribe.js')).href)).onRequestPost;
 
 const BASE = 'https://staging.axiovexsystems.com';
 const OWNER = 'tristen@axiovexsystems.com';
@@ -200,7 +200,7 @@ check('P3 missing source coerced to signals', res.status === 200 && j.ok && rowO
 const SECOND = 'second-active@example.com';
 const PROBE = 'tristen.pierson@gmail.com';
 env.NEWSLETTER_TEST_ALLOWLIST = OWNER + ',' + SECOND + ',' + PROBE;
-const lib = await import(path.join(ROOT, 'functions', 'api', 'newsletter', '_lib.js'));
+const lib = await import(pathToFileURL(path.join(ROOT, 'functions', 'api', 'newsletter', '_lib.js')).href);
 const secondUnsubHash = await lib.sha256Hex(await lib.unsubscribeToken(env, SECOND));
 raw.prepare("INSERT INTO subscribers (email, status, unsub_token_hash, created_at, source) VALUES (?, 'active', ?, ?, 'harness')")
   .run(SECOND, secondUnsubHash, new Date().toISOString());

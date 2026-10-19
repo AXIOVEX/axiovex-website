@@ -1,8 +1,8 @@
 {
   "source": "U.S. Bureau of Labor Statistics, Quarterly Census of Employment and Wages (QCEW), per-area CSV API",
-  "sourceUrl": "https://data.bls.gov/cew/data/api/2024/a/area/{countyFips}.csv",
-  "vintage": "2024 annual averages",
-  "retrievedOn": "2026-10-06",
+  "sourceUrl": "https://data.bls.gov/cew/data/api/2025/a/area/{countyFips}.csv",
+  "vintage": "2025 annual averages",
+  "retrievedOn": "2026-10-19",
   "grain": "County x NAICS sector at agglvl_code 74, PRIVATE ownership (own_code 5) — the only ownership grain at which QCEW publishes county x sector rows; county totals are total-ownership (agglvl 70) and private (agglvl 71). Cells: {emplvl, lq} published; {disclosed:false} = disclosure_code N (values zeroed in the source, never transcribed); {absent:true} = the source publishes no row for the cell.",
   "sectors": [
     {
@@ -91,11 +91,11 @@
       "fips": "26001",
       "name": "Alcona",
       "totalPrivate": {
-        "emplvl": 1178,
+        "emplvl": 1204,
         "lq": 0.92
       },
       "totalAllOwnership": {
-        "emplvl": 1494
+        "emplvl": 1533
       },
       "sectors": {
         "11": {
@@ -108,24 +108,20 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 47,
-          "lq": 0.6
+          "disclosed": false
         },
         "42": {
-          "emplvl": 11,
-          "lq": 0.19
+          "emplvl": 10,
+          "lq": 0.17
         },
         "51": {
-          "emplvl": 14,
-          "lq": 0.5
+          "disclosed": false
         },
         "52": {
-          "emplvl": 29,
-          "lq": 0.48
+          "disclosed": false
         },
         "53": {
-          "emplvl": 23,
-          "lq": 0.99
+          "disclosed": false
         },
         "54": {
           "emplvl": 23,
@@ -135,15 +131,15 @@
           "absent": true
         },
         "56": {
-          "emplvl": 36,
-          "lq": 0.41
+          "emplvl": 43,
+          "lq": 0.48
         },
         "61": {
           "absent": true
         },
         "62": {
-          "emplvl": 148,
-          "lq": 0.69
+          "emplvl": 155,
+          "lq": 0.68
         },
         "71": {
           "disclosed": false
@@ -152,20 +148,19 @@
           "disclosed": false
         },
         "81": {
-          "emplvl": 82,
-          "lq": 1.82
+          "emplvl": 76,
+          "lq": 1.65
         },
         "99": {
-          "emplvl": 11,
-          "lq": 5.28
+          "disclosed": false
         },
         "31-33": {
-          "emplvl": 181,
-          "lq": 1.47
+          "emplvl": 175,
+          "lq": 1.41
         },
         "44-45": {
-          "emplvl": 296,
-          "lq": 1.98
+          "emplvl": 294,
+          "lq": 1.94
         },
         "48-49": {
           "disclosed": false
@@ -176,11 +171,11 @@
       "fips": "26003",
       "name": "Alger",
       "totalPrivate": {
-        "emplvl": 1824,
-        "lq": 0.8
+        "emplvl": 1853,
+        "lq": 0.81
       },
       "totalAllOwnership": {
-        "emplvl": 2650
+        "emplvl": 2678
       },
       "sectors": {
         "11": {
@@ -193,8 +188,7 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 108,
-          "lq": 0.78
+          "disclosed": false
         },
         "42": {
           "disclosed": false
@@ -203,12 +197,12 @@
           "disclosed": false
         },
         "52": {
-          "emplvl": 59,
-          "lq": 0.55
+          "emplvl": 62,
+          "lq": 0.57
         },
         "53": {
-          "emplvl": 26,
-          "lq": 0.63
+          "emplvl": 30,
+          "lq": 0.72
         },
         "54": {
           "emplvl": 45,
@@ -227,29 +221,29 @@
           "disclosed": false
         },
         "71": {
-          "disclosed": false
+          "emplvl": 38,
+          "lq": 0.83
         },
         "72": {
-          "disclosed": false
+          "emplvl": 518,
+          "lq": 2.13
         },
         "81": {
-          "emplvl": 34,
-          "lq": 0.43
+          "disclosed": false
         },
         "99": {
           "disclosed": false
         },
         "31-33": {
-          "emplvl": 397,
-          "lq": 1.82
+          "emplvl": 385,
+          "lq": 1.78
         },
         "44-45": {
-          "emplvl": 201,
-          "lq": 0.76
+          "emplvl": 211,
+          "lq": 0.8
         },
         "48-49": {
-          "emplvl": 74,
-          "lq": 0.66
+          "disclosed": false
         }
       }
     },
@@ -257,92 +251,92 @@
       "fips": "26005",
       "name": "Allegan",
       "totalPrivate": {
-        "emplvl": 35861,
+        "emplvl": 37785,
         "lq": 1.01
       },
       "totalAllOwnership": {
-        "emplvl": 41360
+        "emplvl": 43686
       },
       "sectors": {
         "11": {
-          "emplvl": 1743,
-          "lq": 5.21
+          "emplvl": 1765,
+          "lq": 5.11
         },
         "21": {
-          "emplvl": 25,
-          "lq": 0.16
+          "emplvl": 23,
+          "lq": 0.14
         },
         "22": {
-          "emplvl": 88,
-          "lq": 0.56
+          "emplvl": 91,
+          "lq": 0.54
         },
         "23": {
-          "emplvl": 2974,
-          "lq": 1.37
+          "emplvl": 3135,
+          "lq": 1.35
         },
         "42": {
-          "emplvl": 2079,
-          "lq": 1.28
+          "emplvl": 2111,
+          "lq": 1.25
         },
         "51": {
-          "emplvl": 178,
-          "lq": 0.23
+          "emplvl": 173,
+          "lq": 0.22
         },
         "52": {
-          "emplvl": 384,
-          "lq": 0.23
+          "emplvl": 369,
+          "lq": 0.21
         },
         "53": {
-          "emplvl": 371,
+          "emplvl": 391,
           "lq": 0.58
         },
         "54": {
-          "emplvl": 720,
-          "lq": 0.25
+          "emplvl": 651,
+          "lq": 0.22
         },
         "55": {
-          "emplvl": 77,
+          "emplvl": 79,
           "lq": 0.11
         },
         "56": {
-          "emplvl": 872,
-          "lq": 0.36
+          "emplvl": 970,
+          "lq": 0.38
         },
         "61": {
-          "emplvl": 518,
-          "lq": 0.61
+          "emplvl": 519,
+          "lq": 0.57
         },
         "62": {
-          "emplvl": 2612,
+          "emplvl": 2841,
           "lq": 0.44
         },
         "71": {
-          "emplvl": 647,
-          "lq": 0.93
+          "emplvl": 734,
+          "lq": 0.98
         },
         "72": {
-          "emplvl": 3120,
-          "lq": 0.83
-        },
-        "81": {
-          "emplvl": 1169,
-          "lq": 0.94
-        },
-        "99": {
-          "emplvl": 159,
-          "lq": 2.76
-        },
-        "31-33": {
-          "emplvl": 13777,
-          "lq": 4.05
-        },
-        "44-45": {
-          "emplvl": 3192,
+          "emplvl": 3066,
           "lq": 0.77
         },
+        "81": {
+          "emplvl": 1167,
+          "lq": 0.89
+        },
+        "99": {
+          "emplvl": 124,
+          "lq": 2.2
+        },
+        "31-33": {
+          "emplvl": 15284,
+          "lq": 4.33
+        },
+        "44-45": {
+          "emplvl": 3182,
+          "lq": 0.74
+        },
         "48-49": {
-          "emplvl": 1156,
-          "lq": 0.66
+          "emplvl": 1112,
+          "lq": 0.6
         }
       }
     },
@@ -350,83 +344,84 @@
       "fips": "26007",
       "name": "Alpena",
       "totalPrivate": {
-        "emplvl": 9511,
+        "emplvl": 9419,
         "lq": 0.91
       },
       "totalAllOwnership": {
-        "emplvl": 12191
+        "emplvl": 12115
       },
       "sectors": {
         "11": {
           "emplvl": 48,
-          "lq": 0.49
+          "lq": 0.5
         },
         "21": {
-          "emplvl": 40,
-          "lq": 0.87
+          "emplvl": 42,
+          "lq": 0.95
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 479,
-          "lq": 0.75
+          "emplvl": 464,
+          "lq": 0.72
         },
         "42": {
-          "disclosed": false
+          "emplvl": 400,
+          "lq": 0.85
         },
         "51": {
           "emplvl": 141,
-          "lq": 0.62
+          "lq": 0.64
         },
         "52": {
-          "emplvl": 429,
-          "lq": 0.87
+          "emplvl": 446,
+          "lq": 0.91
         },
         "53": {
-          "emplvl": 108,
-          "lq": 0.57
+          "emplvl": 114,
+          "lq": 0.61
         },
         "54": {
-          "disclosed": false
+          "emplvl": 358,
+          "lq": 0.43
         },
         "55": {
           "absent": true
         },
         "56": {
-          "disclosed": false
+          "emplvl": 152,
+          "lq": 0.22
         },
         "61": {
-          "emplvl": 14,
-          "lq": 0.06
+          "disclosed": false
         },
         "62": {
-          "emplvl": 1917,
-          "lq": 1.1
+          "disclosed": false
         },
         "71": {
-          "emplvl": 103,
-          "lq": 0.5
+          "emplvl": 98,
+          "lq": 0.47
         },
         "72": {
-          "emplvl": 932,
-          "lq": 0.84
+          "emplvl": 987,
+          "lq": 0.9
         },
         "81": {
-          "emplvl": 430,
+          "emplvl": 426,
           "lq": 1.17
         },
         "99": {
-          "emplvl": 66,
-          "lq": 3.88
+          "emplvl": 64,
+          "lq": 4.09
         },
         "31-33": {
-          "emplvl": 1896,
-          "lq": 1.89
+          "emplvl": 1811,
+          "lq": 1.85
         },
         "44-45": {
-          "emplvl": 1601,
-          "lq": 1.31
+          "emplvl": 1652,
+          "lq": 1.38
         },
         "48-49": {
           "disclosed": false
@@ -437,11 +432,11 @@
       "fips": "26009",
       "name": "Antrim",
       "totalPrivate": {
-        "emplvl": 4147,
-        "lq": 0.95
+        "emplvl": 4046,
+        "lq": 0.93
       },
       "totalAllOwnership": {
-        "emplvl": 5128
+        "emplvl": 5061
       },
       "sectors": {
         "11": {
@@ -454,28 +449,28 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 483,
-          "lq": 1.79
+          "emplvl": 509,
+          "lq": 1.9
         },
         "42": {
-          "emplvl": 86,
-          "lq": 0.43
+          "emplvl": 82,
+          "lq": 0.42
         },
         "51": {
-          "emplvl": 97,
-          "lq": 1.01
+          "emplvl": 99,
+          "lq": 1.07
         },
         "52": {
-          "emplvl": 92,
-          "lq": 0.44
+          "emplvl": 95,
+          "lq": 0.46
         },
         "53": {
-          "emplvl": 64,
-          "lq": 0.8
+          "emplvl": 67,
+          "lq": 0.86
         },
         "54": {
-          "emplvl": 173,
-          "lq": 0.48
+          "emplvl": 118,
+          "lq": 0.34
         },
         "55": {
           "disclosed": false
@@ -490,28 +485,28 @@
           "disclosed": false
         },
         "71": {
-          "emplvl": 213,
-          "lq": 2.47
+          "emplvl": 207,
+          "lq": 2.39
         },
         "72": {
-          "emplvl": 835,
-          "lq": 1.79
+          "emplvl": 815,
+          "lq": 1.78
         },
         "81": {
-          "emplvl": 174,
-          "lq": 1.13
+          "emplvl": 178,
+          "lq": 1.17
         },
         "99": {
-          "emplvl": 25,
-          "lq": 3.5
+          "emplvl": 13,
+          "lq": 1.99
         },
         "31-33": {
-          "emplvl": 685,
-          "lq": 1.63
+          "emplvl": 676,
+          "lq": 1.65
         },
         "44-45": {
-          "emplvl": 711,
-          "lq": 1.39
+          "emplvl": 709,
+          "lq": 1.42
         },
         "48-49": {
           "disclosed": false
@@ -522,11 +517,11 @@
       "fips": "26011",
       "name": "Arenac",
       "totalPrivate": {
-        "emplvl": 3523,
+        "emplvl": 3410,
         "lq": 1.01
       },
       "totalAllOwnership": {
-        "emplvl": 4077
+        "emplvl": 3940
       },
       "sectors": {
         "11": {
@@ -539,32 +534,30 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 108,
-          "lq": 0.5
+          "emplvl": 116,
+          "lq": 0.56
         },
         "42": {
-          "emplvl": 104,
-          "lq": 0.65
+          "disclosed": false
         },
         "51": {
           "disclosed": false
         },
         "52": {
-          "disclosed": false
+          "emplvl": 45,
+          "lq": 0.28
         },
         "53": {
           "disclosed": false
         },
         "54": {
-          "emplvl": 161,
-          "lq": 0.57
+          "disclosed": false
         },
         "55": {
           "absent": true
         },
         "56": {
-          "emplvl": 242,
-          "lq": 1.01
+          "disclosed": false
         },
         "61": {
           "disclosed": false
@@ -573,30 +566,29 @@
           "disclosed": false
         },
         "71": {
-          "emplvl": 54,
-          "lq": 0.79
+          "disclosed": false
         },
         "72": {
-          "emplvl": 346,
-          "lq": 0.93
+          "disclosed": false
         },
         "81": {
           "emplvl": 79,
-          "lq": 0.64
+          "lq": 0.67
         },
         "99": {
           "disclosed": false
         },
         "31-33": {
-          "emplvl": 879,
-          "lq": 2.62
+          "emplvl": 769,
+          "lq": 2.42
         },
         "44-45": {
-          "emplvl": 682,
+          "emplvl": 651,
           "lq": 1.67
         },
         "48-49": {
-          "disclosed": false
+          "emplvl": 119,
+          "lq": 0.71
         }
       }
     },
@@ -604,11 +596,11 @@
       "fips": "26013",
       "name": "Baraga",
       "totalPrivate": {
-        "emplvl": 1389,
-        "lq": 0.55
+        "emplvl": 1337,
+        "lq": 0.53
       },
       "totalAllOwnership": {
-        "emplvl": 2973
+        "emplvl": 2965
       },
       "sectors": {
         "11": {
@@ -621,12 +613,11 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 79,
-          "lq": 0.51
+          "disclosed": false
         },
         "42": {
-          "emplvl": 52,
-          "lq": 0.44
+          "emplvl": 42,
+          "lq": 0.37
         },
         "51": {
           "disclosed": false
@@ -659,18 +650,19 @@
           "disclosed": false
         },
         "81": {
-          "disclosed": false
+          "emplvl": 42,
+          "lq": 0.47
         },
         "99": {
           "absent": true
         },
         "31-33": {
-          "emplvl": 520,
-          "lq": 2.13
+          "emplvl": 499,
+          "lq": 2.08
         },
         "44-45": {
-          "emplvl": 153,
-          "lq": 0.52
+          "emplvl": 163,
+          "lq": 0.56
         },
         "48-49": {
           "disclosed": false
@@ -681,11 +673,11 @@
       "fips": "26015",
       "name": "Barry",
       "totalPrivate": {
-        "emplvl": 11094,
+        "emplvl": 11086,
         "lq": 0.98
       },
       "totalAllOwnership": {
-        "emplvl": 13236
+        "emplvl": 13286
       },
       "sectors": {
         "11": {
@@ -698,24 +690,24 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 607,
-          "lq": 0.87
+          "emplvl": 642,
+          "lq": 0.91
         },
         "42": {
-          "emplvl": 310,
-          "lq": 0.59
+          "emplvl": 309,
+          "lq": 0.6
         },
         "51": {
-          "emplvl": 119,
-          "lq": 0.48
+          "emplvl": 84,
+          "lq": 0.35
         },
         "52": {
-          "emplvl": 617,
-          "lq": 1.15
+          "emplvl": 665,
+          "lq": 1.23
         },
         "53": {
-          "emplvl": 55,
-          "lq": 0.27
+          "emplvl": 52,
+          "lq": 0.25
         },
         "54": {
           "disclosed": false
@@ -724,40 +716,40 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 331,
-          "lq": 0.42
+          "emplvl": 291,
+          "lq": 0.38
         },
         "61": {
-          "emplvl": 109,
-          "lq": 0.4
+          "emplvl": 120,
+          "lq": 0.43
         },
         "62": {
-          "emplvl": 1237,
-          "lq": 0.65
+          "emplvl": 1262,
+          "lq": 0.64
         },
         "71": {
-          "emplvl": 190,
-          "lq": 0.85
+          "emplvl": 171,
+          "lq": 0.75
         },
         "72": {
-          "emplvl": 1354,
-          "lq": 1.13
+          "emplvl": 1284,
+          "lq": 1.07
         },
         "81": {
-          "emplvl": 476,
-          "lq": 1.19
+          "emplvl": 464,
+          "lq": 1.16
         },
         "99": {
-          "emplvl": 21,
-          "lq": 1.14
+          "emplvl": 28,
+          "lq": 1.63
         },
         "31-33": {
-          "emplvl": 3667,
-          "lq": 3.37
+          "emplvl": 3551,
+          "lq": 3.31
         },
         "44-45": {
-          "emplvl": 1223,
-          "lq": 0.93
+          "emplvl": 1251,
+          "lq": 0.95
         },
         "48-49": {
           "disclosed": false
@@ -768,85 +760,85 @@
       "fips": "26017",
       "name": "Bay",
       "totalPrivate": {
-        "emplvl": 29008,
+        "emplvl": 29019,
         "lq": 0.99
       },
       "totalAllOwnership": {
-        "emplvl": 34112
+        "emplvl": 34153
       },
       "sectors": {
         "11": {
-          "emplvl": 432,
-          "lq": 1.56
+          "disclosed": false
         },
         "21": {
-          "emplvl": 15,
-          "lq": 0.12
+          "disclosed": false
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 1520,
-          "lq": 0.85
+          "emplvl": 1482,
+          "lq": 0.82
         },
         "42": {
-          "emplvl": 1340,
-          "lq": 1
+          "emplvl": 1335,
+          "lq": 1.01
         },
         "51": {
-          "emplvl": 297,
-          "lq": 0.46
+          "emplvl": 411,
+          "lq": 0.66
         },
         "52": {
-          "emplvl": 587,
-          "lq": 0.42
+          "emplvl": 598,
+          "lq": 0.43
         },
         "53": {
-          "emplvl": 407,
-          "lq": 0.77
+          "emplvl": 397,
+          "lq": 0.75
         },
         "54": {
-          "emplvl": 1411,
-          "lq": 0.59
+          "emplvl": 1432,
+          "lq": 0.61
         },
         "55": {
-          "disclosed": false
+          "emplvl": 73,
+          "lq": 0.13
         },
         "56": {
-          "disclosed": false
+          "emplvl": 1150,
+          "lq": 0.58
         },
         "61": {
-          "emplvl": 172,
-          "lq": 0.24
+          "emplvl": 164,
+          "lq": 0.23
         },
         "62": {
-          "emplvl": 6019,
-          "lq": 1.23
+          "emplvl": 6069,
+          "lq": 1.2
         },
         "71": {
-          "emplvl": 559,
-          "lq": 0.97
+          "emplvl": 341,
+          "lq": 0.58
         },
         "72": {
-          "emplvl": 3975,
-          "lq": 1.28
+          "emplvl": 3861,
+          "lq": 1.25
         },
         "81": {
-          "emplvl": 1020,
-          "lq": 0.99
+          "emplvl": 1225,
+          "lq": 1.19
         },
         "99": {
-          "emplvl": 68,
-          "lq": 1.43
+          "emplvl": 59,
+          "lq": 1.34
         },
         "31-33": {
-          "emplvl": 4440,
-          "lq": 1.58
+          "emplvl": 4397,
+          "lq": 1.59
         },
         "44-45": {
-          "emplvl": 4591,
-          "lq": 1.35
+          "emplvl": 4574,
+          "lq": 1.36
         },
         "48-49": {
           "disclosed": false
@@ -857,11 +849,11 @@
       "fips": "26019",
       "name": "Benzie",
       "totalPrivate": {
-        "emplvl": 4138,
-        "lq": 0.99
+        "emplvl": 4219,
+        "lq": 0.98
       },
       "totalAllOwnership": {
-        "emplvl": 4882
+        "emplvl": 5028
       },
       "sectors": {
         "11": {
@@ -874,23 +866,23 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 472,
-          "lq": 1.84
+          "emplvl": 504,
+          "lq": 1.89
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 20,
-          "lq": 0.22
+          "emplvl": 25,
+          "lq": 0.27
         },
         "52": {
-          "emplvl": 199,
-          "lq": 1
+          "emplvl": 210,
+          "lq": 1.03
         },
         "53": {
-          "emplvl": 64,
-          "lq": 0.84
+          "emplvl": 60,
+          "lq": 0.77
         },
         "54": {
           "emplvl": 120,
@@ -900,40 +892,40 @@
           "absent": true
         },
         "56": {
-          "emplvl": 156,
-          "lq": 0.54
+          "emplvl": 174,
+          "lq": 0.6
         },
         "61": {
-          "emplvl": 19,
-          "lq": 0.19
+          "emplvl": 18,
+          "lq": 0.17
         },
         "62": {
-          "emplvl": 453,
-          "lq": 0.65
+          "emplvl": 427,
+          "lq": 0.58
         },
         "71": {
-          "emplvl": 138,
-          "lq": 1.68
+          "emplvl": 141,
+          "lq": 1.64
         },
         "72": {
-          "emplvl": 1225,
-          "lq": 2.76
+          "emplvl": 1252,
+          "lq": 2.75
         },
         "81": {
-          "emplvl": 158,
+          "emplvl": 161,
           "lq": 1.07
         },
         "99": {
-          "emplvl": 10,
-          "lq": 1.47
+          "emplvl": 12,
+          "lq": 1.85
         },
         "31-33": {
-          "emplvl": 301,
-          "lq": 0.75
+          "emplvl": 275,
+          "lq": 0.68
         },
         "44-45": {
-          "emplvl": 600,
-          "lq": 1.23
+          "emplvl": 636,
+          "lq": 1.28
         },
         "48-49": {
           "disclosed": false
@@ -944,87 +936,84 @@
       "fips": "26021",
       "name": "Berrien",
       "totalPrivate": {
-        "emplvl": 52285,
+        "emplvl": 52215,
         "lq": 1.01
       },
       "totalAllOwnership": {
-        "emplvl": 60626
+        "emplvl": 60632
       },
       "sectors": {
         "11": {
-          "emplvl": 1186,
-          "lq": 2.42
+          "disclosed": false
         },
         "21": {
-          "emplvl": 94,
-          "lq": 0.41
+          "disclosed": false
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 1974,
-          "lq": 0.62
+          "emplvl": 1934,
+          "lq": 0.6
         },
         "42": {
-          "emplvl": 1822,
-          "lq": 0.76
+          "disclosed": false
         },
         "51": {
-          "emplvl": 386,
-          "lq": 0.34
+          "emplvl": 395,
+          "lq": 0.36
         },
         "52": {
-          "emplvl": 2013,
-          "lq": 0.82
+          "emplvl": 2084,
+          "lq": 0.85
         },
         "53": {
-          "emplvl": 493,
-          "lq": 0.52
+          "emplvl": 503,
+          "lq": 0.54
         },
         "54": {
-          "emplvl": 1375,
-          "lq": 0.33
+          "emplvl": 1348,
+          "lq": 0.32
         },
         "55": {
-          "emplvl": 119,
-          "lq": 0.12
+          "emplvl": 130,
+          "lq": 0.13
         },
         "56": {
-          "emplvl": 3037,
-          "lq": 0.85
+          "emplvl": 2557,
+          "lq": 0.73
         },
         "61": {
-          "emplvl": 1259,
-          "lq": 1
+          "emplvl": 1307,
+          "lq": 1.03
         },
         "62": {
-          "emplvl": 8001,
-          "lq": 0.92
+          "emplvl": 8144,
+          "lq": 0.91
         },
         "71": {
-          "emplvl": 866,
-          "lq": 0.85
+          "emplvl": 852,
+          "lq": 0.82
         },
         "72": {
-          "emplvl": 6789,
+          "emplvl": 6752,
           "lq": 1.23
         },
         "81": {
-          "emplvl": 2176,
-          "lq": 1.19
+          "emplvl": 2232,
+          "lq": 1.23
         },
         "99": {
-          "emplvl": 171,
-          "lq": 2.02
+          "emplvl": 149,
+          "lq": 1.9
         },
         "31-33": {
-          "emplvl": 11601,
-          "lq": 2.33
+          "emplvl": 10798,
+          "lq": 2.2
         },
         "44-45": {
-          "emplvl": 7096,
-          "lq": 1.17
+          "emplvl": 7330,
+          "lq": 1.22
         },
         "48-49": {
           "disclosed": false
@@ -1035,42 +1024,42 @@
       "fips": "26023",
       "name": "Branch",
       "totalPrivate": {
-        "emplvl": 12605,
+        "emplvl": 12753,
         "lq": 0.97
       },
       "totalAllOwnership": {
-        "emplvl": 15240
+        "emplvl": 15400
       },
       "sectors": {
         "11": {
-          "emplvl": 239,
-          "lq": 1.94
+          "emplvl": 216,
+          "lq": 1.77
         },
         "21": {
           "absent": true
         },
         "22": {
-          "emplvl": 57,
-          "lq": 0.98
+          "emplvl": 69,
+          "lq": 1.16
         },
         "23": {
-          "emplvl": 487,
-          "lq": 0.61
+          "emplvl": 517,
+          "lq": 0.63
         },
         "42": {
-          "emplvl": 727,
+          "emplvl": 721,
           "lq": 1.21
         },
         "51": {
-          "emplvl": 84,
-          "lq": 0.29
+          "emplvl": 86,
+          "lq": 0.31
         },
         "52": {
-          "emplvl": 509,
+          "emplvl": 512,
           "lq": 0.82
         },
         "53": {
-          "emplvl": 42,
+          "emplvl": 44,
           "lq": 0.18
         },
         "54": {
@@ -1080,44 +1069,42 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 374,
-          "lq": 0.42
+          "emplvl": 370,
+          "lq": 0.41
         },
         "61": {
-          "emplvl": 29,
-          "lq": 0.09
+          "disclosed": false
         },
         "62": {
-          "emplvl": 846,
-          "lq": 0.39
+          "disclosed": false
         },
         "71": {
-          "emplvl": 153,
-          "lq": 0.6
+          "emplvl": 171,
+          "lq": 0.65
         },
         "72": {
-          "emplvl": 1606,
-          "lq": 1.16
-        },
-        "81": {
-          "emplvl": 333,
-          "lq": 0.73
-        },
-        "99": {
-          "emplvl": 22,
-          "lq": 1.04
-        },
-        "31-33": {
-          "emplvl": 3704,
-          "lq": 2.96
-        },
-        "44-45": {
-          "emplvl": 1739,
+          "emplvl": 1587,
           "lq": 1.14
         },
+        "81": {
+          "emplvl": 474,
+          "lq": 1.03
+        },
+        "99": {
+          "emplvl": 40,
+          "lq": 2.01
+        },
+        "31-33": {
+          "emplvl": 3763,
+          "lq": 3.02
+        },
+        "44-45": {
+          "emplvl": 1703,
+          "lq": 1.12
+        },
         "48-49": {
-          "emplvl": 1432,
-          "lq": 2.22
+          "emplvl": 1404,
+          "lq": 2.15
         }
       }
     },
@@ -1125,90 +1112,88 @@
       "fips": "26025",
       "name": "Calhoun",
       "totalPrivate": {
-        "emplvl": 43495,
-        "lq": 0.93
+        "emplvl": 44258,
+        "lq": 0.94
       },
       "totalAllOwnership": {
-        "emplvl": 54415
+        "emplvl": 54949
       },
       "sectors": {
         "11": {
-          "emplvl": 754,
-          "lq": 1.71
+          "disclosed": false
         },
         "21": {
-          "emplvl": 53,
-          "lq": 0.26
+          "disclosed": false
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 1831,
-          "lq": 0.64
+          "emplvl": 1926,
+          "lq": 0.66
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 181,
-          "lq": 0.18
+          "emplvl": 169,
+          "lq": 0.17
         },
         "52": {
-          "emplvl": 943,
-          "lq": 0.43
+          "emplvl": 1002,
+          "lq": 0.45
         },
         "53": {
-          "emplvl": 238,
-          "lq": 0.28
+          "emplvl": 210,
+          "lq": 0.25
         },
         "54": {
-          "emplvl": 2246,
-          "lq": 0.59
+          "emplvl": 2273,
+          "lq": 0.6
         },
         "55": {
-          "emplvl": 429,
-          "lq": 0.47
+          "emplvl": 388,
+          "lq": 0.42
         },
         "56": {
-          "emplvl": 2414,
-          "lq": 0.75
+          "emplvl": 2485,
+          "lq": 0.78
         },
         "61": {
-          "emplvl": 836,
-          "lq": 0.74
+          "emplvl": 826,
+          "lq": 0.72
         },
         "62": {
-          "emplvl": 8542,
-          "lq": 1.1
+          "emplvl": 8872,
+          "lq": 1.09
         },
         "71": {
-          "emplvl": 540,
-          "lq": 0.59
+          "emplvl": 538,
+          "lq": 0.57
         },
         "72": {
-          "emplvl": 4275,
-          "lq": 0.86
+          "emplvl": 4624,
+          "lq": 0.93
         },
         "81": {
-          "emplvl": 1363,
-          "lq": 0.83
+          "emplvl": 1334,
+          "lq": 0.81
         },
         "99": {
-          "emplvl": 100,
-          "lq": 1.32
+          "emplvl": 96,
+          "lq": 1.35
         },
         "31-33": {
-          "emplvl": 10071,
-          "lq": 2.25
+          "emplvl": 10032,
+          "lq": 2.26
         },
         "44-45": {
-          "emplvl": 5710,
+          "emplvl": 5685,
           "lq": 1.05
         },
         "48-49": {
-          "emplvl": 1940,
-          "lq": 0.84
+          "emplvl": 1879,
+          "lq": 0.8
         }
       }
     },
@@ -1216,11 +1201,11 @@
       "fips": "26027",
       "name": "Cass",
       "totalPrivate": {
-        "emplvl": 7415,
-        "lq": 0.92
+        "emplvl": 7207,
+        "lq": 0.88
       },
       "totalAllOwnership": {
-        "emplvl": 9373
+        "emplvl": 9582
       },
       "sectors": {
         "11": {
@@ -1233,66 +1218,66 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 361,
-          "lq": 0.73
+          "emplvl": 384,
+          "lq": 0.76
         },
         "42": {
-          "emplvl": 324,
-          "lq": 0.88
+          "emplvl": 298,
+          "lq": 0.8
         },
         "51": {
           "emplvl": 16,
           "lq": 0.09
         },
         "52": {
-          "emplvl": 228,
-          "lq": 0.6
+          "emplvl": 242,
+          "lq": 0.62
         },
         "53": {
-          "emplvl": 48,
+          "emplvl": 49,
           "lq": 0.33
         },
         "54": {
-          "emplvl": 343,
-          "lq": 0.53
+          "disclosed": false
         },
         "55": {
-          "emplvl": 13,
-          "lq": 0.08
+          "disclosed": false
         },
         "56": {
-          "emplvl": 350,
-          "lq": 0.63
+          "emplvl": 384,
+          "lq": 0.69
         },
         "61": {
-          "disclosed": false
+          "emplvl": 21,
+          "lq": 0.11
         },
         "62": {
-          "disclosed": false
+          "emplvl": 430,
+          "lq": 0.3
         },
         "71": {
-          "emplvl": 193,
-          "lq": 1.23
+          "emplvl": 227,
+          "lq": 1.38
         },
         "72": {
-          "emplvl": 1156,
-          "lq": 1.36
+          "emplvl": 1137,
+          "lq": 1.31
         },
         "81": {
-          "emplvl": 598,
-          "lq": 2.12
+          "emplvl": 265,
+          "lq": 0.92
         },
         "99": {
-          "emplvl": 34,
-          "lq": 2.6
+          "emplvl": 37,
+          "lq": 2.99
         },
         "31-33": {
-          "emplvl": 2023,
-          "lq": 2.63
+          "emplvl": 2031,
+          "lq": 2.62
         },
         "44-45": {
-          "emplvl": 793,
-          "lq": 0.85
+          "emplvl": 781,
+          "lq": 0.82
         },
         "48-49": {
           "disclosed": false
@@ -1303,43 +1288,43 @@
       "fips": "26029",
       "name": "Charlevoix",
       "totalPrivate": {
-        "emplvl": 9247,
+        "emplvl": 9155,
         "lq": 0.98
       },
       "totalAllOwnership": {
-        "emplvl": 10983
+        "emplvl": 10881
       },
       "sectors": {
         "11": {
-          "emplvl": 53,
-          "lq": 0.6
+          "emplvl": 55,
+          "lq": 0.64
         },
         "21": {
           "absent": true
         },
         "22": {
-          "emplvl": 192,
-          "lq": 4.6
+          "emplvl": 185,
+          "lq": 4.4
         },
         "23": {
-          "emplvl": 670,
-          "lq": 1.16
+          "emplvl": 674,
+          "lq": 1.17
         },
         "42": {
-          "emplvl": 109,
-          "lq": 0.25
+          "emplvl": 93,
+          "lq": 0.22
         },
         "51": {
-          "emplvl": 71,
-          "lq": 0.34
+          "emplvl": 83,
+          "lq": 0.42
         },
         "52": {
-          "emplvl": 145,
-          "lq": 0.33
+          "emplvl": 117,
+          "lq": 0.27
         },
         "53": {
-          "emplvl": 204,
-          "lq": 1.2
+          "emplvl": 189,
+          "lq": 1.12
         },
         "54": {
           "disclosed": false
@@ -1348,8 +1333,8 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 322,
-          "lq": 0.5
+          "emplvl": 340,
+          "lq": 0.54
         },
         "61": {
           "disclosed": false
@@ -1358,32 +1343,32 @@
           "disclosed": false
         },
         "71": {
-          "emplvl": 302,
-          "lq": 1.64
+          "emplvl": 304,
+          "lq": 1.63
         },
         "72": {
-          "emplvl": 1834,
-          "lq": 1.84
+          "emplvl": 1764,
+          "lq": 1.79
         },
         "81": {
-          "emplvl": 266,
-          "lq": 0.8
+          "emplvl": 287,
+          "lq": 0.88
         },
         "99": {
-          "emplvl": 36,
-          "lq": 2.35
+          "emplvl": 30,
+          "lq": 2.13
         },
         "31-33": {
-          "emplvl": 2747,
-          "lq": 3.04
+          "emplvl": 2660,
+          "lq": 3.03
         },
         "44-45": {
-          "emplvl": 895,
-          "lq": 0.82
+          "emplvl": 931,
+          "lq": 0.87
         },
         "48-49": {
-          "emplvl": 71,
-          "lq": 0.15
+          "emplvl": 79,
+          "lq": 0.17
         }
       }
     },
@@ -1391,11 +1376,11 @@
       "fips": "26031",
       "name": "Cheboygan",
       "totalPrivate": {
-        "emplvl": 5022,
+        "emplvl": 5014,
         "lq": 0.96
       },
       "totalAllOwnership": {
-        "emplvl": 6140
+        "emplvl": 6125
       },
       "sectors": {
         "11": {
@@ -1405,32 +1390,31 @@
           "disclosed": false
         },
         "22": {
-          "emplvl": 15,
-          "lq": 0.64
+          "emplvl": 11,
+          "lq": 0.46
         },
         "23": {
-          "emplvl": 581,
-          "lq": 1.8
+          "emplvl": 674,
+          "lq": 2.08
         },
         "42": {
-          "emplvl": 163,
-          "lq": 0.67
+          "emplvl": 157,
+          "lq": 0.66
         },
         "51": {
-          "emplvl": 10,
-          "lq": 0.09
+          "emplvl": 9,
+          "lq": 0.08
         },
         "52": {
-          "emplvl": 196,
-          "lq": 0.79
+          "emplvl": 202,
+          "lq": 0.81
         },
         "53": {
-          "emplvl": 50,
-          "lq": 0.52
+          "emplvl": 45,
+          "lq": 0.47
         },
         "54": {
-          "emplvl": 261,
-          "lq": 0.61
+          "disclosed": false
         },
         "55": {
           "disclosed": false
@@ -1439,40 +1423,38 @@
           "disclosed": false
         },
         "61": {
-          "emplvl": 38,
-          "lq": 0.3
+          "disclosed": false
         },
         "62": {
-          "emplvl": 563,
-          "lq": 0.64
+          "disclosed": false
         },
         "71": {
-          "emplvl": 127,
-          "lq": 1.23
+          "emplvl": 131,
+          "lq": 1.25
         },
         "72": {
-          "emplvl": 1040,
-          "lq": 1.86
+          "emplvl": 1015,
+          "lq": 1.83
         },
         "81": {
-          "emplvl": 202,
-          "lq": 1.09
+          "emplvl": 219,
+          "lq": 1.19
         },
         "99": {
-          "emplvl": 22,
-          "lq": 2.57
+          "emplvl": 24,
+          "lq": 3.03
         },
         "31-33": {
-          "emplvl": 143,
-          "lq": 0.28
+          "emplvl": 258,
+          "lq": 0.52
         },
         "44-45": {
-          "emplvl": 1245,
-          "lq": 2.03
+          "emplvl": 1214,
+          "lq": 2.01
         },
         "48-49": {
-          "emplvl": 187,
-          "lq": 0.72
+          "emplvl": 169,
+          "lq": 0.65
         }
       }
     },
@@ -1480,11 +1462,11 @@
       "fips": "26033",
       "name": "Chippewa",
       "totalPrivate": {
-        "emplvl": 6499,
-        "lq": 0.59
+        "emplvl": 6520,
+        "lq": 0.6
       },
       "totalAllOwnership": {
-        "emplvl": 12793
+        "emplvl": 12796
       },
       "sectors": {
         "11": {
@@ -1497,26 +1479,27 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 652,
-          "lq": 0.97
+          "emplvl": 759,
+          "lq": 1.12
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 47,
-          "lq": 0.2
+          "emplvl": 42,
+          "lq": 0.18
         },
         "52": {
-          "emplvl": 253,
+          "emplvl": 252,
           "lq": 0.49
         },
         "53": {
-          "emplvl": 87,
-          "lq": 0.44
+          "emplvl": 86,
+          "lq": 0.43
         },
         "54": {
-          "disclosed": false
+          "emplvl": 241,
+          "lq": 0.27
         },
         "55": {
           "disclosed": false
@@ -1525,40 +1508,40 @@
           "disclosed": false
         },
         "61": {
-          "emplvl": 52,
-          "lq": 0.2
+          "emplvl": 48,
+          "lq": 0.18
         },
         "62": {
-          "emplvl": 776,
+          "emplvl": 787,
           "lq": 0.42
         },
         "71": {
-          "emplvl": 85,
+          "emplvl": 88,
           "lq": 0.4
         },
         "72": {
-          "emplvl": 1047,
-          "lq": 0.9
+          "emplvl": 992,
+          "lq": 0.86
         },
         "81": {
-          "emplvl": 211,
-          "lq": 0.55
+          "emplvl": 218,
+          "lq": 0.57
         },
         "99": {
-          "emplvl": 32,
-          "lq": 1.79
+          "emplvl": 31,
+          "lq": 1.88
         },
         "31-33": {
-          "emplvl": 589,
-          "lq": 0.56
+          "emplvl": 593,
+          "lq": 0.57
         },
         "44-45": {
-          "emplvl": 1554,
-          "lq": 1.22
+          "emplvl": 1514,
+          "lq": 1.2
         },
         "48-49": {
-          "emplvl": 275,
-          "lq": 0.51
+          "emplvl": 371,
+          "lq": 0.68
         }
       }
     },
@@ -1566,11 +1549,11 @@
       "fips": "26035",
       "name": "Clare",
       "totalPrivate": {
-        "emplvl": 5743,
-        "lq": 0.92
+        "emplvl": 6152,
+        "lq": 0.94
       },
       "totalAllOwnership": {
-        "emplvl": 7261
+        "emplvl": 7670
       },
       "sectors": {
         "11": {
@@ -1583,69 +1566,69 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 391,
-          "lq": 1.03
+          "emplvl": 416,
+          "lq": 1.02
         },
         "42": {
-          "emplvl": 240,
-          "lq": 0.84
+          "disclosed": false
         },
         "51": {
-          "emplvl": 9,
-          "lq": 0.07
+          "emplvl": 12,
+          "lq": 0.09
         },
         "52": {
           "emplvl": 82,
-          "lq": 0.28
+          "lq": 0.26
         },
         "53": {
-          "emplvl": 45,
-          "lq": 0.4
+          "emplvl": 38,
+          "lq": 0.32
         },
         "54": {
-          "emplvl": 252,
-          "lq": 0.5
+          "emplvl": 256,
+          "lq": 0.48
         },
         "55": {
           "absent": true
         },
         "56": {
-          "emplvl": 223,
-          "lq": 0.52
+          "emplvl": 211,
+          "lq": 0.47
         },
         "61": {
           "absent": true
         },
         "62": {
-          "emplvl": 1074,
-          "lq": 1.03
+          "emplvl": 1072,
+          "lq": 0.95
         },
         "71": {
-          "emplvl": 121,
-          "lq": 0.99
+          "emplvl": 131,
+          "lq": 1
         },
         "72": {
-          "emplvl": 812,
-          "lq": 1.23
+          "emplvl": 796,
+          "lq": 1.14
         },
         "81": {
-          "emplvl": 408,
-          "lq": 1.87
+          "emplvl": 414,
+          "lq": 1.8
         },
         "99": {
-          "emplvl": 20,
-          "lq": 1.98
+          "emplvl": 19,
+          "lq": 1.92
         },
         "31-33": {
-          "emplvl": 924,
+          "emplvl": 961,
           "lq": 1.55
         },
         "44-45": {
-          "emplvl": 938,
-          "lq": 1.29
+          "emplvl": 968,
+          "lq": 1.28
         },
         "48-49": {
-          "disclosed": false
+          "emplvl": 390,
+          "lq": 1.2
         }
       }
     },
@@ -1653,43 +1636,41 @@
       "fips": "26037",
       "name": "Clinton",
       "totalPrivate": {
-        "emplvl": 16594,
+        "emplvl": 16700,
         "lq": 1.04
       },
       "totalAllOwnership": {
-        "emplvl": 18614
+        "emplvl": 18741
       },
       "sectors": {
         "11": {
-          "emplvl": 791,
-          "lq": 5.25
+          "disclosed": false
         },
         "21": {
-          "emplvl": 11,
-          "lq": 0.16
+          "disclosed": false
         },
         "22": {
           "absent": true
         },
         "23": {
-          "emplvl": 2096,
-          "lq": 2.15
+          "emplvl": 2194,
+          "lq": 2.21
         },
         "42": {
-          "emplvl": 931,
-          "lq": 1.27
+          "emplvl": 938,
+          "lq": 1.29
         },
         "51": {
-          "emplvl": 83,
-          "lq": 0.24
+          "emplvl": 89,
+          "lq": 0.26
         },
         "52": {
-          "emplvl": 587,
-          "lq": 0.78
+          "emplvl": 420,
+          "lq": 0.55
         },
         "53": {
-          "emplvl": 553,
-          "lq": 1.91
+          "emplvl": 431,
+          "lq": 1.49
         },
         "54": {
           "disclosed": false
@@ -1698,44 +1679,44 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 872,
-          "lq": 0.8
+          "emplvl": 903,
+          "lq": 0.83
         },
         "61": {
-          "emplvl": 119,
+          "emplvl": 122,
           "lq": 0.31
         },
         "62": {
-          "emplvl": 1908,
-          "lq": 0.72
+          "emplvl": 2167,
+          "lq": 0.78
         },
         "71": {
-          "emplvl": 427,
-          "lq": 1.36
+          "emplvl": 447,
+          "lq": 1.39
         },
         "72": {
-          "emplvl": 1619,
-          "lq": 0.96
+          "emplvl": 1531,
+          "lq": 0.9
         },
         "81": {
-          "emplvl": 750,
-          "lq": 1.34
+          "emplvl": 901,
+          "lq": 1.6
         },
         "99": {
-          "emplvl": 103,
-          "lq": 3.97
+          "emplvl": 104,
+          "lq": 4.3
         },
         "31-33": {
-          "emplvl": 1671,
-          "lq": 1.09
+          "emplvl": 1572,
+          "lq": 1.04
         },
         "44-45": {
-          "emplvl": 2617,
-          "lq": 1.41
+          "emplvl": 2576,
+          "lq": 1.39
         },
         "48-49": {
-          "emplvl": 791,
-          "lq": 1
+          "emplvl": 848,
+          "lq": 1.06
         }
       }
     },
@@ -1743,11 +1724,11 @@
       "fips": "26039",
       "name": "Crawford",
       "totalPrivate": {
-        "emplvl": 3273,
-        "lq": 0.93
+        "emplvl": 3259,
+        "lq": 0.94
       },
       "totalAllOwnership": {
-        "emplvl": 4105
+        "emplvl": 4065
       },
       "sectors": {
         "11": {
@@ -1760,28 +1741,25 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 70,
-          "lq": 0.32
+          "disclosed": false
         },
         "42": {
-          "emplvl": 124,
-          "lq": 0.77
+          "emplvl": 123,
+          "lq": 0.78
         },
         "51": {
-          "emplvl": 22,
-          "lq": 0.29
+          "disclosed": false
         },
         "52": {
-          "emplvl": 51,
-          "lq": 0.31
+          "emplvl": 50,
+          "lq": 0.3
         },
         "53": {
-          "emplvl": 13,
-          "lq": 0.2
+          "emplvl": 12,
+          "lq": 0.19
         },
         "54": {
-          "emplvl": 87,
-          "lq": 0.3
+          "disclosed": false
         },
         "55": {
           "disclosed": false
@@ -1793,7 +1771,7 @@
           "absent": true
         },
         "62": {
-          "emplvl": 788,
+          "emplvl": 807,
           "lq": 1.34
         },
         "71": {
@@ -1803,20 +1781,19 @@
           "disclosed": false
         },
         "81": {
-          "emplvl": 153,
-          "lq": 1.24
+          "emplvl": 154,
+          "lq": 1.26
         },
         "99": {
-          "emplvl": 1,
-          "lq": 0.17
+          "disclosed": false
         },
         "31-33": {
-          "emplvl": 719,
-          "lq": 2.13
+          "emplvl": 626,
+          "lq": 1.91
         },
         "44-45": {
-          "emplvl": 546,
-          "lq": 1.33
+          "emplvl": 596,
+          "lq": 1.48
         },
         "48-49": {
           "disclosed": false
@@ -1827,11 +1804,11 @@
       "fips": "26041",
       "name": "Delta",
       "totalPrivate": {
-        "emplvl": 11863,
+        "emplvl": 11850,
         "lq": 1
       },
       "totalAllOwnership": {
-        "emplvl": 13848
+        "emplvl": 13886
       },
       "sectors": {
         "11": {
@@ -1842,27 +1819,25 @@
         },
         "22": {
           "emplvl": 51,
-          "lq": 0.97
+          "lq": 0.95
         },
         "23": {
-          "emplvl": 639,
-          "lq": 0.88
+          "disclosed": false
         },
         "42": {
-          "emplvl": 366,
-          "lq": 0.67
+          "emplvl": 348,
+          "lq": 0.65
         },
         "51": {
-          "emplvl": 242,
-          "lq": 0.93
+          "disclosed": false
         },
         "52": {
-          "emplvl": 423,
-          "lq": 0.75
+          "emplvl": 443,
+          "lq": 0.79
         },
         "53": {
-          "emplvl": 54,
-          "lq": 0.25
+          "emplvl": 43,
+          "lq": 0.2
         },
         "54": {
           "disclosed": false
@@ -1871,44 +1846,43 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 861,
-          "lq": 1.06
+          "emplvl": 935,
+          "lq": 1.16
         },
         "61": {
-          "emplvl": 74,
+          "emplvl": 76,
           "lq": 0.26
         },
         "62": {
-          "emplvl": 1935,
+          "emplvl": 1989,
           "lq": 0.97
         },
         "71": {
-          "emplvl": 171,
-          "lq": 0.73
+          "emplvl": 137,
+          "lq": 0.58
         },
         "72": {
-          "emplvl": 1219,
-          "lq": 0.97
+          "emplvl": 1231,
+          "lq": 0.98
         },
         "81": {
-          "emplvl": 885,
-          "lq": 2.12
+          "emplvl": 877,
+          "lq": 2.1
         },
         "99": {
-          "emplvl": 28,
-          "lq": 1.45
+          "disclosed": false
         },
         "31-33": {
-          "emplvl": 1988,
-          "lq": 1.75
+          "emplvl": 1930,
+          "lq": 1.72
         },
         "44-45": {
-          "emplvl": 2044,
-          "lq": 1.48
+          "emplvl": 1902,
+          "lq": 1.39
         },
         "48-49": {
-          "emplvl": 473,
-          "lq": 0.81
+          "emplvl": 486,
+          "lq": 0.82
         }
       }
     },
@@ -1916,11 +1890,11 @@
       "fips": "26043",
       "name": "Dickinson",
       "totalPrivate": {
-        "emplvl": 11235,
+        "emplvl": 11168,
         "lq": 0.95
       },
       "totalAllOwnership": {
-        "emplvl": 13798
+        "emplvl": 13696
       },
       "sectors": {
         "11": {
@@ -1930,32 +1904,32 @@
           "disclosed": false
         },
         "22": {
-          "emplvl": 75,
-          "lq": 1.43
+          "emplvl": 76,
+          "lq": 1.44
         },
         "23": {
-          "emplvl": 1407,
+          "emplvl": 1410,
           "lq": 1.94
         },
         "42": {
-          "emplvl": 349,
-          "lq": 0.64
+          "emplvl": 351,
+          "lq": 0.66
         },
         "51": {
-          "emplvl": 72,
-          "lq": 0.28
+          "emplvl": 74,
+          "lq": 0.3
         },
         "52": {
-          "emplvl": 259,
-          "lq": 0.46
+          "emplvl": 277,
+          "lq": 0.5
         },
         "53": {
-          "emplvl": 56,
-          "lq": 0.26
+          "emplvl": 54,
+          "lq": 0.25
         },
         "54": {
-          "emplvl": 370,
-          "lq": 0.39
+          "emplvl": 360,
+          "lq": 0.38
         },
         "55": {
           "disclosed": false
@@ -1968,36 +1942,36 @@
           "lq": 0.24
         },
         "62": {
-          "emplvl": 1206,
-          "lq": 0.61
+          "emplvl": 1292,
+          "lq": 0.64
         },
         "71": {
-          "emplvl": 136,
-          "lq": 0.59
+          "emplvl": 152,
+          "lq": 0.65
         },
         "72": {
           "emplvl": 1164,
-          "lq": 0.93
+          "lq": 0.94
         },
         "81": {
-          "emplvl": 264,
-          "lq": 0.64
+          "emplvl": 258,
+          "lq": 0.63
         },
         "99": {
-          "emplvl": 88,
-          "lq": 4.57
+          "emplvl": 79,
+          "lq": 4.47
         },
         "31-33": {
-          "emplvl": 2859,
+          "emplvl": 2786,
           "lq": 2.52
         },
         "44-45": {
-          "emplvl": 2030,
-          "lq": 1.47
+          "emplvl": 1961,
+          "lq": 1.45
         },
         "48-49": {
-          "emplvl": 371,
-          "lq": 0.64
+          "emplvl": 336,
+          "lq": 0.58
         }
       }
     },
@@ -2005,42 +1979,42 @@
       "fips": "26045",
       "name": "Eaton",
       "totalPrivate": {
-        "emplvl": 38488,
-        "lq": 1.01
+        "emplvl": 39598,
+        "lq": 1.02
       },
       "totalAllOwnership": {
-        "emplvl": 44501
+        "emplvl": 45625
       },
       "sectors": {
         "11": {
-          "emplvl": 417,
-          "lq": 1.16
+          "emplvl": 94,
+          "lq": 0.26
         },
         "21": {
-          "emplvl": 42,
+          "emplvl": 41,
           "lq": 0.25
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 1555,
+          "emplvl": 1624,
           "lq": 0.67
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 506,
-          "lq": 0.61
+          "emplvl": 412,
+          "lq": 0.49
         },
         "52": {
-          "emplvl": 4836,
-          "lq": 2.68
+          "emplvl": 4899,
+          "lq": 2.65
         },
         "53": {
-          "emplvl": 387,
-          "lq": 0.56
+          "emplvl": 378,
+          "lq": 0.54
         },
         "54": {
           "disclosed": false
@@ -2049,44 +2023,44 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 1137,
-          "lq": 0.43
+          "emplvl": 1069,
+          "lq": 0.4
         },
         "61": {
-          "emplvl": 910,
+          "emplvl": 938,
           "lq": 0.99
         },
         "62": {
-          "emplvl": 2514,
-          "lq": 0.39
+          "emplvl": 2571,
+          "lq": 0.38
         },
         "71": {
-          "emplvl": 371,
-          "lq": 0.5
+          "emplvl": 307,
+          "lq": 0.39
         },
         "72": {
-          "emplvl": 3624,
-          "lq": 0.9
+          "emplvl": 3605,
+          "lq": 0.87
         },
         "81": {
-          "emplvl": 1565,
-          "lq": 1.17
+          "emplvl": 1610,
+          "lq": 1.18
         },
         "99": {
-          "emplvl": 120,
-          "lq": 1.93
+          "emplvl": 100,
+          "lq": 1.7
         },
         "31-33": {
-          "emplvl": 7983,
-          "lq": 2.18
+          "emplvl": 8337,
+          "lq": 2.26
         },
         "44-45": {
-          "emplvl": 5476,
-          "lq": 1.23
+          "emplvl": 5755,
+          "lq": 1.28
         },
         "48-49": {
-          "emplvl": 3996,
-          "lq": 2.12
+          "emplvl": 4858,
+          "lq": 2.51
         }
       }
     },
@@ -2094,16 +2068,16 @@
       "fips": "26047",
       "name": "Emmet",
       "totalPrivate": {
-        "emplvl": 15501,
+        "emplvl": 15603,
         "lq": 1.02
       },
       "totalAllOwnership": {
-        "emplvl": 17742
+        "emplvl": 17859
       },
       "sectors": {
         "11": {
-          "emplvl": 120,
-          "lq": 0.84
+          "emplvl": 126,
+          "lq": 0.89
         },
         "21": {
           "absent": true
@@ -2112,23 +2086,23 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 1501,
-          "lq": 1.61
+          "emplvl": 1558,
+          "lq": 1.65
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 169,
-          "lq": 0.51
+          "emplvl": 160,
+          "lq": 0.49
         },
         "52": {
-          "emplvl": 317,
+          "emplvl": 321,
           "lq": 0.44
         },
         "53": {
-          "emplvl": 264,
-          "lq": 0.96
+          "emplvl": 233,
+          "lq": 0.84
         },
         "54": {
           "disclosed": false
@@ -2137,39 +2111,39 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 925,
-          "lq": 0.89
+          "emplvl": 892,
+          "lq": 0.86
         },
         "61": {
-          "emplvl": 83,
-          "lq": 0.23
+          "emplvl": 89,
+          "lq": 0.24
         },
         "62": {
-          "emplvl": 2741,
-          "lq": 1.08
+          "emplvl": 2753,
+          "lq": 1.04
         },
         "71": {
-          "emplvl": 596,
-          "lq": 2
+          "emplvl": 618,
+          "lq": 2.02
         },
         "72": {
-          "emplvl": 2402,
+          "emplvl": 2413,
           "lq": 1.49
         },
         "81": {
-          "emplvl": 682,
-          "lq": 1.28
+          "emplvl": 733,
+          "lq": 1.37
         },
         "99": {
-          "emplvl": 62,
-          "lq": 2.51
+          "emplvl": 60,
+          "lq": 2.6
         },
         "31-33": {
-          "emplvl": 1564,
-          "lq": 1.07
+          "emplvl": 1576,
+          "lq": 1.09
         },
         "44-45": {
-          "emplvl": 2948,
+          "emplvl": 2928,
           "lq": 1.66
         },
         "48-49": {
@@ -2181,11 +2155,11 @@
       "fips": "26049",
       "name": "Genesee",
       "totalPrivate": {
-        "emplvl": 115450,
+        "emplvl": 116565,
         "lq": 1.01
       },
       "totalAllOwnership": {
-        "emplvl": 133787
+        "emplvl": 134908
       },
       "sectors": {
         "11": {
@@ -2198,68 +2172,68 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 6477,
-          "lq": 0.92
+          "emplvl": 6857,
+          "lq": 0.96
         },
         "42": {
-          "emplvl": 6480,
-          "lq": 1.23
+          "emplvl": 6684,
+          "lq": 1.28
         },
         "51": {
-          "emplvl": 850,
-          "lq": 0.34
+          "emplvl": 872,
+          "lq": 0.35
         },
         "52": {
-          "emplvl": 3920,
-          "lq": 0.72
+          "emplvl": 3897,
+          "lq": 0.71
         },
         "53": {
-          "emplvl": 1784,
-          "lq": 0.86
+          "emplvl": 1694,
+          "lq": 0.81
         },
         "54": {
-          "emplvl": 5055,
-          "lq": 0.54
+          "emplvl": 4839,
+          "lq": 0.52
         },
         "55": {
-          "emplvl": 378,
-          "lq": 0.17
+          "emplvl": 404,
+          "lq": 0.18
         },
         "56": {
-          "emplvl": 10721,
-          "lq": 1.36
+          "emplvl": 10594,
+          "lq": 1.35
         },
         "61": {
-          "emplvl": 2394,
-          "lq": 0.87
+          "emplvl": 2471,
+          "lq": 0.88
         },
         "62": {
-          "emplvl": 23203,
+          "emplvl": 24144,
           "lq": 1.21
         },
         "71": {
-          "emplvl": 1842,
-          "lq": 0.82
+          "emplvl": 1757,
+          "lq": 0.76
         },
         "72": {
-          "emplvl": 13246,
+          "emplvl": 13301,
           "lq": 1.09
         },
         "81": {
-          "emplvl": 4021,
-          "lq": 1
+          "emplvl": 4011,
+          "lq": 0.99
         },
         "99": {
-          "emplvl": 307,
-          "lq": 1.65
+          "emplvl": 270,
+          "lq": 1.55
         },
         "31-33": {
-          "emplvl": 13485,
-          "lq": 1.23
+          "emplvl": 13272,
+          "lq": 1.22
         },
         "44-45": {
-          "emplvl": 17957,
-          "lq": 1.34
+          "emplvl": 18342,
+          "lq": 1.38
         },
         "48-49": {
           "disclosed": false
@@ -2270,11 +2244,11 @@
       "fips": "26051",
       "name": "Gladwin",
       "totalPrivate": {
-        "emplvl": 3836,
-        "lq": 0.98
+        "emplvl": 3728,
+        "lq": 0.97
       },
       "totalAllOwnership": {
-        "emplvl": 4593
+        "emplvl": 4495
       },
       "sectors": {
         "11": {
@@ -2287,23 +2261,23 @@
           "absent": true
         },
         "23": {
-          "emplvl": 453,
-          "lq": 1.88
+          "emplvl": 417,
+          "lq": 1.75
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 19,
-          "lq": 0.22
+          "emplvl": 17,
+          "lq": 0.21
         },
         "52": {
-          "emplvl": 94,
+          "emplvl": 92,
           "lq": 0.5
         },
         "53": {
-          "emplvl": 113,
-          "lq": 1.58
+          "emplvl": 119,
+          "lq": 1.71
         },
         "54": {
           "disclosed": false
@@ -2312,40 +2286,40 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 129,
-          "lq": 0.48
+          "emplvl": 116,
+          "lq": 0.44
         },
         "61": {
-          "emplvl": 8,
-          "lq": 0.08
+          "emplvl": 9,
+          "lq": 0.1
         },
         "62": {
-          "emplvl": 466,
-          "lq": 0.71
+          "emplvl": 509,
+          "lq": 0.77
         },
         "71": {
-          "emplvl": 50,
-          "lq": 0.65
+          "emplvl": 48,
+          "lq": 0.62
         },
         "72": {
-          "emplvl": 465,
-          "lq": 1.11
+          "emplvl": 443,
+          "lq": 1.09
         },
         "81": {
-          "emplvl": 304,
-          "lq": 2.2
+          "emplvl": 201,
+          "lq": 1.49
         },
         "99": {
-          "emplvl": 11,
-          "lq": 1.72
+          "emplvl": 23,
+          "lq": 3.96
         },
         "31-33": {
-          "emplvl": 940,
-          "lq": 2.49
+          "emplvl": 923,
+          "lq": 2.54
         },
         "44-45": {
-          "emplvl": 555,
-          "lq": 1.21
+          "emplvl": 563,
+          "lq": 1.27
         },
         "48-49": {
           "disclosed": false
@@ -2356,11 +2330,11 @@
       "fips": "26053",
       "name": "Gogebic",
       "totalPrivate": {
-        "emplvl": 3556,
-        "lq": 0.82
+        "emplvl": 3377,
+        "lq": 0.81
       },
       "totalAllOwnership": {
-        "emplvl": 5046
+        "emplvl": 4848
       },
       "sectors": {
         "11": {
@@ -2373,33 +2347,31 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 201,
-          "lq": 0.76
+          "disclosed": false
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 31,
-          "lq": 0.33
+          "disclosed": false
         },
         "52": {
-          "emplvl": 103,
+          "emplvl": 99,
           "lq": 0.5
         },
         "53": {
-          "emplvl": 21,
-          "lq": 0.27
+          "emplvl": 19,
+          "lq": 0.25
         },
         "54": {
-          "emplvl": 71,
-          "lq": 0.2
+          "emplvl": 72,
+          "lq": 0.22
         },
         "55": {
           "absent": true
         },
         "56": {
-          "emplvl": 30,
+          "emplvl": 28,
           "lq": 0.1
         },
         "61": {
@@ -2409,32 +2381,30 @@
           "disclosed": false
         },
         "71": {
-          "emplvl": 115,
-          "lq": 1.36
+          "emplvl": 153,
+          "lq": 1.84
         },
         "72": {
-          "emplvl": 560,
-          "lq": 1.22
+          "emplvl": 550,
+          "lq": 1.25
         },
         "81": {
-          "emplvl": 254,
-          "lq": 1.67
+          "emplvl": 151,
+          "lq": 1.04
         },
         "99": {
-          "emplvl": 12,
-          "lq": 1.71
+          "disclosed": false
         },
         "31-33": {
-          "emplvl": 611,
-          "lq": 1.47
+          "emplvl": 580,
+          "lq": 1.48
         },
         "44-45": {
-          "emplvl": 755,
-          "lq": 1.5
+          "emplvl": 767,
+          "lq": 1.6
         },
         "48-49": {
-          "emplvl": 97,
-          "lq": 0.45
+          "disclosed": false
         }
       }
     },
@@ -2442,91 +2412,91 @@
       "fips": "26055",
       "name": "Grand Traverse",
       "totalPrivate": {
-        "emplvl": 46298,
-        "lq": 1.04
+        "emplvl": 47140,
+        "lq": 1.06
       },
       "totalAllOwnership": {
-        "emplvl": 51962
+        "emplvl": 52238
       },
       "sectors": {
         "11": {
-          "emplvl": 321,
-          "lq": 0.76
+          "emplvl": 316,
+          "lq": 0.77
         },
         "21": {
-          "emplvl": 187,
-          "lq": 0.95
+          "emplvl": 266,
+          "lq": 1.39
         },
         "22": {
-          "emplvl": 235,
-          "lq": 1.19
+          "emplvl": 237,
+          "lq": 1.17
         },
         "23": {
-          "emplvl": 3190,
+          "emplvl": 3247,
           "lq": 1.17
         },
         "42": {
-          "emplvl": 1482,
-          "lq": 0.72
+          "emplvl": 1411,
+          "lq": 0.7
         },
         "51": {
-          "emplvl": 662,
-          "lq": 0.68
+          "emplvl": 596,
+          "lq": 0.62
         },
         "52": {
-          "emplvl": 2283,
-          "lq": 1.08
+          "emplvl": 2338,
+          "lq": 1.1
         },
         "53": {
-          "emplvl": 624,
-          "lq": 0.77
+          "emplvl": 612,
+          "lq": 0.76
         },
         "54": {
-          "emplvl": 2117,
-          "lq": 0.59
+          "emplvl": 2017,
+          "lq": 0.56
         },
         "55": {
-          "emplvl": 46,
+          "emplvl": 43,
           "lq": 0.05
         },
         "56": {
-          "emplvl": 1398,
-          "lq": 0.46
+          "emplvl": 1485,
+          "lq": 0.49
         },
         "61": {
-          "emplvl": 1273,
-          "lq": 1.18
+          "emplvl": 1360,
+          "lq": 1.25
         },
         "62": {
-          "emplvl": 10937,
+          "emplvl": 11318,
           "lq": 1.47
         },
         "71": {
-          "emplvl": 754,
-          "lq": 0.86
+          "emplvl": 740,
+          "lq": 0.83
         },
         "72": {
-          "emplvl": 6035,
-          "lq": 1.28
+          "emplvl": 6339,
+          "lq": 1.34
         },
         "81": {
-          "emplvl": 1858,
-          "lq": 1.19
+          "emplvl": 1807,
+          "lq": 1.15
         },
         "99": {
-          "emplvl": 183,
-          "lq": 2.53
+          "emplvl": 188,
+          "lq": 2.79
         },
         "31-33": {
-          "emplvl": 4503,
-          "lq": 1.05
+          "emplvl": 4658,
+          "lq": 1.1
         },
         "44-45": {
-          "emplvl": 7218,
+          "emplvl": 7169,
           "lq": 1.39
         },
         "48-49": {
-          "emplvl": 993,
+          "emplvl": 992,
           "lq": 0.45
         }
       }
@@ -2535,11 +2505,11 @@
       "fips": "26057",
       "name": "Gratiot",
       "totalPrivate": {
-        "emplvl": 9821,
+        "emplvl": 10153,
         "lq": 0.93
       },
       "totalAllOwnership": {
-        "emplvl": 12359
+        "emplvl": 12739
       },
       "sectors": {
         "11": {
@@ -2552,24 +2522,24 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 288,
-          "lq": 0.44
+          "emplvl": 283,
+          "lq": 0.42
         },
         "42": {
-          "emplvl": 606,
-          "lq": 1.24
+          "emplvl": 897,
+          "lq": 1.82
         },
         "51": {
-          "emplvl": 46,
-          "lq": 0.2
+          "emplvl": 44,
+          "lq": 0.19
         },
         "52": {
-          "emplvl": 328,
-          "lq": 0.65
+          "emplvl": 325,
+          "lq": 0.63
         },
         "53": {
-          "emplvl": 53,
-          "lq": 0.28
+          "emplvl": 63,
+          "lq": 0.32
         },
         "54": {
           "disclosed": false
@@ -2578,8 +2548,8 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 452,
-          "lq": 0.62
+          "emplvl": 390,
+          "lq": 0.53
         },
         "61": {
           "disclosed": false
@@ -2588,28 +2558,28 @@
           "disclosed": false
         },
         "71": {
-          "emplvl": 73,
-          "lq": 0.35
+          "emplvl": 66,
+          "lq": 0.3
         },
         "72": {
-          "emplvl": 637,
-          "lq": 0.57
+          "emplvl": 690,
+          "lq": 0.6
         },
         "81": {
-          "emplvl": 282,
+          "emplvl": 290,
           "lq": 0.76
         },
         "99": {
-          "emplvl": 17,
-          "lq": 0.99
+          "emplvl": 15,
+          "lq": 0.91
         },
         "31-33": {
-          "emplvl": 1751,
-          "lq": 1.72
+          "emplvl": 1793,
+          "lq": 1.74
         },
         "44-45": {
-          "emplvl": 1295,
-          "lq": 1.05
+          "emplvl": 1331,
+          "lq": 1.06
         },
         "48-49": {
           "disclosed": false
@@ -2620,16 +2590,16 @@
       "fips": "26059",
       "name": "Hillsdale",
       "totalPrivate": {
-        "emplvl": 10580,
+        "emplvl": 10222,
         "lq": 0.96
       },
       "totalAllOwnership": {
-        "emplvl": 12854
+        "emplvl": 12461
       },
       "sectors": {
         "11": {
-          "emplvl": 265,
-          "lq": 2.55
+          "emplvl": 289,
+          "lq": 2.93
         },
         "21": {
           "absent": true
@@ -2638,24 +2608,24 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 385,
-          "lq": 0.57
+          "emplvl": 418,
+          "lq": 0.63
         },
         "42": {
-          "emplvl": 229,
-          "lq": 0.45
+          "emplvl": 206,
+          "lq": 0.43
         },
         "51": {
-          "emplvl": 91,
-          "lq": 0.38
+          "emplvl": 74,
+          "lq": 0.32
         },
         "52": {
-          "emplvl": 258,
-          "lq": 0.49
+          "emplvl": 254,
+          "lq": 0.5
         },
         "53": {
-          "emplvl": 44,
-          "lq": 0.22
+          "emplvl": 60,
+          "lq": 0.31
         },
         "54": {
           "disclosed": false
@@ -2664,8 +2634,8 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 445,
-          "lq": 0.59
+          "emplvl": 370,
+          "lq": 0.51
         },
         "61": {
           "disclosed": false
@@ -2674,28 +2644,28 @@
           "disclosed": false
         },
         "71": {
-          "emplvl": 47,
-          "lq": 0.22
+          "emplvl": 57,
+          "lq": 0.27
         },
         "72": {
-          "emplvl": 816,
-          "lq": 0.7
+          "emplvl": 833,
+          "lq": 0.74
         },
         "81": {
-          "emplvl": 323,
-          "lq": 0.83
+          "emplvl": 322,
+          "lq": 0.86
         },
         "99": {
-          "emplvl": 60,
-          "lq": 3.35
+          "emplvl": 58,
+          "lq": 3.6
         },
         "31-33": {
-          "emplvl": 3601,
-          "lq": 3.41
+          "emplvl": 3510,
+          "lq": 3.49
         },
         "44-45": {
-          "emplvl": 1853,
-          "lq": 1.44
+          "emplvl": 1550,
+          "lq": 1.26
         },
         "48-49": {
           "disclosed": false
@@ -2706,11 +2676,11 @@
       "fips": "26061",
       "name": "Houghton",
       "totalPrivate": {
-        "emplvl": 8884,
+        "emplvl": 9179,
         "lq": 0.86
       },
       "totalAllOwnership": {
-        "emplvl": 12124
+        "emplvl": 12476
       },
       "sectors": {
         "11": {
@@ -2723,66 +2693,66 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 788,
-          "lq": 1.24
+          "emplvl": 897,
+          "lq": 1.36
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 130,
-          "lq": 0.57
+          "emplvl": 153,
+          "lq": 0.67
         },
         "52": {
-          "emplvl": 375,
-          "lq": 0.76
+          "emplvl": 376,
+          "lq": 0.74
         },
         "53": {
-          "emplvl": 113,
-          "lq": 0.6
+          "emplvl": 119,
+          "lq": 0.62
         },
         "54": {
-          "emplvl": 671,
-          "lq": 0.8
+          "emplvl": 678,
+          "lq": 0.79
         },
         "55": {
           "absent": true
         },
         "56": {
-          "emplvl": 151,
-          "lq": 0.21
+          "emplvl": 170,
+          "lq": 0.23
         },
         "61": {
-          "emplvl": 48,
-          "lq": 0.19
+          "emplvl": 44,
+          "lq": 0.17
         },
         "62": {
-          "emplvl": 1792,
-          "lq": 1.03
-        },
-        "71": {
-          "emplvl": 100,
-          "lq": 0.49
-        },
-        "72": {
-          "emplvl": 1396,
-          "lq": 1.27
-        },
-        "81": {
-          "emplvl": 351,
+          "emplvl": 1771,
           "lq": 0.96
         },
+        "71": {
+          "emplvl": 117,
+          "lq": 0.55
+        },
+        "72": {
+          "emplvl": 1456,
+          "lq": 1.29
+        },
+        "81": {
+          "emplvl": 372,
+          "lq": 0.99
+        },
         "99": {
-          "emplvl": 22,
-          "lq": 1.3
+          "emplvl": 26,
+          "lq": 1.61
         },
         "31-33": {
-          "emplvl": 939,
-          "lq": 0.94
+          "emplvl": 938,
+          "lq": 0.93
         },
         "44-45": {
-          "emplvl": 1563,
-          "lq": 1.29
+          "emplvl": 1628,
+          "lq": 1.32
         },
         "48-49": {
           "disclosed": false
@@ -2793,11 +2763,11 @@
       "fips": "26063",
       "name": "Huron",
       "totalPrivate": {
-        "emplvl": 9592,
+        "emplvl": 9693,
         "lq": 1
       },
       "totalAllOwnership": {
-        "emplvl": 11234
+        "emplvl": 11350
       },
       "sectors": {
         "11": {
@@ -2810,19 +2780,19 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 523,
+          "emplvl": 533,
           "lq": 0.89
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 197,
-          "lq": 0.94
+          "emplvl": 181,
+          "lq": 0.87
         },
         "52": {
-          "emplvl": 442,
-          "lq": 0.97
+          "emplvl": 444,
+          "lq": 0.96
         },
         "53": {
           "emplvl": 11,
@@ -2835,43 +2805,43 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 391,
+          "emplvl": 386,
           "lq": 0.59
         },
         "61": {
-          "emplvl": 31,
-          "lq": 0.13
+          "emplvl": 35,
+          "lq": 0.15
         },
         "62": {
-          "emplvl": 1644,
-          "lq": 1.02
+          "emplvl": 1725,
+          "lq": 1.03
         },
         "71": {
-          "emplvl": 108,
-          "lq": 0.57
+          "emplvl": 118,
+          "lq": 0.61
         },
         "72": {
-          "emplvl": 799,
-          "lq": 0.78
+          "emplvl": 862,
+          "lq": 0.84
         },
         "81": {
-          "emplvl": 344,
-          "lq": 1.02
+          "emplvl": 317,
+          "lq": 0.93
         },
         "99": {
-          "emplvl": 44,
-          "lq": 2.81
+          "emplvl": 40,
+          "lq": 2.73
         },
         "31-33": {
-          "emplvl": 1669,
-          "lq": 1.81
+          "emplvl": 1583,
+          "lq": 1.73
         },
         "44-45": {
-          "emplvl": 1202,
-          "lq": 1.07
+          "emplvl": 1212,
+          "lq": 1.08
         },
         "48-49": {
-          "emplvl": 410,
+          "emplvl": 415,
           "lq": 0.86
         }
       }
@@ -2880,92 +2850,92 @@
       "fips": "26065",
       "name": "Ingham",
       "totalPrivate": {
-        "emplvl": 109332,
-        "lq": 0.82
+        "emplvl": 108056,
+        "lq": 0.81
       },
       "totalAllOwnership": {
-        "emplvl": 155500
+        "emplvl": 155298
       },
       "sectors": {
         "11": {
-          "emplvl": 766,
+          "emplvl": 750,
           "lq": 0.61
         },
         "21": {
-          "emplvl": 111,
-          "lq": 0.19
+          "emplvl": 76,
+          "lq": 0.13
         },
         "22": {
-          "emplvl": 27,
-          "lq": 0.05
+          "emplvl": 23,
+          "lq": 0.04
         },
         "23": {
-          "emplvl": 6106,
-          "lq": 0.75
+          "emplvl": 5972,
+          "lq": 0.73
         },
         "42": {
-          "emplvl": 2773,
-          "lq": 0.45
+          "emplvl": 2647,
+          "lq": 0.44
         },
         "51": {
-          "emplvl": 2234,
-          "lq": 0.77
+          "emplvl": 2043,
+          "lq": 0.72
         },
         "52": {
-          "emplvl": 6758,
-          "lq": 1.07
+          "emplvl": 6861,
+          "lq": 1.09
         },
         "53": {
-          "emplvl": 2360,
-          "lq": 0.98
+          "emplvl": 2336,
+          "lq": 0.97
         },
         "54": {
-          "emplvl": 7664,
-          "lq": 0.71
+          "emplvl": 7394,
+          "lq": 0.69
         },
         "55": {
-          "emplvl": 2567,
-          "lq": 0.98
+          "emplvl": 2612,
+          "lq": 1
         },
         "56": {
-          "emplvl": 5843,
-          "lq": 0.64
+          "emplvl": 5314,
+          "lq": 0.59
         },
         "61": {
-          "emplvl": 2582,
+          "emplvl": 2596,
           "lq": 0.8
         },
         "62": {
-          "emplvl": 24527,
-          "lq": 1.1
+          "emplvl": 24713,
+          "lq": 1.08
         },
         "71": {
-          "emplvl": 1506,
-          "lq": 0.58
+          "emplvl": 1611,
+          "lq": 0.61
         },
         "72": {
-          "emplvl": 10705,
+          "emplvl": 10674,
           "lq": 0.76
         },
         "81": {
-          "emplvl": 6042,
-          "lq": 1.29
+          "emplvl": 5813,
+          "lq": 1.25
         },
         "99": {
-          "emplvl": 329,
-          "lq": 1.52
+          "emplvl": 286,
+          "lq": 1.43
         },
         "31-33": {
-          "emplvl": 10106,
-          "lq": 0.79
+          "emplvl": 9439,
+          "lq": 0.75
         },
         "44-45": {
-          "emplvl": 12012,
+          "emplvl": 11838,
           "lq": 0.77
         },
         "48-49": {
-          "emplvl": 4315,
-          "lq": 0.66
+          "emplvl": 5059,
+          "lq": 0.77
         }
       }
     },
@@ -2973,15 +2943,16 @@
       "fips": "26067",
       "name": "Ionia",
       "totalPrivate": {
-        "emplvl": 15129,
+        "emplvl": 15373,
         "lq": 0.95
       },
       "totalAllOwnership": {
-        "emplvl": 18530
+        "emplvl": 18832
       },
       "sectors": {
         "11": {
-          "disclosed": false
+          "emplvl": 1019,
+          "lq": 6.84
         },
         "21": {
           "absent": true
@@ -2990,23 +2961,24 @@
           "disclosed": false
         },
         "23": {
-          "disclosed": false
+          "emplvl": 813,
+          "lq": 0.81
         },
         "42": {
-          "emplvl": 375,
-          "lq": 0.51
+          "emplvl": 342,
+          "lq": 0.47
         },
         "51": {
-          "emplvl": 23,
-          "lq": 0.07
+          "emplvl": 12,
+          "lq": 0.03
         },
         "52": {
-          "emplvl": 646,
-          "lq": 0.86
+          "emplvl": 642,
+          "lq": 0.84
         },
         "53": {
-          "emplvl": 50,
-          "lq": 0.17
+          "emplvl": 53,
+          "lq": 0.18
         },
         "54": {
           "disclosed": false
@@ -3018,36 +2990,36 @@
           "disclosed": false
         },
         "61": {
-          "emplvl": 132,
-          "lq": 0.34
+          "emplvl": 130,
+          "lq": 0.33
         },
         "62": {
-          "emplvl": 1242,
-          "lq": 0.47
+          "emplvl": 1277,
+          "lq": 0.46
         },
         "71": {
-          "emplvl": 210,
-          "lq": 0.67
+          "emplvl": 221,
+          "lq": 0.69
         },
         "72": {
-          "emplvl": 1207,
-          "lq": 0.72
+          "emplvl": 1163,
+          "lq": 0.68
         },
         "81": {
-          "emplvl": 526,
-          "lq": 0.94
+          "emplvl": 560,
+          "lq": 0.99
         },
         "99": {
-          "emplvl": 42,
-          "lq": 1.63
+          "emplvl": 45,
+          "lq": 1.85
         },
         "31-33": {
-          "emplvl": 3673,
-          "lq": 2.41
+          "emplvl": 3642,
+          "lq": 2.39
         },
         "44-45": {
-          "emplvl": 1747,
-          "lq": 0.94
+          "emplvl": 1763,
+          "lq": 0.95
         },
         "48-49": {
           "disclosed": false
@@ -3058,11 +3030,11 @@
       "fips": "26069",
       "name": "Iosco",
       "totalPrivate": {
-        "emplvl": 6299,
-        "lq": 0.95
+        "emplvl": 6154,
+        "lq": 0.94
       },
       "totalAllOwnership": {
-        "emplvl": 7724
+        "emplvl": 7624
       },
       "sectors": {
         "11": {
@@ -3075,34 +3047,34 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 322,
-          "lq": 0.79
+          "emplvl": 330,
+          "lq": 0.82
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 55,
-          "lq": 0.38
+          "emplvl": 54,
+          "lq": 0.39
         },
         "52": {
-          "emplvl": 175,
-          "lq": 0.56
+          "emplvl": 185,
+          "lq": 0.6
         },
         "53": {
-          "emplvl": 52,
-          "lq": 0.43
+          "emplvl": 30,
+          "lq": 0.25
         },
         "54": {
           "emplvl": 124,
-          "lq": 0.23
+          "lq": 0.24
         },
         "55": {
           "absent": true
         },
         "56": {
           "emplvl": 191,
-          "lq": 0.42
+          "lq": 0.43
         },
         "61": {
           "disclosed": false
@@ -3111,32 +3083,32 @@
           "disclosed": false
         },
         "71": {
-          "emplvl": 97,
-          "lq": 0.75
+          "emplvl": 91,
+          "lq": 0.7
         },
         "72": {
-          "emplvl": 681,
-          "lq": 0.97
+          "emplvl": 656,
+          "lq": 0.95
         },
         "81": {
-          "emplvl": 230,
-          "lq": 0.99
+          "emplvl": 224,
+          "lq": 0.98
         },
         "99": {
-          "emplvl": 21,
-          "lq": 1.95
+          "emplvl": 17,
+          "lq": 1.73
         },
         "31-33": {
-          "emplvl": 1006,
-          "lq": 1.59
+          "emplvl": 851,
+          "lq": 1.38
         },
         "44-45": {
-          "emplvl": 1057,
-          "lq": 1.37
+          "emplvl": 1081,
+          "lq": 1.43
         },
         "48-49": {
-          "emplvl": 1422,
-          "lq": 4.35
+          "emplvl": 1431,
+          "lq": 4.42
         }
       }
     },
@@ -3144,11 +3116,11 @@
       "fips": "26071",
       "name": "Iron",
       "totalPrivate": {
-        "emplvl": 2600,
+        "emplvl": 2566,
         "lq": 0.89
       },
       "totalAllOwnership": {
-        "emplvl": 3410
+        "emplvl": 3371
       },
       "sectors": {
         "11": {
@@ -3162,27 +3134,27 @@
           "lq": 1
         },
         "23": {
-          "emplvl": 217,
-          "lq": 1.21
+          "emplvl": 187,
+          "lq": 1.05
         },
         "42": {
-          "emplvl": 29,
-          "lq": 0.22
+          "emplvl": 28,
+          "lq": 0.21
         },
         "51": {
           "emplvl": 14,
-          "lq": 0.22
+          "lq": 0.23
         },
         "52": {
-          "emplvl": 117,
-          "lq": 0.85
+          "emplvl": 115,
+          "lq": 0.84
         },
         "53": {
-          "emplvl": 26,
-          "lq": 0.49
+          "emplvl": 19,
+          "lq": 0.36
         },
         "54": {
-          "emplvl": 120,
+          "emplvl": 118,
           "lq": 0.51
         },
         "55": {
@@ -3195,32 +3167,32 @@
           "absent": true
         },
         "62": {
-          "emplvl": 277,
-          "lq": 0.57
+          "emplvl": 268,
+          "lq": 0.54
         },
         "71": {
-          "emplvl": 92,
-          "lq": 1.61
+          "emplvl": 103,
+          "lq": 1.78
         },
         "72": {
-          "emplvl": 314,
-          "lq": 1.01
+          "emplvl": 304,
+          "lq": 0.99
         },
         "81": {
-          "emplvl": 165,
-          "lq": 1.61
+          "emplvl": 159,
+          "lq": 1.57
         },
         "99": {
-          "emplvl": 34,
-          "lq": 7.15
+          "emplvl": 32,
+          "lq": 7.35
         },
         "31-33": {
-          "emplvl": 287,
-          "lq": 1.02
+          "emplvl": 276,
+          "lq": 1.01
         },
         "44-45": {
-          "emplvl": 626,
-          "lq": 1.84
+          "emplvl": 645,
+          "lq": 1.94
         },
         "48-49": {
           "emplvl": 52,
@@ -3232,46 +3204,45 @@
       "fips": "26073",
       "name": "Isabella",
       "totalPrivate": {
-        "emplvl": 18552,
-        "lq": 0.81
+        "emplvl": 18219,
+        "lq": 0.79
       },
       "totalAllOwnership": {
-        "emplvl": 26640
+        "emplvl": 26856
       },
       "sectors": {
         "11": {
-          "emplvl": 232,
-          "lq": 1.08
+          "emplvl": 251,
+          "lq": 1.18
         },
         "21": {
-          "emplvl": 330,
-          "lq": 3.27
+          "emplvl": 318,
+          "lq": 3.23
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 1653,
-          "lq": 1.18
+          "emplvl": 1694,
+          "lq": 1.19
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 179,
-          "lq": 0.36
+          "disclosed": false
         },
         "52": {
-          "emplvl": 705,
-          "lq": 0.65
+          "emplvl": 694,
+          "lq": 0.64
         },
         "53": {
-          "emplvl": 254,
-          "lq": 0.61
+          "emplvl": 282,
+          "lq": 0.68
         },
         "54": {
-          "emplvl": 639,
-          "lq": 0.34
+          "emplvl": 673,
+          "lq": 0.36
         },
         "55": {
           "disclosed": false
@@ -3280,40 +3251,38 @@
           "disclosed": false
         },
         "61": {
-          "emplvl": 159,
+          "emplvl": 160,
           "lq": 0.29
         },
         "62": {
-          "emplvl": 3145,
-          "lq": 0.82
-        },
-        "71": {
-          "emplvl": 362,
+          "emplvl": 3211,
           "lq": 0.81
         },
+        "71": {
+          "emplvl": 432,
+          "lq": 0.94
+        },
         "72": {
-          "emplvl": 2298,
+          "emplvl": 2325,
           "lq": 0.95
         },
         "81": {
-          "emplvl": 524,
-          "lq": 0.65
+          "disclosed": false
         },
         "99": {
-          "emplvl": 42,
-          "lq": 1.13
+          "disclosed": false
         },
         "31-33": {
-          "emplvl": 2589,
-          "lq": 1.18
+          "emplvl": 2465,
+          "lq": 1.14
         },
         "44-45": {
-          "emplvl": 3119,
-          "lq": 1.17
+          "emplvl": 3047,
+          "lq": 1.15
         },
         "48-49": {
-          "emplvl": 936,
-          "lq": 0.83
+          "emplvl": 552,
+          "lq": 0.48
         }
       }
     },
@@ -3321,87 +3290,85 @@
       "fips": "26075",
       "name": "Jackson",
       "totalPrivate": {
-        "emplvl": 48044,
+        "emplvl": 47479,
         "lq": 1
       },
       "totalAllOwnership": {
-        "emplvl": 55945
+        "emplvl": 55466
       },
       "sectors": {
         "11": {
-          "emplvl": 296,
-          "lq": 0.65
+          "disclosed": false
         },
         "21": {
-          "emplvl": 37,
-          "lq": 0.17
+          "disclosed": false
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 2405,
-          "lq": 0.82
+          "emplvl": 2442,
+          "lq": 0.83
         },
         "42": {
-          "emplvl": 1241,
-          "lq": 0.56
+          "emplvl": 1182,
+          "lq": 0.55
         },
         "51": {
-          "emplvl": 148,
-          "lq": 0.14
+          "emplvl": 159,
+          "lq": 0.16
         },
         "52": {
-          "emplvl": 1579,
-          "lq": 0.7
+          "emplvl": 1550,
+          "lq": 0.69
         },
         "53": {
-          "emplvl": 532,
-          "lq": 0.61
+          "emplvl": 550,
+          "lq": 0.64
         },
         "54": {
-          "emplvl": 2275,
-          "lq": 0.58
+          "emplvl": 2182,
+          "lq": 0.57
         },
         "55": {
-          "emplvl": 566,
-          "lq": 0.6
-        },
-        "56": {
-          "emplvl": 2986,
-          "lq": 0.91
-        },
-        "61": {
-          "emplvl": 1057,
-          "lq": 0.91
-        },
-        "62": {
-          "emplvl": 8476,
-          "lq": 1.06
-        },
-        "71": {
-          "emplvl": 584,
+          "emplvl": 573,
           "lq": 0.62
         },
-        "72": {
-          "emplvl": 4590,
-          "lq": 0.9
+        "56": {
+          "emplvl": 2742,
+          "lq": 0.85
         },
-        "81": {
-          "emplvl": 1765,
+        "61": {
+          "emplvl": 1008,
+          "lq": 0.87
+        },
+        "62": {
+          "emplvl": 8565,
           "lq": 1.05
         },
+        "71": {
+          "emplvl": 544,
+          "lq": 0.57
+        },
+        "72": {
+          "emplvl": 4828,
+          "lq": 0.96
+        },
+        "81": {
+          "emplvl": 1972,
+          "lq": 1.18
+        },
         "99": {
-          "emplvl": 191,
-          "lq": 2.45
+          "emplvl": 132,
+          "lq": 1.84
         },
         "31-33": {
-          "emplvl": 9250,
+          "emplvl": 8984,
           "lq": 2.01
         },
         "44-45": {
-          "emplvl": 6349,
-          "lq": 1.14
+          "emplvl": 6129,
+          "lq": 1.12
         },
         "48-49": {
           "disclosed": false
@@ -3412,87 +3379,85 @@
       "fips": "26077",
       "name": "Kalamazoo",
       "totalPrivate": {
-        "emplvl": 107943,
-        "lq": 1.05
+        "emplvl": 109092,
+        "lq": 1.04
       },
       "totalAllOwnership": {
-        "emplvl": 120708
+        "emplvl": 122119
       },
       "sectors": {
         "11": {
-          "emplvl": 1485,
-          "lq": 1.52
+          "disclosed": false
         },
         "21": {
-          "emplvl": 24,
-          "lq": 0.05
+          "disclosed": false
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 6522,
-          "lq": 1.03
+          "emplvl": 6145,
+          "lq": 0.95
         },
         "42": {
-          "emplvl": 5036,
-          "lq": 1.06
+          "emplvl": 5077,
+          "lq": 1.07
         },
         "51": {
-          "emplvl": 695,
-          "lq": 0.31
+          "emplvl": 632,
+          "lq": 0.28
         },
         "52": {
-          "emplvl": 3326,
+          "emplvl": 3384,
           "lq": 0.68
         },
         "53": {
-          "emplvl": 1793,
-          "lq": 0.96
+          "emplvl": 1769,
+          "lq": 0.94
         },
         "54": {
-          "emplvl": 5959,
+          "emplvl": 5981,
           "lq": 0.71
         },
         "55": {
-          "emplvl": 158,
-          "lq": 0.08
+          "emplvl": 142,
+          "lq": 0.07
         },
         "56": {
-          "emplvl": 5719,
-          "lq": 0.8
+          "emplvl": 5603,
+          "lq": 0.79
         },
         "61": {
-          "emplvl": 2538,
-          "lq": 1.02
+          "emplvl": 2968,
+          "lq": 1.17
         },
         "62": {
-          "emplvl": 20432,
+          "emplvl": 21318,
           "lq": 1.18
         },
         "71": {
-          "emplvl": 1838,
+          "emplvl": 1905,
           "lq": 0.91
         },
         "72": {
-          "emplvl": 11060,
-          "lq": 1.01
+          "emplvl": 10998,
+          "lq": 0.99
         },
         "81": {
-          "emplvl": 4000,
-          "lq": 1.1
+          "emplvl": 4294,
+          "lq": 1.17
         },
         "99": {
-          "emplvl": 248,
-          "lq": 1.47
+          "emplvl": 214,
+          "lq": 1.36
         },
         "31-33": {
-          "emplvl": 21198,
-          "lq": 2.14
+          "emplvl": 20822,
+          "lq": 2.11
         },
         "44-45": {
-          "emplvl": 12358,
-          "lq": 1.03
+          "emplvl": 12258,
+          "lq": 1.02
         },
         "48-49": {
           "disclosed": false
@@ -3503,52 +3468,54 @@
       "fips": "26079",
       "name": "Kalkaska",
       "totalPrivate": {
-        "emplvl": 3700,
-        "lq": 0.89
+        "emplvl": 3702,
+        "lq": 0.88
       },
       "totalAllOwnership": {
-        "emplvl": 4860
+        "emplvl": 4924
       },
       "sectors": {
         "11": {
-          "emplvl": 150,
-          "lq": 3.81
+          "emplvl": 136,
+          "lq": 3.49
         },
         "21": {
-          "emplvl": 332,
-          "lq": 18.06
+          "emplvl": 330,
+          "lq": 18.28
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 559,
-          "lq": 2.19
+          "emplvl": 635,
+          "lq": 2.43
         },
         "42": {
           "emplvl": 219,
-          "lq": 1.14
+          "lq": 1.15
         },
         "51": {
-          "emplvl": 30,
-          "lq": 0.33
+          "emplvl": 20,
+          "lq": 0.22
         },
         "52": {
-          "emplvl": 33,
-          "lq": 0.17
+          "emplvl": 41,
+          "lq": 0.21
         },
         "53": {
-          "emplvl": 64,
-          "lq": 0.85
+          "emplvl": 56,
+          "lq": 0.73
         },
         "54": {
-          "disclosed": false
+          "emplvl": 67,
+          "lq": 0.2
         },
         "55": {
           "absent": true
         },
         "56": {
-          "disclosed": false
+          "emplvl": 602,
+          "lq": 2.11
         },
         "61": {
           "disclosed": false
@@ -3557,26 +3524,28 @@
           "disclosed": false
         },
         "71": {
-          "disclosed": false
+          "emplvl": 47,
+          "lq": 0.56
         },
         "72": {
-          "disclosed": false
+          "emplvl": 431,
+          "lq": 0.97
         },
         "81": {
-          "emplvl": 114,
-          "lq": 0.78
+          "emplvl": 131,
+          "lq": 0.89
         },
         "99": {
           "emplvl": 12,
-          "lq": 1.77
+          "lq": 1.89
         },
         "31-33": {
-          "emplvl": 287,
-          "lq": 0.72
+          "emplvl": 271,
+          "lq": 0.68
         },
         "44-45": {
-          "emplvl": 472,
-          "lq": 0.97
+          "emplvl": 460,
+          "lq": 0.95
         },
         "48-49": {
           "disclosed": false
@@ -3587,92 +3556,92 @@
       "fips": "26081",
       "name": "Kent",
       "totalPrivate": {
-        "emplvl": 389176,
+        "emplvl": 390596,
         "lq": 1.09
       },
       "totalAllOwnership": {
-        "emplvl": 415565
+        "emplvl": 417408
       },
       "sectors": {
         "11": {
-          "emplvl": 2741,
-          "lq": 0.81
+          "emplvl": 2609,
+          "lq": 0.79
         },
         "21": {
-          "emplvl": 98,
-          "lq": 0.06
+          "emplvl": 109,
+          "lq": 0.07
         },
         "22": {
-          "emplvl": 847,
-          "lq": 0.54
+          "emplvl": 850,
+          "lq": 0.53
         },
         "23": {
-          "emplvl": 20290,
-          "lq": 0.93
+          "emplvl": 20754,
+          "lq": 0.94
         },
         "42": {
-          "emplvl": 27544,
-          "lq": 1.68
+          "emplvl": 27438,
+          "lq": 1.7
         },
         "51": {
-          "emplvl": 4273,
+          "emplvl": 4185,
           "lq": 0.55
         },
         "52": {
-          "emplvl": 15039,
+          "emplvl": 15037,
           "lq": 0.89
         },
         "53": {
-          "emplvl": 4513,
-          "lq": 0.7
+          "emplvl": 4731,
+          "lq": 0.73
         },
         "54": {
-          "emplvl": 19530,
-          "lq": 0.68
+          "emplvl": 19984,
+          "lq": 0.69
         },
         "55": {
-          "emplvl": 5587,
-          "lq": 0.8
+          "emplvl": 5348,
+          "lq": 0.77
         },
         "56": {
-          "emplvl": 48794,
-          "lq": 1.99
+          "emplvl": 46901,
+          "lq": 1.94
         },
         "61": {
-          "emplvl": 10460,
-          "lq": 1.22
+          "emplvl": 10519,
+          "lq": 1.21
         },
         "62": {
-          "emplvl": 67987,
-          "lq": 1.14
+          "emplvl": 68533,
+          "lq": 1.11
         },
         "71": {
-          "emplvl": 4889,
-          "lq": 0.7
+          "emplvl": 5680,
+          "lq": 0.79
         },
         "72": {
-          "emplvl": 31658,
-          "lq": 0.84
+          "emplvl": 30965,
+          "lq": 0.82
         },
         "81": {
-          "emplvl": 13090,
-          "lq": 1.05
+          "emplvl": 13393,
+          "lq": 1.07
         },
         "99": {
-          "emplvl": 1175,
-          "lq": 2.03
+          "emplvl": 1153,
+          "lq": 2.14
         },
         "31-33": {
-          "emplvl": 62796,
+          "emplvl": 62100,
           "lq": 1.84
         },
         "44-45": {
-          "emplvl": 34924,
-          "lq": 0.84
+          "emplvl": 36743,
+          "lq": 0.89
         },
         "48-49": {
-          "emplvl": 12941,
-          "lq": 0.74
+          "emplvl": 13563,
+          "lq": 0.76
         }
       }
     },
@@ -3680,16 +3649,15 @@
       "fips": "26083",
       "name": "Keweenaw",
       "totalPrivate": {
-        "emplvl": 349,
-        "lq": 0.85
+        "emplvl": 366,
+        "lq": 0.86
       },
       "totalAllOwnership": {
-        "emplvl": 478
+        "emplvl": 498
       },
       "sectors": {
         "11": {
-          "emplvl": 12,
-          "lq": 3.1
+          "disclosed": false
         },
         "21": {
           "absent": true
@@ -3698,8 +3666,7 @@
           "absent": true
         },
         "23": {
-          "emplvl": 19,
-          "lq": 0.76
+          "disclosed": false
         },
         "42": {
           "disclosed": false
@@ -3735,19 +3702,17 @@
           "disclosed": false
         },
         "81": {
-          "emplvl": 14,
-          "lq": 0.97
+          "disclosed": false
         },
         "99": {
           "absent": true
         },
         "31-33": {
-          "emplvl": 55,
-          "lq": 1.4
+          "disclosed": false
         },
         "44-45": {
-          "emplvl": 37,
-          "lq": 0.78
+          "emplvl": 36,
+          "lq": 0.73
         },
         "48-49": {
           "disclosed": false
@@ -3758,26 +3723,25 @@
       "fips": "26085",
       "name": "Lake",
       "totalPrivate": {
-        "emplvl": 1280,
+        "emplvl": 1256,
         "lq": 0.87
       },
       "totalAllOwnership": {
-        "emplvl": 1721
+        "emplvl": 1694
       },
       "sectors": {
         "11": {
-          "emplvl": 45,
-          "lq": 3.23
+          "disclosed": false
         },
         "21": {
-          "absent": true
+          "disclosed": false
         },
         "22": {
-          "absent": true
+          "disclosed": false
         },
         "23": {
-          "emplvl": 78,
-          "lq": 0.86
+          "emplvl": 79,
+          "lq": 0.88
         },
         "42": {
           "disclosed": false
@@ -3792,8 +3756,8 @@
           "disclosed": false
         },
         "54": {
-          "emplvl": 32,
-          "lq": 0.27
+          "emplvl": 33,
+          "lq": 0.28
         },
         "55": {
           "disclosed": false
@@ -3814,20 +3778,20 @@
           "disclosed": false
         },
         "81": {
-          "emplvl": 51,
-          "lq": 0.98
+          "emplvl": 49,
+          "lq": 0.96
         },
         "99": {
           "emplvl": 5,
-          "lq": 2.08
+          "lq": 2.29
         },
         "31-33": {
-          "emplvl": 63,
-          "lq": 0.45
+          "emplvl": 75,
+          "lq": 0.55
         },
         "44-45": {
-          "emplvl": 193,
-          "lq": 1.12
+          "emplvl": 208,
+          "lq": 1.24
         },
         "48-49": {
           "disclosed": false
@@ -3838,92 +3802,88 @@
       "fips": "26087",
       "name": "Lapeer",
       "totalPrivate": {
-        "emplvl": 17911,
+        "emplvl": 18076,
         "lq": 0.95
       },
       "totalAllOwnership": {
-        "emplvl": 21986
+        "emplvl": 22229
       },
       "sectors": {
         "11": {
-          "emplvl": 299,
-          "lq": 1.68
+          "emplvl": 272,
+          "lq": 1.55
         },
         "21": {
-          "emplvl": 99,
-          "lq": 1.19
+          "emplvl": 95,
+          "lq": 1.17
         },
         "22": {
-          "emplvl": 54,
-          "lq": 0.65
+          "disclosed": false
         },
         "23": {
-          "emplvl": 1273,
-          "lq": 1.1
+          "emplvl": 1259,
+          "lq": 1.07
         },
         "42": {
-          "emplvl": 481,
-          "lq": 0.56
+          "emplvl": 462,
+          "lq": 0.54
         },
         "51": {
-          "emplvl": 179,
+          "emplvl": 177,
           "lq": 0.43
         },
         "52": {
-          "emplvl": 449,
-          "lq": 0.5
+          "emplvl": 521,
+          "lq": 0.58
         },
         "53": {
-          "emplvl": 201,
-          "lq": 0.59
+          "emplvl": 219,
+          "lq": 0.64
         },
         "54": {
-          "emplvl": 524,
-          "lq": 0.34
+          "disclosed": false
         },
         "55": {
-          "emplvl": 10,
-          "lq": 0.03
+          "disclosed": false
         },
         "56": {
-          "emplvl": 1113,
-          "lq": 0.86
+          "emplvl": 1097,
+          "lq": 0.85
         },
         "61": {
-          "emplvl": 145,
-          "lq": 0.32
+          "emplvl": 132,
+          "lq": 0.28
         },
         "62": {
-          "emplvl": 1895,
-          "lq": 0.6
+          "emplvl": 2018,
+          "lq": 0.61
         },
         "71": {
-          "emplvl": 193,
-          "lq": 0.52
+          "emplvl": 241,
+          "lq": 0.63
         },
         "72": {
-          "emplvl": 2121,
-          "lq": 1.06
+          "emplvl": 2406,
+          "lq": 1.19
         },
         "81": {
-          "emplvl": 753,
+          "emplvl": 762,
           "lq": 1.14
         },
         "99": {
-          "emplvl": 88,
-          "lq": 2.87
+          "emplvl": 84,
+          "lq": 2.93
         },
         "31-33": {
-          "emplvl": 4738,
-          "lq": 2.62
+          "emplvl": 4474,
+          "lq": 2.49
         },
         "44-45": {
-          "emplvl": 2958,
+          "emplvl": 2959,
           "lq": 1.35
         },
         "48-49": {
-          "emplvl": 338,
-          "lq": 0.36
+          "disclosed": false
         }
       }
     },
@@ -3931,11 +3891,11 @@
       "fips": "26089",
       "name": "Leelanau",
       "totalPrivate": {
-        "emplvl": 4978,
-        "lq": 0.87
+        "emplvl": 5120,
+        "lq": 0.81
       },
       "totalAllOwnership": {
-        "emplvl": 6662
+        "emplvl": 7359
       },
       "sectors": {
         "11": {
@@ -3948,24 +3908,24 @@
           "absent": true
         },
         "23": {
-          "emplvl": 545,
-          "lq": 1.56
+          "emplvl": 540,
+          "lq": 1.38
         },
         "42": {
-          "emplvl": 291,
-          "lq": 1.11
+          "emplvl": 304,
+          "lq": 1.07
         },
         "51": {
-          "emplvl": 40,
-          "lq": 0.32
+          "emplvl": 44,
+          "lq": 0.33
         },
         "52": {
-          "emplvl": 100,
-          "lq": 0.37
+          "emplvl": 102,
+          "lq": 0.34
         },
         "53": {
-          "emplvl": 114,
-          "lq": 1.1
+          "emplvl": 120,
+          "lq": 1.05
         },
         "54": {
           "disclosed": false
@@ -3974,44 +3934,44 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 251,
-          "lq": 0.64
+          "emplvl": 271,
+          "lq": 0.63
         },
         "61": {
-          "emplvl": 114,
-          "lq": 0.83
+          "emplvl": 111,
+          "lq": 0.72
         },
         "62": {
-          "emplvl": 529,
-          "lq": 0.55
+          "emplvl": 563,
+          "lq": 0.52
         },
         "71": {
-          "emplvl": 163,
-          "lq": 1.46
+          "emplvl": 161,
+          "lq": 1.28
         },
         "72": {
-          "emplvl": 987,
-          "lq": 1.63
+          "emplvl": 990,
+          "lq": 1.48
         },
         "81": {
-          "emplvl": 227,
-          "lq": 1.13
+          "emplvl": 232,
+          "lq": 1.05
         },
         "99": {
-          "emplvl": 49,
-          "lq": 5.27
+          "emplvl": 48,
+          "lq": 5.05
         },
         "31-33": {
-          "emplvl": 556,
-          "lq": 1.02
+          "emplvl": 541,
+          "lq": 0.91
         },
         "44-45": {
-          "emplvl": 609,
-          "lq": 0.92
+          "emplvl": 583,
+          "lq": 0.8
         },
         "48-49": {
-          "emplvl": 30,
-          "lq": 0.11
+          "emplvl": 27,
+          "lq": 0.09
         }
       }
     },
@@ -4019,15 +3979,16 @@
       "fips": "26091",
       "name": "Lenawee",
       "totalPrivate": {
-        "emplvl": 21435,
+        "emplvl": 21506,
         "lq": 0.97
       },
       "totalAllOwnership": {
-        "emplvl": 25796
+        "emplvl": 25857
       },
       "sectors": {
         "11": {
-          "disclosed": false
+          "emplvl": 524,
+          "lq": 2.56
         },
         "21": {
           "absent": true
@@ -4036,67 +3997,64 @@
           "disclosed": false
         },
         "23": {
-          "disclosed": false
+          "emplvl": 1011,
+          "lq": 0.74
         },
         "42": {
-          "emplvl": 527,
-          "lq": 0.52
+          "disclosed": false
         },
         "51": {
-          "emplvl": 293,
-          "lq": 0.61
+          "emplvl": 268,
+          "lq": 0.57
         },
         "52": {
-          "emplvl": 1035,
-          "lq": 0.99
+          "emplvl": 1053,
+          "lq": 1
         },
         "53": {
-          "emplvl": 155,
-          "lq": 0.39
+          "emplvl": 146,
+          "lq": 0.36
         },
         "54": {
-          "emplvl": 469,
-          "lq": 0.26
+          "disclosed": false
         },
         "55": {
-          "emplvl": 40,
-          "lq": 0.09
+          "disclosed": false
         },
         "56": {
-          "emplvl": 561,
-          "lq": 0.37
+          "disclosed": false
         },
         "61": {
-          "emplvl": 1384,
-          "lq": 2.59
+          "emplvl": 1406,
+          "lq": 2.61
         },
         "62": {
-          "emplvl": 3610,
-          "lq": 0.98
+          "emplvl": 3598,
+          "lq": 0.94
         },
         "71": {
-          "emplvl": 392,
-          "lq": 0.9
+          "emplvl": 418,
+          "lq": 0.94
         },
         "72": {
-          "emplvl": 2151,
-          "lq": 0.92
+          "emplvl": 2180,
+          "lq": 0.93
         },
         "81": {
-          "emplvl": 757,
-          "lq": 0.97
+          "emplvl": 762,
+          "lq": 0.98
         },
         "99": {
-          "emplvl": 100,
-          "lq": 2.78
+          "emplvl": 83,
+          "lq": 2.49
         },
         "31-33": {
-          "emplvl": 4313,
-          "lq": 2.04
+          "emplvl": 4321,
+          "lq": 2.07
         },
         "44-45": {
-          "emplvl": 3612,
-          "lq": 1.4
+          "emplvl": 3673,
+          "lq": 1.44
         },
         "48-49": {
           "disclosed": false
@@ -4107,87 +4065,85 @@
       "fips": "26093",
       "name": "Livingston",
       "totalPrivate": {
-        "emplvl": 57331,
+        "emplvl": 57529,
         "lq": 1.04
       },
       "totalAllOwnership": {
-        "emplvl": 64380
+        "emplvl": 64689
       },
       "sectors": {
         "11": {
-          "emplvl": 390,
-          "lq": 0.75
+          "disclosed": false
         },
         "21": {
-          "emplvl": 27,
-          "lq": 0.11
+          "disclosed": false
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 4536,
-          "lq": 1.34
+          "emplvl": 4651,
+          "lq": 1.36
         },
         "42": {
-          "emplvl": 2689,
-          "lq": 1.06
+          "emplvl": 2738,
+          "lq": 1.09
         },
         "51": {
-          "emplvl": 415,
-          "lq": 0.34
+          "emplvl": 447,
+          "lq": 0.38
         },
         "52": {
-          "emplvl": 1558,
-          "lq": 0.6
+          "emplvl": 1607,
+          "lq": 0.61
         },
         "53": {
-          "emplvl": 959,
-          "lq": 0.96
+          "emplvl": 944,
+          "lq": 0.94
         },
         "54": {
-          "emplvl": 4832,
+          "emplvl": 4829,
           "lq": 1.08
         },
         "55": {
-          "emplvl": 567,
-          "lq": 0.52
+          "emplvl": 632,
+          "lq": 0.58
         },
         "56": {
-          "emplvl": 2149,
-          "lq": 0.57
+          "emplvl": 2007,
+          "lq": 0.53
         },
         "61": {
-          "emplvl": 379,
-          "lq": 0.28
+          "emplvl": 445,
+          "lq": 0.33
         },
         "62": {
-          "emplvl": 7974,
-          "lq": 0.86
+          "emplvl": 8022,
+          "lq": 0.84
         },
         "71": {
-          "emplvl": 1112,
+          "emplvl": 1142,
           "lq": 1.03
         },
         "72": {
-          "emplvl": 7462,
-          "lq": 1.27
+          "emplvl": 7867,
+          "lq": 1.34
         },
         "81": {
-          "emplvl": 2157,
-          "lq": 1.11
+          "emplvl": 2123,
+          "lq": 1.09
         },
         "99": {
-          "emplvl": 410,
-          "lq": 4.57
+          "emplvl": 378,
+          "lq": 4.52
         },
         "31-33": {
-          "emplvl": 9756,
-          "lq": 1.84
+          "emplvl": 9358,
+          "lq": 1.79
         },
         "44-45": {
-          "emplvl": 8298,
-          "lq": 1.29
+          "emplvl": 8167,
+          "lq": 1.28
         },
         "48-49": {
           "disclosed": false
@@ -4198,16 +4154,15 @@
       "fips": "26095",
       "name": "Luce",
       "totalPrivate": {
-        "emplvl": 976,
-        "lq": 0.64
+        "emplvl": 1111,
+        "lq": 0.67
       },
       "totalAllOwnership": {
-        "emplvl": 1786
+        "emplvl": 1932
       },
       "sectors": {
         "11": {
-          "emplvl": 56,
-          "lq": 3.87
+          "disclosed": false
         },
         "21": {
           "absent": true
@@ -4216,11 +4171,10 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 32,
-          "lq": 0.34
+          "disclosed": false
         },
         "42": {
-          "emplvl": 25,
+          "emplvl": 27,
           "lq": 0.36
         },
         "51": {
@@ -4245,28 +4199,30 @@
           "absent": true
         },
         "62": {
-          "disclosed": false
+          "emplvl": 103,
+          "lq": 0.36
         },
         "71": {
-          "disclosed": false
+          "emplvl": 17,
+          "lq": 0.51
         },
         "72": {
-          "disclosed": false
+          "emplvl": 357,
+          "lq": 2.04
         },
         "81": {
-          "emplvl": 42,
-          "lq": 0.78
+          "emplvl": 41,
+          "lq": 0.71
         },
         "99": {
           "disclosed": false
         },
         "31-33": {
-          "emplvl": 60,
-          "lq": 0.41
+          "disclosed": false
         },
         "44-45": {
-          "emplvl": 263,
-          "lq": 1.47
+          "emplvl": 268,
+          "lq": 1.4
         },
         "48-49": {
           "disclosed": false
@@ -4277,11 +4233,11 @@
       "fips": "26097",
       "name": "Mackinac",
       "totalPrivate": {
-        "emplvl": 3836,
+        "emplvl": 3804,
         "lq": 0.93
       },
       "totalAllOwnership": {
-        "emplvl": 4836
+        "emplvl": 4804
       },
       "sectors": {
         "11": {
@@ -4294,8 +4250,8 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 232,
-          "lq": 0.91
+          "emplvl": 251,
+          "lq": 0.99
         },
         "42": {
           "disclosed": false
@@ -4304,12 +4260,12 @@
           "disclosed": false
         },
         "52": {
-          "emplvl": 81,
-          "lq": 0.41
+          "emplvl": 88,
+          "lq": 0.45
         },
         "53": {
-          "emplvl": 37,
-          "lq": 0.49
+          "emplvl": 49,
+          "lq": 0.66
         },
         "54": {
           "disclosed": false
@@ -4318,43 +4274,41 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 66,
-          "lq": 0.23
+          "disclosed": false
         },
         "61": {
-          "emplvl": 34,
-          "lq": 0.34
+          "emplvl": 38,
+          "lq": 0.38
         },
         "62": {
-          "emplvl": 398,
-          "lq": 0.57
+          "emplvl": 416,
+          "lq": 0.59
         },
         "71": {
-          "emplvl": 79,
-          "lq": 0.97
+          "emplvl": 77,
+          "lq": 0.94
         },
         "72": {
-          "emplvl": 1566,
-          "lq": 3.56
+          "emplvl": 1391,
+          "lq": 3.19
         },
         "81": {
-          "emplvl": 144,
-          "lq": 0.99
+          "emplvl": 130,
+          "lq": 0.9
         },
         "99": {
           "disclosed": false
         },
         "31-33": {
-          "emplvl": 108,
-          "lq": 0.27
+          "disclosed": false
         },
         "44-45": {
-          "emplvl": 470,
-          "lq": 0.97
+          "emplvl": 476,
+          "lq": 1
         },
         "48-49": {
-          "emplvl": 259,
-          "lq": 1.26
+          "emplvl": 262,
+          "lq": 1.28
         }
       }
     },
@@ -4362,92 +4316,92 @@
       "fips": "26099",
       "name": "Macomb",
       "totalPrivate": {
-        "emplvl": 301041,
+        "emplvl": 296284,
         "lq": 1.05
       },
       "totalAllOwnership": {
-        "emplvl": 336295
+        "emplvl": 331515
       },
       "sectors": {
         "11": {
-          "emplvl": 1466,
-          "lq": 0.54
+          "emplvl": 1294,
+          "lq": 0.49
         },
         "21": {
-          "emplvl": 41,
+          "emplvl": 35,
           "lq": 0.03
         },
         "22": {
-          "emplvl": 352,
+          "emplvl": 360,
           "lq": 0.28
         },
         "23": {
-          "emplvl": 17630,
-          "lq": 1
+          "emplvl": 18024,
+          "lq": 1.03
         },
         "42": {
-          "emplvl": 10075,
-          "lq": 0.76
+          "emplvl": 10278,
+          "lq": 0.8
         },
         "51": {
-          "emplvl": 1887,
+          "emplvl": 1822,
           "lq": 0.3
         },
         "52": {
-          "emplvl": 5596,
-          "lq": 0.41
+          "emplvl": 5627,
+          "lq": 0.42
         },
         "53": {
-          "emplvl": 3986,
-          "lq": 0.76
+          "emplvl": 3963,
+          "lq": 0.77
         },
         "54": {
-          "emplvl": 30840,
+          "emplvl": 30317,
           "lq": 1.32
         },
         "55": {
-          "emplvl": 8888,
-          "lq": 1.57
+          "emplvl": 8510,
+          "lq": 1.53
         },
         "56": {
-          "emplvl": 14731,
-          "lq": 0.74
+          "emplvl": 14364,
+          "lq": 0.75
         },
         "61": {
-          "emplvl": 2396,
-          "lq": 0.34
+          "emplvl": 2259,
+          "lq": 0.33
         },
         "62": {
-          "emplvl": 43428,
-          "lq": 0.9
+          "emplvl": 42720,
+          "lq": 0.87
         },
         "71": {
-          "emplvl": 3004,
-          "lq": 0.53
+          "emplvl": 3140,
+          "lq": 0.55
         },
         "72": {
-          "emplvl": 28154,
-          "lq": 0.92
+          "emplvl": 29370,
+          "lq": 0.98
         },
         "81": {
-          "emplvl": 9649,
-          "lq": 0.95
+          "emplvl": 9385,
+          "lq": 0.94
         },
         "99": {
-          "emplvl": 1132,
-          "lq": 2.41
+          "emplvl": 1100,
+          "lq": 2.57
         },
         "31-33": {
-          "emplvl": 63562,
-          "lq": 2.3
+          "emplvl": 60825,
+          "lq": 2.27
         },
         "44-45": {
-          "emplvl": 40456,
-          "lq": 1.2
+          "emplvl": 40380,
+          "lq": 1.23
         },
         "48-49": {
-          "emplvl": 13767,
-          "lq": 0.97
+          "emplvl": 12510,
+          "lq": 0.89
         }
       }
     },
@@ -4455,11 +4409,11 @@
       "fips": "26101",
       "name": "Manistee",
       "totalPrivate": {
-        "emplvl": 4893,
-        "lq": 0.79
+        "emplvl": 5082,
+        "lq": 0.8
       },
       "totalAllOwnership": {
-        "emplvl": 7281
+        "emplvl": 7448
       },
       "sectors": {
         "11": {
@@ -4469,39 +4423,39 @@
           "disclosed": false
         },
         "22": {
-          "emplvl": 48,
-          "lq": 1.73
+          "emplvl": 47,
+          "lq": 1.63
         },
         "23": {
-          "emplvl": 315,
-          "lq": 0.82
+          "emplvl": 283,
+          "lq": 0.72
         },
         "42": {
-          "emplvl": 263,
-          "lq": 0.92
+          "emplvl": 275,
+          "lq": 0.95
         },
         "51": {
-          "emplvl": 41,
-          "lq": 0.3
+          "emplvl": 39,
+          "lq": 0.29
         },
         "52": {
-          "emplvl": 128,
+          "emplvl": 130,
           "lq": 0.43
         },
         "53": {
-          "emplvl": 38,
-          "lq": 0.34
+          "emplvl": 36,
+          "lq": 0.31
         },
         "54": {
-          "emplvl": 98,
-          "lq": 0.19
+          "emplvl": 105,
+          "lq": 0.2
         },
         "55": {
           "absent": true
         },
         "56": {
-          "emplvl": 104,
-          "lq": 0.24
+          "emplvl": 111,
+          "lq": 0.26
         },
         "61": {
           "disclosed": false
@@ -4510,32 +4464,32 @@
           "disclosed": false
         },
         "71": {
-          "emplvl": 221,
-          "lq": 1.81
+          "emplvl": 252,
+          "lq": 1.98
         },
         "72": {
-          "emplvl": 666,
-          "lq": 1.01
+          "emplvl": 735,
+          "lq": 1.09
         },
         "81": {
-          "emplvl": 237,
-          "lq": 1.08
+          "emplvl": 232,
+          "lq": 1.04
         },
         "99": {
-          "emplvl": 3,
-          "lq": 0.3
+          "emplvl": 6,
+          "lq": 0.62
         },
         "31-33": {
-          "emplvl": 1058,
-          "lq": 1.77
+          "emplvl": 1231,
+          "lq": 2.05
         },
         "44-45": {
-          "emplvl": 1097,
-          "lq": 1.51
+          "emplvl": 1061,
+          "lq": 1.44
         },
         "48-49": {
-          "emplvl": 77,
-          "lq": 0.25
+          "emplvl": 68,
+          "lq": 0.21
         }
       }
     },
@@ -4543,90 +4497,85 @@
       "fips": "26103",
       "name": "Marquette",
       "totalPrivate": {
-        "emplvl": 21458,
-        "lq": 0.95
+        "emplvl": 21496,
+        "lq": 0.93
       },
       "totalAllOwnership": {
-        "emplvl": 26385
+        "emplvl": 26924
       },
       "sectors": {
         "11": {
-          "emplvl": 169,
-          "lq": 0.79
+          "emplvl": 160,
+          "lq": 0.75
         },
         "21": {
-          "emplvl": 1185,
-          "lq": 11.87
+          "emplvl": 1247,
+          "lq": 12.64
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 1461,
-          "lq": 1.05
+          "emplvl": 1462,
+          "lq": 1.02
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 249,
-          "lq": 0.5
+          "disclosed": false
         },
         "52": {
-          "emplvl": 673,
-          "lq": 0.63
-        },
-        "53": {
-          "emplvl": 264,
+          "emplvl": 703,
           "lq": 0.64
         },
+        "53": {
+          "emplvl": 248,
+          "lq": 0.59
+        },
         "54": {
-          "emplvl": 846,
-          "lq": 0.46
+          "emplvl": 839,
+          "lq": 0.45
         },
         "55": {
-          "emplvl": 351,
-          "lq": 0.79
-        },
-        "56": {
-          "emplvl": 783,
-          "lq": 0.5
-        },
-        "61": {
-          "emplvl": 107,
-          "lq": 0.2
-        },
-        "62": {
-          "emplvl": 4928,
-          "lq": 1.3
-        },
-        "71": {
-          "emplvl": 346,
+          "emplvl": 353,
           "lq": 0.78
         },
+        "56": {
+          "emplvl": 789,
+          "lq": 0.51
+        },
+        "61": {
+          "disclosed": false
+        },
+        "62": {
+          "disclosed": false
+        },
+        "71": {
+          "emplvl": 355,
+          "lq": 0.77
+        },
         "72": {
-          "emplvl": 3108,
-          "lq": 1.3
+          "emplvl": 3018,
+          "lq": 1.24
         },
         "81": {
-          "emplvl": 860,
-          "lq": 1.08
+          "disclosed": false
         },
         "99": {
-          "emplvl": 72,
-          "lq": 1.96
+          "disclosed": false
         },
         "31-33": {
-          "emplvl": 1185,
-          "lq": 0.55
+          "emplvl": 1225,
+          "lq": 0.56
         },
         "44-45": {
-          "emplvl": 3613,
-          "lq": 1.37
+          "emplvl": 3579,
+          "lq": 1.35
         },
         "48-49": {
-          "emplvl": 696,
-          "lq": 0.62
+          "emplvl": 687,
+          "lq": 0.6
         }
       }
     },
@@ -4634,11 +4583,11 @@
       "fips": "26105",
       "name": "Mason",
       "totalPrivate": {
-        "emplvl": 8576,
+        "emplvl": 8511,
         "lq": 0.98
       },
       "totalAllOwnership": {
-        "emplvl": 10186
+        "emplvl": 10162
       },
       "sectors": {
         "11": {
@@ -4648,28 +4597,28 @@
           "disclosed": false
         },
         "22": {
-          "emplvl": 109,
-          "lq": 2.81
+          "emplvl": 118,
+          "lq": 3
         },
         "23": {
-          "emplvl": 545,
-          "lq": 1.02
+          "emplvl": 543,
+          "lq": 1.01
         },
         "42": {
-          "emplvl": 114,
-          "lq": 0.28
+          "emplvl": 104,
+          "lq": 0.26
         },
         "51": {
-          "emplvl": 169,
-          "lq": 0.89
+          "emplvl": 99,
+          "lq": 0.53
         },
         "52": {
-          "emplvl": 240,
-          "lq": 0.58
+          "emplvl": 247,
+          "lq": 0.6
         },
         "53": {
-          "emplvl": 109,
-          "lq": 0.69
+          "emplvl": 118,
+          "lq": 0.75
         },
         "54": {
           "disclosed": false
@@ -4678,44 +4627,44 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 282,
-          "lq": 0.47
+          "emplvl": 294,
+          "lq": 0.5
         },
         "61": {
-          "emplvl": 21,
-          "lq": 0.1
+          "emplvl": 30,
+          "lq": 0.14
         },
         "62": {
-          "emplvl": 1163,
-          "lq": 0.8
+          "emplvl": 1225,
+          "lq": 0.82
         },
         "71": {
-          "emplvl": 130,
-          "lq": 0.76
+          "emplvl": 120,
+          "lq": 0.69
         },
         "72": {
-          "emplvl": 1014,
-          "lq": 1.09
+          "emplvl": 1054,
+          "lq": 1.14
         },
         "81": {
-          "emplvl": 236,
+          "emplvl": 235,
           "lq": 0.77
         },
         "99": {
           "emplvl": 18,
-          "lq": 1.27
+          "lq": 1.37
         },
         "31-33": {
-          "emplvl": 1973,
-          "lq": 2.36
+          "emplvl": 1877,
+          "lq": 2.29
         },
         "44-45": {
-          "emplvl": 1491,
-          "lq": 1.47
+          "emplvl": 1501,
+          "lq": 1.49
         },
         "48-49": {
-          "emplvl": 287,
-          "lq": 0.67
+          "emplvl": 242,
+          "lq": 0.56
         }
       }
     },
@@ -4723,11 +4672,11 @@
       "fips": "26107",
       "name": "Mecosta",
       "totalPrivate": {
-        "emplvl": 8842,
-        "lq": 0.81
+        "emplvl": 8208,
+        "lq": 0.78
       },
       "totalAllOwnership": {
-        "emplvl": 12746
+        "emplvl": 12262
       },
       "sectors": {
         "11": {
@@ -4740,23 +4689,23 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 168,
-          "lq": 0.25
+          "emplvl": 176,
+          "lq": 0.27
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 102,
-          "lq": 0.43
+          "emplvl": 111,
+          "lq": 0.49
         },
         "52": {
-          "emplvl": 136,
-          "lq": 0.26
+          "emplvl": 138,
+          "lq": 0.28
         },
         "53": {
-          "emplvl": 73,
-          "lq": 0.37
+          "emplvl": 80,
+          "lq": 0.42
         },
         "54": {
           "disclosed": false
@@ -4765,44 +4714,43 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 498,
-          "lq": 0.66
+          "emplvl": 455,
+          "lq": 0.64
         },
         "61": {
-          "emplvl": 83,
+          "emplvl": 80,
           "lq": 0.31
         },
         "62": {
-          "emplvl": 1597,
-          "lq": 0.87
+          "emplvl": 1499,
+          "lq": 0.83
         },
         "71": {
-          "emplvl": 182,
-          "lq": 0.85
+          "emplvl": 168,
+          "lq": 0.8
         },
         "72": {
-          "emplvl": 1094,
-          "lq": 0.94
+          "emplvl": 1141,
+          "lq": 1.03
         },
         "81": {
-          "emplvl": 514,
-          "lq": 1.34
+          "emplvl": 522,
+          "lq": 1.42
         },
         "99": {
-          "emplvl": 58,
-          "lq": 3.26
+          "emplvl": 50,
+          "lq": 3.16
         },
         "31-33": {
-          "emplvl": 1226,
-          "lq": 1.17
+          "emplvl": 801,
+          "lq": 0.81
         },
         "44-45": {
-          "emplvl": 2362,
-          "lq": 1.86
+          "emplvl": 2277,
+          "lq": 1.88
         },
         "48-49": {
-          "emplvl": 225,
-          "lq": 0.42
+          "disclosed": false
         }
       }
     },
@@ -4810,11 +4758,11 @@
       "fips": "26109",
       "name": "Menominee",
       "totalPrivate": {
-        "emplvl": 5103,
-        "lq": 0.83
+        "emplvl": 4996,
+        "lq": 0.82
       },
       "totalAllOwnership": {
-        "emplvl": 7149
+        "emplvl": 7115
       },
       "sectors": {
         "11": {
@@ -4827,32 +4775,33 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 155,
-          "lq": 0.41
+          "disclosed": false
         },
         "42": {
-          "emplvl": 384,
-          "lq": 1.36
+          "emplvl": 356,
+          "lq": 1.29
         },
         "51": {
           "disclosed": false
         },
         "52": {
-          "emplvl": 119,
-          "lq": 0.41
+          "emplvl": 123,
+          "lq": 0.43
         },
         "53": {
-          "emplvl": 55,
-          "lq": 0.5
+          "emplvl": 60,
+          "lq": 0.54
         },
         "54": {
-          "disclosed": false
+          "emplvl": 86,
+          "lq": 0.18
         },
         "55": {
           "absent": true
         },
         "56": {
-          "disclosed": false
+          "emplvl": 155,
+          "lq": 0.38
         },
         "61": {
           "disclosed": false
@@ -4861,27 +4810,27 @@
           "disclosed": false
         },
         "71": {
-          "emplvl": 43,
-          "lq": 0.36
+          "emplvl": 48,
+          "lq": 0.39
         },
         "72": {
-          "emplvl": 484,
-          "lq": 0.74
+          "emplvl": 492,
+          "lq": 0.76
         },
         "81": {
-          "emplvl": 270,
-          "lq": 1.25
+          "emplvl": 262,
+          "lq": 1.23
         },
         "99": {
           "disclosed": false
         },
         "31-33": {
-          "emplvl": 2163,
-          "lq": 3.68
+          "emplvl": 2134,
+          "lq": 3.71
         },
         "44-45": {
-          "emplvl": 531,
-          "lq": 0.74
+          "emplvl": 495,
+          "lq": 0.7
         },
         "48-49": {
           "disclosed": false
@@ -4892,11 +4841,11 @@
       "fips": "26111",
       "name": "Midland",
       "totalPrivate": {
-        "emplvl": 35244,
-        "lq": 1.08
+        "emplvl": 35189,
+        "lq": 1.07
       },
       "totalAllOwnership": {
-        "emplvl": 38288
+        "emplvl": 38301
       },
       "sectors": {
         "11": {
@@ -4906,74 +4855,73 @@
           "disclosed": false
         },
         "22": {
-          "disclosed": false
+          "emplvl": 158,
+          "lq": 1.07
         },
         "23": {
-          "emplvl": 2209,
-          "lq": 1.1
-        },
-        "42": {
           "disclosed": false
         },
+        "42": {
+          "emplvl": 383,
+          "lq": 0.26
+        },
         "51": {
-          "emplvl": 207,
-          "lq": 0.29
+          "disclosed": false
         },
         "52": {
-          "emplvl": 641,
-          "lq": 0.41
+          "emplvl": 677,
+          "lq": 0.44
         },
         "53": {
-          "emplvl": 348,
+          "emplvl": 350,
           "lq": 0.59
         },
         "54": {
-          "emplvl": 1035,
+          "emplvl": 1028,
           "lq": 0.39
         },
         "55": {
-          "emplvl": 3834,
-          "lq": 5.94
+          "emplvl": 3941,
+          "lq": 6.14
         },
         "56": {
-          "emplvl": 3036,
-          "lq": 1.35
+          "emplvl": 2909,
+          "lq": 1.31
         },
         "61": {
-          "emplvl": 726,
-          "lq": 0.92
+          "emplvl": 754,
+          "lq": 0.94
         },
         "62": {
-          "emplvl": 8647,
-          "lq": 1.58
-        },
-        "71": {
-          "emplvl": 711,
-          "lq": 1.1
-        },
-        "72": {
-          "emplvl": 2955,
-          "lq": 0.85
-        },
-        "81": {
-          "emplvl": 1816,
-          "lq": 1.58
-        },
-        "99": {
-          "emplvl": 84,
+          "emplvl": 8869,
           "lq": 1.57
         },
+        "71": {
+          "emplvl": 708,
+          "lq": 1.08
+        },
+        "72": {
+          "emplvl": 2820,
+          "lq": 0.81
+        },
+        "81": {
+          "emplvl": 2041,
+          "lq": 1.77
+        },
+        "99": {
+          "disclosed": false
+        },
         "31-33": {
-          "emplvl": 4610,
-          "lq": 1.47
+          "emplvl": 4310,
+          "lq": 1.39
         },
         "44-45": {
-          "emplvl": 3254,
-          "lq": 0.85
+          "emplvl": 3256,
+          "lq": 0.86
         },
         "48-49": {
-          "emplvl": 438,
-          "lq": 0.27
+          "emplvl": 467,
+          "lq": 0.29
         }
       }
     },
@@ -4981,51 +4929,51 @@
       "fips": "26113",
       "name": "Missaukee",
       "totalPrivate": {
-        "emplvl": 3734,
-        "lq": 1.04
+        "emplvl": 3633,
+        "lq": 1.03
       },
       "totalAllOwnership": {
-        "emplvl": 4213
+        "emplvl": 4110
       },
       "sectors": {
         "11": {
-          "emplvl": 961,
-          "lq": 28.18
+          "emplvl": 870,
+          "lq": 26.78
         },
         "21": {
-          "emplvl": 38,
-          "lq": 2.38
+          "emplvl": 36,
+          "lq": 2.39
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 198,
-          "lq": 0.9
+          "emplvl": 204,
+          "lq": 0.94
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 7,
-          "lq": 0.09
+          "disclosed": false
         },
         "52": {
-          "disclosed": false
+          "emplvl": 31,
+          "lq": 0.19
         },
         "53": {
           "disclosed": false
         },
         "54": {
-          "emplvl": 61,
-          "lq": 0.21
+          "emplvl": 62,
+          "lq": 0.22
         },
         "55": {
           "absent": true
         },
         "56": {
-          "emplvl": 28,
-          "lq": 0.11
+          "emplvl": 67,
+          "lq": 0.28
         },
         "61": {
           "disclosed": false
@@ -5040,24 +4988,23 @@
           "disclosed": false
         },
         "81": {
-          "emplvl": 112,
-          "lq": 0.88
+          "emplvl": 116,
+          "lq": 0.94
         },
         "99": {
-          "emplvl": 6,
-          "lq": 1.02
+          "disclosed": false
         },
         "31-33": {
-          "emplvl": 680,
+          "emplvl": 650,
           "lq": 1.96
         },
         "44-45": {
-          "emplvl": 610,
-          "lq": 1.45
+          "emplvl": 586,
+          "lq": 1.44
         },
         "48-49": {
-          "emplvl": 196,
-          "lq": 1.1
+          "emplvl": 211,
+          "lq": 1.21
         }
       }
     },
@@ -5065,11 +5012,11 @@
       "fips": "26115",
       "name": "Monroe",
       "totalPrivate": {
-        "emplvl": 35905,
-        "lq": 1.02
+        "emplvl": 35197,
+        "lq": 1.01
       },
       "totalAllOwnership": {
-        "emplvl": 41159
+        "emplvl": 40577
       },
       "sectors": {
         "11": {
@@ -5082,23 +5029,23 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 1940,
-          "lq": 0.9
+          "emplvl": 1953,
+          "lq": 0.91
         },
         "42": {
           "disclosed": false
         },
         "51": {
           "emplvl": 213,
-          "lq": 0.28
+          "lq": 0.29
         },
         "52": {
-          "emplvl": 684,
-          "lq": 0.41
+          "emplvl": 708,
+          "lq": 0.43
         },
         "53": {
-          "emplvl": 223,
-          "lq": 0.35
+          "emplvl": 279,
+          "lq": 0.44
         },
         "54": {
           "disclosed": false
@@ -5107,44 +5054,44 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 2310,
-          "lq": 0.95
+          "emplvl": 2195,
+          "lq": 0.93
         },
         "61": {
-          "emplvl": 395,
-          "lq": 0.46
+          "emplvl": 384,
+          "lq": 0.45
         },
         "62": {
-          "emplvl": 4683,
-          "lq": 0.79
+          "emplvl": 4442,
+          "lq": 0.74
         },
         "71": {
-          "emplvl": 455,
-          "lq": 0.66
+          "emplvl": 473,
+          "lq": 0.68
         },
         "72": {
-          "emplvl": 4278,
-          "lq": 1.14
+          "emplvl": 4218,
+          "lq": 1.15
         },
         "81": {
-          "emplvl": 1199,
-          "lq": 0.97
+          "emplvl": 1332,
+          "lq": 1.09
         },
         "99": {
-          "emplvl": 152,
-          "lq": 2.65
+          "emplvl": 148,
+          "lq": 2.82
         },
         "31-33": {
-          "emplvl": 5814,
+          "emplvl": 5648,
           "lq": 1.72
         },
         "44-45": {
-          "emplvl": 5380,
-          "lq": 1.31
+          "emplvl": 5572,
+          "lq": 1.39
         },
         "48-49": {
-          "emplvl": 2107,
-          "lq": 1.21
+          "emplvl": 1892,
+          "lq": 1.1
         }
       }
     },
@@ -5152,89 +5099,91 @@
       "fips": "26117",
       "name": "Montcalm",
       "totalPrivate": {
-        "emplvl": 13129,
+        "emplvl": 13239,
         "lq": 0.94
       },
       "totalAllOwnership": {
-        "emplvl": 16263
+        "emplvl": 16387
       },
       "sectors": {
         "11": {
-          "disclosed": false
+          "emplvl": 435,
+          "lq": 3.36
         },
         "21": {
-          "disclosed": false
+          "emplvl": 8,
+          "lq": 0.13
         },
         "22": {
-          "emplvl": 131,
-          "lq": 2.12
+          "emplvl": 95,
+          "lq": 1.5
         },
         "23": {
-          "emplvl": 678,
-          "lq": 0.79
+          "emplvl": 724,
+          "lq": 0.83
         },
         "42": {
-          "emplvl": 295,
+          "emplvl": 294,
           "lq": 0.46
         },
         "51": {
-          "emplvl": 132,
-          "lq": 0.43
+          "emplvl": 200,
+          "lq": 0.67
         },
         "52": {
-          "emplvl": 307,
-          "lq": 0.47
+          "emplvl": 302,
+          "lq": 0.45
         },
         "53": {
-          "emplvl": 33,
+          "emplvl": 34,
           "lq": 0.13
         },
         "54": {
-          "emplvl": 182,
-          "lq": 0.16
+          "emplvl": 192,
+          "lq": 0.17
         },
         "55": {
           "absent": true
         },
         "56": {
-          "emplvl": 517,
-          "lq": 0.54
+          "emplvl": 497,
+          "lq": 0.52
         },
         "61": {
           "emplvl": 15,
           "lq": 0.04
         },
         "62": {
-          "emplvl": 2182,
-          "lq": 0.94
+          "emplvl": 2308,
+          "lq": 0.95
         },
         "71": {
-          "emplvl": 131,
-          "lq": 0.48
+          "emplvl": 106,
+          "lq": 0.38
         },
         "72": {
-          "emplvl": 1744,
-          "lq": 1.18
+          "emplvl": 1703,
+          "lq": 1.15
         },
         "81": {
-          "emplvl": 408,
-          "lq": 0.83
+          "emplvl": 433,
+          "lq": 0.88
         },
         "99": {
-          "emplvl": 56,
-          "lq": 2.47
+          "emplvl": 58,
+          "lq": 2.74
         },
         "31-33": {
-          "emplvl": 3141,
-          "lq": 2.35
+          "emplvl": 3101,
+          "lq": 2.34
         },
         "44-45": {
-          "emplvl": 2399,
+          "emplvl": 2394,
           "lq": 1.48
         },
         "48-49": {
-          "emplvl": 351,
-          "lq": 0.51
+          "emplvl": 338,
+          "lq": 0.49
         }
       }
     },
@@ -5243,10 +5192,10 @@
       "name": "Montmorency",
       "totalPrivate": {
         "emplvl": 1626,
-        "lq": 0.93
+        "lq": 0.92
       },
       "totalAllOwnership": {
-        "emplvl": 2050
+        "emplvl": 2056
       },
       "sectors": {
         "11": {
@@ -5268,8 +5217,8 @@
           "disclosed": false
         },
         "52": {
-          "emplvl": 65,
-          "lq": 0.78
+          "emplvl": 64,
+          "lq": 0.77
         },
         "53": {
           "emplvl": 24,
@@ -5282,7 +5231,8 @@
           "absent": true
         },
         "56": {
-          "disclosed": false
+          "emplvl": 12,
+          "lq": 0.1
         },
         "61": {
           "disclosed": false
@@ -5291,31 +5241,31 @@
           "disclosed": false
         },
         "71": {
-          "emplvl": 78,
-          "lq": 2.26
+          "emplvl": 95,
+          "lq": 2.7
         },
         "72": {
-          "emplvl": 189,
-          "lq": 1.01
+          "emplvl": 193,
+          "lq": 1.04
         },
         "81": {
-          "emplvl": 50,
-          "lq": 0.81
+          "emplvl": 49,
+          "lq": 0.79
         },
         "99": {
           "disclosed": false
         },
         "31-33": {
-          "emplvl": 441,
-          "lq": 2.62
+          "emplvl": 433,
+          "lq": 2.61
         },
         "44-45": {
-          "emplvl": 229,
-          "lq": 1.12
+          "emplvl": 220,
+          "lq": 1.08
         },
         "48-49": {
-          "emplvl": 22,
-          "lq": 0.25
+          "emplvl": 24,
+          "lq": 0.27
         }
       }
     },
@@ -5323,90 +5273,88 @@
       "fips": "26121",
       "name": "Muskegon",
       "totalPrivate": {
-        "emplvl": 56184,
+        "emplvl": 54648,
         "lq": 1.03
       },
       "totalAllOwnership": {
-        "emplvl": 63475
+        "emplvl": 62026
       },
       "sectors": {
         "11": {
-          "disclosed": false
+          "emplvl": 621,
+          "lq": 1.27
         },
         "21": {
-          "disclosed": false
+          "emplvl": 62,
+          "lq": 0.27
         },
         "22": {
-          "emplvl": 227,
-          "lq": 0.94
+          "disclosed": false
         },
         "23": {
-          "emplvl": 2424,
-          "lq": 0.73
+          "emplvl": 2468,
+          "lq": 0.75
         },
         "42": {
-          "emplvl": 1497,
-          "lq": 0.6
+          "emplvl": 1477,
+          "lq": 0.61
         },
         "51": {
-          "emplvl": 264,
-          "lq": 0.22
+          "emplvl": 266,
+          "lq": 0.23
         },
         "52": {
-          "emplvl": 955,
-          "lq": 0.37
+          "emplvl": 995,
+          "lq": 0.4
         },
         "53": {
-          "emplvl": 623,
-          "lq": 0.63
+          "emplvl": 622,
+          "lq": 0.65
         },
         "54": {
-          "emplvl": 1848,
-          "lq": 0.42
+          "disclosed": false
         },
         "55": {
-          "emplvl": 77,
-          "lq": 0.07
+          "disclosed": false
         },
         "56": {
-          "emplvl": 1553,
-          "lq": 0.42
+          "emplvl": 1539,
+          "lq": 0.43
         },
         "61": {
-          "emplvl": 725,
-          "lq": 0.55
+          "emplvl": 726,
+          "lq": 0.56
         },
         "62": {
-          "emplvl": 10424,
-          "lq": 1.15
+          "emplvl": 11063,
+          "lq": 1.21
         },
         "71": {
-          "emplvl": 970,
-          "lq": 0.91
+          "emplvl": 949,
+          "lq": 0.89
         },
         "72": {
-          "emplvl": 6838,
-          "lq": 1.18
+          "emplvl": 7257,
+          "lq": 1.29
         },
         "81": {
-          "emplvl": 1828,
+          "emplvl": 1790,
           "lq": 0.96
         },
         "99": {
-          "emplvl": 200,
-          "lq": 2.26
+          "emplvl": 185,
+          "lq": 2.31
         },
         "31-33": {
-          "emplvl": 13093,
-          "lq": 2.51
+          "emplvl": 13579,
+          "lq": 2.71
         },
         "44-45": {
-          "emplvl": 11104,
-          "lq": 1.75
+          "emplvl": 8500,
+          "lq": 1.39
         },
         "48-49": {
-          "emplvl": 834,
-          "lq": 0.31
+          "disclosed": false
         }
       }
     },
@@ -5414,16 +5362,16 @@
       "fips": "26123",
       "name": "Newaygo",
       "totalPrivate": {
-        "emplvl": 9855,
-        "lq": 0.97
+        "emplvl": 9722,
+        "lq": 0.96
       },
       "totalAllOwnership": {
-        "emplvl": 11901
+        "emplvl": 11796
       },
       "sectors": {
         "11": {
-          "emplvl": 500,
-          "lq": 5.19
+          "emplvl": 487,
+          "lq": 5.22
         },
         "21": {
           "absent": true
@@ -5432,23 +5380,23 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 539,
-          "lq": 0.86
+          "emplvl": 582,
+          "lq": 0.93
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 36,
+          "emplvl": 34,
           "lq": 0.16
         },
         "52": {
-          "emplvl": 596,
-          "lq": 1.23
+          "emplvl": 599,
+          "lq": 1.25
         },
         "53": {
-          "emplvl": 36,
-          "lq": 0.19
+          "emplvl": 37,
+          "lq": 0.2
         },
         "54": {
           "disclosed": false
@@ -5457,44 +5405,41 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 498,
-          "lq": 0.71
+          "disclosed": false
         },
         "61": {
-          "emplvl": 74,
-          "lq": 0.3
+          "emplvl": 90,
+          "lq": 0.37
         },
         "62": {
-          "emplvl": 1317,
-          "lq": 0.77
+          "emplvl": 1436,
+          "lq": 0.82
         },
         "71": {
-          "emplvl": 116,
-          "lq": 0.58
+          "disclosed": false
         },
         "72": {
-          "emplvl": 753,
-          "lq": 0.7
+          "disclosed": false
         },
         "81": {
           "emplvl": 558,
-          "lq": 1.56
+          "lq": 1.58
         },
         "99": {
-          "emplvl": 20,
-          "lq": 1.21
+          "emplvl": 22,
+          "lq": 1.44
         },
         "31-33": {
-          "emplvl": 2211,
-          "lq": 2.26
+          "emplvl": 1962,
+          "lq": 2.06
         },
         "44-45": {
-          "emplvl": 1775,
+          "emplvl": 1740,
           "lq": 1.49
         },
         "48-49": {
-          "emplvl": 173,
-          "lq": 0.34
+          "emplvl": 183,
+          "lq": 0.37
         }
       }
     },
@@ -5502,92 +5447,92 @@
       "fips": "26125",
       "name": "Oakland",
       "totalPrivate": {
-        "emplvl": 676710,
+        "emplvl": 673280,
         "lq": 1.09
       },
       "totalAllOwnership": {
-        "emplvl": 723862
+        "emplvl": 720266
       },
       "sectors": {
         "11": {
-          "emplvl": 970,
+          "emplvl": 958,
           "lq": 0.17
         },
         "21": {
-          "emplvl": 226,
-          "lq": 0.08
+          "emplvl": 228,
+          "lq": 0.09
         },
         "22": {
-          "emplvl": 1632,
-          "lq": 0.59
+          "emplvl": 1679,
+          "lq": 0.6
         },
         "23": {
-          "emplvl": 32506,
+          "emplvl": 32969,
           "lq": 0.86
         },
         "42": {
-          "emplvl": 38222,
-          "lq": 1.34
+          "emplvl": 36823,
+          "lq": 1.32
         },
         "51": {
-          "emplvl": 13074,
-          "lq": 0.96
+          "emplvl": 12510,
+          "lq": 0.95
         },
         "52": {
-          "emplvl": 42518,
-          "lq": 1.45
+          "emplvl": 44955,
+          "lq": 1.54
         },
         "53": {
-          "emplvl": 19133,
+          "emplvl": 18941,
           "lq": 1.7
         },
         "54": {
-          "emplvl": 93104,
-          "lq": 1.85
+          "emplvl": 88666,
+          "lq": 1.78
         },
         "55": {
-          "emplvl": 15819,
-          "lq": 1.3
+          "emplvl": 14992,
+          "lq": 1.24
         },
         "56": {
-          "emplvl": 49441,
-          "lq": 1.16
+          "emplvl": 49524,
+          "lq": 1.19
         },
         "61": {
-          "emplvl": 11862,
-          "lq": 0.79
+          "emplvl": 11704,
+          "lq": 0.78
         },
         "62": {
-          "emplvl": 110614,
-          "lq": 1.07
+          "emplvl": 115468,
+          "lq": 1.09
         },
         "71": {
-          "emplvl": 11009,
-          "lq": 0.9
+          "emplvl": 12086,
+          "lq": 0.98
         },
         "72": {
-          "emplvl": 57076,
-          "lq": 0.87
+          "emplvl": 55988,
+          "lq": 0.86
         },
         "81": {
-          "emplvl": 21497,
-          "lq": 0.99
+          "emplvl": 22562,
+          "lq": 1.04
         },
         "99": {
-          "emplvl": 2660,
-          "lq": 2.64
+          "emplvl": 2340,
+          "lq": 2.52
         },
         "31-33": {
-          "emplvl": 68661,
-          "lq": 1.15
+          "emplvl": 65725,
+          "lq": 1.13
         },
         "44-45": {
-          "emplvl": 71533,
-          "lq": 0.99
+          "emplvl": 69758,
+          "lq": 0.98
         },
         "48-49": {
-          "emplvl": 15153,
-          "lq": 0.49
+          "emplvl": 15402,
+          "lq": 0.5
         }
       }
     },
@@ -5595,11 +5540,11 @@
       "fips": "26127",
       "name": "Oceana",
       "totalPrivate": {
-        "emplvl": 5237,
-        "lq": 0.95
+        "emplvl": 5256,
+        "lq": 0.94
       },
       "totalAllOwnership": {
-        "emplvl": 6470
+        "emplvl": 6510
       },
       "sectors": {
         "11": {
@@ -5612,26 +5557,27 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 298,
-          "lq": 0.88
+          "emplvl": 324,
+          "lq": 0.94
         },
         "42": {
-          "emplvl": 260,
-          "lq": 1.02
+          "emplvl": 259,
+          "lq": 1.03
         },
         "51": {
-          "disclosed": false
+          "emplvl": 9,
+          "lq": 0.08
         },
         "52": {
-          "emplvl": 92,
-          "lq": 0.35
+          "emplvl": 99,
+          "lq": 0.37
         },
         "53": {
-          "emplvl": 51,
-          "lq": 0.51
+          "emplvl": 44,
+          "lq": 0.44
         },
         "54": {
-          "emplvl": 96,
+          "emplvl": 94,
           "lq": 0.21
         },
         "55": {
@@ -5647,27 +5593,28 @@
           "disclosed": false
         },
         "71": {
-          "emplvl": 126,
-          "lq": 1.16
+          "emplvl": 135,
+          "lq": 1.21
         },
         "72": {
-          "emplvl": 754,
-          "lq": 1.28
+          "emplvl": 694,
+          "lq": 1.18
         },
         "81": {
-          "emplvl": 142,
-          "lq": 0.73
+          "emplvl": 149,
+          "lq": 0.76
         },
         "99": {
-          "disclosed": false
+          "emplvl": 39,
+          "lq": 4.64
         },
         "31-33": {
-          "emplvl": 1401,
-          "lq": 2.64
+          "emplvl": 1455,
+          "lq": 2.77
         },
         "44-45": {
-          "emplvl": 1096,
-          "lq": 1.7
+          "emplvl": 1127,
+          "lq": 1.75
         },
         "48-49": {
           "disclosed": false
@@ -5678,86 +5625,83 @@
       "fips": "26129",
       "name": "Ogemaw",
       "totalPrivate": {
-        "emplvl": 5272,
+        "emplvl": 5348,
         "lq": 1.03
       },
       "totalAllOwnership": {
-        "emplvl": 6008
+        "emplvl": 6086
       },
       "sectors": {
         "11": {
-          "emplvl": 185,
-          "lq": 3.8
+          "disclosed": false
         },
         "21": {
-          "emplvl": 25,
-          "lq": 1.1
+          "disclosed": false
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 289,
-          "lq": 0.92
+          "emplvl": 287,
+          "lq": 0.89
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 48,
-          "lq": 0.43
+          "disclosed": false
         },
         "52": {
-          "emplvl": 113,
-          "lq": 0.46
+          "emplvl": 111,
+          "lq": 0.45
         },
         "53": {
-          "emplvl": 39,
-          "lq": 0.42
+          "emplvl": 44,
+          "lq": 0.47
         },
         "54": {
-          "emplvl": 59,
-          "lq": 0.14
+          "disclosed": false
         },
         "55": {
           "absent": true
         },
         "56": {
-          "emplvl": 71,
-          "lq": 0.2
+          "emplvl": 78,
+          "lq": 0.22
         },
         "61": {
           "absent": true
         },
         "62": {
-          "disclosed": false
+          "emplvl": 1126,
+          "lq": 1.25
         },
         "71": {
-          "emplvl": 78,
-          "lq": 0.77
+          "emplvl": 74,
+          "lq": 0.71
         },
         "72": {
-          "emplvl": 676,
-          "lq": 1.24
+          "emplvl": 729,
+          "lq": 1.32
         },
         "81": {
-          "emplvl": 206,
-          "lq": 1.14
+          "emplvl": 199,
+          "lq": 1.09
         },
         "99": {
           "disclosed": false
         },
         "31-33": {
-          "emplvl": 341,
-          "lq": 0.69
+          "emplvl": 330,
+          "lq": 0.67
         },
         "44-45": {
-          "emplvl": 1515,
+          "emplvl": 1516,
           "lq": 2.52
         },
         "48-49": {
-          "emplvl": 307,
-          "lq": 1.21
+          "emplvl": 277,
+          "lq": 1.07
         }
       }
     },
@@ -5765,8 +5709,8 @@
       "fips": "26131",
       "name": "Ontonagon",
       "totalPrivate": {
-        "emplvl": 905,
-        "lq": 0.79
+        "emplvl": 898,
+        "lq": 0.78
       },
       "totalAllOwnership": {
         "emplvl": 1338
@@ -5782,8 +5726,8 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 67,
-          "lq": 0.95
+          "emplvl": 64,
+          "lq": 0.9
         },
         "42": {
           "disclosed": false
@@ -5798,20 +5742,22 @@
           "disclosed": false
         },
         "54": {
-          "disclosed": false
+          "emplvl": 16,
+          "lq": 0.17
         },
         "55": {
           "absent": true
         },
         "56": {
-          "disclosed": false
+          "emplvl": 22,
+          "lq": 0.28
         },
         "61": {
           "absent": true
         },
         "62": {
           "emplvl": 65,
-          "lq": 0.34
+          "lq": 0.33
         },
         "71": {
           "disclosed": false
@@ -5820,22 +5766,21 @@
           "disclosed": false
         },
         "81": {
-          "emplvl": 34,
-          "lq": 0.84
+          "disclosed": false
         },
         "99": {
           "disclosed": false
         },
         "31-33": {
-          "emplvl": 20,
-          "lq": 0.18
+          "disclosed": false
         },
         "44-45": {
-          "emplvl": 392,
-          "lq": 2.93
+          "emplvl": 380,
+          "lq": 2.87
         },
         "48-49": {
-          "disclosed": false
+          "emplvl": 7,
+          "lq": 0.12
         }
       }
     },
@@ -5843,42 +5788,41 @@
       "fips": "26133",
       "name": "Osceola",
       "totalPrivate": {
-        "emplvl": 7032,
-        "lq": 1.03
+        "emplvl": 6689,
+        "lq": 1.02
       },
       "totalAllOwnership": {
-        "emplvl": 8011
+        "emplvl": 7692
       },
       "sectors": {
         "11": {
-          "emplvl": 111,
-          "lq": 1.71
+          "emplvl": 134,
+          "lq": 2.2
         },
         "21": {
-          "emplvl": 36,
-          "lq": 1.19
+          "emplvl": 30,
+          "lq": 1.06
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 938,
-          "lq": 2.23
+          "emplvl": 918,
+          "lq": 2.25
         },
         "42": {
-          "emplvl": 176,
+          "emplvl": 168,
           "lq": 0.56
         },
         "51": {
           "disclosed": false
         },
         "52": {
-          "emplvl": 95,
-          "lq": 0.29
+          "emplvl": 93,
+          "lq": 0.3
         },
         "53": {
-          "emplvl": 23,
-          "lq": 0.18
+          "disclosed": false
         },
         "54": {
           "disclosed": false
@@ -5887,38 +5831,37 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 200,
-          "lq": 0.42
+          "disclosed": false
         },
         "61": {
           "absent": true
         },
         "62": {
-          "emplvl": 963,
-          "lq": 0.84
+          "emplvl": 1002,
+          "lq": 0.88
         },
         "71": {
-          "emplvl": 28,
-          "lq": 0.21
+          "emplvl": 24,
+          "lq": 0.18
         },
         "72": {
-          "emplvl": 282,
-          "lq": 0.39
+          "emplvl": 258,
+          "lq": 0.37
         },
         "81": {
-          "emplvl": 217,
-          "lq": 0.9
+          "emplvl": 213,
+          "lq": 0.92
         },
         "99": {
           "disclosed": false
         },
         "31-33": {
-          "emplvl": 2518,
-          "lq": 3.83
+          "emplvl": 2128,
+          "lq": 3.42
         },
         "44-45": {
-          "emplvl": 407,
-          "lq": 0.51
+          "emplvl": 423,
+          "lq": 0.56
         },
         "48-49": {
           "disclosed": false
@@ -5929,57 +5872,53 @@
       "fips": "26135",
       "name": "Oscoda",
       "totalPrivate": {
-        "emplvl": 1017,
-        "lq": 0.87
+        "emplvl": 1008,
+        "lq": 0.86
       },
       "totalAllOwnership": {
-        "emplvl": 1364
+        "emplvl": 1363
       },
       "sectors": {
         "11": {
-          "emplvl": 11,
-          "lq": 1
+          "disclosed": false
         },
         "21": {
-          "absent": true
+          "disclosed": false
         },
         "22": {
           "absent": true
         },
         "23": {
-          "emplvl": 75,
-          "lq": 1.05
+          "disclosed": false
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 6,
-          "lq": 0.23
+          "disclosed": false
         },
         "52": {
-          "disclosed": false
+          "emplvl": 38,
+          "lq": 0.69
         },
         "53": {
-          "disclosed": false
+          "emplvl": 10,
+          "lq": 0.47
         },
         "54": {
-          "emplvl": 17,
-          "lq": 0.18
+          "disclosed": false
         },
         "55": {
           "absent": true
         },
         "56": {
-          "emplvl": 69,
-          "lq": 0.86
+          "disclosed": false
         },
         "61": {
           "absent": true
         },
         "62": {
-          "emplvl": 54,
-          "lq": 0.28
+          "disclosed": false
         },
         "71": {
           "disclosed": false
@@ -5992,15 +5931,14 @@
           "lq": 1.78
         },
         "99": {
-          "emplvl": 7,
-          "lq": 3.68
+          "disclosed": false
         },
         "31-33": {
-          "emplvl": 148,
-          "lq": 1.32
+          "emplvl": 131,
+          "lq": 1.19
         },
         "44-45": {
-          "emplvl": 226,
+          "emplvl": 223,
           "lq": 1.66
         },
         "48-49": {
@@ -6012,48 +5950,48 @@
       "fips": "26137",
       "name": "Otsego",
       "totalPrivate": {
-        "emplvl": 9484,
-        "lq": 1.04
+        "emplvl": 9300,
+        "lq": 1.03
       },
       "totalAllOwnership": {
-        "emplvl": 10703
+        "emplvl": 10549
       },
       "sectors": {
         "11": {
-          "emplvl": 86,
-          "lq": 0.99
+          "emplvl": 85,
+          "lq": 1.02
         },
         "21": {
-          "emplvl": 232,
-          "lq": 5.73
+          "emplvl": 72,
+          "lq": 1.86
         },
         "22": {
-          "emplvl": 92,
-          "lq": 2.26
+          "emplvl": 95,
+          "lq": 2.33
         },
         "23": {
-          "emplvl": 626,
-          "lq": 1.11
+          "emplvl": 647,
+          "lq": 1.16
         },
         "42": {
-          "emplvl": 341,
-          "lq": 0.81
+          "emplvl": 347,
+          "lq": 0.85
         },
         "51": {
           "emplvl": 48,
-          "lq": 0.24
+          "lq": 0.25
         },
         "52": {
-          "emplvl": 482,
-          "lq": 1.11
+          "emplvl": 504,
+          "lq": 1.18
         },
         "53": {
-          "emplvl": 64,
-          "lq": 0.39
+          "emplvl": 79,
+          "lq": 0.48
         },
         "54": {
-          "emplvl": 271,
-          "lq": 0.36
+          "emplvl": 280,
+          "lq": 0.38
         },
         "55": {
           "disclosed": false
@@ -6068,32 +6006,32 @@
           "disclosed": false
         },
         "71": {
-          "emplvl": 218,
-          "lq": 1.21
+          "emplvl": 190,
+          "lq": 1.05
         },
         "72": {
-          "emplvl": 1353,
-          "lq": 1.39
+          "emplvl": 1316,
+          "lq": 1.38
         },
         "81": {
-          "emplvl": 466,
+          "emplvl": 460,
           "lq": 1.45
         },
         "99": {
-          "emplvl": 34,
+          "emplvl": 31,
           "lq": 2.28
         },
         "31-33": {
-          "emplvl": 998,
-          "lq": 1.13
+          "emplvl": 974,
+          "lq": 1.14
         },
         "44-45": {
-          "emplvl": 2260,
-          "lq": 2.11
+          "emplvl": 2218,
+          "lq": 2.13
         },
         "48-49": {
-          "emplvl": 342,
-          "lq": 0.75
+          "emplvl": 325,
+          "lq": 0.72
         }
       }
     },
@@ -6101,92 +6039,92 @@
       "fips": "26139",
       "name": "Ottawa",
       "totalPrivate": {
-        "emplvl": 115836,
-        "lq": 1.03
+        "emplvl": 113317,
+        "lq": 1.02
       },
       "totalAllOwnership": {
-        "emplvl": 131885
+        "emplvl": 129408
       },
       "sectors": {
         "11": {
-          "emplvl": 3561,
-          "lq": 3.34
+          "emplvl": 3556,
+          "lq": 3.48
         },
         "21": {
-          "emplvl": 65,
-          "lq": 0.13
+          "emplvl": 68,
+          "lq": 0.14
         },
         "22": {
-          "emplvl": 678,
-          "lq": 1.35
+          "emplvl": 698,
+          "lq": 1.4
         },
         "23": {
-          "emplvl": 6952,
-          "lq": 1
+          "emplvl": 7064,
+          "lq": 1.03
         },
         "42": {
-          "emplvl": 5141,
-          "lq": 0.99
+          "emplvl": 5075,
+          "lq": 1.01
         },
         "51": {
-          "emplvl": 667,
-          "lq": 0.27
+          "emplvl": 603,
+          "lq": 0.25
         },
         "52": {
-          "emplvl": 2381,
-          "lq": 0.44
+          "emplvl": 2389,
+          "lq": 0.46
         },
         "53": {
-          "emplvl": 1064,
-          "lq": 0.52
+          "emplvl": 1118,
+          "lq": 0.56
         },
         "54": {
-          "emplvl": 4764,
-          "lq": 0.52
+          "emplvl": 4500,
+          "lq": 0.5
         },
         "55": {
-          "emplvl": 230,
-          "lq": 0.1
+          "emplvl": 187,
+          "lq": 0.09
         },
         "56": {
-          "emplvl": 6750,
-          "lq": 0.87
+          "emplvl": 6718,
+          "lq": 0.9
         },
         "61": {
-          "emplvl": 2959,
-          "lq": 1.09
+          "emplvl": 2906,
+          "lq": 1.08
         },
         "62": {
-          "emplvl": 9743,
-          "lq": 0.52
+          "emplvl": 9789,
+          "lq": 0.51
         },
         "71": {
-          "emplvl": 1393,
-          "lq": 0.63
+          "emplvl": 1408,
+          "lq": 0.64
         },
         "72": {
-          "emplvl": 10395,
-          "lq": 0.87
+          "emplvl": 11150,
+          "lq": 0.95
         },
         "81": {
-          "emplvl": 4789,
-          "lq": 1.21
+          "emplvl": 4582,
+          "lq": 1.18
         },
         "99": {
-          "emplvl": 339,
-          "lq": 1.84
+          "emplvl": 296,
+          "lq": 1.77
         },
         "31-33": {
-          "emplvl": 40464,
-          "lq": 3.73
+          "emplvl": 37739,
+          "lq": 3.61
         },
         "44-45": {
-          "emplvl": 10500,
-          "lq": 0.8
+          "emplvl": 10692,
+          "lq": 0.84
         },
         "48-49": {
-          "emplvl": 3001,
-          "lq": 0.54
+          "emplvl": 2780,
+          "lq": 0.51
         }
       }
     },
@@ -6194,11 +6132,11 @@
       "fips": "26141",
       "name": "Presque Isle",
       "totalPrivate": {
-        "emplvl": 1978,
+        "emplvl": 1955,
         "lq": 0.89
       },
       "totalAllOwnership": {
-        "emplvl": 2595
+        "emplvl": 2561
       },
       "sectors": {
         "11": {
@@ -6218,27 +6156,27 @@
           "disclosed": false
         },
         "51": {
-          "emplvl": 26,
-          "lq": 0.53
+          "emplvl": 29,
+          "lq": 0.62
         },
         "52": {
-          "emplvl": 98,
-          "lq": 0.93
+          "emplvl": 101,
+          "lq": 0.97
         },
         "53": {
-          "emplvl": 18,
-          "lq": 0.45
+          "emplvl": 15,
+          "lq": 0.38
         },
         "54": {
-          "emplvl": 32,
-          "lq": 0.18
+          "emplvl": 34,
+          "lq": 0.19
         },
         "55": {
           "absent": true
         },
         "56": {
-          "emplvl": 91,
-          "lq": 0.6
+          "emplvl": 44,
+          "lq": 0.3
         },
         "61": {
           "disclosed": false
@@ -6253,23 +6191,24 @@
           "disclosed": false
         },
         "81": {
-          "emplvl": 95,
-          "lq": 1.22
+          "emplvl": 91,
+          "lq": 1.18
         },
         "99": {
           "emplvl": 13,
-          "lq": 3.59
+          "lq": 3.93
         },
         "31-33": {
-          "emplvl": 122,
-          "lq": 0.57
+          "emplvl": 114,
+          "lq": 0.55
         },
         "44-45": {
-          "emplvl": 376,
-          "lq": 1.45
+          "emplvl": 371,
+          "lq": 1.47
         },
         "48-49": {
-          "disclosed": false
+          "emplvl": 20,
+          "lq": 0.18
         }
       }
     },
@@ -6277,11 +6216,11 @@
       "fips": "26143",
       "name": "Roscommon",
       "totalPrivate": {
-        "emplvl": 5179,
-        "lq": 0.94
+        "emplvl": 4819,
+        "lq": 0.92
       },
       "totalAllOwnership": {
-        "emplvl": 6429
+        "emplvl": 6103
       },
       "sectors": {
         "11": {
@@ -6291,38 +6230,36 @@
           "disclosed": false
         },
         "22": {
-          "disclosed": false
+          "absent": true
         },
         "23": {
-          "emplvl": 285,
-          "lq": 0.84
+          "emplvl": 316,
+          "lq": 0.98
         },
         "42": {
-          "disclosed": false
+          "emplvl": 45,
+          "lq": 0.19
         },
         "51": {
           "emplvl": 18,
-          "lq": 0.15
+          "lq": 0.16
         },
         "52": {
-          "emplvl": 104,
-          "lq": 0.4
+          "emplvl": 102,
+          "lq": 0.41
         },
         "53": {
-          "emplvl": 60,
-          "lq": 0.6
+          "emplvl": 53,
+          "lq": 0.56
         },
         "54": {
-          "emplvl": 65,
-          "lq": 0.15
+          "disclosed": false
         },
         "55": {
-          "emplvl": 43,
-          "lq": 0.4
+          "disclosed": false
         },
         "56": {
-          "emplvl": 68,
-          "lq": 0.18
+          "disclosed": false
         },
         "61": {
           "disclosed": false
@@ -6331,32 +6268,32 @@
           "disclosed": false
         },
         "71": {
-          "emplvl": 168,
-          "lq": 1.55
+          "emplvl": 158,
+          "lq": 1.51
         },
         "72": {
-          "emplvl": 1916,
-          "lq": 3.28
+          "emplvl": 1612,
+          "lq": 2.91
         },
         "81": {
-          "emplvl": 215,
-          "lq": 1.11
+          "emplvl": 212,
+          "lq": 1.16
         },
         "99": {
-          "emplvl": 25,
-          "lq": 2.79
+          "emplvl": 18,
+          "lq": 2.28
         },
         "31-33": {
-          "emplvl": 355,
-          "lq": 0.67
+          "emplvl": 277,
+          "lq": 0.56
         },
         "44-45": {
-          "emplvl": 1171,
-          "lq": 1.82
+          "emplvl": 1158,
+          "lq": 1.92
         },
         "48-49": {
-          "emplvl": 66,
-          "lq": 0.24
+          "emplvl": 64,
+          "lq": 0.25
         }
       }
     },
@@ -6364,11 +6301,11 @@
       "fips": "26145",
       "name": "Saginaw",
       "totalPrivate": {
-        "emplvl": 69046,
+        "emplvl": 69804,
         "lq": 1.02
       },
       "totalAllOwnership": {
-        "emplvl": 79478
+        "emplvl": 80210
       },
       "sectors": {
         "11": {
@@ -6381,67 +6318,67 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 3351,
-          "lq": 0.8
+          "emplvl": 3365,
+          "lq": 0.79
         },
         "42": {
-          "emplvl": 2386,
-          "lq": 0.76
+          "emplvl": 2501,
+          "lq": 0.8
         },
         "51": {
-          "emplvl": 687,
-          "lq": 0.46
+          "emplvl": 513,
+          "lq": 0.35
         },
         "52": {
-          "emplvl": 2868,
-          "lq": 0.89
+          "emplvl": 2920,
+          "lq": 0.9
         },
         "53": {
-          "emplvl": 614,
-          "lq": 0.5
+          "emplvl": 613,
+          "lq": 0.49
         },
         "54": {
-          "emplvl": 2524,
-          "lq": 0.46
+          "emplvl": 2776,
+          "lq": 0.5
         },
         "55": {
-          "emplvl": 269,
-          "lq": 0.2
+          "emplvl": 226,
+          "lq": 0.17
         },
         "56": {
-          "emplvl": 5214,
-          "lq": 1.11
+          "emplvl": 5023,
+          "lq": 1.08
         },
         "61": {
-          "emplvl": 439,
-          "lq": 0.27
+          "emplvl": 436,
+          "lq": 0.26
         },
         "62": {
-          "emplvl": 14629,
-          "lq": 1.28
+          "emplvl": 14868,
+          "lq": 1.26
         },
         "71": {
-          "emplvl": 712,
-          "lq": 0.53
+          "emplvl": 776,
+          "lq": 0.56
         },
         "72": {
-          "emplvl": 8057,
-          "lq": 1.11
+          "emplvl": 8280,
+          "lq": 1.14
         },
         "81": {
-          "emplvl": 2539,
-          "lq": 1.06
+          "emplvl": 2342,
+          "lq": 0.97
         },
         "99": {
-          "emplvl": 118,
-          "lq": 1.06
+          "emplvl": 113,
+          "lq": 1.09
         },
         "31-33": {
-          "emplvl": 10729,
-          "lq": 1.64
+          "emplvl": 10964,
+          "lq": 1.69
         },
         "44-45": {
-          "emplvl": 10842,
+          "emplvl": 10844,
           "lq": 1.37
         },
         "48-49": {
@@ -6453,46 +6390,44 @@
       "fips": "26147",
       "name": "St. Clair",
       "totalPrivate": {
-        "emplvl": 35949,
+        "emplvl": 35277,
         "lq": 0.99
       },
       "totalAllOwnership": {
-        "emplvl": 42283
+        "emplvl": 41734
       },
       "sectors": {
         "11": {
-          "emplvl": 85,
-          "lq": 0.25
+          "disclosed": false
         },
         "21": {
-          "emplvl": 30,
-          "lq": 0.19
+          "disclosed": false
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 2641,
-          "lq": 1.19
+          "emplvl": 2787,
+          "lq": 1.26
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 194,
+          "emplvl": 185,
           "lq": 0.24
         },
         "52": {
-          "emplvl": 861,
-          "lq": 0.5
+          "emplvl": 898,
+          "lq": 0.53
         },
         "53": {
-          "emplvl": 290,
-          "lq": 0.44
+          "emplvl": 301,
+          "lq": 0.47
         },
         "54": {
-          "emplvl": 1487,
-          "lq": 0.51
+          "emplvl": 1365,
+          "lq": 0.47
         },
         "55": {
           "disclosed": false
@@ -6501,40 +6436,40 @@
           "disclosed": false
         },
         "61": {
-          "emplvl": 304,
-          "lq": 0.35
+          "emplvl": 309,
+          "lq": 0.36
         },
         "62": {
-          "emplvl": 7082,
-          "lq": 1.17
+          "emplvl": 7276,
+          "lq": 1.18
         },
         "71": {
-          "emplvl": 487,
+          "emplvl": 492,
           "lq": 0.69
         },
         "72": {
-          "emplvl": 5028,
+          "emplvl": 4941,
           "lq": 1.31
         },
         "81": {
-          "emplvl": 1301,
-          "lq": 1.02
+          "emplvl": 1353,
+          "lq": 1.08
         },
         "99": {
-          "emplvl": 66,
-          "lq": 1.12
+          "emplvl": 64,
+          "lq": 1.19
         },
         "31-33": {
-          "emplvl": 6768,
-          "lq": 1.95
+          "emplvl": 5961,
+          "lq": 1.77
         },
         "44-45": {
-          "emplvl": 5342,
-          "lq": 1.27
+          "emplvl": 5266,
+          "lq": 1.28
         },
         "48-49": {
-          "emplvl": 916,
-          "lq": 0.51
+          "emplvl": 948,
+          "lq": 0.53
         }
       }
     },
@@ -6542,16 +6477,16 @@
       "fips": "26149",
       "name": "St. Joseph",
       "totalPrivate": {
-        "emplvl": 18495,
+        "emplvl": 18204,
         "lq": 1.02
       },
       "totalAllOwnership": {
-        "emplvl": 21098
+        "emplvl": 20801
       },
       "sectors": {
         "11": {
-          "emplvl": 859,
-          "lq": 5.03
+          "emplvl": 781,
+          "lq": 4.75
         },
         "21": {
           "absent": true
@@ -6560,68 +6495,63 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 741,
-          "lq": 0.67
+          "emplvl": 692,
+          "lq": 0.63
         },
         "42": {
-          "emplvl": 380,
-          "lq": 0.46
+          "emplvl": 375,
+          "lq": 0.47
         },
         "51": {
-          "emplvl": 40,
-          "lq": 0.1
+          "disclosed": false
         },
         "52": {
-          "emplvl": 445,
-          "lq": 0.52
+          "emplvl": 417,
+          "lq": 0.49
         },
         "53": {
-          "emplvl": 73,
-          "lq": 0.22
+          "disclosed": false
         },
         "54": {
-          "emplvl": 583,
-          "lq": 0.4
+          "emplvl": 646,
+          "lq": 0.45
         },
         "55": {
-          "emplvl": 79,
-          "lq": 0.22
+          "disclosed": false
         },
         "56": {
-          "emplvl": 334,
-          "lq": 0.27
+          "disclosed": false
         },
         "61": {
-          "emplvl": 49,
-          "lq": 0.11
+          "emplvl": 65,
+          "lq": 0.15
         },
         "62": {
-          "emplvl": 2247,
+          "emplvl": 2264,
           "lq": 0.74
         },
         "71": {
-          "emplvl": 128,
-          "lq": 0.36
+          "emplvl": 141,
+          "lq": 0.4
         },
         "72": {
-          "emplvl": 1596,
-          "lq": 0.83
+          "emplvl": 1617,
+          "lq": 0.86
         },
         "81": {
-          "emplvl": 641,
-          "lq": 1.01
+          "emplvl": 643,
+          "lq": 1.03
         },
         "99": {
-          "emplvl": 112,
-          "lq": 3.81
+          "disclosed": false
         },
         "31-33": {
-          "emplvl": 7477,
-          "lq": 4.31
+          "emplvl": 7181,
+          "lq": 4.27
         },
         "44-45": {
-          "emplvl": 2453,
-          "lq": 1.16
+          "emplvl": 2446,
+          "lq": 1.19
         },
         "48-49": {
           "disclosed": false
@@ -6632,11 +6562,11 @@
       "fips": "26151",
       "name": "Sanilac",
       "totalPrivate": {
-        "emplvl": 9154,
-        "lq": 1.03
+        "emplvl": 9056,
+        "lq": 1.02
       },
       "totalAllOwnership": {
-        "emplvl": 10437
+        "emplvl": 10347
       },
       "sectors": {
         "11": {
@@ -6646,69 +6576,68 @@
           "disclosed": false
         },
         "22": {
-          "absent": true
-        },
-        "23": {
-          "emplvl": 442,
-          "lq": 0.81
-        },
-        "42": {
           "disclosed": false
         },
+        "23": {
+          "emplvl": 438,
+          "lq": 0.8
+        },
+        "42": {
+          "emplvl": 583,
+          "lq": 1.45
+        },
         "51": {
-          "emplvl": 114,
-          "lq": 0.58
+          "emplvl": 136,
+          "lq": 0.72
         },
         "52": {
-          "emplvl": 321,
-          "lq": 0.76
+          "emplvl": 324,
+          "lq": 0.77
         },
         "53": {
-          "emplvl": 36,
-          "lq": 0.22
+          "emplvl": 38,
+          "lq": 0.24
         },
         "54": {
-          "emplvl": 300,
-          "lq": 0.41
+          "emplvl": 265,
+          "lq": 0.37
         },
         "55": {
           "absent": true
         },
         "56": {
-          "emplvl": 154,
-          "lq": 0.25
+          "emplvl": 156,
+          "lq": 0.26
         },
         "61": {
-          "emplvl": 31,
-          "lq": 0.14
+          "disclosed": false
         },
         "62": {
-          "emplvl": 1149,
-          "lq": 0.77
+          "disclosed": false
         },
         "71": {
-          "emplvl": 119,
-          "lq": 0.68
+          "emplvl": 128,
+          "lq": 0.72
         },
         "72": {
-          "emplvl": 882,
-          "lq": 0.93
+          "emplvl": 780,
+          "lq": 0.83
         },
         "81": {
-          "emplvl": 238,
-          "lq": 0.76
+          "emplvl": 332,
+          "lq": 1.07
         },
         "99": {
-          "emplvl": 50,
-          "lq": 3.44
+          "emplvl": 52,
+          "lq": 3.89
         },
         "31-33": {
-          "emplvl": 2720,
-          "lq": 3.17
+          "emplvl": 2628,
+          "lq": 3.14
         },
         "44-45": {
-          "emplvl": 1299,
-          "lq": 1.25
+          "emplvl": 1316,
+          "lq": 1.29
         },
         "48-49": {
           "disclosed": false
@@ -6719,11 +6648,11 @@
       "fips": "26153",
       "name": "Schoolcraft",
       "totalPrivate": {
-        "emplvl": 1702,
-        "lq": 0.74
+        "emplvl": 1735,
+        "lq": 0.73
       },
       "totalAllOwnership": {
-        "emplvl": 2702
+        "emplvl": 2764
       },
       "sectors": {
         "11": {
@@ -6736,8 +6665,8 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 151,
-          "lq": 1.06
+          "emplvl": 146,
+          "lq": 1
         },
         "42": {
           "disclosed": false
@@ -6752,49 +6681,46 @@
           "disclosed": false
         },
         "54": {
-          "emplvl": 53,
-          "lq": 0.28
+          "emplvl": 49,
+          "lq": 0.26
         },
         "55": {
           "absent": true
         },
         "56": {
-          "emplvl": 17,
-          "lq": 0.11
+          "disclosed": false
         },
         "61": {
           "absent": true
         },
         "62": {
-          "emplvl": 123,
-          "lq": 0.32
+          "emplvl": 127,
+          "lq": 0.31
         },
         "71": {
-          "emplvl": 18,
-          "lq": 0.4
+          "disclosed": false
         },
         "72": {
-          "emplvl": 305,
-          "lq": 1.24
+          "disclosed": false
         },
         "81": {
-          "emplvl": 87,
-          "lq": 1.07
+          "emplvl": 88,
+          "lq": 1.06
         },
         "99": {
           "disclosed": false
         },
         "31-33": {
-          "emplvl": 196,
-          "lq": 0.88
+          "emplvl": 193,
+          "lq": 0.86
         },
         "44-45": {
-          "emplvl": 318,
-          "lq": 1.18
+          "emplvl": 314,
+          "lq": 1.15
         },
         "48-49": {
           "emplvl": 31,
-          "lq": 0.27
+          "lq": 0.26
         }
       }
     },
@@ -6802,11 +6728,11 @@
       "fips": "26155",
       "name": "Shiawassee",
       "totalPrivate": {
-        "emplvl": 12392,
+        "emplvl": 12310,
         "lq": 0.93
       },
       "totalAllOwnership": {
-        "emplvl": 15541
+        "emplvl": 15490
       },
       "sectors": {
         "11": {
@@ -6819,27 +6745,27 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 773,
-          "lq": 0.95
+          "emplvl": 822,
+          "lq": 1
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 174,
-          "lq": 0.6
+          "emplvl": 167,
+          "lq": 0.59
         },
         "52": {
-          "emplvl": 253,
-          "lq": 0.4
+          "emplvl": 221,
+          "lq": 0.35
         },
         "53": {
-          "emplvl": 117,
+          "emplvl": 116,
           "lq": 0.48
         },
         "54": {
-          "emplvl": 686,
-          "lq": 0.63
+          "emplvl": 535,
+          "lq": 0.5
         },
         "55": {
           "disclosed": false
@@ -6848,40 +6774,39 @@
           "disclosed": false
         },
         "61": {
-          "emplvl": 103,
-          "lq": 0.32
+          "emplvl": 115,
+          "lq": 0.36
         },
         "62": {
-          "emplvl": 2551,
+          "emplvl": 2632,
           "lq": 1.15
         },
         "71": {
-          "emplvl": 217,
-          "lq": 0.83
+          "emplvl": 223,
+          "lq": 0.84
         },
         "72": {
-          "emplvl": 1427,
-          "lq": 1.01
+          "emplvl": 1258,
+          "lq": 0.9
         },
         "81": {
           "emplvl": 389,
-          "lq": 0.83
+          "lq": 0.84
         },
         "99": {
-          "emplvl": 26,
-          "lq": 1.2
+          "emplvl": 25,
+          "lq": 1.25
         },
         "31-33": {
-          "emplvl": 1771,
-          "lq": 1.39
+          "emplvl": 1899,
+          "lq": 1.52
         },
         "44-45": {
-          "emplvl": 2209,
-          "lq": 1.42
+          "emplvl": 2225,
+          "lq": 1.45
         },
         "48-49": {
-          "emplvl": 650,
-          "lq": 0.99
+          "disclosed": false
         }
       }
     },
@@ -6889,11 +6814,11 @@
       "fips": "26157",
       "name": "Tuscola",
       "totalPrivate": {
-        "emplvl": 9312,
+        "emplvl": 9350,
         "lq": 0.9
       },
       "totalAllOwnership": {
-        "emplvl": 12102
+        "emplvl": 12153
       },
       "sectors": {
         "11": {
@@ -6906,24 +6831,24 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 625,
-          "lq": 0.98
+          "emplvl": 626,
+          "lq": 0.97
         },
         "42": {
-          "emplvl": 428,
-          "lq": 0.9
+          "emplvl": 409,
+          "lq": 0.87
         },
         "51": {
-          "emplvl": 104,
-          "lq": 0.46
+          "emplvl": 108,
+          "lq": 0.49
         },
         "52": {
-          "emplvl": 246,
+          "emplvl": 245,
           "lq": 0.5
         },
         "53": {
-          "emplvl": 67,
-          "lq": 0.36
+          "emplvl": 70,
+          "lq": 0.37
         },
         "54": {
           "disclosed": false
@@ -6932,40 +6857,40 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 591,
-          "lq": 0.83
+          "emplvl": 577,
+          "lq": 0.82
         },
         "61": {
-          "emplvl": 23,
-          "lq": 0.09
+          "emplvl": 16,
+          "lq": 0.06
         },
         "62": {
-          "emplvl": 1960,
-          "lq": 1.13
+          "emplvl": 2078,
+          "lq": 1.16
         },
         "71": {
-          "emplvl": 109,
-          "lq": 0.54
+          "emplvl": 115,
+          "lq": 0.55
         },
         "72": {
-          "emplvl": 992,
-          "lq": 0.9
+          "emplvl": 981,
+          "lq": 0.89
         },
         "81": {
           "emplvl": 362,
           "lq": 0.99
         },
         "99": {
-          "emplvl": 34,
-          "lq": 2.01
+          "emplvl": 29,
+          "lq": 1.85
         },
         "31-33": {
-          "emplvl": 1421,
-          "lq": 1.43
+          "emplvl": 1310,
+          "lq": 1.33
         },
         "44-45": {
-          "emplvl": 1398,
-          "lq": 1.16
+          "emplvl": 1367,
+          "lq": 1.14
         },
         "48-49": {
           "disclosed": false
@@ -6976,16 +6901,16 @@
       "fips": "26159",
       "name": "Van Buren",
       "totalPrivate": {
-        "emplvl": 17076,
+        "emplvl": 16993,
         "lq": 0.92
       },
       "totalAllOwnership": {
-        "emplvl": 21597
+        "emplvl": 21582
       },
       "sectors": {
         "11": {
-          "emplvl": 1312,
-          "lq": 7.51
+          "emplvl": 1346,
+          "lq": 7.89
         },
         "21": {
           "absent": true
@@ -6994,68 +6919,65 @@
           "disclosed": false
         },
         "23": {
-          "emplvl": 696,
-          "lq": 0.61
+          "emplvl": 770,
+          "lq": 0.67
         },
         "42": {
-          "emplvl": 510,
-          "lq": 0.6
+          "emplvl": 477,
+          "lq": 0.57
         },
         "51": {
-          "emplvl": 109,
-          "lq": 0.27
+          "disclosed": false
         },
         "52": {
-          "emplvl": 221,
-          "lq": 0.25
+          "emplvl": 236,
+          "lq": 0.27
         },
         "53": {
-          "emplvl": 96,
-          "lq": 0.29
+          "disclosed": false
         },
         "54": {
-          "emplvl": 2178,
-          "lq": 1.45
+          "emplvl": 2024,
+          "lq": 1.36
         },
         "55": {
-          "emplvl": 257,
-          "lq": 0.71
+          "emplvl": 213,
+          "lq": 0.59
         },
         "56": {
-          "emplvl": 758,
-          "lq": 0.6
+          "emplvl": 811,
+          "lq": 0.65
         },
         "61": {
-          "emplvl": 69,
-          "lq": 0.15
+          "emplvl": 79,
+          "lq": 0.18
         },
         "62": {
-          "emplvl": 1388,
+          "emplvl": 1421,
           "lq": 0.45
         },
         "71": {
-          "emplvl": 278,
-          "lq": 0.77
+          "emplvl": 288,
+          "lq": 0.78
         },
         "72": {
-          "emplvl": 2200,
-          "lq": 1.12
+          "emplvl": 2134,
+          "lq": 1.09
         },
         "81": {
-          "emplvl": 538,
+          "emplvl": 541,
           "lq": 0.83
         },
         "99": {
-          "emplvl": 72,
-          "lq": 2.39
+          "disclosed": false
         },
         "31-33": {
-          "emplvl": 3524,
-          "lq": 1.99
+          "emplvl": 3500,
+          "lq": 2.01
         },
         "44-45": {
-          "emplvl": 2574,
-          "lq": 1.19
+          "emplvl": 2569,
+          "lq": 1.2
         },
         "48-49": {
           "disclosed": false
@@ -7066,11 +6988,11 @@
       "fips": "26161",
       "name": "Washtenaw",
       "totalPrivate": {
-        "emplvl": 133668,
+        "emplvl": 134542,
         "lq": 0.72
       },
       "totalAllOwnership": {
-        "emplvl": 217948
+        "emplvl": 219230
       },
       "sectors": {
         "11": {
@@ -7080,76 +7002,74 @@
           "disclosed": false
         },
         "22": {
-          "emplvl": 397,
-          "lq": 0.48
+          "disclosed": false
         },
         "23": {
-          "emplvl": 4907,
+          "emplvl": 4949,
           "lq": 0.43
         },
         "42": {
-          "emplvl": 6324,
-          "lq": 0.74
+          "emplvl": 6462,
+          "lq": 0.76
         },
         "51": {
-          "emplvl": 3909,
+          "emplvl": 3869,
           "lq": 0.96
         },
         "52": {
-          "emplvl": 3448,
-          "lq": 0.39
+          "emplvl": 3684,
+          "lq": 0.41
         },
         "53": {
-          "emplvl": 2581,
-          "lq": 0.76
-        },
-        "54": {
-          "emplvl": 17908,
-          "lq": 1.18
-        },
-        "55": {
-          "emplvl": 1845,
-          "lq": 0.5
-        },
-        "56": {
-          "emplvl": 7195,
-          "lq": 0.56
-        },
-        "61": {
-          "emplvl": 3590,
-          "lq": 0.8
-        },
-        "62": {
-          "emplvl": 28273,
-          "lq": 0.9
-        },
-        "71": {
-          "emplvl": 2641,
-          "lq": 0.72
-        },
-        "72": {
-          "emplvl": 13791,
-          "lq": 0.7
-        },
-        "81": {
-          "emplvl": 4901,
+          "emplvl": 2562,
           "lq": 0.75
         },
+        "54": {
+          "emplvl": 17686,
+          "lq": 1.17
+        },
+        "55": {
+          "emplvl": 1813,
+          "lq": 0.49
+        },
+        "56": {
+          "emplvl": 5608,
+          "lq": 0.44
+        },
+        "61": {
+          "emplvl": 3461,
+          "lq": 0.76
+        },
+        "62": {
+          "emplvl": 28974,
+          "lq": 0.89
+        },
+        "71": {
+          "emplvl": 2878,
+          "lq": 0.77
+        },
+        "72": {
+          "emplvl": 13550,
+          "lq": 0.68
+        },
+        "81": {
+          "emplvl": 5388,
+          "lq": 0.82
+        },
         "99": {
-          "emplvl": 478,
-          "lq": 1.57
+          "emplvl": 440,
+          "lq": 1.55
         },
         "31-33": {
-          "emplvl": 11602,
-          "lq": 0.65
+          "emplvl": 11228,
+          "lq": 0.63
         },
         "44-45": {
-          "emplvl": 15024,
-          "lq": 0.69
+          "emplvl": 16818,
+          "lq": 0.78
         },
         "48-49": {
-          "emplvl": 4348,
-          "lq": 0.47
+          "disclosed": false
         }
       }
     },
@@ -7157,90 +7077,92 @@
       "fips": "26163",
       "name": "Wayne",
       "totalPrivate": {
-        "emplvl": 641267,
+        "emplvl": 636226,
         "lq": 1.03
       },
       "totalAllOwnership": {
-        "emplvl": 725504
+        "emplvl": 721389
       },
       "sectors": {
         "11": {
-          "emplvl": 598,
-          "lq": 0.1
+          "emplvl": 632,
+          "lq": 0.11
         },
         "21": {
-          "emplvl": 582,
-          "lq": 0.21
+          "emplvl": 569,
+          "lq": 0.22
         },
         "22": {
-          "disclosed": false
+          "emplvl": 3263,
+          "lq": 1.17
         },
         "23": {
-          "emplvl": 23670,
-          "lq": 0.62
-        },
-        "42": {
-          "disclosed": false
-        },
-        "51": {
-          "emplvl": 5836,
-          "lq": 0.43
-        },
-        "52": {
-          "emplvl": 27371,
-          "lq": 0.93
-        },
-        "53": {
-          "emplvl": 7272,
+          "emplvl": 24687,
           "lq": 0.65
         },
+        "42": {
+          "emplvl": 24711,
+          "lq": 0.88
+        },
+        "51": {
+          "emplvl": 5462,
+          "lq": 0.41
+        },
+        "52": {
+          "emplvl": 26321,
+          "lq": 0.9
+        },
+        "53": {
+          "emplvl": 7440,
+          "lq": 0.67
+        },
         "54": {
-          "emplvl": 53927,
-          "lq": 1.07
+          "emplvl": 53725,
+          "lq": 1.08
         },
         "55": {
-          "emplvl": 19605,
-          "lq": 1.6
+          "emplvl": 20770,
+          "lq": 1.72
         },
         "56": {
-          "emplvl": 38789,
-          "lq": 0.91
+          "emplvl": 35537,
+          "lq": 0.85
         },
         "61": {
-          "emplvl": 11073,
+          "emplvl": 11076,
           "lq": 0.74
         },
         "62": {
-          "emplvl": 116757,
-          "lq": 1.12
+          "emplvl": 120842,
+          "lq": 1.13
         },
         "71": {
-          "emplvl": 10748,
-          "lq": 0.88
+          "emplvl": 11067,
+          "lq": 0.9
         },
         "72": {
-          "emplvl": 60098,
-          "lq": 0.91
+          "emplvl": 61021,
+          "lq": 0.93
         },
         "81": {
-          "emplvl": 22945,
-          "lq": 1.05
+          "emplvl": 22494,
+          "lq": 1.04
         },
         "99": {
-          "emplvl": 1638,
-          "lq": 1.62
+          "emplvl": 1524,
+          "lq": 1.64
         },
         "31-33": {
-          "emplvl": 89659,
-          "lq": 1.5
+          "emplvl": 85201,
+          "lq": 1.46
         },
         "44-45": {
-          "emplvl": 64087,
-          "lq": 0.88
+          "emplvl": 64685,
+          "lq": 0.91
         },
         "48-49": {
-          "emplvl": 58035,
-          "lq": 1.89
+          "emplvl": 55199,
+          "lq": 1.8
         }
       }
     },
@@ -7248,42 +7170,42 @@
       "fips": "26165",
       "name": "Wexford",
       "totalPrivate": {
-        "emplvl": 10903,
+        "emplvl": 10872,
         "lq": 0.97
       },
       "totalAllOwnership": {
-        "emplvl": 13163
+        "emplvl": 13082
       },
       "sectors": {
         "11": {
-          "emplvl": 133,
-          "lq": 1.25
+          "emplvl": 146,
+          "lq": 1.41
         },
         "21": {
-          "emplvl": 15,
-          "lq": 0.3
+          "emplvl": 16,
+          "lq": 0.33
         },
         "22": {
           "disclosed": false
         },
         "23": {
-          "emplvl": 289,
+          "emplvl": 288,
           "lq": 0.42
         },
         "42": {
           "disclosed": false
         },
         "51": {
-          "emplvl": 194,
-          "lq": 0.79
+          "emplvl": 182,
+          "lq": 0.76
         },
         "52": {
-          "emplvl": 150,
-          "lq": 0.28
+          "emplvl": 203,
+          "lq": 0.38
         },
         "53": {
-          "emplvl": 80,
-          "lq": 0.39
+          "emplvl": 84,
+          "lq": 0.41
         },
         "54": {
           "disclosed": false
@@ -7292,44 +7214,44 @@
           "disclosed": false
         },
         "56": {
-          "emplvl": 455,
-          "lq": 0.59
+          "emplvl": 493,
+          "lq": 0.65
         },
         "61": {
-          "emplvl": 123,
-          "lq": 0.45
+          "emplvl": 118,
+          "lq": 0.43
         },
         "62": {
-          "emplvl": 1655,
-          "lq": 0.88
+          "emplvl": 1745,
+          "lq": 0.9
         },
         "71": {
-          "emplvl": 160,
-          "lq": 0.72
+          "emplvl": 146,
+          "lq": 0.65
         },
         "72": {
-          "emplvl": 1052,
-          "lq": 0.88
+          "emplvl": 1129,
+          "lq": 0.95
         },
         "81": {
-          "emplvl": 409,
-          "lq": 1.03
+          "emplvl": 423,
+          "lq": 1.08
         },
         "99": {
-          "emplvl": 19,
-          "lq": 1.04
+          "emplvl": 16,
+          "lq": 0.95
         },
         "31-33": {
-          "emplvl": 3171,
-          "lq": 2.93
+          "emplvl": 2981,
+          "lq": 2.82
         },
         "44-45": {
-          "emplvl": 1831,
-          "lq": 1.39
+          "emplvl": 1850,
+          "lq": 1.43
         },
         "48-49": {
-          "emplvl": 552,
-          "lq": 0.99
+          "emplvl": 545,
+          "lq": 0.98
         }
       }
     }

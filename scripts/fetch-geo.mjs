@@ -10,7 +10,7 @@
      October 2025 federal-lapse month) stays a hole — values
      are never interpolated.
    - QCEW county x industry employment (map a): BLS QCEW
-     per-area CSV API, 2024 annual averages, all 83 counties.
+     per-area CSV API, QCEW_YEAR annual averages, all 83 counties.
      QCEW publishes county x sector rows BY OWNERSHIP only
      (agglvl 74 has own 1/2/3/5 rows; a total-ownership
      sector row does not exist in QCEW — verified against
@@ -215,7 +215,9 @@ function parseCsv(text) {
     .map(r => Object.fromEntries(head.map((h, i) => [h, r[i]])));
 }
 const QCEW_OUT = path.join(GEO_DIR, 'qcew-county-industry.json');
-const QCEW_URL = fips => 'https://data.bls.gov/cew/data/api/2024/a/area/' + fips + '.csv';
+const QCEW_YEAR = Number(process.env.QCEW_YEAR || new Date().getUTCFullYear() - 1);
+if (!Number.isInteger(QCEW_YEAR) || QCEW_YEAR < 2000 || QCEW_YEAR >= new Date().getUTCFullYear()) throw new Error('Invalid completed QCEW year');
+const QCEW_URL = fips => 'https://data.bls.gov/cew/data/api/' + QCEW_YEAR + '/a/area/' + fips + '.csv';
 async function fetchQcewRows(fips) {
   const res = await fetchRetry(QCEW_URL(fips));
   return parseCsv(await res.text());
@@ -238,7 +240,7 @@ async function refreshQcew() {
     while (queue.length) {
       const c = queue.shift();
       const rows = await fetchQcewRows(c.fips);
-      if (!rows.length) throw new Error('QCEW: ' + c.name + ' file empty');
+      if (!rows.length || rows.some(r => r.year !== String(QCEW_YEAR) || r.qtr !== 'A' || r.area_fips !== c.fips)) throw new Error('QCEW: ' + c.name + ' missing or mismatched annual records');
       raw.push({ county: c, rows });
     }
   }
@@ -274,26 +276,22 @@ async function refreshQcew() {
       sectors,
     };
   }).sort((a, b) => a.fips < b.fips ? -1 : 1);
-  // Sanity cross-checks for the 2024 vintage (verified samples,
-  // specs/014-michigan-talent-maps/sources.md): Wayne private
-  // manufacturing 89,659; Wayne all-ownership total 725,504.
-  // If BLS revises the 2024 annual file, update these with the
-  // revision noted in sources.md — never silently.
-  const wayne = outCounties.find(c => c.fips === '26163');
-  if (!wayne || wayne.sectors['31-33'].emplvl !== 89659 || wayne.totalAllOwnership.emplvl !== 725504) {
-    throw new Error('QCEW check failed for Wayne County (mfg ' +
-      (wayne && wayne.sectors['31-33'].emplvl) + ', total ' +
-      (wayne && wayne.totalAllOwnership.emplvl) + ')');
+  // Validate all 83 counties structurally instead of freezing historical sample values.
+  for (const c of outCounties) {
+    if (!Number.isFinite(c.totalPrivate.emplvl) || c.totalPrivate.emplvl < 0 || c.totalPrivate.emplvl > c.totalAllOwnership.emplvl ||
+        Object.values(c.sectors).some(v => 'emplvl' in v && (!Number.isFinite(v.emplvl) || v.emplvl < 0 || !Number.isFinite(v.lq) || v.lq < 0))) throw new Error('Invalid or unreconciled QCEW values for ' + c.name);
   }
   const out = {
     source: 'U.S. Bureau of Labor Statistics, Quarterly Census of Employment and Wages (QCEW), per-area CSV API',
-    sourceUrl: 'https://data.bls.gov/cew/data/api/2024/a/area/{countyFips}.csv',
-    vintage: '2024 annual averages',
+    sourceUrl: 'https://data.bls.gov/cew/data/api/' + QCEW_YEAR + '/a/area/{countyFips}.csv',
+    vintage: QCEW_YEAR + ' annual averages',
     retrievedOn: todayET(),
     grain: 'County x NAICS sector at agglvl_code 74, PRIVATE ownership (own_code 5) — the only ownership grain at which QCEW publishes county x sector rows; county totals are total-ownership (agglvl 70) and private (agglvl 71). Cells: {emplvl, lq} published; {disclosed:false} = disclosure_code N (values zeroed in the source, never transcribed); {absent:true} = the source publishes no row for the cell.',
     sectors: sectorCodes.map(code => ({ code, label: SECTOR_LABELS[code] })),
     counties: outCounties,
   };
+  const prior = existsSync(QCEW_OUT) ? JSON.parse(readFileSync(QCEW_OUT, 'utf8')) : null;
+  if (prior && JSON.stringify({ ...prior, retrievedOn: null }) === JSON.stringify({ ...out, retrievedOn: null })) { console.log('qcew: published annual values unchanged'); return; }
   writeFileSync(QCEW_OUT, JSON.stringify(out, null, 2) + '\n');
   const suppressed = outCounties.reduce((n, c) =>
     n + Object.values(c.sectors).filter(s => s.disclosed === false).length, 0);
@@ -324,6 +322,7 @@ if (which === 'qcew' || which === 'all') {
 }
 if (process.env.GEO_STATUS_FILE) {
   writeFileSync(process.env.GEO_STATUS_FILE, JSON.stringify({ checkedUtc: new Date().toISOString(), failed, requested: which,
+    qcewVintage: existsSync(QCEW_OUT) ? JSON.parse(readFileSync(QCEW_OUT, 'utf8')).vintage : null,
     referenceMonth: existsSync(LAUS_OUT) ? JSON.parse(readFileSync(LAUS_OUT, 'utf8')).referenceMonth : null }, null, 2) + '\n');
   if (failed) process.exitCode = 1;
 }

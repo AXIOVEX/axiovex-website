@@ -1388,16 +1388,16 @@ function geoQcewBlock(geo) {
       : '<tr><th scope="col">County</th><th scope="col">Employment (private)</th><th scope="col">Location quotient</th></tr>';
     return '          <div class="geo-layer" data-geo-layer="qcew:' + l.key + '">\n' +
       '          <div class="geo-mapwrap">\n' +
-      '          <svg class="geo-map" viewBox="' + esc(paths.viewBox) + '" role="img" aria-label="Map of Michigan counties shaded by ' + esc(l.label.toLowerCase()) + ' employment, 2024">\n' +
+      '          <svg class="geo-map" viewBox="' + esc(paths.viewBox) + '" role="img" aria-label="Map of Michigan counties shaded by ' + esc(l.label.toLowerCase()) + ' employment, ' + esc(qcew.vintage) + '">\n' +
       uses + '\n          </svg>\n          </div>\n' +
       '          <div class="geo-tablewrap"><table class="geo-table">\n' +
-      '            <caption>' + l.caption + ' &middot; BLS QCEW, 2024 annual averages</caption>\n' +
+      '            <caption>' + l.caption + ' &middot; BLS QCEW, ' + esc(qcew.vintage) + '</caption>\n' +
       '            <thead>' + head + '</thead>\n' +
       '            <tbody>\n' + rows + '\n            </tbody>\n          </table></div>\n' +
       '          </div>';
   }).join('\n');
   return '          <div class="geo-block">\n' +
-    '          <p class="board-sub">Employment by county and industry &mdash; 2024 annual averages</p>\n' +
+    '          <p class="board-sub">Employment by county and industry &mdash; ' + esc(qcew.vintage) + '</p>\n' +
     '          <p class="geo-selector" role="group" aria-label="Industry">\n' + buttons + '\n          </p>\n' +
     geoLegend([[GEO_RAMP[0], 'Fewest jobs in this industry'], [GEO_RAMP[4], 'Most jobs in this industry'],
       ['repeating-linear-gradient(45deg, #EDF2F5 0 3px, #8A97A5 3px 5px)', 'Not disclosed']]) + '\n' +
@@ -1422,6 +1422,7 @@ function geoQcewBlock(geo) {
 function geoIpedsBlock(geo) {
   const { paths, ipeds } = geo;
   if (!paths || !ipeds || !(ipeds.institutions || []).length) return '';
+  const awardsPeriod = (ipeds.vintage.match(/completions are ([\d-]+) awards/) || [])[1] || ipeds.vintage;
   const proj = paths.projection;
   if (!proj) return '';
   const cos = Math.cos(proj.cosLatDeg * Math.PI / 180);
@@ -1470,14 +1471,14 @@ function geoIpedsBlock(geo) {
           const zero = ipeds.institutions.filter(i => i.totalCompletions === 0);
           return zero.length
             ? '          <p class="board-note">Listed without a dot (the source publishes no ' +
-              'completions for 2023&ndash;24): ' +
+              'completions for ' + esc(awardsPeriod) + '): ' +
               zero.map(i => esc(i.name) + ' &middot; ' + esc(i.city)).join('; ') + '.</p>\n'
             : '';
         })()
       : '';
     return '          <div class="geo-layer" data-geo-layer="ipeds:' + l.key + '">\n' +
       '          <div class="geo-mapwrap">\n' +
-      '          <svg class="geo-map" viewBox="' + esc(paths.viewBox) + '" role="img" aria-label="Map of Michigan postsecondary institutions, sized by ' + esc(l.label.toLowerCase()) + ' completions, 2023-24">\n' +
+      '          <svg class="geo-map" viewBox="' + esc(paths.viewBox) + '" role="img" aria-label="Map of Michigan postsecondary institutions, sized by ' + esc(l.label.toLowerCase()) + ' completions, ' + esc(awardsPeriod) + '">\n' +
       outlines + '\n' + dots + '\n          </svg>\n          </div>\n' +
       '          <div class="geo-listwrap">\n' +
       '          <p class="board-sub">Largest by completions &mdash; ' + esc(l.label) + '</p>\n' +
@@ -1488,11 +1489,11 @@ function geoIpedsBlock(geo) {
       '          </div>\n          </div>';
   }).join('\n');
   return '          <div class="geo-block">\n' +
-    '          <p class="board-sub">Where the completions are &mdash; postsecondary institutions, 2023&ndash;24 awards</p>\n' +
+    '          <p class="board-sub">Where the completions are &mdash; postsecondary institutions, ' + esc(awardsPeriod) + ' awards</p>\n' +
     '          <p class="geo-selector" role="group" aria-label="Field of study">\n' + buttons + '\n          </p>\n' +
     layerHtml + '\n' +
     '          <p class="board-note">Dots sit at the coordinates IPEDS publishes for each ' +
-    'institution; size is completions in the selected field (all award levels). Field is the ' +
+    'institution; size is first-major awards in the selected field (all award levels); second majors are excluded to avoid counting a degree twice. Field is the ' +
     'IPEDS CIP family. The list is the record; the map is the picture of it.</p>\n' +
     '          </div>';
 }
@@ -1555,7 +1556,7 @@ function geoPseoBlock(geo) {
       '            <thead><tr><th scope="col">Horizon</th><th scope="col">25th</th><th scope="col">Median</th><th scope="col">75th</th></tr></thead>\n' +
       '            <tbody>\n' + [1, 5, 10].map(earnRow).filter(Boolean).join('\n') + '\n            </tbody>\n          </table></div>\n' +
       [1, 5, 10].map(retLine).filter(Boolean).join('\n') + '\n' +
-      (umFlows ? '          <p class="board-sub">Top industries at year 1</p>\n' + umFlows + '\n' : '') +
+      (umFlows ? '          <p class="board-sub">Selected industries at year 1</p>\n' + umFlows + '\n' : '') +
       '          <p class="board-note"><b>Coverage:</b> the University of Michigan is the only ' +
       'Michigan institution in PSEO &mdash; its graduates are about 10% of statewide graduates ' +
       '(2015 estimate, per the Census partner file). Institution-level outcomes exist for it ' +
@@ -1568,7 +1569,7 @@ function geoPseoBlock(geo) {
     '          <p class="geo-caption">' + esc(pseo.statewideFlows.label || '') + '</p>\n' +
     bars + '\n' + spot + '\n' +
     '          <p class="board-note">Counts are graduates the Census Bureau matched to employment ' +
-    'one year after graduation, pooled across the 2001&ndash;2021 cohorts in this release; the ' +
+    'one year after graduation. ' + esc(pseo.vintage) + '. The ' +
     'field median is the field&rsquo;s year-1 median earnings across all industries. Rows the ' +
     'source suppresses are excluded, never estimated.</p>\n' +
     '          </div>';
@@ -1611,16 +1612,16 @@ function geoNote(geo) {
   }
   if (geo.qcew && geo.paths) {
     parts.push('county employment by industry from the BLS Quarterly Census of Employment and ' +
-      'Wages (2024 annual averages; industry rows are private ownership &mdash; the grain at ' +
+      'Wages (' + esc(geo.qcew.vintage) + '; industry rows are private ownership &mdash; the grain at ' +
       'which QCEW publishes them &mdash; and suppressed cells are shown as not disclosed, never as zero)');
   }
   if (geo.ipeds) {
     parts.push('institutions and completions from the National Center for Education Statistics&rsquo; ' +
-      'IPEDS (2024 survey cycle; completions are 2023&ndash;24 awards)');
+      'IPEDS (' + esc(geo.ipeds.vintage) + ')');
   }
   if (geo.pseo) {
     parts.push('graduate outcomes from the U.S. Census Bureau&rsquo;s Post-Secondary Employment ' +
-      'Outcomes (release R2026Q2, cohorts 2001&ndash;2021) &mdash; the University of Michigan is ' +
+      'Outcomes (' + esc(geo.pseo.vintage) + ') &mdash; the University of Michigan is ' +
       'Michigan&rsquo;s only PSEO partner institution, so institution-level outcomes are shown ' +
       'for it alone, beside the Census state aggregates');
   }
