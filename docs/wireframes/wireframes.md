@@ -1003,3 +1003,9 @@ fallback for unknown paths. Existing typography/palette are reused. Replace
 the workforce article's generic “here” release link text with the descriptive
 “verified September 2026 workforce release”; preserve its target and facts.
 These targeted technical corrections follow the owner's direct instruction.
+
+WF-18 research tracker correction: retain the current research content and
+expand/collapse layout; change invalid paragraph elements inside summary to
+phrasing spans. A scoped rule preserves their existing block layout, margins,
+line height and color exactly. Research stylesheet advances v39 to v40 for
+cache busting; noindex and exclusion from public discovery remain intact.

@@ -2306,7 +2306,9 @@ for (const url of machinePages) {
   if (!existsSync(file)) continue;
   const html = readFileSync(file, 'utf8');
   const main = /<main\b[^>]*>([\s\S]*?)<\/main>/i.exec(html)?.[1] || '';
-  const text = main.replace(/<(script|style|form|svg)\b[^>]*>[\s\S]*?<\/\1>/gi, '')
+  const text = main.replace(/<(div|p)\b[^>]*\bhidden[^>]*>[\s\S]*?<\/\1>/gi, '')
+    .replace(/<a\b[^>]*href=["'](https?:\/\/[^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi, '$2 ($1)')
+    .replace(/<(script|style|form|svg)\b[^>]*>[\s\S]*?<\/\1>/gi, '')
     .replace(/<!--[\s\S]*?-->/g, '').replace(/<\/[^>]+>/g, '\n').replace(/<[^>]+>/g, ' ')
     .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
     .replace(/&#39;|&rsquo;|&lsquo;/g, "'").replace(/&nbsp;/g, ' ').replace(/&mdash;/g, '—').replace(/&ndash;/g, '–')

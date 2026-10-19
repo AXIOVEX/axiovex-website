@@ -168,37 +168,33 @@ MI labor force
 
 Michigan's numbers, and the field items that matter to the people who make things — from primary sources, refreshed automatically.
 
-MANUFACTURING DIVE
+AUTOMATION ALLEY
 
-From Auburn Hills to Luxembourg: Christian Lopez’s Co-op experience
+Why Digital Leadership Fails When Decisions Drift Away From Operational Reality (https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/)
 
 October 19, 2026
 
 NIST
 
-NIST Joins White House Effort to Drive ‘A New Golden Age of Science’
+NIST Joins White House Effort to Drive ‘A New Golden Age of Science’ (https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science)
 
 October 8, 2026
 
 CISA
 
-Eclipse Foundation Eclipse Milo
+Eclipse Foundation Eclipse Milo (https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01)
 
 October 15, 2026
 
 SEE ALL SIGNALS &rarr;
 
-Snapshot updated October 19, 2026 at 9:27 AM ET. Headline, source, and date only — every card links to the publisher.
+Snapshot updated October 19, 2026 at 1:36 PM ET. Headline, source, and date only — every card links to the publisher.
 
 THE AXIOVEX SIGNAL — MONTHLY
 
 The month, in your inbox.
 
 What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
-
-Check your inbox.
-
-We sent a confirmation email to the address you gave us. Click the link in it — good for 48 hours — and the first edition arrives after the monthly economic releases. No click, no emails: that’s the deal.
 
 One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
 Privacy policy
@@ -233,9 +229,13 @@ Macomb Regional APEX Accelerator
 
 The APEX Accelerator program helps businesses compete for and win federal, state, and local government contracts.
 
+(https://www.macomb.edu/business/APEX/index.html)
+
 Velocity
 
 MEDC SmartZone Business Incubator, Accelerator, and International Landing Zone serving Macomb County, Michigan
+
+(https://www.mivelocity.com/)
 
 FAQ
 
@@ -407,12 +407,9 @@ workforce
 michigan
 
 X
-
-Facebook
-
-LinkedIn
-
-Email
+(https://twitter.com/intent/tweet?text=Robots%20can%20do%20the%20work.%20Almost%20none%20of%20it%20pays%20yet.&url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Frobots-can-do-the-work%2F) Facebook
+(https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Frobots-can-do-the-work%2F) LinkedIn
+(https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Frobots-can-do-the-work%2F) Email
 
 Text
 
@@ -422,8 +419,7 @@ More&hellip;
 
 A widely shared LinkedIn summary made the rounds this week with a striking claim: Anthropic has found that AI and robots together are already capable of performing tasks covering about 81% of U.S. employment
 . We read the study behind it — Russell Legate-Yang and Maxim Massenkoff's What work can robots do?
-, published by Anthropic's economics team on September 30, 2026 ( Anthropic
-). The summary's numbers are mostly right. Its unit is wrong — and the study's most useful figure for anyone who runs a plant or plans a workforce is the one the summary buried: 0.3%
+, published by Anthropic's economics team on September 30, 2026 (Anthropic (https://www.anthropic.com/research/what-work-can-robots-do)). The summary's numbers are mostly right. Its unit is wrong — and the study's most useful figure for anyone who runs a plant or plans a workforce is the one the summary buried: 0.3%
 .
 
 That is the share of U.S. job tasks for which a robot is already cheaper
@@ -504,8 +500,7 @@ The study deserves a careful reading, not a credulous one, and the reasons are i
 Claude classified the tasks as physical, generated the concrete examples of how each task is performed, searched for and cited the robot evidence, rated the exposure, estimated the time shares, and built the cost estimates. The study's main text describes no human rating or validation step. The work is Anthropic company research and has not been peer reviewed. That does not make it wrong — the method is documented in unusual detail, the underlying data is public, and the authors check their index against history: occupations rated more exposed, scored back to 1977, did go on to see larger wage and employment declines. But it is a map drawn by the company selling one of the technologies being mapped, and it should be weighted accordingly.
 
 Anthropic's own earlier work supplies the sharpest check. In Labor market impacts of AI
-(Massenkoff & McCrory, March 2026; Anthropic
-), the same research program found that observed
+(Massenkoff & McCrory, March 2026; Anthropic (https://www.anthropic.com/research/labor-market-impacts)), the same research program found that observed
 coverage of work by AI was a fraction of theoretical capability — computer and mathematical occupations scored 94% on theoretical coverage and 33% on what usage data actually showed. There is no equivalent usage data for robots, so the new index is capability plus a cost model, with nothing observed in between. The authors say as much: the cost figures are approximate, the cost-competitiveness measure is "more suggestive" than predictive, the scenarios assume the same cost decline lands on every task at once, and the study does not consider AI improving physical work without
 robots — predictive maintenance for factory machines being the obvious case for a manufacturing reader.
 
@@ -532,10 +527,6 @@ THE AXIOVEX SIGNAL — MONTHLY
 The month, in your inbox.
 
 What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
-
-Check your inbox.
-
-We sent a confirmation email to the address you gave us. Click the link in it — good for 48 hours — and the first edition arrives after the monthly economic releases. No click, no emails: that’s the deal.
 
 One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
 Privacy policy
@@ -578,12 +569,9 @@ labor market
 oakland county
 
 X
-
-Facebook
-
-LinkedIn
-
-Email
+(https://twitter.com/intent/tweet?text=Oakland%20County%20is%20losing%20jobs.%20Here%20is%20why.&url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Foakland-county-job-losses%2F) Facebook
+(https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Foakland-county-job-losses%2F) LinkedIn
+(https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Foakland-county-job-losses%2F) Email
 
 Text
 
@@ -594,11 +582,9 @@ More&hellip;
 Oakland County is moving the wrong way, and it is moving alone. In August 2026, 648,000
 Oakland County residents were employed — about 9,600 fewer than a year earlier
 — and the county unemployment rate stood at 4.7%
-, up from 3.7% in August 2025 ( BLS Local Area Unemployment Statistics
-, county series for Oakland County; August 2026 is preliminary). Measured by where the jobs are instead of where the workers live, the picture matches: 701,900 jobs located in Oakland County in March 2026, down 1.7% from a year earlier
+, up from 3.7% in August 2025 (BLS Local Area Unemployment Statistics (https://www.bls.gov/lau/), county series for Oakland County; August 2026 is preliminary). Measured by where the jobs are instead of where the workers live, the picture matches: 701,900 jobs located in Oakland County in March 2026, down 1.7% from a year earlier
 , while Michigan as a whole, Wayne County, and Macomb County each edged up
-0.3% ( BLS Quarterly Census of Employment and Wages
-).
+0.3% (BLS Quarterly Census of Employment and Wages (https://www.bls.gov/regions/midwest/news-release/countyemploymentandwages_michigan.htm)).
 
 A county does not shed jobs in the abstract. Specific sectors shrink, specific employers file specific notices, and specific work moves to specific places. Here is what the evidence shows — including the part of the drop we cannot yet explain, stated as plainly as the parts we can.
 
@@ -606,8 +592,7 @@ Where the jobs went
 
 The University of Michigan's Research Seminar in Quantitative Economics (RSQE) publishes an annual economic outlook for Oakland County, and its April 2026 edition puts the county's 2025 private-sector loss at roughly 3,700 jobs
 — against a forecast, a year earlier, of a 3,400-job gain
-( U-M RSQE Oakland County outlook, April 2026
-). The sector detail shows a concentrated decline, not a broad one:
+(U-M RSQE Oakland County outlook, April 2026 (https://news.umich.edu/oakland-countys-economy-record-workforce-anchors-gradual-recovery/)). The sector detail shows a concentrated decline, not a broad one:
 
 Sector (Oakland County)
 2024
@@ -675,8 +660,7 @@ jobs through 2028. Health care, the county's largest sector, is still growing �
 
 Cause one: the EV pullback
 
-The best-documented driver is the electric-vehicle retrenchment, stated in employers' own filings. Michigan's WARN notice system — the state's record of covered layoffs and closures, filed with the Department of Labor and Economic Opportunity
-— shows the pattern across Oakland County in 2025:
+The best-documented driver is the electric-vehicle retrenchment, stated in employers' own filings. Michigan's WARN notice system — the state's record of covered layoffs and closures, filed with the Department of Labor and Economic Opportunity (https://michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices) — shows the pattern across Oakland County in 2025:
 
 Webasto
 closed its Rochester Hills plant ( 244 jobs
@@ -724,32 +708,26 @@ Honesty about the headline number matters, so we dug into its weakest part. Roug
 
 People did not move into unemployment; they vanished from the count.
 Statewide in August, employed residents fell about 25,000 while the number of unemployed Michiganders was unchanged
-— the drop is a labor-force exit on paper, with participation falling to 58.8% ( Michigan Center for Data and Analytics, September 17, 2026
-). The payroll survey, meanwhile, shows Michigan jobs essentially flat in August and up about 8,000 over the year
+— the drop is a labor-force exit on paper, with participation falling to 58.8% (Michigan Center for Data and Analytics, September 17, 2026 (https://www.michigan.gov/mcda/labor-market-information/employment-situation-press-releases/2026/09/17/michigan-unemployment-rate-increased-in-august)). The payroll survey, meanwhile, shows Michigan jobs essentially flat in August and up about 8,000 over the year
 .
 
 The claims data contradict a layoff wave.
 Michigan initial unemployment claims were 3,739 in the week ended August 29 — down
-460 from the week before — and insured unemployment fell all summer, from about 51,000 in late July to under 40,000 by early September ( U.S. Department of Labor, ETA releases
-). Eight thousand Oakland County layoffs in a month would show up there. Nothing did. The largest Michigan WARN filing of August — GM Lansing, 350 jobs — does not take effect until January 2027.
+460 from the week before — and insured unemployment fell all summer, from about 51,000 in late July to under 40,000 by early September (U.S. Department of Labor, ETA releases (https://www.dol.gov/index.php/newsroom/releases/eta/eta20260903)). Eight thousand Oakland County layoffs in a month would show up there. Nothing did. The largest Michigan WARN filing of August — GM Lansing, 350 jobs — does not take effect until January 2027.
 
 Every region moved the same way.
 The state's regional release shows essentially every Michigan labor market area with employment down 6–7% over the year and unemployment also down
-10–14%, with rates falling ( MCDA, September 24, 2026
-). Real job losses do not lower unemployment everywhere at once. A shifted statistical baseline does.
+10–14%, with rates falling (MCDA, September 24, 2026 (https://www.michigan.gov/mcda/labor-market-information/employment-situation-press-releases/2026/09/24/michigan-regional-unemployment-rates-edge-down-in-august)). Real job losses do not lower unemployment everywhere at once. A shifted statistical baseline does.
 
 The baseline did shift.
-County unemployment figures are not counted directly — they are modeled from the household survey, payroll data, and claims, then forced to match state totals. In January 2026, new census population controls cut the national labor force and employment estimates by about 1.4 million on paper — driven largely by lower estimated international migration — while barely changing the unemployment rate ( BLS, experimental population-control analysis
-). Michigan's estimates were re-based on those controls in spring 2026, counties were re-controlled to the new state totals in May, and the underlying household survey is still working through the hole left by the fall 2025 federal shutdown, when October's data was never collected at all and November's response rate hit a record low ( BLS, shutdown impact on the CPS
-). Michigan's actual population, per the Census Bureau, grew
+County unemployment figures are not counted directly — they are modeled from the household survey, payroll data, and claims, then forced to match state totals. In January 2026, new census population controls cut the national labor force and employment estimates by about 1.4 million on paper — driven largely by lower estimated international migration — while barely changing the unemployment rate (BLS, experimental population-control analysis (https://www.bls.gov/cps/methods/population-controls/experimental-series-accounting-for-january-2026-population-control-effects.htm)). Michigan's estimates were re-based on those controls in spring 2026, counties were re-controlled to the new state totals in May, and the underlying household survey is still working through the hole left by the fall 2025 federal shutdown, when October's data was never collected at all and November's response rate hit a record low (BLS, shutdown impact on the CPS (https://www.bls.gov/cps/methods/2025-federal-government-shutdown-impact-cps.htm)). Michigan's actual population, per the Census Bureau, grew
 last year.
 
 Our reading: the year-long trend — Oakland's unemployment rate up a full point, workplace employment down 1.7%, WARN filings stacking up through 2025 — is real, and the causes in the sections above are documented. The August cliff specifically is most likely the model, not the economy: a few thousand real losses statewide at most, inside a much larger statistical step. The figures that can settle it are scheduled — September's state release on October 20 and the county revision on October 28 — and this series will report what they show, including if they prove this paragraph wrong.
 
 What is offsetting it
 
-The counter-evidence is real, if smaller. Health care added 4,655 jobs in 2025. Stellantis hired roughly 2,000 engineers at its Auburn Hills headquarters in spring 2026 — then confirmed a white-collar hiring pause in September, citing cost pressure. Looking forward, the announcements are pledges, not payroll: Slate Auto committed to 392 jobs in Troy over five years (May 2026); Methode Electronics is moving its headquarters from Chicago to Southfield, with 90 jobs projected by 2030 ( State of Michigan, October 6, 2026
-); and GM Orion's gasoline-truck production, from early 2027, is the largest single rebound in view.
+The counter-evidence is real, if smaller. Health care added 4,655 jobs in 2025. Stellantis hired roughly 2,000 engineers at its Auburn Hills headquarters in spring 2026 — then confirmed a white-collar hiring pause in September, citing cost pressure. Looking forward, the announcements are pledges, not payroll: Slate Auto committed to 392 jobs in Troy over five years (May 2026); Methode Electronics is moving its headquarters from Chicago to Southfield, with 90 jobs projected by 2030 (State of Michigan, October 6, 2026 (https://www.michigan.gov/whitmer/news/press-releases/2026/10/06/whitmer-announces-90-new-jobs-more-than-3-million-expansion-project-in-oakland-county)); and GM Orion's gasoline-truck production, from early 2027, is the largest single rebound in view.
 
 What we are watching
 
@@ -762,10 +740,6 @@ THE AXIOVEX SIGNAL — MONTHLY
 The month, in your inbox.
 
 What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
-
-Check your inbox.
-
-We sent a confirmation email to the address you gave us. Click the link in it — good for 48 hours — and the first edition arrives after the monthly economic releases. No click, no emails: that’s the deal.
 
 One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
 Privacy policy
@@ -808,12 +782,9 @@ costs
 small business
 
 X
-
-Facebook
-
-LinkedIn
-
-Email
+(https://twitter.com/intent/tweet?text=Your%20website%20doesn) Facebook
+(https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Fcloudflare-github-website-costs%2F) LinkedIn
+(https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Fcloudflare-github-website-costs%2F) Email
 
 Text
 
@@ -1019,8 +990,7 @@ None of that required finding a host. There is no host. There is a repository an
 
 Want to do it yourself? Take the toolkit — it's free.
 
-Everything in this article is a method, and methods shouldn't be secrets. So we packaged ours and published it, free, under an open-source license: website-forge
-
+Everything in this article is a method, and methods shouldn't be secrets. So we packaged ours and published it, free, under an open-source license: website-forge (https://github.com/AXIOVEX/website-forge)
 — the complete head start for building your website with your own AI assistant
 .
 
@@ -1038,8 +1008,7 @@ It's focused on two things, deliberately: low cost
 , because a startup's real technology risk is never the platform. It's having nobody to call.
 
 If that sounds like the start you want, write to us at start@axiovexsystems.com
-or use the contact page
-. Tell us what you're building. The first conversation costs the same as the hosting: nothing.
+or use the contact page (https://axiovexsystems.com/contact/). Tell us what you're building. The first conversation costs the same as the hosting: nothing.
 
 — Tristen Pierson, President, Axiovex Systems
 
@@ -1048,10 +1017,6 @@ THE AXIOVEX SIGNAL — MONTHLY
 The month, in your inbox.
 
 What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
-
-Check your inbox.
-
-We sent a confirmation email to the address you gave us. Click the link in it — good for 48 hours — and the first edition arrives after the monthly economic releases. No click, no emails: that’s the deal.
 
 One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
 Privacy policy
@@ -1093,12 +1058,9 @@ terminology
 education
 
 X
-
-Facebook
-
-LinkedIn
-
-Email
+(https://twitter.com/intent/tweet?text=What%20superintelligence%20actually%20means%20%E2%80%94%20and%20why%20today) Facebook
+(https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Fwhat-superintelligence-means%2F) LinkedIn
+(https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Fwhat-superintelligence-means%2F) Email
 
 Text
 
@@ -1106,8 +1068,7 @@ Copy link
 
 More&hellip;
 
-Superintelligence is having a moment. A recent executive order proclaims the dawn of an era of "Super Intelligence," and public remarks have applied the term to today's AI models. Sandra Rogers, PhD, published a careful piece this week arguing that this is a category error worth correcting before it hardens into habit: AI is not superintelligence, not yet anyway
-. She is right — and for the people we work with, the reason matters well beyond semantics.
+Superintelligence is having a moment. A recent executive order proclaims the dawn of an era of "Super Intelligence," and public remarks have applied the term to today's AI models. Sandra Rogers, PhD, published a careful piece this week arguing that this is a category error worth correcting before it hardens into habit: AI is not superintelligence, not yet anyway (https://www.linkedin.com/pulse/ai-superintelligence-yet-anyway-sandra-rogers-phd-8quqe/). She is right — and for the people we work with, the reason matters well beyond semantics.
 
 We are an engineering firm, not a linguistics seminar. But our whole method starts with questioning foundational assumptions until what is actually true falls out, and vocabulary is a foundational assumption. When the words are wrong, everything built on them — budgets, timelines, training plans, safety rules — inherits the error.
 
@@ -1167,10 +1128,6 @@ The month, in your inbox.
 
 What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
 
-Check your inbox.
-
-We sent a confirmation email to the address you gave us. Click the link in it — good for 48 hours — and the first edition arrives after the monthly economic releases. No click, no emails: that’s the deal.
-
 One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
 Privacy policy
 
@@ -1212,12 +1169,9 @@ AI
 education
 
 X
-
-Facebook
-
-LinkedIn
-
-Email
+(https://twitter.com/intent/tweet?text=Michigan) Facebook
+(https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Fmichigan-workforce-september-2026%2F) LinkedIn
+(https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Fmichigan-workforce-september-2026%2F) Email
 
 Text
 
@@ -1227,8 +1181,7 @@ More&hellip;
 
 Our Michigan workforce intelligence project just published its September edition — new labor data through August, graduation-horizon program planning, and cross-sector analysis of AI task impacts. I want to walk through what the numbers actually say, because the headline figure is the least interesting part.
 
-Evidence cutoff: September 26, 2026 (America/Detroit). All figures below come from the September edition
-of the public research repo.
+Evidence cutoff: September 26, 2026 (America/Detroit). All figures below come from the September edition (https://github.com/AXIOVEX/michigan-workforce-intelligence/tree/reports-2026.09.27.131143Z/reports/2026-09-26-graduation-horizons) of the public research repo.
 
 The rate is not the story
 
@@ -1294,19 +1247,13 @@ No permission expansions, no copied tokens, no browser logins. The evidence asse
 
 That's the standard we hold our own analysis to: every number traceable to a source, every release hash-verified, every limit stated. The September edition declares no program obsolete on a speculative date and commits no named institution to anything. In a space full of confident forecasts, that restraint is a feature.
 
-The full reports, evidence ledger, and source registry are public at github.com/AXIOVEX/michigan-workforce-intelligence
-. The verified September release is verified September 2026 workforce release
-.
+The full reports, evidence ledger, and source registry are public at github.com/AXIOVEX/michigan-workforce-intelligence (https://github.com/AXIOVEX/michigan-workforce-intelligence). The verified September release is verified September 2026 workforce release (https://github.com/AXIOVEX/michigan-workforce-intelligence/releases/tag/reports-2026.09.27.131143Z).
 
 THE AXIOVEX SIGNAL — MONTHLY
 
 The month, in your inbox.
 
 What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
-
-Check your inbox.
-
-We sent a confirmation email to the address you gave us. Click the link in it — good for 48 hours — and the first edition arrives after the monthly economic releases. No click, no emails: that’s the deal.
 
 One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
 Privacy policy
@@ -1344,13 +1291,9 @@ What we're watching.
 Michigan's numbers and the field items that matter — manufacturing, AI, workforce, and industrial security — gathered from primary sources and refreshed automatically.
 
 Last refreshed:
-October 19, 2026 at 9:27 AM ET
+October 19, 2026 at 1:36 PM ET
 
 The Axiovex Signal — in your inbox, monthly.
-
-Check your inbox.
-
-We sent a confirmation email to the address you gave us. Click the link in it — good for 48 hours — and the first edition arrives after the monthly economic releases. No click, no emails: that’s the deal.
 
 One email a month · confirmation first · one-click unsubscribe · no tracking pixels
 . Privacy policy
@@ -10195,208 +10138,169 @@ Counts are graduates the Census Bureau matched to employment one year after grad
 
 GO DEEPER
 
-Michigan's September workforce data: what the numbers say, and what they don't
-&middot; the current monthly workforce article on this site
+Michigan's September workforce data: what the numbers say, and what they don't (https://axiovexsystems.com/blog/michigan-workforce-september-2026/) &middot; the current monthly workforce article on this site
 
-The September edition — Axiovex workforce study &rarr;
-&middot; the verified research edition behind the Michigan tables (release tag reports-2026.09.27.131143Z)
+The September edition — Axiovex workforce study &rarr; (https://github.com/AXIOVEX/michigan-workforce-intelligence/tree/reports-2026.09.27.131143Z/reports/2026-09-26-graduation-horizons) &middot; the verified research edition behind the Michigan tables (release tag reports-2026.09.27.131143Z)
 
 Manufacturing & automation
 
+AUTOMATION ALLEY
+Why Digital Leadership Fails When Decisions Drift Away From Operational Reality
+(https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/) &middot; October 19, 2026
+
 MANUFACTURING DIVE
 From Auburn Hills to Luxembourg: Christian Lopez’s Co-op experience
-
-&middot; October 19, 2026
+(https://www.manufacturingdive.com/spons/from-auburn-hills-to-luxembourg-christian-lopezs-co-op-experience/832608/) &middot; October 19, 2026
 
 MANUFACTURING DIVE
 How AI, digital twins and real-time simulation are accelerating manufacturing innovation
-
-&middot; October 19, 2026
-
-MANUFACTURING DIVE
-Manufacturing tech orders hit 3rd-highest monthly total: AMT
-
-&middot; October 16, 2026
+(https://www.manufacturingdive.com/spons/how-ai-digital-twins-and-real-time-simulation-are-accelerating-manufacturi/833255/) &middot; October 19, 2026
 
 MANUFACTURING DIVE
-Alcoa plans to sell part of its Massena East site for $315M
-
-&middot; October 16, 2026
+MIT’s TechAMP finds early success after first year, could expand
+(https://www.manufacturingdive.com/news/mit-techamp-finds-early-success-after-first-year-expansion-teledyne-defense/833324/) &middot; October 19, 2026
 
 MANUFACTURING DIVE
-Avio’s plan to meet the US’ solid rocket motors demand
-
-&middot; October 16, 2026
+Cleveland-Cliffs CEO blames Canada for Stelco layoffs
+(https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/) &middot; October 19, 2026
 
 AUTOMATION ALLEY
 Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity
-
-&middot; October 16, 2026
-
-MANUFACTURING DIVE
-What manufacturing plant managers think of the AI and automation boom
-
-&middot; October 15, 2026
+(https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/) &middot; October 16, 2026
 
 MANUFACTURING DIVE
-Nestlé to spend additional $1B on manufacturing operations in Mexico
+Manufacturing tech orders hit 3rd-highest monthly total: AMT
+(https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/) &middot; October 16, 2026
 
-&middot; October 15, 2026
+MANUFACTURING DIVE
+Alcoa plans to sell part of its Massena East site for $315M
+(https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/) &middot; October 16, 2026
 
 AI, standards & research
 
 NIST
 NIST Joins White House Effort to Drive ‘A New Golden Age of Science’
-
-&middot; October 8, 2026
+(https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science) &middot; October 8, 2026
 
 NIST
 NIST Awards More Than $1.7 Million to Support Cybersecurity Workforce Development Across 8 States
-
-&middot; September 18, 2026
+(https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development) &middot; September 18, 2026
 
 NSF
 NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics
-
-&middot; September 17, 2026
+(https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor) &middot; September 17, 2026
 
 NSF
 NSF announces 3 additional topics as part of the NSF X-Labs initiative to pursue generational breakthrough science and technology efforts
-
-&middot; September 16, 2026
+(https://www.nsf.gov/news/nsf-announces-3-additional-topics-part-nsf-x-labs-initiative) &middot; September 16, 2026
 
 NIST
 NIST-Developed Quantum Sensors Improve Nuclear Monitoring
-
-&middot; September 10, 2026
+(https://www.nist.gov/news-events/news/2026/09/nist-developed-quantum-sensors-improve-nuclear-monitoring) &middot; September 10, 2026
 
 Michigan workforce & industry
 
 AUTOMATION ALLEY
-Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity
+Why Digital Leadership Fails When Decisions Drift Away From Operational Reality
+(https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/) &middot; October 19, 2026
 
-&middot; October 16, 2026
+AUTOMATION ALLEY
+Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity
+(https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/) &middot; October 16, 2026
 
 MICHIGAN WARN (LEO)
 Kern J.G. Enterprise, Inc. — announced permanent layoff, Sterling Heights, 156 jobs, effective August 17, 2026
-
-&middot; October 14, 2026
+(https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-08-28_WARN-Notice_Kern-JG-Enterprise.pdf?rev=dada26e68a0c4d0a999c5310d4a234ae&hash=4BDEA76ACA8C76587B0610D053D6557F) &middot; October 14, 2026
 
 AUTOMATION ALLEY
 HIROTEC’s Journey to Zero-Operator Manufacturing
-
-&middot; October 12, 2026
+(https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/) &middot; October 12, 2026
 
 AXIOVEX
 Robots can do the work. Almost none of it pays yet.
-
-&middot; October 10, 2026
+(https://axiovexsystems.com/blog/robots-can-do-the-work/) &middot; October 10, 2026
 
 MICHIGAN WARN (LEO)
 HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026
-
-&middot; October 8, 2026
+(https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75) &middot; October 8, 2026
 
 MICHIGAN WARN (LEO)
 Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026
-
-&middot; October 8, 2026
+(https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation) &middot; October 8, 2026
 
 AXIOVEX
 Oakland County is losing jobs. Here is why.
-
-&middot; October 8, 2026
-
-AUTOMATION ALLEY
-The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes
-
-&middot; October 7, 2026
+(https://axiovexsystems.com/blog/oakland-county-job-losses/) &middot; October 8, 2026
 
 OT cybersecurity
 
 CISA
 Eclipse Foundation Eclipse Milo
-
-&middot; October 15, 2026
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01) &middot; October 15, 2026
 
 CISA
 Guangzhou Juan IoT Technology EseeCloud
-
-&middot; October 15, 2026
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02) &middot; October 15, 2026
 
 CISA
 CISA Malcolm
-
-&middot; October 15, 2026
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01) &middot; October 15, 2026
 
 CISA
 Inductive Automation Ignition Software
-
-&middot; October 13, 2026
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01) &middot; October 13, 2026
 
 CISA
 Swann Communications SWIFI-SE2KIC
-
-&middot; October 13, 2026
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02) &middot; October 13, 2026
 
 CISA
 Red Lion Controls N-Tron 700 Series (Update A)
-
-&middot; October 8, 2026
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01) &middot; October 8, 2026
 
 CISA
 Grid Protection Alliance openPDC and openHistorian
-
-&middot; October 8, 2026
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02) &middot; October 8, 2026
 
 CISA
 Satel Netco Design
-
-&middot; October 8, 2026
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03) &middot; October 8, 2026
 
 Funding & policy
 
 FEDERAL REGISTER
 Bulk Manufacturer of Controlled Substances Application: Scottsdale Research Institute
+(https://www.federalregister.gov/documents/2026/10/19/2026-21360/bulk-manufacturer-of-controlled-substances-application-scottsdale-research-institute) &middot; October 19, 2026
 
-&middot; October 19, 2026
-
-USASPENDING (TREASURY)
-Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026
-
-&middot; October 16, 2026
+U.S. DEPARTMENT OF ENERGY
+Energy Department Advances Constitution Pipeline Project with $42 Million in Defense Production Act Funding
+(https://www.energy.gov/articles/energy-department-advances-constitution-pipeline-project-42-million-defense-production-act) &middot; October 19, 2026
 
 USASPENDING (TREASURY)
 Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C25027P0054_3600_-NONE-_-NONE-) &middot; October 16, 2026
 
-&middot; October 16, 2026
+USASPENDING (TREASURY)
+Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C25027P0053_3600_-NONE-_-NONE-) &middot; October 16, 2026
 
 U.S. DEPARTMENT OF ENERGY
 Energy Department Announces Virginia and West Virginia Transmission Project to Receive Defense Production Act Funding, Strengthening National Security and Grid Reliability
-
-&middot; October 16, 2026
+(https://www.energy.gov/articles/energy-department-announces-virginia-and-west-virginia-transmission-project-receive) &middot; October 16, 2026
 
 USASPENDING (TREASURY)
 Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $46,457 award, October 15, 2026
-
-&middot; October 15, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C26127P0069_3600_-NONE-_-NONE-) &middot; October 15, 2026
 
 USASPENDING (TREASURY)
 Department of Veterans Affairs → WRIGHT & FILIPPIS, LLC — $20,246 award, October 15, 2026
-
-&middot; October 15, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C25027N0083_3600_36C25025A0066_3600) &middot; October 15, 2026
 
 USASPENDING (TREASURY)
 Department of Veterans Affairs → ELECTRA-MED CORPORATION — $21,507 award, October 15, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C10X27K0056_3600_36C10G24D0057_3600) &middot; October 15, 2026
 
-&middot; October 15, 2026
-
-U.S. DEPARTMENT OF ENERGY
-Energy Department Announces 2026 Ernest Orlando Lawrence Award Winners
-
-&middot; October 13, 2026
-
-Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce the committed datasets behind the boards: Michigan occupation projections from the Michigan Center for Data and Analytics, transcribed via the Axiovex workforce study's September edition (a direct read of MCDA's tables is pending and will supersede the transcription), and education figures as published by CEPI via MDE (February 2026), MDE (September 2025), and the House Fiscal Agency (January 2026 consensus; pupil membership is a budget estimate, as its source labels it). Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2024 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023–24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (release R2026Q2, cohorts 2001–2021) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 19, 2026 at 9:27 AM ET. See our Disclaimer
+Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce the committed datasets behind the boards: Michigan occupation projections from the Michigan Center for Data and Analytics, transcribed via the Axiovex workforce study's September edition (a direct read of MCDA's tables is pending and will supersede the transcription), and education figures as published by CEPI via MDE (February 2026), MDE (September 2025), and the House Fiscal Agency (January 2026 consensus; pupil membership is a budget estimate, as its source labels it). Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2024 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023–24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (release R2026Q2, cohorts 2001–2021) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 19, 2026 at 1:36 PM ET. See our Disclaimer
 .
 
 THE AXIOVEX SIGNAL — MONTHLY
@@ -10404,10 +10308,6 @@ THE AXIOVEX SIGNAL — MONTHLY
 The month, in your inbox.
 
 What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
-
-Check your inbox.
-
-We sent a confirmation email to the address you gave us. Click the link in it — good for 48 hours — and the first edition arrives after the monthly economic releases. No click, no emails: that’s the deal.
 
 One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
 Privacy policy
@@ -10453,8 +10353,7 @@ PDF &middot; 810 KB &middot; Updated October 5, 2026
 
 OPEN THE DOCUMENT &rarr;
 
-These files live in our public shared-documents repository
-on GitHub and are mirrored here automatically whenever they are updated.
+These files live in our public shared-documents repository (https://github.com/AXIOVEX/shared-documents) on GitHub and are mirrored here automatically whenever they are updated.
 
 Next step
 
@@ -10698,10 +10597,6 @@ What changed in Michigan industry and the field → one email, after the monthly
 · Manufacturing & field signals
 · Industrial AI, checked against sources
 
-Check your inbox.
-
-We sent a confirmation email to the address you gave us. Click the link in it — good for 48 hours — and the first edition arrives after the monthly economic releases. No click, no emails: that’s the deal.
-
 Monthly, after economic releases
 — one email a month. Free.
 
@@ -10740,40 +10635,31 @@ What changed
 
 Manufacturing & automation
 
-GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers
-· Manufacturing Dive · October 9, 2026
+GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers (https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/) · Manufacturing Dive · October 9, 2026
 
-Thousands of manufacturing layoffs announced in September
-· Manufacturing Dive · October 9, 2026
+Thousands of manufacturing layoffs announced in September (https://www.manufacturingdive.com/news/manufacturing-layoffs-closures-warn-act-september-2026/832400/) · Manufacturing Dive · October 9, 2026
 
 AI, standards & research
 
-NIST Joins White House Effort to Drive ‘A New Golden Age of Science’
-· NIST · October 8, 2026
+NIST Joins White House Effort to Drive ‘A New Golden Age of Science’ (https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science) · NIST · October 8, 2026
 
 Michigan workforce & industry
 
-HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026
-· Michigan WARN (LEO) · October 8, 2026
+HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026 (https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75) · Michigan WARN (LEO) · October 8, 2026
 
-Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026
-· Michigan WARN (LEO) · October 8, 2026
+Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026 (https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation) · Michigan WARN (LEO) · October 8, 2026
 
 OT cybersecurity
 
-Red Lion Controls N-Tron 700 Series
-· CISA · October 8, 2026
+Red Lion Controls N-Tron 700 Series (https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01) · CISA · October 8, 2026
 
-Grid Protection Alliance openPDC and openHistorian
-· CISA · October 8, 2026
+Grid Protection Alliance openPDC and openHistorian (https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02) · CISA · October 8, 2026
 
 Funding & policy
 
-Energy Department Announces New Genesis Mission Awards to Advance Super Intelligence for Science
-· U.S. Department of Energy · October 8, 2026
+Energy Department Announces New Genesis Mission Awards to Advance Super Intelligence for Science (https://www.energy.gov/articles/energy-department-announces-new-genesis-mission-awards-advance-super-intelligence-science) · U.S. Department of Energy · October 8, 2026
 
-U.S. Department of Energy Awards $96 Million to 67 Early Career Scientists
-· U.S. Department of Energy · October 8, 2026
+U.S. Department of Energy Awards $96 Million to 67 Early Career Scientists (https://www.energy.gov/articles/us-department-energy-awards-96-million-67-early-career-scientists) · U.S. Department of Energy · October 8, 2026
 
 Michigan Pulse
 
@@ -10807,8 +10693,7 @@ Manufacturing Dive reports thousands of manufacturing layoffs were announced nat
 
 From the blog
 
-Oakland County is losing jobs. Here is why.
-· October 8, 2026
+Oakland County is losing jobs. Here is why. (https://axiovexsystems.com/blog/oakland-county-job-losses/) · October 8, 2026
 
 Watchlist
 
@@ -10830,10 +10715,6 @@ READING SOMEONE ELSE’S COPY?
 Get the monthly edition.
 
 The same edition, in your own inbox — after the monthly economic releases, with the numbers, their vintages, and why they matter.
-
-Check your inbox.
-
-We sent a confirmation email to the address you gave us. Click the link in it — good for 48 hours — and the first edition arrives after the monthly economic releases. No click, no emails: that’s the deal.
 
 One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
 Privacy policy

@@ -27,3 +27,10 @@
 - Persist validated aggregate daily Cloudflare rollups in D1 via the private
   ops traffic-archive endpoint. Missing historical dates yield unavailable
   monthly totals, never an assumed zero or a complete-month claim.
+
+- SEO/AEO now uses locked Lighthouse, HTML-Validate and aeo.js engines plus
+  live crawler checks; Seobility is optional. See docs/seo-aeo-checkers.md.
+- Data-ready monthly customer release must send the final edition to Tristen
+  first, then active subscribers, with a matching date/hash and Microsoft
+  acceptance receipt. Today's October 19 test is only to Tristen and uses
+  current snapshots with actual data vintages; it is not a customer release.

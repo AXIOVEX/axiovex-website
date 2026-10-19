@@ -22,6 +22,11 @@ export function publicationPlan(now = new Date(), cron = '') {
   const plan = cycle(slot);
   return { ...plan, active: plan.active && (!cron.trim() || +localParts(slot).hour === policy.releaseHour) };
 }
+export function verifyFinalPreview(preview, date, hash) {
+  if (preview?.httpStatus !== 202 || preview.sent !== 1 || preview.recipient !== 'tristen@axiovexsystems.com' || preview.date !== date || preview.emailSHA256 !== hash) {
+    throw new Error('Subscriber send refused: Tristen must receive the exact final edition first');
+  }
+}
 export function checkEconomicData(signals, geo, dataMonth) {
   const problems = [];
   for (const id of policy.requiredStateSeries) {
@@ -116,9 +121,7 @@ async function main() {
     const { createHash } = await import('node:crypto');
     const hash = createHash('sha256').update(JSON.stringify(email)).digest('hex');
     const preview = JSON.parse(readFileSync('ops-output/email-review/newsletter-receipt.json', 'utf8'));
-    if (preview.httpStatus !== 202 || preview.sent !== 1 || preview.recipient !== 'tristen@axiovexsystems.com' || preview.date !== plan.date || preview.emailSHA256 !== hash) {
-      throw new Error('Subscriber send refused: Tristen must receive the exact final edition first');
-    }
+    verifyFinalPreview(preview, plan.date, hash);
     execute(process.execPath, ['scripts/newsletter/send.mjs', plan.date, '--base', 'https://axiovexsystems.com', '--approved-by', `${policy.authorization}; decision=${policy.decisionId}; dataMonth=${plan.dataMonth}; emailSHA256=${hash}`]);
     save('customer-send.json', { dataMonth: plan.dataMonth, date: plan.date, decisionId: policy.decisionId, sha256: hash, status: 'sender completed' }); return;
   }
