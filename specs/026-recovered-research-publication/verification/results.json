@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "checked_utc": "2026-10-19T17:29:24.988Z",
+  "checked_utc": "2026-10-19T17:44:23.040Z",
   "source_base": "a43d821a5166a97e60ef686eb9e520527c81e23b",
-  "scope": "Website publication only; no current reproduction of missing035 source or raw results",
+  "scope": "Website publication and fidelity to supplied fresh runtime evidence; no current reproduction of missing035 source or raw results",
   "static": {
     "exact_report": true,
     "private_inventory_excluded": true,
@@ -10,7 +10,9 @@
     "protected_files_unchanged": true,
     "approved_component_and_shell": true,
     "visible_recovery_boundary": true,
-    "available_downloads_and_checksums": true
+    "available_downloads_and_checksums": true,
+    "runtime_evidence_and_visible_limits": true,
+    "frozen_runtime_assets_unchanged": true
   },
   "browser": {
     "version": "141.0.7390.37",
@@ -39,7 +41,7 @@
         "running": 1,
         "offscale": 2
       },
-      "article_text": "OCTOBER 19, 2026\n\nWhat a record can tell us — and what it leaves out\n\nBasis: the recovered discriminating-studies report. Archival publication, October 19, 2026.\n\nThe question. When we see only part of a system, what would make our account of it complete enough to predict what happens next? The retained report examines four parts of that problem: whether proposed mechanisms supply predictions, whether a compressed record retains enough information, whether separate observations fit one possible history, and which experiments can tell competing explanations apart.\n\nRecovery status. The original technical report was recovered with its checksum intact. The original source inventory is retained privately and is not included here. The underlying source changes and complete machine-readable results were not recovered after an interrupted work session. This is an archival account of the reported findings, not a current independent reproduction. Earlier validation statements in the report remain historical; they do not establish a successful rerun in the recovered workspace.\n\nProposals still need prediction rules. The report identifies missing executable rules in the existing mechanism catalogue, leaving the proposed mechanisms without the inputs needed for a quantitative comparison. A neatly connected proposal does not establish that its physical assumptions are independent, and a missing prediction rule is not a failed physical theory. No new gravity equation was supplied to fill that gap.\n\nA useful summary can still lose the next answer. In the finite systems described, two states could have the same visible average and still respond differently when control and environment changed together. Testing those influences one at a time missed that difference. The reported repair retained the hidden distinctions within the tested family. Combining averages also required the size of each group: averaging the averages alone could make the answer depend on the route taken.\n\nPairwise agreement can hide an impossible history. The reported examples show that matching each pair of observations was not enough to make all observations fit one shared classical preparation. The study recorded compatible histories and exact contradictions under its stated assumptions. Its scope is the finite classical models described; it does not solve every possible classical or quantum reconstruction problem.\n\nChoosing a test did not produce a unique winner. The report compares a finite menu of experiments while accounting for selection, feedback and shared sources of uncertainty. Several designs tied. The policies selected the same tests, so the reported run did not establish that the more elaborate selection rule was superior. The selected experiments already distinguished the predictive behaviours in this finite example; the follow-up settings checked those predictions and added no further discrimination. A label that never affected predictions remained unidentified.\n\nWhat the report establishes within its scope. Its findings concern supplied computer models. They add no physical measurements and leave every broad reconstruction target open. The retained account describes protocols and initial code frozen before the first computation, followed by a software-layout correction that reproduced the same four-study outcomes. That historical check is a rerun of known results, not another discovery. The missing execution records prevent independently verifying those steps from this recovered publication alone. This formalization report does not change the numbered public-study verdicts in the October 13 snapshot.\n\nThe available record. Read the original technical report, with its findings and limits and the availability and reproduction note. The publication checksums identify the files available here. The original source inventory is retained privately. A separate installation and validation update will name the exact surviving source baseline and checks that could be rerun.",
+      "article_text": "OCTOBER 19, 2026\n\nWhat a record can tell us — and what it leaves out\n\nBasis: the recovered discriminating-studies report and a separate runtime validation update, October 19, 2026.\n\nThe question. When we see only part of a system, what would make our account of it complete enough to predict what happens next? The retained report examines four parts of that problem: whether proposed mechanisms supply predictions, whether a compressed record retains enough information, whether separate observations fit one possible history, and which experiments can tell competing explanations apart.\n\nRecovery status. The original technical report was recovered with its checksum intact. The original source inventory is retained privately and is not included here. The underlying source changes and complete machine-readable results were not recovered after an interrupted work session. This is an archival account of the reported findings, not a current independent reproduction. Earlier validation statements in the report remain historical; they do not establish a successful rerun in the recovered workspace.\n\nProposals still need prediction rules. The report identifies missing executable rules in the existing mechanism catalogue, leaving the proposed mechanisms without the inputs needed for a quantitative comparison. A neatly connected proposal does not establish that its physical assumptions are independent, and a missing prediction rule is not a failed physical theory. No new gravity equation was supplied to fill that gap.\n\nA useful summary can still lose the next answer. In the finite systems described, two states could have the same visible average and still respond differently when control and environment changed together. Testing those influences one at a time missed that difference. The reported repair retained the hidden distinctions within the tested family. Combining averages also required the size of each group: averaging the averages alone could make the answer depend on the route taken.\n\nPairwise agreement can hide an impossible history. The reported examples show that matching each pair of observations was not enough to make all observations fit one shared classical preparation. The study recorded compatible histories and exact contradictions under its stated assumptions. Its scope is the finite classical models described; it does not solve every possible classical or quantum reconstruction problem.\n\nChoosing a test did not produce a unique winner. The report compares a finite menu of experiments while accounting for selection, feedback and shared sources of uncertainty. Several designs tied. The policies selected the same tests, so the reported run did not establish that the more elaborate selection rule was superior. The selected experiments already distinguished the predictive behaviours in this finite example; the follow-up settings checked those predictions and added no further discrimination. A label that never affected predictions remained unidentified.\n\nWhat the report establishes within its scope. Its findings concern supplied computer models. They add no physical measurements and leave every broad reconstruction target open. The retained account describes protocols and initial code frozen before the first computation, followed by a software-layout correction that reproduced the same four-study outcomes. That historical check is a rerun of known results, not another discovery. The missing execution records prevent independently verifying those steps from this recovered publication alone. This formalization report does not change the numbered public-study verdicts in the October 13 snapshot.\n\nThe available record. Read the original technical report, with its findings and limits and the availability and reproduction note. The publication checksums identify the files available here. The original source inventory is retained privately. The update below identifies the surviving baseline that could be checked after the runtime was repaired.\n\nRuntime recovery — October 19. The missing local dependencies have now been repaired, and fresh validation passes on the surviving feature-034 baseline plus the new engineering changes. This does not recover or rerun the missing feature-035 source. The runtime results and limits explain what was repaired; the machine-readable validation summary identifies the exact baseline commit, environment versions, commands and retained evidence.\n\nWhat changed. Separate clean environments now install the complete dependency set from version and artifact-hash locks, then install the real local package from the active checkout. The checks reject incomplete environments, unexpected versions and imports from another workspace. Docker now copies the local package before installation. Both Docker and CI install the hash-locked dependencies first and use the locked build backend for the local package. Graphviz rendering, the pinned Spec Kit installation and the Lean toolchain were also restored and exercised.\n\nFresh results. Python 3.11.17 and Python 3.12.15 each passed all 222 tests, with zero failures, errors or skips: 211 existing cases and 11 new runtime regressions in each environment. Each version also passed all 7 experiment, control and replay checks. Lean 4.33.1 completed its 40-job build, with the existing proof and configuration files unchanged. All 27 baseline governance commands passed in an isolated copy. The frozen replay passes its declared tolerances; it is not a claim of bitwise equality of every floating-point output.\n\nHow completion is supported. The retained Python 3.12 stdout file contains only 54 progress bytes and omits the final total. The successful process exit and independently parsed JUnit record establish the 222 completed tests; the focused completion receipt records that distinction. The private test-case inventory remains private.\n\nUse the repair. The runtime repair and validation package contains the new installers, locks, regression tests and focused evidence, with a small patch for four engineering files. It requires access to the exact surviving baseline; it is not a standalone copy of the source repository. Follow the portable setup and rerun instructions in an isolated checkout. The download and availability note describes every included file, and the current download checksums bind their exact bytes.\n\nWhat remains open. No Docker daemon was available, so the repaired Python installation boundary was executed in a fresh staged environment; no Docker image build or container execution is claimed. The base image, apt layer and remaining host libraries are outside the Python lock. Source integration and the source repository's required current-head CI remain open. Publishing this package does not complete those steps. The runtime repair adds no physical measurements or new theorem, leaves all 14 broader reconstruction targets open, and does not change the missing-source limitation of the archival report above.",
       "link_style": {
         "color": "rgb(0, 222, 246)",
         "decoration": "underline"
@@ -55,20 +57,80 @@
         {
           "path": "/research/records/2026-10-19-discriminating-studies/README.txt",
           "status": 200,
-          "bytes": 1928,
-          "sha256": "9a74282533fd89185b0649a6a2eac9453194299c296f209fc7a4c7d063d49332"
+          "bytes": 2066,
+          "sha256": "79170d80bb66af4ed743236748a7511784d7a583b1896fd14e05152e25d9da57"
         },
         {
           "path": "/research/records/2026-10-19-discriminating-studies/release-manifest.json",
           "status": 200,
           "bytes": 866,
-          "sha256": "4b23c9732f5ab8aaea5936c26d910e67b86af40840cd6bfe183af15282beb953"
+          "sha256": "fc1a577ce73a3bd2b7d877dbd5d1eede9fdae9088561aaa97efa3b5adb828dce"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/convergence.md",
+          "status": 200,
+          "bytes": 5521,
+          "sha256": "3fb00436448f810143b99a7fdb642ccf61050c9bd349684ef9e8ca914f91b56c"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/runtime-validation-summary.json",
+          "status": 200,
+          "bytes": 11266,
+          "sha256": "ce92fbb69bdeb44c8e973f48da90fd6b0d508001993eb334ca59d548960add5e"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/python312-test-completion.json",
+          "status": 200,
+          "bytes": 1289,
+          "sha256": "e2feecac5d60e3a9dfcf69717a6251df62f761db82bc6faba7ca4d6db7eeb252"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/runtime-repair-and-validation-036.zip",
+          "status": 200,
+          "bytes": 268828,
+          "sha256": "4dfca5d28d5fc1655c4e987fcce41963cb269d68efb80478199d0079909f190f"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/runtime-setup.md",
+          "status": 200,
+          "bytes": 10412,
+          "sha256": "140d5e6b190c583c13f98a459de425ea91a920306c21bae5d3bd2db9259a784d"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/README.txt",
+          "status": 200,
+          "bytes": 4682,
+          "sha256": "e4ae7c269063d39d2e895ece50e8db1a42803fbdea189673be772cab2d790867"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/download-checksums.json",
+          "status": 200,
+          "bytes": 2015,
+          "sha256": "541982dcee8b2e81286b3909242ae232b05b71d013bc8e6c374627bbabe46592"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/runtime-release-manifest.json",
+          "status": 200,
+          "bytes": 45327,
+          "sha256": "318c1c17cb1275a9b1ab92b30f35a8c851cc03fef729def63fa174fdcffb8487"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/package-verification.json",
+          "status": 200,
+          "bytes": 791,
+          "sha256": "04c3cd3f4fa3261b1ceeacfbf1d5d87ac8d160964e0bca22b35f508a5ca87c20"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/public-scope-audit.json",
+          "status": 200,
+          "bytes": 1896,
+          "sha256": "a39afe72f5ea3b76e613fc9d6fde2b75e65bec604bb10874ffef7f19350dc3d2"
         }
       ],
       "screenshot": {
         "filename": "article-desktop.png",
-        "sha256": "b37132fdc1c39278a73e7ba762806f723bac272106e07ffc50d3e85a0b902189",
-        "bytes": 318606
+        "sha256": "57438a679851925d8e4bf8072dc9b606fbfebc9b3614b28f731ac6c67af1e315",
+        "bytes": 567057
       },
       "csp": [],
       "page_errors": [],
@@ -89,7 +151,7 @@
         "running": 1,
         "offscale": 2
       },
-      "article_text": "OCTOBER 19, 2026\n\nWhat a record can tell us — and what it leaves out\n\nBasis: the recovered discriminating-studies report. Archival publication, October 19, 2026.\n\nThe question. When we see only part of a system, what would make our account of it complete enough to predict what happens next? The retained report examines four parts of that problem: whether proposed mechanisms supply predictions, whether a compressed record retains enough information, whether separate observations fit one possible history, and which experiments can tell competing explanations apart.\n\nRecovery status. The original technical report was recovered with its checksum intact. The original source inventory is retained privately and is not included here. The underlying source changes and complete machine-readable results were not recovered after an interrupted work session. This is an archival account of the reported findings, not a current independent reproduction. Earlier validation statements in the report remain historical; they do not establish a successful rerun in the recovered workspace.\n\nProposals still need prediction rules. The report identifies missing executable rules in the existing mechanism catalogue, leaving the proposed mechanisms without the inputs needed for a quantitative comparison. A neatly connected proposal does not establish that its physical assumptions are independent, and a missing prediction rule is not a failed physical theory. No new gravity equation was supplied to fill that gap.\n\nA useful summary can still lose the next answer. In the finite systems described, two states could have the same visible average and still respond differently when control and environment changed together. Testing those influences one at a time missed that difference. The reported repair retained the hidden distinctions within the tested family. Combining averages also required the size of each group: averaging the averages alone could make the answer depend on the route taken.\n\nPairwise agreement can hide an impossible history. The reported examples show that matching each pair of observations was not enough to make all observations fit one shared classical preparation. The study recorded compatible histories and exact contradictions under its stated assumptions. Its scope is the finite classical models described; it does not solve every possible classical or quantum reconstruction problem.\n\nChoosing a test did not produce a unique winner. The report compares a finite menu of experiments while accounting for selection, feedback and shared sources of uncertainty. Several designs tied. The policies selected the same tests, so the reported run did not establish that the more elaborate selection rule was superior. The selected experiments already distinguished the predictive behaviours in this finite example; the follow-up settings checked those predictions and added no further discrimination. A label that never affected predictions remained unidentified.\n\nWhat the report establishes within its scope. Its findings concern supplied computer models. They add no physical measurements and leave every broad reconstruction target open. The retained account describes protocols and initial code frozen before the first computation, followed by a software-layout correction that reproduced the same four-study outcomes. That historical check is a rerun of known results, not another discovery. The missing execution records prevent independently verifying those steps from this recovered publication alone. This formalization report does not change the numbered public-study verdicts in the October 13 snapshot.\n\nThe available record. Read the original technical report, with its findings and limits and the availability and reproduction note. The publication checksums identify the files available here. The original source inventory is retained privately. A separate installation and validation update will name the exact surviving source baseline and checks that could be rerun.",
+      "article_text": "OCTOBER 19, 2026\n\nWhat a record can tell us — and what it leaves out\n\nBasis: the recovered discriminating-studies report and a separate runtime validation update, October 19, 2026.\n\nThe question. When we see only part of a system, what would make our account of it complete enough to predict what happens next? The retained report examines four parts of that problem: whether proposed mechanisms supply predictions, whether a compressed record retains enough information, whether separate observations fit one possible history, and which experiments can tell competing explanations apart.\n\nRecovery status. The original technical report was recovered with its checksum intact. The original source inventory is retained privately and is not included here. The underlying source changes and complete machine-readable results were not recovered after an interrupted work session. This is an archival account of the reported findings, not a current independent reproduction. Earlier validation statements in the report remain historical; they do not establish a successful rerun in the recovered workspace.\n\nProposals still need prediction rules. The report identifies missing executable rules in the existing mechanism catalogue, leaving the proposed mechanisms without the inputs needed for a quantitative comparison. A neatly connected proposal does not establish that its physical assumptions are independent, and a missing prediction rule is not a failed physical theory. No new gravity equation was supplied to fill that gap.\n\nA useful summary can still lose the next answer. In the finite systems described, two states could have the same visible average and still respond differently when control and environment changed together. Testing those influences one at a time missed that difference. The reported repair retained the hidden distinctions within the tested family. Combining averages also required the size of each group: averaging the averages alone could make the answer depend on the route taken.\n\nPairwise agreement can hide an impossible history. The reported examples show that matching each pair of observations was not enough to make all observations fit one shared classical preparation. The study recorded compatible histories and exact contradictions under its stated assumptions. Its scope is the finite classical models described; it does not solve every possible classical or quantum reconstruction problem.\n\nChoosing a test did not produce a unique winner. The report compares a finite menu of experiments while accounting for selection, feedback and shared sources of uncertainty. Several designs tied. The policies selected the same tests, so the reported run did not establish that the more elaborate selection rule was superior. The selected experiments already distinguished the predictive behaviours in this finite example; the follow-up settings checked those predictions and added no further discrimination. A label that never affected predictions remained unidentified.\n\nWhat the report establishes within its scope. Its findings concern supplied computer models. They add no physical measurements and leave every broad reconstruction target open. The retained account describes protocols and initial code frozen before the first computation, followed by a software-layout correction that reproduced the same four-study outcomes. That historical check is a rerun of known results, not another discovery. The missing execution records prevent independently verifying those steps from this recovered publication alone. This formalization report does not change the numbered public-study verdicts in the October 13 snapshot.\n\nThe available record. Read the original technical report, with its findings and limits and the availability and reproduction note. The publication checksums identify the files available here. The original source inventory is retained privately. The update below identifies the surviving baseline that could be checked after the runtime was repaired.\n\nRuntime recovery — October 19. The missing local dependencies have now been repaired, and fresh validation passes on the surviving feature-034 baseline plus the new engineering changes. This does not recover or rerun the missing feature-035 source. The runtime results and limits explain what was repaired; the machine-readable validation summary identifies the exact baseline commit, environment versions, commands and retained evidence.\n\nWhat changed. Separate clean environments now install the complete dependency set from version and artifact-hash locks, then install the real local package from the active checkout. The checks reject incomplete environments, unexpected versions and imports from another workspace. Docker now copies the local package before installation. Both Docker and CI install the hash-locked dependencies first and use the locked build backend for the local package. Graphviz rendering, the pinned Spec Kit installation and the Lean toolchain were also restored and exercised.\n\nFresh results. Python 3.11.17 and Python 3.12.15 each passed all 222 tests, with zero failures, errors or skips: 211 existing cases and 11 new runtime regressions in each environment. Each version also passed all 7 experiment, control and replay checks. Lean 4.33.1 completed its 40-job build, with the existing proof and configuration files unchanged. All 27 baseline governance commands passed in an isolated copy. The frozen replay passes its declared tolerances; it is not a claim of bitwise equality of every floating-point output.\n\nHow completion is supported. The retained Python 3.12 stdout file contains only 54 progress bytes and omits the final total. The successful process exit and independently parsed JUnit record establish the 222 completed tests; the focused completion receipt records that distinction. The private test-case inventory remains private.\n\nUse the repair. The runtime repair and validation package contains the new installers, locks, regression tests and focused evidence, with a small patch for four engineering files. It requires access to the exact surviving baseline; it is not a standalone copy of the source repository. Follow the portable setup and rerun instructions in an isolated checkout. The download and availability note describes every included file, and the current download checksums bind their exact bytes.\n\nWhat remains open. No Docker daemon was available, so the repaired Python installation boundary was executed in a fresh staged environment; no Docker image build or container execution is claimed. The base image, apt layer and remaining host libraries are outside the Python lock. Source integration and the source repository's required current-head CI remain open. Publishing this package does not complete those steps. The runtime repair adds no physical measurements or new theorem, leaves all 14 broader reconstruction targets open, and does not change the missing-source limitation of the archival report above.",
       "link_style": {
         "color": "rgb(0, 222, 246)",
         "decoration": "underline"
@@ -105,20 +167,80 @@
         {
           "path": "/research/records/2026-10-19-discriminating-studies/README.txt",
           "status": 200,
-          "bytes": 1928,
-          "sha256": "9a74282533fd89185b0649a6a2eac9453194299c296f209fc7a4c7d063d49332"
+          "bytes": 2066,
+          "sha256": "79170d80bb66af4ed743236748a7511784d7a583b1896fd14e05152e25d9da57"
         },
         {
           "path": "/research/records/2026-10-19-discriminating-studies/release-manifest.json",
           "status": 200,
           "bytes": 866,
-          "sha256": "4b23c9732f5ab8aaea5936c26d910e67b86af40840cd6bfe183af15282beb953"
+          "sha256": "fc1a577ce73a3bd2b7d877dbd5d1eede9fdae9088561aaa97efa3b5adb828dce"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/convergence.md",
+          "status": 200,
+          "bytes": 5521,
+          "sha256": "3fb00436448f810143b99a7fdb642ccf61050c9bd349684ef9e8ca914f91b56c"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/runtime-validation-summary.json",
+          "status": 200,
+          "bytes": 11266,
+          "sha256": "ce92fbb69bdeb44c8e973f48da90fd6b0d508001993eb334ca59d548960add5e"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/python312-test-completion.json",
+          "status": 200,
+          "bytes": 1289,
+          "sha256": "e2feecac5d60e3a9dfcf69717a6251df62f761db82bc6faba7ca4d6db7eeb252"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/runtime-repair-and-validation-036.zip",
+          "status": 200,
+          "bytes": 268828,
+          "sha256": "4dfca5d28d5fc1655c4e987fcce41963cb269d68efb80478199d0079909f190f"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/runtime-setup.md",
+          "status": 200,
+          "bytes": 10412,
+          "sha256": "140d5e6b190c583c13f98a459de425ea91a920306c21bae5d3bd2db9259a784d"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/README.txt",
+          "status": 200,
+          "bytes": 4682,
+          "sha256": "e4ae7c269063d39d2e895ece50e8db1a42803fbdea189673be772cab2d790867"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/download-checksums.json",
+          "status": 200,
+          "bytes": 2015,
+          "sha256": "541982dcee8b2e81286b3909242ae232b05b71d013bc8e6c374627bbabe46592"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/runtime-release-manifest.json",
+          "status": 200,
+          "bytes": 45327,
+          "sha256": "318c1c17cb1275a9b1ab92b30f35a8c851cc03fef729def63fa174fdcffb8487"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/package-verification.json",
+          "status": 200,
+          "bytes": 791,
+          "sha256": "04c3cd3f4fa3261b1ceeacfbf1d5d87ac8d160964e0bca22b35f508a5ca87c20"
+        },
+        {
+          "path": "/research/records/2026-10-19-runtime-recovery/public-scope-audit.json",
+          "status": 200,
+          "bytes": 1896,
+          "sha256": "a39afe72f5ea3b76e613fc9d6fde2b75e65bec604bb10874ffef7f19350dc3d2"
         }
       ],
       "screenshot": {
         "filename": "article-mobile.png",
-        "sha256": "45ce94309b034085af6589adeed3a34df26d62beac1af019287420806309ea3b",
-        "bytes": 340080
+        "sha256": "2d634c28a5905671acf79915c3211220d6564c0ea37a5280765ebd802b7b7b15",
+        "bytes": 612725
       },
       "csp": [],
       "page_errors": [],
@@ -127,12 +249,22 @@
   },
   "failures": [],
   "input_hashes": {
-    "research/index.html": "f4e616dcf04dac0c2208b60439e926a9043fd6cb8ec7bfda5056a9dca22bf8f7",
+    "research/index.html": "891fdb1749b0821e948518836856ec9fd683a7e01a20871e0500f0189978d335",
     "research/tracker.v1.js": "6c446f734049e1b6e8e8d6d762e0041191d05b7d6f1f0e29a2909d16e5a1ef53",
     "styles.v39.css": "183d3bcd986607c949389b96868d4f07982e45fa07fe4d85d17c5864d15db7ef",
     "research/records/2026-10-19-discriminating-studies/findings.md": "c459d48a43dc65b8d233c566fdbf81bc1892ad29d1e82fe501accb8ecb477f0b",
-    "research/records/2026-10-19-discriminating-studies/README.txt": "9a74282533fd89185b0649a6a2eac9453194299c296f209fc7a4c7d063d49332",
-    "research/records/2026-10-19-discriminating-studies/release-manifest.json": "4b23c9732f5ab8aaea5936c26d910e67b86af40840cd6bfe183af15282beb953"
+    "research/records/2026-10-19-discriminating-studies/README.txt": "79170d80bb66af4ed743236748a7511784d7a583b1896fd14e05152e25d9da57",
+    "research/records/2026-10-19-discriminating-studies/release-manifest.json": "fc1a577ce73a3bd2b7d877dbd5d1eede9fdae9088561aaa97efa3b5adb828dce",
+    "research/records/2026-10-19-runtime-recovery/convergence.md": "3fb00436448f810143b99a7fdb642ccf61050c9bd349684ef9e8ca914f91b56c",
+    "research/records/2026-10-19-runtime-recovery/runtime-validation-summary.json": "ce92fbb69bdeb44c8e973f48da90fd6b0d508001993eb334ca59d548960add5e",
+    "research/records/2026-10-19-runtime-recovery/python312-test-completion.json": "e2feecac5d60e3a9dfcf69717a6251df62f761db82bc6faba7ca4d6db7eeb252",
+    "research/records/2026-10-19-runtime-recovery/runtime-repair-and-validation-036.zip": "4dfca5d28d5fc1655c4e987fcce41963cb269d68efb80478199d0079909f190f",
+    "research/records/2026-10-19-runtime-recovery/runtime-setup.md": "140d5e6b190c583c13f98a459de425ea91a920306c21bae5d3bd2db9259a784d",
+    "research/records/2026-10-19-runtime-recovery/README.txt": "e4ae7c269063d39d2e895ece50e8db1a42803fbdea189673be772cab2d790867",
+    "research/records/2026-10-19-runtime-recovery/download-checksums.json": "541982dcee8b2e81286b3909242ae232b05b71d013bc8e6c374627bbabe46592",
+    "research/records/2026-10-19-runtime-recovery/runtime-release-manifest.json": "318c1c17cb1275a9b1ab92b30f35a8c851cc03fef729def63fa174fdcffb8487",
+    "research/records/2026-10-19-runtime-recovery/package-verification.json": "04c3cd3f4fa3261b1ceeacfbf1d5d87ac8d160964e0bca22b35f508a5ca87c20",
+    "research/records/2026-10-19-runtime-recovery/public-scope-audit.json": "a39afe72f5ea3b76e613fc9d6fde2b75e65bec604bb10874ffef7f19350dc3d2"
   },
   "status": "pass"
 }
