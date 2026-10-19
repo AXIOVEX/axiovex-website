@@ -1,16 +1,23 @@
 {
-  "updatedUtc": "2026-10-19T06:16:19.700Z",
+  "updatedUtc": "2026-10-19T13:27:47.017Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
         {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
-          "link": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/",
-          "date": "2026-10-16"
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "From Auburn Hills to Luxembourg: Christian Lopez’s Co-op experience",
+          "link": "https://www.manufacturingdive.com/spons/from-auburn-hills-to-luxembourg-christian-lopezs-co-op-experience/832608/",
+          "date": "2026-10-19"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "How AI, digital twins and real-time simulation are accelerating manufacturing innovation",
+          "link": "https://www.manufacturingdive.com/spons/how-ai-digital-twins-and-real-time-simulation-are-accelerating-manufacturi/833255/",
+          "date": "2026-10-19"
         },
         {
           "source": "Manufacturing Dive",
@@ -34,6 +41,13 @@
           "date": "2026-10-16"
         },
         {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
+          "link": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/",
+          "date": "2026-10-16"
+        },
+        {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
           "title": "What manufacturing plant managers think of the AI and automation boom",
@@ -45,20 +59,6 @@
           "sourceId": "manufacturing-dive",
           "title": "Nestlé to spend additional $1B on manufacturing operations in Mexico",
           "link": "https://www.manufacturingdive.com/news/nestle-investment-mexico-coffee-pet-food-emerging-markets/833093/",
-          "date": "2026-10-15"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Applied Materials opens $5B semiconductor innovation center",
-          "link": "https://www.manufacturingdive.com/news/applied-materials-epic-semiconductor-innovation-center/833029/",
-          "date": "2026-10-15"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Campbell’s funds new advanced manufacturing training program in Milwaukee",
-          "link": "https://www.manufacturingdive.com/news/campbells-co-per-scholas-advanced-manufacturing-training-wisconsin/833022/",
           "date": "2026-10-15"
         }
       ]

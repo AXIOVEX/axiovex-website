@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-19T06:16:19.700Z",
+  "updatedUtc": "2026-10-19T13:27:47.017Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -21,6 +21,14 @@
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "From Auburn Hills to Luxembourg: Christian Lopez’s Co-op experience",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-19",
+      "url": "https://www.manufacturingdive.com/spons/from-auburn-hills-to-luxembourg-christian-lopezs-co-op-experience/832608/"
+    },
+    {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
       "title": "Bulk Manufacturer of Controlled Substances Application: Scottsdale Research Institute",
@@ -31,10 +39,10 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
-      "source": "Automation Alley",
-      "date": "2026-10-16",
-      "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
+      "title": "How AI, digital twins and real-time simulation are accelerating manufacturing innovation",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-19",
+      "url": "https://www.manufacturingdive.com/spons/how-ai-digital-twins-and-real-time-simulation-are-accelerating-manufacturi/833255/"
     },
     {
       "lane": "michigan",
@@ -69,6 +77,14 @@
       "url": "https://www.manufacturingdive.com/news/avio-usa-ceo-james-syring-solid-rocket-motor-manufacturing-plant-virginia/832755/"
     },
     {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
+      "source": "Automation Alley",
+      "date": "2026-10-16",
+      "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
+    },
+    {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
       "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
@@ -85,28 +101,12 @@
       "url": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0053_3600_-NONE-_-NONE-"
     },
     {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Energy Department Announces Virginia and West Virginia Transmission Project to Receive Defense Production Act Funding, Strengthening National Security and Grid Reliability",
-      "source": "U.S. Department of Energy",
-      "date": "2026-10-16",
-      "url": "https://www.energy.gov/articles/energy-department-announces-virginia-and-west-virginia-transmission-project-receive"
-    },
-    {
       "lane": "ot-security",
       "laneLabel": "OT cybersecurity",
       "title": "Eclipse Foundation Eclipse Milo",
       "source": "CISA",
       "date": "2026-10-15",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "What manufacturing plant managers think of the AI and automation boom",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-15",
-      "url": "https://www.manufacturingdive.com/news/what-manufacturing-plant-managers-think-of-the-ai-and-automation-boom/832776/"
     },
     {
       "lane": "ai-standards",
