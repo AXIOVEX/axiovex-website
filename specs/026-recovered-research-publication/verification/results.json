@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "checked_utc": "2026-10-19T17:29:24.988Z",
+  "source_base": "a43d821a5166a97e60ef686eb9e520527c81e23b",
+  "scope": "Website publication only; no current reproduction of missing035 source or raw results",
+  "static": {
+    "exact_report": true,
+    "private_inventory_excluded": true,
+    "exact_tracker_bytes": true,
+    "protected_files_unchanged": true,
+    "approved_component_and_shell": true,
+    "visible_recovery_boundary": true,
+    "available_downloads_and_checksums": true
+  },
+  "browser": {
+    "version": "141.0.7390.37",
+    "production_csp": "default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'",
+    "baseline_negative_control": {
+      "cards": 0,
+      "csp": [
+        {
+          "directive": "script-src-elem",
+          "blocked": "inline"
+        }
+      ]
+    },
+    "desktop": {
+      "forms": 1,
+      "noindex": 1,
+      "cards": 20,
+      "predictions": 2,
+      "releases": 20,
+      "articles": 4,
+      "filters": {
+        "confirmed": 7,
+        "rejected": 7,
+        "noeffect": 3,
+        "inconclusive": 1,
+        "running": 1,
+        "offscale": 2
+      },
+      "article_text": "OCTOBER 19, 2026\n\nWhat a record can tell us — and what it leaves out\n\nBasis: the recovered discriminating-studies report. Archival publication, October 19, 2026.\n\nThe question. When we see only part of a system, what would make our account of it complete enough to predict what happens next? The retained report examines four parts of that problem: whether proposed mechanisms supply predictions, whether a compressed record retains enough information, whether separate observations fit one possible history, and which experiments can tell competing explanations apart.\n\nRecovery status. The original technical report was recovered with its checksum intact. The original source inventory is retained privately and is not included here. The underlying source changes and complete machine-readable results were not recovered after an interrupted work session. This is an archival account of the reported findings, not a current independent reproduction. Earlier validation statements in the report remain historical; they do not establish a successful rerun in the recovered workspace.\n\nProposals still need prediction rules. The report identifies missing executable rules in the existing mechanism catalogue, leaving the proposed mechanisms without the inputs needed for a quantitative comparison. A neatly connected proposal does not establish that its physical assumptions are independent, and a missing prediction rule is not a failed physical theory. No new gravity equation was supplied to fill that gap.\n\nA useful summary can still lose the next answer. In the finite systems described, two states could have the same visible average and still respond differently when control and environment changed together. Testing those influences one at a time missed that difference. The reported repair retained the hidden distinctions within the tested family. Combining averages also required the size of each group: averaging the averages alone could make the answer depend on the route taken.\n\nPairwise agreement can hide an impossible history. The reported examples show that matching each pair of observations was not enough to make all observations fit one shared classical preparation. The study recorded compatible histories and exact contradictions under its stated assumptions. Its scope is the finite classical models described; it does not solve every possible classical or quantum reconstruction problem.\n\nChoosing a test did not produce a unique winner. The report compares a finite menu of experiments while accounting for selection, feedback and shared sources of uncertainty. Several designs tied. The policies selected the same tests, so the reported run did not establish that the more elaborate selection rule was superior. The selected experiments already distinguished the predictive behaviours in this finite example; the follow-up settings checked those predictions and added no further discrimination. A label that never affected predictions remained unidentified.\n\nWhat the report establishes within its scope. Its findings concern supplied computer models. They add no physical measurements and leave every broad reconstruction target open. The retained account describes protocols and initial code frozen before the first computation, followed by a software-layout correction that reproduced the same four-study outcomes. That historical check is a rerun of known results, not another discovery. The missing execution records prevent independently verifying those steps from this recovered publication alone. This formalization report does not change the numbered public-study verdicts in the October 13 snapshot.\n\nThe available record. Read the original technical report, with its findings and limits and the availability and reproduction note. The publication checksums identify the files available here. The original source inventory is retained privately. A separate installation and validation update will name the exact surviving source baseline and checks that could be rerun.",
+      "link_style": {
+        "color": "rgb(0, 222, 246)",
+        "decoration": "underline"
+      },
+      "overflow": false,
+      "downloads": [
+        {
+          "path": "/research/records/2026-10-19-discriminating-studies/findings.md",
+          "status": 200,
+          "bytes": 20075,
+          "sha256": "c459d48a43dc65b8d233c566fdbf81bc1892ad29d1e82fe501accb8ecb477f0b"
+        },
+        {
+          "path": "/research/records/2026-10-19-discriminating-studies/README.txt",
+          "status": 200,
+          "bytes": 1928,
+          "sha256": "9a74282533fd89185b0649a6a2eac9453194299c296f209fc7a4c7d063d49332"
+        },
+        {
+          "path": "/research/records/2026-10-19-discriminating-studies/release-manifest.json",
+          "status": 200,
+          "bytes": 866,
+          "sha256": "4b23c9732f5ab8aaea5936c26d910e67b86af40840cd6bfe183af15282beb953"
+        }
+      ],
+      "screenshot": {
+        "filename": "article-desktop.png",
+        "sha256": "b37132fdc1c39278a73e7ba762806f723bac272106e07ffc50d3e85a0b902189",
+        "bytes": 318606
+      },
+      "csp": [],
+      "page_errors": [],
+      "same_origin_errors": []
+    },
+    "mobile": {
+      "forms": 1,
+      "noindex": 1,
+      "cards": 20,
+      "predictions": 2,
+      "releases": 20,
+      "articles": 4,
+      "filters": {
+        "confirmed": 7,
+        "rejected": 7,
+        "noeffect": 3,
+        "inconclusive": 1,
+        "running": 1,
+        "offscale": 2
+      },
+      "article_text": "OCTOBER 19, 2026\n\nWhat a record can tell us — and what it leaves out\n\nBasis: the recovered discriminating-studies report. Archival publication, October 19, 2026.\n\nThe question. When we see only part of a system, what would make our account of it complete enough to predict what happens next? The retained report examines four parts of that problem: whether proposed mechanisms supply predictions, whether a compressed record retains enough information, whether separate observations fit one possible history, and which experiments can tell competing explanations apart.\n\nRecovery status. The original technical report was recovered with its checksum intact. The original source inventory is retained privately and is not included here. The underlying source changes and complete machine-readable results were not recovered after an interrupted work session. This is an archival account of the reported findings, not a current independent reproduction. Earlier validation statements in the report remain historical; they do not establish a successful rerun in the recovered workspace.\n\nProposals still need prediction rules. The report identifies missing executable rules in the existing mechanism catalogue, leaving the proposed mechanisms without the inputs needed for a quantitative comparison. A neatly connected proposal does not establish that its physical assumptions are independent, and a missing prediction rule is not a failed physical theory. No new gravity equation was supplied to fill that gap.\n\nA useful summary can still lose the next answer. In the finite systems described, two states could have the same visible average and still respond differently when control and environment changed together. Testing those influences one at a time missed that difference. The reported repair retained the hidden distinctions within the tested family. Combining averages also required the size of each group: averaging the averages alone could make the answer depend on the route taken.\n\nPairwise agreement can hide an impossible history. The reported examples show that matching each pair of observations was not enough to make all observations fit one shared classical preparation. The study recorded compatible histories and exact contradictions under its stated assumptions. Its scope is the finite classical models described; it does not solve every possible classical or quantum reconstruction problem.\n\nChoosing a test did not produce a unique winner. The report compares a finite menu of experiments while accounting for selection, feedback and shared sources of uncertainty. Several designs tied. The policies selected the same tests, so the reported run did not establish that the more elaborate selection rule was superior. The selected experiments already distinguished the predictive behaviours in this finite example; the follow-up settings checked those predictions and added no further discrimination. A label that never affected predictions remained unidentified.\n\nWhat the report establishes within its scope. Its findings concern supplied computer models. They add no physical measurements and leave every broad reconstruction target open. The retained account describes protocols and initial code frozen before the first computation, followed by a software-layout correction that reproduced the same four-study outcomes. That historical check is a rerun of known results, not another discovery. The missing execution records prevent independently verifying those steps from this recovered publication alone. This formalization report does not change the numbered public-study verdicts in the October 13 snapshot.\n\nThe available record. Read the original technical report, with its findings and limits and the availability and reproduction note. The publication checksums identify the files available here. The original source inventory is retained privately. A separate installation and validation update will name the exact surviving source baseline and checks that could be rerun.",
+      "link_style": {
+        "color": "rgb(0, 222, 246)",
+        "decoration": "underline"
+      },
+      "overflow": false,
+      "downloads": [
+        {
+          "path": "/research/records/2026-10-19-discriminating-studies/findings.md",
+          "status": 200,
+          "bytes": 20075,
+          "sha256": "c459d48a43dc65b8d233c566fdbf81bc1892ad29d1e82fe501accb8ecb477f0b"
+        },
+        {
+          "path": "/research/records/2026-10-19-discriminating-studies/README.txt",
+          "status": 200,
+          "bytes": 1928,
+          "sha256": "9a74282533fd89185b0649a6a2eac9453194299c296f209fc7a4c7d063d49332"
+        },
+        {
+          "path": "/research/records/2026-10-19-discriminating-studies/release-manifest.json",
+          "status": 200,
+          "bytes": 866,
+          "sha256": "4b23c9732f5ab8aaea5936c26d910e67b86af40840cd6bfe183af15282beb953"
+        }
+      ],
+      "screenshot": {
+        "filename": "article-mobile.png",
+        "sha256": "45ce94309b034085af6589adeed3a34df26d62beac1af019287420806309ea3b",
+        "bytes": 340080
+      },
+      "csp": [],
+      "page_errors": [],
+      "same_origin_errors": []
+    }
+  },
+  "failures": [],
+  "input_hashes": {
+    "research/index.html": "f4e616dcf04dac0c2208b60439e926a9043fd6cb8ec7bfda5056a9dca22bf8f7",
+    "research/tracker.v1.js": "6c446f734049e1b6e8e8d6d762e0041191d05b7d6f1f0e29a2909d16e5a1ef53",
+    "styles.v39.css": "183d3bcd986607c949389b96868d4f07982e45fa07fe4d85d17c5864d15db7ef",
+    "research/records/2026-10-19-discriminating-studies/findings.md": "c459d48a43dc65b8d233c566fdbf81bc1892ad29d1e82fe501accb8ecb477f0b",
+    "research/records/2026-10-19-discriminating-studies/README.txt": "9a74282533fd89185b0649a6a2eac9453194299c296f209fc7a4c7d063d49332",
+    "research/records/2026-10-19-discriminating-studies/release-manifest.json": "4b23c9732f5ab8aaea5936c26d910e67b86af40840cd6bfe183af15282beb953"
+  },
+  "status": "pass"
+}
