@@ -62,7 +62,7 @@
     ],
     "sourceUrl": "https://www.bls.gov/emp/tables/fastest-growing-occupations.htm",
     "vintage": "2025–35",
-    "sourceFileUrl": "https://download.bls.gov/pub/time.series/ep/"
+    "sourceFileUrl": "https://api.bls.gov/publicAPI/v2/timeseries/data/"
   },
   "education": {
     "assembledOn": "2026-10-06",
