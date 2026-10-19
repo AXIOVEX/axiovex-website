@@ -1,0 +1,38 @@
+{
+  "schema": "public-runtime-package-scope-audit-v1",
+  "audited_utc": "2026-10-19T17:34:57.854693+00:00",
+  "status": "pass",
+  "blocking_findings": [],
+  "archive_bytes": 268828,
+  "archive_sha256": "4dfca5d28d5fc1655c4e987fcce41963cb269d68efb80478199d0079909f190f",
+  "entries": 212,
+  "manifest_covered_files": 211,
+  "new_overlay_files": 209,
+  "checks": {
+    "zip_crc": true,
+    "exact_allowlist": true,
+    "all_manifest_sizes_and_hashes": true,
+    "overlay_contains_no_pre_existing_git_tracked_files": true,
+    "patch_exactly_four_authorized_files": true,
+    "patch_has_zero_context_lines": true,
+    "full_private_source_inventory_absent": true,
+    "root_proof_source_before_after_lists_absent": true,
+    "source_snapshot_lists_absent": true,
+    "junit_case_lists_absent": true,
+    "raw_scientific_outputs_absent": true,
+    "expanded_governance_bundle_absent": true,
+    "broad_host_package_logs_absent": true,
+    "nested_archives_absent": true,
+    "secret_pattern_scan_clear": true
+  },
+  "json_review": "Retained large collections are the 211-file manifest of this new public package, 30/31 runtime distribution records, official upstream release/package metadata and focused execution records. No detailed pre-existing private-source inventory was found inside retained JSON.",
+  "notes": [
+    {
+      "item": "Python 3.12 pytest console log",
+      "observation": "The preserved console log contains only 54 progress bytes and no printed total.",
+      "verification": "Its final subprocess receipt records exit 0 and 222/0/0/0 tests/failures/errors/skips; the retained private JUnit aggregate independently matches those counts. No JUnit test-case inventory is included in the public ZIP.",
+      "scope": "Not a privacy or result-count blocker; avoid describing this particular console log as a complete transcript."
+    }
+  ],
+  "package_modified_by_audit": false
+}

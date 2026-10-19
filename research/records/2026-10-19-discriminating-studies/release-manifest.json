@@ -14,9 +14,9 @@
     },
     {
       "path": "README.txt",
-      "bytes": 1928,
-      "sha256": "9a74282533fd89185b0649a6a2eac9453194299c296f209fc7a4c7d063d49332",
-      "git_blob_sha": "b3d6588e8cd7888088a2d82c758ca8523854921b"
+      "bytes": 2066,
+      "sha256": "79170d80bb66af4ed743236748a7511784d7a583b1896fd14e05152e25d9da57",
+      "git_blob_sha": "639867edcd7f642a1f4116ca23382ffa0611172d"
     }
   ]
 }

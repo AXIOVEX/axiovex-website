@@ -19,8 +19,9 @@ const old = p => execFileSync('git', ['show', `${base}:${p}`], { cwd: root });
 const html = read('research/index.html').toString();
 const original = old('research/index.html').toString();
 const reportDir = 'research/records/2026-10-19-discriminating-studies';
+const runtimeDir = 'research/records/2026-10-19-runtime-recovery';
 const result = { schema_version: 1, checked_utc: new Date().toISOString(),
-  source_base: base, scope: 'Website publication only; no current reproduction of missing035 source or raw results',
+  source_base: base, scope: 'Website publication and fidelity to supplied fresh runtime evidence; no current reproduction of missing035 source or raw results',
   static: {}, browser: {}, failures: [] };
 const priorResults = path.join(out, 'results-current-scope.json');
 if (fs.existsSync(priorResults)) {
@@ -59,6 +60,9 @@ staticCheck('approved_component_and_shell', () => {
   assert.equal((html.match(/id="finite-model-records-2026-10-19"/g) || []).length, 1);
   assert.deepEqual([...html.matchAll(/class="ledger-num">(\d+)</g)].map(x => Number(x[1])), [19,18,20,5]);
   assert.ok(read('styles.v39.css').subarray(0, read('styles.v38.css').length).equals(read('styles.v38.css')));
+  assert.equal(sha(read('styles.v40.css')),'c51af7c3e78be3c616487e25bfa9526bb9212d6973bab4e4ada57cd53d7374d0');
+  assert.ok(html.includes('<link rel="stylesheet" href="/styles.v40.css">'));
+  assert.equal((html.match(/<span class="article-(?:date|title|basis|more)">/g)||[]).length,16);
 });
 const article = html.match(/<details class="article" id="finite-model-records-2026-10-19">[\s\S]*?<\/details>/)[0];
 staticCheck('visible_recovery_boundary', () => {
@@ -66,15 +70,88 @@ staticCheck('visible_recovery_boundary', () => {
   assert.ok(!article.includes('source-and-evidence.zip'));
   assert.ok(!article.includes('/studies.json'));
 });
-const downloadPaths = [...article.matchAll(/href="(\/research\/records\/[^"#]+)"/g)].map(x => x[1]);
+const articleDownloadPaths = [...article.matchAll(/href="(\/research\/records\/[^"#]+)"/g)].map(x => x[1]);
+const runtimeDownloads = JSON.parse(read(`${runtimeDir}/download-checksums.json`));
+const downloadPaths = [...new Set([...articleDownloadPaths, ...runtimeDownloads.files.map(x=>`/${runtimeDir}/${x.path}`)])];
 staticCheck('available_downloads_and_checksums', () => {
-  assert.equal(downloadPaths.length, 3);
+  assert.equal(articleDownloadPaths.length, 10);
+  assert.equal(downloadPaths.length, 13);
   for (const p of downloadPaths) assert.ok(fs.statSync(path.join(root, p)).isFile());
   const m = JSON.parse(read(`${reportDir}/release-manifest.json`));
   for (const f of m.files) { const b = read(`${reportDir}/${f.path}`); assert.equal(b.length, f.bytes); assert.equal(sha(b), f.sha256); }
+  assert.equal(runtimeDownloads.files.length, 9);
+  for (const f of runtimeDownloads.files) {const b=read(`${runtimeDir}/${f.path}`);assert.equal(b.length,f.bytes);assert.equal(sha(b),f.sha256);}
+});
+staticCheck('runtime_evidence_and_visible_limits', () => {
+  const s=JSON.parse(read(`${runtimeDir}/runtime-validation-summary.json`));
+  assert.equal(s.baseline.commit,'8409f6506bd7c96ab44e44770537e349f1fcfdd1');
+  for(const [key,version] of [['311','3.11.17'],['312','3.12.15']]) {
+    const p=s.python[key];assert.equal(p.version,version);assert.equal(p.distribution_count,31);
+    assert.equal(p.pytest.tests,222);assert.deepEqual([p.pytest.failures,p.pytest.errors,p.pytest.skipped],[0,0,0]);
+    assert.equal(p.experiments.passed,7);assert.equal(p.experiments.checks,7);
+  }
+  assert.equal(s.baseline_governance.passed,27);
+  assert.equal(s.publication_boundaries.docker_image_build_executed,false);
+  assert.equal(s.publication_boundaries.source_current_head_ci_executed,false);
+  assert.equal(s.publication_boundaries.source_repository_merged,false);
+  const c=JSON.parse(read(`${runtimeDir}/python312-test-completion.json`));
+  assert.equal(c.pytest_returncode,0);assert.equal(c.completed_tests,222);assert.equal(c.retained_stdout_bytes,54);assert.equal(c.stdout_capture_complete,false);
+  const convergence=read(`${runtimeDir}/convergence.md`).toString();
+  assert.ok(convergence.includes('40-job build passes'));
+  for(const text of ['222 tests','7 experiment, control and replay checks','40-job build','27 baseline governance commands','54 progress bytes','missing feature-035 source','no Docker image build or container execution is claimed',"required current-head CI remain open",'all 14 broader reconstruction targets open']) assert.ok(article.includes(text),text);
+  assert.ok(!article.includes('Docker and CI installation order now copies'));
+  const initial=JSON.parse(read('specs/026-recovered-research-publication/verification/deployment-initial.json'));
+  assert.equal(initial.environments.length,2);assert.ok(initial.environments.every(x=>x.status==='pass'));
+});
+
+// Exact eight public assets accepted from the independent runtime handoff.
+const frozenRuntimeAssets = [
+  {
+    "path": "runtime-repair-and-validation-036.zip",
+    "bytes": 268828,
+    "sha256": "4dfca5d28d5fc1655c4e987fcce41963cb269d68efb80478199d0079909f190f"
+  },
+  {
+    "path": "runtime-validation-summary.json",
+    "bytes": 11266,
+    "sha256": "ce92fbb69bdeb44c8e973f48da90fd6b0d508001993eb334ca59d548960add5e"
+  },
+  {
+    "path": "runtime-release-manifest.json",
+    "bytes": 45327,
+    "sha256": "318c1c17cb1275a9b1ab92b30f35a8c851cc03fef729def63fa174fdcffb8487"
+  },
+  {
+    "path": "package-verification.json",
+    "bytes": 791,
+    "sha256": "04c3cd3f4fa3261b1ceeacfbf1d5d87ac8d160964e0bca22b35f508a5ca87c20"
+  },
+  {
+    "path": "public-scope-audit.json",
+    "bytes": 1896,
+    "sha256": "a39afe72f5ea3b76e613fc9d6fde2b75e65bec604bb10874ffef7f19350dc3d2"
+  },
+  {
+    "path": "python312-test-completion.json",
+    "bytes": 1289,
+    "sha256": "e2feecac5d60e3a9dfcf69717a6251df62f761db82bc6faba7ca4d6db7eeb252"
+  },
+  {
+    "path": "convergence.md",
+    "bytes": 5521,
+    "sha256": "3fb00436448f810143b99a7fdb642ccf61050c9bd349684ef9e8ca914f91b56c"
+  },
+  {
+    "path": "runtime-setup.md",
+    "bytes": 10412,
+    "sha256": "140d5e6b190c583c13f98a459de425ea91a920306c21bae5d3bd2db9259a784d"
+  }
+];
+staticCheck('frozen_runtime_assets_unchanged', () => {
+  for(const f of frozenRuntimeAssets){const b=read(`${runtimeDir}/${f.path}`);assert.equal(b.length,f.bytes);assert.equal(sha(b),f.sha256);}
 });
 result.input_hashes = {};
-for (const p of ['research/index.html','research/tracker.v1.js','styles.v39.css', ...downloadPaths.map(x=>x.slice(1))]) result.input_hashes[p] = sha(read(p));
+for (const p of ['research/index.html','research/tracker.v1.js','styles.v40.css', ...downloadPaths.map(x=>x.slice(1))]) result.input_hashes[p] = sha(read(p));
 
 const headerEntries = read('_headers').toString().split('\n').filter(x=>/^  [\w-]+:/.test(x)).map(x=> {
   const i=x.indexOf(':'); return [x.slice(0,i).trim(), x.slice(i+1).trim()];

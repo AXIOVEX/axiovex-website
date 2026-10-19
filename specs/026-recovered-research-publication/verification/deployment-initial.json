@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "scope": "Actual initial-report deployments only; not the later runtime article.",
+  "environments": [
+    {
+      "status": "pass",
+      "environment": "staging",
+      "commit": "c9f88f0df70a11bebdfd45315dddf1a68493b16b",
+      "url": "https://axiovex-website-staging.pages.dev/research/",
+      "cloudflare_preview": "https://028bd2f0.axiovex-website-staging.pages.dev",
+      "source_receipt_sha256": "09c6e14a001355858056ae3bbc73af0f6b8730eb4c6020fa31d55869b1884041",
+      "http": {
+        "asset_count": 6,
+        "exact_assets": 6,
+        "crawler_guards": "pass"
+      },
+      "browser": {
+        "counts": {
+          "articles": 4,
+          "cards": 20,
+          "forms": 1,
+          "noindex": "noindex",
+          "predictions": 2,
+          "releases": 20,
+          "viewport": {
+            "height": 936,
+            "width": 1363
+          }
+        },
+        "filters": {
+          "confirmed": 7,
+          "rejected": 7,
+          "noeffect": 3,
+          "inconclusive": 1,
+          "running": 1,
+          "offscale": 2
+        },
+        "article_open": true,
+        "download_count": 3,
+        "overflow": false,
+        "website_errors": 0,
+        "extension_metadata_errors": 16
+      }
+    },
+    {
+      "status": "pass",
+      "environment": "production",
+      "commit": "f53c2499afa06c4a3326e240ca7a0653a7742b27",
+      "url": "https://axiovexsystems.com/research/",
+      "cloudflare_preview": "https://31ac2451.axiovex-website.pages.dev",
+      "source_receipt_sha256": "db376cc2eb634af88b6d20ad05a652d749b139d3e545cac873ba856d9478b573",
+      "http": {
+        "asset_count": 6,
+        "exact_assets": 5,
+        "normalized_html": {
+          "name": "Cloudflare contact email obfuscation",
+          "decoded_contact": "start@axiovexsystems.com",
+          "replacements": [
+            "one existing contact anchor",
+            "one same-origin email decoder script"
+          ],
+          "normalized_bytes": 48984,
+          "normalized_sha256": "f4e616dcf04dac0c2208b60439e926a9043fd6cb8ec7bfda5056a9dca22bf8f7",
+          "normalized_matches_frozen": true,
+          "scope": "No other delivered HTML difference is accepted."
+        },
+        "raw_html_sha256": "29d88467a9f1545b12d4986f835ca074e008d590bbc8be29cad2b5ac1b01ec25",
+        "crawler_guards": "pass",
+        "tls_validation": "normal curl certificate verification; no relaxation"
+      },
+      "browser": {
+        "surface": "actual published HTTPS in cloud Chromium",
+        "counts": {
+          "articles": 4,
+          "cards": 20,
+          "forms": 1,
+          "noindex": "noindex",
+          "predictions": 2,
+          "releases": 20,
+          "viewport": {
+            "height": 936,
+            "width": 1363
+          }
+        },
+        "filters": {
+          "confirmed": 7,
+          "rejected": 7,
+          "noeffect": 3,
+          "inconclusive": 1,
+          "running": 1,
+          "offscale": 2
+        },
+        "article_open": true,
+        "download_count": 3,
+        "overflow": false,
+        "website_errors": 0,
+        "extension_metadata_errors": 16,
+        "mobile_note": "Separate local CSP verification at390px passed; cloud deployed viewport1363x936."
+      }
+    }
+  ]
+}

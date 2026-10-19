@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0",
+  "recovery_revision": 2,
+  "status": "local_checks_pass_source_ci_open",
+  "baseline": {
+    "commit": "8409f6506bd7c96ab44e44770537e349f1fcfdd1",
+    "tree": "9e45fdaa026b0a7c338de91e0b73da99b0848fda",
+    "tracked_blobs_verified_before_edits": 1031,
+    "unchanged_tracked_blobs_after_engineering_edits": 1027,
+    "intentional_engineering_edits": [
+      ".github/workflows/ci.yml",
+      "AGENTS.md",
+      "Dockerfile.python",
+      "README.md"
+    ],
+    "untracked_items_quarantined": 45,
+    "detailed_private_source_inventory_published": false
+  },
+  "python": {
+    "311": {
+      "version": "3.11.17",
+      "bootstrap_status": "pass",
+      "distribution_count": 31,
+      "experiments": {
+        "status": "pass",
+        "checks": 7,
+        "passed": 7,
+        "commands": [
+          {
+            "label": "qd-control",
+            "argv": [
+              "/workspace/scratch/c2f788a632d6/runtime-recovery/python/final311/bin/python",
+              "scripts/experiment_qd_gate_audit.py"
+            ],
+            "returncode": 0,
+            "seconds": 0.26,
+            "raw_log_sha256": "72daf83f045a036783fcb89a4e1f96b157cdbab9e0c92667907491198a976ac1"
+          },
+          {
+            "label": "framework022",
+            "argv": [
+              "/workspace/scratch/c2f788a632d6/runtime-recovery/python/final311/bin/python",
+              "scripts/verify_framework022.py"
+            ],
+            "returncode": 0,
+            "seconds": 0.114,
+            "raw_log_sha256": "3acd17720ed1f83590c7f62dcb1c55251adaaac469b39c16511072c070716297"
+          },
+          {
+            "label": "candidate-before",
+            "argv": [
+              "/workspace/scratch/c2f788a632d6/runtime-recovery/python/final311/bin/python",
+              "scripts/verify_formulator032.py"
+            ],
+            "returncode": 0,
+            "seconds": 0.214,
+            "raw_log_sha256": "880057a4d1d3d7d5c1b616a5dbc8648b796123d7bbd7c40973ec406b49878a63"
+          },
+          {
+            "label": "run-all",
+            "argv": [
+              "/workspace/scratch/c2f788a632d6/runtime-recovery/python/final311/bin/python",
+              "scripts/run_all.py"
+            ],
+            "returncode": 0,
+            "seconds": 57.971,
+            "raw_log_sha256": "729c538b0f554ad906eab757344ab01bf4399a3c474d72a72d0042df24b0c5c6"
+          },
+          {
+            "label": "pair033-replay",
+            "argv": [
+              "/workspace/scratch/c2f788a632d6/runtime-recovery/python/final311/bin/python",
+              "scripts/experiment_pair033.py",
+              "--check"
+            ],
+            "returncode": 0,
+            "seconds": 11.007,
+            "raw_log_sha256": "0acb30380132552eaa0918510129a246c936223434d486b82ccb3b44e4431915"
+          },
+          {
+            "label": "pair033-verify",
+            "argv": [
+              "/workspace/scratch/c2f788a632d6/runtime-recovery/python/final311/bin/python",
+              "scripts/verify_pair033.py"
+            ],
+            "returncode": 0,
+            "seconds": 0.164,
+            "raw_log_sha256": "f69fe3746d446bd0a32412c0967fd4b81938b770de9e409e1b5afc778835d3d9"
+          },
+          {
+            "label": "extra034-verify",
+            "argv": [
+              "/workspace/scratch/c2f788a632d6/runtime-recovery/python/final311/bin/python",
+              "scripts/verify_extra_dimensions034.py"
+            ],
+            "returncode": 0,
+            "seconds": 0.064,
+            "raw_log_sha256": "d864e495d5b214b0c472f5c9a3d3305811fadddb1671cc55dd84fe0b7f1668fb"
+          }
+        ]
+      },
+      "pytest": {
+        "status": "pass",
+        "tests": 222,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "existing_cases": 211,
+        "new_runtime_regressions": 11,
+        "seconds": 136.802,
+        "log_sha256": "bf09c707582ff8d3fa6a109c97ed7cff5e21a312e6bd232eda485c19278e4352"
+      },
+      "environment_receipt": "evidence/python-bootstrap311-final/environment.json"
+    },
+    "312": {
+      "version": "3.12.15",
+      "bootstrap_status": "pass",
+      "distribution_count": 31,
+      "experiments": {
+        "status": "pass",
+        "checks": 7,
+        "passed": 7,
+        "commands": [
+          {
+            "label": "qd-control",
+            "argv": [
+              "/workspace/scratch/c2f788a632d6/runtime-recovery/python/final312/bin/python",
+              "scripts/experiment_qd_gate_audit.py"
+            ],
+            "returncode": 0,
+            "seconds": 0.218,
+            "raw_log_sha256": "72daf83f045a036783fcb89a4e1f96b157cdbab9e0c92667907491198a976ac1"
+          },
+          {
+            "label": "framework022",
+            "argv": [
+              "/workspace/scratch/c2f788a632d6/runtime-recovery/python/final312/bin/python",
+              "scripts/verify_framework022.py"
+            ],
+            "returncode": 0,
+            "seconds": 0.071,
+            "raw_log_sha256": "3acd17720ed1f83590c7f62dcb1c55251adaaac469b39c16511072c070716297"
+          },
+          {
+            "label": "candidate-before",
+            "argv": [
+              "/workspace/scratch/c2f788a632d6/runtime-recovery/python/final312/bin/python",
+              "scripts/verify_formulator032.py"
+            ],
+            "returncode": 0,
+            "seconds": 0.164,
+            "raw_log_sha256": "880057a4d1d3d7d5c1b616a5dbc8648b796123d7bbd7c40973ec406b49878a63"
+          },
+          {
+            "label": "run-all",
+            "argv": [
+              "/workspace/scratch/c2f788a632d6/runtime-recovery/python/final312/bin/python",
+              "scripts/run_all.py"
+            ],
+            "returncode": 0,
+            "seconds": 50.074,
+            "raw_log_sha256": "ac63c42676f7533692f33eff5ed93df7c1a324485682dafe78c3df12b2779816"
+          },
+          {
+            "label": "pair033-replay",
+            "argv": [
+              "/workspace/scratch/c2f788a632d6/runtime-recovery/python/final312/bin/python",
+              "scripts/experiment_pair033.py",
+              "--check"
+            ],
+            "returncode": 0,
+            "seconds": 10.153,
+            "raw_log_sha256": "0acb30380132552eaa0918510129a246c936223434d486b82ccb3b44e4431915"
+          },
+          {
+            "label": "pair033-verify",
+            "argv": [
+              "/workspace/scratch/c2f788a632d6/runtime-recovery/python/final312/bin/python",
+              "scripts/verify_pair033.py"
+            ],
+            "returncode": 0,
+            "seconds": 0.164,
+            "raw_log_sha256": "f69fe3746d446bd0a32412c0967fd4b81938b770de9e409e1b5afc778835d3d9"
+          },
+          {
+            "label": "extra034-verify",
+            "argv": [
+              "/workspace/scratch/c2f788a632d6/runtime-recovery/python/final312/bin/python",
+              "scripts/verify_extra_dimensions034.py"
+            ],
+            "returncode": 0,
+            "seconds": 0.064,
+            "raw_log_sha256": "d864e495d5b214b0c472f5c9a3d3305811fadddb1671cc55dd84fe0b7f1668fb"
+          }
+        ]
+      },
+      "pytest": {
+        "status": "pass",
+        "tests": 222,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "existing_cases": 211,
+        "new_runtime_regressions": 11,
+        "seconds": 107.079,
+        "log_sha256": "6eeb7d3eec55e471cdd55ace12dd4240767a01bfd6128ba04c7624e78b0c4bf5"
+      },
+      "environment_receipt": "evidence/python-bootstrap312-final/environment.json"
+    }
+  },
+  "scientific_scope": "Fresh reruns cover the surviving feature-034 baseline. Feature 035 missing source and raw results were not reconstructed or freshly replayed. All 14 broader physical reconstruction targets remain open.",
+  "prior_workspace_claims": "Previous 300-test reports are prior-conversation statements with unavailable raw logs, not evidence for this recovery.",
+  "lean": {
+    "status": "pass",
+    "receipt": "evidence/lean/summary.json",
+    "sha256": "56ce19445c401db5951ac2d0ab171030c06bc16a12c4eb2d5605e84e86aa553d"
+  },
+  "graphviz": {
+    "status": "pass",
+    "receipt": "evidence/graphviz/summary.json",
+    "sha256": "25272998c5c7887fb40a3bb14a858411103a353275c915c92803a8a7ae19b94f"
+  },
+  "spec_kit": {
+    "status": "pass",
+    "receipt": "evidence/spec-kit/receipt.json",
+    "sha256": "d204e9f6301df17952967db2e3b5b508c05e4f3db53f7012f6b9471487eb5b60"
+  },
+  "staged_install": {
+    "status": "pass",
+    "receipt": "evidence/staged-install/summary.json",
+    "sha256": "484bed511a0c732d456d1c2cc2ab2470a237cdc46abf393ec2a544dbc5fed564"
+  },
+  "independent_review": {
+    "status": "pass",
+    "receipt": "evidence/independent-review.json",
+    "sha256": "e9e949d0b6f4d08aa650c44cda5072739aac9afbc6ba79603510314a3b784f03"
+  },
+  "baseline_governance": {
+    "status": "pass",
+    "commands": 27,
+    "passed": 27,
+    "detailed_private_source_inventories_and_expanded_assessments_published": false
+  },
+  "cold_cache_bootstrap": {
+    "status": "pass",
+    "receipt": "evidence/python-bootstrap312-cold/receipt.json"
+  },
+  "resolved_recovery_failures": [
+    {
+      "stage": "initial Python bootstrap probes",
+      "reason": "Empty untracked egg-info directory exposed malformed metadata.",
+      "resolution": "Removed the empty generated directory; added explicit rejection and regression; both clean final bootstraps and a cold-cache run pass.",
+      "preserved_receipts": [
+        "evidence/python-bootstrap311/receipt.json",
+        "evidence/python-bootstrap312/receipt.json"
+      ]
+    },
+    {
+      "stage": "initial governance isolation preflight",
+      "reason": "Raw directory comparison included untracked cache/checkpoint metadata. No governance command ran in this attempt.",
+      "resolution": "Compared the verified Git-tracked baseline with four explicit engineering edits excluded; all 27 governance commands pass."
+    },
+    {
+      "stage": "staged missing-package control",
+      "reason": "Frozen requirements referenced an absent local editable package.",
+      "resolution": "Package COPY precedes dependency installation; exact repaired command passes with matching 31-distribution integrity check."
+    }
+  ],
+  "publication_boundaries": {
+    "docker_image_build_executed": false,
+    "docker_validation": "Fresh staged execution of the exact Python dependency-install boundary; base image and apt layer not built here.",
+    "source_current_head_ci_executed": false,
+    "source_repository_merged": false,
+    "website_publication": "Managed separately by the publication task; this receipt does not assert deployment.",
+    "detailed_baseline_source_inventories": "Retained locally and excluded from public downloads."
+  },
+  "runtime_aee": {
+    "after_specify": {
+      "outcome": "pass",
+      "sha256": "80f4bdb44c3e54df24b5953eff1a275c44b4df934d6f6841bd0b717c27059a35"
+    },
+    "after_plan": {
+      "outcome": "pass",
+      "sha256": "f30c53fa26669d79ffa55abf91d7e8d4742ca60a50c9ee4e30127158cdae2ab7"
+    },
+    "after_tasks": {
+      "outcome": "pass",
+      "sha256": "f3092422d56ee1300142baceb046f63b2196c09b20c7d4f12053ebdf95884591"
+    },
+    "after_implement": {
+      "outcome": "pass",
+      "sha256": "8f4df9cdb3c0d2c1ca05abe6fb6053810731bfaa30a79b1979bf967dec882874"
+    }
+  }
+}
