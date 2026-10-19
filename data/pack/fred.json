@@ -1,19 +1,15 @@
 {
   "source": "FRED",
   "publisher": "Federal Reserve Bank of St. Louis",
-  "retrievedUtc": "2026-10-08T20:16:14.799Z",
+  "retrievedUtc": "2026-10-19T17:17:03.253Z",
   "vintage": "FRED series/observations pull, latest 36 observations per series (mixed frequencies: monthly/quarterly/annual as labeled)",
-  "referencePeriod": "2026-08-01",
+  "referencePeriod": "2026-09-01",
   "series": [
     {
       "id": "INDPRO",
       "label": "Industrial Production: Total Index (US)",
       "unit": "Index 2017=100, seasonally adjusted",
       "observations": [
-        {
-          "period": "2023-09-01",
-          "value": 101.0211
-        },
         {
           "period": "2023-10-01",
           "value": 100.4689
@@ -136,23 +132,27 @@
         },
         {
           "period": "2026-04-01",
-          "value": 102.5783
+          "value": 102.5768
         },
         {
           "period": "2026-05-01",
-          "value": 102.6396
+          "value": 102.7232
         },
         {
           "period": "2026-06-01",
-          "value": 102.842
+          "value": 102.961
         },
         {
           "period": "2026-07-01",
-          "value": 103.0454
+          "value": 103.2006
         },
         {
           "period": "2026-08-01",
-          "value": 103.0682
+          "value": 103.2664
+        },
+        {
+          "period": "2026-09-01",
+          "value": 103.9506
         }
       ]
     },
@@ -161,10 +161,6 @@
       "label": "Industrial Production: Manufacturing (US)",
       "unit": "Index 2017=100, seasonally adjusted",
       "observations": [
-        {
-          "period": "2023-09-01",
-          "value": 97.3037
-        },
         {
           "period": "2023-10-01",
           "value": 96.786
@@ -287,23 +283,27 @@
         },
         {
           "period": "2026-04-01",
-          "value": 98.8563
+          "value": 98.8383
         },
         {
           "period": "2026-05-01",
-          "value": 98.9796
+          "value": 98.9825
         },
         {
           "period": "2026-06-01",
-          "value": 99.2374
+          "value": 99.2705
         },
         {
           "period": "2026-07-01",
-          "value": 99.3952
+          "value": 99.4308
         },
         {
           "period": "2026-08-01",
-          "value": 99.0964
+          "value": 99.1776
+        },
+        {
+          "period": "2026-09-01",
+          "value": 99.4361
         }
       ]
     },
@@ -312,10 +312,6 @@
       "label": "Capacity Utilization: Manufacturing (US)",
       "unit": "Percent, seasonally adjusted",
       "observations": [
-        {
-          "period": "2023-09-01",
-          "value": 76.5797
-        },
         {
           "period": "2023-10-01",
           "value": 76.1299
@@ -438,23 +434,27 @@
         },
         {
           "period": "2026-04-01",
-          "value": 75.8027
+          "value": 75.7889
         },
         {
           "period": "2026-05-01",
-          "value": 75.8339
+          "value": 75.8362
         },
         {
           "period": "2026-06-01",
-          "value": 75.9676
+          "value": 75.993
         },
         {
           "period": "2026-07-01",
-          "value": 76.0242
+          "value": 76.0514
         },
         {
           "period": "2026-08-01",
-          "value": 75.7309
+          "value": 75.793
+        },
+        {
+          "period": "2026-09-01",
+          "value": 75.9245
         }
       ]
     },

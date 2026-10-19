@@ -1,7 +1,7 @@
 {
   "source": "BEA Regional",
   "publisher": "U.S. Bureau of Economic Analysis",
-  "retrievedUtc": "2026-10-08T20:39:08.000Z",
+  "retrievedUtc": "2026-10-19T17:15:54.525Z",
   "vintage": "BEA Regional dataset, Year=LAST5 request filtered to the latest returned year per table (CAGDP2 year 2024, CAINC1 year 2024)",
   "referencePeriod": "2024",
   "series": [
@@ -1023,5 +1023,5 @@
       ]
     }
   ],
-  "notes": "Cross-section: series use values:[{name, value}] (one value per county, latest year) instead of observations. Geography = all 83 Michigan counties (GeoFips 26001-26165, odd codes). Suppressed/unavailable cells skipped: 0. Produced via the Secure Vault BEA connector (the emailed key remained inactive at BEA); mirrors scripts/pack/bea.mjs shaping exactly."
+  "notes": "Cross-section: series use values:[{name, value}] (one value per county, latest year) instead of observations. Geography = all 83 Michigan counties (GeoFips 26001–26165, odd codes). DataValue comma-formatted strings parsed to numbers; 0 suppressed/unavailable cells (e.g. \"(D)\") skipped in this pull. Units taken from each row set’s UnitOfMeasure where present. Verified live 2026-10-08 via the vault connector lane (see header): all 83 counties, latest year 2024, Oakland GDP $143.1B, per capita personal income $93,579."
 }

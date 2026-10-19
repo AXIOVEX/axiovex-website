@@ -1,23 +1,15 @@
 {
   "source": "DOL UI Weekly Claims",
   "publisher": "U.S. Department of Labor, Employment and Training Administration",
-  "retrievedUtc": "2026-10-08T20:44:31.834Z",
-  "vintage": "ETA UI National Weekly Claims via DOL Open Data Portal APIv4 (apiprod.dol.gov/v4), latest 26 reported weeks of 3114 rows carrying claims values (3144 dated rows returned, including future seasonal-factor rows)",
-  "referencePeriod": "2026-09-05",
+  "retrievedUtc": "2026-10-19T17:16:02.514Z",
+  "vintage": "ETA UI National Weekly Claims via DOL Open Data Portal APIv4 (apiprod.dol.gov/v4), latest 26 reported weeks of 3116 rows carrying claims values (3144 dated rows returned, including future seasonal-factor rows)",
+  "referencePeriod": "2026-09-19",
   "series": [
     {
       "id": "initial-nsa",
       "label": "Initial claims, not seasonally adjusted — United States (national — ETA ui_national_weekly_claims dataset is the national series; no state split)",
       "unit": "Claims (count)",
       "observations": [
-        {
-          "period": "2026-03-14",
-          "value": 190982
-        },
-        {
-          "period": "2026-03-21",
-          "value": 186777
-        },
         {
           "period": "2026-03-28",
           "value": 186258
@@ -113,6 +105,14 @@
         {
           "period": "2026-09-05",
           "value": 177695
+        },
+        {
+          "period": "2026-09-12",
+          "value": 153568
+        },
+        {
+          "period": "2026-09-19",
+          "value": 164717
         }
       ]
     },
@@ -121,14 +121,6 @@
       "label": "Initial claims, seasonally adjusted — United States (national — ETA ui_national_weekly_claims dataset is the national series; no state split)",
       "unit": "Claims (count)",
       "observations": [
-        {
-          "period": "2026-03-14",
-          "value": 205000
-        },
-        {
-          "period": "2026-03-21",
-          "value": 211000
-        },
         {
           "period": "2026-03-28",
           "value": 203000
@@ -224,6 +216,14 @@
         {
           "period": "2026-09-05",
           "value": 207000
+        },
+        {
+          "period": "2026-09-12",
+          "value": 198000
+        },
+        {
+          "period": "2026-09-19",
+          "value": 198000
         }
       ]
     },
@@ -232,14 +232,6 @@
       "label": "Continued claims (weeks claimed), not seasonally adjusted — United States (national — ETA ui_national_weekly_claims dataset is the national series; no state split)",
       "unit": "Claims (count)",
       "observations": [
-        {
-          "period": "2026-03-14",
-          "value": 2033954
-        },
-        {
-          "period": "2026-03-21",
-          "value": 2006576
-        },
         {
           "period": "2026-03-28",
           "value": 1921541
@@ -335,6 +327,14 @@
         {
           "period": "2026-09-05",
           "value": 1565675
+        },
+        {
+          "period": "2026-09-12",
+          "value": 1545661
+        },
+        {
+          "period": "2026-09-19",
+          "value": 1497243
         }
       ]
     },
@@ -343,14 +343,6 @@
       "label": "Continued claims (weeks claimed), seasonally adjusted — United States (national — ETA ui_national_weekly_claims dataset is the national series; no state split)",
       "unit": "Claims (count)",
       "observations": [
-        {
-          "period": "2026-03-14",
-          "value": 1816000
-        },
-        {
-          "period": "2026-03-21",
-          "value": 1832000
-        },
         {
           "period": "2026-03-28",
           "value": 1787000
@@ -446,6 +438,14 @@
         {
           "period": "2026-09-05",
           "value": 1717000
+        },
+        {
+          "period": "2026-09-12",
+          "value": 1712000
+        },
+        {
+          "period": "2026-09-19",
+          "value": 1699000
         }
       ]
     },
@@ -454,14 +454,6 @@
       "label": "Covered employment — United States (national — ETA ui_national_weekly_claims dataset is the national series; no state split)",
       "unit": "Persons (count)",
       "observations": [
-        {
-          "period": "2026-03-14",
-          "value": 153398888
-        },
-        {
-          "period": "2026-03-21",
-          "value": 153398888
-        },
         {
           "period": "2026-03-28",
           "value": 153398888
@@ -556,6 +548,14 @@
         },
         {
           "period": "2026-09-05",
+          "value": 153732307
+        },
+        {
+          "period": "2026-09-12",
+          "value": 153732307
+        },
+        {
+          "period": "2026-09-19",
           "value": 153732307
         }
       ]
