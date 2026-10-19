@@ -12,8 +12,8 @@
 - [x] T010 Append bounded fresh-runtime results to the same October 19 article.
 - [x] T011 Verify the combined followup downloads, CSP/browser rendering and AEE claims.
 - [x] T012 Independently verify the concurrent-main graft and freeze the followup paths.
-- [ ] T013 Publish and verify the runtime article update on actual staging.
-- [ ] T014 Promote the runtime update to latest main and verify production live.
+- [x] T013 Publish and verify the runtime article update on actual staging.
+- [x] T014 Promote the runtime update to latest main and verify production live.
 
 ## Initial publication
 
@@ -50,5 +50,22 @@ visible. All 14 broader reconstruction targets remain open.
 Combined-version verification: nine static groups, desktop 1440 / mobile 390
 Chromium 141 rendering and all 13 public record downloads pass under unchanged
 CSP. Four AEE phases pass all 17 atomic publication claims. The independent
-runtime review is recorded in verification/runtime-review.json. The new
-reviewed checkpoint is frozen; followup staging and production remain pending.
+runtime review is recorded in verification/runtime-review.json. The reviewed checkpoint is frozen. Actual followup staging and production
+verification passed, as recorded in verification/deployment-final.json.
+
+## Completed runtime deployment
+
+The combined runtime publication passed actual staging verification at
+5bc90417c229b36c6fcc6c56fc7c8fa6c99861b5 and production verification at
+a373f311759e10efc01afef1e4608fd570324411 after PR #9 merged. The final receipt
+is verification/deployment-final.json. All 16 served assets were checked over
+normal HTTPS. Staging bytes match exactly; the production HTML differs only
+by the bounded, validated existing Cloudflare contact-email transformation.
+All six tracker filters, the open article, its ten links, the current summary
+markup and stylesheet, and the scope disclosures passed actual cloud-browser
+checks. No website console error or overflow was observed.
+
+This two-file governance closure changes no article, stylesheet, tracker,
+report, runtime package or download checksum. Source integration, required
+current-head source CI and the missing feature-035 records remain explicitly
+open; the completed website deployment does not close those separate items.
