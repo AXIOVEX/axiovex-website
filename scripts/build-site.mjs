@@ -2153,6 +2153,8 @@ function buildBreaking() {
     'index.html',
     path.join('contact', 'index.html'),
     path.join('privacy', 'index.html'),
+    path.join('disclaimer', 'index.html'),
+    path.join('research', 'index.html'),
     path.join('blog', 'index.html'),
     path.join('documents', 'index.html'),
     path.join('signals', 'index.html'),
