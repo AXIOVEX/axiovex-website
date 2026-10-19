@@ -2,11 +2,13 @@ import { readFileSync, existsSync } from 'node:fs';
 export function economicContext() {
   const sources = JSON.parse(readFileSync('data/report-sources.json', 'utf8'));
   const rows = [], readings = [];
+  const refresh = process.env.PACK_STATUS_FILE && existsSync(process.env.PACK_STATUS_FILE) ? JSON.parse(readFileSync(process.env.PACK_STATUS_FILE, 'utf8')) : null;
   for (const source of sources.filter(s => s.output.startsWith('data/pack/'))) {
     if (!existsSync(source.output)) { rows.push(`| ${source.publisher} | Unavailable | No snapshot |`); continue; }
     const data = JSON.parse(readFileSync(source.output, 'utf8'));
     const configured = !!process.env[source.secret];
-    rows.push(`| ${source.publisher} | ${data.referencePeriod || 'Mixed; see vintage'} | Retrieved ${data.retrievedUtc}; ${configured ? 'refresh configured' : 'API key absent; retained snapshot'} |`);
+    const status = refresh?.sources?.find(s => s.id === source.id);
+    rows.push(`| ${source.publisher} | ${data.referencePeriod || 'Mixed; see vintage'} | Retrieved ${data.retrievedUtc}; ${status ? status.status + ' checked ' + status.checkedAt + (status.reason ? '; ' + status.reason : '') : configured ? 'refresh configured; no result manifest for this report' : 'API key absent; retained snapshot'} |`);
     // Scalar time-series values only: never silently aggregate counties, schools,
     // occupations or incompatible units into a made-up statewide statistic.
     for (const series of (data.series || []).slice(0, 2)) {

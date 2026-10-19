@@ -46,6 +46,7 @@ function rowsOf(json) {
 }
 function toObservations(rows, field) {
   return rows
+    .filter(r => r[field] != null && String(r[field]).trim() !== '')
     .map(r => ({ period: r.period, value: Number(r[field]) }))
     .filter(o => o.period && Number.isFinite(o.value))
     .sort((a, b) => (a.period < b.period ? -1 : a.period > b.period ? 1 : 0));

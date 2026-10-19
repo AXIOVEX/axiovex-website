@@ -26,7 +26,7 @@ Seobility's historical 90 is never represented as a current reading.
 
 Economic/API-secret source inventory: `data/report-sources.json` and
 `docs/report-data-sources.md`. All existing pack keys are injected in CI; BEA
-key is absent as of Oct 19. Actual source vintages remain visible.
+key was added and verified the same day (Actions run 39292582186). Actual source vintages remain visible.
 
 
 **Feature Branch**: implementation lands on `staging` per spec 010;

@@ -26,7 +26,7 @@ Seobility's historical 90 is never represented as a current reading.
 
 Economic/API-secret source inventory: `data/report-sources.json` and
 `docs/report-data-sources.md`. All existing pack keys are injected in CI; BEA
-key is absent as of Oct 19. Actual source vintages remain visible.
+key was added and verified the same day (Actions run 39292582186). Actual source vintages remain visible.
 
 
 The source inventory is specs 006 (analytics + SEO/AEO), 007 (monthly
@@ -208,3 +208,15 @@ and dated net active changes from saved aggregate snapshots. It never returns
 subscriber addresses, confirmation tokens or unsubscribe tokens. Repeated
 confirm/unsubscribe history is not reconstructable from the existing schema;
 first baseline net change is explicitly unknown.
+
+## Source-refresh verification — October 19
+
+Actions run 39292582186 confirmed the newly added BEA_API_KEY works: all
+three BEA series refreshed. FRED, DOL, JOLTS and Scorecard also refreshed;
+Census returned unchanged. EIA timed out and kept its last-good snapshot.
+The pack runner now records per-source success/failure/skipped state, emits
+visible warnings, and retains an artifact rather than implying every source
+passed because some did. Manual data-pack dispatch accepts a single source
+for isolated verification. The monthly founder report consumes this manifest.
+An EIA parsing defect was also corrected: null/blank prices no longer become
+zero; actual zero values remain valid.

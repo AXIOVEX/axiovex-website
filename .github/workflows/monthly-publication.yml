@@ -38,6 +38,7 @@ jobs:
       BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
       CLOUDFLARE_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
       NEWSLETTER_SEND_SECRET: ${{ secrets.NEWSLETTER_SEND_SECRET }}
+      PACK_STATUS_FILE: ops-output/economic-refresh.json
       REPORT_DATA_MONTH: ${{ needs.plan.outputs.dataMonth }}
     steps:
       - uses: actions/checkout@v4

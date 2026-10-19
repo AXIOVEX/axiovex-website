@@ -18,7 +18,10 @@ text = text.includes('## Insights') ? text.replace('## Insights', subscriptions 
   if (existsSync(`${output}/health/health.json`)) partial ||= JSON.parse(readFileSync(`${output}/health/health.json`, 'utf8')).partial === true;
   text += '\n\n' + (existsSync(`${output}/health/report.md`) ? readFileSync(`${output}/health/report.md`, 'utf8') : 'Technical health runner produced no report.');
 }
-if (cadence === 'monthly') text += '\n\n' + economicContext();
+if (cadence === 'monthly') {
+  text += '\n\n' + economicContext();
+  if (process.env.PACK_STATUS_FILE && existsSync(process.env.PACK_STATUS_FILE)) partial ||= JSON.parse(readFileSync(process.env.PACK_STATUS_FILE, 'utf8')).sources.some(s => s.status !== 'success');
+}
 save('report-status.json', { cadence, status: failed ? 'failed' : partial ? 'partial' : 'complete', checkedAt: new Date().toISOString() });
 summary(`Report status: **${failed ? 'FAILED' : partial ? 'PARTIAL — source limitations disclosed below' : 'COMPLETE'}**\n\n` + text);
 if (partial && !failed) console.log('::warning::Report generated with disclosed source limitations. Email delivery is checked separately.');

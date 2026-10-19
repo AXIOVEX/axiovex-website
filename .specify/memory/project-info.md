@@ -15,7 +15,8 @@
   Keys live in repository Actions secrets. Canonical source/secret/collector
   mapping: data/report-sources.json and docs/report-data-sources.md.
 - BEA_API_KEY was the only configured pack key absent from the repo secret
-  inventory on October 19; owner was asked to add it.
+  inventory on October 19; owner added it and the live BEA collector passed
+  in Actions run 39292582186. It is now configured.
 - Founder reports follow the owner's October 12 .msg example: headline table,
   plain-English interpretation, top-path bars, traffic detail, subscriber
   counts/change, insights, suggestions, notes, and live SEO/AEO findings.

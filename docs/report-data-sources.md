@@ -3,7 +3,8 @@
 Owner reminder recorded 2026-10-19: economic reports and The Axiovex Signal
 use several sources; their API keys are repository Actions secrets, not
 Cloudflare analytics credentials. Canonical executable inventory:
-`data/report-sources.json`. Secret **names** were verified with `gh secret list`;
+`data/report-sources.json`. BEA_API_KEY was subsequently added and passed a live
+collector test (Actions run 39292582186; three series). Secret **names** were verified with `gh secret list`;
 values were not read or printed. GitHub can inject secrets in CI but cannot
 return existing secret values to a workstation.
 
@@ -15,7 +16,7 @@ return existing secret values to a workstation.
 | Labor Department weekly national claims | DOL_API_KEY | pack/dol-claims; do not label Michigan |
 | Energy Information Administration | EIA_API_KEY | pack/eia; publication lag retained |
 | Education College Scorecard | DATAGOV_API_KEY | pack/scorecard; metric years vary |
-| BEA county GDP/income | BEA_API_KEY | pack/bea; missing as of Oct 19, requested |
+| BEA county GDP/income | BEA_API_KEY | pack/bea; verified Oct 19 in Actions run 39292582186 |
 | Configured source headlines / WARN | No universal key | data/signal-sources.json; fetch-signals |
 | Website traffic | CLOUDFLARE_ANALYTICS_TOKEN | ops/analytics; separate from economic sources |
 | Production newsletter aggregates / delivery | NEWSLETTER_SEND_SECRET | Pages ops endpoints; Microsoft credentials stay in Pages |

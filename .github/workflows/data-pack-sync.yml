@@ -12,6 +12,11 @@ on:
   schedule:
     - cron: '23 12 * * 1'
   workflow_dispatch:
+    inputs:
+      source:
+        type: choice
+        default: all
+        options: [all, bea, census, dol-claims, eia, fred, jolts, scorecard]
 
 permissions:
   contents: write
@@ -41,7 +46,22 @@ jobs:
           BEA_API_KEY: ${{ secrets.BEA_API_KEY }}
           DATAGOV_API_KEY: ${{ secrets.DATAGOV_API_KEY }}
           EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
-        run: node scripts/fetch-pack.mjs
+          PACK_STATUS_FILE: ops-output/economic-refresh.json
+          SOURCE_ID: ${{ inputs.source || 'all' }}
+        run: |
+          if [ "$SOURCE_ID" = all ]; then
+            node scripts/fetch-pack.mjs
+          else
+            node scripts/fetch-pack.mjs --only "$SOURCE_ID"
+          fi
+
+      - name: Preserve source refresh status
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: economic-refresh-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ops-output/economic-refresh.json
+          retention-days: 90
 
       - name: Commit if changed
         run: |
