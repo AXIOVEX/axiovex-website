@@ -9,7 +9,9 @@ test('monthly publication waits for month end and preserves data month during ca
   assert.equal(cycle(new Date('2026-10-29T14:00:00Z')).active, false);
   assert.deepEqual(cycle(new Date('2026-10-30T14:00:00Z')), { active: true, date: '2026-10-30', releaseMonth: '2026-10', dataMonth: '2026-09' });
   assert.equal(cycle(new Date('2026-11-07T15:00:00Z')).dataMonth, '2026-09');
-  assert.equal(cycle(new Date('2026-11-08T15:00:00Z')).active, false);
+  assert.equal(cycle(new Date('2026-11-08T15:00:00Z')).active, true);
+  assert.equal(cycle(new Date('2026-11-29T15:00:00Z')).dataMonth, '2026-09');
+  assert.equal(cycle(new Date('2026-11-30T15:00:00Z')).dataMonth, '2026-10');
   assert.equal(cycle(new Date('2027-02-28T15:00:00Z')).dataMonth, '2027-01');
   assert.equal(cycle(new Date('2028-02-29T15:00:00Z')).active, true);
   assert.equal(cycle(new Date('2027-03-01T15:00:00Z')).dataMonth, '2027-01');

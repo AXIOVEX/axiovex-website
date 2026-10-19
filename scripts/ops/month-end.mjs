@@ -8,12 +8,13 @@ export const policy = JSON.parse(readFileSync(new URL('../../data/publication-po
 export function cycle(now = new Date()) {
   const p = localParts(now), day = +p.day;
   let release = new Date(Date.UTC(+p.year, +p.month - 1, 1));
-  if (day <= policy.retryThroughDay) release.setUTCMonth(release.getUTCMonth() - 1);
+  const lastDay = new Date(Date.UTC(+p.year, +p.month, 0)).getUTCDate();
+  const releaseDay = Math.min(policy.releaseDay, lastDay);
+  if (day < releaseDay) release.setUTCMonth(release.getUTCMonth() - 1);
   const releaseMonth = release.toISOString().slice(0, 7);
   const data = new Date(release); data.setUTCMonth(data.getUTCMonth() - 1);
   const dataMonth = data.toISOString().slice(0, 7);
-  const lastDay = new Date(Date.UTC(+p.year, +p.month, 0)).getUTCDate();
-  const active = (day >= Math.min(policy.releaseDay, lastDay) || day <= policy.retryThroughDay) && dataMonth >= policy.firstDataMonth;
+  const active = dataMonth >= policy.firstDataMonth;
   return { active, releaseMonth, dataMonth, date: `${p.year}-${p.month}-${p.day}` };
 }
 export function checkEconomicData(signals, geo, dataMonth) {

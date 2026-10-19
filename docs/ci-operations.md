@@ -5,7 +5,7 @@
 Supersedes conflicting earlier weekly/Wednesday and unconditional calendar
 release rules below. Owner directs automatic monthly report and customer
 newsletter release after economic releases, normally near the 30th at 10 ET
-(February last day), with catch-up through the 7th. The month-end runner
+(February last day), with daily catch-up until the next month-end cycle. The month-end runner
 checks actual target-month state + 83-county availability before sending.
 Decision OPS-2026-10-19-MONTH-END is recorded in
 `docs/decisions/2026-10-19-month-end-publication.md` and project info; executable
@@ -41,7 +41,7 @@ No Muse service is required by the new Actions runners.
 |---|---|---|
 | Daily analytics | Every day 08:39, prior day vs trailing 7-day average | `operations.yml`, daily report |
 | Weekly analytics + SEO/AEO | Monday 09:39, last 7 days vs previous 7 | weekly report + live technical health |
-| Monthly report + newsletter | Near 30th 10 ET, February last day; wait for source release | monthly-publication.yml; check daily through the 7th |
+| Monthly report + newsletter | Near 30th 10 ET, February last day; wait for source release | monthly-publication.yml; check daily until the next month-end cycle |
 | Push health | Website changes on main | live technical health |
 | Workforce study/draft | 29th 09:39; February last day; prior data month | Docker collect/analyze/build, reviewed-edition verification, LAUS refresh, review artifacts |
 | Workforce publication | 30th 09:00; January data publishes March 1 | Human editorial/publication gate; see below |

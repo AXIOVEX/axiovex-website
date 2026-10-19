@@ -5,7 +5,7 @@
   "draftDay": 29,
   "releaseDay": 30,
   "releaseHour": 10,
-  "retryThroughDay": 7,
+  "retry": "daily until the next month-end cycle begins",
   "firstDataMonth": "2026-09",
   "requiredStateSeries": ["SMU26000003000000001", "LASST260000000000003", "LASST260000000000006", "SMU26000000000000001"],
   "requiredCountyCount": 83,

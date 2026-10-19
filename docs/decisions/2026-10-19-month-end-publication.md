@@ -9,7 +9,7 @@ the original CI migration. The newsletter is monthly. Prepare near the 29th;
 release near the 30th at 10:00 AM Eastern, after required data actually exist.
 February uses its last day. Date alone never authorizes release. September
 2026 data are first eligible October 30, 2026. Delayed releases are retried
-daily through the 7th of the next month, retaining the original data month.
+daily until the next month-end cycle begins, retaining the original data month.
 
 The new month-end workflow owns BOTH monthly report delivery and customer
 newsletter release. Daily and weekly internal website reports stay unchanged.

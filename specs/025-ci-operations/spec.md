@@ -5,7 +5,7 @@
 Supersedes conflicting earlier weekly/Wednesday and unconditional calendar
 release rules below. Owner directs automatic monthly report and customer
 newsletter release after economic releases, normally near the 30th at 10 ET
-(February last day), with catch-up through the 7th. The month-end runner
+(February last day), with daily catch-up until the next month-end cycle. The month-end runner
 checks actual target-month state + 83-county availability before sending.
 Decision OPS-2026-10-19-MONTH-END is recorded in
 `docs/decisions/2026-10-19-month-end-publication.md` and project info; executable
