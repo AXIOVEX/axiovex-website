@@ -15,11 +15,8 @@ export function due(now = new Date()) {
   if (hour === 8 && p.minute === '39') tasks.push('daily');
   if (hour === 9 && p.minute === '39') {
     if (p.weekday === 'Mon') tasks.push('weekly', 'health');
-    if (day === Math.min(30, last)) tasks.push('monthly');
-    if (day === Math.min(29, last)) tasks.push('workforce');
-    if (p.weekday === 'Tue') tasks.push('newsletter-draft');
+    if (day === Math.min(29, last)) tasks.push('workforce', 'newsletter-draft');
   }
-  if (hour === 10 && p.minute === '00' && p.weekday === 'Wed') tasks.push('newsletter-send');
   return tasks;
 }
 export function scheduledTime(cron, now = new Date()) {
@@ -48,10 +45,17 @@ export function midnight(date) {
   }
   return new Date(value).toISOString();
 }
-export function windows(cadence, now = new Date()) {
+export function windows(cadence, now = new Date(), dataMonth) {
   const p = localParts(now), today = `${p.year}-${p.month}-${p.day}`;
   if (!['daily', 'weekly', 'monthly'].includes(cadence)) throw new Error('Invalid cadence');
   if (cadence === 'monthly') {
+    if (dataMonth) {
+      if (!/^\d{4}-(0[1-9]|1[0-2])$/.test(dataMonth)) throw new Error('Invalid report data month');
+      const start = new Date(dataMonth + '-01T12:00:00Z');
+      const end = new Date(start); end.setUTCMonth(end.getUTCMonth() + 1);
+      const previous = new Date(start); previous.setUTCMonth(previous.getUTCMonth() - 1);
+      return { start: start.toISOString().slice(0, 10), end: end.toISOString().slice(0, 10), previous: previous.toISOString().slice(0, 10) };
+    }
     const first = `${p.year}-${p.month}-01`;
     const end = new Date(first + 'T12:00:00Z');
     const start = new Date(end); start.setUTCMonth(start.getUTCMonth() - 1);

@@ -1,0 +1,15 @@
+{
+  "decisionId": "OPS-2026-10-19-MONTH-END",
+  "cadence": "monthly",
+  "timezone": "America/New_York",
+  "draftDay": 29,
+  "releaseDay": 30,
+  "releaseHour": 10,
+  "retry": "daily until the next month-end cycle begins",
+  "firstDataMonth": "2026-09",
+  "requiredStateSeries": ["SMU26000003000000001", "LASST260000000000003", "LASST260000000000006", "SMU26000000000000001"],
+  "requiredCountyCount": 83,
+  "postalAddress": "6633 18 Mile Rd, Sterling Heights, MI 48314",
+  "authorization": "Tristen Pierson, 2026-10-19: automatically release the monthly report and newsletter after the month's economic data are available",
+  "decisionRecord": "docs/decisions/2026-10-19-month-end-publication.md"
+}

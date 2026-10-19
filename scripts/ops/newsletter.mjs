@@ -2,7 +2,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
-import { localParts, shift } from './calendar.mjs';
+import { localParts } from './calendar.mjs';
 import { save, summary } from './io.mjs';
 export function verifyApproval(approval, bytes, date) {
   if (approval.issue !== date || approval.approvedBy !== 'Tristen Pierson' ||
@@ -16,13 +16,14 @@ async function main() {
   const today = `${p.year}-${p.month}-${p.day}`;
   const mode = process.argv[2];
   if (mode === 'draft') {
-    const date = shift(today, (3 - new Date(today + 'T12:00:00Z').getUTCDay() + 7) % 7);
+    const last = new Date(Date.UTC(+p.year, +p.month, 0)).getUTCDate();
+    const date = `${p.year}-${p.month}-${String(Math.min(30, last)).padStart(2, '0')}`;
     const snap = JSON.parse(readFileSync('data/signals.json', 'utf8'));
     save('editorial-template.json', { lede: 'REVIEW REQUIRED: write the editorial lede.', insights: [], watchlist: [], footerAddress: 'REVIEW REQUIRED: use the owner-designated production postal address.' });
     save('signals.json', snap);
     save('issue-candidates.json', { issue: date, snapshot: snap.updatedUtc,
       lanes: snap.lanes, pulse: snap.pulse, status: 'Editorial review required; not approved for sending' });
-    summary(`# Newsletter preparation — ${date}\n\nSnapshot: ${snap.updatedUtc}. Candidate headlines and published Pulse values are attached with their original source/vintage fields.\n\n1. Review source claims, causes, WARN changes and the prior edition.\n2. Complete editorial-template.json; run node scripts/newsletter/assemble.mjs ${date} editorial.json.\n3. Review the email and web edition; commit the issue and email source.\n4. Record the owner approval for those exact email bytes in newsletter/approvals/${date}.json (see runbook).\n\nWednesday's job refuses an unapproved issue. Assembly is deterministic; editorial analysis and NDR/suppression review remain human work.\n`);
+    summary(`# Newsletter preparation — ${date}\n\nSnapshot: ${snap.updatedUtc}. Candidate headlines and published Pulse values are attached with their original source/vintage fields.\n\n1. Review source claims, causes, WARN changes and the prior edition.\n2. Complete editorial-template.json; run node scripts/newsletter/assemble.mjs ${date} editorial.json.\n3. Review the email and web edition; commit the issue and email source.\n4. Record the owner approval for those exact email bytes in newsletter/approvals/${date}.json (see runbook).\n\nThe month-end job automatically prepares and releases a source-only edition after the economic data gate passes (decision OPS-2026-10-19-MONTH-END). These candidate artifacts support optional editorial enrichment; discretionary commentary still requires review.\n`);
     return;
   }
   if (!['validate', 'send'].includes(mode)) throw new Error('Expected draft, validate or send');

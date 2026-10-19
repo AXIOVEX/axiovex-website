@@ -120,12 +120,13 @@ if (args.includes('--list')) {
 /* ---------- run ---------- */
 mkdirSync(OUT_DIR, { recursive: true });
 let attempted = 0, succeeded = 0;
-const results = [];
+const results = [], sourceStatus = [];
 for (const mod of modules) {
   if (only && !only.includes(mod.id)) continue;
   const outPath = path.join(OUT_DIR, mod.id + '.json');
   if (mod.requiresKey && !env[mod.requiresKey]) {
     results.push(mod.id + ': SKIPPED (key ' + mod.requiresKey + ' absent)');
+    sourceStatus.push({ id: mod.id, status: 'skipped', reason: 'API key absent', checkedAt: new Date().toISOString() });
     continue;
   }
   attempted++;
@@ -148,11 +149,18 @@ for (const mod of modules) {
     } else {
       results.push(mod.id + ': unchanged (ref ' + (snapshot.referencePeriod || '?') + ')');
     }
+    sourceStatus.push({ id: mod.id, status: 'success', referencePeriod: snapshot.referencePeriod, checkedAt: new Date().toISOString() });
     succeeded++;
   } catch (e) {
     results.push(mod.id + ': FAILED — ' + e.message + (existsSync(outPath) ? ' (last-good kept)' : ' (no last-good)'));
+    sourceStatus.push({ id: mod.id, status: 'failed', reason: e.message, lastGoodKept: existsSync(outPath), checkedAt: new Date().toISOString() });
   }
 }
+if (process.env.PACK_STATUS_FILE) {
+  mkdirSync(path.dirname(process.env.PACK_STATUS_FILE), { recursive: true });
+  writeFileSync(process.env.PACK_STATUS_FILE, JSON.stringify({ checkedAt: new Date().toISOString(), sources: sourceStatus }, null, 2) + '\n');
+}
+for (const item of sourceStatus.filter(s => s.status !== 'success')) console.log(`::warning::Economic source ${item.id}: ${item.status}; last-good data must retain its actual vintage`);
 console.log('fetch-pack: ' + results.join(' · '));
 console.log('fetch-pack: call counts — ' +
   ([...callCounts.entries()].map(([h, n]) => h + '=' + n).join(' · ') || 'none'));

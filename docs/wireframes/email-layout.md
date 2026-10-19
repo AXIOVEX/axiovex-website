@@ -17,3 +17,13 @@ Review uses the latest committed customer edition (October 14), clearly labeled
 as a review copy of that edition. Only tristen@axiovexsystems.com receives the
 preview. This is not approval to distribute a customer issue or alter subscriber
 state. Verify desktop/mobile screenshots before sending.
+
+## Owner reference amendment — 2026-10-19
+
+Tristen supplied the October 12 .msg report and directed matching it. Reports
+now use a centered 720px white editorial column, 22px navy title with a cyan
+underline, 15px text, compact navy table headers, top-path horizontal bars,
+then Traffic detail, Newsletter subscriptions, Insights, Suggestions and Notes.
+Keep source limitations legible without dominating the report. Newsletter
+keeps the branded email shell already reviewed. Public signup copy now promises
+a monthly edition after economic releases, superseding Wednesday cadence.
