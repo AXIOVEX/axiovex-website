@@ -1,6 +1,6 @@
 # Staging alignment with the October 19 business thesis
 
-Status: WF-19 explicitly approved by Tristen for staging on October 19, 2026. Implemented locally; deployment verification pending.
+Status: WF-19 explicitly approved by Tristen for staging on October 19, 2026. Implemented and verified live on staging, October 19, 2026. Production promotion remains separate.
 
 Owner request: update the Axiovex staging website to align with the attached thesis.
 
