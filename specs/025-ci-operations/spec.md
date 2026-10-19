@@ -21,11 +21,28 @@ Plan: standard-library Node runners, timezone-aware scheduling, bounded
 network requests, artifact retention, tests for dates, failures and approval
 integrity. Separate review-only evidence preparation from external writes.
 
-Known migration gaps: Muse-only runbooks/state/token and Gmail OAuth are
-unavailable. Official SEO/AEO score collection, report email delivery,
-editorial analysis, WARN review and signed-in LinkedIn posting require
+Known migration gaps: Muse-only runbooks/state are unavailable.
+Official SEO/AEO score collection, editorial analysis, WARN review and signed-in LinkedIn posting require
 restored access or human review; CI must disclose these gaps.
 
 Tasks: inventory checked-in requirements; implement runners and workflows;
 exercise deterministic tests and live read-only health; push a review branch
 and run CI. Activation requires merging workflows to the default branch.
+
+## Microsoft mail amendment — 2026-10-19
+
+Owner directs using the existing Axiovex Microsoft 365 tenant, replacing the
+obsolete Gmail reporting lane from spec 006. CI authenticates to a Pages-only
+report endpoint using NEWSLETTER_SEND_SECRET. That endpoint uses the existing
+Newsletter application's NEWSLETTER_GRAPH_* credentials, already restricted to the newsletter mailbox, to
+send reports from newsletter@axiovexsystems.com to the two fixed founders. No
+Microsoft credentials are exported, no tenant/app permissions are expanded,
+and no subscriber send/approval rule changes. Reject sender/recipient overrides,
+staging sends, oversized payloads and unauthenticated requests. Save Graph
+acceptance receipts; do not equate acceptance with confirmed inbox delivery.
+
+Daily/weekly/monthly, workforce and newsletter preparation reports are emailed.
+Weekly/monthly analytics include live technical health. Expected dataset gaps
+produce clearly marked PARTIAL reports; actual API failures and failed email
+delivery remain failed jobs. This follows spec 006 FR-006's unavailable-section
+rule instead of making every valid partial report a permanently failing job.

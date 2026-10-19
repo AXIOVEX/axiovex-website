@@ -121,6 +121,15 @@ the weekly report; the push-triggered check stays as-is.
 
 ## Amendments
 
+- **Microsoft 365 migration (2026-10-19, owner direction):** FR-007's old
+  connected-Gmail lane is superseded. Founder reports send through the existing
+  Axiovex Microsoft 365 Newsletter application/mailbox as
+  `newsletter@axiovexsystems.com` to the same two founders. The Start mailbox
+  retains its dedicated contact-form purpose. Microsoft credentials stay in
+  Cloudflare Pages; CI uses the authenticated fixed-recipient report endpoint
+  described in spec 025. No new mailbox/group or broader tenant permissions
+  are needed. Delivery receipts distinguish Graph acceptance from inbox receipt.
+
 - **Amendment 1 (2026-10-07, owner direction):** status codes in the
   reports must carry their plain-English meaning, not bare numbers.
   Every individual code named in a report (status lists, the
