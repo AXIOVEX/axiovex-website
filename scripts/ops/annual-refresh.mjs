@@ -23,7 +23,7 @@ async function main() {
   async function download(url, file, allow404 = false) {
     const r = await fetch(url, { signal: AbortSignal.timeout(90000) });
     if (allow404 && r.status === 404) { evidence.sources.push({ url, status: 404, state: 'not released' }); return null; }
-    if (!r.ok) throw Error(`Annual source HTTP ${r.status}: ${url}`);
+    if (!r.ok) { evidence.sources.push({url,status:r.status,state:'rejected'}); throw Error(`Annual source HTTP ${r.status}: ${url}`); }
     const bytes = Buffer.from(await r.arrayBuffer());
     evidence.sources.push({ url, status: r.status, sha256: createHash('sha256').update(bytes).digest('hex') });
     if (file) writeFileSync(`${dir}/${file}`, bytes);
@@ -48,8 +48,21 @@ async function main() {
       } catch(e) {
         if (!/HTTP 403/.test(e.message)) throw e;
         // The HTML table links this official workbook. No third-party substitute.
-        await download('https://www.bls.gov/emp/ind-occ-matrix/occupation.xlsx','bls-occupations.xlsx');
-        py('bls'); outlook=JSON.parse(readFileSync('data/outlook.json'));
+        try {
+          await download('https://www.bls.gov/emp/ind-occ-matrix/occupation.xlsx','bls-occupations.xlsx');
+          py('bls');
+        } catch(workbookError) {
+          if (!/HTTP 403/.test(workbookError.message)) throw workbookError;
+          // BLS separately publishes the same matrix in its bulk/API service.
+          for (const file of ['ep.dates','ep.industry','ep.occupation','ep.series','ep.data.1.AllData','ep.aspect']) await download('https://download.bls.gov/pub/time.series/ep/'+file,file);
+          const dates=readFileSync(`${dir}/ep.dates`,'utf8').split(/\r?\n/).find(l=>l.startsWith('optd\t'))?.trim().split('\t');
+          if (!dates) throw Error('BLS occupation projection dates absent');
+          const response=await fetch('https://api.bls.gov/publicAPI/v2/timeseries/data/',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({seriesid:['EPU291171TE1000'],startyear:dates[1],endyear:dates[1],aspects:true}),signal:AbortSignal.timeout(30000)});
+          if (!response.ok) throw Error(`BLS aspect validation API HTTP ${response.status}`);
+          writeFileSync(`${dir}/ep-api-validation.json`,JSON.stringify(await response.json()));
+          py('bls-bulk');
+        }
+        outlook=JSON.parse(readFileSync('data/outlook.json'));
       }
     });
     await check('MCDA projections', async () => {

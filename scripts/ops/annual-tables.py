@@ -82,6 +82,36 @@ def bls():
     outlook['blsProjections'].update(horizon=horizons[0],vintage=horizons[0],sourceFileUrl='https://www.bls.gov/emp/ind-occ-matrix/occupation.xlsx')
     save('data/outlook.json',outlook)
 
+def bls_bulk():
+    def tsv(name):
+        with (INPUT/name).open() as f:
+            return [{k.strip():v.strip() for k,v in r.items()} for r in csv.DictReader(f,delimiter='\t')]
+    dates=next(r for r in tsv('ep.dates') if r['data_source']=='optd')
+    base,end=dates['base_year'],dates['proj_year']
+    if int(end)-int(base)!=10: raise ValueError('BLS bulk projection horizon changed')
+    if not any(r['ind_code']=='TE1000' and r['ind_title']=='Total, all industries' for r in tsv('ep.industry')): raise ValueError('BLS national industry scope changed')
+    series={r['series_id']:r for r in tsv('ep.series') if r['ind_code']=='TE1000' and r['occ_type']=='L'}
+    names={r['occ_code']:r['occ_title'] for r in tsv('ep.occupation')}
+    levels={r['series_id']:number(r['value']) for r in tsv('ep.data.1.AllData') if r['series_id'] in series and r['year']==base and r['period']=='A01'}
+    aspects={}
+    for r in tsv('ep.aspect'):
+        if r['series_id'] in series and r['year']==base and r['period']=='A01': aspects.setdefault(r['series_id'],{})[r['aspect_type']]=number(r['value'])
+    # Validate bulk aspect-code meaning against the API's named measures.
+    api=json.loads((INPUT/'ep-api-validation.json').read_text())
+    observation=api['Results']['series'][0]['data'][0]
+    named={r['name']:number(r['value']) for r in observation['aspects']}
+    sample=aspects['EPU291171TE1000']
+    if observation['year']!=base or sample['A1']!=named['Numerical employment change'] or sample['A2']!=named['Percent employment change'] or sample['PR']!=named['Projected employment']: raise ValueError('BLS named API and bulk measures disagree')
+    rows=[]
+    for sid,s in series.items():
+        a=aspects[sid];level=levels[sid]
+        if abs((a['PR']-level)-a['A1'])>.21 or (level>1 and abs(a['A2']-a['A1']/level*100)>(.1+10/level)): raise ValueError('BLS bulk levels/change reconciliation failed')
+        rows.append({'name':names[s['occ_code']],'jobsChange':round(a['A1']*1000),'pctChange':a['A2']})
+    if len(rows)<500: raise ValueError('BLS detailed occupation coverage incomplete')
+    outlook=load('data/outlook.json');group=outlook['blsProjections']
+    group.update(rise=sorted(rows,key=lambda r:-r['pctChange'])[:5],fall=sorted(rows,key=lambda r:r['pctChange'])[:5],horizon=f'{base}–{end[-2:]}',vintage=f'{base}–{end[-2:]}',sourceFileUrl='https://download.bls.gov/pub/time.series/ep/')
+    save('data/outlook.json',outlook)
+
 def industry():
     outlook=load('data/outlook.json')
     rows=list(openpyxl.load_workbook(INPUT/'mcda-industry.xlsx',read_only=True,data_only=True).worksheets[0].values)
@@ -181,6 +211,7 @@ if __name__=='__main__':
     mode=sys.argv[1]
     if mode=='mcda': mcda()
     elif mode=='bls': bls()
+    elif mode=='bls-bulk': bls_bulk()
     elif mode=='industry': industry()
     elif mode=='pupils': pupils()
     elif mode=='ipeds': ipeds(int(sys.argv[2]))
