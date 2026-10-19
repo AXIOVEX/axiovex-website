@@ -31,7 +31,9 @@ cp reports/2026-09-13-job-continuity/data-reanalysis.md "$root/ops-output/"
 docker run --rm \
   --mount "type=volume,src=$MIJOBS_EVIDENCE_VOLUME,dst=/data,readonly" \
   --mount "type=bind,src=$root/ops-output,dst=/out" \
-  michigan-workforce-reports:local cp -R /data/artifacts /out/collected-artifacts
+  michigan-workforce-reports:local sh -c \
+  'cp -R /data/artifacts /out/collected-artifacts && chown -R "$1:$2" /out/collected-artifacts' \
+  sh "$(id -u)" "$(id -g)"
 cd "$root"
 node scripts/fetch-geo.mjs laus 2>&1 | tee ops-output/geo-refresh.log
 cp -R data/geo ops-output/geo

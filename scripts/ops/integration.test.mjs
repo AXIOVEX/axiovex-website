@@ -35,18 +35,18 @@ test('API errors preserve raw evidence and fail closed', () => {
   const result = run('weekly', { key: 'test-only', apiError: true });
   assert.equal(result.status, 1);
   assert.match(result.report, /API rejected query/);
-  assert.ok(existsSync(path.join(result.temp, 'current.json')));
+  assert.ok(existsSync(path.join(result.temp, 'current-hourly-0.json')));
   assert.ok(existsSync(path.join(result.temp, 'current-utc-fallback.json')));
 });
 test('measured reports save normalized responses and disclose missing sections', () => {
   const result = run('weekly', { key: 'test-only' });
   assert.equal(result.status, 2);
-  assert.match(result.report, /200 \(OK\): 10/);
+  assert.match(result.report, /200 \(OK\): 40/);
   assert.match(result.report, /Distinct visitors unavailable/);
   assert.match(result.report, /Daily request trend/);
   assert.match(result.report, /Path movers/);
   const snapshot = JSON.parse(readFileSync(path.join(result.temp, 'window.json'), 'utf8'));
-  assert.equal(snapshot.totals.current.requests, 10);
+  assert.equal(snapshot.totals.current.requests, 40);
   assert.equal(snapshot.totals.current.cacheRatio, 0.25);
   assert.equal(snapshot.movers[0].change, 0);
   assert.ok(!result.report.includes('test-only'));

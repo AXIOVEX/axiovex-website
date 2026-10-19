@@ -1,4 +1,4 @@
-import { windows, midnight } from './calendar.mjs';
+import { windows, midnight, shift } from './calendar.mjs';
 import { save, summary, request } from './io.mjs';
 import { pathToFileURL } from 'node:url';
 
@@ -21,7 +21,22 @@ export function delta(current, previous) {
 }
 const meanings = { 200: 'OK', 201: 'Created', 204: 'No content', 301: 'Permanent redirect', 302: 'Temporary redirect', 304: 'Not modified', 400: 'Bad request', 401: 'Authentication required', 403: 'Forbidden', 404: 'Not found', 405: 'Method not allowed', 408: 'Request timeout', 429: 'Too many requests', 500: 'Internal server error', 502: 'Bad gateway', 503: 'Service unavailable', 504: 'Gateway timeout', 520: 'Unknown origin error', 521: 'Origin server down', 522: 'Origin connection timed out', 523: 'Origin unreachable', 524: 'Origin response timed out', 525: 'TLS handshake failed', 526: 'Invalid TLS certificate' };
 export function statusLabel(code) {
-  return `${code} (${meanings[code] || ({ 1: 'Informational response', 2: 'Successful response', 3: 'Redirect response', 4: 'Client error', 5: 'Server error' })[String(code)[0]] || 'Unclassified status'})`;
+  const additional = { 206: 'Partial content', 308: 'Permanent redirect', 422: 'Unprocessable content', 499: 'Client closed request' };
+  return `${code} (${meanings[code] || additional[code] || ({ 1: 'Informational response', 2: 'Successful response', 3: 'Redirect response', 4: 'Client error', 5: 'Server error' })[String(code)[0]] || 'Unclassified status'})`;
+}
+export function hourlyBatches(start, end) {
+  const batches = [];
+  for (let cursor = start; cursor < end;) {
+    // Free-plan hourly queries allow at most three days per request.
+    // Two local days also stay below the limit over a DST fall-back.
+    const next = shift(cursor, 2) < end ? shift(cursor, 2) : end;
+    batches.push([cursor, next]);
+    cursor = next;
+  }
+  return batches;
+}
+export function renderDimensions(dimensions) {
+  return Object.entries(dimensions).map(([key, value]) => key === 'edgeResponseStatus' ? statusLabel(value) : value).join(' · ');
 }
 
 async function graphql(token, query, name) {
@@ -56,7 +71,14 @@ async function main() {
     // Separate calls keep a plan restriction on adaptive detail from destroying totals.
     let data;
     try {
-      data = await graphql(token, `{viewer{zones(filter:{zoneTag:"${zone}"}){rows:httpRequests1hGroups(limit:2000,filter:{${range(start, end)}},orderBy:[datetime_ASC]){dimensions{datetime} sum{requests bytes cachedBytes responseStatusMap{edgeResponseStatus requests}}}}}}`, name);
+      data = { rows: [] };
+      let batchIndex = 0;
+      for (const [batchStart, batchEnd] of hourlyBatches(start, end)) {
+        const batch = await graphql(token, `{viewer{zones(filter:{zoneTag:"${zone}"}){rows:httpRequests1hGroups(limit:2000,filter:{${range(batchStart, batchEnd)}},orderBy:[datetime_ASC]){dimensions{datetime} sum{requests bytes cachedBytes responseStatusMap{edgeResponseStatus requests}}}}}}`, `${name}-hourly-${batchIndex++}`);
+        if (!Array.isArray(batch.rows) || batch.rows.length === 2000) throw new Error('Missing or truncated hourly batch');
+        data.rows.push(...batch.rows);
+      }
+      save(`${name}.json`, data);
     } catch {
       // Older hourly data can be outside plan retention. A UTC daily fallback
       // is labeled explicitly and is never represented as exact ET totals.
@@ -96,6 +118,15 @@ async function main() {
     } catch (error) { gaps.push(`Prior paths unavailable; no mover comparison: ${error.message}`); }
   }
   const movers = [];
+  const unconfirmedErrors = [];
+  if (details['server-errors']) {
+    details['server-errors'] = details['server-errors'].filter(row => {
+      const confirmed = (totals.current.statuses[row.dimensions.edgeResponseStatus] || 0) > 0;
+      if (!confirmed) unconfirmedErrors.push(row);
+      return confirmed;
+    });
+  }
+  if (unconfirmedErrors.length) gaps.push(`${unconfirmedErrors.length} adaptive server-error groups were excluded because their status codes have zero requests in authoritative rollups. Raw responses are retained; sampled phantom statuses are not reported as confirmed failures.`);
   if (details.paths && details['previous-paths']) {
     const prior = new Map(details['previous-paths'].map(r => [JSON.stringify(r.dimensions), r.count]));
     for (const row of details.paths) {
@@ -105,12 +136,12 @@ async function main() {
     }
     movers.sort((a, b) => Math.abs(b.change) - Math.abs(a.change));
   }
-  save('window.json', { cadence, ...w, timezone: 'America/New_York', totals, series, details, movers, gaps });
+  save('window.json', { cadence, ...w, timezone: 'America/New_York', totals, series, details, unconfirmedErrors, movers, gaps });
   const a = totals.current, b = totals.previous;
   const divisor = cadence === 'daily' ? 7 : 1;
   const metrics = ['requests', 'bytes', 'cachedBytes'].map(k => `| ${k} | ${a[k]} | ${b[k] / divisor} | ${delta(a[k], b[k] / divisor)} |`).join('\n');
   const serverErrors = Object.entries(a.statuses).filter(([code]) => +code >= 500).reduce((n, [, count]) => n + count, 0);
-  const text = `# Axiovex website — ${cadence} report\n\n${w.start} through ${w.end} (exclusive), America/New_York. Comparison starts ${w.previous}; ${cadence === 'daily' ? 'trailing seven-day daily average' : 'previous period'}.\n\n## Measured facts\n\nZone-wide unsampled hourly rollups include production and staging. Adaptive detail is sampled and never overrides rollups.\n\n| Metric | Current | Comparison | Computed change |\n|---|---:|---:|---|\n${metrics}\n\nCache ratio by bytes: ${a.cacheRatio === null ? 'unavailable (no bandwidth)' : (a.cacheRatio * 100).toFixed(2) + '%'}.\n\n${Object.entries(a.statuses).map(([code, count]) => `- ${statusLabel(code)}: ${count}`).join('\n')}\n\n## Adaptive detail\n\nHostnames are retained to distinguish production from staging.\n\n${Object.entries(details).map(([name, rows]) => `### ${name}\n\n${rows.length ? rows.slice(0, name === 'paths' ? 5 : 20).map(r => `- ${Object.values(r.dimensions).join(' · ')}: ${r.count} sampled requests`).join('\n') : 'No groups returned; absence of a sampled event does not establish zero.'}`).join('\n\n')}\n\n## Insights\n\n${serverErrors ? `${serverErrors} server-error responses in authoritative zone totals. Inspect host-split samples before attributing them to production.` : 'No server errors in returned rollups; this does not prove application health.'} Request change: ${delta(a.requests, b.requests / divisor)}. Causes remain unexplained until checked against deployment and incident evidence.\n\n## Suggestions\n\n- Owner decision: investigate any server errors and traffic movement against releases before changing content.\n- Safe technical check: inspect failing health probes in the health workflow; no automatic copy or branding edits.\n\n## Unavailable / migration gaps\n\n${gaps.map(g => '- ' + g).join('\n')}\n`;
+  const text = `# Axiovex website — ${cadence} report\n\n${w.start} through ${w.end} (exclusive), America/New_York. Comparison starts ${w.previous}; ${cadence === 'daily' ? 'trailing seven-day daily average' : 'previous period'}.\n\n## Measured facts\n\nZone-wide unsampled hourly rollups include production and staging. Adaptive detail is sampled and never overrides rollups.\n\n| Metric | Current | Comparison | Computed change |\n|---|---:|---:|---|\n${metrics}\n\nCache ratio by bytes: ${a.cacheRatio === null ? 'unavailable (no bandwidth)' : (a.cacheRatio * 100).toFixed(2) + '%'}.\n\n${Object.entries(a.statuses).map(([code, count]) => `- ${statusLabel(code)}: ${count}`).join('\n')}\n\n## Adaptive detail\n\nHostnames are retained to distinguish production from staging.\n\n${Object.entries(details).map(([name, rows]) => `### ${name}\n\n${rows.length ? rows.slice(0, name === 'paths' ? 5 : 20).map(r => `- ${renderDimensions(r.dimensions)}: ${r.count} sampled requests`).join('\n') : 'No groups returned; absence of a sampled event does not establish zero.'}`).join('\n\n')}\n\n## Insights\n\n${serverErrors ? `${serverErrors} server-error responses in authoritative zone totals. Inspect host-split samples before attributing them to production.` : 'No server errors in returned rollups; this does not prove application health.'} Request change: ${delta(a.requests, b.requests / divisor)}. Causes remain unexplained until checked against deployment and incident evidence.\n\n## Suggestions\n\n- Owner decision: investigate any server errors and traffic movement against releases before changing content.\n- Safe technical check: inspect failing health probes in the health workflow; no automatic copy or branding edits.\n\n## Unavailable / migration gaps\n\n${gaps.map(g => '- ' + g).join('\n')}\n`;
   const ranked = Object.entries(series.current).sort((a, b) => b[1] - a[1]);
   const extra = `\n## Daily request trend\n\n${Object.entries(series.current).sort().map(([date, count]) => `- ${date}: ${count}`).join('\n')}\n\n${ranked.length ? `Highest observed day: ${ranked[0][0]} (${ranked[0][1]} requests); lowest observed day: ${ranked.at(-1)[0]} (${ranked.at(-1)[1]} requests). Missing days are not imputed as zero.` : 'No daily observations.'}\n\n## Path movers\n\n${movers.length ? movers.slice(0, 10).map(r => `- ${r.clientRequestHTTPHost}${r.clientRequestPath}: ${r.previous} → ${r.current} sampled requests (${r.change >= 0 ? '+' : ''}${r.change})`).join('\n') : 'No comparable path groups returned.'}\n\nComparison includes only paths present in both top-100 responses. Missing groups are unknown. Sampling and query truncation limit mover rankings; they do not establish causal changes.\n`;
   summary(text + extra);

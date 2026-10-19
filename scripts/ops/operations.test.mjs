@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { due, midnight, windows, scheduledTime } from './calendar.mjs';
-import { aggregate, delta, statusLabel } from './analytics.mjs';
+import { aggregate, delta, statusLabel, hourlyBatches, renderDimensions } from './analytics.mjs';
 import { verifyApproval } from './newsletter.mjs';
 import { inspect } from './health.mjs';
 
@@ -48,6 +48,16 @@ test('traffic sums bytes, preserves real zero and rejects malformed rows', () =>
   assert.equal(delta(20, 10), '100.0%');
   assert.match(delta(10, 0), /no percentage baseline/);
   assert.equal(statusLabel(503), '503 (Service unavailable)');
+});
+test('hourly batches stay within Cloudflare limits and preserve complete windows', () => {
+  assert.deepEqual(hourlyBatches('2026-10-11', '2026-10-18'), [
+    ['2026-10-11', '2026-10-13'], ['2026-10-13', '2026-10-15'],
+    ['2026-10-15', '2026-10-17'], ['2026-10-17', '2026-10-18'],
+  ]);
+  for (const [start, end] of hourlyBatches('2026-10-31', '2026-11-04')) {
+    assert.ok(Date.parse(midnight(end)) - Date.parse(midnight(start)) <= 49 * 3600000);
+  }
+  assert.equal(renderDimensions({ edgeResponseStatus: 422 }), '422 (Unprocessable content)');
 });
 test('newsletter approval binds owner, issue and exact bytes', () => {
   const bytes = Buffer.from('{"subject":"reviewed"}');

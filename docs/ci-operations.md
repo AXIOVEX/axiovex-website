@@ -44,7 +44,9 @@ not success. Raw responses survive report/API errors. Official checker scores
 are never replaced by a made-up local score. Live health checks preserve the
 intentional `/research/` noindex and sitemap/llms exclusion (specs 023/024).
 
-Analytics uses unsampled hourly rollups at ET boundaries. If plan retention
+Analytics uses unsampled hourly rollups at ET boundaries in two-day batches.
+Live verification confirmed the Free-plan hourly dataset retains only about
+three days, so older comparisons use the fallback below. If plan retention
 rejects them, a labeled UTC daily fallback is attempted. Adaptive paths,
 countries, contact activity and server failures are sampled; hostnames are
 retained. Raw unsampled status totals remain authoritative. Distinct visitors
@@ -52,8 +54,10 @@ are explicitly unavailable because hourly uniques cannot be summed safely.
 Daily request series, observed best/worst days and sampled path movers are
 included. Paths absent from a top-100 query are unknown, not zero. External
 score history and older adaptive detail still need the Muse state/export.
-No API result has yet been cross-checked with the
-dashboard because the analytics credential has not been migrated.
+API results have been exercised with the migrated credential; a separate
+dashboard cross-check remains outstanding. Adaptive server-error groups whose
+status code has zero authoritative rollup requests are excluded as unconfirmed,
+with the raw responses retained (spec 006 phantom-status guard).
 
 ## Credentials to migrate (GitHub Actions secrets)
 
