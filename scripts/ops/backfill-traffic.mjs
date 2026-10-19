@@ -1,5 +1,6 @@
 // Recover every available closed UTC day from the preceding 90 days.
 // Never query or store today's incomplete rollup. The daily runner maintains it.
+import { isDeepStrictEqual } from 'node:util';
 import { graphql, validateDailyRows } from './analytics.mjs';
 import { persistTrafficArchive, readTrafficArchive } from './traffic-archive.mjs';
 import { request, save } from './io.mjs';
@@ -16,10 +17,7 @@ for (let i = 0; i < data.rows.length; i += 40) await persistTrafficArchive(data.
 const restored = await readTrafficArchive(start, end);
 for (const row of data.rows) {
   const saved = restored.find(r => r.dimensions.date === row.dimensions.date);
-  if (!saved || JSON.stringify(saved.sum) !== JSON.stringify(row.sum) || saved.uniq.uniques !== row.uniq.uniques) {
-    // Object property order is irrelevant; compare canonical fields instead.
-    if (!saved || ['requests','bytes','cachedBytes'].some(k => saved.sum[k] !== row.sum[k]) || saved.uniq.uniques !== row.uniq.uniques || JSON.stringify(saved.sum.responseStatusMap) !== JSON.stringify(row.sum.responseStatusMap) || JSON.stringify(saved.sum.countryMap) !== JSON.stringify(row.sum.countryMap)) throw new Error(`Backfill verification failed for ${row.dimensions.date}`);
-  }
+  if (!saved || !isDeepStrictEqual(saved, row)) throw new Error(`Backfill verification failed for ${row.dimensions.date}`);
 }
 const monthStart = end.slice(0, 7) + '-01';
 const missingCurrentMonth = [];

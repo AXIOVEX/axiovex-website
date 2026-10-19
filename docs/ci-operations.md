@@ -236,3 +236,11 @@ no visitor identifiers, URLs, addresses or tracking are stored there. Fresh
 Cloudflare rows supersede the same archived day. Raw responses and merged
 day evidence remain in CI artifacts. Retained evidence improves future
 monthly coverage; it cannot recover data absent before collection began.
+
+Every daily/weekly/monthly report also pulls and verifies all available closed
+UTC days in the preceding 90 days before aggregation. This bootstraps the
+archive and repairs missed daily collections while the source still retains
+them. Current-month missing-date lists and exact round-trip verification are
+saved as backfill-verification.json. The archive keeps older saved dates; the
+90-day query window does not delete them. An archive/backfill failure makes
+coverage partial and remains visible instead of silently claiming persistence.
