@@ -1047,3 +1047,9 @@ training and engineering?” Add exploratory startup/growth packages (websites,
 corporate operating systems and Michigan business-resource guidance), including
 existing companies. The package scope, pricing, access, eligibility and funding
 remain unconfirmed. This specific amendment was directed by Tristen in chat.
+
+
+October 19 production SEO follow-up, authorized by Tristen: shorten only the
+homepage search/social/WebPage title to “Axiovex Systems | Michigan Constraint
+Planning” after aeo.js flagged the prior title length. Visible hero and service
+copy retain WF-19 and its approved business-package amendment.
