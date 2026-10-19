@@ -51,4 +51,4 @@ That's the standard we hold our own analysis to: every number traceable to a sou
 
 ---
 
-*The full reports, evidence ledger, and source registry are public at [github.com/AXIOVEX/michigan-workforce-intelligence](https://github.com/AXIOVEX/michigan-workforce-intelligence). The verified September release is [here](https://github.com/AXIOVEX/michigan-workforce-intelligence/releases/tag/reports-2026.09.27.131143Z).*
+*The full reports, evidence ledger, and source registry are public at [github.com/AXIOVEX/michigan-workforce-intelligence](https://github.com/AXIOVEX/michigan-workforce-intelligence). The verified September release is [verified September 2026 workforce release](https://github.com/AXIOVEX/michigan-workforce-intelligence/releases/tag/reports-2026.09.27.131143Z).*

@@ -1,4 +1,6 @@
 import { request, save, summary } from './io.mjs';
+import { readFileSync, existsSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 export const BASE = 'https://axiovexsystems.com';
@@ -29,16 +31,18 @@ async function main() {
   const discovered = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]).filter(u => u.startsWith(BASE + '/') && !u.includes('?'));
   const urls = [...new Set([...paths.map(p => BASE + p), ...discovered])];
   if (urls.length > 100) throw new Error('Sitemap exceeds bounded audit size; extend the audit explicitly');
-  for (const url of [...urls, ...['/robots.txt', '/sitemap.xml', '/llms.txt'].map(p => BASE + p)]) {
+  for (const url of [...urls, ...['/robots.txt', '/sitemap.xml', '/llms.txt', '/llms-full.txt', '/__axiovex_missing_seo_probe__/'].map(p => BASE + p)]) {
     try {
       const response = await request(url), body = await response.text(), pathname = new URL(url).pathname;
       const entry = urls.includes(url) ? inspect(body, url) : { url, checks: {} };
       entry.status = response.status;
-      entry.checks.http = response.status === 200;
-      entry.checks.edgeIndexingPolicy = !/noindex/i.test(response.headers.get('x-robots-tag') || '') || pathname === '/research/';
+      entry.checks.http = response.status === (pathname === '/__axiovex_missing_seo_probe__/' ? 404 : 200);
+      if (pathname === '/__axiovex_missing_seo_probe__/') entry.checks.missingPageNoindex = /name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(body);
+      if (pathname === '/llms.txt' || pathname === '/llms-full.txt') entry.checks.machineText = /text\/plain/i.test(response.headers.get('content-type') || '') && !/<(?:!doctype|html)\b/i.test(body);
+      entry.checks.edgeIndexingPolicy = !/noindex/i.test(response.headers.get('x-robots-tag') || '') || ['/research/', '/__axiovex_missing_seo_probe__/'].includes(pathname);
       if (pathname === '/robots.txt') entry.checks.productionCrawl = !/Disallow:\s*\/\s*(?:\r?\n|$)/i.test(body);
       if (pathname === '/sitemap.xml') entry.checks.sitemap = sitemapResponse.status === 200 && discovered.length > 0;
-      if (pathname === '/sitemap.xml' || pathname === '/llms.txt') entry.checks.researchUnlisted = !body.includes(BASE + '/research/');
+      if (pathname === '/sitemap.xml' || pathname === '/llms.txt' || pathname === '/llms-full.txt') entry.checks.researchUnlisted = !body.includes(BASE + '/research/');
       if (pathname === '/llms.txt') entry.checks.content = body.includes('Axiovex');
       save(`probe-${results.length}.json`, { ...entry, headers: Object.fromEntries(response.headers), body });
       if (urls.includes(url)) documents.set(url, body);
@@ -69,6 +73,7 @@ async function main() {
     catch (error) { results.push({ url, error: error.message, checks: { linkedResource: false } }); }
   }
   const failed = results.flatMap(r => Object.entries(r.checks).filter(([, ok]) => !ok).map(([name]) => `${r.url}: ${name}${r.error ? ' — ' + r.error : ''}`));
+  let aeoAvailable = false;
   let external = 'AEO checker unavailable: pinned aeo.js CLI not configured. No old score reused as current.';
   if (process.env.OPS_AEO_CLI) {
     const child = spawnSync(process.execPath, [process.env.OPS_AEO_CLI, 'check', BASE, '--json'], { encoding: 'utf8', timeout: 180000, maxBuffer: 10 * 1024 * 1024 });
@@ -77,11 +82,18 @@ async function main() {
       const data = JSON.parse(child.stdout);
       if (child.status !== 0 || !Number.isFinite(data.audit?.score)) throw new Error('Invalid external report');
       save('aeo-external.json', data);
+      aeoAvailable = true;
       external = `AEO readiness: ${data.audit.score}/100 from aeo.js 0.0.16, scanned ${data.scannedAt}, ${data.pages.length} pages. Change versus recorded baseline 100: ${data.audit.score - 100} points. Average citability: ${data.citability.averageScore}/100 (a separate metric).\n\n${data.audit.issues?.length ? data.audit.issues.map(i => '- ' + (typeof i === 'string' ? i : JSON.stringify(i))).join('\n') : 'No scored AEO readiness issues.'}\n\nRobots directives allow ${data.botAccess.filter(b => b.allowed).length}/${data.botAccess.length} tested bot names; this is a rules analysis, not proof that each service has crawled or cited the site. Heuristic scores do not measure actual search rankings or AI citations.`;
     } catch { external = 'AEO checker failed or timed out; no score substituted. Inspect aeo-checker.log.'; }
   }
-  save('health.json', { checkedAt: new Date().toISOString(), results, failed, pagesChecked: urls.length, partial: true });
-  summary(`## SEO / AEO audit\n\n${urls.length} live pages plus crawler files and linked local resources checked; ${failed.length} failed checks. Canonicals are matched to each exact URL; JSON-LD is parsed, not just detected. Titles, descriptions, H1, language, viewport, image alt attributes, indexability, sitemap and internal anchors/resources are checked. Cloudflare email-protection action URLs are excluded from static resource checks because the fragment and decoding script provide the actual email destination. Intentional research noindex and exclusion are preserved.\n\n${failed.length ? failed.map(f => '- ' + f).join('\n') : 'All implemented technical checks passed.'}\n\n### AEO readiness\n\n${external}\n\n### Seobility\n\nFresh Seobility score unavailable: no authenticated checker integration is configured. Its public checker reported no free checks remaining during the October 19 audit. Recorded baseline 90 is historical, not a current reading. This technical audit is not a substitute Seobility score.\n\n### Follow-up\n\n${failed.length ? 'Safe technical correction: investigate the explicit failed URLs/checks above and verify after deployment.' : 'No technical corrections indicated by these checks. Review content suggestions separately; do not add unsupported claims or change branding to improve a score.'}\n`);
+  const auditOutput = resolve(process.env.OPS_OUTPUT || 'ops-output', 'independent');
+  const seo = spawnSync(process.execPath, ['scripts/ops/seo-audit.mjs'], { stdio: 'inherit', timeout: 8 * 60000, env: { ...process.env, OPS_OUTPUT: auditOutput } });
+  const independent = existsSync(`${auditOutput}/independent-seo.json`) ? JSON.parse(readFileSync(`${auditOutput}/independent-seo.json`, 'utf8')) : { failed: false, partial: true };
+  const independentReport = existsSync(`${auditOutput}/report.md`) ? readFileSync(`${auditOutput}/report.md`, 'utf8') : 'Independent SEO checkers failed to produce a report.';
+  if (independent.failed || seo.status === 1) failed.push('Independent SEO engines found verified failures; see findings below.');
+  const partial = !aeoAvailable || independent.partial || seo.status === null || ![0, 1].includes(seo.status);
+  save('health.json', { checkedAt: new Date().toISOString(), results, failed, pagesChecked: urls.length, partial, independent });
+  summary(`## SEO / AEO audit\n\n${urls.length} live pages plus crawler files, missing-page response and linked local resources checked; ${failed.length} failed checks. Exact canonicals, parsed JSON-LD, titles, descriptions, H1, language, viewport, image alt, indexability, sitemap, anchors and local resources are checked. Machine-readable endpoints must return actual plain text; nonexistent URLs must return HTTP404 and noindex. Intentional research noindex/exclusion and Cloudflare email-action URLs are handled separately.\n\n${failed.length ? failed.map(f => '- ' + f).join('\n') : 'All implemented technical checks passed.'}\n\n${independentReport}\n\n### AEO readiness\n\n${external}\n\n### Scope and findings review\n\nSeobility is optional historical context (baseline 90), not a required dependency. Current results above come from the named independent engines; no vendor scores are mixed or substituted. These checks do not measure rankings, backlinks or actual AI citations. AEO suggestions must be verified against source markup: the homepage already has Organization.sameAs profile links; a contact page does not need invented statistics; archive cards link to their source articles. Generic prose/list suggestions are not technical defects.\n`);
   if (failed.length) process.exitCode = 1;
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

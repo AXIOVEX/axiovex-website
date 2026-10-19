@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
       - id: plan
         env:
           SCHEDULE_CRON: ${{ github.event.schedule }}
@@ -47,7 +47,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
       - name: Check durable monthly send reservation
         id: prior
         run: |
@@ -77,11 +77,12 @@ jobs:
         id: economic
         if: steps.prior.outputs.exists != 'true'
         run: node scripts/ops/month-end.mjs check
-      - name: Install pinned AEO checker for report audits
+      - name: Install locked independent SEO and AEO audit tools
         if: steps.economic.outputs.ready == 'true'
         run: |
-          npm install --prefix "$RUNNER_TEMP/axiovex-aeo" --no-audit --no-fund aeo.js@0.0.16
-          echo "OPS_AEO_CLI=$RUNNER_TEMP/axiovex-aeo/node_modules/aeo.js/dist/cli.mjs" >> "$GITHUB_ENV"
+          npm ci --prefix scripts/ops/audit-tools --ignore-scripts --no-audit --no-fund
+          echo "OPS_AEO_CLI=$GITHUB_WORKSPACE/scripts/ops/audit-tools/node_modules/aeo.js/dist/cli.mjs" >> "$GITHUB_ENV"
+          echo "OPS_SEO_MODULE_ROOT=$GITHUB_WORKSPACE/scripts/ops/audit-tools/node_modules" >> "$GITHUB_ENV"
       - name: Build monthly report including website health
         if: steps.economic.outputs.ready == 'true'
         run: node scripts/ops/run-report.mjs monthly
@@ -93,6 +94,9 @@ jobs:
       - name: Publish newsletter source and verify its web edition
         if: steps.economic.outputs.ready == 'true'
         run: node scripts/ops/month-end.mjs publish
+      - name: Send the exact final edition to Tristen first
+        if: steps.economic.outputs.ready == 'true'
+        run: node scripts/ops/month-end.mjs preview
       - name: Prepare durable reservation before customer sending
         if: steps.economic.outputs.ready == 'true'
         run: |

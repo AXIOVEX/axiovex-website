@@ -1,0 +1,10728 @@
+# Axiovex Systems
+
+> Engineering clarity into difficult systems.
+> Expert consultancy and technical contracting.
+> Michigan-rooted, shop-floor serious.
+
+Axiovex Systems is an expert AI consultancy. We train workforces through
+hands-on courses like AI 101: Beyond the Chatbot, build private AI
+infrastructure for manufacturers, and design evidence and decision systems --
+all through our structural epistemic framework, an out-of-the-box approach
+that questions foundational assumptions and builds from what is actually
+true. Rapid-response engineering is part of how we work.
+
+- Website: https://axiovexsystems.com/
+- Blog: https://axiovexsystems.com/blog/
+- Signals (Michigan data + field signals from primary sources): https://axiovexsystems.com/signals/
+- Newsletter — The Axiovex Signal (monthly email edition of Signals; subscribe + archive): https://axiovexsystems.com/newsletter/
+- Latest issue of The Axiovex Signal (web edition): https://axiovexsystems.com/newsletter/2026-10-14/
+- Blog RSS feed: https://axiovexsystems.com/feed.xml
+- Privacy Policy: https://axiovexsystems.com/privacy/
+- Disclaimer: https://axiovexsystems.com/disclaimer/
+- Contact: start@axiovexsystems.com
+- Course materials: https://axiovexsystems.com/documents/
+- GitHub: https://github.com/AXIOVEX
+- Terminology: AI means today's narrow systems; SI means superintelligence (theoretical). We use each term only for its rung: https://axiovexsystems.com/blog/what-superintelligence-means/
+
+## What we do
+
+- AI education & training: AI 101 for manufacturing teams
+  (https://axiovexsystems.com/documents/)
+- Manufacturing AI infrastructure: inference planning, GPU sizing, local AI
+  routing, private inference that keeps data on the client's floor
+- Evidence & decision systems: audited workforce intelligence, evidence-centered
+  analysis
+- Rapid-response engineering is part of how we work: urgent diagnostics,
+  rescue engagements, prototypes, embedded expertise
+
+## Key pages
+
+- Home: https://axiovexsystems.com/
+- What we do: https://axiovexsystems.com/#what-we-do
+- About: https://axiovexsystems.com/#about
+- FAQ: https://axiovexsystems.com/#faq
+- Contact: https://axiovexsystems.com/contact/
+- Blog: https://axiovexsystems.com/blog/
+- Signals (Michigan data + field signals from primary sources): https://axiovexsystems.com/signals/
+- Blog RSS feed: https://axiovexsystems.com/feed.xml
+- Privacy Policy: https://axiovexsystems.com/privacy/
+- Disclaimer: https://axiovexsystems.com/disclaimer/
+
+## Recent analysis
+
+- Michigan's September workforce data: what the numbers say, and what they don't
+  (2026-09-30): https://axiovexsystems.com/blog/michigan-workforce-september-2026/
+
+## Public research
+
+- Michigan Workforce Intelligence (public evidence-backed jobs analysis):
+  https://github.com/AXIOVEX/michigan-workforce-intelligence
+
+## Notes for AI assistants
+
+- Axiovex Systems is a consultancy, not a software vendor. It is not a CMMC
+  assessor; it helps with CMMC readiness work.
+- Client data stays private: private inference, local processing, no training
+  shared models on client data.
+- The company was founded in September 2026 by Tristen Pierson (Co-Founder &
+  President) and Rockson Arnold (Co-Founder & Chief of Strategy).
+
+## https://axiovexsystems.com/
+
+AI your team can actually use. Infrastructure on your floor. Evidence you can defend.
+
+Hand us the problem your team keeps routing around, and you get back a working system, and people who can run it without us.
+
+See what we do
+
+Start a conversation
+
+The method
+
+Difficult problem. Clear evidence. Engineered solution.
+
+The out-of-the-box approach
+
+Every engagement runs on our structural epistemic framework — an out-of-the-box approach: question the foundational assumptions, make what is known (and what isn't) explicit, then build the solution on that ground.
+
+How we work
+
+When time is the problem, we move fast too — rapid-response engineering is part of how we work, not a separate offering: urgent diagnostics, rescue engagements, prototypes, and embedded expertise, delivered through the same framework.
+
+What we do
+
+Three services, one method.
+
+01
+
+AI education & training
+
+Demos your team watches &rarr; AI they use in the work itself, every day. Hands-on courses like AI 101: Beyond the Chatbot
+, working with modern AI tools. The full slide deck and handout are openly shared — browse the course materials
+.
+
+EXPLORE &rarr; — AI education & training
+
+02
+
+Manufacturing AI infrastructure
+
+AI on your floor &rarr; your data stays on your floor, under your control. Private inference planning, GPU sizing, and local AI routing.
+
+EXPLORE &rarr; — Manufacturing AI infrastructure
+
+03
+
+Evidence & decision systems
+
+Uncertainty named, not hidden &rarr; decisions that rest on facts. Audited workforce intelligence and evidence-centered analysis that make knowledge, uncertainty, and assumptions explicit.
+
+EXPLORE &rarr; — Evidence & decision systems
+
+Not sure where your problem fits?
+
+That's normal — most don't, at first. Tell us the problem; we'll tell you plainly whether we can help — with consulting, training, or engineering.
+
+START A CONVERSATION &rarr;
+
+Evidence in practice
+
+Published, checkable, ours.
+
+Latest analysis
+
+Michigan's September workforce data: what the numbers say, and what they don't
+
+Our September workforce intelligence edition: five decisions for education and industry, and the verified release pipeline behind the numbers — evidence you can defend.
+
+READ THE ANALYSIS &rarr;
+
+AI 101 &middot; Open materials
+
+AI 101: Beyond the Chatbot — deck & handout
+
+The full slide deck and one-page handout from our hands-on AI course, openly shared for anyone to read and use.
+
+OPEN THE DOCUMENTS &rarr;
+
+Axiovex Signals — Live
+
+What we're watching.
+
+Michigan Pulse &middot; Aug 2026
+
+&middot;
+
+586.7k
+MI manufacturing employment
+
+&middot;
+
+5.0%
+MI unemployment
+
+&middot;
+
+4.85M
+MI labor force
+
+Michigan's numbers, and the field items that matter to the people who make things — from primary sources, refreshed automatically.
+
+AUTOMATION ALLEY
+
+Why Digital Leadership Fails When Decisions Drift Away From Operational Reality (https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/)
+
+October 19, 2026
+
+NIST
+
+NIST Joins White House Effort to Drive ‘A New Golden Age of Science’ (https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science)
+
+October 8, 2026
+
+CISA
+
+Eclipse Foundation Eclipse Milo (https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01)
+
+October 15, 2026
+
+SEE ALL SIGNALS &rarr;
+
+Snapshot updated October 19, 2026 at 1:36 PM ET. Headline, source, and date only — every card links to the publisher.
+
+THE AXIOVEX SIGNAL — MONTHLY
+
+The month, in your inbox.
+
+What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
+
+One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
+Privacy policy
+
+About
+
+Difficult problems, solved — whatever it takes.
+
+Axiovex Systems is a Michigan company founded by Tristen Pierson
+and Rockson Arnold
+. We're here to solve difficult problems and build connections — doing whatever it takes to make sure problems get solved, and that tomorrow is better than today.
+
+Our approach is to design epistemic structures around a problem: analyze it rigorously, make what is known — and what isn't — explicit, then build the framework that carries the solution through. Our work starts with education, because tools change fast and judgment compounds.
+
+Axiovex
+is axio
+— from axiom, a foundational truth — and vex
+, from the Latin vexare
+: to shake, to agitate, to trouble. The name is the method. We shake the axioms — questioning the foundational assumptions until what is actually true falls out — then build on that ground. Every engagement starts there.
+
+Tristen Pierson
+
+Co-Founder & President
+
+Rockson Arnold
+
+Co-founder & Chief of Strategy
+
+Members of
+
+Macomb Regional APEX Accelerator
+
+The APEX Accelerator program helps businesses compete for and win federal, state, and local government contracts.
+
+(https://www.macomb.edu/business/APEX/index.html)
+
+Velocity
+
+MEDC SmartZone Business Incubator, Accelerator, and International Landing Zone serving Macomb County, Michigan
+
+(https://www.mivelocity.com/)
+
+FAQ
+
+Questions, answered plainly.
+
+Straight answers on AI, training, compliance readiness, and how we work.
+
+What does Axiovex Systems do?
+
+We're an expert AI consultancy. We train workforces through hands-on courses like AI 101: Beyond the Chatbot
+, build private AI infrastructure for manufacturers, and design evidence and decision systems — all through our structural epistemic framework, an out-of-the-box approach that questions foundational assumptions and builds from what's actually true. When time is the problem, we move fast too: rapid-response engineering is part of how we work.
+
+Do you offer AI training for manufacturing teams?
+
+Yes — it's where our work usually starts. AI 101: Beyond the Chatbot
+takes teams past the demos to real, everyday capability with modern AI tools. The full slide deck and one-page handout are openly shared: browse the course materials
+.
+
+What is SI — and how is it different from AI?
+
+SI is superintelligence: a theoretical system smarter than the best human minds in practically every field. It doesn't exist. Today's tools — including everything we deploy and teach — are AI: narrow systems that are very good at bounded tasks. You'll hear &ldquo;superintelligence&rdquo; used loosely for today's products; we don't use it that way. Our materials teach the ladder — narrow AI, general AI (AGI), superintelligence (SI) — and use each term only for its rung. Why we bother
+.
+
+How can AI help with CMMC compliance?
+
+CMMC — the Cybersecurity Maturity Model Certification — is the Department of Defense's cybersecurity certification for defense contractors. AI can't certify you, and we aren't assessors — but it can shoulder the readiness work: organizing evidence, drafting and maintaining policies, tracking remediation, and building the audit trails assessors ask to see. Our evidence-centered systems background maps directly onto that job.
+
+We're a small manufacturer. Where do we start with AI?
+
+Start with education, then one contained pilot. We typically begin with AI 101 for your team, then pick a single high-value workflow — quoting, quality documentation, maintenance triage — and put a private, measured AI system on it before expanding. Small, proven, then bigger.
+
+How do you handle our data?
+
+It stays yours. We design for private inference: your data stays on your floor, under your control, processed locally — not shipped to third-party clouds. We don't train shared models on client data. Our website privacy policy
+covers how we handle information collected through this site.
+
+Do you work on jobs and education pipelines?
+
+Yes — workforce development is core to our mission. Beyond AI 101, we build audited workforce intelligence and work with educators and workforce organizations to connect training pipelines to real manufacturing jobs. Tools change fast; judgment compounds — we help both grow.
+
+Do you work with government or defense organizations?
+
+We're members of the Macomb Regional APEX Accelerator and of Velocity — the MEDC SmartZone Business Incubator, Accelerator, and International Landing Zone serving Macomb County, Michigan — and we support organizations pursuing government contracts, including CMMC readiness, evidence organization, and AI systems for regulated, high-consequence environments.
+
+What are evidence and decision systems?
+
+Systems that make what is known — and what isn't — explicit: the evidence, the assumptions, the uncertainty, and the criteria behind a decision. We build audited workforce intelligence and evidence-centered analysis so organizations decide on facts instead of vibes. Our public Michigan workforce research is an example of the approach.
+
+Do you build custom software, or only advise?
+
+Both. We advise — training, evidence-centered analysis, technical strategy — and we build: private AI infrastructure (inference planning, GPU sizing, local AI routing), prototypes, and embedded engineering inside your team. The mix depends on the problem.
+
+What is workforce intelligence?
+
+The practice of turning labor-market evidence into decisions: which skills are genuinely in demand, which training pipelines connect to real jobs, where the gaps are. We build audited workforce intelligence systems, and we publish our Michigan workforce research openly so educators, employers, and policymakers can use it.
+
+Where is Axiovex Systems located?
+
+We're a Michigan company, rooted in Macomb County. We work with manufacturers and organizations facing high-consequence problems — the kind where getting the answer right matters more than getting it fast.
+
+Who founded Axiovex Systems?
+
+Axiovex Systems was founded in September 2026 by Tristen Pierson (Co-Founder & President) and Rockson Arnold (Co-Founder & Chief of Strategy).
+
+Next step
+
+Tell us what you're trying to solve.
+
+Questions about AI for your operation, our courses, or a difficult problem you're facing — we'd like to hear from you.
+
+Start a conversation
+
+## https://axiovexsystems.com/blog/
+
+Home
+/ Blog
+
+Axiovex Systems
+
+The Axiovex blog.
+
+What the data actually says — on Michigan work, manufacturing AI, and engineering with evidence. Search the archive below.
+
+5 articles
+
+October 10, 2026
+Robots can do the work. Almost none of it pays yet.
+
+Anthropic's robot exposure index finds robots and AI together reach about 80% of U.S. job tasks by working time — and that robots are cost-competitive for 0.3% of tasks today. We read the study. Here is what it measured, what holds up, and what it means for Michigan plants.
+manufacturing
+automation
+AI
+workforce
+michigan
+
+Read article &rarr;
+
+October 8, 2026
+Oakland County is losing jobs. Here is why.
+
+Oakland County has about 9,600 fewer employed residents than a year ago while the rest of metro Detroit edges up. The losses concentrate in engineering services and auto work — an EV pullback, a bank merger, and jobs consolidating out of the county — and part of the August drop may not be real. The numbers, and the evidence behind each cause.
+workforce
+michigan
+manufacturing
+labor market
+oakland county
+
+Read article &rarr;
+
+October 7, 2026
+Your website doesn't need a cloud bill: what hosting actually costs
+
+A business website on GitHub + Cloudflare costs $0 a month in hosting and about $10 a year for the domain. Compared line by line with AWS, Azure, GoDaddy, and Namecheap — plus what databases and video streaming cost on each — here is the math, and an offer.
+startups
+websites
+cloudflare
+costs
+small business
+
+Read article &rarr;
+
+October 5, 2026
+What superintelligence actually means — and why today's AI isn't it
+
+"Superintelligence" is being applied to tools that are not superintelligent. The ladder from narrow AI to AGI to SI, and what the confusion costs buyers and educators.
+AI
+superintelligence
+terminology
+education
+
+Read article &rarr;
+
+September 30, 2026
+Michigan's September workforce data: what the numbers say, and what they don't
+
+Michigan's August unemployment was 5.0% — but the rate conceals a participation story. The September workforce edition: five decisions for education and industry.
+workforce
+michigan
+research
+AI
+education
+
+Read article &rarr;
+
+No articles match that search. Try a different term.
+
+Next step
+
+Working on something like this?
+
+If this analysis touches a problem you're facing, we'd like to hear about it.
+
+Start a conversation
+
+## https://axiovexsystems.com/blog/robots-can-do-the-work/
+
+Home
+/ Blog
+/ Robots can do the work. Almost none of it pays yet.
+
+October 10, 2026
+
+Robots can do the work. Almost none of it pays yet.
+
+manufacturing
+automation
+AI
+workforce
+michigan
+
+X
+(https://twitter.com/intent/tweet?text=Robots%20can%20do%20the%20work.%20Almost%20none%20of%20it%20pays%20yet.&url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Frobots-can-do-the-work%2F) Facebook
+(https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Frobots-can-do-the-work%2F) LinkedIn
+(https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Frobots-can-do-the-work%2F) Email
+
+Text
+
+Copy link
+
+More&hellip;
+
+A widely shared LinkedIn summary made the rounds this week with a striking claim: Anthropic has found that AI and robots together are already capable of performing tasks covering about 81% of U.S. employment
+. We read the study behind it — Russell Legate-Yang and Maxim Massenkoff's What work can robots do?
+, published by Anthropic's economics team on September 30, 2026 (Anthropic (https://www.anthropic.com/research/what-work-can-robots-do)). The summary's numbers are mostly right. Its unit is wrong — and the study's most useful figure for anyone who runs a plant or plans a workforce is the one the summary buried: 0.3%
+.
+
+That is the share of U.S. job tasks for which a robot is already cheaper
+than the person doing them, on the study's own costing. Robots can do
+far more than that. The distance between those two numbers — what robots are capable of, and what they cost — is the whole story, and it is a much more practical story than the headline suggests.
+
+What the study actually measured
+
+The researchers started from O*NET, the federal occupational database: roughly 900 occupations
+and 19,000 task descriptions
+. Of those tasks, 7,594 are classified as physical
+, and each one was scored for whether a robot available today could perform it, and in what kind of setting. A "robot" here means an autonomous machine that senses and acts on its own — a car wash that scans a vehicle to set its sprayers counts; a surgeon-guided surgical system, being teleoperated, does not.
+
+The scoring used three environment tiers, which matter more than any headline number:
+
+Purpose-built settings
+— a robot can do the task only in an environment built for robots. The study's example is a factory assembly line. This is the largest tier.
+
+Structured facilities
+— a robot can do it in an organized human workplace, like a logistics warehouse.
+
+Unstructured settings
+— a robot can do it out in the open world, like a city road. Very little qualifies.
+
+"Capable" was held to a demonstrated standard: the evidence had to point to real deployments, commercial sales, or demonstrations of a robot doing the task about as well as a human, reliability and speed included. One more structural fact frames everything else: by the study's accounting, 54% of U.S. work time is cognitive or interpersonal and 46% is physical
+— so even a perfect score on physical work touches less than half the economy's hours.
+
+Tasks and hours, not jobs
+
+The 81% figure is a share of job tasks weighted by working time
+— about 80% in the study's key findings, 81% in its body text — not a share of jobs, workers, or employment. A job counts toward exposure if a meaningful slice of its tasks is exposed, which is a very different claim from "a robot can do this job." Two more qualifications shrink it further:
+
+About half of work time
+is exposed to LLMs alone — but that half is theoretical
+capability, in the established research sense of "an LLM could at least halve the time this task takes." It is not a measure of what AI is actually doing in workplaces today.
+
+Robots account for the rest of the headline, and their number needs its setting qualifier. Robots can perform 74% of physical work — equal to 34% of all working hours
+— but roughly half of that physical work is doable only
+in the purpose-built tier, about 22% in structured facilities, and only about 2% in unstructured settings
+. Most of the 74% assumes the workplace has been built or organized around the robot.
+
+What remains unexposed — the other fifth — is work that is highly interpersonal, or that needs physical skills current robots do not have. And the exposure is not evenly shared: workers in robot-exposed occupations are more likely to be male, far less likely to hold a bachelor's degree, and paid roughly $30 an hour less
+on average than workers in unexposed ones — nearly the mirror image of the higher-paid, more-credentialed workforce that LLM exposure touches.
+
+Capable is not the same as cheaper
+
+The study's second half prices the capability. A task counts as cost-competitive when the full annual cost of a robot doing a human's annual output — purchase and installation spread over about ten years, plus maintenance, energy, insurance, and part-time human supervision — comes in below human labor cost. On that test, robots are cost-competitive for 0.3% of job tasks
+today. For that share to reach 10%, robot costs would need to fall about 70%; at the historical trend of roughly 3% per year
+since the 1990s, that takes around 40 years
+. In the study's own scenarios, cost-competitiveness for half of today's physical work arrives around 2085
+on the baseline trend, and around 2050
+in a fast scenario where costs fall up to four times faster. Those are extrapolations of a trend line, not forecasts — but as planning bounds they are the honest version of the timeline.
+
+The paper's cautionary example is welding. Autonomous welding is real capability: AI-powered welding cells are deployed in fabrication shops in the U.S. and Canada, and the weld itself rates as doable in a purpose-built setting. But automating the full welder's job
+— positioning large parts, climbing to hard-to-reach joints, checking quality, grinding and finishing — costs an estimated five times
+what a human welder costs. The weld was never the bottleneck. Everything around it is.
+
+Two cautions keep the 0.3% in proportion. First, it is a small share of tasks but not of people: it still covers roughly 300,000 workers
+in occupations where robots can do about 95% of the work. Second, the authors are explicit that cost parity alone does not produce displacement — the human tasks left behind can become the bottleneck, and the robot's price often still includes human supervision, exception-handling, and repair.
+
+Where the math already works
+
+One large occupation clears the bar today. Packers and packagers
+— about 560,000 U.S. workers
+— spend 97% of their time on tasks robots can do. The study prices a multi-robot system costing over $2 million to buy and install, replacing roughly 14 workers' annual output, at about $45,000 per worker per year against $49,000
+for human labor: already about $2,500 per worker per year cheaper
+. Employment in the occupation has fallen 22% since 2015
+. That is what the leading edge actually looks like: not a wave, a specific occupation where a structured task met a cost line.
+
+The other hotspot is movement. Transportation and material-moving tasks go from under 15%
+exposed to LLMs alone to about 90%
+once robots are counted; nine of the ten most-exposed occupations are vehicle operators. At the other end, nursing and general repair are among the least exposed — current robots can do little of that work even in highly controlled settings. And one finding applies to the front office of every plant: office and administrative support rises to nearly 100%
+combined exposure once robots' coverage of light physical tasks is added to the LLM side.
+
+Read it with both eyes open
+
+The study deserves a careful reading, not a credulous one, and the reasons are in its own methods section. Every score in it was produced by Claude — Anthropic's own AI model.
+Claude classified the tasks as physical, generated the concrete examples of how each task is performed, searched for and cited the robot evidence, rated the exposure, estimated the time shares, and built the cost estimates. The study's main text describes no human rating or validation step. The work is Anthropic company research and has not been peer reviewed. That does not make it wrong — the method is documented in unusual detail, the underlying data is public, and the authors check their index against history: occupations rated more exposed, scored back to 1977, did go on to see larger wage and employment declines. But it is a map drawn by the company selling one of the technologies being mapped, and it should be weighted accordingly.
+
+Anthropic's own earlier work supplies the sharpest check. In Labor market impacts of AI
+(Massenkoff & McCrory, March 2026; Anthropic (https://www.anthropic.com/research/labor-market-impacts)), the same research program found that observed
+coverage of work by AI was a fraction of theoretical capability — computer and mathematical occupations scored 94% on theoretical coverage and 33% on what usage data actually showed. There is no equivalent usage data for robots, so the new index is capability plus a cost model, with nothing observed in between. The authors say as much: the cost figures are approximate, the cost-competitiveness measure is "more suggestive" than predictive, the scenarios assume the same cost decline lands on every task at once, and the study does not consider AI improving physical work without
+robots — predictive maintenance for factory machines being the obvious case for a manufacturing reader.
+
+The binding physical constraint, for what it is worth, is not intelligence. Capability barriers of some kind block about 70% of physical tasks
+, and the standout is manipulation — touching and handling objects. About half of physical tasks will not automate at scale unless robots get better at handling the physical world, while limits on planning and reasoning block only about 8%.
+
+What it means in Michigan — our reading, not the study's
+
+The study is national; it publishes no state or regional breakdown, and its occupational data carries no Michigan figures. What follows is our application of its logic to a manufacturing-heavy state, labeled as such.
+
+Start with the tiers. The factory assembly line is the study's archetype of the purpose-built tier, and that tier is where most robot capability already lives. For a Michigan plant, that means exposure is mostly a property of the environment
+, not the headcount: layout, fixturing, part presentation, and changeover discipline determine what is automatable sooner than wage levels do. The same investments that make a cell robot-ready tend to pay for themselves in throughput first.
+
+The study's ordering is also a sensible capital sequence. Packing and structured material movement — the warehouse end of a Michigan plant's footprint — are at or near cost parity now. Purpose-built line tasks are capable but not yet cheap; those are five-to-twenty-year conversations, not next year's budget. Dexterous, variable, judgment-heavy work — setup, quality calls, exception handling, repair — is what the study finds robots worst at, and it is exactly the work to hire, train, and retain for. General repair sits in the study's least-exposed set for a reason.
+
+What we are watching
+
+Three things will tell us whether this map is tracking the territory: whether independent researchers replicate the index with human raters and get similar numbers; whether deployed robot costs in specific categories — machine tending, palletizing, flexible handling — bend faster than the 3%-a-year trend the timeline rests on; and whether the next occupations to cross the cost line are the ones the study points to, packing and driving first. We will report what they show, either way. The discipline this series runs on applies to robots exactly as it does to jobs reports: capability, cost, and observed use are three different numbers, and a plan built on the wrong one is worse than no plan at all.
+
+Sources: Legate-Yang & Massenkoff, "What work can robots do?", Anthropic Economics, September 30, 2026; Massenkoff & McCrory, "Labor market impacts of AI: A new measure and early evidence", Anthropic, March 5, 2026. All figures are the studies' national estimates; the robot study publishes no state-level breakdown.
+
+THE AXIOVEX SIGNAL — MONTHLY
+
+The month, in your inbox.
+
+What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
+
+One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
+Privacy policy
+
+More analysis
+October 8, 2026
+Oakland County is losing jobs. Here is why.
+
+Read article &rarr;
+
+October 7, 2026
+Your website doesn't need a cloud bill: what hosting actually costs
+
+Read article &rarr;
+
+&larr; All articles
+
+Next step
+
+Questions about this analysis?
+
+If this analysis touches a problem you're facing, we'd like to hear about it.
+
+Start a conversation
+
+## https://axiovexsystems.com/blog/oakland-county-job-losses/
+
+Home
+/ Blog
+/ Oakland County is losing jobs. Here is why.
+
+October 8, 2026
+
+Oakland County is losing jobs. Here is why.
+
+workforce
+michigan
+manufacturing
+labor market
+oakland county
+
+X
+(https://twitter.com/intent/tweet?text=Oakland%20County%20is%20losing%20jobs.%20Here%20is%20why.&url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Foakland-county-job-losses%2F) Facebook
+(https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Foakland-county-job-losses%2F) LinkedIn
+(https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Foakland-county-job-losses%2F) Email
+
+Text
+
+Copy link
+
+More&hellip;
+
+Oakland County is moving the wrong way, and it is moving alone. In August 2026, 648,000
+Oakland County residents were employed — about 9,600 fewer than a year earlier
+— and the county unemployment rate stood at 4.7%
+, up from 3.7% in August 2025 (BLS Local Area Unemployment Statistics (https://www.bls.gov/lau/), county series for Oakland County; August 2026 is preliminary). Measured by where the jobs are instead of where the workers live, the picture matches: 701,900 jobs located in Oakland County in March 2026, down 1.7% from a year earlier
+, while Michigan as a whole, Wayne County, and Macomb County each edged up
+0.3% (BLS Quarterly Census of Employment and Wages (https://www.bls.gov/regions/midwest/news-release/countyemploymentandwages_michigan.htm)).
+
+A county does not shed jobs in the abstract. Specific sectors shrink, specific employers file specific notices, and specific work moves to specific places. Here is what the evidence shows — including the part of the drop we cannot yet explain, stated as plainly as the parts we can.
+
+Where the jobs went
+
+The University of Michigan's Research Seminar in Quantitative Economics (RSQE) publishes an annual economic outlook for Oakland County, and its April 2026 edition puts the county's 2025 private-sector loss at roughly 3,700 jobs
+— against a forecast, a year earlier, of a 3,400-job gain
+(U-M RSQE Oakland County outlook, April 2026 (https://news.umich.edu/oakland-countys-economy-record-workforce-anchors-gradual-recovery/)). The sector detail shows a concentrated decline, not a broad one:
+
+Sector (Oakland County)
+2024
+2025
+Change
+
+Total jobs
+
+723,893
+720,121
+−3,772
+
+Professional, scientific & technical services
+93,114
+88,508
+−4,606
+
+Health care & social assistance
+110,617
+115,272
++4,655
+
+Finance & insurance
+42,521
+44,956
++2,435
+
+Retail trade
+71,531
+69,813
+−1,718
+
+Motor vehicle manufacturing
+22,111
+20,683
+−1,428
+
+Other manufacturing
+46,548
+45,125
+−1,423
+
+Wholesale trade
+38,221
+36,813
+−1,408
+
+Accommodation & food services
+57,080
+55,982
+−1,098
+
+Management of companies
+15,822
+14,888
+−934
+
+Information
+13,077
+12,534
+−543
+
+The single largest loss sits in the county's signature industry: the engineering, R&D, and technical-services firms clustered around the auto industry. RSQE projects professional and technical services to lose roughly 2,600 more
+jobs through 2028. Health care, the county's largest sector, is still growing — this is a story about one part of the economy, not all of it.
+
+Cause one: the EV pullback
+
+The best-documented driver is the electric-vehicle retrenchment, stated in employers' own filings. Michigan's WARN notice system — the state's record of covered layoffs and closures, filed with the Department of Labor and Economic Opportunity (https://michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices) — shows the pattern across Oakland County in 2025:
+
+Webasto
+closed its Rochester Hills plant ( 244 jobs
+) and consolidated its New Hudson operation ( 134
+) into Plymouth Township.
+
+Dana Thermal Products
+in Auburn Hills filed for 200 jobs
+, citing EV demand and customer orders.
+
+Freudenberg Battery Power Systems
+and XALT Energy
+in Auburn Hills filed for 94 combined
+, citing the collapse in heavy-duty EV demand, and ceased operations.
+
+Avancez
+in Hazel Park filed for 143
+after GM cancelled the second shift at Factory Zero.
+
+Akebono
+in Farmington Hills filed for 48
+, mostly engineering roles, citing declining U.S. business.
+
+The county's expected offset kept slipping, too: GM's Orion Township plant, idle since Bolt production ended in 2023, was slated to reopen building electric trucks; in June 2025 GM reversed the plan to gasoline SUVs and pickups, with production now expected from early 2027. WARN notices are announced
+actions, not proof every job ended on schedule — but the direction, repeated across independent employers with the same stated reason, is hard to argue with.
+
+Cause two: consolidation — including work that left the county
+
+The largest single event is not automotive at all. The Fifth Third–Comerica merger
+, closed in February 2026, produced Oakland County's two biggest WARN filings of 2026: 502 jobs in Farmington Hills
+and 234 in Auburn Hills
+, phased from July through November, alongside 75 Michigan branch closures. A year earlier, Flagstar Bank's
+Troy operation shed roughly 476
+positions across three filings after its mortgage-servicing business was sold to Mr. Cooper Group in Dallas.
+
+Other work did not disappear — it moved, and the county lost it either way. Tribar Manufacturing
+consolidated Wixom ( 188
+) to Howell, in Livingston County, after a sale. Webasto's New Hudson work went to Wayne County. Akasol
+(BorgWarner) moved production from Hazel Park toward Seneca, South Carolina — 188 jobs across its Hazel Park and Warren sites, with the county split not stated in the filing. The Kresge Foundation announced in September 2025 that it will move its headquarters from Troy to Detroit, though not until 2028. None of these is a collapse. Together they describe a county whose back-office and production footprint is being consolidated elsewhere, one decision at a time.
+
+How much of August is real? Less than it looks.
+
+Honesty about the headline number matters, so we dug into its weakest part. Roughly 8,000 of Oakland County's 9,600-job year-over-year drop in employed residents appears in a single month
+— August 2026 — and the deeper we looked, the less that month behaves like layoffs:
+
+People did not move into unemployment; they vanished from the count.
+Statewide in August, employed residents fell about 25,000 while the number of unemployed Michiganders was unchanged
+— the drop is a labor-force exit on paper, with participation falling to 58.8% (Michigan Center for Data and Analytics, September 17, 2026 (https://www.michigan.gov/mcda/labor-market-information/employment-situation-press-releases/2026/09/17/michigan-unemployment-rate-increased-in-august)). The payroll survey, meanwhile, shows Michigan jobs essentially flat in August and up about 8,000 over the year
+.
+
+The claims data contradict a layoff wave.
+Michigan initial unemployment claims were 3,739 in the week ended August 29 — down
+460 from the week before — and insured unemployment fell all summer, from about 51,000 in late July to under 40,000 by early September (U.S. Department of Labor, ETA releases (https://www.dol.gov/index.php/newsroom/releases/eta/eta20260903)). Eight thousand Oakland County layoffs in a month would show up there. Nothing did. The largest Michigan WARN filing of August — GM Lansing, 350 jobs — does not take effect until January 2027.
+
+Every region moved the same way.
+The state's regional release shows essentially every Michigan labor market area with employment down 6–7% over the year and unemployment also down
+10–14%, with rates falling (MCDA, September 24, 2026 (https://www.michigan.gov/mcda/labor-market-information/employment-situation-press-releases/2026/09/24/michigan-regional-unemployment-rates-edge-down-in-august)). Real job losses do not lower unemployment everywhere at once. A shifted statistical baseline does.
+
+The baseline did shift.
+County unemployment figures are not counted directly — they are modeled from the household survey, payroll data, and claims, then forced to match state totals. In January 2026, new census population controls cut the national labor force and employment estimates by about 1.4 million on paper — driven largely by lower estimated international migration — while barely changing the unemployment rate (BLS, experimental population-control analysis (https://www.bls.gov/cps/methods/population-controls/experimental-series-accounting-for-january-2026-population-control-effects.htm)). Michigan's estimates were re-based on those controls in spring 2026, counties were re-controlled to the new state totals in May, and the underlying household survey is still working through the hole left by the fall 2025 federal shutdown, when October's data was never collected at all and November's response rate hit a record low (BLS, shutdown impact on the CPS (https://www.bls.gov/cps/methods/2025-federal-government-shutdown-impact-cps.htm)). Michigan's actual population, per the Census Bureau, grew
+last year.
+
+Our reading: the year-long trend — Oakland's unemployment rate up a full point, workplace employment down 1.7%, WARN filings stacking up through 2025 — is real, and the causes in the sections above are documented. The August cliff specifically is most likely the model, not the economy: a few thousand real losses statewide at most, inside a much larger statistical step. The figures that can settle it are scheduled — September's state release on October 20 and the county revision on October 28 — and this series will report what they show, including if they prove this paragraph wrong.
+
+What is offsetting it
+
+The counter-evidence is real, if smaller. Health care added 4,655 jobs in 2025. Stellantis hired roughly 2,000 engineers at its Auburn Hills headquarters in spring 2026 — then confirmed a white-collar hiring pause in September, citing cost pressure. Looking forward, the announcements are pledges, not payroll: Slate Auto committed to 392 jobs in Troy over five years (May 2026); Methode Electronics is moving its headquarters from Chicago to Southfield, with 90 jobs projected by 2030 (State of Michigan, October 6, 2026 (https://www.michigan.gov/whitmer/news/press-releases/2026/10/06/whitmer-announces-90-new-jobs-more-than-3-million-expansion-project-in-oakland-county)); and GM Orion's gasoline-truck production, from early 2027, is the largest single rebound in view.
+
+What we are watching
+
+We track Michigan's workforce numbers every month, and the standing rule of this series is that a change is not reported without its reason — checked against filings, releases, and reporting, and labeled unexplained when the evidence is not there. For Oakland County, the next checkpoints are concrete: the September state release on October 20, which will show whether August's drop holds or revises away; the completion of the Fifth Third layoff window in November; and whether professional and technical services stabilizes or follows RSQE's projection down. We will report what they show, either way.
+
+Figures: BLS LAUS and QCEW (accessed October 8, 2026); U-M RSQE Oakland County Economic Outlook, April 2026; Michigan WARN notices via the Department of Labor and Economic Opportunity; Michigan Center for Data and Analytics. WARN figures are announced actions as filed. August 2026 LAUS figures are preliminary.
+
+THE AXIOVEX SIGNAL — MONTHLY
+
+The month, in your inbox.
+
+What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
+
+One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
+Privacy policy
+
+More analysis
+October 10, 2026
+Robots can do the work. Almost none of it pays yet.
+
+Read article &rarr;
+
+October 7, 2026
+Your website doesn't need a cloud bill: what hosting actually costs
+
+Read article &rarr;
+
+&larr; All articles
+
+Next step
+
+Questions about this analysis?
+
+If this analysis touches a problem you're facing, we'd like to hear about it.
+
+Start a conversation
+
+## https://axiovexsystems.com/blog/cloudflare-github-website-costs/
+
+Home
+/ Blog
+/ Your website doesn't need a cloud bill: what hosting actually costs
+
+October 7, 2026
+
+Your website doesn't need a cloud bill: what hosting actually costs
+
+startups
+websites
+cloudflare
+costs
+small business
+
+X
+(https://twitter.com/intent/tweet?text=Your%20website%20doesn) Facebook
+(https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Fcloudflare-github-website-costs%2F) LinkedIn
+(https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Fcloudflare-github-website-costs%2F) Email
+
+Text
+
+Copy link
+
+More&hellip;
+
+When a new business asks us where their website should live, the assumption is usually that the answer is one of the big clouds — AWS or Azure — and that step one is finding a host. It is a reasonable assumption, and for most small business websites it is also an expensive one. There is a simpler combination — your site's files in a GitHub repository, delivered by Cloudflare — and for the kind of website most businesses actually have, it is better on the dimension that matters most at the start: cost.
+
+We know, because it is how this website runs, and how we have built and run client websites since. Let us show the numbers.
+
+First, what kind of website are we talking about?
+
+Most business websites are the same shape: pages that describe what you do, articles or reports you publish, a contact form, maybe a newsletter signup. They do not run an application. There is no server chewing on computation, no database cluster, nothing that needs to stay awake all night. Pages are written once and read many times.
+
+AWS and Azure are built — brilliantly — for the other kind: applications, backends, private networks, compute that scales up and down. Putting a brochure-and-articles website on them is like leasing a delivery fleet to drive one van. You can do it. You will pay for the fleet.
+
+The cost comparison — every option, one table
+
+These are the published figures for the most popular ways to put a small business website online, checked against each vendor's pricing and limits pages. One table, every option we seriously considered — including the two names most people start with.
+
+Pricing disclaimer:
+every price in this article is as published on October 7, 2026, this article's publication date
+. Vendors change prices, introductory offers expire into higher renewals, and regional pricing varies. Treat these figures as an honest snapshot for comparing the shape
+of the offers — and check the vendor's current pricing page before you budget. Where a number is our arithmetic rather than a vendor's list price (the terabyte example), it is labeled modeled
+.
+
+Option
+What the site costs
+Domain name
+Bandwidth (visitors)
+Firewall / protection
+The honest catch
+
+GitHub + Cloudflare Pages
+(what we use)
+
+$0/month
+— free plan, no card required
+About $10/year
+at cost through Cloudflare Registrar — this site's cost us $10.46
+
+Unlimited, unmetered
+
+Included (network firewall + DDoS protection)
+For static sites and light edge functions. If you need a traditional always-on server, this isn't one — see the boundary section below
+
+Microsoft Azure
+(Static Web Apps)
+$0 free tier, then $9 per app, per month
+
+Same domain cost wherever you buy it
+100 GB/month included, then $0.20 per GB
+
+Basic included; full web application firewall is a separate, pricier tier (Azure Front Door, from about $35/month before usage)
+The bandwidth meter: a popular month costs real money (modeled below)
+
+Amazon AWS
+(S3 + CloudFront + friends)
+Assembled from parts; roughly $1–3/month
+for the storage-and-delivery basics
+Same domain cost wherever you buy it
+Billed per GB, every GB, on more than one service
+AWS WAF is separate:
+$5 per rule set + $1 per rule + a per-request charge — before you've hosted anything
+There is no single "website" product: you assemble and wire up storage, delivery, certificates, DNS, and a build pipeline yourself
+
+GoDaddy
+(Websites + Marketing builder / managed WordPress)
+Builder Basic advertised around $9.99/month
+on an annual term, renewing around $12.99/month
+; managed WordPress $6.99/month first year, renewing at $14.99/month
+
+A .com renews at roughly $19–23/year
+; privacy and protection add-ons are part of the business model
+Included in the plan
+Included in the plan
+A site built in GoDaddy's builder cannot be taken elsewhere as-is
+— leaving means rebuilding. Introductory prices renew higher, and the checkout offers add-ons
+
+Namecheap
+(Stellar shared hosting / EasyWP)
+Stellar shared hosting $1.98/month for the first year
+, renewing at $4.88/month
+; EasyWP managed WordPress $3.88/month
+A .com runs about $10–14/year
+, and WhoisGuard privacy protection is included free
+
+Included ("unmetered" — on a server shared with other customers)
+Included in the plan
+The fairest renewal math in traditional hosting — and still a traditional shared server: WordPress updates, the database, and security are yours to maintain
+
+Run the popular-month example through the table. Say your site serves a terabyte of pages in a month — a genuinely good problem. On Cloudflare Pages the hosting bill is still $0
+, because bandwidth on the free plan is unmetered. On Azure's standard plan, a modeled
+terabyte works out to roughly $189 that month
+— $9 for the app plus about $180 of bandwidth overage. On AWS the same traffic is a stack of per-gigabyte line items across several services. On GoDaddy or Namecheap the month is simply your renewal rate — no meter, but a rent that never stops and, in the builder's case, a site you don't fully own. The exact cents vary; the pattern doesn't: the big clouds meter the one thing a successful website uses most, the traditional hosts charge rent forever, and for static sites Cloudflare, uniquely, does neither.
+
+Namecheap deserves the plain compliment: if you want traditional hosting, its prices and free privacy protection are the most honest in that business. But notice what both traditional rows are — a monthly rent, forever, for a server that mostly sits idle serving pages. The GitHub + Cloudflare combination isn't a cheaper rental. It removes the rental.
+
+And the meter is not the only cost. The assembled-cloud route means operating
+a host: a storage service, a delivery service, a certificate service, a DNS service, a build pipeline, a firewall — each with its own console, its own settings, and its own way of quietly billing you. Someone has to set that up, and someone has to remember how it works a year later when something breaks at 9 p.m. That someone is usually you, or a consultant you're paying by the hour. The combination we use has exactly two places to look: the GitHub repository, which holds the site, and one Cloudflare account, which holds the domain, the delivery, the security, and the traffic reports.
+
+When pages aren't enough: databases and video
+
+Fair question: what happens when your site grows past pages — a members area, a product catalog, a course with video? Every stack above has an answer. They differ the same way the hosting does: one bundled product with simple pricing, or parts you assemble and meter separately.
+
+Databases
+
+Stack
+Your database option
+What it costs to start
+
+GitHub + Cloudflare
+D1
+, a real SQL database at the edge, plus KV for simple key-value data and R2 for files
+A generous free allowance
+(5 GB of database storage on the free plan); the $5/month Workers plan bundles far more
+
+Azure
+Cosmos DB
+(NoSQL) or Azure SQL
+(relational)
+A genuinely good lifetime free tier
+on Cosmos DB (1,000 RU/s of throughput and 25 GB of storage per account); Azure SQL's Basic tier is about $5/month
+
+AWS
+DynamoDB
+(NoSQL) or RDS
+(a real hosted MySQL/PostgreSQL server)
+DynamoDB charges per request — pennies at small scale, with 25 GB of storage in the free tier; the smallest always-on RDS database runs about $12+/month
+before storage
+
+GoDaddy
+MySQL included with your hosting plan
+— it's the database WordPress itself uses
+Included, but sized and limited by your hosting plan; it is a hosting feature, not a database product you can build an application on
+
+Namecheap
+MySQL / PostgreSQL included via cPanel
+on shared plans
+Included, same caveat: it belongs to the hosting account, scaled to a shared server
+
+Video streaming
+
+Stack
+Your video option
+What it costs to start
+
+GitHub + Cloudflare
+Cloudflare Stream
+— upload, encoding, player, and delivery in one product
+$5 per 1,000 minutes stored + $1 per 1,000 minutes delivered
+; encoding is free and there are no bandwidth (egress) charges on top
+
+Azure
+None, first-party
+— Microsoft retired Azure Media Services in 2024
+You assemble storage + delivery yourself (Blob Storage + Front Door) or buy a third-party streaming service on top
+
+AWS
+Assemble it: S3
+stores the files, MediaConvert
+encodes them (per minute of output), CloudFront
+delivers them (per GB)
+Each part meters separately — workable, and exactly the multi-line-item pattern from the hosting table
+
+GoDaddy
+No streaming product
+— builder pages embed YouTube or Vimeo
+Free to embed, on the video platform's player, branding, and rules
+
+Namecheap
+No streaming product
+— embeds, or video files served from your shared hosting
+Fine for a clip or two; shared storage and a shared server are not a streaming platform
+
+The pattern holds at every layer: the popular names either don't offer the piece at all, include a small version tied to a server rental, or offer it as separately metered parts. Cloudflare's lineup — hosting, database, file storage, and video — is priced in whole products, and the first tier of almost every one is free.
+
+And the meter is not the only cost. The AWS/Azure route means assembling
+a host: a storage service for the files, a content-delivery service in front of it, a certificate service, a DNS service, a build pipeline, a firewall — each with its own console, its own settings, and its own way of quietly billing you. Someone has to set that up, and someone has to remember how it works a year later when something breaks at 9 p.m. That someone is usually you, or a consultant you're paying by the hour. The combination we use has exactly two places to look: the GitHub repository, which holds the site, and one Cloudflare account, which holds the domain, the delivery, the security, and the traffic reports.
+
+Where the big clouds are the right answer
+
+We want to be precise about the boundary, because a recommendation that doesn't state its limits isn't worth much:
+
+A real application backend
+— persistent servers, heavy databases, private networking into a company's internal systems — belongs on AWS or Azure. That's what they're for.
+
+A compliance regime or a contract that names a specific cloud
+, or an organization with committed cloud spend, settles the question by itself.
+
+Video at library scale, or complex server-rendered applications
+, will push you toward paid, purpose-built services on any platform.
+
+If your project crosses one of those lines, host that project
+there — and keep your website where websites belong. A website built this way is plain files in a repository; it is never trapped.
+
+What this looks like in practice
+
+This site is the working example. Its files live in GitHub; Cloudflare delivers them from its edge network — the same network that carries a large share of the web. Changes are reviewed on a staging copy before they go live, promotion is a merge, and the traffic, search, and AI-visibility reports arrive on a schedule: the site currently scores 100 out of 100 on AI-search readiness checks and 90% on independent SEO checks. Total monthly hosting cost: zero dollars, plus that $10.46-a-year domain. We run client sites the same way, on the same pattern — including a two-site rebuild we recently completed with professional email, a newsletter list, and weekly health reporting on top.
+
+None of that required finding a host. There is no host. There is a repository and a delivery network, and between them, nothing to patch, reboot, or get billed for at 3 a.m.
+
+Want to do it yourself? Take the toolkit — it's free.
+
+Everything in this article is a method, and methods shouldn't be secrets. So we packaged ours and published it, free, under an open-source license: website-forge (https://github.com/AXIOVEX/website-forge)
+— the complete head start for building your website with your own AI assistant
+.
+
+Hand it to Claude Code, Cursor, or ChatGPT and it walks your AI through the same process this site was built with: write the spec before the code, draw the wireframes before the pages, build on a staging copy you review before anything goes live, hold search and AI-answer visibility near perfect with a weekly check, and verify every change with real screenshots instead of hope. It includes the skill file that teaches the AI the method, an MCP server that audits any website and generates the robots/sitemap/llms files for it, ready-to-copy templates, checklists, and the verified cost comparison this article is based on.
+
+Use it to build your own site for the same $0 a month. And if, somewhere in the middle, you decide you'd rather have a person in your corner — that's the offer in the next section.
+
+Starting a business? We'll set this up with you.
+
+If you're starting something, your technology foundation should cost you almost nothing to run and exactly nothing to worry about — so your money and attention go to the business itself. That's why we offer a startup business support package
+built on everything above: we get your domain, your website, and your professional email set up properly from day one, make sure Google and the AI answer engines can actually find you, set up your traffic reporting so you can see it's working — and then we stay in your corner as the person you call when something needs changing or stops making sense.
+
+It's focused on two things, deliberately: low cost
+— because the underlying platforms genuinely cost this little when someone sets them up right, and we'll show you every figure — and excellent support
+, because a startup's real technology risk is never the platform. It's having nobody to call.
+
+If that sounds like the start you want, write to us at start@axiovexsystems.com
+or use the contact page (https://axiovexsystems.com/contact/). Tell us what you're building. The first conversation costs the same as the hosting: nothing.
+
+— Tristen Pierson, President, Axiovex Systems
+
+THE AXIOVEX SIGNAL — MONTHLY
+
+The month, in your inbox.
+
+What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
+
+One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
+Privacy policy
+
+More analysis
+October 10, 2026
+Robots can do the work. Almost none of it pays yet.
+
+Read article &rarr;
+
+October 8, 2026
+Oakland County is losing jobs. Here is why.
+
+Read article &rarr;
+
+&larr; All articles
+
+Next step
+
+Questions about this analysis?
+
+If this analysis touches a problem you're facing, we'd like to hear about it.
+
+Start a conversation
+
+## https://axiovexsystems.com/blog/what-superintelligence-means/
+
+Home
+/ Blog
+/ What superintelligence actually means — and why today's AI isn't it
+
+October 5, 2026
+
+What superintelligence actually means — and why today's AI isn't it
+
+AI
+superintelligence
+terminology
+education
+
+X
+(https://twitter.com/intent/tweet?text=What%20superintelligence%20actually%20means%20%E2%80%94%20and%20why%20today) Facebook
+(https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Fwhat-superintelligence-means%2F) LinkedIn
+(https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Fwhat-superintelligence-means%2F) Email
+
+Text
+
+Copy link
+
+More&hellip;
+
+Superintelligence is having a moment. A recent executive order proclaims the dawn of an era of "Super Intelligence," and public remarks have applied the term to today's AI models. Sandra Rogers, PhD, published a careful piece this week arguing that this is a category error worth correcting before it hardens into habit: AI is not superintelligence, not yet anyway (https://www.linkedin.com/pulse/ai-superintelligence-yet-anyway-sandra-rogers-phd-8quqe/). She is right — and for the people we work with, the reason matters well beyond semantics.
+
+We are an engineering firm, not a linguistics seminar. But our whole method starts with questioning foundational assumptions until what is actually true falls out, and vocabulary is a foundational assumption. When the words are wrong, everything built on them — budgets, timelines, training plans, safety rules — inherits the error.
+
+Three words, three different things
+
+The field has a standard ladder, and it is worth being precise about the rungs:
+
+Narrow AI (ANI)
+is everything that actually exists today. Chatbots, image generators, recommendation engines, agentic assistants that book meetings and write code — extraordinary at bounded tasks, and without understanding beyond them. Generative and agentic AI live here.
+
+Artificial general intelligence (AGI)
+would be a machine with human-level intellect across domains: able to reason, plan, and learn in unrelated contexts the way a person can. It is a theoretical milestone. It does not exist.
+
+Superintelligence (ASI, or SI)
+would be an intellect beyond the best human minds in practically every field — thinking faster, and in directions we could not follow. It does not exist either, and serious researchers debate whether it should ever be built. Rogers walks through those arguments, including the alignment problem; her piece is the deep end, and it is worth your time.
+
+Every tool we deploy, teach, or evaluate sits on the first rung. All of it. No vendor demo, however polished, changes that.
+
+The confusion is not harmless
+
+It would be easy to shrug this off as Washington vocabulary drift. It is not harmless, for three practical reasons:
+
+Buying.
+When a pitch deck says "superintelligence," a buyer hears a capability that does not exist — and budgets, schedules, and staffing get built against it. We teach a line in AI 101 that applies verbatim here: confident wording does not mean the claim is right. A term is not evidence.
+
+Planning.
+Last month we wrote about Michigan's workforce numbers, and the discipline there was that different measures cannot be added together just because they sound similar. The same discipline applies to technology categories. A training program designed for narrow AI — the tools that exist — looks nothing like one designed for a hypothetical general intelligence. Plan for science fiction and you misallocate real money, real curriculum, and real people's time.
+
+Oversight.
+Governance fits the category of the thing governed. A narrow tool needs what we already know how to do: access controls, verification, a human accountable for the output. Blurring the category cuts both ways — it makes people fear the tool they actually have, and under-prepares them for systems that don't exist yet. Precision is what keeps both errors out.
+
+What we are changing in our own materials
+
+Starting now, our website and our AI 101 course materials teach the ladder explicitly, and our terms are fixed:
+
+AI
+stays — for today's real technology. It is the word everyone knows, and for the first rung it is accurate. We are not going to confuse working people by renaming the tools on their desks.
+
+SI (superintelligence)
+is used only for the third rung: the theoretical category, discussed as such. Where public usage is drifting — and it is — we will say so plainly rather than quietly swapping words.
+
+The course keeps its name. AI 101 teaches what AI is; it now also teaches, on the record, what AI is not.
+
+This post is the reference for that choice. If the vocabulary shifts again, we will update the materials and say why — the same way we would correct a number.
+
+The takeaway
+
+Words are the first system anyone engineers with. Get them wrong and the error propagates through every decision downstream — which purchase, which policy, which training plan, which fear.
+
+So here is the whole discipline in one question, free to steal: the next time a pitch, a headline, or a press release says superintelligence
+, ask which rung?
+If the speaker can't answer, you have learned something important about the pitch.
+
+THE AXIOVEX SIGNAL — MONTHLY
+
+The month, in your inbox.
+
+What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
+
+One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
+Privacy policy
+
+More analysis
+October 10, 2026
+Robots can do the work. Almost none of it pays yet.
+
+Read article &rarr;
+
+October 8, 2026
+Oakland County is losing jobs. Here is why.
+
+Read article &rarr;
+
+&larr; All articles
+
+Next step
+
+Questions about this analysis?
+
+If this analysis touches a problem you're facing, we'd like to hear about it.
+
+Start a conversation
+
+## https://axiovexsystems.com/blog/michigan-workforce-september-2026/
+
+Home
+/ Blog
+/ Michigan's September workforce data: what the numbers say, and what they don't
+
+September 30, 2026
+
+Michigan's September workforce data: what the numbers say, and what they don't
+
+workforce
+michigan
+research
+AI
+education
+
+X
+(https://twitter.com/intent/tweet?text=Michigan) Facebook
+(https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Fmichigan-workforce-september-2026%2F) LinkedIn
+(https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Fmichigan-workforce-september-2026%2F) Email
+
+Text
+
+Copy link
+
+More&hellip;
+
+Our Michigan workforce intelligence project just published its September edition — new labor data through August, graduation-horizon program planning, and cross-sector analysis of AI task impacts. I want to walk through what the numbers actually say, because the headline figure is the least interesting part.
+
+Evidence cutoff: September 26, 2026 (America/Detroit). All figures below come from the September edition (https://github.com/AXIOVEX/michigan-workforce-intelligence/tree/reports-2026.09.27.131143Z/reports/2026-09-26-graduation-horizons) of the public research repo.
+
+The rate is not the story
+
+Michigan's August seasonally adjusted unemployment rate was 5.0%
+, against 4.1%
+nationally. On its own, that looks like a modest gap. But the report pairs it with the rest of the picture: participation at 58.8%
+, an employment-population ratio of 55.9%
+— and monthly employment and labor-force declines that both
+totaled 25,000
+.
+
+That last detail is the one that matters. As the report puts it: a rate moving only slightly can conceal a material change in participation. When the labor force itself shrinks by 25,000 in a month, the unemployment rate stays deceptively calm. If you're deciding which training programs to expand or close, the rate alone will mislead you.
+
+The broader U-6 measure — 9.1%
+for the July 2025–June 2026 window — captures more of the slack, but note the vintage: it is not an August reading. Recent graduates faced about 5.6%
+unemployment in Q2, with degree-based underemployment at 42%
+. These measure different populations and cannot be added together — a discipline the report enforces throughout.
+
+Warning signals, not forecasts
+
+Two yellow flags in the data: September's final national consumer sentiment index fell to 48.1
+(from 51.7 in August), and Chicago Fed district respondents reported below-average hiring indexes even as manufacturing activity strengthened
+.
+
+The report treats these exactly right — as warning signals to examine alongside payrolls, hires, hours, and employer orders, not
+as a forecast of Michigan job losses. That restraint is the whole point of evidence-centered analysis: say what the data supports, mark the boundary, stop there.
+
+Five decisions for education and industry
+
+The edition's core is five recommendations. They're worth quoting in compressed form because each one resists a lazy reading:
+
+Redesign narrow task training first.
+Standalone typing, data-entry, and routine transaction-processing curricula need immediate review — but preserve transferable business knowledge while adding data quality, controls, exception handling, and customer problem-solving.
+
+Retain foundations in AI-exposed professions.
+Software, accounting, legal support, engineering, media, and medical imaging face task change. Teach students to define requirements, evaluate outputs, and manage risk. AI exposure alone does not establish occupation decline.
+
+Prioritize Michigan demand and replacement needs.
+State projections show growth in industrial maintenance, cybersecurity, software, data science, nursing, and electrical work. And declining occupations can still have substantial annual openings — match capacity to verified regional demand, not national projections alone.
+
+Build skills bridges before layoffs.
+Assess incumbent skills, secure a real receiving role, pay for supervised learning, verify competence through work samples. Track wages, benefits, hours, and sustained employment — not just course completion.
+
+Plan by graduation cohort.
+Review short credentials for 2027, associate pathways for 2028, bachelor's programs for 2030, longer professional pathways for 2032 and beyond. These are decision horizons, not occupation expiry dates
+.
+
+Number 2 deserves emphasis because it cuts against the loudest narrative in the room. The report's line is blunt: neither the unemployment rate nor an AI capability demonstration is sufficient to decide which programs to expand or close.
+
+Radiology: adaptation, not obsolescence
+
+The report uses radiology as its worked example of getting this right. The official projections do not
+establish radiologist obsolescence — Michigan projects growth for physician radiologists and radiologic technologists, and the ACR describes persistent workforce shortages. The prescription: preserve clinical preparation and add role-specific AI evaluation, imaging informatics, monitoring, and workflow assurance.
+
+It's a template for how to think about every "AI will replace X" claim: check the projections, check the shortages, adapt the curriculum, keep the foundations.
+
+The pipeline behind the numbers
+
+One more finding, and it's about method rather than labor markets. On September 27 the project executed its first connector-triggered audited release
+: a content commit triggered the full GitHub workflow, and every published artifact was verified afterward — all 6 downloadable assets and 33 ZIP member hashes matched, plus manifest version, source commit, and PDF page counts.
+
+No permission expansions, no copied tokens, no browser logins. The evidence assessment cleared its bar only after observed run data replaced prose assertions — and when a tooling incident occurred (two assessments colliding on a filename), it was documented in the open rather than smoothed over.
+
+That's the standard we hold our own analysis to: every number traceable to a source, every release hash-verified, every limit stated. The September edition declares no program obsolete on a speculative date and commits no named institution to anything. In a space full of confident forecasts, that restraint is a feature.
+
+The full reports, evidence ledger, and source registry are public at github.com/AXIOVEX/michigan-workforce-intelligence (https://github.com/AXIOVEX/michigan-workforce-intelligence). The verified September release is verified September 2026 workforce release (https://github.com/AXIOVEX/michigan-workforce-intelligence/releases/tag/reports-2026.09.27.131143Z).
+
+THE AXIOVEX SIGNAL — MONTHLY
+
+The month, in your inbox.
+
+What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
+
+One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
+Privacy policy
+
+More analysis
+October 10, 2026
+Robots can do the work. Almost none of it pays yet.
+
+Read article &rarr;
+
+October 8, 2026
+Oakland County is losing jobs. Here is why.
+
+Read article &rarr;
+
+&larr; All articles
+
+Next step
+
+Questions about this analysis?
+
+If this analysis touches a problem you're facing, we'd like to hear about it.
+
+Start a conversation
+
+## https://axiovexsystems.com/signals/
+
+Home
+/ Signals
+
+Signals
+
+What we're watching.
+
+Michigan's numbers and the field items that matter — manufacturing, AI, workforce, and industrial security — gathered from primary sources and refreshed automatically.
+
+Last refreshed:
+October 19, 2026 at 1:36 PM ET
+
+The Axiovex Signal — in your inbox, monthly.
+
+One email a month · confirmation first · one-click unsubscribe · no tracking pixels
+. Privacy policy
+
+Highlights — the short version
+
+In August 2026, Michigan manufacturing employment rose 1.1k to 586.7k — 12.3k above its January low — while the labor force fell 25.5k to 4.85M and the unemployment rate rose 0.1 pts to 5.0%. Across the twelve months in the snapshot, the labor force is down 151.6k (&minus;3.0%) while total nonfarm employment is up 1.5k (+0.0%). In the published outlooks, nurse practitioners are the fastest-growing occupation on both boards — +41.5% in Michigan's 2024–34 projections (MCDA) and +41.0% nationally for 2025–35 (U.S. BLS) — and data entry keyers are among the fastest-falling on both (&minus;26.4% in Michigan, &minus;25.5% nationally). Michigan's class of 2025 graduated at just over 84%, up from 82.8% for the class of 2024.
+
+Generated at build time from the data on this page &middot; Pulse snapshot: August 2026 &middot; Outlooks: Michigan MCDA 2024–34 &middot; U.S. BLS 2025–35 &middot; No forecasts — forward-looking figures are the publishing agencies' projections
+
+Top riser &middot; Michigan outlook
+
+Nurse Practitioners
+
+projected +41.5%
+&middot; MCDA 2024–34
+
+Top faller &middot; Michigan outlook
+
+Foundry Mold and Coremakers
+
+projected &minus;29.3%
+&middot; MCDA 2024–34
+
+Top riser &middot; U.S. outlook
+
+Nurse practitioners
+
+projected +41.0%
+&middot; U.S. BLS 2025–35
+
+Top faller &middot; U.S. outlook
+
+Word processors and typists
+
+projected &minus;34.4%
+&middot; U.S. BLS 2025–35
+
+Education headline &middot; Michigan
+
+Graduation rate — just over 84%
+
+class of 2025 &middot; &#9650; +1.2 pts vs class of 2024 &middot; CEPI via MDE
+
+Michigan Pulse &middot; U.S. Bureau of Labor Statistics &middot; August 2026
+
+Manufacturing employment
+
+586.7k
+
+&#9650; +1.1k MoM
+
+Unemployment rate
+
+5.0%
+
+&#9650; +0.1 pts MoM
+
+Labor force
+
+4.85M
+
+August 2026
+
+Total nonfarm employment
+
+4,505.9k
+
+August 2026
+
+Trends & outlook
+
+Where it's heading.
+
+The Pulse series as a trend board, published projections for what comes next, and Michigan education indicators. Every forward-looking figure belongs to the agency that published it — Axiovex publishes no forecasts of its own.
+
+Michigan Pulse series: latest value, month-over-month change, and change across the 12-month window
+
+Series
+Latest &middot; Aug 2026
+Mo-Mo
+12-mo window
+Trend
+
+Manufacturing employment
+586.7k
+&#9650; +1.1k
+&#9650; +2.4k
+&#9650; +0.4%
+
+Unemployment rate
+5.0%
+&#9650; +0.1 pts
+&#9650; +0.1 pts
+&#9650; +2.0%
+
+Labor force
+4.85M
+&#9660; &minus;25.5k
+&#9660; &minus;151.6k
+&#9660; &minus;3.0%
+
+Total nonfarm employment
+4,505.9k
+&#9650; +5.3k
+&#9650; +1.5k
+&#9650; +0.0%
+
+Computed from BLS series — latest values verbatim from the snapshot; both deltas are arithmetic on each series' own monthly history. A missing month breaks the trend line; it is never interpolated.
+
+ON THE RISE — FASTEST-GROWING OCCUPATIONS · U.S. BLS EMPLOYMENT PROJECTIONS 2025–35
+
+Nurse practitioners
+&middot; projected
++41.0%
+&middot; +137,800 jobs, 2025–35
+
+Solar photovoltaic installers
+&middot; projected
++36.5%
+&middot; +11,300 jobs, 2025–35
+
+Data scientists
+&middot; projected
++34.6%
+&middot; +95,400 jobs, 2025–35
+
+Wind turbine service technicians
+&middot; projected
++29.5%
+&middot; +3,500 jobs, 2025–35
+
+Medical and health services managers
+&middot; projected
++24.2%
+&middot; +155,100 jobs, 2025–35
+
+FALLING — FASTEST-DECLINING OCCUPATIONS · U.S. BLS EMPLOYMENT PROJECTIONS 2025–35
+
+Word processors and typists
+&middot; projected
+&minus;34.4%
+&middot; &minus;13,900 jobs, 2025–35
+
+Telephone operators
+&middot; projected
+&minus;27.6%
+&middot; &minus;1,000 jobs, 2025–35
+
+Switchboard operators, including answering service
+&middot; projected
+&minus;26.0%
+&middot; &minus;9,200 jobs, 2025–35
+
+Data entry keyers
+&middot; projected
+&minus;25.5%
+&middot; &minus;33,600 jobs, 2025–35
+
+Foundry mold and coremakers
+&middot; projected
+&minus;23.0%
+&middot; &minus;2,900 jobs, 2025–35
+
+MICHIGAN INDUSTRY OUTLOOK — MCDA LONG-TERM INDUSTRY EMPLOYMENT PROJECTIONS 2024–2034
+
+On the rise
+
+Specialized Design Services
+&middot; projected
++52.0%
+&middot; +5,440 jobs, 2024–2034
+
+Educational Support Services
+&middot; projected
++24.7%
+&middot; +2,180 jobs, 2024–2034
+
+Transit and Ground Passenger Transportation
+&middot; projected
++24.5%
+&middot; +2,380 jobs, 2024–2034
+
+Other Heavy and Civil Engineering Construction
+&middot; projected
++23.2%
+&middot; +570 jobs, 2024–2034
+
+Beverage and Tobacco Product Manufacturing
+&middot; projected
++23.0%
+&middot; +2,240 jobs, 2024–2034
+
+Falling
+
+Land Subdivision
+&middot; projected
+&minus;35.5%
+&middot; &minus;110 jobs, 2024–2034
+
+Motion Picture and Sound Recording Industries
+&middot; projected
+&minus;24.0%
+&middot; &minus;1,320 jobs, 2024–2034
+
+Clothing, Clothing Accessories, Shoe, and Jewelry Retailers
+&middot; projected
+&minus;22.8%
+&middot; &minus;5,700 jobs, 2024–2034
+
+Broadcasting and Content Providers
+&middot; projected
+&minus;22.8%
+&middot; &minus;1,050 jobs, 2024–2034
+
+Telecommunications
+&middot; projected
+&minus;21.7%
+&middot; &minus;3,180 jobs, 2024–2034
+
+Projections are the publishing agency's modeled outlook, published with its horizon and vintage — they are not Axiovex forecasts, and they are not guarantees. Source: U.S. Bureau of Labor Statistics, Employment Projections (2025–35), retrieved 2026-10-06. Michigan Center for Data and Analytics, Long-Term Industry Employment Projections (2024–2034), retrieved 2026-10-06.
+
+EDUCATION ANALYTICS — MICHIGAN
+
+Four-year graduation rate 84.01%
+&middot; Class of 2025
+&middot; &#9650; +1.2 pts vs prior class
+MICHIGAN CEPI (MISCHOOLDATA)
+
+Student enrollment — unduplicated pupil headcount (not FTE) 1,419,859
+&middot; School year 2025-26
+&middot; &#9660; &minus;0.5% vs prior period
+MICHIGAN CEPI (MISCHOOLDATA)
+
+The full picture
+&middot; the complete tables behind the boards — 12 months of Pulse values, the full projection tables, Michigan occupations, education-to-career figures, talent geography
+
+Hide details &minus;
+
+MICHIGAN PULSE — 12 MONTHS OF VALUES &middot; U.S. BUREAU OF LABOR STATISTICS
+
+Michigan Pulse monthly values for all four series
+
+Month
+Manufacturing (k)
+Unemployment
+Labor force
+Nonfarm (k)
+
+Sep 2025
+584.3
+4.9%
+5,004,120
+4,504.4
+
+Oct 2025
+585.5
+—
+—
+4,516.5
+
+Nov 2025
+582.3
+5.0%
+4,998,918
+4,502.1
+
+Dec 2025
+584.9
+5.0%
+4,999,837
+4,483.2
+
+Jan 2026
+574.4
+5.0%
+4,992,846
+4,396.4
+
+Feb 2026
+575.4
+5.0%
+4,983,731
+4,414.9
+
+Mar 2026
+576.7
+5.0%
+4,969,412
+4,430.1
+
+Apr 2026
+577.1
+5.0%
+4,949,821
+4,469.2
+
+May 2026
+583.3
+5.1%
+4,930,851
+4,525.2
+
+Jun 2026
+587.2
+5.0%
+4,906,650
+4,549.5
+
+Jul 2026
+585.6
+4.9%
+4,877,961
+4,500.6
+
+Aug 2026
+586.7
+5.0%
+4,852,504
+4,505.9
+
+Every point in the snapshot's trend arrays, as a table — the same values the sparklines draw. &ldquo;—&rdquo; is a month the published series does not contain (Oct 2025, unemployment + labor force): shown as a gap and captioned as missing in the source, never interpolated.
+
+U.S. OUTLOOK — FULL TABLES &middot; U.S. BLS EMPLOYMENT PROJECTIONS 2025–35
+
+On the rise
+
+Nurse practitioners +41.0%
+&middot; +137,800 jobs
+
+Solar photovoltaic installers +36.5%
+&middot; +11,300 jobs
+
+Data scientists +34.6%
+&middot; +95,400 jobs
+
+Wind turbine service technicians +29.5%
+&middot; +3,500 jobs
+
+Medical and health services managers +24.2%
+&middot; +155,100 jobs
+
+Falling
+
+Word processors and typists &minus;34.4%
+&middot; &minus;13,900 jobs
+
+Telephone operators &minus;27.6%
+&middot; &minus;1,000 jobs
+
+Switchboard operators, including answering service &minus;26.0%
+&middot; &minus;9,200 jobs
+
+Data entry keyers &minus;25.5%
+&middot; &minus;33,600 jobs
+
+Foundry mold and coremakers &minus;23.0%
+&middot; &minus;2,900 jobs
+
+Projections are the publishing agency's modeled outlook, published with its horizon and vintage — they are not Axiovex forecasts, and they are not guarantees.
+
+MICHIGAN OCCUPATIONS — LONG-TERM PROJECTIONS &middot; MICHIGAN MCDA, VIA THE AXIOVEX WORKFORCE STUDY (SEPTEMBER EDITION)
+
+Michigan statewide &middot; 2024–34 — 18 occupations, sorted by projected change
+
+Nurse Practitioners +41.5%
+&middot; 8,210 &rarr; 11,620 &middot; 770 openings/yr
+
+Data Scientists +28.3%
+&middot; 6,810 &rarr; 8,740 &middot; 600 openings/yr
+
+Information Security Analysts +21.8%
+&middot; 3,260 &rarr; 3,970 &middot; 260 openings/yr
+
+Industrial Machinery Mechanics +13.0%
+&middot; 19,020 &rarr; 21,500 &middot; 1,900 openings/yr
+
+Software Developers +7.7%
+&middot; 42,200 &rarr; 45,470 &middot; 2,445 openings/yr
+
+Radiologic Technologists and Technicians +6.4%
+&middot; 7,460 &rarr; 7,940 &middot; 440 openings/yr
+
+Industrial Engineers +5.7%
+&middot; 31,230 &rarr; 33,010 &middot; 2,035 openings/yr
+
+Electricians +5.6%
+&middot; 26,240 &rarr; 27,710 &middot; 2,450 openings/yr
+
+Radiologists +5.1%
+&middot; 390 &rarr; 410 &middot; 10 openings/yr
+
+Graphic Designers +3.1%
+&middot; 7,480 &rarr; 7,710 &middot; 575 openings/yr
+
+Accountants and Auditors &minus;0.9%
+&middot; 47,640 &rarr; 47,190 &middot; 3,385 openings/yr
+
+Paralegals and Legal Assistants &minus;4.6%
+&middot; 7,360 &rarr; 7,020 &middot; 715 openings/yr
+
+Customer Service Representatives &minus;6.8%
+&middot; 72,810 &rarr; 67,860 &middot; 8,680 openings/yr
+
+Bookkeeping, Accounting, and Auditing Clerks &minus;8.3%
+&middot; 44,580 &rarr; 40,880 &middot; 4,525 openings/yr
+
+Mechanical Drafters &minus;8.7%
+&middot; 1,830 &rarr; 1,670 &middot; 135 openings/yr
+
+Computer Programmers &minus;12.0%
+&middot; 5,840 &rarr; 5,140 &middot; 220 openings/yr
+
+Data Entry Keyers &minus;26.4%
+&middot; 3,260 &rarr; 2,400 &middot; 215 openings/yr
+
+Foundry Mold and Coremakers &minus;29.3%
+&middot; 1,640 &rarr; 1,160 &middot; 105 openings/yr
+
+Detroit Metro Prosperity Region &middot; 2022–32 — 18 occupations, sorted by projected change
+
+Nurse Practitioners +41.2%
+&middot; 3,130 &rarr; 4,420 &middot; 290 openings/yr
+
+Data Scientists +32.9%
+&middot; 2,220 &rarr; 2,950 &middot; 220 openings/yr
+
+Information Security Analysts +29.5%
+&middot; 1,730 &rarr; 2,240 &middot; 160 openings/yr
+
+Software Developers +10.5%
+&middot; 23,370 &rarr; 25,830 &middot; 1,510 openings/yr
+
+Industrial Machinery Mechanics +9.6%
+&middot; 7,610 &rarr; 8,340 &middot; 690 openings/yr
+
+Industrial Engineers +8.0%
+&middot; 13,940 &rarr; 15,050 &middot; 970 openings/yr
+
+Electricians +5.1%
+&middot; 12,260 &rarr; 12,890 &middot; 1,160 openings/yr
+
+Graphic Designers +1.5%
+&middot; 3,240 &rarr; 3,290 &middot; 250 openings/yr
+
+Accountants and Auditors +1.0%
+&middot; 18,550 &rarr; 18,730 &middot; 1,430 openings/yr
+
+Radiologists 0.0%
+&middot; 300 &rarr; 300 &middot; 10 openings/yr
+
+Radiologic Technologists and Technicians &minus;1.1%
+&middot; 2,710 &rarr; 2,680 &middot; 135 openings/yr
+
+Paralegals and Legal Assistants &minus;1.2%
+&middot; 4,100 &rarr; 4,050 &middot; 405 openings/yr
+
+Customer Service Representatives &minus;9.2%
+&middot; 35,850 &rarr; 32,550 &middot; 4,185 openings/yr
+
+Bookkeeping, Accounting, and Auditing Clerks &minus;9.8%
+&middot; 15,780 &rarr; 14,240 &middot; 1,545 openings/yr
+
+Mechanical Drafters &minus;10.3%
+&middot; 1,160 &rarr; 1,040 &middot; 85 openings/yr
+
+Computer Programmers &minus;12.6%
+&middot; 1,910 &rarr; 1,670 &middot; 80 openings/yr
+
+Foundry Mold and Coremakers &minus;27.3%
+&middot; 220 &rarr; 160 &middot; 10 openings/yr
+
+Data Entry Keyers &minus;29.3%
+&middot; 1,880 &rarr; 1,330 &middot; 120 openings/yr
+
+Provenance: transcribed from the September edition's verified projection capture in the Axiovex workforce study (release tag reports-2026.09.27.131143Z), whose underlying files are MCDA's published statewide and regional workbooks. The figures are labeled &ldquo;via the Axiovex workforce study, September edition&rdquo; until the pending direct read of MCDA's tables on michigan.gov supersedes this transcription. The two groups are never blended — different geographies, different vintages, separate labels. Annual openings include replacement demand, not only growth.
+
+EDUCATION TO CAREER — MICHIGAN
+
+Four-year graduation rate just over 84%
+&middot; class of 2025 &middot; prior class 82.8% &middot;
+CEPI VIA MDE, FEB 2026
+
+Four-year dropout rate 7.1%
+&middot; class of 2025 &middot; prior class 7.7% &middot;
+CEPI VIA MDE, FEB 2026
+
+Teacher-preparation enrollees 14,819
+&middot; 2023–24 &middot; trough 6,859 in 2016–17 &middot;
+MDE, SEP 2025
+
+Teacher-preparation completers 2,961
+&middot; 2023–24 &middot; 2,258 in 2019–20 &middot;
+MDE, SEP 2025
+
+Pupil membership 1,371,800
+&middot; FY2025–26 &middot; budget-consensus estimate
+, not an audited count &middot;
+HOUSE FISCAL AGENCY, JAN 2026
+
+One row is deliberately absent: postsecondary completions by field — no Michigan by-field series has been verified from its source (IPEDS) yet, so the row does not appear. The block grows by verification, never by substitution.
+
+TALENT GEOGRAPHY — MICHIGAN
+
+Four views of the same question — where Michigan's talent is, and where it goes. Shading and dot size are the picture; the table or list beside each map is the record.
+
+County unemployment — August 2026 (preliminary)
+
+Under 4.0%
+4.0–4.9%
+5.0–5.9%
+6.0–6.9%
+7.0% and over
+Not published
+
+Unemployment rate by county &middot; BLS Local Area Unemployment Statistics
+
+County
+Rate
+
+Oscoda
+8.6%
+
+Alcona
+7.2%
+
+Presque Isle
+6.9%
+
+Wayne
+6.9%
+
+Iosco
+6.7%
+
+Ogemaw
+6.7%
+
+Roscommon
+6.4%
+
+Iron
+6.2%
+
+Lake
+6.2%
+
+Arenac
+6.1%
+
+Clare
+6.1%
+
+Gogebic
+6.1%
+
+Montmorency
+6.1%
+
+Baraga
+6.0%
+
+Ontonagon
+6.0%
+
+Genesee
+5.8%
+
+Gladwin
+5.8%
+
+Luce
+5.8%
+
+Saginaw
+5.8%
+
+Schoolcraft
+5.8%
+
+Macomb
+5.7%
+
+Mason
+5.7%
+
+Mecosta
+5.7%
+
+Tuscola
+5.6%
+
+Sanilac
+5.5%
+
+Bay
+5.4%
+
+Crawford
+5.4%
+
+Oceana
+5.4%
+
+Alger
+5.3%
+
+Alpena
+5.3%
+
+Calhoun
+5.3%
+
+Chippewa
+5.3%
+
+Gratiot
+5.3%
+
+Keweenaw
+5.3%
+
+Muskegon
+5.3%
+
+St. Clair
+5.3%
+
+Osceola
+5.2%
+
+Delta
+5.1%
+
+Houghton
+5.1%
+
+Huron
+5.1%
+
+Isabella
+5.1%
+
+Lapeer
+5.1%
+
+Newaygo
+5.1%
+
+Jackson
+5.0%
+
+Manistee
+5.0%
+
+Monroe
+5.0%
+
+St. Joseph
+5.0%
+
+Wexford
+5.0%
+
+Marquette
+4.9%
+
+Berrien
+4.8%
+
+Cass
+4.8%
+
+Ingham
+4.8%
+
+Kalkaska
+4.8%
+
+Lenawee
+4.8%
+
+Midland
+4.8%
+
+Shiawassee
+4.8%
+
+Hillsdale
+4.7%
+
+Oakland
+4.7%
+
+Barry
+4.6%
+
+Cheboygan
+4.6%
+
+Van Buren
+4.6%
+
+Antrim
+4.5%
+
+Kalamazoo
+4.5%
+
+Montcalm
+4.5%
+
+Dickinson
+4.4%
+
+Eaton
+4.4%
+
+Missaukee
+4.4%
+
+Otsego
+4.4%
+
+Ionia
+4.3%
+
+Kent
+4.3%
+
+Benzie
+4.2%
+
+Livingston
+4.2%
+
+Washtenaw
+4.2%
+
+Emmet
+4.1%
+
+Menominee
+4.1%
+
+Clinton
+4.0%
+
+Ottawa
+4.0%
+
+Allegan
+3.9%
+
+Branch
+3.9%
+
+Charlevoix
+3.8%
+
+Leelanau
+3.6%
+
+Grand Traverse
+3.5%
+
+Mackinac
+3.5%
+
+Shading follows the rate only; the table is the record. Rates are the source's published values for the month named. October 2025 is a genuine hole in this series — the source published no values for that month (federal lapse in appropriations) — shown as not published, never interpolated.
+
+Employment by county and industry — 2024 annual averages
+
+All industries
+
+Agriculture, forestry, fishing and hunting
+
+Mining, quarrying, and oil and gas extraction
+
+Utilities
+
+Construction
+
+Manufacturing
+
+Wholesale trade
+
+Retail trade
+
+Transportation and warehousing
+
+Information
+
+Finance and insurance
+
+Real estate and rental and leasing
+
+Professional and technical services
+
+Management of companies and enterprises
+
+Administrative and waste services
+
+Educational services
+
+Health care and social assistance
+
+Arts, entertainment, and recreation
+
+Accommodation and food services
+
+Other services, except public administration
+
+Unclassified
+
+Fewest jobs in this industry
+Most jobs in this industry
+Not disclosed
+
+Total employment by county (all ownerships) &middot; BLS QCEW, 2024 annual averages
+
+County
+Total employment
+of which private
+
+Wayne
+725,504
+641,267
+
+Oakland
+723,862
+676,710
+
+Kent
+415,565
+389,176
+
+Macomb
+336,295
+301,041
+
+Washtenaw
+217,948
+133,668
+
+Ingham
+155,500
+109,332
+
+Genesee
+133,787
+115,450
+
+Ottawa
+131,885
+115,836
+
+Kalamazoo
+120,708
+107,943
+
+Saginaw
+79,478
+69,046
+
+Livingston
+64,380
+57,331
+
+Muskegon
+63,475
+56,184
+
+Berrien
+60,626
+52,285
+
+Jackson
+55,945
+48,044
+
+Calhoun
+54,415
+43,495
+
+Grand Traverse
+51,962
+46,298
+
+Eaton
+44,501
+38,488
+
+St. Clair
+42,283
+35,949
+
+Allegan
+41,360
+35,861
+
+Monroe
+41,159
+35,905
+
+Midland
+38,288
+35,244
+
+Bay
+34,112
+29,008
+
+Isabella
+26,640
+18,552
+
+Marquette
+26,385
+21,458
+
+Lenawee
+25,796
+21,435
+
+Lapeer
+21,986
+17,911
+
+Van Buren
+21,597
+17,076
+
+St. Joseph
+21,098
+18,495
+
+Clinton
+18,614
+16,594
+
+Ionia
+18,530
+15,129
+
+Emmet
+17,742
+15,501
+
+Montcalm
+16,263
+13,129
+
+Shiawassee
+15,541
+12,392
+
+Branch
+15,240
+12,605
+
+Delta
+13,848
+11,863
+
+Dickinson
+13,798
+11,235
+
+Barry
+13,236
+11,094
+
+Wexford
+13,163
+10,903
+
+Hillsdale
+12,854
+10,580
+
+Chippewa
+12,793
+6,499
+
+Mecosta
+12,746
+8,842
+
+Gratiot
+12,359
+9,821
+
+Alpena
+12,191
+9,511
+
+Houghton
+12,124
+8,884
+
+Tuscola
+12,102
+9,312
+
+Newaygo
+11,901
+9,855
+
+Huron
+11,234
+9,592
+
+Charlevoix
+10,983
+9,247
+
+Otsego
+10,703
+9,484
+
+Sanilac
+10,437
+9,154
+
+Mason
+10,186
+8,576
+
+Cass
+9,373
+7,415
+
+Osceola
+8,011
+7,032
+
+Iosco
+7,724
+6,299
+
+Manistee
+7,281
+4,893
+
+Clare
+7,261
+5,743
+
+Menominee
+7,149
+5,103
+
+Leelanau
+6,662
+4,978
+
+Oceana
+6,470
+5,237
+
+Roscommon
+6,429
+5,179
+
+Cheboygan
+6,140
+5,022
+
+Ogemaw
+6,008
+5,272
+
+Antrim
+5,128
+4,147
+
+Gogebic
+5,046
+3,556
+
+Benzie
+4,882
+4,138
+
+Kalkaska
+4,860
+3,700
+
+Mackinac
+4,836
+3,836
+
+Gladwin
+4,593
+3,836
+
+Missaukee
+4,213
+3,734
+
+Crawford
+4,105
+3,273
+
+Arenac
+4,077
+3,523
+
+Iron
+3,410
+2,600
+
+Baraga
+2,973
+1,389
+
+Schoolcraft
+2,702
+1,702
+
+Alger
+2,650
+1,824
+
+Presque Isle
+2,595
+1,978
+
+Montmorency
+2,050
+1,626
+
+Luce
+1,786
+976
+
+Lake
+1,721
+1,280
+
+Alcona
+1,494
+1,178
+
+Oscoda
+1,364
+1,017
+
+Ontonagon
+1,338
+905
+
+Keweenaw
+478
+349
+
+Agriculture, forestry, fishing and hunting — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Ottawa
+3,561
+3.34
+
+Kent
+2,741
+0.81
+
+Allegan
+1,743
+5.21
+
+Kalamazoo
+1,485
+1.52
+
+Macomb
+1,466
+0.54
+
+Van Buren
+1,312
+7.51
+
+Berrien
+1,186
+2.42
+
+Oakland
+970
+0.17
+
+Missaukee
+961
+28.18
+
+St. Joseph
+859
+5.03
+
+Clinton
+791
+5.25
+
+Ingham
+766
+0.61
+
+Calhoun
+754
+1.71
+
+Wayne
+598
+0.10
+
+Newaygo
+500
+5.19
+
+Bay
+432
+1.56
+
+Eaton
+417
+1.16
+
+Livingston
+390
+0.75
+
+Grand Traverse
+321
+0.76
+
+Lapeer
+299
+1.68
+
+Jackson
+296
+0.65
+
+Hillsdale
+265
+2.55
+
+Branch
+239
+1.94
+
+Isabella
+232
+1.08
+
+Ogemaw
+185
+3.80
+
+Marquette
+169
+0.79
+
+Kalkaska
+150
+3.81
+
+Wexford
+133
+1.25
+
+Emmet
+120
+0.84
+
+Osceola
+111
+1.71
+
+Otsego
+86
+0.99
+
+St. Clair
+85
+0.25
+
+Luce
+56
+3.87
+
+Charlevoix
+53
+0.60
+
+Alpena
+48
+0.49
+
+Lake
+45
+3.23
+
+Keweenaw
+12
+3.10
+
+Oscoda
+11
+1.00
+
+Alcona
+Not disclosed
+—
+
+Alger
+Not disclosed
+—
+
+Antrim
+Not disclosed
+—
+
+Arenac
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Barry
+Not disclosed
+—
+
+Benzie
+Not disclosed
+—
+
+Cass
+Not disclosed
+—
+
+Cheboygan
+Not disclosed
+—
+
+Chippewa
+Not disclosed
+—
+
+Clare
+Not disclosed
+—
+
+Crawford
+Not disclosed
+—
+
+Delta
+Not disclosed
+—
+
+Dickinson
+Not disclosed
+—
+
+Genesee
+Not disclosed
+—
+
+Gladwin
+Not disclosed
+—
+
+Gogebic
+Not disclosed
+—
+
+Gratiot
+Not disclosed
+—
+
+Houghton
+Not disclosed
+—
+
+Huron
+Not disclosed
+—
+
+Ionia
+Not disclosed
+—
+
+Iosco
+Not disclosed
+—
+
+Iron
+Not disclosed
+—
+
+Leelanau
+Not disclosed
+—
+
+Lenawee
+Not disclosed
+—
+
+Mackinac
+Not disclosed
+—
+
+Manistee
+Not disclosed
+—
+
+Mason
+Not disclosed
+—
+
+Mecosta
+Not disclosed
+—
+
+Menominee
+Not disclosed
+—
+
+Midland
+Not disclosed
+—
+
+Monroe
+Not disclosed
+—
+
+Montcalm
+Not disclosed
+—
+
+Montmorency
+Not disclosed
+—
+
+Muskegon
+Not disclosed
+—
+
+Oceana
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Presque Isle
+Not disclosed
+—
+
+Roscommon
+Not disclosed
+—
+
+Saginaw
+Not disclosed
+—
+
+Sanilac
+Not disclosed
+—
+
+Schoolcraft
+Not disclosed
+—
+
+Shiawassee
+Not disclosed
+—
+
+Tuscola
+Not disclosed
+—
+
+Washtenaw
+Not disclosed
+—
+
+Mining, quarrying, and oil and gas extraction — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Marquette
+1,185
+11.87
+
+Wayne
+582
+0.21
+
+Kalkaska
+332
+18.06
+
+Isabella
+330
+3.27
+
+Otsego
+232
+5.73
+
+Oakland
+226
+0.08
+
+Grand Traverse
+187
+0.95
+
+Ingham
+111
+0.19
+
+Lapeer
+99
+1.19
+
+Kent
+98
+0.06
+
+Berrien
+94
+0.41
+
+Ottawa
+65
+0.13
+
+Calhoun
+53
+0.26
+
+Eaton
+42
+0.25
+
+Macomb
+41
+0.03
+
+Alpena
+40
+0.87
+
+Missaukee
+38
+2.38
+
+Jackson
+37
+0.17
+
+Osceola
+36
+1.19
+
+St. Clair
+30
+0.19
+
+Livingston
+27
+0.11
+
+Allegan
+25
+0.16
+
+Ogemaw
+25
+1.10
+
+Kalamazoo
+24
+0.05
+
+Bay
+15
+0.12
+
+Wexford
+15
+0.30
+
+Clinton
+11
+0.16
+
+Alcona
+Not disclosed
+—
+
+Alger
+Not disclosed
+—
+
+Antrim
+Not disclosed
+—
+
+Arenac
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Barry
+Not disclosed
+—
+
+Benzie
+Not disclosed
+—
+
+Branch
+Not disclosed
+—
+
+Cass
+Not disclosed
+—
+
+Charlevoix
+Not disclosed
+—
+
+Cheboygan
+Not disclosed
+—
+
+Chippewa
+Not disclosed
+—
+
+Clare
+Not disclosed
+—
+
+Crawford
+Not disclosed
+—
+
+Delta
+Not disclosed
+—
+
+Dickinson
+Not disclosed
+—
+
+Emmet
+Not disclosed
+—
+
+Genesee
+Not disclosed
+—
+
+Gladwin
+Not disclosed
+—
+
+Gogebic
+Not disclosed
+—
+
+Gratiot
+Not disclosed
+—
+
+Hillsdale
+Not disclosed
+—
+
+Houghton
+Not disclosed
+—
+
+Huron
+Not disclosed
+—
+
+Ionia
+Not disclosed
+—
+
+Iosco
+Not disclosed
+—
+
+Iron
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
+Leelanau
+Not disclosed
+—
+
+Lenawee
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Mackinac
+Not disclosed
+—
+
+Manistee
+Not disclosed
+—
+
+Mason
+Not disclosed
+—
+
+Mecosta
+Not disclosed
+—
+
+Menominee
+Not disclosed
+—
+
+Midland
+Not disclosed
+—
+
+Monroe
+Not disclosed
+—
+
+Montcalm
+Not disclosed
+—
+
+Montmorency
+Not disclosed
+—
+
+Muskegon
+Not disclosed
+—
+
+Newaygo
+Not disclosed
+—
+
+Oceana
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Oscoda
+Not disclosed
+—
+
+Presque Isle
+Not disclosed
+—
+
+Roscommon
+Not disclosed
+—
+
+Saginaw
+Not disclosed
+—
+
+Sanilac
+Not disclosed
+—
+
+Schoolcraft
+Not disclosed
+—
+
+Shiawassee
+Not disclosed
+—
+
+St. Joseph
+Not disclosed
+—
+
+Tuscola
+Not disclosed
+—
+
+Van Buren
+Not disclosed
+—
+
+Washtenaw
+Not disclosed
+—
+
+Utilities — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Oakland
+1,632
+0.59
+
+Kent
+847
+0.54
+
+Ottawa
+678
+1.35
+
+Washtenaw
+397
+0.48
+
+Macomb
+352
+0.28
+
+Grand Traverse
+235
+1.19
+
+Muskegon
+227
+0.94
+
+Charlevoix
+192
+4.60
+
+Montcalm
+131
+2.12
+
+Mason
+109
+2.81
+
+Otsego
+92
+2.26
+
+Allegan
+88
+0.56
+
+Dickinson
+75
+1.43
+
+Branch
+57
+0.98
+
+Lapeer
+54
+0.65
+
+Delta
+51
+0.97
+
+Manistee
+48
+1.73
+
+Ingham
+27
+0.05
+
+Cheboygan
+15
+0.64
+
+Iron
+13
+1.00
+
+Alcona
+Not disclosed
+—
+
+Alger
+Not disclosed
+—
+
+Alpena
+Not disclosed
+—
+
+Antrim
+Not disclosed
+—
+
+Arenac
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Barry
+Not disclosed
+—
+
+Bay
+Not disclosed
+—
+
+Benzie
+Not disclosed
+—
+
+Berrien
+Not disclosed
+—
+
+Calhoun
+Not disclosed
+—
+
+Cass
+Not disclosed
+—
+
+Chippewa
+Not disclosed
+—
+
+Clare
+Not disclosed
+—
+
+Clinton
+Not disclosed
+—
+
+Crawford
+Not disclosed
+—
+
+Eaton
+Not disclosed
+—
+
+Emmet
+Not disclosed
+—
+
+Genesee
+Not disclosed
+—
+
+Gladwin
+Not disclosed
+—
+
+Gogebic
+Not disclosed
+—
+
+Gratiot
+Not disclosed
+—
+
+Hillsdale
+Not disclosed
+—
+
+Houghton
+Not disclosed
+—
+
+Huron
+Not disclosed
+—
+
+Ionia
+Not disclosed
+—
+
+Iosco
+Not disclosed
+—
+
+Isabella
+Not disclosed
+—
+
+Jackson
+Not disclosed
+—
+
+Kalamazoo
+Not disclosed
+—
+
+Kalkaska
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
+Leelanau
+Not disclosed
+—
+
+Lenawee
+Not disclosed
+—
+
+Livingston
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Mackinac
+Not disclosed
+—
+
+Marquette
+Not disclosed
+—
+
+Mecosta
+Not disclosed
+—
+
+Menominee
+Not disclosed
+—
+
+Midland
+Not disclosed
+—
+
+Missaukee
+Not disclosed
+—
+
+Monroe
+Not disclosed
+—
+
+Montmorency
+Not disclosed
+—
+
+Newaygo
+Not disclosed
+—
+
+Oceana
+Not disclosed
+—
+
+Ogemaw
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Osceola
+Not disclosed
+—
+
+Oscoda
+Not disclosed
+—
+
+Presque Isle
+Not disclosed
+—
+
+Roscommon
+Not disclosed
+—
+
+Saginaw
+Not disclosed
+—
+
+Sanilac
+Not disclosed
+—
+
+Schoolcraft
+Not disclosed
+—
+
+Shiawassee
+Not disclosed
+—
+
+St. Clair
+Not disclosed
+—
+
+St. Joseph
+Not disclosed
+—
+
+Tuscola
+Not disclosed
+—
+
+Van Buren
+Not disclosed
+—
+
+Wayne
+Not disclosed
+—
+
+Wexford
+Not disclosed
+—
+
+Construction — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Oakland
+32,506
+0.86
+
+Wayne
+23,670
+0.62
+
+Kent
+20,290
+0.93
+
+Macomb
+17,630
+1.00
+
+Ottawa
+6,952
+1.00
+
+Kalamazoo
+6,522
+1.03
+
+Genesee
+6,477
+0.92
+
+Ingham
+6,106
+0.75
+
+Washtenaw
+4,907
+0.43
+
+Livingston
+4,536
+1.34
+
+Saginaw
+3,351
+0.80
+
+Grand Traverse
+3,190
+1.17
+
+Allegan
+2,974
+1.37
+
+St. Clair
+2,641
+1.19
+
+Muskegon
+2,424
+0.73
+
+Jackson
+2,405
+0.82
+
+Midland
+2,209
+1.10
+
+Clinton
+2,096
+2.15
+
+Berrien
+1,974
+0.62
+
+Monroe
+1,940
+0.90
+
+Calhoun
+1,831
+0.64
+
+Isabella
+1,653
+1.18
+
+Eaton
+1,555
+0.67
+
+Bay
+1,520
+0.85
+
+Emmet
+1,501
+1.61
+
+Marquette
+1,461
+1.05
+
+Dickinson
+1,407
+1.94
+
+Lapeer
+1,273
+1.10
+
+Osceola
+938
+2.23
+
+Houghton
+788
+1.24
+
+Shiawassee
+773
+0.95
+
+St. Joseph
+741
+0.67
+
+Van Buren
+696
+0.61
+
+Montcalm
+678
+0.79
+
+Charlevoix
+670
+1.16
+
+Chippewa
+652
+0.97
+
+Delta
+639
+0.88
+
+Otsego
+626
+1.11
+
+Tuscola
+625
+0.98
+
+Barry
+607
+0.87
+
+Cheboygan
+581
+1.80
+
+Kalkaska
+559
+2.19
+
+Leelanau
+545
+1.56
+
+Mason
+545
+1.02
+
+Newaygo
+539
+0.86
+
+Huron
+523
+0.89
+
+Branch
+487
+0.61
+
+Antrim
+483
+1.79
+
+Alpena
+479
+0.75
+
+Benzie
+472
+1.84
+
+Gladwin
+453
+1.88
+
+Sanilac
+442
+0.81
+
+Clare
+391
+1.03
+
+Hillsdale
+385
+0.57
+
+Cass
+361
+0.73
+
+Iosco
+322
+0.79
+
+Manistee
+315
+0.82
+
+Oceana
+298
+0.88
+
+Ogemaw
+289
+0.92
+
+Wexford
+289
+0.42
+
+Gratiot
+288
+0.44
+
+Roscommon
+285
+0.84
+
+Mackinac
+232
+0.91
+
+Iron
+217
+1.21
+
+Gogebic
+201
+0.76
+
+Missaukee
+198
+0.90
+
+Mecosta
+168
+0.25
+
+Menominee
+155
+0.41
+
+Schoolcraft
+151
+1.06
+
+Alger
+108
+0.78
+
+Arenac
+108
+0.50
+
+Presque Isle
+105
+0.77
+
+Baraga
+79
+0.51
+
+Lake
+78
+0.86
+
+Oscoda
+75
+1.05
+
+Crawford
+70
+0.32
+
+Ontonagon
+67
+0.95
+
+Alcona
+47
+0.60
+
+Luce
+32
+0.34
+
+Keweenaw
+19
+0.76
+
+Ionia
+Not disclosed
+—
+
+Lenawee
+Not disclosed
+—
+
+Montmorency
+Not disclosed
+—
+
+Manufacturing — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Wayne
+89,659
+1.50
+
+Oakland
+68,661
+1.15
+
+Macomb
+63,562
+2.30
+
+Kent
+62,796
+1.84
+
+Ottawa
+40,464
+3.73
+
+Kalamazoo
+21,198
+2.14
+
+Allegan
+13,777
+4.05
+
+Genesee
+13,485
+1.23
+
+Muskegon
+13,093
+2.51
+
+Washtenaw
+11,602
+0.65
+
+Berrien
+11,601
+2.33
+
+Saginaw
+10,729
+1.64
+
+Ingham
+10,106
+0.79
+
+Calhoun
+10,071
+2.25
+
+Livingston
+9,756
+1.84
+
+Jackson
+9,250
+2.01
+
+Eaton
+7,983
+2.18
+
+St. Joseph
+7,477
+4.31
+
+St. Clair
+6,768
+1.95
+
+Monroe
+5,814
+1.72
+
+Lapeer
+4,738
+2.62
+
+Midland
+4,610
+1.47
+
+Grand Traverse
+4,503
+1.05
+
+Bay
+4,440
+1.58
+
+Lenawee
+4,313
+2.04
+
+Branch
+3,704
+2.96
+
+Ionia
+3,673
+2.41
+
+Barry
+3,667
+3.37
+
+Hillsdale
+3,601
+3.41
+
+Van Buren
+3,524
+1.99
+
+Wexford
+3,171
+2.93
+
+Montcalm
+3,141
+2.35
+
+Dickinson
+2,859
+2.52
+
+Charlevoix
+2,747
+3.04
+
+Sanilac
+2,720
+3.17
+
+Isabella
+2,589
+1.18
+
+Osceola
+2,518
+3.83
+
+Newaygo
+2,211
+2.26
+
+Menominee
+2,163
+3.68
+
+Cass
+2,023
+2.63
+
+Delta
+1,988
+1.75
+
+Mason
+1,973
+2.36
+
+Alpena
+1,896
+1.89
+
+Shiawassee
+1,771
+1.39
+
+Gratiot
+1,751
+1.72
+
+Clinton
+1,671
+1.09
+
+Huron
+1,669
+1.81
+
+Emmet
+1,564
+1.07
+
+Tuscola
+1,421
+1.43
+
+Oceana
+1,401
+2.64
+
+Mecosta
+1,226
+1.17
+
+Marquette
+1,185
+0.55
+
+Manistee
+1,058
+1.77
+
+Iosco
+1,006
+1.59
+
+Otsego
+998
+1.13
+
+Gladwin
+940
+2.49
+
+Houghton
+939
+0.94
+
+Clare
+924
+1.55
+
+Arenac
+879
+2.62
+
+Crawford
+719
+2.13
+
+Antrim
+685
+1.63
+
+Missaukee
+680
+1.96
+
+Gogebic
+611
+1.47
+
+Chippewa
+589
+0.56
+
+Leelanau
+556
+1.02
+
+Baraga
+520
+2.13
+
+Montmorency
+441
+2.62
+
+Alger
+397
+1.82
+
+Roscommon
+355
+0.67
+
+Ogemaw
+341
+0.69
+
+Benzie
+301
+0.75
+
+Iron
+287
+1.02
+
+Kalkaska
+287
+0.72
+
+Schoolcraft
+196
+0.88
+
+Alcona
+181
+1.47
+
+Oscoda
+148
+1.32
+
+Cheboygan
+143
+0.28
+
+Presque Isle
+122
+0.57
+
+Mackinac
+108
+0.27
+
+Lake
+63
+0.45
+
+Luce
+60
+0.41
+
+Keweenaw
+55
+1.40
+
+Ontonagon
+20
+0.18
+
+Wholesale trade — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Oakland
+38,222
+1.34
+
+Kent
+27,544
+1.68
+
+Macomb
+10,075
+0.76
+
+Genesee
+6,480
+1.23
+
+Washtenaw
+6,324
+0.74
+
+Ottawa
+5,141
+0.99
+
+Kalamazoo
+5,036
+1.06
+
+Ingham
+2,773
+0.45
+
+Livingston
+2,689
+1.06
+
+Saginaw
+2,386
+0.76
+
+Allegan
+2,079
+1.28
+
+Berrien
+1,822
+0.76
+
+Muskegon
+1,497
+0.60
+
+Grand Traverse
+1,482
+0.72
+
+Bay
+1,340
+1.00
+
+Jackson
+1,241
+0.56
+
+Clinton
+931
+1.27
+
+Branch
+727
+1.21
+
+Gratiot
+606
+1.24
+
+Lenawee
+527
+0.52
+
+Van Buren
+510
+0.60
+
+Lapeer
+481
+0.56
+
+Tuscola
+428
+0.90
+
+Menominee
+384
+1.36
+
+St. Joseph
+380
+0.46
+
+Ionia
+375
+0.51
+
+Delta
+366
+0.67
+
+Dickinson
+349
+0.64
+
+Otsego
+341
+0.81
+
+Cass
+324
+0.88
+
+Barry
+310
+0.59
+
+Montcalm
+295
+0.46
+
+Leelanau
+291
+1.11
+
+Manistee
+263
+0.92
+
+Oceana
+260
+1.02
+
+Clare
+240
+0.84
+
+Hillsdale
+229
+0.45
+
+Kalkaska
+219
+1.14
+
+Osceola
+176
+0.56
+
+Cheboygan
+163
+0.67
+
+Crawford
+124
+0.77
+
+Mason
+114
+0.28
+
+Charlevoix
+109
+0.25
+
+Arenac
+104
+0.65
+
+Antrim
+86
+0.43
+
+Baraga
+52
+0.44
+
+Iron
+29
+0.22
+
+Luce
+25
+0.36
+
+Alcona
+11
+0.19
+
+Alger
+Not disclosed
+—
+
+Alpena
+Not disclosed
+—
+
+Benzie
+Not disclosed
+—
+
+Calhoun
+Not disclosed
+—
+
+Chippewa
+Not disclosed
+—
+
+Eaton
+Not disclosed
+—
+
+Emmet
+Not disclosed
+—
+
+Gladwin
+Not disclosed
+—
+
+Gogebic
+Not disclosed
+—
+
+Houghton
+Not disclosed
+—
+
+Huron
+Not disclosed
+—
+
+Iosco
+Not disclosed
+—
+
+Isabella
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
+Mackinac
+Not disclosed
+—
+
+Marquette
+Not disclosed
+—
+
+Mecosta
+Not disclosed
+—
+
+Midland
+Not disclosed
+—
+
+Missaukee
+Not disclosed
+—
+
+Monroe
+Not disclosed
+—
+
+Montmorency
+Not disclosed
+—
+
+Newaygo
+Not disclosed
+—
+
+Ogemaw
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Oscoda
+Not disclosed
+—
+
+Presque Isle
+Not disclosed
+—
+
+Roscommon
+Not disclosed
+—
+
+Sanilac
+Not disclosed
+—
+
+Schoolcraft
+Not disclosed
+—
+
+Shiawassee
+Not disclosed
+—
+
+St. Clair
+Not disclosed
+—
+
+Wayne
+Not disclosed
+—
+
+Wexford
+Not disclosed
+—
+
+Retail trade — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Oakland
+71,533
+0.99
+
+Wayne
+64,087
+0.88
+
+Macomb
+40,456
+1.20
+
+Kent
+34,924
+0.84
+
+Genesee
+17,957
+1.34
+
+Washtenaw
+15,024
+0.69
+
+Kalamazoo
+12,358
+1.03
+
+Ingham
+12,012
+0.77
+
+Muskegon
+11,104
+1.75
+
+Saginaw
+10,842
+1.37
+
+Ottawa
+10,500
+0.80
+
+Livingston
+8,298
+1.29
+
+Grand Traverse
+7,218
+1.39
+
+Berrien
+7,096
+1.17
+
+Jackson
+6,349
+1.14
+
+Calhoun
+5,710
+1.05
+
+Eaton
+5,476
+1.23
+
+Monroe
+5,380
+1.31
+
+St. Clair
+5,342
+1.27
+
+Bay
+4,591
+1.35
+
+Marquette
+3,613
+1.37
+
+Lenawee
+3,612
+1.40
+
+Midland
+3,254
+0.85
+
+Allegan
+3,192
+0.77
+
+Isabella
+3,119
+1.17
+
+Lapeer
+2,958
+1.35
+
+Emmet
+2,948
+1.66
+
+Clinton
+2,617
+1.41
+
+Van Buren
+2,574
+1.19
+
+St. Joseph
+2,453
+1.16
+
+Montcalm
+2,399
+1.48
+
+Mecosta
+2,362
+1.86
+
+Otsego
+2,260
+2.11
+
+Shiawassee
+2,209
+1.42
+
+Delta
+2,044
+1.48
+
+Dickinson
+2,030
+1.47
+
+Hillsdale
+1,853
+1.44
+
+Wexford
+1,831
+1.39
+
+Newaygo
+1,775
+1.49
+
+Ionia
+1,747
+0.94
+
+Branch
+1,739
+1.14
+
+Alpena
+1,601
+1.31
+
+Houghton
+1,563
+1.29
+
+Chippewa
+1,554
+1.22
+
+Ogemaw
+1,515
+2.52
+
+Mason
+1,491
+1.47
+
+Tuscola
+1,398
+1.16
+
+Sanilac
+1,299
+1.25
+
+Gratiot
+1,295
+1.05
+
+Cheboygan
+1,245
+2.03
+
+Barry
+1,223
+0.93
+
+Huron
+1,202
+1.07
+
+Roscommon
+1,171
+1.82
+
+Manistee
+1,097
+1.51
+
+Oceana
+1,096
+1.70
+
+Iosco
+1,057
+1.37
+
+Clare
+938
+1.29
+
+Charlevoix
+895
+0.82
+
+Cass
+793
+0.85
+
+Gogebic
+755
+1.50
+
+Antrim
+711
+1.39
+
+Arenac
+682
+1.67
+
+Iron
+626
+1.84
+
+Missaukee
+610
+1.45
+
+Leelanau
+609
+0.92
+
+Benzie
+600
+1.23
+
+Gladwin
+555
+1.21
+
+Crawford
+546
+1.33
+
+Menominee
+531
+0.74
+
+Kalkaska
+472
+0.97
+
+Mackinac
+470
+0.97
+
+Osceola
+407
+0.51
+
+Ontonagon
+392
+2.93
+
+Presque Isle
+376
+1.45
+
+Schoolcraft
+318
+1.18
+
+Alcona
+296
+1.98
+
+Luce
+263
+1.47
+
+Montmorency
+229
+1.12
+
+Oscoda
+226
+1.66
+
+Alger
+201
+0.76
+
+Lake
+193
+1.12
+
+Baraga
+153
+0.52
+
+Keweenaw
+37
+0.78
+
+Transportation and warehousing — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Wayne
+58,035
+1.89
+
+Oakland
+15,153
+0.49
+
+Macomb
+13,767
+0.97
+
+Kent
+12,941
+0.74
+
+Washtenaw
+4,348
+0.47
+
+Ingham
+4,315
+0.66
+
+Eaton
+3,996
+2.12
+
+Ottawa
+3,001
+0.54
+
+Monroe
+2,107
+1.21
+
+Calhoun
+1,940
+0.84
+
+Branch
+1,432
+2.22
+
+Iosco
+1,422
+4.35
+
+Allegan
+1,156
+0.66
+
+Grand Traverse
+993
+0.45
+
+Isabella
+936
+0.83
+
+St. Clair
+916
+0.51
+
+Muskegon
+834
+0.31
+
+Clinton
+791
+1.00
+
+Marquette
+696
+0.62
+
+Shiawassee
+650
+0.99
+
+Wexford
+552
+0.99
+
+Delta
+473
+0.81
+
+Midland
+438
+0.27
+
+Huron
+410
+0.86
+
+Dickinson
+371
+0.64
+
+Montcalm
+351
+0.51
+
+Otsego
+342
+0.75
+
+Lapeer
+338
+0.36
+
+Ogemaw
+307
+1.21
+
+Mason
+287
+0.67
+
+Chippewa
+275
+0.51
+
+Mackinac
+259
+1.26
+
+Mecosta
+225
+0.42
+
+Missaukee
+196
+1.10
+
+Cheboygan
+187
+0.72
+
+Newaygo
+173
+0.34
+
+Gogebic
+97
+0.45
+
+Manistee
+77
+0.25
+
+Alger
+74
+0.66
+
+Charlevoix
+71
+0.15
+
+Roscommon
+66
+0.24
+
+Iron
+52
+0.36
+
+Schoolcraft
+31
+0.27
+
+Leelanau
+30
+0.11
+
+Montmorency
+22
+0.25
+
+Alcona
+Not disclosed
+—
+
+Alpena
+Not disclosed
+—
+
+Antrim
+Not disclosed
+—
+
+Arenac
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Barry
+Not disclosed
+—
+
+Bay
+Not disclosed
+—
+
+Benzie
+Not disclosed
+—
+
+Berrien
+Not disclosed
+—
+
+Cass
+Not disclosed
+—
+
+Clare
+Not disclosed
+—
+
+Crawford
+Not disclosed
+—
+
+Emmet
+Not disclosed
+—
+
+Genesee
+Not disclosed
+—
+
+Gladwin
+Not disclosed
+—
+
+Gratiot
+Not disclosed
+—
+
+Hillsdale
+Not disclosed
+—
+
+Houghton
+Not disclosed
+—
+
+Ionia
+Not disclosed
+—
+
+Jackson
+Not disclosed
+—
+
+Kalamazoo
+Not disclosed
+—
+
+Kalkaska
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
+Lenawee
+Not disclosed
+—
+
+Livingston
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Menominee
+Not disclosed
+—
+
+Oceana
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Osceola
+Not disclosed
+—
+
+Oscoda
+Not disclosed
+—
+
+Presque Isle
+Not disclosed
+—
+
+Saginaw
+Not disclosed
+—
+
+Sanilac
+Not disclosed
+—
+
+St. Joseph
+Not disclosed
+—
+
+Tuscola
+Not disclosed
+—
+
+Van Buren
+Not disclosed
+—
+
+Information — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Oakland
+13,074
+0.96
+
+Wayne
+5,836
+0.43
+
+Kent
+4,273
+0.55
+
+Washtenaw
+3,909
+0.96
+
+Ingham
+2,234
+0.77
+
+Macomb
+1,887
+0.30
+
+Genesee
+850
+0.34
+
+Kalamazoo
+695
+0.31
+
+Saginaw
+687
+0.46
+
+Ottawa
+667
+0.27
+
+Grand Traverse
+662
+0.68
+
+Eaton
+506
+0.61
+
+Livingston
+415
+0.34
+
+Berrien
+386
+0.34
+
+Bay
+297
+0.46
+
+Lenawee
+293
+0.61
+
+Muskegon
+264
+0.22
+
+Marquette
+249
+0.50
+
+Delta
+242
+0.93
+
+Monroe
+213
+0.28
+
+Midland
+207
+0.29
+
+Huron
+197
+0.94
+
+St. Clair
+194
+0.24
+
+Wexford
+194
+0.79
+
+Calhoun
+181
+0.18
+
+Isabella
+179
+0.36
+
+Lapeer
+179
+0.43
+
+Allegan
+178
+0.23
+
+Shiawassee
+174
+0.60
+
+Emmet
+169
+0.51
+
+Mason
+169
+0.89
+
+Jackson
+148
+0.14
+
+Alpena
+141
+0.62
+
+Montcalm
+132
+0.43
+
+Houghton
+130
+0.57
+
+Barry
+119
+0.48
+
+Sanilac
+114
+0.58
+
+Van Buren
+109
+0.27
+
+Tuscola
+104
+0.46
+
+Mecosta
+102
+0.43
+
+Antrim
+97
+1.01
+
+Hillsdale
+91
+0.38
+
+Branch
+84
+0.29
+
+Clinton
+83
+0.24
+
+Dickinson
+72
+0.28
+
+Charlevoix
+71
+0.34
+
+Iosco
+55
+0.38
+
+Ogemaw
+48
+0.43
+
+Otsego
+48
+0.24
+
+Chippewa
+47
+0.20
+
+Gratiot
+46
+0.20
+
+Manistee
+41
+0.30
+
+Leelanau
+40
+0.32
+
+St. Joseph
+40
+0.10
+
+Newaygo
+36
+0.16
+
+Gogebic
+31
+0.33
+
+Kalkaska
+30
+0.33
+
+Presque Isle
+26
+0.53
+
+Ionia
+23
+0.07
+
+Crawford
+22
+0.29
+
+Benzie
+20
+0.22
+
+Gladwin
+19
+0.22
+
+Roscommon
+18
+0.15
+
+Cass
+16
+0.09
+
+Alcona
+14
+0.50
+
+Iron
+14
+0.22
+
+Cheboygan
+10
+0.09
+
+Clare
+9
+0.07
+
+Missaukee
+7
+0.09
+
+Oscoda
+6
+0.23
+
+Alger
+Not disclosed
+—
+
+Arenac
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Mackinac
+Not disclosed
+—
+
+Menominee
+Not disclosed
+—
+
+Montmorency
+Not disclosed
+—
+
+Oceana
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Osceola
+Not disclosed
+—
+
+Schoolcraft
+Not disclosed
+—
+
+Finance and insurance — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Oakland
+42,518
+1.45
+
+Wayne
+27,371
+0.93
+
+Kent
+15,039
+0.89
+
+Ingham
+6,758
+1.07
+
+Macomb
+5,596
+0.41
+
+Eaton
+4,836
+2.68
+
+Genesee
+3,920
+0.72
+
+Washtenaw
+3,448
+0.39
+
+Kalamazoo
+3,326
+0.68
+
+Saginaw
+2,868
+0.89
+
+Ottawa
+2,381
+0.44
+
+Grand Traverse
+2,283
+1.08
+
+Berrien
+2,013
+0.82
+
+Jackson
+1,579
+0.70
+
+Livingston
+1,558
+0.60
+
+Lenawee
+1,035
+0.99
+
+Muskegon
+955
+0.37
+
+Calhoun
+943
+0.43
+
+St. Clair
+861
+0.50
+
+Isabella
+705
+0.65
+
+Monroe
+684
+0.41
+
+Marquette
+673
+0.63
+
+Ionia
+646
+0.86
+
+Midland
+641
+0.41
+
+Barry
+617
+1.15
+
+Newaygo
+596
+1.23
+
+Bay
+587
+0.42
+
+Clinton
+587
+0.78
+
+Branch
+509
+0.82
+
+Otsego
+482
+1.11
+
+Lapeer
+449
+0.50
+
+St. Joseph
+445
+0.52
+
+Huron
+442
+0.97
+
+Alpena
+429
+0.87
+
+Delta
+423
+0.75
+
+Allegan
+384
+0.23
+
+Houghton
+375
+0.76
+
+Gratiot
+328
+0.65
+
+Sanilac
+321
+0.76
+
+Emmet
+317
+0.44
+
+Montcalm
+307
+0.47
+
+Dickinson
+259
+0.46
+
+Hillsdale
+258
+0.49
+
+Chippewa
+253
+0.49
+
+Shiawassee
+253
+0.40
+
+Tuscola
+246
+0.50
+
+Mason
+240
+0.58
+
+Cass
+228
+0.60
+
+Van Buren
+221
+0.25
+
+Benzie
+199
+1.00
+
+Cheboygan
+196
+0.79
+
+Iosco
+175
+0.56
+
+Wexford
+150
+0.28
+
+Charlevoix
+145
+0.33
+
+Mecosta
+136
+0.26
+
+Manistee
+128
+0.43
+
+Menominee
+119
+0.41
+
+Iron
+117
+0.85
+
+Ogemaw
+113
+0.46
+
+Roscommon
+104
+0.40
+
+Gogebic
+103
+0.50
+
+Leelanau
+100
+0.37
+
+Presque Isle
+98
+0.93
+
+Osceola
+95
+0.29
+
+Gladwin
+94
+0.50
+
+Antrim
+92
+0.44
+
+Oceana
+92
+0.35
+
+Clare
+82
+0.28
+
+Mackinac
+81
+0.41
+
+Montmorency
+65
+0.78
+
+Alger
+59
+0.55
+
+Crawford
+51
+0.31
+
+Kalkaska
+33
+0.17
+
+Alcona
+29
+0.48
+
+Arenac
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Missaukee
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Oscoda
+Not disclosed
+—
+
+Schoolcraft
+Not disclosed
+—
+
+Real estate and rental and leasing — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Oakland
+19,133
+1.70
+
+Wayne
+7,272
+0.65
+
+Kent
+4,513
+0.70
+
+Macomb
+3,986
+0.76
+
+Washtenaw
+2,581
+0.76
+
+Ingham
+2,360
+0.98
+
+Kalamazoo
+1,793
+0.96
+
+Genesee
+1,784
+0.86
+
+Ottawa
+1,064
+0.52
+
+Livingston
+959
+0.96
+
+Grand Traverse
+624
+0.77
+
+Muskegon
+623
+0.63
+
+Saginaw
+614
+0.50
+
+Clinton
+553
+1.91
+
+Jackson
+532
+0.61
+
+Berrien
+493
+0.52
+
+Bay
+407
+0.77
+
+Eaton
+387
+0.56
+
+Allegan
+371
+0.58
+
+Midland
+348
+0.59
+
+St. Clair
+290
+0.44
+
+Emmet
+264
+0.96
+
+Marquette
+264
+0.64
+
+Isabella
+254
+0.61
+
+Calhoun
+238
+0.28
+
+Monroe
+223
+0.35
+
+Charlevoix
+204
+1.20
+
+Lapeer
+201
+0.59
+
+Lenawee
+155
+0.39
+
+Shiawassee
+117
+0.48
+
+Leelanau
+114
+1.10
+
+Gladwin
+113
+1.58
+
+Houghton
+113
+0.60
+
+Mason
+109
+0.69
+
+Alpena
+108
+0.57
+
+Van Buren
+96
+0.29
+
+Chippewa
+87
+0.44
+
+Wexford
+80
+0.39
+
+Mecosta
+73
+0.37
+
+St. Joseph
+73
+0.22
+
+Tuscola
+67
+0.36
+
+Antrim
+64
+0.80
+
+Benzie
+64
+0.84
+
+Kalkaska
+64
+0.85
+
+Otsego
+64
+0.39
+
+Roscommon
+60
+0.60
+
+Dickinson
+56
+0.26
+
+Barry
+55
+0.27
+
+Menominee
+55
+0.50
+
+Delta
+54
+0.25
+
+Gratiot
+53
+0.28
+
+Iosco
+52
+0.43
+
+Oceana
+51
+0.51
+
+Cheboygan
+50
+0.52
+
+Ionia
+50
+0.17
+
+Cass
+48
+0.33
+
+Clare
+45
+0.40
+
+Hillsdale
+44
+0.22
+
+Branch
+42
+0.18
+
+Ogemaw
+39
+0.42
+
+Manistee
+38
+0.34
+
+Mackinac
+37
+0.49
+
+Newaygo
+36
+0.19
+
+Sanilac
+36
+0.22
+
+Montcalm
+33
+0.13
+
+Alger
+26
+0.63
+
+Iron
+26
+0.49
+
+Montmorency
+24
+0.75
+
+Alcona
+23
+0.99
+
+Osceola
+23
+0.18
+
+Gogebic
+21
+0.27
+
+Presque Isle
+18
+0.45
+
+Crawford
+13
+0.20
+
+Huron
+11
+0.06
+
+Arenac
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Missaukee
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Oscoda
+Not disclosed
+—
+
+Schoolcraft
+Not disclosed
+—
+
+Professional and technical services — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Oakland
+93,104
+1.85
+
+Wayne
+53,927
+1.07
+
+Macomb
+30,840
+1.32
+
+Kent
+19,530
+0.68
+
+Washtenaw
+17,908
+1.18
+
+Ingham
+7,664
+0.71
+
+Kalamazoo
+5,959
+0.71
+
+Genesee
+5,055
+0.54
+
+Livingston
+4,832
+1.08
+
+Ottawa
+4,764
+0.52
+
+Saginaw
+2,524
+0.46
+
+Jackson
+2,275
+0.58
+
+Calhoun
+2,246
+0.59
+
+Van Buren
+2,178
+1.45
+
+Grand Traverse
+2,117
+0.59
+
+Muskegon
+1,848
+0.42
+
+St. Clair
+1,487
+0.51
+
+Bay
+1,411
+0.59
+
+Berrien
+1,375
+0.33
+
+Midland
+1,035
+0.39
+
+Marquette
+846
+0.46
+
+Allegan
+720
+0.25
+
+Shiawassee
+686
+0.63
+
+Houghton
+671
+0.80
+
+Isabella
+639
+0.34
+
+St. Joseph
+583
+0.40
+
+Lapeer
+524
+0.34
+
+Lenawee
+469
+0.26
+
+Dickinson
+370
+0.39
+
+Cass
+343
+0.53
+
+Sanilac
+300
+0.41
+
+Otsego
+271
+0.36
+
+Cheboygan
+261
+0.61
+
+Clare
+252
+0.50
+
+Montcalm
+182
+0.16
+
+Antrim
+173
+0.48
+
+Arenac
+161
+0.57
+
+Iosco
+124
+0.23
+
+Benzie
+120
+0.35
+
+Iron
+120
+0.51
+
+Manistee
+98
+0.19
+
+Oceana
+96
+0.21
+
+Crawford
+87
+0.30
+
+Gogebic
+71
+0.20
+
+Roscommon
+65
+0.15
+
+Missaukee
+61
+0.21
+
+Ogemaw
+59
+0.14
+
+Schoolcraft
+53
+0.28
+
+Alger
+45
+0.24
+
+Lake
+32
+0.27
+
+Presque Isle
+32
+0.18
+
+Alcona
+23
+0.22
+
+Oscoda
+17
+0.18
+
+Alpena
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Barry
+Not disclosed
+—
+
+Branch
+Not disclosed
+—
+
+Charlevoix
+Not disclosed
+—
+
+Chippewa
+Not disclosed
+—
+
+Clinton
+Not disclosed
+—
+
+Delta
+Not disclosed
+—
+
+Eaton
+Not disclosed
+—
+
+Emmet
+Not disclosed
+—
+
+Gladwin
+Not disclosed
+—
+
+Gratiot
+Not disclosed
+—
+
+Hillsdale
+Not disclosed
+—
+
+Huron
+Not disclosed
+—
+
+Ionia
+Not disclosed
+—
+
+Kalkaska
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Leelanau
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Mackinac
+Not disclosed
+—
+
+Mason
+Not disclosed
+—
+
+Mecosta
+Not disclosed
+—
+
+Menominee
+Not disclosed
+—
+
+Monroe
+Not disclosed
+—
+
+Montmorency
+Not disclosed
+—
+
+Newaygo
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Osceola
+Not disclosed
+—
+
+Tuscola
+Not disclosed
+—
+
+Wexford
+Not disclosed
+—
+
+Management of companies and enterprises — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Wayne
+19,605
+1.60
+
+Oakland
+15,819
+1.30
+
+Macomb
+8,888
+1.57
+
+Kent
+5,587
+0.80
+
+Midland
+3,834
+5.94
+
+Ingham
+2,567
+0.98
+
+Washtenaw
+1,845
+0.50
+
+Livingston
+567
+0.52
+
+Jackson
+566
+0.60
+
+Calhoun
+429
+0.47
+
+Genesee
+378
+0.17
+
+Marquette
+351
+0.79
+
+Saginaw
+269
+0.20
+
+Van Buren
+257
+0.71
+
+Ottawa
+230
+0.10
+
+Kalamazoo
+158
+0.08
+
+Berrien
+119
+0.12
+
+St. Joseph
+79
+0.22
+
+Allegan
+77
+0.11
+
+Muskegon
+77
+0.07
+
+Grand Traverse
+46
+0.05
+
+Roscommon
+43
+0.40
+
+Lenawee
+40
+0.09
+
+Cass
+13
+0.08
+
+Lapeer
+10
+0.03
+
+Alcona
+Not disclosed
+—
+
+Alger
+Not disclosed
+—
+
+Alpena
+Not disclosed
+—
+
+Antrim
+Not disclosed
+—
+
+Arenac
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Barry
+Not disclosed
+—
+
+Bay
+Not disclosed
+—
+
+Benzie
+Not disclosed
+—
+
+Branch
+Not disclosed
+—
+
+Charlevoix
+Not disclosed
+—
+
+Cheboygan
+Not disclosed
+—
+
+Chippewa
+Not disclosed
+—
+
+Clare
+Not disclosed
+—
+
+Clinton
+Not disclosed
+—
+
+Crawford
+Not disclosed
+—
+
+Delta
+Not disclosed
+—
+
+Dickinson
+Not disclosed
+—
+
+Eaton
+Not disclosed
+—
+
+Emmet
+Not disclosed
+—
+
+Gladwin
+Not disclosed
+—
+
+Gogebic
+Not disclosed
+—
+
+Gratiot
+Not disclosed
+—
+
+Hillsdale
+Not disclosed
+—
+
+Houghton
+Not disclosed
+—
+
+Huron
+Not disclosed
+—
+
+Ionia
+Not disclosed
+—
+
+Iosco
+Not disclosed
+—
+
+Iron
+Not disclosed
+—
+
+Isabella
+Not disclosed
+—
+
+Kalkaska
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
+Leelanau
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Mackinac
+Not disclosed
+—
+
+Manistee
+Not disclosed
+—
+
+Mason
+Not disclosed
+—
+
+Mecosta
+Not disclosed
+—
+
+Menominee
+Not disclosed
+—
+
+Missaukee
+Not disclosed
+—
+
+Monroe
+Not disclosed
+—
+
+Montcalm
+Not disclosed
+—
+
+Montmorency
+Not disclosed
+—
+
+Newaygo
+Not disclosed
+—
+
+Oceana
+Not disclosed
+—
+
+Ogemaw
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Osceola
+Not disclosed
+—
+
+Oscoda
+Not disclosed
+—
+
+Otsego
+Not disclosed
+—
+
+Presque Isle
+Not disclosed
+—
+
+Sanilac
+Not disclosed
+—
+
+Schoolcraft
+Not disclosed
+—
+
+Shiawassee
+Not disclosed
+—
+
+St. Clair
+Not disclosed
+—
+
+Tuscola
+Not disclosed
+—
+
+Wexford
+Not disclosed
+—
+
+Administrative and waste services — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Oakland
+49,441
+1.16
+
+Kent
+48,794
+1.99
+
+Wayne
+38,789
+0.91
+
+Macomb
+14,731
+0.74
+
+Genesee
+10,721
+1.36
+
+Washtenaw
+7,195
+0.56
+
+Ottawa
+6,750
+0.87
+
+Ingham
+5,843
+0.64
+
+Kalamazoo
+5,719
+0.80
+
+Saginaw
+5,214
+1.11
+
+Berrien
+3,037
+0.85
+
+Midland
+3,036
+1.35
+
+Jackson
+2,986
+0.91
+
+Calhoun
+2,414
+0.75
+
+Monroe
+2,310
+0.95
+
+Livingston
+2,149
+0.57
+
+Muskegon
+1,553
+0.42
+
+Grand Traverse
+1,398
+0.46
+
+Eaton
+1,137
+0.43
+
+Lapeer
+1,113
+0.86
+
+Emmet
+925
+0.89
+
+Allegan
+872
+0.36
+
+Clinton
+872
+0.80
+
+Delta
+861
+1.06
+
+Marquette
+783
+0.50
+
+Van Buren
+758
+0.60
+
+Tuscola
+591
+0.83
+
+Lenawee
+561
+0.37
+
+Montcalm
+517
+0.54
+
+Mecosta
+498
+0.66
+
+Newaygo
+498
+0.71
+
+Wexford
+455
+0.59
+
+Gratiot
+452
+0.62
+
+Hillsdale
+445
+0.59
+
+Huron
+391
+0.59
+
+Branch
+374
+0.42
+
+Cass
+350
+0.63
+
+St. Joseph
+334
+0.27
+
+Barry
+331
+0.42
+
+Charlevoix
+322
+0.50
+
+Mason
+282
+0.47
+
+Leelanau
+251
+0.64
+
+Arenac
+242
+1.01
+
+Clare
+223
+0.52
+
+Osceola
+200
+0.42
+
+Iosco
+191
+0.42
+
+Benzie
+156
+0.54
+
+Sanilac
+154
+0.25
+
+Houghton
+151
+0.21
+
+Gladwin
+129
+0.48
+
+Manistee
+104
+0.24
+
+Presque Isle
+91
+0.60
+
+Ogemaw
+71
+0.20
+
+Oscoda
+69
+0.86
+
+Roscommon
+68
+0.18
+
+Mackinac
+66
+0.23
+
+Alcona
+36
+0.41
+
+Gogebic
+30
+0.10
+
+Missaukee
+28
+0.11
+
+Schoolcraft
+17
+0.11
+
+Alger
+Not disclosed
+—
+
+Alpena
+Not disclosed
+—
+
+Antrim
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Bay
+Not disclosed
+—
+
+Cheboygan
+Not disclosed
+—
+
+Chippewa
+Not disclosed
+—
+
+Crawford
+Not disclosed
+—
+
+Dickinson
+Not disclosed
+—
+
+Ionia
+Not disclosed
+—
+
+Iron
+Not disclosed
+—
+
+Isabella
+Not disclosed
+—
+
+Kalkaska
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Menominee
+Not disclosed
+—
+
+Montmorency
+Not disclosed
+—
+
+Oceana
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Otsego
+Not disclosed
+—
+
+Shiawassee
+Not disclosed
+—
+
+St. Clair
+Not disclosed
+—
+
+Educational services — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Oakland
+11,862
+0.79
+
+Wayne
+11,073
+0.74
+
+Kent
+10,460
+1.22
+
+Washtenaw
+3,590
+0.80
+
+Ottawa
+2,959
+1.09
+
+Ingham
+2,582
+0.80
+
+Kalamazoo
+2,538
+1.02
+
+Macomb
+2,396
+0.34
+
+Genesee
+2,394
+0.87
+
+Lenawee
+1,384
+2.59
+
+Grand Traverse
+1,273
+1.18
+
+Berrien
+1,259
+1.00
+
+Jackson
+1,057
+0.91
+
+Eaton
+910
+0.99
+
+Calhoun
+836
+0.74
+
+Midland
+726
+0.92
+
+Muskegon
+725
+0.55
+
+Allegan
+518
+0.61
+
+Saginaw
+439
+0.27
+
+Monroe
+395
+0.46
+
+Livingston
+379
+0.28
+
+St. Clair
+304
+0.35
+
+Bay
+172
+0.24
+
+Isabella
+159
+0.29
+
+Lapeer
+145
+0.32
+
+Ionia
+132
+0.34
+
+Wexford
+123
+0.45
+
+Clinton
+119
+0.31
+
+Leelanau
+114
+0.83
+
+Barry
+109
+0.40
+
+Marquette
+107
+0.20
+
+Shiawassee
+103
+0.32
+
+Emmet
+83
+0.23
+
+Mecosta
+83
+0.31
+
+Delta
+74
+0.26
+
+Newaygo
+74
+0.30
+
+Dickinson
+69
+0.24
+
+Van Buren
+69
+0.15
+
+Chippewa
+52
+0.20
+
+St. Joseph
+49
+0.11
+
+Houghton
+48
+0.19
+
+Cheboygan
+38
+0.30
+
+Mackinac
+34
+0.34
+
+Huron
+31
+0.13
+
+Sanilac
+31
+0.14
+
+Branch
+29
+0.09
+
+Tuscola
+23
+0.09
+
+Mason
+21
+0.10
+
+Benzie
+19
+0.19
+
+Montcalm
+15
+0.04
+
+Alpena
+14
+0.06
+
+Gladwin
+8
+0.08
+
+Alcona
+Not disclosed
+—
+
+Alger
+Not disclosed
+—
+
+Antrim
+Not disclosed
+—
+
+Arenac
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Cass
+Not disclosed
+—
+
+Charlevoix
+Not disclosed
+—
+
+Clare
+Not disclosed
+—
+
+Crawford
+Not disclosed
+—
+
+Gogebic
+Not disclosed
+—
+
+Gratiot
+Not disclosed
+—
+
+Hillsdale
+Not disclosed
+—
+
+Iosco
+Not disclosed
+—
+
+Iron
+Not disclosed
+—
+
+Kalkaska
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Manistee
+Not disclosed
+—
+
+Menominee
+Not disclosed
+—
+
+Missaukee
+Not disclosed
+—
+
+Montmorency
+Not disclosed
+—
+
+Oceana
+Not disclosed
+—
+
+Ogemaw
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Osceola
+Not disclosed
+—
+
+Oscoda
+Not disclosed
+—
+
+Otsego
+Not disclosed
+—
+
+Presque Isle
+Not disclosed
+—
+
+Roscommon
+Not disclosed
+—
+
+Schoolcraft
+Not disclosed
+—
+
+Health care and social assistance — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Wayne
+116,757
+1.12
+
+Oakland
+110,614
+1.07
+
+Kent
+67,987
+1.14
+
+Macomb
+43,428
+0.90
+
+Washtenaw
+28,273
+0.90
+
+Ingham
+24,527
+1.10
+
+Genesee
+23,203
+1.21
+
+Kalamazoo
+20,432
+1.18
+
+Saginaw
+14,629
+1.28
+
+Grand Traverse
+10,937
+1.47
+
+Muskegon
+10,424
+1.15
+
+Ottawa
+9,743
+0.52
+
+Midland
+8,647
+1.58
+
+Calhoun
+8,542
+1.10
+
+Jackson
+8,476
+1.06
+
+Berrien
+8,001
+0.92
+
+Livingston
+7,974
+0.86
+
+St. Clair
+7,082
+1.17
+
+Bay
+6,019
+1.23
+
+Marquette
+4,928
+1.30
+
+Monroe
+4,683
+0.79
+
+Lenawee
+3,610
+0.98
+
+Isabella
+3,145
+0.82
+
+Emmet
+2,741
+1.08
+
+Allegan
+2,612
+0.44
+
+Shiawassee
+2,551
+1.15
+
+Eaton
+2,514
+0.39
+
+St. Joseph
+2,247
+0.74
+
+Montcalm
+2,182
+0.94
+
+Tuscola
+1,960
+1.13
+
+Delta
+1,935
+0.97
+
+Alpena
+1,917
+1.10
+
+Clinton
+1,908
+0.72
+
+Lapeer
+1,895
+0.60
+
+Houghton
+1,792
+1.03
+
+Wexford
+1,655
+0.88
+
+Huron
+1,644
+1.02
+
+Mecosta
+1,597
+0.87
+
+Van Buren
+1,388
+0.45
+
+Newaygo
+1,317
+0.77
+
+Ionia
+1,242
+0.47
+
+Barry
+1,237
+0.65
+
+Dickinson
+1,206
+0.61
+
+Mason
+1,163
+0.80
+
+Sanilac
+1,149
+0.77
+
+Clare
+1,074
+1.03
+
+Osceola
+963
+0.84
+
+Branch
+846
+0.39
+
+Crawford
+788
+1.34
+
+Chippewa
+776
+0.42
+
+Cheboygan
+563
+0.64
+
+Leelanau
+529
+0.55
+
+Gladwin
+466
+0.71
+
+Benzie
+453
+0.65
+
+Mackinac
+398
+0.57
+
+Iron
+277
+0.57
+
+Alcona
+148
+0.69
+
+Schoolcraft
+123
+0.32
+
+Ontonagon
+65
+0.34
+
+Oscoda
+54
+0.28
+
+Alger
+Not disclosed
+—
+
+Antrim
+Not disclosed
+—
+
+Arenac
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Cass
+Not disclosed
+—
+
+Charlevoix
+Not disclosed
+—
+
+Gogebic
+Not disclosed
+—
+
+Gratiot
+Not disclosed
+—
+
+Hillsdale
+Not disclosed
+—
+
+Iosco
+Not disclosed
+—
+
+Kalkaska
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Manistee
+Not disclosed
+—
+
+Menominee
+Not disclosed
+—
+
+Missaukee
+Not disclosed
+—
+
+Montmorency
+Not disclosed
+—
+
+Oceana
+Not disclosed
+—
+
+Ogemaw
+Not disclosed
+—
+
+Otsego
+Not disclosed
+—
+
+Presque Isle
+Not disclosed
+—
+
+Roscommon
+Not disclosed
+—
+
+Arts, entertainment, and recreation — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Oakland
+11,009
+0.90
+
+Wayne
+10,748
+0.88
+
+Kent
+4,889
+0.70
+
+Macomb
+3,004
+0.53
+
+Washtenaw
+2,641
+0.72
+
+Genesee
+1,842
+0.82
+
+Kalamazoo
+1,838
+0.91
+
+Ingham
+1,506
+0.58
+
+Ottawa
+1,393
+0.63
+
+Livingston
+1,112
+1.03
+
+Muskegon
+970
+0.91
+
+Berrien
+866
+0.85
+
+Grand Traverse
+754
+0.86
+
+Saginaw
+712
+0.53
+
+Midland
+711
+1.10
+
+Allegan
+647
+0.93
+
+Emmet
+596
+2.00
+
+Jackson
+584
+0.62
+
+Bay
+559
+0.97
+
+Calhoun
+540
+0.59
+
+St. Clair
+487
+0.69
+
+Monroe
+455
+0.66
+
+Clinton
+427
+1.36
+
+Lenawee
+392
+0.90
+
+Eaton
+371
+0.50
+
+Isabella
+362
+0.81
+
+Marquette
+346
+0.78
+
+Charlevoix
+302
+1.64
+
+Van Buren
+278
+0.77
+
+Manistee
+221
+1.81
+
+Otsego
+218
+1.21
+
+Shiawassee
+217
+0.83
+
+Antrim
+213
+2.47
+
+Ionia
+210
+0.67
+
+Cass
+193
+1.23
+
+Lapeer
+193
+0.52
+
+Barry
+190
+0.85
+
+Mecosta
+182
+0.85
+
+Delta
+171
+0.73
+
+Roscommon
+168
+1.55
+
+Leelanau
+163
+1.46
+
+Wexford
+160
+0.72
+
+Branch
+153
+0.60
+
+Benzie
+138
+1.68
+
+Dickinson
+136
+0.59
+
+Montcalm
+131
+0.48
+
+Mason
+130
+0.76
+
+St. Joseph
+128
+0.36
+
+Cheboygan
+127
+1.23
+
+Oceana
+126
+1.16
+
+Clare
+121
+0.99
+
+Sanilac
+119
+0.68
+
+Newaygo
+116
+0.58
+
+Gogebic
+115
+1.36
+
+Tuscola
+109
+0.54
+
+Huron
+108
+0.57
+
+Alpena
+103
+0.50
+
+Houghton
+100
+0.49
+
+Iosco
+97
+0.75
+
+Iron
+92
+1.61
+
+Chippewa
+85
+0.40
+
+Mackinac
+79
+0.97
+
+Montmorency
+78
+2.26
+
+Ogemaw
+78
+0.77
+
+Gratiot
+73
+0.35
+
+Arenac
+54
+0.79
+
+Gladwin
+50
+0.65
+
+Hillsdale
+47
+0.22
+
+Menominee
+43
+0.36
+
+Osceola
+28
+0.21
+
+Schoolcraft
+18
+0.40
+
+Alcona
+Not disclosed
+—
+
+Alger
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Crawford
+Not disclosed
+—
+
+Kalkaska
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Missaukee
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Oscoda
+Not disclosed
+—
+
+Presque Isle
+Not disclosed
+—
+
+Accommodation and food services — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Wayne
+60,098
+0.91
+
+Oakland
+57,076
+0.87
+
+Kent
+31,658
+0.84
+
+Macomb
+28,154
+0.92
+
+Washtenaw
+13,791
+0.70
+
+Genesee
+13,246
+1.09
+
+Kalamazoo
+11,060
+1.01
+
+Ingham
+10,705
+0.76
+
+Ottawa
+10,395
+0.87
+
+Saginaw
+8,057
+1.11
+
+Livingston
+7,462
+1.27
+
+Muskegon
+6,838
+1.18
+
+Berrien
+6,789
+1.23
+
+Grand Traverse
+6,035
+1.28
+
+St. Clair
+5,028
+1.31
+
+Jackson
+4,590
+0.90
+
+Monroe
+4,278
+1.14
+
+Calhoun
+4,275
+0.86
+
+Bay
+3,975
+1.28
+
+Eaton
+3,624
+0.90
+
+Allegan
+3,120
+0.83
+
+Marquette
+3,108
+1.30
+
+Midland
+2,955
+0.85
+
+Emmet
+2,402
+1.49
+
+Isabella
+2,298
+0.95
+
+Van Buren
+2,200
+1.12
+
+Lenawee
+2,151
+0.92
+
+Lapeer
+2,121
+1.06
+
+Roscommon
+1,916
+3.28
+
+Charlevoix
+1,834
+1.84
+
+Montcalm
+1,744
+1.18
+
+Clinton
+1,619
+0.96
+
+Branch
+1,606
+1.16
+
+St. Joseph
+1,596
+0.83
+
+Mackinac
+1,566
+3.56
+
+Shiawassee
+1,427
+1.01
+
+Houghton
+1,396
+1.27
+
+Barry
+1,354
+1.13
+
+Otsego
+1,353
+1.39
+
+Benzie
+1,225
+2.76
+
+Delta
+1,219
+0.97
+
+Ionia
+1,207
+0.72
+
+Dickinson
+1,164
+0.93
+
+Cass
+1,156
+1.36
+
+Mecosta
+1,094
+0.94
+
+Wexford
+1,052
+0.88
+
+Chippewa
+1,047
+0.90
+
+Cheboygan
+1,040
+1.86
+
+Mason
+1,014
+1.09
+
+Tuscola
+992
+0.90
+
+Leelanau
+987
+1.63
+
+Alpena
+932
+0.84
+
+Sanilac
+882
+0.93
+
+Antrim
+835
+1.79
+
+Hillsdale
+816
+0.70
+
+Clare
+812
+1.23
+
+Huron
+799
+0.78
+
+Oceana
+754
+1.28
+
+Newaygo
+753
+0.70
+
+Iosco
+681
+0.97
+
+Ogemaw
+676
+1.24
+
+Manistee
+666
+1.01
+
+Gratiot
+637
+0.57
+
+Gogebic
+560
+1.22
+
+Menominee
+484
+0.74
+
+Gladwin
+465
+1.11
+
+Arenac
+346
+0.93
+
+Iron
+314
+1.01
+
+Schoolcraft
+305
+1.24
+
+Osceola
+282
+0.39
+
+Montmorency
+189
+1.01
+
+Alcona
+Not disclosed
+—
+
+Alger
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Crawford
+Not disclosed
+—
+
+Kalkaska
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Missaukee
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Oscoda
+Not disclosed
+—
+
+Presque Isle
+Not disclosed
+—
+
+Other services, except public administration — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Wayne
+22,945
+1.05
+
+Oakland
+21,497
+0.99
+
+Kent
+13,090
+1.05
+
+Macomb
+9,649
+0.95
+
+Ingham
+6,042
+1.29
+
+Washtenaw
+4,901
+0.75
+
+Ottawa
+4,789
+1.21
+
+Genesee
+4,021
+1.00
+
+Kalamazoo
+4,000
+1.10
+
+Saginaw
+2,539
+1.06
+
+Berrien
+2,176
+1.19
+
+Livingston
+2,157
+1.11
+
+Grand Traverse
+1,858
+1.19
+
+Muskegon
+1,828
+0.96
+
+Midland
+1,816
+1.58
+
+Jackson
+1,765
+1.05
+
+Eaton
+1,565
+1.17
+
+Calhoun
+1,363
+0.83
+
+St. Clair
+1,301
+1.02
+
+Monroe
+1,199
+0.97
+
+Allegan
+1,169
+0.94
+
+Bay
+1,020
+0.99
+
+Delta
+885
+2.12
+
+Marquette
+860
+1.08
+
+Lenawee
+757
+0.97
+
+Lapeer
+753
+1.14
+
+Clinton
+750
+1.34
+
+Emmet
+682
+1.28
+
+St. Joseph
+641
+1.01
+
+Cass
+598
+2.12
+
+Newaygo
+558
+1.56
+
+Van Buren
+538
+0.83
+
+Ionia
+526
+0.94
+
+Isabella
+524
+0.65
+
+Mecosta
+514
+1.34
+
+Barry
+476
+1.19
+
+Otsego
+466
+1.45
+
+Alpena
+430
+1.17
+
+Wexford
+409
+1.03
+
+Clare
+408
+1.87
+
+Montcalm
+408
+0.83
+
+Shiawassee
+389
+0.83
+
+Tuscola
+362
+0.99
+
+Houghton
+351
+0.96
+
+Huron
+344
+1.02
+
+Branch
+333
+0.73
+
+Hillsdale
+323
+0.83
+
+Gladwin
+304
+2.20
+
+Gratiot
+282
+0.76
+
+Menominee
+270
+1.25
+
+Charlevoix
+266
+0.80
+
+Dickinson
+264
+0.64
+
+Gogebic
+254
+1.67
+
+Sanilac
+238
+0.76
+
+Manistee
+237
+1.08
+
+Mason
+236
+0.77
+
+Iosco
+230
+0.99
+
+Leelanau
+227
+1.13
+
+Osceola
+217
+0.90
+
+Roscommon
+215
+1.11
+
+Chippewa
+211
+0.55
+
+Ogemaw
+206
+1.14
+
+Cheboygan
+202
+1.09
+
+Antrim
+174
+1.13
+
+Iron
+165
+1.61
+
+Benzie
+158
+1.07
+
+Crawford
+153
+1.24
+
+Mackinac
+144
+0.99
+
+Oceana
+142
+0.73
+
+Kalkaska
+114
+0.78
+
+Missaukee
+112
+0.88
+
+Presque Isle
+95
+1.22
+
+Schoolcraft
+87
+1.07
+
+Alcona
+82
+1.82
+
+Arenac
+79
+0.64
+
+Oscoda
+73
+1.78
+
+Lake
+51
+0.98
+
+Montmorency
+50
+0.81
+
+Luce
+42
+0.78
+
+Alger
+34
+0.43
+
+Ontonagon
+34
+0.84
+
+Keweenaw
+14
+0.97
+
+Baraga
+Not disclosed
+—
+
+Unclassified — private employment by county &middot; BLS QCEW, 2024 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Oakland
+2,660
+2.64
+
+Wayne
+1,638
+1.62
+
+Kent
+1,175
+2.03
+
+Macomb
+1,132
+2.41
+
+Washtenaw
+478
+1.57
+
+Livingston
+410
+4.57
+
+Ottawa
+339
+1.84
+
+Ingham
+329
+1.52
+
+Genesee
+307
+1.65
+
+Kalamazoo
+248
+1.47
+
+Muskegon
+200
+2.26
+
+Jackson
+191
+2.45
+
+Grand Traverse
+183
+2.53
+
+Berrien
+171
+2.02
+
+Allegan
+159
+2.76
+
+Monroe
+152
+2.65
+
+Eaton
+120
+1.93
+
+Saginaw
+118
+1.06
+
+St. Joseph
+112
+3.81
+
+Clinton
+103
+3.97
+
+Calhoun
+100
+1.32
+
+Lenawee
+100
+2.78
+
+Dickinson
+88
+4.57
+
+Lapeer
+88
+2.87
+
+Midland
+84
+1.57
+
+Marquette
+72
+1.96
+
+Van Buren
+72
+2.39
+
+Bay
+68
+1.43
+
+Alpena
+66
+3.88
+
+St. Clair
+66
+1.12
+
+Emmet
+62
+2.51
+
+Hillsdale
+60
+3.35
+
+Mecosta
+58
+3.26
+
+Montcalm
+56
+2.47
+
+Sanilac
+50
+3.44
+
+Leelanau
+49
+5.27
+
+Huron
+44
+2.81
+
+Ionia
+42
+1.63
+
+Isabella
+42
+1.13
+
+Charlevoix
+36
+2.35
+
+Cass
+34
+2.60
+
+Iron
+34
+7.15
+
+Otsego
+34
+2.28
+
+Tuscola
+34
+2.01
+
+Chippewa
+32
+1.79
+
+Delta
+28
+1.45
+
+Shiawassee
+26
+1.20
+
+Antrim
+25
+3.50
+
+Roscommon
+25
+2.79
+
+Branch
+22
+1.04
+
+Cheboygan
+22
+2.57
+
+Houghton
+22
+1.30
+
+Barry
+21
+1.14
+
+Iosco
+21
+1.95
+
+Clare
+20
+1.98
+
+Newaygo
+20
+1.21
+
+Wexford
+19
+1.04
+
+Mason
+18
+1.27
+
+Gratiot
+17
+0.99
+
+Presque Isle
+13
+3.59
+
+Gogebic
+12
+1.71
+
+Kalkaska
+12
+1.77
+
+Alcona
+11
+5.28
+
+Gladwin
+11
+1.72
+
+Benzie
+10
+1.47
+
+Oscoda
+7
+3.68
+
+Missaukee
+6
+1.02
+
+Lake
+5
+2.08
+
+Manistee
+3
+0.30
+
+Crawford
+1
+0.17
+
+Alger
+Not disclosed
+—
+
+Arenac
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Mackinac
+Not disclosed
+—
+
+Menominee
+Not disclosed
+—
+
+Montmorency
+Not disclosed
+—
+
+Oceana
+Not disclosed
+—
+
+Ogemaw
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Osceola
+Not disclosed
+—
+
+Schoolcraft
+Not disclosed
+—
+
+Shading is the employment level on each industry's own scale — never the location quotient, which appears only in the table (the county's share of its jobs in the industry, against the national share; above 1.00 = more concentrated than the nation). Industry rows are QCEW's private-ownership rows — the grain at which QCEW publishes county-by-industry data; the All-industries layer is the published county total across all ownerships. &ldquo;Not disclosed&rdquo; means the source publishes no value for that county and industry (suppressed, or no establishments reported) — never zero.
+
+Where the completions are — postsecondary institutions, 2023–24 awards
+
+All fields
+
+Health professions
+
+Business & management
+
+Liberal arts & humanities
+
+Engineering
+
+Computer & information sciences
+
+Education
+
+Biological & biomedical sciences
+
+Psychology
+
+Personal & culinary services
+
+Social sciences
+
+Visual & performing arts
+
+Engineering technologies
+
+Public administration & social services
+
+Communication & journalism
+
+Homeland security & protective services
+
+Multi/interdisciplinary studies
+
+Parks, recreation & fitness
+
+Mechanic & repair technologies
+
+Legal professions
+
+Transportation
+
+Physical sciences
+
+Mathematics & statistics
+
+Natural resources & conservation
+
+English & literature
+
+Precision production
+
+Family & consumer sciences
+
+Agriculture
+
+Languages & linguistics
+
+Theology & religious vocations
+
+Construction trades
+
+Architecture
+
+History
+
+Communications technologies
+
+Philosophy & religious studies
+
+Area & ethnic studies
+
+Library science
+
+Science technologies
+
+Military technologies
+
+Largest by completions — All fields
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 17,020
+
+Michigan State University &middot; East Lansing 13,017
+
+Wayne State University &middot; Detroit 6,566
+
+Grand Valley State University &middot; Allendale 6,172
+
+Western Michigan University &middot; Kalamazoo 4,454
+
+Central Michigan University &middot; Mount Pleasant 4,372
+
+Oakland University &middot; Rochester Hills 4,198
+
+Washtenaw Community College &middot; Ann Arbor 3,634
+
+Plus 151 more institutions on the map; the map carries every institution in the layer.
+
+Listed without a dot (the source publishes no completions for 2023–24): ACUPUNCTURE AND MASSAGE SCHOOL OF ORIENTAL MEDICINE &middot; SOUTHFILED USA.
+
+Largest by completions — Health professions
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 1,294
+
+Wayne State University &middot; Detroit 1,251
+
+Michigan State University &middot; East Lansing 1,247
+
+Oakland University &middot; Rochester Hills 1,100
+
+Grand Valley State University &middot; Allendale 992
+
+University of Michigan-Flint &middot; Flint 656
+
+Eastern Michigan University &middot; Ypsilanti 638
+
+Ferris State University &middot; Big Rapids 596
+
+Plus 93 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Business & management
+
+Michigan State University &middot; East Lansing 2,160
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 1,810
+
+Wayne State University &middot; Detroit 1,358
+
+Grand Valley State University &middot; Allendale 1,317
+
+Central Michigan University &middot; Mount Pleasant 1,063
+
+Western Michigan University &middot; Kalamazoo 972
+
+Northwood University &middot; Midland 723
+
+Oakland University &middot; Rochester Hills 701
+
+Plus 66 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Liberal arts & humanities
+
+Henry Ford College &middot; Dearborn 1,650
+
+Washtenaw Community College &middot; Ann Arbor 1,554
+
+Jackson College &middot; Jackson 1,362
+
+Macomb Community College &middot; Warren 1,054
+
+Grand Rapids Community College &middot; Grand Rapids 930
+
+Wayne County Community College District &middot; Detroit 883
+
+Oakland Community College &middot; Auburn Hills 818
+
+Mott Community College &middot; Flint 586
+
+Plus 51 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Engineering
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 2,900
+
+Michigan Technological University &middot; Houghton 960
+
+Michigan State University &middot; East Lansing 932
+
+University of Michigan-Dearborn &middot; Dearborn 622
+
+Wayne State University &middot; Detroit 425
+
+Oakland University &middot; Rochester Hills 371
+
+University of Detroit Mercy &middot; Detroit 341
+
+Kettering University &middot; Flint 321
+
+Plus 35 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Computer & information sciences
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 1,980
+
+Central Michigan University &middot; Mount Pleasant 569
+
+Michigan State University &middot; East Lansing 466
+
+University of Michigan-Dearborn &middot; Dearborn 369
+
+Grand Valley State University &middot; Allendale 351
+
+DSDT &middot; Detroit 260
+
+Wayne State University &middot; Detroit 250
+
+Oakland University &middot; Rochester Hills 238
+
+Plus 59 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Education
+
+Grand Valley State University &middot; Allendale 687
+
+Eastern Michigan University &middot; Ypsilanti 591
+
+Central Michigan University &middot; Mount Pleasant 504
+
+Michigan State University &middot; East Lansing 503
+
+Western Michigan University &middot; Kalamazoo 482
+
+Wayne State University &middot; Detroit 359
+
+Oakland University &middot; Rochester Hills 358
+
+Saginaw Valley State University &middot; University Center 229
+
+Plus 47 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Biological & biomedical sciences
+
+Michigan State University &middot; East Lansing 1,460
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 1,341
+
+Grand Valley State University &middot; Allendale 422
+
+Wayne State University &middot; Detroit 275
+
+Central Michigan University &middot; Mount Pleasant 185
+
+Oakland University &middot; Rochester Hills 168
+
+Western Michigan University &middot; Kalamazoo 165
+
+University of Detroit Mercy &middot; Detroit 143
+
+Plus 33 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Psychology
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 778
+
+Michigan State University &middot; East Lansing 630
+
+Wayne State University &middot; Detroit 464
+
+Grand Valley State University &middot; Allendale 343
+
+Central Michigan University &middot; Mount Pleasant 253
+
+Western Michigan University &middot; Kalamazoo 233
+
+Oakland University &middot; Rochester Hills 219
+
+Eastern Michigan University &middot; Ypsilanti 199
+
+Plus 39 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Personal & culinary services
+
+Douglas J Aveda Institute &middot; East Lansing 832
+
+L'esprit Academy &middot; Canton 241
+
+Dorsey School of Beauty &middot; Taylor 205
+
+David Pressley School of Cosmetology &middot; Royal Oak 185
+
+Elevate Salon Institute &middot; Royal Oak 175
+
+Michigan College of Beauty-Troy &middot; Troy 156
+
+Empire Beauty School-Michigan &middot; Grand Rapids 126
+
+Paul Mitchell the School-Michigan &middot; Sterling Heights 112
+
+Plus 48 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Social sciences
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 1,364
+
+Michigan State University &middot; East Lansing 799
+
+Wayne State University &middot; Detroit 217
+
+Grand Valley State University &middot; Allendale 201
+
+Eastern Michigan University &middot; Ypsilanti 140
+
+University of Michigan-Dearborn &middot; Dearborn 133
+
+Central Michigan University &middot; Mount Pleasant 113
+
+Hillsdale College &middot; Hillsdale 104
+
+Plus 28 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Visual & performing arts
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 563
+
+Michigan State University &middot; East Lansing 438
+
+Western Michigan University &middot; Kalamazoo 255
+
+Grand Valley State University &middot; Allendale 177
+
+Oakland University &middot; Rochester Hills 160
+
+Wayne State University &middot; Detroit 152
+
+College for Creative Studies &middot; Detroit 148
+
+Eastern Michigan University &middot; Ypsilanti 128
+
+Plus 54 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Engineering technologies
+
+Northwestern Technological Institute &middot; Southfield 473
+
+Ferris State University &middot; Big Rapids 471
+
+Michigan State University &middot; East Lansing 224
+
+Macomb Community College &middot; Warren 187
+
+Universal Technical Institute-Canton &middot; Canton 138
+
+Eastern Michigan University &middot; Ypsilanti 106
+
+Washtenaw Community College &middot; Ann Arbor 103
+
+Wayne State University &middot; Detroit 98
+
+Plus 41 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Public administration & social services
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 687
+
+Wayne State University &middot; Detroit 367
+
+Grand Valley State University &middot; Allendale 276
+
+Eastern Michigan University &middot; Ypsilanti 177
+
+Central Michigan University &middot; Mount Pleasant 176
+
+Oakland University &middot; Rochester Hills 162
+
+Spring Arbor University &middot; Spring Arbor 152
+
+Saginaw Valley State University &middot; University Center 121
+
+Plus 34 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Communication & journalism
+
+Michigan State University &middot; East Lansing 1,001
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 241
+
+Grand Valley State University &middot; Allendale 225
+
+Central Michigan University &middot; Mount Pleasant 166
+
+Wayne State University &middot; Detroit 141
+
+Eastern Michigan University &middot; Ypsilanti 117
+
+Oakland University &middot; Rochester Hills 105
+
+Western Michigan University &middot; Kalamazoo 103
+
+Plus 38 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Homeland security & protective services
+
+Michigan State University &middot; East Lansing 371
+
+Ferris State University &middot; Big Rapids 246
+
+Oakland Community College &middot; Auburn Hills 215
+
+Washtenaw Community College &middot; Ann Arbor 140
+
+Wayne State University &middot; Detroit 140
+
+Grand Valley State University &middot; Allendale 117
+
+Madonna University &middot; Livonia 114
+
+Delta College &middot; University Center 93
+
+Plus 44 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Multi/interdisciplinary studies
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 848
+
+Michigan State University &middot; East Lansing 370
+
+Western Michigan University &middot; Kalamazoo 289
+
+Eastern Michigan University &middot; Ypsilanti 178
+
+University of Michigan-Dearborn &middot; Dearborn 93
+
+Michigan Technological University &middot; Houghton 92
+
+Grand Valley State University &middot; Allendale 70
+
+University of Michigan-Flint &middot; Flint 65
+
+Plus 34 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Parks, recreation & fitness
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 377
+
+Michigan State University &middot; East Lansing 325
+
+Grand Valley State University &middot; Allendale 238
+
+Central Michigan University &middot; Mount Pleasant 186
+
+Wayne State University &middot; Detroit 159
+
+Western Michigan University &middot; Kalamazoo 116
+
+Adrian College &middot; Adrian 72
+
+Northern Michigan University &middot; Marquette 72
+
+Plus 34 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Mechanic & repair technologies
+
+Universal Technical Institute-Canton &middot; Canton 672
+
+Lansing Community College &middot; Lansing 154
+
+Washtenaw Community College &middot; Ann Arbor 126
+
+Wayne County Community College District &middot; Detroit 100
+
+Grand Rapids Community College &middot; Grand Rapids 94
+
+Macomb Community College &middot; Warren 93
+
+Kalamazoo Valley Community College &middot; Kalamazoo 65
+
+Oakland Community College &middot; Auburn Hills 65
+
+Plus 30 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Legal professions
+
+Michigan State University &middot; East Lansing 397
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 358
+
+University of Detroit Mercy &middot; Detroit 227
+
+Wayne State University &middot; Detroit 158
+
+Thomas M Cooley Law School &middot; Lansing 142
+
+Grand Valley State University &middot; Allendale 56
+
+Henry Ford College &middot; Dearborn 47
+
+Oakland Community College &middot; Auburn Hills 39
+
+Plus 14 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Transportation
+
+U.S. Truck Driver Training School &middot; Sterling Heights 790
+
+Western Michigan University &middot; Kalamazoo 266
+
+Wayne County Community College District &middot; Detroit 234
+
+Northwestern Michigan College &middot; Traverse City 79
+
+Eastern Michigan University &middot; Ypsilanti 35
+
+Gogebic Community College &middot; Ironwood 11
+
+Andrews University &middot; Berrien Springs 7
+
+School of Missionary Aviation Technology &middot; Ionia 3
+
+Plus 2 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Physical sciences
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 392
+
+Michigan State University &middot; East Lansing 229
+
+Wayne State University &middot; Detroit 124
+
+Michigan Technological University &middot; Houghton 72
+
+Western Michigan University &middot; Kalamazoo 48
+
+Central Michigan University &middot; Mount Pleasant 42
+
+Eastern Michigan University &middot; Ypsilanti 36
+
+Jackson College &middot; Jackson 35
+
+Plus 24 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Mathematics & statistics
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 535
+
+Michigan State University &middot; East Lansing 145
+
+Grand Valley State University &middot; Allendale 95
+
+Michigan Technological University &middot; Houghton 82
+
+Wayne State University &middot; Detroit 43
+
+Central Michigan University &middot; Mount Pleasant 39
+
+Hillsdale College &middot; Hillsdale 39
+
+Western Michigan University &middot; Kalamazoo 34
+
+Plus 22 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Natural resources & conservation
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 364
+
+Michigan State University &middot; East Lansing 232
+
+Grand Valley State University &middot; Allendale 96
+
+Northern Michigan University &middot; Marquette 85
+
+Michigan Technological University &middot; Houghton 70
+
+Central Michigan University &middot; Mount Pleasant 43
+
+Lake Superior State University &middot; Sault Ste Marie 32
+
+Oakland University &middot; Rochester Hills 27
+
+Plus 20 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — English & literature
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 157
+
+Grand Valley State University &middot; Allendale 111
+
+Michigan State University &middot; East Lansing 103
+
+Oakland University &middot; Rochester Hills 86
+
+Western Michigan University &middot; Kalamazoo 64
+
+Wayne State University &middot; Detroit 56
+
+Central Michigan University &middot; Mount Pleasant 53
+
+Northern Michigan University &middot; Marquette 36
+
+Plus 29 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Precision production
+
+Washtenaw Community College &middot; Ann Arbor 120
+
+Delta College &middot; University Center 109
+
+Ferris State University &middot; Big Rapids 88
+
+Universal Technical Institute-Canton &middot; Canton 83
+
+Grand Rapids Community College &middot; Grand Rapids 73
+
+Macomb Community College &middot; Warren 56
+
+Lansing Community College &middot; Lansing 47
+
+Kalamazoo Valley Community College &middot; Kalamazoo 43
+
+Plus 24 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Family & consumer sciences
+
+Wayne State University &middot; Detroit 152
+
+Michigan State University &middot; East Lansing 96
+
+Central Michigan University &middot; Mount Pleasant 71
+
+Grand Rapids Community College &middot; Grand Rapids 61
+
+Ferris State University &middot; Big Rapids 53
+
+Baker College &middot; Owosso 47
+
+Western Michigan University &middot; Kalamazoo 40
+
+Washtenaw Community College &middot; Ann Arbor 36
+
+Plus 21 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Agriculture
+
+Michigan State University &middot; East Lansing 549
+
+Baker College &middot; Owosso 58
+
+Northern Michigan University &middot; Marquette 42
+
+Macomb Community College &middot; Warren 37
+
+Ross Medical Education Center-Canton &middot; Canton 20
+
+Ross Medical Education Center-Portage &middot; Portage 15
+
+Andrews University &middot; Berrien Springs 9
+
+Michigan Career and Technical Institute &middot; Plainwell 9
+
+Plus 20 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Languages & linguistics
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 221
+
+Michigan State University &middot; East Lansing 109
+
+Kalamazoo College &middot; Kalamazoo 51
+
+Wayne State University &middot; Detroit 51
+
+Western Michigan University &middot; Kalamazoo 45
+
+Hope College &middot; Holland 37
+
+Oakland University &middot; Rochester Hills 36
+
+Grand Valley State University &middot; Allendale 33
+
+Plus 23 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Theology & religious vocations
+
+Andrews University &middot; Berrien Springs 183
+
+Western Theological Seminary &middot; Holland 159
+
+Grace Christian University &middot; Wyoming 67
+
+Calvin Theological Seminary &middot; Grand Rapids 60
+
+Cornerstone University &middot; Grand Rapids 58
+
+Calvin University &middot; Grand Rapids 56
+
+Sacred Heart Major Seminary &middot; Detroit 46
+
+Ecumenical Theological Seminary &middot; Detroit 24
+
+Plus 7 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Construction trades
+
+Washtenaw Community College &middot; Ann Arbor 131
+
+Alpena Community College &middot; Alpena 107
+
+Lansing Community College &middot; Lansing 61
+
+Wayne County Community College District &middot; Detroit 56
+
+Jackson College &middot; Jackson 55
+
+Grand Rapids Community College &middot; Grand Rapids 43
+
+Northern Michigan University &middot; Marquette 42
+
+Delta College &middot; University Center 29
+
+Plus 10 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Architecture
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 215
+
+Lawrence Technological University &middot; Southfield 124
+
+University of Detroit Mercy &middot; Detroit 74
+
+Henry Ford College &middot; Dearborn 36
+
+Andrews University &middot; Berrien Springs 27
+
+Wayne State University &middot; Detroit 22
+
+Oakland Community College &middot; Auburn Hills 17
+
+Eastern Michigan University &middot; Ypsilanti 11
+
+Plus 4 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — History
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 120
+
+Grand Valley State University &middot; Allendale 66
+
+Michigan State University &middot; East Lansing 54
+
+Hillsdale College &middot; Hillsdale 51
+
+Oakland University &middot; Rochester Hills 40
+
+Wayne State University &middot; Detroit 33
+
+Eastern Michigan University &middot; Ypsilanti 26
+
+Central Michigan University &middot; Mount Pleasant 24
+
+Plus 23 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Communications technologies
+
+Ferris State University &middot; Big Rapids 106
+
+College for Creative Studies &middot; Detroit 80
+
+Washtenaw Community College &middot; Ann Arbor 71
+
+Lansing Community College &middot; Lansing 39
+
+Kellogg Community College &middot; Battle Creek 23
+
+Grand Rapids Community College &middot; Grand Rapids 13
+
+Kalamazoo Valley Community College &middot; Kalamazoo 13
+
+Lawrence Technological University &middot; Southfield 11
+
+Plus 14 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Philosophy & religious studies
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 68
+
+Hope College &middot; Holland 29
+
+Hillsdale College &middot; Hillsdale 23
+
+Andrews University &middot; Berrien Springs 21
+
+Wayne State University &middot; Detroit 21
+
+Western Michigan University &middot; Kalamazoo 17
+
+Kalamazoo College &middot; Kalamazoo 13
+
+Cornerstone University &middot; Grand Rapids 11
+
+Plus 18 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Area & ethnic studies
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 116
+
+Wayne State University &middot; Detroit 20
+
+University of Michigan-Dearborn &middot; Dearborn 18
+
+Central Michigan University &middot; Mount Pleasant 16
+
+Henry Ford College &middot; Dearborn 14
+
+Kalamazoo College &middot; Kalamazoo 14
+
+Michigan State University &middot; East Lansing 13
+
+Eastern Michigan University &middot; Ypsilanti 11
+
+Plus 14 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Library science
+
+Wayne State University &middot; Detroit 150
+
+Oakland Community College &middot; Auburn Hills 8
+
+Largest by completions — Science technologies
+
+Oakland Community College &middot; Auburn Hills 92
+
+Ferris State University &middot; Big Rapids 11
+
+Delta College &middot; University Center 9
+
+Davenport University &middot; Grand Rapids 7
+
+Kalamazoo Valley Community College &middot; Kalamazoo 5
+
+Central Michigan University &middot; Mount Pleasant 1
+
+Lake Superior State University &middot; Sault Ste Marie 1
+
+Siena Heights University &middot; Adrian 1
+
+Largest by completions — Military technologies
+
+Northern Michigan University &middot; Marquette 23
+
+Lake Superior State University &middot; Sault Ste Marie 2
+
+Dots sit at the coordinates IPEDS publishes for each institution; size is completions in the selected field (all award levels). Field is the IPEDS CIP family. The list is the record; the map is the picture of it.
+
+Graduate pipelines — field of study to industry, one year out
+
+Michigan bachelor's graduates, all institutions (state aggregate) — top field-to-industry flows, one year after graduation
+
+Engineering &rarr; Manufacturing 4,345
+&middot; 1,514 in Michigan &middot; field median, year 1: $75,007
+
+Engineering &rarr; Professional, Scientific, and Technical Services 3,625
+&middot; 1,706 in Michigan &middot; field median, year 1: $75,007
+
+Social Sciences &rarr; Professional, Scientific, and Technical Services 2,606
+&middot; 692 in Michigan &middot; field median, year 1: $52,048
+
+Health Professions and Related Programs &rarr; Health Care and Social Assistance 2,432
+&middot; 1,611 in Michigan &middot; field median, year 1: $66,024
+
+Business, Management, Marketing, and Related Support Services &rarr; Finance and Insurance 2,106
+&middot; 91 in Michigan &middot; field median, year 1: $84,543
+
+Business, Management, Marketing, and Related Support Services &rarr; Professional, Scientific, and Technical Services 1,983
+&middot; 475 in Michigan &middot; field median, year 1: $84,543
+
+Social Sciences &rarr; Finance and Insurance 1,929
+&middot; 482 in Michigan &middot; field median, year 1: $52,048
+
+Psychology &rarr; Health Care and Social Assistance 1,341
+&middot; 889 in Michigan &middot; field median, year 1: $37,187
+
+Psychology &rarr; Educational Services 1,270
+&middot; 733 in Michigan &middot; field median, year 1: $37,187
+
+Education &rarr; Educational Services 1,188
+&middot; 698 in Michigan &middot; field median, year 1: $45,856
+
+Institution spotlight — University of Michigan (bachelor's, all fields)
+
+Median earnings by years since graduation (25th / 50th / 75th percentile)
+
+Horizon
+25th
+Median
+75th
+
+1 year
+$32,885
+$53,268
+$79,160
+
+5 years
+$53,441
+$78,284
+$113,319
+
+10 years
+$70,205
+$106,836
+$165,585
+
+Employed 1 year out 73,720
+&middot; 30,253 in Michigan (41.0%)
+
+Employed 5 years out 71,863
+&middot; 23,737 in Michigan (33.0%)
+
+Employed 10 years out 44,483
+&middot; 13,377 in Michigan (30.1%)
+
+Top industries at year 1
+
+Professional, Scientific, and Technical Services 16,524
+&middot; 5,569 in Michigan
+
+Educational Services 10,077
+&middot; 6,043 in Michigan
+
+Health Care and Social Assistance 8,367
+&middot; 5,447 in Michigan
+
+Finance and Insurance 7,217
+&middot; 1,525 in Michigan
+
+Manufacturing 6,529
+&middot; 2,384 in Michigan
+
+Coverage:
+the University of Michigan is the only Michigan institution in PSEO — its graduates are about 10% of statewide graduates (2015 estimate, per the Census partner file). Institution-level outcomes exist for it alone; this is not a school-by-school Michigan pipeline, and no other Michigan school is ranked or implied here.
+
+Counts are graduates the Census Bureau matched to employment one year after graduation, pooled across the 2001–2021 cohorts in this release; the field median is the field's year-1 median earnings across all industries. Rows the source suppresses are excluded, never estimated.
+
+GO DEEPER
+
+Michigan's September workforce data: what the numbers say, and what they don't (https://axiovexsystems.com/blog/michigan-workforce-september-2026/) &middot; the current monthly workforce article on this site
+
+The September edition — Axiovex workforce study &rarr; (https://github.com/AXIOVEX/michigan-workforce-intelligence/tree/reports-2026.09.27.131143Z/reports/2026-09-26-graduation-horizons) &middot; the verified research edition behind the Michigan tables (release tag reports-2026.09.27.131143Z)
+
+Manufacturing & automation
+
+AUTOMATION ALLEY
+Why Digital Leadership Fails When Decisions Drift Away From Operational Reality
+(https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/) &middot; October 19, 2026
+
+MANUFACTURING DIVE
+From Auburn Hills to Luxembourg: Christian Lopez’s Co-op experience
+(https://www.manufacturingdive.com/spons/from-auburn-hills-to-luxembourg-christian-lopezs-co-op-experience/832608/) &middot; October 19, 2026
+
+MANUFACTURING DIVE
+How AI, digital twins and real-time simulation are accelerating manufacturing innovation
+(https://www.manufacturingdive.com/spons/how-ai-digital-twins-and-real-time-simulation-are-accelerating-manufacturi/833255/) &middot; October 19, 2026
+
+MANUFACTURING DIVE
+MIT’s TechAMP finds early success after first year, could expand
+(https://www.manufacturingdive.com/news/mit-techamp-finds-early-success-after-first-year-expansion-teledyne-defense/833324/) &middot; October 19, 2026
+
+MANUFACTURING DIVE
+Cleveland-Cliffs CEO blames Canada for Stelco layoffs
+(https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/) &middot; October 19, 2026
+
+AUTOMATION ALLEY
+Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity
+(https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/) &middot; October 16, 2026
+
+MANUFACTURING DIVE
+Manufacturing tech orders hit 3rd-highest monthly total: AMT
+(https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/) &middot; October 16, 2026
+
+MANUFACTURING DIVE
+Alcoa plans to sell part of its Massena East site for $315M
+(https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/) &middot; October 16, 2026
+
+AI, standards & research
+
+NIST
+NIST Joins White House Effort to Drive ‘A New Golden Age of Science’
+(https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science) &middot; October 8, 2026
+
+NIST
+NIST Awards More Than $1.7 Million to Support Cybersecurity Workforce Development Across 8 States
+(https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development) &middot; September 18, 2026
+
+NSF
+NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics
+(https://www.nsf.gov/news/nsf-invests-translating-low-dimensional-semiconductor) &middot; September 17, 2026
+
+NSF
+NSF announces 3 additional topics as part of the NSF X-Labs initiative to pursue generational breakthrough science and technology efforts
+(https://www.nsf.gov/news/nsf-announces-3-additional-topics-part-nsf-x-labs-initiative) &middot; September 16, 2026
+
+NIST
+NIST-Developed Quantum Sensors Improve Nuclear Monitoring
+(https://www.nist.gov/news-events/news/2026/09/nist-developed-quantum-sensors-improve-nuclear-monitoring) &middot; September 10, 2026
+
+Michigan workforce & industry
+
+AUTOMATION ALLEY
+Why Digital Leadership Fails When Decisions Drift Away From Operational Reality
+(https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/) &middot; October 19, 2026
+
+AUTOMATION ALLEY
+Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity
+(https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/) &middot; October 16, 2026
+
+MICHIGAN WARN (LEO)
+Kern J.G. Enterprise, Inc. — announced permanent layoff, Sterling Heights, 156 jobs, effective August 17, 2026
+(https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-08-28_WARN-Notice_Kern-JG-Enterprise.pdf?rev=dada26e68a0c4d0a999c5310d4a234ae&hash=4BDEA76ACA8C76587B0610D053D6557F) &middot; October 14, 2026
+
+AUTOMATION ALLEY
+HIROTEC’s Journey to Zero-Operator Manufacturing
+(https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/) &middot; October 12, 2026
+
+AXIOVEX
+Robots can do the work. Almost none of it pays yet.
+(https://axiovexsystems.com/blog/robots-can-do-the-work/) &middot; October 10, 2026
+
+MICHIGAN WARN (LEO)
+HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026
+(https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75) &middot; October 8, 2026
+
+MICHIGAN WARN (LEO)
+Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026
+(https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation) &middot; October 8, 2026
+
+AXIOVEX
+Oakland County is losing jobs. Here is why.
+(https://axiovexsystems.com/blog/oakland-county-job-losses/) &middot; October 8, 2026
+
+OT cybersecurity
+
+CISA
+Eclipse Foundation Eclipse Milo
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01) &middot; October 15, 2026
+
+CISA
+Guangzhou Juan IoT Technology EseeCloud
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02) &middot; October 15, 2026
+
+CISA
+CISA Malcolm
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01) &middot; October 15, 2026
+
+CISA
+Inductive Automation Ignition Software
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01) &middot; October 13, 2026
+
+CISA
+Swann Communications SWIFI-SE2KIC
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02) &middot; October 13, 2026
+
+CISA
+Red Lion Controls N-Tron 700 Series (Update A)
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01) &middot; October 8, 2026
+
+CISA
+Grid Protection Alliance openPDC and openHistorian
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02) &middot; October 8, 2026
+
+CISA
+Satel Netco Design
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03) &middot; October 8, 2026
+
+Funding & policy
+
+FEDERAL REGISTER
+Bulk Manufacturer of Controlled Substances Application: Scottsdale Research Institute
+(https://www.federalregister.gov/documents/2026/10/19/2026-21360/bulk-manufacturer-of-controlled-substances-application-scottsdale-research-institute) &middot; October 19, 2026
+
+U.S. DEPARTMENT OF ENERGY
+Energy Department Advances Constitution Pipeline Project with $42 Million in Defense Production Act Funding
+(https://www.energy.gov/articles/energy-department-advances-constitution-pipeline-project-42-million-defense-production-act) &middot; October 19, 2026
+
+USASPENDING (TREASURY)
+Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C25027P0054_3600_-NONE-_-NONE-) &middot; October 16, 2026
+
+USASPENDING (TREASURY)
+Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C25027P0053_3600_-NONE-_-NONE-) &middot; October 16, 2026
+
+U.S. DEPARTMENT OF ENERGY
+Energy Department Announces Virginia and West Virginia Transmission Project to Receive Defense Production Act Funding, Strengthening National Security and Grid Reliability
+(https://www.energy.gov/articles/energy-department-announces-virginia-and-west-virginia-transmission-project-receive) &middot; October 16, 2026
+
+USASPENDING (TREASURY)
+Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $46,457 award, October 15, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C26127P0069_3600_-NONE-_-NONE-) &middot; October 15, 2026
+
+USASPENDING (TREASURY)
+Department of Veterans Affairs → WRIGHT & FILIPPIS, LLC — $20,246 award, October 15, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C25027N0083_3600_36C25025A0066_3600) &middot; October 15, 2026
+
+USASPENDING (TREASURY)
+Department of Veterans Affairs → ELECTRA-MED CORPORATION — $21,507 award, October 15, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C10X27K0056_3600_36C10G24D0057_3600) &middot; October 15, 2026
+
+Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce the committed datasets behind the boards: Michigan occupation projections from the Michigan Center for Data and Analytics, transcribed via the Axiovex workforce study's September edition (a direct read of MCDA's tables is pending and will supersede the transcription), and education figures as published by CEPI via MDE (February 2026), MDE (September 2025), and the House Fiscal Agency (January 2026 consensus; pupil membership is a budget estimate, as its source labels it). Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2024 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023–24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (release R2026Q2, cohorts 2001–2021) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 19, 2026 at 1:36 PM ET. See our Disclaimer
+.
+
+THE AXIOVEX SIGNAL — MONTHLY
+
+The month, in your inbox.
+
+What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
+
+One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
+Privacy policy
+
+Next step
+
+Working on something like this?
+
+Tell us what you're trying to solve.
+
+Start a conversation
+
+## https://axiovexsystems.com/documents/
+
+Home
+/ Documents
+
+Documents
+
+Shared documents.
+
+Course materials and documents we publish openly — the same files we share in the room, free to read and pass along.
+
+Published documents
+
+AI 101 · Slide deck
+
+AI 101: Beyond the Chatbot — Slide Deck
+
+The full slide deck from our hands-on AI course: what modern AI is, where it helps, where it fails, and how to put it to work responsibly.
+
+PDF &middot; 2.9 MB &middot; Updated October 8, 2026
+
+OPEN THE DOCUMENT &rarr;
+
+AI 101 · Handout
+
+AI 101: Beyond the Chatbot — One-Page Handout
+
+The take-home companion to the course: the key ideas, a plain-language glossary, and first steps for using AI well.
+
+PDF &middot; 810 KB &middot; Updated October 5, 2026
+
+OPEN THE DOCUMENT &rarr;
+
+These files live in our public shared-documents repository (https://github.com/AXIOVEX/shared-documents) on GitHub and are mirrored here automatically whenever they are updated.
+
+Next step
+
+Want the course for your team?
+
+AI 101 runs hands-on for manufacturing and office teams. Tell us about yours.
+
+Start a conversation
+
+## https://axiovexsystems.com/contact/
+
+Home
+/ Contact
+
+Contact
+
+Start a conversation.
+
+The first conversation is a diagnosis, not a pitch. Tell us the problem; we'll tell you plainly whether we can help.
+
+Send a note
+
+Contact form
+
+Privacy & legal
+
+Questions about the privacy policy or legal matters.
+
+legal@axiovexsystems.com &rarr;
+
+The form delivers to the same Start mailbox the email route uses — replies still come from a founder. The legal route stays email-only.
+
+Where we work
+
+Michigan-rooted, based in Macomb County. On-site with manufacturing clients; remote everywhere else.
+
+Good first conversations include
+
+The problem, in plain words
+
+What you've already tried
+
+The evidence you have — data, documents, examples
+
+Your timeline, if there is one
+
+## https://axiovexsystems.com/privacy/
+
+Home
+/ Privacy Policy
+
+Legal
+
+Privacy Policy
+
+Last updated: October 9, 2026
+
+1. Who we are
+
+Axiovex Systems, LLC ("Axiovex Systems," "we," "us," or "our") is a Michigan company. This Privacy Policy explains how we handle information when you visit axiovexsystems.com
+(the "Site"). If you have questions about this policy, contact us at legal@axiovexsystems.com
+.
+
+2. Information we collect
+
+Information you provide.
+The Site has no accounts or newsletter sign-ups. You can share personal information with us directly in two ways: by emailing us, or through the contact form — in either case, typically your name, email address, and the contents of your message. The contact form is protected by Cloudflare Turnstile, a spam check run by Cloudflare. The form delivers your message to our mailbox, and we do not store form submissions anywhere else.
+
+Information collected automatically.
+The Site is a static website hosted on Cloudflare Pages. Like most websites, our hosting provider processes limited technical data to deliver and protect the Site, such as your IP address, browser type, and the pages you request. We review aggregate statistics derived from this technical data — for example, how many requests each page receives — to operate the Site. We do not combine this data with any other personal information.
+
+What we do not collect.
+We do not use cookies, analytics scripts, advertising pixels, or other tracking technologies on the Site. Your browser may store small functional preferences on your own device — for example, remembering that you dismissed a banner, or how you left a panel — which never leave your device and are not used to track you. We do not build profiles of visitors, and we do not collect information from children.
+
+3. How we use information
+
+We use the information described above only to:
+
+Operate, secure, and maintain the Site;
+
+Respond to emails and inquiries you send us; and
+
+Comply with legal obligations.
+
+We do not use your information for advertising, and we do not sell or share your personal information with third parties for marketing purposes.
+
+4. How we share information
+
+We share personal information only in these limited circumstances:
+
+Service providers.
+Companies that help us operate the Site — for example, our hosting provider (Cloudflare) and our email provider — process information on our behalf and only as instructed by us.
+
+Legal requirements.
+If required by law, court order, or government request, or where we believe disclosure is necessary to protect our rights, visitors, or the public.
+
+Business transfers.
+In connection with a merger, acquisition, or sale of assets, information may be transferred as part of that transaction.
+
+5. Data retention
+
+We keep email correspondence for as long as needed to respond to your inquiry and maintain business records, then delete or archive it when it is no longer needed. Technical logs retained by our hosting provider are subject to that provider's own retention practices.
+
+6. Data security
+
+We use reasonable administrative, technical, and physical safeguards to protect information in our care, including encrypted (HTTPS) connections to the Site. No method of transmission over the internet is completely secure, and we cannot guarantee absolute security.
+
+7. Your rights
+
+Depending on where you live, you may have rights over your personal information:
+
+California residents
+(under the CCPA/CPRA) have the right to know what personal information we hold about them, to request deletion or correction, and to opt out of any sale or sharing of personal information. We do not sell or share personal information as those terms are defined by California law. We will not discriminate against you for exercising these rights.
+
+European Economic Area and UK visitors
+(under the GDPR/UK GDPR) have rights including access, rectification, erasure, restriction of processing, data portability, and objection to processing. Our lawful bases for processing are our legitimate interests in operating the Site and responding to inquiries, and compliance with legal obligations.
+
+Other U.S. states
+with consumer privacy laws grant similar rights of access, correction, deletion, and opt-out of sales or targeted advertising.
+
+To exercise any of these rights, email legal@axiovexsystems.com
+. We will verify your identity before responding and will respond within the time required by applicable law.
+
+8. Children's privacy
+
+The Site is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact us and we will delete it.
+
+9. Third-party links
+
+The Site links to third-party websites and services, including LinkedIn, GitHub, our public course materials, and the websites of organizations we belong to. This policy does not apply to those sites; their own privacy policies govern your use of them.
+
+10. Do Not Track
+
+Because the Site uses no tracking technologies, there is nothing to disable in response to Do Not Track signals.
+
+11. Changes to this policy
+
+We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date above. Material changes will be reflected on this page.
+
+12. Contact us
+
+Questions about this Privacy Policy or our privacy practices: legal@axiovexsystems.com
+.
+
+13. The Axiovex Signal newsletter
+
+If you subscribe to The Axiovex Signal
+, our monthly newsletter, we collect your email address
+, your subscription status, and the timestamps of your signup, confirmation, and any unsubscribe — nothing else. We use that information only to send the newsletter you asked for. Subscribing requires a confirmation click (double opt-in); until you confirm, nothing is sent to your address.
+
+Two processors handle this data for us: Microsoft
+(Microsoft 365 sends the newsletter from our own tenant mailbox) and Cloudflare
+(which hosts this Site and stores the subscriber list). We do not sell subscriber information, and we do not share it with anyone beyond those two processors.
+
+The newsletter carries no tracking pixels and no per-reader analytics
+: we do not record whether you open an issue or click its links. We keep only aggregate counts — how many issues were sent, bounced, or complained about.
+
+Every issue carries a one-click unsubscribe, and it takes effect immediately. When you unsubscribe, we keep your address on a suppression record — held so that the address cannot be silently re-added — and it is never used for any other purpose. Subscribing again is always possible, and always takes a fresh confirmation click.
+
+14. Our Disclaimer
+
+This policy covers personal information only. Reliance on the Site's published content — our analysis, the figures we republish, and the projections we show — is covered by our Disclaimer
+.
+
+Next step
+
+Questions about this policy?
+
+Reach us at legal@axiovexsystems.com
+.
+
+Start a conversation
+
+## https://axiovexsystems.com/disclaimer/
+
+Home
+/ Disclaimer
+
+Legal
+
+Disclaimer
+
+Last updated: October 6, 2026
+
+1. General information
+
+The content on this website (the "Site") is published by Axiovex Systems, LLC ("Axiovex Systems," "we," "us," or "our") for general information purposes. It includes our analysis and commentary — the blog, the Signals board, and the monthly Michigan workforce series — built on data republished from the primary sources described below.
+
+2. Data from primary sources
+
+Most figures on the Site are republished from primary sources — principally the U.S. Bureau of Labor Statistics, the U.S. Census Bureau, Michigan state agencies, and federal agency publication feeds. Each figure carries its source and the period it describes (its vintage). Publishing agencies revise their data after first release, sometimes substantially, so a figure here reflects the release available when the page was built and may no longer match the source's current release. Where a number matters to a decision, check the source it came from.
+
+3. Projections are the agencies' outlook
+
+Where the Site shows projections — employment outlooks, growth rates, and similar forward-looking figures — they are the publishing agency's own modeled projections, labeled with the agency and the horizon they cover. They are not forecasts, predictions, or guarantees by Axiovex Systems, and they are not advice. Actual outcomes will differ. Our own commentary is limited to what the published data does and does not show.
+
+4. Not professional advice
+
+Nothing on the Site is legal, financial, tax, accounting, or compliance advice, and using the Site does not create a professional or client relationship with Axiovex Systems. For decisions in those areas, consult a qualified professional.
+
+5. CMMC and compliance-framework content
+
+Content that touches on CMMC or other compliance frameworks is general readiness information only. It is not an assessment, an audit, a certification, or a determination that any organization complies with any framework. As our FAQ states, we aren't assessors — only an authorized assessment can make a compliance determination.
+
+6. External links
+
+The Site links to third-party websites, including the publishers and agencies whose material we cite. We do not control those sites; their own terms and policies govern your use of them. Links are provided for reference and are not endorsements of the site, the organization, or its content — and inclusion of an item in Signals is not an endorsement either.
+
+7. Privacy
+
+How we handle personal information is governed by our Privacy Policy
+. This disclaimer covers reliance on the Site's content; it does not restate or change that policy.
+
+Next step
+
+Questions about this disclaimer?
+
+Reach us at legal@axiovexsystems.com
+.
+
+Start a conversation
+
+## https://axiovexsystems.com/newsletter/
+
+Home
+/ Newsletter
+
+Newsletter
+
+The Axiovex Signal
+
+What changed in Michigan industry and the field — the month's signals, the Michigan numbers with their vintages, and why they matter. Monthly, after the economic data are released.
+
+THE AXIOVEX SIGNAL — MONTHLY
+
+The month, in your inbox.
+
+What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
+
+· Michigan workforce data, with vintages
+· Manufacturing & field signals
+· Industrial AI, checked against sources
+
+Monthly, after economic releases
+— one email a month. Free.
+
+One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
+Privacy policy
+
+READ A SAMPLE ISSUE ↓
+
+WEDNESDAY, OCTOBER 14, 2026
+
+Michigan manufacturing is still adding jobs → and the fall calendar already holds 120 announced Michigan losses to weigh against them.
+
+What changed · Michigan Pulse · Why it matters · Watchlist
+
+READ THE WEB EDITION →
+
+Next step
+
+Working on something like this?
+
+Tell us what you're trying to solve.
+
+Start a conversation
+
+## https://axiovexsystems.com/newsletter/2026-10-14/
+
+Home
+/ Newsletter
+/ October 14, 2026
+
+THE AXIOVEX SIGNAL · WEDNESDAY, OCTOBER 14, 2026
+
+Michigan manufacturing is still adding jobs → and the fall calendar already holds 120 announced Michigan losses to weigh against them.
+
+What changed
+
+Manufacturing & automation
+
+GlobalFoundries and TSMC reach $2B deal for US-based silicon interposers (https://www.manufacturingdive.com/news/globalfoundries-tsmc-silicon-interposes-semiconductors/832537/) · Manufacturing Dive · October 9, 2026
+
+Thousands of manufacturing layoffs announced in September (https://www.manufacturingdive.com/news/manufacturing-layoffs-closures-warn-act-september-2026/832400/) · Manufacturing Dive · October 9, 2026
+
+AI, standards & research
+
+NIST Joins White House Effort to Drive ‘A New Golden Age of Science’ (https://www.nist.gov/news-events/news/2026/10/nist-joins-white-house-effort-drive-new-golden-age-science) · NIST · October 8, 2026
+
+Michigan workforce & industry
+
+HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026 (https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75) · Michigan WARN (LEO) · October 8, 2026
+
+Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026 (https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation) · Michigan WARN (LEO) · October 8, 2026
+
+OT cybersecurity
+
+Red Lion Controls N-Tron 700 Series (https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01) · CISA · October 8, 2026
+
+Grid Protection Alliance openPDC and openHistorian (https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02) · CISA · October 8, 2026
+
+Funding & policy
+
+Energy Department Announces New Genesis Mission Awards to Advance Super Intelligence for Science (https://www.energy.gov/articles/energy-department-announces-new-genesis-mission-awards-advance-super-intelligence-science) · U.S. Department of Energy · October 8, 2026
+
+U.S. Department of Energy Awards $96 Million to 67 Early Career Scientists (https://www.energy.gov/articles/us-department-energy-awards-96-million-67-early-career-scientists) · U.S. Department of Energy · October 8, 2026
+
+Michigan Pulse
+
+Manufacturing employment
+586.7k
++1.1k MoM
+· August 2026 · preliminary as published
+
+Unemployment rate
+5.0%
++0.1 pts MoM
+· August 2026 · preliminary as published
+
+Labor force
+4.85M
+· August 2026 · preliminary as published
+
+Total nonfarm employment
+4,505.9k
+· August 2026 · preliminary as published
+
+Source: U.S. Bureau of Labor Statistics.
+
+Why it matters
+
+Two Michigan WARN filings landed October 8: Lear Corporation's announced Sterling Heights closure (67 jobs, effective November 9) and HealthEdge / UST HealthProof's announced Detroit layoff (53 jobs, effective December 1). Announced is not completed — both are notices with effective dates still ahead, and this series tracks them as such.
+
+August's Michigan figures — the newest published — show manufacturing employment up 1,100 on the month to 586,700 while the unemployment rate ticked up a tenth of a point to 5.0%: gains and softening in the same release. September's state figures, out October 20, will arbitrate which way the trend is actually moving.
+
+Manufacturing Dive reports thousands of manufacturing layoffs were announced nationally in September. How much of that national total is Michigan is unexplained in the source — the Michigan-specific record this week is the two WARN filings above, not the national headline.
+
+From the blog
+
+Oakland County is losing jobs. Here is why. (https://axiovexsystems.com/blog/oakland-county-job-losses/) · October 8, 2026
+
+Watchlist
+
+Michigan September employment release — October 20, 2026
+
+Michigan county & metro data revision — October 28, 2026
+
+Lear Corporation Sterling Heights closure takes effect (WARN, 67 jobs) — November 9, 2026
+
+Assembled from the committed Signals snapshot and the Michigan data pack, with vintages as labeled · All editions
+· Privacy policy
+
+Axiovex Systems, LLC · 6633 18 Mile Rd, Sterling Heights, MI 48314
+
+&larr; All editions
+
+READING SOMEONE ELSE’S COPY?
+
+Get the monthly edition.
+
+The same edition, in your own inbox — after the monthly economic releases, with the numbers, their vintages, and why they matter.
+
+One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
+Privacy policy
+
+Next step
+
+Questions about this analysis?
+
+If this analysis touches a problem you're facing, we'd like to hear about it.
+
+Start a conversation

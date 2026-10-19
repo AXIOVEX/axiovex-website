@@ -37,3 +37,11 @@ that data month. CI retains the source evidence and exact generated email.
 Today's customer newsletter preview goes ONLY to Tristen and is not a list
 send. The October 14 source is used only as a labeled design-review sample.
 Policy source: data/publication-policy.json. Implementation: monthly-publication.yml.
+
+Amendment later October 19: owner asks “when all data is available, we send to
+me and then all subscribers.” After publication, send the exact final edition
+to Tristen first. Verify the owner-only Microsoft acceptance receipt against
+the date and rendered email SHA256 before subscriber sending. This is an
+automatically ordered release under the standing authorization. A failed or
+changed preview blocks the list send. The separate current-data test edition
+is only to Tristen and does not consume a customer send reservation.
