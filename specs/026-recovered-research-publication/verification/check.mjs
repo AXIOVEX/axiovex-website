@@ -60,6 +60,9 @@ staticCheck('approved_component_and_shell', () => {
   assert.equal((html.match(/id="finite-model-records-2026-10-19"/g) || []).length, 1);
   assert.deepEqual([...html.matchAll(/class="ledger-num">(\d+)</g)].map(x => Number(x[1])), [19,18,20,5]);
   assert.ok(read('styles.v39.css').subarray(0, read('styles.v38.css').length).equals(read('styles.v38.css')));
+  assert.equal(sha(read('styles.v40.css')),'c51af7c3e78be3c616487e25bfa9526bb9212d6973bab4e4ada57cd53d7374d0');
+  assert.ok(html.includes('<link rel="stylesheet" href="/styles.v40.css">'));
+  assert.equal((html.match(/<span class="article-(?:date|title|basis|more)">/g)||[]).length,16);
 });
 const article = html.match(/<details class="article" id="finite-model-records-2026-10-19">[\s\S]*?<\/details>/)[0];
 staticCheck('visible_recovery_boundary', () => {
@@ -148,7 +151,7 @@ staticCheck('frozen_runtime_assets_unchanged', () => {
   for(const f of frozenRuntimeAssets){const b=read(`${runtimeDir}/${f.path}`);assert.equal(b.length,f.bytes);assert.equal(sha(b),f.sha256);}
 });
 result.input_hashes = {};
-for (const p of ['research/index.html','research/tracker.v1.js','styles.v39.css', ...downloadPaths.map(x=>x.slice(1))]) result.input_hashes[p] = sha(read(p));
+for (const p of ['research/index.html','research/tracker.v1.js','styles.v40.css', ...downloadPaths.map(x=>x.slice(1))]) result.input_hashes[p] = sha(read(p));
 
 const headerEntries = read('_headers').toString().split('\n').filter(x=>/^  [\w-]+:/.test(x)).map(x=> {
   const i=x.indexOf(':'); return [x.slice(0,i).trim(), x.slice(i+1).trim()];

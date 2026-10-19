@@ -82,3 +82,11 @@ The runtime changes, tests, receipts and public-scope audit were independently
 reviewed before this publication update. The exact original report and the
 two preceding frozen website checkpoints remain preserved. This is an
 engineering validation update, not a new physical study or 035 reproduction.
+
+## Concurrent website preservation
+
+Main commit48681df4b2e188ef711889edef8a57fdb030d698 changed article-summary
+children to valid phrasing spans and moved the research page to styles.v40.css.
+The combined publication preserves that exact markup and stylesheet. Only the
+October19 basis and article body carry the already reviewed runtime update.
+No runtime asset, finding, evidence count or other article is changed.

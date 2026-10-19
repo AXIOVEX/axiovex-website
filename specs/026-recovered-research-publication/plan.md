@@ -97,3 +97,17 @@ files, the exact result counts, the partial-stdout disclosure, the missing035
 boundary, unchanged tracker behavior and desktop/mobile rendering under CSP.
 Then rerun the atomic website AEE claims against those current verification
 receipts. Source integration remains a separate open engineering task.
+
+## Combined checkpoint after concurrent main update
+
+Before production promotion, current main moved to
+`48681df4b2e188ef711889edef8a57fdb030d698`. Preserve its summary span markup,
+stylesheet40 and all unrelated HTML. Graft only the reviewed October19 basis
+and article body onto that exact main file. The combined checkpoint starts
+from staging `999ff5fa046773ecffe8a316da2a86c8889017d8`, tree
+`e4ef3fd6a93aef239f417ac3603864c0f827b57c`. Include the exact main stylesheet40
+for staging; it is already present on main. Recheck the combined page and AEE
+claims, while reusing the unchanged runtime assets and scientific results.
+The preceding runtime staging variant passed all16 HTTPS asset checks; its
+cloud-browser verification stopped before the article checks, so it is not
+recorded as a completed runtime deployment gate.
