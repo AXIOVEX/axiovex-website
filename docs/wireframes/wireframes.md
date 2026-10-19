@@ -980,3 +980,16 @@ as accordion rows.
   in hand belongs to a different program's Spec 033).
   Implementation proceeds on staging (T004–T006);
   production promotion stays a separate gate (T007).
+
+
+## WF-19 — Thesis alignment (October 19, 2026; pending approval)
+
+Review drawing and exact proposed copy: `thesis-alignment-2026-10-19.html`.
+Source: owner's attached October 19 business thesis. Lead with the Michigan
+flagship; group its five functions into three pilot paths. Keep PCE development,
+data rights, financing and delivery commitments explicitly conditional. Preserve
+brand, founders, existing evidence assets, contact behavior and staging guards.
+Homepage metadata/FAQ and contact positioning follow the visible copy. No thesis
+PDF, internal financing details or new partner claims are published. Staging
+implementation waits for the owner's wireframe approval; production promotion
+is separate.
