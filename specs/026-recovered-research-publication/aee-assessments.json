@@ -1,0 +1,1813 @@
+{
+  "schema_version": 1,
+  "scope": "Post-recovery publication artifact evaluations; not prospective scientific registrations or independent reproduction of035.",
+  "tool_version": "aee 1.4.0",
+  "resolved_initial_invocation": {
+    "error": "Error: 'str' object has no attribute 'get'",
+    "cause": "Legacy website claim examples use evidence strings; installed AEE1.4.0 requires typed evidence objects.",
+    "correction": "Typed observed-test references bound to the current verification results SHA-256."
+  },
+  "input_sha256": "f18c42b7f444145b0b61a4cafa0887c1bd678b41721d26dff14f1f9b1a273524",
+  "records": [
+    {
+      "phase": "after_specify",
+      "assessment": {
+        "schema_version": "1.0",
+        "methodology_version": "1.0",
+        "project": "axiovex-website",
+        "phase": "after_specify",
+        "outcome": "pass",
+        "summary": "Assessed 8 claim(s); found 0 failure mode(s); 0 claim(s) below the 0.70 confidence threshold.",
+        "created_at": "2026-10-19T17:29:45.603617Z",
+        "claims": [
+          {
+            "id": "C026-1",
+            "text": "The downloadable technical report preserves the recovered report bytes.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Recovered report only"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Compute the report SHA-256; any value other than c459d48a43dc65b8d233c566fdbf81bc1892ad29d1e82fe501accb8ecb477f0b falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-001",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-2",
+            "text": "The public research record excludes the private source inventory.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "All reviewed publication paths and article download links"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "An included private source inventory file or download link falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-001",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-3",
+            "text": "The article explicitly labels its findings as an archival account without current independent reproduction.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "October 19 recovered-report article"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Inspect the rendered article; omission of the archival or missing-source limitation falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-002",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-4",
+            "text": "Every download linked from the recovered-report article exists in the publication tree.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Article download links"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Resolve every article download; any missing file or non-200 response falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-003",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-5",
+            "text": "The external tracker preserves the original script bytes.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "research/tracker.v1.js"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Compare the external script with the original inline body; any byte difference falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-006",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-6",
+            "text": "The existing tracker renders its registered-study cards under the unchanged production CSP.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Current local browser verification under checked-in headers"
+            ],
+            "depends_on": [
+              "C026-5"
+            ],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Load the research page under the production CSP; absence of any of the 20 expected study cards falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-006",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-7",
+            "text": "The publication preserves the research page's unlisted mechanics.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Repository publication paths and research-page shell"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "A missing noindex meta or added research discovery link in navigation, sitemap or llms falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-005",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-8",
+            "text": "The article links use the approved cyan palette on the existing navy article background.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Current article rendering"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Inspect computed article-link color; an unreadable default blue or a color outside the approved palette falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-007",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          }
+        ],
+        "scores": {
+          "C026-1": {
+            "claim_id": "C026-1",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-2": {
+            "claim_id": "C026-2",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-3": {
+            "claim_id": "C026-3",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-4": {
+            "claim_id": "C026-4",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-5": {
+            "claim_id": "C026-5",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-6": {
+            "claim_id": "C026-6",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-7": {
+            "claim_id": "C026-7",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-8": {
+            "claim_id": "C026-8",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          }
+        },
+        "verdicts": {},
+        "recoveries": [],
+        "metadata": {
+          "threshold": 0.7,
+          "input": "specs/026-recovered-research-publication/aee-claims.json"
+        }
+      },
+      "gate_exit_code": 0,
+      "gate_stdout": "AEE gate: pass\n"
+    },
+    {
+      "phase": "after_plan",
+      "assessment": {
+        "schema_version": "1.0",
+        "methodology_version": "1.0",
+        "project": "axiovex-website",
+        "phase": "after_plan",
+        "outcome": "pass",
+        "summary": "Assessed 8 claim(s); found 0 failure mode(s); 0 claim(s) below the 0.70 confidence threshold.",
+        "created_at": "2026-10-19T17:29:45.704664Z",
+        "claims": [
+          {
+            "id": "C026-1",
+            "text": "The downloadable technical report preserves the recovered report bytes.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Recovered report only"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Compute the report SHA-256; any value other than c459d48a43dc65b8d233c566fdbf81bc1892ad29d1e82fe501accb8ecb477f0b falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-001",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-2",
+            "text": "The public research record excludes the private source inventory.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "All reviewed publication paths and article download links"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "An included private source inventory file or download link falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-001",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-3",
+            "text": "The article explicitly labels its findings as an archival account without current independent reproduction.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "October 19 recovered-report article"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Inspect the rendered article; omission of the archival or missing-source limitation falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-002",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-4",
+            "text": "Every download linked from the recovered-report article exists in the publication tree.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Article download links"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Resolve every article download; any missing file or non-200 response falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-003",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-5",
+            "text": "The external tracker preserves the original script bytes.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "research/tracker.v1.js"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Compare the external script with the original inline body; any byte difference falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-006",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-6",
+            "text": "The existing tracker renders its registered-study cards under the unchanged production CSP.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Current local browser verification under checked-in headers"
+            ],
+            "depends_on": [
+              "C026-5"
+            ],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Load the research page under the production CSP; absence of any of the 20 expected study cards falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-006",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-7",
+            "text": "The publication preserves the research page's unlisted mechanics.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Repository publication paths and research-page shell"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "A missing noindex meta or added research discovery link in navigation, sitemap or llms falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-005",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-8",
+            "text": "The article links use the approved cyan palette on the existing navy article background.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Current article rendering"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Inspect computed article-link color; an unreadable default blue or a color outside the approved palette falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-007",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          }
+        ],
+        "scores": {
+          "C026-1": {
+            "claim_id": "C026-1",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-2": {
+            "claim_id": "C026-2",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-3": {
+            "claim_id": "C026-3",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-4": {
+            "claim_id": "C026-4",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-5": {
+            "claim_id": "C026-5",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-6": {
+            "claim_id": "C026-6",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-7": {
+            "claim_id": "C026-7",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-8": {
+            "claim_id": "C026-8",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          }
+        },
+        "verdicts": {},
+        "recoveries": [],
+        "metadata": {
+          "threshold": 0.7,
+          "input": "specs/026-recovered-research-publication/aee-claims.json"
+        }
+      },
+      "gate_exit_code": 0,
+      "gate_stdout": "AEE gate: pass\n"
+    },
+    {
+      "phase": "after_tasks",
+      "assessment": {
+        "schema_version": "1.0",
+        "methodology_version": "1.0",
+        "project": "axiovex-website",
+        "phase": "after_tasks",
+        "outcome": "pass",
+        "summary": "Assessed 8 claim(s); found 0 failure mode(s); 0 claim(s) below the 0.70 confidence threshold.",
+        "created_at": "2026-10-19T17:29:45.801896Z",
+        "claims": [
+          {
+            "id": "C026-1",
+            "text": "The downloadable technical report preserves the recovered report bytes.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Recovered report only"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Compute the report SHA-256; any value other than c459d48a43dc65b8d233c566fdbf81bc1892ad29d1e82fe501accb8ecb477f0b falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-001",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-2",
+            "text": "The public research record excludes the private source inventory.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "All reviewed publication paths and article download links"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "An included private source inventory file or download link falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-001",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-3",
+            "text": "The article explicitly labels its findings as an archival account without current independent reproduction.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "October 19 recovered-report article"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Inspect the rendered article; omission of the archival or missing-source limitation falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-002",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-4",
+            "text": "Every download linked from the recovered-report article exists in the publication tree.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Article download links"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Resolve every article download; any missing file or non-200 response falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-003",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-5",
+            "text": "The external tracker preserves the original script bytes.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "research/tracker.v1.js"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Compare the external script with the original inline body; any byte difference falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-006",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-6",
+            "text": "The existing tracker renders its registered-study cards under the unchanged production CSP.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Current local browser verification under checked-in headers"
+            ],
+            "depends_on": [
+              "C026-5"
+            ],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Load the research page under the production CSP; absence of any of the 20 expected study cards falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-006",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-7",
+            "text": "The publication preserves the research page's unlisted mechanics.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Repository publication paths and research-page shell"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "A missing noindex meta or added research discovery link in navigation, sitemap or llms falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-005",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-8",
+            "text": "The article links use the approved cyan palette on the existing navy article background.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Current article rendering"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Inspect computed article-link color; an unreadable default blue or a color outside the approved palette falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-007",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          }
+        ],
+        "scores": {
+          "C026-1": {
+            "claim_id": "C026-1",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-2": {
+            "claim_id": "C026-2",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-3": {
+            "claim_id": "C026-3",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-4": {
+            "claim_id": "C026-4",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-5": {
+            "claim_id": "C026-5",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-6": {
+            "claim_id": "C026-6",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-7": {
+            "claim_id": "C026-7",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-8": {
+            "claim_id": "C026-8",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          }
+        },
+        "verdicts": {},
+        "recoveries": [],
+        "metadata": {
+          "threshold": 0.7,
+          "input": "specs/026-recovered-research-publication/aee-claims.json"
+        }
+      },
+      "gate_exit_code": 0,
+      "gate_stdout": "AEE gate: pass\n"
+    },
+    {
+      "phase": "after_implement",
+      "assessment": {
+        "schema_version": "1.0",
+        "methodology_version": "1.0",
+        "project": "axiovex-website",
+        "phase": "after_implement",
+        "outcome": "pass",
+        "summary": "Assessed 8 claim(s); found 0 failure mode(s); 0 claim(s) below the 0.70 confidence threshold.",
+        "created_at": "2026-10-19T17:29:45.908639Z",
+        "claims": [
+          {
+            "id": "C026-1",
+            "text": "The downloadable technical report preserves the recovered report bytes.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Recovered report only"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Compute the report SHA-256; any value other than c459d48a43dc65b8d233c566fdbf81bc1892ad29d1e82fe501accb8ecb477f0b falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-001",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-2",
+            "text": "The public research record excludes the private source inventory.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "All reviewed publication paths and article download links"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "An included private source inventory file or download link falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-001",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-3",
+            "text": "The article explicitly labels its findings as an archival account without current independent reproduction.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "October 19 recovered-report article"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Inspect the rendered article; omission of the archival or missing-source limitation falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-002",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-4",
+            "text": "Every download linked from the recovered-report article exists in the publication tree.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Article download links"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Resolve every article download; any missing file or non-200 response falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-003",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-5",
+            "text": "The external tracker preserves the original script bytes.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "research/tracker.v1.js"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Compare the external script with the original inline body; any byte difference falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-006",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-6",
+            "text": "The existing tracker renders its registered-study cards under the unchanged production CSP.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Current local browser verification under checked-in headers"
+            ],
+            "depends_on": [
+              "C026-5"
+            ],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Load the research page under the production CSP; absence of any of the 20 expected study cards falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-006",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-7",
+            "text": "The publication preserves the research page's unlisted mechanics.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Repository publication paths and research-page shell"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "A missing noindex meta or added research discovery link in navigation, sitemap or llms falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-005",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          },
+          {
+            "id": "C026-8",
+            "text": "The article links use the approved cyan palette on the existing navy article background.",
+            "kind": "requirement",
+            "status": "draft",
+            "boundary": [
+              "Current article rendering"
+            ],
+            "depends_on": [],
+            "conflicts_with": [],
+            "evidence": [
+              {
+                "ref": "specs/026-recovered-research-publication/verification/results.json",
+                "kind": "observed",
+                "direction": "supports",
+                "source_quality": "test",
+                "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+                "source_id": "verification026",
+                "independent_of": [],
+                "observed_at": "2026-10-19T17:29:24.988Z",
+                "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+              }
+            ],
+            "assumptions": [],
+            "alternatives": [],
+            "falsification_tests": [
+              "Inspect computed article-link color; an unreadable default blue or a color outside the approved palette falsifies."
+            ],
+            "uncertainty": "low",
+            "severity": "medium",
+            "source_ref": "specs/026-recovered-research-publication/spec.md#FR-007",
+            "domain": "",
+            "confidence": 0.9,
+            "confidence_band": "high",
+            "failures": [],
+            "metadata": {}
+          }
+        ],
+        "scores": {
+          "C026-1": {
+            "claim_id": "C026-1",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-2": {
+            "claim_id": "C026-2",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-3": {
+            "claim_id": "C026-3",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-4": {
+            "claim_id": "C026-4",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-5": {
+            "claim_id": "C026-5",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-6": {
+            "claim_id": "C026-6",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-7": {
+            "claim_id": "C026-7",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          },
+          "C026-8": {
+            "claim_id": "C026-8",
+            "direct_score": 0.9,
+            "propagated_score": 0.9,
+            "band": "high",
+            "components": {
+              "evidence": 1.0,
+              "independence": 0.5,
+              "falsifiability": 1.0,
+              "boundary": 1.0,
+              "contradiction_penalty": 0
+            },
+            "notes": [
+              "Fewer than two independent supporting sources"
+            ]
+          }
+        },
+        "verdicts": {},
+        "recoveries": [],
+        "metadata": {
+          "threshold": 0.7,
+          "input": "specs/026-recovered-research-publication/aee-claims.json"
+        }
+      },
+      "gate_exit_code": 0,
+      "gate_stdout": "AEE gate: pass\n"
+    }
+  ]
+}

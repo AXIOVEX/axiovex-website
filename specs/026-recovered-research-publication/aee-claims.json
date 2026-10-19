@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0",
+  "claims": [
+    {
+      "id": "C026-1",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The downloadable technical report preserves the recovered report bytes.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-001",
+      "boundary": [
+        "Recovered report only"
+      ],
+      "depends_on": [],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:29:24.988Z",
+          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+        }
+      ],
+      "falsification_tests": [
+        "Compute the report SHA-256; any value other than c459d48a43dc65b8d233c566fdbf81bc1892ad29d1e82fe501accb8ecb477f0b falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-2",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The public research record excludes the private source inventory.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-001",
+      "boundary": [
+        "All reviewed publication paths and article download links"
+      ],
+      "depends_on": [],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:29:24.988Z",
+          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+        }
+      ],
+      "falsification_tests": [
+        "An included private source inventory file or download link falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-3",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The article explicitly labels its findings as an archival account without current independent reproduction.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-002",
+      "boundary": [
+        "October 19 recovered-report article"
+      ],
+      "depends_on": [],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:29:24.988Z",
+          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+        }
+      ],
+      "falsification_tests": [
+        "Inspect the rendered article; omission of the archival or missing-source limitation falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-4",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "Every download linked from the recovered-report article exists in the publication tree.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-003",
+      "boundary": [
+        "Article download links"
+      ],
+      "depends_on": [],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:29:24.988Z",
+          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+        }
+      ],
+      "falsification_tests": [
+        "Resolve every article download; any missing file or non-200 response falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-5",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The external tracker preserves the original script bytes.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-006",
+      "boundary": [
+        "research/tracker.v1.js"
+      ],
+      "depends_on": [],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:29:24.988Z",
+          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+        }
+      ],
+      "falsification_tests": [
+        "Compare the external script with the original inline body; any byte difference falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-6",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The existing tracker renders its registered-study cards under the unchanged production CSP.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-006",
+      "boundary": [
+        "Current local browser verification under checked-in headers"
+      ],
+      "depends_on": [
+        "C026-5"
+      ],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:29:24.988Z",
+          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+        }
+      ],
+      "falsification_tests": [
+        "Load the research page under the production CSP; absence of any of the 20 expected study cards falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-7",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The publication preserves the research page's unlisted mechanics.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-005",
+      "boundary": [
+        "Repository publication paths and research-page shell"
+      ],
+      "depends_on": [],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:29:24.988Z",
+          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+        }
+      ],
+      "falsification_tests": [
+        "A missing noindex meta or added research discovery link in navigation, sitemap or llms falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-8",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The article links use the approved cyan palette on the existing navy article background.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-007",
+      "boundary": [
+        "Current article rendering"
+      ],
+      "depends_on": [],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:29:24.988Z",
+          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+        }
+      ],
+      "falsification_tests": [
+        "Inspect computed article-link color; an unreadable default blue or a color outside the approved palette falsifies."
+      ],
+      "uncertainty": "low"
+    }
+  ]
+}
