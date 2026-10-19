@@ -24,7 +24,7 @@ on:
     types: [shared-docs-updated]
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: site-sync
@@ -32,6 +32,8 @@ concurrency:
 
 jobs:
   sync:
+    if: github.event_name != 'push' || github.actor != vars.AXIOVEX_PUBLISH_BOT_LOGIN
+    timeout-minutes: 20
     runs-on: ubuntu-latest
     steps:
       - name: Probe shared-documents HEAD (scheduled runs)
@@ -41,8 +43,18 @@ jobs:
           head=$(git ls-remote https://github.com/AXIOVEX/shared-documents.git HEAD | cut -f1)
           echo "head=$head" >> "$GITHUB_OUTPUT"
 
+      - name: Create scoped website publisher token
+        id: publisher
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.AXIOVEX_PUBLISH_APP_ID }}
+          private-key: ${{ secrets.AXIOVEX_PUBLISH_PRIVATE_KEY }}
+          owner: AXIOVEX
+          repositories: axiovex-website
+          permission-contents: write
       - uses: actions/checkout@v4
         with:
+          token: ${{ steps.publisher.outputs.token || github.token }}
           fetch-depth: 0
 
       - name: Skip scheduled run when shared-documents is unchanged
@@ -83,5 +95,6 @@ jobs:
             echo 'No changes — generated output already current.'
           else
             git commit -m 'Site sync: regenerate documents, blog, sitemap'
-            git push
+            git pull --rebase origin main
+            git push origin main
           fi

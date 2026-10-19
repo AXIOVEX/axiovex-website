@@ -9,7 +9,7 @@ on:
   pull_request:
     paths: ['scripts/ops/breaking*', 'scripts/lib/**', 'scripts/fetch-signals.mjs', '.github/workflows/signals-sync.yml']
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: signals-sync
   cancel-in-progress: false
@@ -18,8 +18,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - name: Create scoped website publisher token
+        if: github.event_name != 'pull_request'
+        id: publisher
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.AXIOVEX_PUBLISH_APP_ID }}
+          private-key: ${{ secrets.AXIOVEX_PUBLISH_PRIVATE_KEY }}
+          owner: AXIOVEX
+          repositories: axiovex-website
+          permission-contents: write
       - uses: actions/checkout@v4
         with:
+          token: ${{ steps.publisher.outputs.token || github.token }}
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:

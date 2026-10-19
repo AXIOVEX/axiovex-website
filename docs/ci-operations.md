@@ -330,3 +330,23 @@ Annual BLS fallback: the official HTML, workbook and bulk hosts may reject GitHu
 runners. The keyed API returns named measures for every member of the verified
 831-occupation 2025–35 universe. Missing measures, missing occupations or a newer
 base year fail until a new universe is verified. Other providers continue to run.
+
+
+## Publication identity and branch rules
+
+The owner-only branch freeze rejected GitHub Actions pushes even when collectors
+and builders succeeded. Six content writers now use the owner-approved private
+AXIOVEX Website CI Publisher app, installed only on this repository, to mint a
+contents-write token. GITHUB_TOKEN contents permissions stay read-only. The app
+has no workflow/secret/organization administration grant. Its normal-update
+exception applies only to main; other branches and main deletion/force-pushes
+remain owner-only. See the CI-publisher decision for the exact boundaries.
+
+App pushes skip recursive site-sync and expensive push-triggered health jobs.
+Scheduled checks still run, and every writer rebuilds content before pushing.
+Cloudflare deployment is not suppressed. Installation tokens expire after an
+hour and are revoked at job completion by the official token action.
+
+The real Tristen-only delivery test passed in run 39324152242. The received HTML
+newsletter passed sender, recipient, subject, freshness, HTML, table, postal and
+review-notice checks. NEWSLETTER_VERIFY_INBOX=true is now enabled for month-end.
