@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { signalsContext } from './lib/signals-context.mjs';
 /* Axiovex Systems site builder — deterministic, dependency-free.
  *
  * One generator owns every machine-maintained page:
@@ -959,7 +960,10 @@ function insightsHtml(pulse, outlook) {
   }
   if (outs.length) prov.push('Outlooks: ' + outs.join(' &middot; '));
   prov.push('No forecasts &mdash; forward-looking figures are the publishing agencies&rsquo; projections');
-  return '          <p class="hl-summary">' + sentences.join(' ') + '</p>\n' +
+  const read = rel => { try { return JSON.parse(readFileSync(path.join(ROOT, rel), 'utf8')); } catch { return null; } };
+  const current = signalsContext(read('data/pack/fred.json'), read('data/geo/laus-county.json'));
+  const context = current.map(i => '          <p class="hl-summary">' + esc(i.text) + ' <a href="' + escAttr(i.url) + '" target="_blank" rel="noopener">' + esc(i.source) + '</a></p>\n').join('');
+  return '          <p class="hl-summary">' + sentences.join(' ') + '</p>\n' + context +
     '          <p class="hl-prov">' + prov.join(' &middot; ') + '</p>';
 }
 
@@ -2130,7 +2134,7 @@ function breakingEntry() {
 }
 
 function breakingHtml(entry) {
-  return '<div class="breaking-banner" role="region" aria-label="Breaking news">\n' +
+  return '<div class="breaking-banner" data-expires="' + escAttr(entry.expiresUtc) + '" role="region" aria-label="Breaking news">\n' +
     '    <a class="breaking-link" href="' + escAttr(entry.url) + '" target="_blank" rel="noopener">' +
     '<span class="breaking-lead">BREAKING</span> ' +
     '<span class="breaking-headline">' + esc(entry.headline) + '</span> ' +
@@ -2139,7 +2143,7 @@ function breakingHtml(entry) {
     '    <button class="breaking-dismiss" type="button" aria-label="Dismiss breaking news banner" ' +
     'data-breaking-dismiss="' + escAttr(entry.id) + '">&#10005;</button>\n' +
     '  </div>\n' +
-    '  <script src="/breaking.v1.js" defer></script>';
+    '  <script src="/breaking.v2.js" defer></script>';
 }
 
 function buildBreaking() {
@@ -2149,6 +2153,8 @@ function buildBreaking() {
     'index.html',
     path.join('contact', 'index.html'),
     path.join('privacy', 'index.html'),
+    path.join('disclaimer', 'index.html'),
+    path.join('research', 'index.html'),
     path.join('blog', 'index.html'),
     path.join('documents', 'index.html'),
     path.join('signals', 'index.html'),

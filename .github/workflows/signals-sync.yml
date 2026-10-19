@@ -1,55 +1,75 @@
-name: Signals sync (feeds + Michigan Pulse)
-
-# Keeps the Signals snapshot current (spec 004):
-#   - scripts/fetch-signals.mjs pulls the configured RSS/API sources and
-#     the BLS Michigan series into data/signals.json (rewritten only when
-#     the content actually changed; failed sources keep last-good items)
-#   - scripts/build-site.mjs re-renders the home Signals block, /signals/,
-#     /feed.xml, and sitemap.xml from that snapshot
-# The bot commits only when something changed; Cloudflare Pages deploys
-# on that push. Bot pushes do not re-trigger workflows, so this cannot loop.
-
+name: Signals content and breaking-news monitor
 on:
   schedule:
-    - cron: '17 * * * *'
+    # Full Pulse hourly; headline lanes every 15 minutes; breaking feeds every 5.
+    - cron: '7 * * * *'
+    - cron: '22,37,52 * * * *'
+    - cron: '2,12,17,27,32,42,47,57 * * * *'
   workflow_dispatch:
-
+  pull_request:
+    paths: ['scripts/ops/breaking*', 'scripts/lib/**', 'scripts/fetch-signals.mjs', '.github/workflows/signals-sync.yml']
 permissions:
   contents: write
-
 concurrency:
-  group: signals-sync
+  group: site-content-sync
   cancel-in-progress: false
-
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-
-      - name: Fetch signals + Pulse snapshot
+          node-version: '24'
+      - name: Test source verification, significance, expiry and computed insights
+        run: node --test scripts/ops/breaking.test.mjs scripts/ops/signals-context.test.mjs
+      - name: Check breaking sources and update banner state
+        id: breaking
+        if: github.event_name != 'pull_request'
+        continue-on-error: true
+        run: node scripts/ops/breaking.mjs
+      - name: Fetch fresh headlines and economic Pulse
+        id: signals
+        if: github.event_name != 'pull_request' && github.event.schedule != '2,12,17,27,32,42,47,57 * * * *'
+        continue-on-error: true
         env:
           BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
-        run: node scripts/fetch-signals.mjs
-
-      - name: Rebuild site from snapshot
-        run: node scripts/build-site.mjs
-
-      - name: Commit if changed
+          SIGNALS_STATUS_FILE: ops-output/signals-refresh.json
+          SLOT: ${{ github.event.schedule }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          mkdir -p ops-output
+          if [ "$SLOT" = '22,37,52 * * * *' ]; then
+            node scripts/fetch-signals.mjs --skip-bls
+          else
+            node scripts/fetch-signals.mjs
+          fi
+      - name: Recalculate Signals insights and render banner activation or expiry
+        if: github.event_name != 'pull_request'
+        run: node scripts/build-site.mjs
+      - name: Publish changed content for Cloudflare deployment
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -u
+          git add data/breaking-state.json
           if git diff --cached --quiet; then
-            echo "snapshot unchanged — nothing to commit"
+            echo 'No content changes; check evidence retained in artifact.'
             exit 0
           fi
-          git commit -m "Signals snapshot refresh (automated)"
-          git pull --rebase --quiet origin main || true
-          git push origin main || (git pull --rebase --quiet origin main && git push origin main)
+          git commit -m 'Refresh Signals content and verified breaking banner'
+          git pull --rebase origin main
+          git push origin main
+      - name: Preserve every source check, including failures and no-change runs
+        if: always() && github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: signals-news-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ops-output/
+          retention-days: 30
+      - name: Fail visibly on total source outage
+        if: steps.breaking.outcome == 'failure' || steps.signals.outcome == 'failure'
+        run: exit 1

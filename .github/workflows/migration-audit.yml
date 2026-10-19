@@ -1,0 +1,31 @@
+name: Meta Muse duty and workflow audit
+on:
+  schedule:
+    - cron: '11 13 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['data/operations-duties.json', 'scripts/ops/muse-audit.mjs', '.github/workflows/**']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Audit duty coverage and actual workflow execution
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/ops/muse-audit.mjs
+      - name: Preserve audit even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: muse-migration-audit-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ops-output/migration-audit/
+          retention-days: 90

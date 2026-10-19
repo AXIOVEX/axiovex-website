@@ -20,6 +20,7 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { decode, tagValue, parseFeed } from './lib/news-feeds.mjs';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const args = process.argv.slice(2);
@@ -98,47 +99,6 @@ async function postJson(url, body) {
 }
 
 /* ---------- tiny feed parsing (title / link / date / summary only) ---------- */
-function decode(s) {
-  return String(s || '')
-    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
-    .replace(/<[^>]+>/g, '')
-    .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
-    .replace(/&#0?39;/g, "'").replace(/&apos;/g, "'")
-    .replace(/&amp;/g, '&')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-function tagValue(block, names) {
-  for (const n of names) {
-    const m = new RegExp('<' + n + '(?:\\s[^>]*)?>([\\s\\S]*?)</' + n + '>', 'i').exec(block);
-    if (m) return decode(m[1]);
-  }
-  return '';
-}
-function parseFeed(xml) {
-  const items = [];
-  const blocks = xml.match(/<item[\s>][\s\S]*?<\/item>/gi) || xml.match(/<entry[\s>][\s\S]*?<\/entry>/gi) || [];
-  for (const b of blocks) {
-    let link = tagValue(b, ['link']);
-    if (!link) {
-      const m = /<link[^>]+href="([^"]+)"/i.exec(b);
-      if (m) link = decode(m[1]);
-    }
-    const title = tagValue(b, ['title']);
-    const dateRaw = tagValue(b, ['pubDate', 'dc:date', 'published', 'updated']);
-    const summary = tagValue(b, ['description', 'summary']);
-    const d = dateRaw ? new Date(dateRaw) : null;
-    if (title && link) {
-      items.push({
-        title, link,
-        date: d && !isNaN(d) ? d.toISOString().slice(0, 10) : null,
-        _text: (title + ' ' + summary).toLowerCase(),
-      });
-    }
-  }
-  return items;
-}
-
 /* ---------- keyword matching ---------- */
 function termHit(text, term) {
   const t = term.toLowerCase();
@@ -338,7 +298,7 @@ async function ingestUsaSpendingApi(usa) {
       _text: title.toLowerCase(),
     };
   }).filter(Boolean)
-    .sort((a, b) => (a.date < b.date ? 1 : -1))
+    .sort((a, b) => b.date.localeCompare(a.date) || canon(a.link).localeCompare(canon(b.link)))
     .slice(0, usa.maxItems || 6);
   if (!items.length) throw new Error('0 items parsed');
   anySuccess = true; feedSuccess = true;
@@ -388,7 +348,7 @@ for (const laneCfg of cfg.lanes) {
   const seen = new Set();
   const items = (byLane.get(laneCfg.id) || [])
     .filter(i => i.date && i.date >= cutoff)
-    .sort((a, b) => (a.date < b.date ? 1 : -1))
+    .sort((a, b) => b.date.localeCompare(a.date) || canon(a.link).localeCompare(canon(b.link)))
     .filter(i => { const k = canon(i.link); if (seen.has(k)) return false; seen.add(k); return true; })
     .slice(0, laneCfg.cap || 8)
     .map(({ source, sourceId, title, link, date }) => ({ source, sourceId, title, link, date }));
@@ -398,6 +358,7 @@ for (const laneCfg of cfg.lanes) {
 /* ---------- BLS Pulse ---------- */
 let pulse = prev ? prev.pulse : null;
 try {
+  if (args.includes('--skip-bls')) throw new Error('scheduled-skip');
   const tiles = [];
   let referenceMonth = null;
   const seriesDefs = cfg.blsSeries || [];
@@ -454,9 +415,15 @@ try {
   pulse = { source: 'U.S. Bureau of Labor Statistics', referenceMonth, tiles };
   anySuccess = true;
 } catch (e) {
-  failures.push('bls: ' + e.message);
+  if (e.message !== 'scheduled-skip') failures.push('bls: ' + e.message);
 }
 
+/* Coverage evidence is written even when the content is unchanged. */
+if (process.env.SIGNALS_STATUS_FILE) {
+  writeFileSync(process.env.SIGNALS_STATUS_FILE, JSON.stringify({ checkedUtc: new Date().toISOString(),
+    failures, partial: failures.length > 0, feedSuccess, blsChecked: !args.includes('--skip-bls') }, null, 2) + '\n');
+}
+if (!feedSuccess) process.exitCode = 1;
 /* ---------- write only on change ---------- */
 const snapshot = { lanes: lanesOut, pulse };
 if ((!feedSuccess || !anySuccess) && !prev) {
@@ -467,7 +434,7 @@ if ((!feedSuccess || !anySuccess) && !prev) {
 const stable = JSON.stringify(snapshot);
 if (prev && JSON.stringify({ lanes: prev.lanes, pulse: prev.pulse }) === stable) {
   console.log('fetch-signals: no change (' + failures.length + ' source failure(s) absorbed: ' + failures.join(' | ') + ') · ' + callCountsLine());
-  process.exit(0);
+  process.exit(process.exitCode || 0);
 }
 writeFileSync(OUT, JSON.stringify({ updatedUtc: new Date().toISOString(), ...snapshot }, null, 2) + '\n');
 const counts = Object.values(lanesOut).map(l => l.id + '=' + l.items.length).join(' ');

@@ -1009,3 +1009,13 @@ expand/collapse layout; change invalid paragraph elements inside summary to
 phrasing spans. A scoped rule preserves their existing block layout, margins,
 line height and color exactly. Research stylesheet advances v39 to v40 for
 cache busting; noindex and exclusion from public discovery remain intact.
+# October 19, 2026 operational amendment — existing WF-G7
+
+Owner requested automatic breaking-news activation in CI. Banner anatomy,
+placement, responsive layout and dismissal are unchanged. The existing strip
+now activates after source verification under
+`docs/decisions/2026-10-19-breaking-news-ci.md`, and disappears at expiry.
+Signals keeps its existing visible last-refresh timestamp; its existing summary
+column now also includes source-linked manufacturing-production change and
+83-county unemployment range, recomputed from the refreshed FRED/BLS inputs; checks with no
+content changes are recorded as CI artifacts rather than fresh data claims.

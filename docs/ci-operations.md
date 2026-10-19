@@ -48,9 +48,9 @@ No Muse service is required by the new Actions runners.
 | LinkedIn personal/company | Publication day 10:30 / following Tuesday 09:30 | Human signed-in steps; no CI browser session migrated |
 | Newsletter preparation | 29th 09:39; February last day | workforce + candidate artifacts |
 | Newsletter delivery | Monthly, after verified economic releases | monthly-publication.yml; deterministic source-only standing authorization |
-| Signals/Pulse | Hourly | Existing `signals-sync.yml`, unchanged |
+| Signals headlines / Pulse / breaking | Every 15 min / hourly / every 5 min | `signals-sync.yml`; actual content ingest, rebuilt insights, source-verified banner |
 | Shared documents/blog | Push / every 15 minutes | Existing `site-sync.yml`, unchanged |
-| Analysis pack | Monday 12:23 UTC | Existing `data-pack-sync.yml`, unchanged |
+| Analysis pack + county insights | Daily 12:23 UTC | `data-pack-sync.yml`; keyed sources, LAUS and public Signals rebuild |
 
 Actions schedules are approximate. The runner fires at :39 in UTC hours
 12–15; monthly release checks run at :00 in UTC hours 14/15 daily, then gates
@@ -260,3 +260,19 @@ coverage partial and remains visible instead of silently claiming persistence.
 - Manual monthly dispatch exposed an empty-cron parsing defect before any
   send. The scheduler now treats empty dispatch cron as manual and has an
   explicit regression test, plus queued DST-offset tests.
+
+
+## October 19 migration coverage audit
+
+Authoritative duty inventory: `data/operations-duties.json`. Daily
+`migration-audit.yml` checks workflow availability, enabled status, last
+successful execution age and latest completed failures. Its artifact includes
+all automatic duties and explicitly retained review/interactive duties.
+See `docs/muse-migration-audit.md` for findings and limits.
+
+The old breaking-news Muse timer is replaced by `signals-sync.yml`:
+five-minute feed/source checks, 15-minute headline ingestion, hourly BLS,
+source-verified automatic banner publication and expiry. Source-check artifacts
+are retained even if no content changed. No timestamp-only snapshot commits.
+Daily pack sync now also refreshes county rates (including revisions within
+the same month), recalculates public insight arithmetic, and rebuilds Signals.
