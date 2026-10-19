@@ -115,9 +115,16 @@ async function main() {
     const email = JSON.parse(readFileSync(`newsletter/issues/${plan.date}.email.json`, 'utf8'));
     const { createHash } = await import('node:crypto');
     const hash = createHash('sha256').update(JSON.stringify(email)).digest('hex');
+    const preview = JSON.parse(readFileSync('ops-output/email-review/newsletter-receipt.json', 'utf8'));
+    if (preview.httpStatus !== 202 || preview.sent !== 1 || preview.recipient !== 'tristen@axiovexsystems.com' || preview.date !== plan.date || preview.emailSHA256 !== hash) {
+      throw new Error('Subscriber send refused: Tristen must receive the exact final edition first');
+    }
     execute(process.execPath, ['scripts/newsletter/send.mjs', plan.date, '--base', 'https://axiovexsystems.com', '--approved-by', `${policy.authorization}; decision=${policy.decisionId}; dataMonth=${plan.dataMonth}; emailSHA256=${hash}`]);
     save('customer-send.json', { dataMonth: plan.dataMonth, date: plan.date, decisionId: policy.decisionId, sha256: hash, status: 'sender completed' }); return;
   }
-  throw new Error('Expected plan, check, publish or send');
+  if (mode === 'preview') {
+    execute(process.execPath, ['scripts/ops/preview-email.mjs', '--kind', 'newsletter', '--date', plan.date, '--send']); return;
+  }
+  throw new Error('Expected plan, check, publish, preview or send');
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) main().catch(error => { summary(`# Month-end publication failed\n\n${error.message}`); process.exitCode = 1; });

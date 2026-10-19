@@ -2293,3 +2293,24 @@ const newsletterIssues = buildNewsletter();
 writeSitemap(posts, docsInfo, signalsInfo, newsletterIssues);
 buildNewsletterChrome();
 buildBreaking();
+
+// Real 404 responses on Pages disable its implicit SPA/homepage fallback.
+writeFileSync(path.join(ROOT, '404.html'), readFileSync(path.join(ROOT, 'scripts/templates/not-found.html'), 'utf8'));
+// Public, source-linked text for AI readers; never include the unlisted hub.
+const machinePages = [...readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+const machineText = [readFileSync(path.join(ROOT, 'llms.txt'), 'utf8').trim()];
+for (const url of machinePages) {
+  const pathname = new URL(url).pathname;
+  if (pathname === '/research/' || !url.startsWith(SITE + '/')) continue;
+  const file = path.join(ROOT, pathname, 'index.html');
+  if (!existsSync(file)) continue;
+  const html = readFileSync(file, 'utf8');
+  const main = /<main\b[^>]*>([\s\S]*?)<\/main>/i.exec(html)?.[1] || '';
+  const text = main.replace(/<(script|style|form|svg)\b[^>]*>[\s\S]*?<\/\1>/gi, '')
+    .replace(/<!--[\s\S]*?-->/g, '').replace(/<\/[^>]+>/g, '\n').replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
+    .replace(/&#39;|&rsquo;|&lsquo;/g, "'").replace(/&nbsp;/g, ' ').replace(/&mdash;/g, '—').replace(/&ndash;/g, '–')
+    .replace(/[ \t]+/g, ' ').replace(/ *\n */g, '\n').replace(/\n{3,}/g, '\n\n').trim();
+  machineText.push('## ' + url + '\n\n' + text);
+}
+writeFileSync(path.join(ROOT, 'llms-full.txt'), machineText.join('\n\n') + '\n');

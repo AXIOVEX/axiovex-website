@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
       - run: node --test scripts/ops/*.test.mjs
   calendar:
     needs: test
@@ -40,7 +40,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
       - id: calendar
         env:
           REQUESTED_TASK: ${{ github.event_name == 'push' && 'health' || inputs.task }}
@@ -62,12 +62,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
-      - name: Install pinned AEO checker for report audits
+          node-version: '24'
+      - name: Install locked independent SEO and AEO audit tools
         if: contains(fromJSON('["daily","weekly","health"]'), matrix.task)
         run: |
-          npm install --prefix "$RUNNER_TEMP/axiovex-aeo" --no-audit --no-fund aeo.js@0.0.16
-          echo "OPS_AEO_CLI=$RUNNER_TEMP/axiovex-aeo/node_modules/aeo.js/dist/cli.mjs" >> "$GITHUB_ENV"
+          npm ci --prefix scripts/ops/audit-tools --ignore-scripts --no-audit --no-fund
+          echo "OPS_AEO_CLI=$GITHUB_WORKSPACE/scripts/ops/audit-tools/node_modules/aeo.js/dist/cli.mjs" >> "$GITHUB_ENV"
+          echo "OPS_SEO_MODULE_ROOT=$GITHUB_WORKSPACE/scripts/ops/audit-tools/node_modules" >> "$GITHUB_ENV"
       - name: Analytics
         if: contains(fromJSON('["daily","weekly"]'), matrix.task)
         env:

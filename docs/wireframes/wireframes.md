@@ -992,3 +992,14 @@ newsletter/Highlights region: **Last refreshed: October 19, 2026 at 9:27 AM ET**
 build time. Keep each economic dataset's own published reference vintage.
 No stylesheet changes are required. This direct owner request authorizes
 the placement and wording; update this frame before implementing it.
+
+## SEO corrections — October 19, owner-directed
+
+Owner requests alternate SEO checkers and fixes to verified findings. Add a
+minimal branded 404 page: existing navy page, Axiovex logo, centered “Page not
+found” heading, one explanation and links to Home and Signals. Return HTTP404
+and noindex; exclude from sitemap. This replaces the unintended homepage
+fallback for unknown paths. Existing typography/palette are reused. Replace
+the workforce article's generic “here” release link text with the descriptive
+“verified September 2026 workforce release”; preserve its target and facts.
+These targeted technical corrections follow the owner's direct instruction.
