@@ -1,10 +1,17 @@
 {
-  "updatedUtc": "2026-10-19T13:27:47.017Z",
+  "updatedUtc": "2026-10-19T17:36:52.361Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "Why Digital Leadership Fails When Decisions Drift Away From Operational Reality",
+          "link": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/",
+          "date": "2026-10-19"
+        },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
@@ -22,23 +29,16 @@
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
-          "link": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/",
-          "date": "2026-10-16"
+          "title": "MIT’s TechAMP finds early success after first year, could expand",
+          "link": "https://www.manufacturingdive.com/news/mit-techamp-finds-early-success-after-first-year-expansion-teledyne-defense/833324/",
+          "date": "2026-10-19"
         },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "Alcoa plans to sell part of its Massena East site for $315M",
-          "link": "https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/",
-          "date": "2026-10-16"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Avio’s plan to meet the US’ solid rocket motors demand",
-          "link": "https://www.manufacturingdive.com/news/avio-usa-ceo-james-syring-solid-rocket-motor-manufacturing-plant-virginia/832755/",
-          "date": "2026-10-16"
+          "title": "Cleveland-Cliffs CEO blames Canada for Stelco layoffs",
+          "link": "https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/",
+          "date": "2026-10-19"
         },
         {
           "source": "Automation Alley",
@@ -50,16 +50,16 @@
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "What manufacturing plant managers think of the AI and automation boom",
-          "link": "https://www.manufacturingdive.com/news/what-manufacturing-plant-managers-think-of-the-ai-and-automation-boom/832776/",
-          "date": "2026-10-15"
+          "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
+          "link": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/",
+          "date": "2026-10-16"
         },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "Nestlé to spend additional $1B on manufacturing operations in Mexico",
-          "link": "https://www.manufacturingdive.com/news/nestle-investment-mexico-coffee-pet-food-emerging-markets/833093/",
-          "date": "2026-10-15"
+          "title": "Alcoa plans to sell part of its Massena East site for $315M",
+          "link": "https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/",
+          "date": "2026-10-16"
         }
       ]
     },
@@ -111,6 +111,13 @@
         {
           "source": "Automation Alley",
           "sourceId": "automation-alley",
+          "title": "Why Digital Leadership Fails When Decisions Drift Away From Operational Reality",
+          "link": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/",
+          "date": "2026-10-19"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
           "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
           "link": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/",
           "date": "2026-10-16"
@@ -156,13 +163,6 @@
           "title": "Why Supply Chain Automation Depends on Alignment, Not Just Technology",
           "link": "https://automationalley.com/2026/10/06/why-supply-chain-automation-depends-on-alignment-not-just-technology/",
           "date": "2026-10-06"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Made in America Needs More Than Investment. It Needs People.",
-          "link": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/",
-          "date": "2026-10-05"
         }
       ]
     },
@@ -240,6 +240,13 @@
           "date": "2026-10-19"
         },
         {
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
+          "title": "Energy Department Advances Constitution Pipeline Project with $42 Million in Defense Production Act Funding",
+          "link": "https://www.energy.gov/articles/energy-department-advances-constitution-pipeline-project-42-million-defense-production-act",
+          "date": "2026-10-19"
+        },
+        {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
           "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
@@ -280,13 +287,6 @@
           "title": "Department of Veterans Affairs → ELECTRA-MED CORPORATION — $21,507 award, October 15, 2026",
           "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0056_3600_36C10G24D0057_3600",
           "date": "2026-10-15"
-        },
-        {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces 2026 Ernest Orlando Lawrence Award Winners",
-          "link": "https://www.energy.gov/articles/energy-department-announces-2026-ernest-orlando-lawrence-award-winners",
-          "date": "2026-10-13"
         }
       ]
     }
