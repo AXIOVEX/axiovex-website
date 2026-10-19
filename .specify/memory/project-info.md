@@ -42,3 +42,12 @@
   narrow significant candidates before activating the existing banner; expiry,
   deduplication and partial coverage are recorded. Decision:
   docs/decisions/2026-10-19-breaking-news-ci.md supersedes Meta Muse approval loop.
+
+- Meta Muse duty inventory: data/operations-duties.json; audit findings and
+  residual review/session duties: docs/muse-migration-audit.md. Daily
+  migration-audit.yml checks enabled/recent/successful execution. Verification:
+  docs/verification/2026-10-19-signals-and-muse-ci.json. Do not claim editorial,
+  LinkedIn, annual-vintage review or interactive mail-loop duties are unattended.
+- Economic pack refresh retries transient failed providers once and fails on
+  any remaining failed/skipped source, retaining both attempts and last-good
+  data. All seven pack sources plus county refresh verified in run 39304059527.
