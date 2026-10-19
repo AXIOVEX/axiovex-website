@@ -20,6 +20,7 @@ on:
 permissions:
   contents: read
   actions: read
+  checks: read
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -69,6 +70,11 @@ jobs:
           npm ci --prefix scripts/ops/audit-tools --ignore-scripts --no-audit --no-fund
           echo "OPS_AEO_CLI=$GITHUB_WORKSPACE/scripts/ops/audit-tools/node_modules/aeo.js/dist/cli.mjs" >> "$GITHUB_ENV"
           echo "OPS_SEO_MODULE_ROOT=$GITHUB_WORKSPACE/scripts/ops/audit-tools/node_modules" >> "$GITHUB_ENV"
+      - name: Wait for this commit's production deployment before the live audit
+        if: github.event_name == 'push' && matrix.task == 'health'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/ops/wait-deployment.mjs
       - name: Analytics
         if: contains(fromJSON('["daily","weekly"]'), matrix.task)
         env:
