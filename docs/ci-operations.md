@@ -93,6 +93,19 @@ health. `mail-delivery.json` records Microsoft acceptance, sender, recipients
 and time; the message is saved in Newsletter Sent Items. Graph acceptance is
 not proof of inbox delivery. No retry is made after an uncertain mail result.
 
+Reports are rendered as styled HTML, not raw Markdown. `report.html` and
+`report.txt` join the original `report.md` and exact raw JSON in CI artifacts.
+The renderer escapes source content, creates real tables/headings/lists and
+formats request counts and byte units for reading. Source values are unchanged.
+
+`node scripts/ops/preview-email.mjs --kind newsletter --date 2026-10-14`
+generates the latest committed customer edition for design review without
+sending. Add `--send` only when the owner requests a preview. The authenticated
+`/api/ops/preview` route hardcodes tristen@axiovexsystems.com, uses the dedicated
+Newsletter sender, and does not access subscriber storage or issue approvals.
+The preview is labeled REVIEW ONLY and cannot unsubscribe or distribute to the
+list. Customer sends continue to require their existing exact-issue approval.
+
 ## Newsletter review and send
 
 1. Download Tuesday's candidate snapshot and editorial template. Complete

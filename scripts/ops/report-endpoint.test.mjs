@@ -33,6 +33,9 @@ test('report uses Microsoft Newsletter mailbox and only the two founders', async
   const payload = JSON.parse(requests[1].options.body);
   assert.deepEqual(payload.message.toRecipients.map(r => r.emailAddress.address), ['tristen@axiovexsystems.com', 'rockson@axiovexsystems.com']);
   assert.equal(payload.saveToSentItems, true);
+  assert.equal(payload.message.body.contentType, 'HTML');
+  assert.match(payload.message.body.content, /<html/);
+  assert.ok(!payload.message.body.content.includes('Report status: **'));
   assert.ok(!(await response.text()).includes('test-microsoft-secret'));
 });
 test('Microsoft errors never become successful delivery', async t => {
