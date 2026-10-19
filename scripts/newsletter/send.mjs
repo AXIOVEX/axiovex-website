@@ -64,6 +64,9 @@ for (;;) {
   if (r.gauge.planTripped || r.gauge.moveTripped || r.gauge.healthOverrides.length) {
     console.log('FR-020 GAUGE TRIPPED — record the planning task in specs/020-newsletter/tasks.md Follow-ups and flag the owner.');
   }
+  if (r.failed || r.throttled || (base === 'https://axiovexsystems.com' && r.blockedAllowlist)) {
+    throw new Error('Newsletter delivery incomplete. Inspect the sends ledger before retrying; a restart can duplicate earlier recipients.');
+  }
   if (r.remaining <= 0 || r.batch === 0) break;
   offset += r.batch;
 }
