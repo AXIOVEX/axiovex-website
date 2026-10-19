@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "verified_utc": "2026-10-19T18:06:34.196845+00:00",
+  "scope": "Completed website deployment of the runtime update and recovered archival report; no source-repository integration or missing-study reproduction is asserted.",
+  "frozen_publication_manifest_sha256": "6f0344f55e3bbf69fd9e88e3fe5c75c8f2c2a10c0477f780c5c11b61337ecc04",
+  "production_pull_request": "https://github.com/AXIOVEX/axiovex-website/pull/9",
+  "deployments": [
+    {
+      "environment": "staging",
+      "status": "pass",
+      "commit": "5bc90417c229b36c6fcc6c56fc7c8fa6c99861b5",
+      "tree": "918461da81a55fc84b261f972fe990dec9a3ea4e",
+      "url": "https://axiovex-website-staging.pages.dev/research/",
+      "cloudflare_preview": "https://73307bf1.axiovex-website-staging.pages.dev",
+      "source_summary_sha256": "1ea4cee23d4c9a6a4ca8eb650abbfe4c053a7bb344260b45dc1cb90eea53a426",
+      "https_asset_count": 16,
+      "exact_asset_count": 16,
+      "crawler_guards": "pass",
+      "browser": {
+        "counts": {
+          "articles": 4,
+          "cards": 20,
+          "forms": 1,
+          "noindex": "noindex",
+          "predictions": 2,
+          "releases": 20,
+          "stylesheet": "/styles.v40.css",
+          "summary_spans": 16,
+          "viewport": {
+            "height": 936,
+            "width": 1363
+          }
+        },
+        "filters": {
+          "confirmed": 7,
+          "rejected": 7,
+          "noeffect": 3,
+          "inconclusive": 1,
+          "running": 1,
+          "offscale": 2
+        },
+        "article_open": true,
+        "article_download_count": 10,
+        "overflow": false,
+        "website_errors": 0,
+        "extension_metadata_errors": 43
+      }
+    },
+    {
+      "environment": "production",
+      "status": "pass",
+      "commit": "a373f311759e10efc01afef1e4608fd570324411",
+      "tree": "5aea7188863037b386f31d83841b20e64aae0d40",
+      "url": "https://axiovexsystems.com/research/",
+      "cloudflare_preview": "https://e62bcfd9.axiovex-website.pages.dev",
+      "source_summary_sha256": "617bf50d5edbef98b1574b7500df38a5a139a3de3e43feb8c769365a7425d8ca",
+      "https_asset_count": 16,
+      "exact_asset_count": 15,
+      "crawler_guards": "pass",
+      "browser": {
+        "counts": {
+          "articles": 4,
+          "cards": 20,
+          "forms": 1,
+          "noindex": "noindex",
+          "predictions": 2,
+          "releases": 20,
+          "stylesheet": "/styles.v40.css",
+          "summary_spans": 16,
+          "viewport": {
+            "height": 936,
+            "width": 1363
+          }
+        },
+        "filters": {
+          "confirmed": 7,
+          "rejected": 7,
+          "noeffect": 3,
+          "inconclusive": 1,
+          "running": 1,
+          "offscale": 2
+        },
+        "article_open": true,
+        "article_download_count": 10,
+        "overflow": false,
+        "website_errors": 0,
+        "extension_metadata_errors": 32
+      },
+      "delivery_transformation": {
+        "name": "Cloudflare contact email obfuscation",
+        "decoded_contact": "start@axiovexsystems.com",
+        "replacements": [
+          "one existing contact anchor",
+          "one same-origin email decoder script"
+        ],
+        "normalized_bytes": 52942,
+        "normalized_sha256": "c40340fe426b83842b95eb1ce80d275799479dc9e7091cd6eec21f704c92f0c6",
+        "normalized_matches_frozen": true,
+        "scope": "No other delivered HTML difference is accepted."
+      },
+      "raw_html_sha256": "1c8ad7571efd90e2c377bbfac24275cb2b4f8af081d32e8bea8cbb457bfc5078",
+      "screenshot_limitation": "An optional clipped full-page screenshot timed out. Functional assertions and the exact HTTPS assets passed independently; desktop/mobile renders are retained in the local QA record."
+    }
+  ],
+  "served_content": [
+    {
+      "path": "research/index.html",
+      "bytes": 52942,
+      "sha256": "c40340fe426b83842b95eb1ce80d275799479dc9e7091cd6eec21f704c92f0c6"
+    },
+    {
+      "path": "research/records/2026-10-19-discriminating-studies/README.txt",
+      "bytes": 2066,
+      "sha256": "79170d80bb66af4ed743236748a7511784d7a583b1896fd14e05152e25d9da57"
+    },
+    {
+      "path": "research/records/2026-10-19-discriminating-studies/findings.md",
+      "bytes": 20075,
+      "sha256": "c459d48a43dc65b8d233c566fdbf81bc1892ad29d1e82fe501accb8ecb477f0b"
+    },
+    {
+      "path": "research/records/2026-10-19-discriminating-studies/release-manifest.json",
+      "bytes": 866,
+      "sha256": "fc1a577ce73a3bd2b7d877dbd5d1eede9fdae9088561aaa97efa3b5adb828dce"
+    },
+    {
+      "path": "research/records/2026-10-19-runtime-recovery/README.txt",
+      "bytes": 4682,
+      "sha256": "e4ae7c269063d39d2e895ece50e8db1a42803fbdea189673be772cab2d790867"
+    },
+    {
+      "path": "research/records/2026-10-19-runtime-recovery/convergence.md",
+      "bytes": 5521,
+      "sha256": "3fb00436448f810143b99a7fdb642ccf61050c9bd349684ef9e8ca914f91b56c"
+    },
+    {
+      "path": "research/records/2026-10-19-runtime-recovery/download-checksums.json",
+      "bytes": 2015,
+      "sha256": "541982dcee8b2e81286b3909242ae232b05b71d013bc8e6c374627bbabe46592"
+    },
+    {
+      "path": "research/records/2026-10-19-runtime-recovery/package-verification.json",
+      "bytes": 791,
+      "sha256": "04c3cd3f4fa3261b1ceeacfbf1d5d87ac8d160964e0bca22b35f508a5ca87c20"
+    },
+    {
+      "path": "research/records/2026-10-19-runtime-recovery/public-scope-audit.json",
+      "bytes": 1896,
+      "sha256": "a39afe72f5ea3b76e613fc9d6fde2b75e65bec604bb10874ffef7f19350dc3d2"
+    },
+    {
+      "path": "research/records/2026-10-19-runtime-recovery/python312-test-completion.json",
+      "bytes": 1289,
+      "sha256": "e2feecac5d60e3a9dfcf69717a6251df62f761db82bc6faba7ca4d6db7eeb252"
+    },
+    {
+      "path": "research/records/2026-10-19-runtime-recovery/runtime-release-manifest.json",
+      "bytes": 45327,
+      "sha256": "318c1c17cb1275a9b1ab92b30f35a8c851cc03fef729def63fa174fdcffb8487"
+    },
+    {
+      "path": "research/records/2026-10-19-runtime-recovery/runtime-repair-and-validation-036.zip",
+      "bytes": 268828,
+      "sha256": "4dfca5d28d5fc1655c4e987fcce41963cb269d68efb80478199d0079909f190f"
+    },
+    {
+      "path": "research/records/2026-10-19-runtime-recovery/runtime-setup.md",
+      "bytes": 10412,
+      "sha256": "140d5e6b190c583c13f98a459de425ea91a920306c21bae5d3bd2db9259a784d"
+    },
+    {
+      "path": "research/records/2026-10-19-runtime-recovery/runtime-validation-summary.json",
+      "bytes": 11266,
+      "sha256": "ce92fbb69bdeb44c8e973f48da90fd6b0d508001993eb334ca59d548960add5e"
+    },
+    {
+      "path": "research/tracker.v1.js",
+      "bytes": 20075,
+      "sha256": "6c446f734049e1b6e8e8d6d762e0041191d05b7d6f1f0e29a2909d16e5a1ef53"
+    },
+    {
+      "path": "styles.v40.css",
+      "bytes": 56583,
+      "sha256": "c51af7c3e78be3c616487e25bfa9526bb9212d6973bab4e4ada57cd53d7374d0"
+    }
+  ],
+  "local_browser_verification": {
+    "record": "specs/026-recovered-research-publication/verification/results.json",
+    "sha256": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad",
+    "desktop_width": 1440,
+    "mobile_width": 390,
+    "static_groups": 9,
+    "public_record_downloads": 13,
+    "production_csp_enforced": true
+  },
+  "remaining_boundaries": {
+    "feature035_source_and_full_raw_records": "unavailable; not recovered or freshly replayed",
+    "runtime_validation": "surviving feature034 baseline plus the new runtime repair",
+    "source_integration": "open",
+    "required_current_head_source_ci": "open; website checks do not satisfy it",
+    "docker_image_build_and_container_execution": "not performed; staged Python installation boundary only",
+    "python312_stdout": "54 progress bytes; completion established separately from process exit and parsed JUnit aggregates",
+    "broader_reconstruction_targets": "all14 remain open"
+  }
+}
