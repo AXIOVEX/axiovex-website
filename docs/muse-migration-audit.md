@@ -7,7 +7,7 @@ repository requirements. Private Muse timers/state not exported into these
 sources cannot be independently enumerated or recovered.
 
 Machine-readable inventory: `data/operations-duties.json`. The daily
-`migration-audit.yml` checks all five execution workflows are enabled, recent
+`migration-audit.yml` checks all nine execution workflows are enabled, recent
 and successful, retains evidence, and fails on missing/disabled/overdue/failed
 workflows. Success of an outer workflow does not imply every source succeeded;
 source-specific coverage remains in the collector artifacts.
@@ -90,3 +90,17 @@ A real bot publication and deployment must pass before calling that blocker clos
 Real inbox evidence is now verified (run 39324152242) and required for the final
 monthly preview. This closes external inbox observation for release checks; the
 production Managed Turnstile challenge remains distinct from isolated browser CI.
+
+Verified October 19: the scoped app published real generated changes in
+run 39324913396 (commit d7137e4). Effective rules retain main creation,
+deletion and non-fast-forward restrictions, and all four owner-only
+restrictions on staging. Run 39324920152 exposed a separate concurrent-push
+race after authentication succeeded; the shared publisher now rebuilds
+combined independent inputs and refuses conflicting source edits.
+
+The Tristen-only current-data newsletter arrived at 21:01:42 UTC in run
+39324152242. All eight inbox checks passed. NEWSLETTER_VERIFY_INBOX=true
+now makes receipt of the exact final preview a monthly subscriber-release
+requirement. Daily authorization checks send no email. Microsoft delegated
+access and LinkedIn personal authorization can require future reauthorization;
+CI surfaces expiry or refresh failures. Company LinkedIn approval is external.

@@ -92,8 +92,7 @@ jobs:
             exit 0
           fi
           git commit -m "Data pack refresh (automated)"
-          git pull --rebase --quiet origin main
-          git push origin main || (git pull --rebase --quiet origin main && git push origin main)
+          node scripts/ops/publish.mjs
 
       - name: Fail visibly on collector failure after preserving last-good content
         if: steps.pack.outcome == 'failure' || steps.geo.outcome == 'failure'

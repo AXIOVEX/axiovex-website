@@ -7,7 +7,7 @@ name: Site sync (documents + blog)
 #   - /blog/ is statically built from blog/posts/*.md front matter
 #   - sitemap.xml is regenerated from the same data
 # The bot commits generated output back to main; Cloudflare Pages deploys on
-# that push. Bot pushes do not re-trigger workflows, so this cannot loop.
+# that push. App pushes trigger deployment; the job skips its own app pushes to prevent a loop.
 
 on:
   push:
@@ -95,6 +95,5 @@ jobs:
             echo 'No changes — generated output already current.'
           else
             git commit -m 'Site sync: regenerate documents, blog, sitemap'
-            git pull --rebase origin main
-            git push origin main
+            node scripts/ops/publish.mjs
           fi
