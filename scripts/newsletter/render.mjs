@@ -13,11 +13,11 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { esc, href, emailLayout, sectionHeading } from '../../functions/api/ops/_email-layout.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const POSTAL_PLACEHOLDER = '[Postal address pending — owner decision, spec 020 FR-018]';
 
-const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
   'August', 'September', 'October', 'November', 'December'];
 export function fmtDate(iso) {
@@ -72,49 +72,37 @@ export function renderEmail(issue) {
   t.push('Axiovex Systems, LLC · ' + address);
   const text = t.join('\n');
 
-  // ---------- HTML (responsive, mobile-first, no tracking) ----------
-  const section = (title, inner) =>
-    `<h2 style="color:#00DEF6;font-size:12.5px;letter-spacing:.14em;margin:30px 0 10px">${title}</h2>${inner}`;
+  // Inline styles and presentation tables survive classic Outlook's Word renderer.
+  const section = (title, inner) => sectionHeading(title) + inner;
   let sections = '';
   if (issue.whatChanged?.length) {
     sections += section('WHAT CHANGED', issue.whatChanged.map((group) =>
-      `<p style="color:#7FD8E8;font-size:11.5px;font-weight:700;letter-spacing:.1em;margin:16px 0 6px">${esc(group.lane.toUpperCase())}</p>` +
+      `<h3 style="color:#536979;font-size:12px;font-weight:bold;letter-spacing:1px;margin:22px 0 8px;">${esc(group.lane.toUpperCase())}</h3>` +
       group.items.map((i) =>
-        `<p style="margin:0 0 10px;line-height:1.55"><a href="${esc(i.url)}" style="color:#F7FCFF;font-weight:600;text-decoration:underline">${esc(i.title)}</a> <span style="color:rgba(247,252,255,.55);font-size:13px">· ${esc(i.source)} · ${esc(fmtDate(i.date))}</span></p>`).join('')
+        `<p style="margin:0 0 16px;padding-bottom:14px;border-bottom:1px solid #e2e9ee;line-height:1.5;"><a href="${href(i.url)}" style="color:#0b536c;font-size:16px;font-weight:bold;text-decoration:underline;">${esc(i.title)}</a><br><span style="color:#607484;font-size:12px;">${esc(i.source)} · ${esc(fmtDate(i.date))}</span></p>`).join('')
     ).join(''));
   }
   if (issue.pulse?.length) {
     sections += section('MICHIGAN PULSE',
-      issue.pulse.map((f) =>
-        `<p style="margin:0 0 8px;line-height:1.55">${esc(f.label)}: <strong>${esc(f.display)}</strong>${f.delta ? ` <span style="color:rgba(247,252,255,.7)">${esc(f.delta)}</span>` : ''} <span style="color:rgba(247,252,255,.55);font-size:13px">· ${esc(f.vintage)}</span></p>`).join('') +
-      (issue.pulseSource ? `<p style="color:rgba(247,252,255,.55);font-size:13px;margin:4px 0 0">Source: ${esc(issue.pulseSource)}.</p>` : ''));
+      `<table width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">${issue.pulse.map((f) =>
+        `<tr><td style="padding:13px 8px;border-bottom:1px solid #dce5eb;background-color:#f2f7f9;vertical-align:top;font-size:14px;line-height:1.5;"><strong>${esc(f.label)}</strong><br><span style="font-size:12px;color:#536979;">${esc(f.vintage)}</span>${f.delta ? `<br><span style="color:#35566b;font-size:12px;">${esc(f.delta)}</span>` : ''}</td><td align="right" style="padding:13px 8px;border-bottom:1px solid #dce5eb;background-color:#f2f7f9;vertical-align:top;color:#081F32;font-size:21px;font-weight:bold;white-space:nowrap;">${esc(f.display)}</td></tr>`).join('')}</table>` +
+      (issue.pulseSource ? `<p style="color:#607484;font-size:12px;margin:9px 0 0;">Source: ${esc(issue.pulseSource)}.</p>` : ''));
   }
   if (issue.insights?.length) {
     sections += section('WHY IT MATTERS', issue.insights.map((line) =>
-      `<p style="margin:0 0 12px;line-height:1.65;color:rgba(247,252,255,.85)">${esc(line.text)}</p>`).join(''));
+      `<p style="margin:0 0 16px;line-height:1.65;color:#294454;">${esc(line.text)}</p>`).join(''));
   }
   if (issue.article) {
     sections += section('FROM THE BLOG',
-      `<p style="margin:0;line-height:1.55"><a href="${esc(issue.article.url)}" style="color:#F7FCFF;font-weight:600;text-decoration:underline">${esc(issue.article.title)}</a> <span style="color:rgba(247,252,255,.55);font-size:13px">· ${esc(fmtDate(issue.article.date))}</span></p>`);
+      `<p style="margin:0 0 5px;line-height:1.5;"><a href="${href(issue.article.url)}" style="color:#0b536c;font-size:18px;font-weight:bold;text-decoration:underline;">${esc(issue.article.title)}</a></p><p style="margin:0;color:#607484;font-size:12px;">${esc(fmtDate(issue.article.date))}</p>`);
   }
   if (issue.watchlist?.length) {
     sections += section('WATCHLIST', issue.watchlist.map((w) =>
-      `<p style="margin:0 0 8px;line-height:1.55">${esc(w.label)} — <strong>${esc(fmtDate(w.date))}</strong></p>`).join(''));
+      `<p style="margin:0 0 13px;line-height:1.5;"><strong style="color:#0b536c;font-size:13px;">${esc(fmtDate(w.date))}</strong><br>${esc(w.label)}</p>`).join(''));
   }
-  const html = `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head>
-<body style="margin:0;background:#081F32;color:#F7FCFF;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Arial,sans-serif">
-  <div style="max-width:640px;margin:0 auto;padding:36px 24px">
-    <p style="color:#00DEF6;font-size:12px;letter-spacing:.14em;font-weight:700;margin:0 0 8px">THE AXIOVEX SIGNAL · ${esc(dateLong.toUpperCase())}</p>
-    <h1 style="font-size:25px;line-height:1.3;margin:0 0 6px">${esc(issue.lede)}</h1>
-    ${sections}
-    <div style="border-top:1px solid rgba(0,222,246,.25);margin-top:34px;padding-top:18px;color:rgba(247,252,255,.6);font-size:13px;line-height:1.7">
-      <p style="margin:0 0 8px">Assembled from the committed Signals snapshot and the Michigan data pack, with vintages as labeled.</p>
-      <p style="margin:0 0 8px"><a href="{{WEB_URL}}" style="color:#00DEF6">Read this edition on the web</a> · <a href="{{PRIVACY_URL}}" style="color:#00DEF6">Privacy policy</a> · <a href="{{UNSUBSCRIBE_URL}}" style="color:#00DEF6">Unsubscribe in one click</a></p>
-      <p style="margin:0">Axiovex Systems, LLC · ${esc(address)}</p>
-    </div>
-  </div>
-</body></html>`;
+  const html = emailLayout({ title: 'The Axiovex Signal', eyebrow: `${dateLong} · Michigan, manufacturing and AI`, preheader: issue.lede,
+    content: `<p style="margin:0 0 22px;color:#081F32;font-size:21px;line-height:1.45;font-weight:bold;">${esc(issue.lede)}</p>` + sections,
+    footer: `<p style="margin:0 0 10px;">From published Signals and Michigan data sources, with vintages labeled above.</p><p style="margin:0 0 10px;"><a href="{{WEB_URL}}" style="color:#07647c;">Read this edition on the web</a><br><a href="{{PRIVACY_URL}}" style="color:#07647c;">Privacy policy</a> · <a href="{{UNSUBSCRIBE_URL}}" style="color:#07647c;">Unsubscribe in one click</a></p><p style="margin:0;">Axiovex Systems, LLC<br>${esc(address)}</p>` });
 
   return { subject, html, text, footerAddress: address };
 }
