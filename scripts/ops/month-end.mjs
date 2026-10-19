@@ -103,8 +103,7 @@ async function main() {
     execute('git', ['config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com']);
     execute('git', ['add', '-A']);
     execute('git', ['commit', '-m', `Publish ${plan.dataMonth} monthly newsletter (${policy.decisionId})`]);
-    execute('git', ['pull', '--rebase', 'origin', 'main']);
-    execute('git', ['push', 'origin', 'HEAD:main']);
+    execute(process.execPath, ['scripts/ops/publish.mjs']);
     const url = `https://axiovexsystems.com/newsletter/${plan.date}/`;
     for (let attempt = 0; attempt < 24; attempt++) {
       const response = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(20000) });

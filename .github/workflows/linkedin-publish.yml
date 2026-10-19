@@ -68,8 +68,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/publications/
           git commit -m 'Reserve LinkedIn workforce publication attempt'
-          git pull --rebase origin main
-          git push origin main
+          node scripts/ops/publish.mjs
       - uses: actions/upload-artifact@v4
         if: steps.plan.outputs.due == 'true' && inputs.action != 'preflight'
         with:
@@ -84,8 +83,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/publications/
           git commit -m 'Record accepted LinkedIn workforce publication'
-          git pull --rebase origin main
-          git push origin main
+          node scripts/ops/publish.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

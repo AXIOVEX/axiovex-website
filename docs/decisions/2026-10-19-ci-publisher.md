@@ -28,3 +28,11 @@ receives actual content pushes and deploys them.
 Verification must include a real generated-content main push by the app and a
 successful Cloudflare deployment, plus effective main/other-branch rule reads.
 A no-change source check alone does not prove publication access.
+
+Concurrent collectors can finish from the same main commit. All six writers
+now fetch and rebase before publication, rebuilding canonical HTML against the
+combined inputs. Only generated-page conflicts are resolved by rebuilding;
+source-data conflicts abort without guessing or overwriting evidence. A racing
+push receives up to four attempts; permission failures do not retry. Integration
+coverage uses two real Git clones and verifies both merged inputs and refusal
+of conflicting source changes.

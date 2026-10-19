@@ -72,8 +72,7 @@ jobs:
             exit 0
           fi
           git commit -m 'Refresh Signals content and verified breaking banner'
-          git pull --rebase origin main
-          git push origin main
+          node scripts/ops/publish.mjs
       - name: Preserve every source check, including failures and no-change runs
         if: always() && github.event_name != 'pull_request'
         uses: actions/upload-artifact@v4
