@@ -22,7 +22,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: site-content-sync
+  group: data-pack-sync
   cancel-in-progress: false
 
 jobs:

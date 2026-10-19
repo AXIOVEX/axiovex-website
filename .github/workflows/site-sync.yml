@@ -27,7 +27,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: site-content-sync
+  group: site-sync
   cancel-in-progress: false
 
 jobs:
