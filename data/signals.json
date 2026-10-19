@@ -1,10 +1,31 @@
 {
-  "updatedUtc": "2026-10-19T13:27:47.017Z",
+  "updatedUtc": "2026-10-19T18:29:51.120Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "Why Digital Leadership Fails When Decisions Drift Away From Operational Reality",
+          "link": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/",
+          "date": "2026-10-19"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Cleveland-Cliffs CEO blames Canada for Stelco layoffs",
+          "link": "https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/",
+          "date": "2026-10-19"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "MIT’s TechAMP finds early success after first year, could expand",
+          "link": "https://www.manufacturingdive.com/news/mit-techamp-finds-early-success-after-first-year-expansion-teledyne-defense/833324/",
+          "date": "2026-10-19"
+        },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
@@ -20,10 +41,10 @@
           "date": "2026-10-19"
         },
         {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
-          "link": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/",
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
+          "link": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/",
           "date": "2026-10-16"
         },
         {
@@ -36,30 +57,9 @@
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "Avio’s plan to meet the US’ solid rocket motors demand",
-          "link": "https://www.manufacturingdive.com/news/avio-usa-ceo-james-syring-solid-rocket-motor-manufacturing-plant-virginia/832755/",
+          "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
+          "link": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/",
           "date": "2026-10-16"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
-          "link": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/",
-          "date": "2026-10-16"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "What manufacturing plant managers think of the AI and automation boom",
-          "link": "https://www.manufacturingdive.com/news/what-manufacturing-plant-managers-think-of-the-ai-and-automation-boom/832776/",
-          "date": "2026-10-15"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Nestlé to spend additional $1B on manufacturing operations in Mexico",
-          "link": "https://www.manufacturingdive.com/news/nestle-investment-mexico-coffee-pet-food-emerging-markets/833093/",
-          "date": "2026-10-15"
         }
       ]
     },
@@ -111,6 +111,13 @@
         {
           "source": "Automation Alley",
           "sourceId": "automation-alley",
+          "title": "Why Digital Leadership Fails When Decisions Drift Away From Operational Reality",
+          "link": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/",
+          "date": "2026-10-19"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
           "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
           "link": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/",
           "date": "2026-10-16"
@@ -132,15 +139,15 @@
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
-          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
-          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
+          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
+          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
           "date": "2026-10-08"
         },
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
-          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
-          "link": "https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75",
+          "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
+          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
           "date": "2026-10-08"
         },
         {
@@ -156,13 +163,6 @@
           "title": "Why Supply Chain Automation Depends on Alignment, Not Just Technology",
           "link": "https://automationalley.com/2026/10/06/why-supply-chain-automation-depends-on-alignment-not-just-technology/",
           "date": "2026-10-06"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Made in America Needs More Than Investment. It Needs People.",
-          "link": "https://automationalley.com/2026/10/05/made-in-america-needs-more-than-investment-it-needs-people/",
-          "date": "2026-10-05"
         }
       ]
     },
@@ -170,6 +170,13 @@
       "id": "ot-security",
       "title": "OT cybersecurity",
       "items": [
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "CISA Malcolm",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01",
+          "date": "2026-10-15"
+        },
         {
           "source": "CISA",
           "sourceId": "cisa-ics",
@@ -182,13 +189,6 @@
           "sourceId": "cisa-ics",
           "title": "Guangzhou Juan IoT Technology EseeCloud",
           "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02",
-          "date": "2026-10-15"
-        },
-        {
-          "source": "CISA",
-          "sourceId": "cisa-ics",
-          "title": "CISA Malcolm",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01",
           "date": "2026-10-15"
         },
         {
@@ -233,25 +233,18 @@
       "title": "Funding & policy",
       "items": [
         {
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
+          "title": "Energy Department Advances Constitution Pipeline Project with $42 Million in Defense Production Act Funding",
+          "link": "https://www.energy.gov/articles/energy-department-advances-constitution-pipeline-project-42-million-defense-production-act",
+          "date": "2026-10-19"
+        },
+        {
           "source": "Federal Register",
           "sourceId": "federal-register",
           "title": "Bulk Manufacturer of Controlled Substances Application: Scottsdale Research Institute",
           "link": "https://www.federalregister.gov/documents/2026/10/19/2026-21360/bulk-manufacturer-of-controlled-substances-application-scottsdale-research-institute",
           "date": "2026-10-19"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0054_3600_-NONE-_-NONE-",
-          "date": "2026-10-16"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0053_3600_-NONE-_-NONE-",
-          "date": "2026-10-16"
         },
         {
           "source": "U.S. Department of Energy",
@@ -263,8 +256,22 @@
         {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $46,457 award, October 15, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C26127P0069_3600_-NONE-_-NONE-",
+          "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0053_3600_-NONE-_-NONE-",
+          "date": "2026-10-16"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0054_3600_-NONE-_-NONE-",
+          "date": "2026-10-16"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → ELECTRA-MED CORPORATION — $21,507 award, October 15, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0056_3600_36C10G24D0057_3600",
           "date": "2026-10-15"
         },
         {
@@ -277,16 +284,9 @@
         {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → ELECTRA-MED CORPORATION — $21,507 award, October 15, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0056_3600_36C10G24D0057_3600",
+          "title": "Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $46,457 award, October 15, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C26127P0069_3600_-NONE-_-NONE-",
           "date": "2026-10-15"
-        },
-        {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces 2026 Ernest Orlando Lawrence Award Winners",
-          "link": "https://www.energy.gov/articles/energy-department-announces-2026-ernest-orlando-lawrence-award-winners",
-          "date": "2026-10-13"
         }
       ]
     }

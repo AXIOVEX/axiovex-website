@@ -1,0 +1,69 @@
+name: Annual outlook and geography source refresh
+on:
+  schedule:
+    - cron: '23 11 * * 2'
+  workflow_dispatch:
+    inputs:
+      publish:
+        type: boolean
+        default: false
+        description: Commit verified data changes (scheduled runs always publish)
+permissions:
+  contents: read
+concurrency:
+  group: annual-source-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Create scoped website publisher token
+        if: github.event_name == 'schedule' || inputs.publish
+        id: publisher
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.AXIOVEX_PUBLISH_APP_ID }}
+          private-key: ${{ secrets.AXIOVEX_PUBLISH_PRIVATE_KEY }}
+          owner: AXIOVEX
+          repositories: axiovex-website
+          permission-contents: write
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.publisher.outputs.token || github.token }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install openpyxl==3.1.5 pypdf==6.10.2
+      - run: node --test scripts/ops/annual-refresh.test.mjs
+      - name: Refresh official tables and annual map inputs
+        id: sources
+        continue-on-error: true
+        env:
+          BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
+        run: node scripts/ops/annual-refresh.mjs
+      - name: Build last-good public data
+        run: node scripts/build-site.mjs
+      - name: Preserve source receipts and parser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: annual-sources-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ops-output/annual-sources/
+          retention-days: 90
+      - name: Commit verified changed data
+        if: github.event_name == 'schedule' || inputs.publish
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -u
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Refresh verified annual outlook and map sources'
+          node scripts/ops/publish.mjs
+      - name: Surface source or schema failure
+        if: steps.sources.outcome == 'failure'
+        run: exit 1

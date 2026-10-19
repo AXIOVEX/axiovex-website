@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { signalsContext } from './lib/signals-context.mjs';
 /* Axiovex Systems site builder — deterministic, dependency-free.
  *
  * One generator owns every machine-maintained page:
@@ -959,7 +960,10 @@ function insightsHtml(pulse, outlook) {
   }
   if (outs.length) prov.push('Outlooks: ' + outs.join(' &middot; '));
   prov.push('No forecasts &mdash; forward-looking figures are the publishing agencies&rsquo; projections');
-  return '          <p class="hl-summary">' + sentences.join(' ') + '</p>\n' +
+  const read = rel => { try { return JSON.parse(readFileSync(path.join(ROOT, rel), 'utf8')); } catch { return null; } };
+  const current = signalsContext(read('data/pack/fred.json'), read('data/geo/laus-county.json'));
+  const context = current.map(i => '          <p class="hl-summary">' + esc(i.text) + ' <a href="' + escAttr(i.url) + '" target="_blank" rel="noopener">' + esc(i.source) + '</a></p>\n').join('');
+  return '          <p class="hl-summary">' + sentences.join(' ') + '</p>\n' + context +
     '          <p class="hl-prov">' + prov.join(' &middot; ') + '</p>';
 }
 
@@ -1160,7 +1164,9 @@ function detailMichigan(outlook) {
       ' openings/yr</span></p>').join('\n'));
   }
   if (!parts.length) return '';
-  const prov = 'Provenance: transcribed from the ' + esc(occ.edition || 'September edition') +
+  const prov = occ.viaStudy === false
+    ? 'Provenance: selected occupations refreshed directly from MCDA&rsquo;s published statewide and regional workbooks. Each geography retains its own projection horizon. Annual openings include replacement demand, not only growth.'
+    : 'Provenance: transcribed from the ' + esc(occ.edition || 'September edition') +
     '&rsquo;s verified projection capture in the ' + esc(occ.studyName || 'Axiovex workforce study') +
     ' (release tag ' + esc(occ.releaseTag || '') + '), whose underlying files are MCDA&rsquo;s ' +
     'published statewide and regional workbooks. The figures are labeled &ldquo;via the Axiovex ' +
@@ -1169,8 +1175,8 @@ function detailMichigan(outlook) {
     'different geographies, different vintages, separate labels. Annual openings include ' +
     'replacement demand, not only growth.';
   return detailBlock(
-    'MICHIGAN OCCUPATIONS &mdash; LONG-TERM PROJECTIONS &middot; MICHIGAN MCDA, VIA THE ' +
-      'AXIOVEX WORKFORCE STUDY (' + esc(String(occ.edition || '').toUpperCase()) + ')',
+    'MICHIGAN OCCUPATIONS &mdash; LONG-TERM PROJECTIONS &middot; MICHIGAN MCDA' +
+      (occ.viaStudy === false ? ' &middot; DIRECT WORKBOOK REFRESH' : ', VIA THE AXIOVEX WORKFORCE STUDY (' + esc(String(occ.edition || '').toUpperCase()) + ')'),
     parts.join('\n') + '\n          <p class="board-note">' + prov + '</p>');
 }
 
@@ -1384,16 +1390,16 @@ function geoQcewBlock(geo) {
       : '<tr><th scope="col">County</th><th scope="col">Employment (private)</th><th scope="col">Location quotient</th></tr>';
     return '          <div class="geo-layer" data-geo-layer="qcew:' + l.key + '">\n' +
       '          <div class="geo-mapwrap">\n' +
-      '          <svg class="geo-map" viewBox="' + esc(paths.viewBox) + '" role="img" aria-label="Map of Michigan counties shaded by ' + esc(l.label.toLowerCase()) + ' employment, 2024">\n' +
+      '          <svg class="geo-map" viewBox="' + esc(paths.viewBox) + '" role="img" aria-label="Map of Michigan counties shaded by ' + esc(l.label.toLowerCase()) + ' employment, ' + esc(qcew.vintage) + '">\n' +
       uses + '\n          </svg>\n          </div>\n' +
       '          <div class="geo-tablewrap"><table class="geo-table">\n' +
-      '            <caption>' + l.caption + ' &middot; BLS QCEW, 2024 annual averages</caption>\n' +
+      '            <caption>' + l.caption + ' &middot; BLS QCEW, ' + esc(qcew.vintage) + '</caption>\n' +
       '            <thead>' + head + '</thead>\n' +
       '            <tbody>\n' + rows + '\n            </tbody>\n          </table></div>\n' +
       '          </div>';
   }).join('\n');
   return '          <div class="geo-block">\n' +
-    '          <p class="board-sub">Employment by county and industry &mdash; 2024 annual averages</p>\n' +
+    '          <p class="board-sub">Employment by county and industry &mdash; ' + esc(qcew.vintage) + '</p>\n' +
     '          <p class="geo-selector" role="group" aria-label="Industry">\n' + buttons + '\n          </p>\n' +
     geoLegend([[GEO_RAMP[0], 'Fewest jobs in this industry'], [GEO_RAMP[4], 'Most jobs in this industry'],
       ['repeating-linear-gradient(45deg, #EDF2F5 0 3px, #8A97A5 3px 5px)', 'Not disclosed']]) + '\n' +
@@ -1418,6 +1424,7 @@ function geoQcewBlock(geo) {
 function geoIpedsBlock(geo) {
   const { paths, ipeds } = geo;
   if (!paths || !ipeds || !(ipeds.institutions || []).length) return '';
+  const awardsPeriod = (ipeds.vintage.match(/completions are ([\d-]+) awards/) || [])[1] || ipeds.vintage;
   const proj = paths.projection;
   if (!proj) return '';
   const cos = Math.cos(proj.cosLatDeg * Math.PI / 180);
@@ -1466,14 +1473,14 @@ function geoIpedsBlock(geo) {
           const zero = ipeds.institutions.filter(i => i.totalCompletions === 0);
           return zero.length
             ? '          <p class="board-note">Listed without a dot (the source publishes no ' +
-              'completions for 2023&ndash;24): ' +
+              'completions for ' + esc(awardsPeriod) + '): ' +
               zero.map(i => esc(i.name) + ' &middot; ' + esc(i.city)).join('; ') + '.</p>\n'
             : '';
         })()
       : '';
     return '          <div class="geo-layer" data-geo-layer="ipeds:' + l.key + '">\n' +
       '          <div class="geo-mapwrap">\n' +
-      '          <svg class="geo-map" viewBox="' + esc(paths.viewBox) + '" role="img" aria-label="Map of Michigan postsecondary institutions, sized by ' + esc(l.label.toLowerCase()) + ' completions, 2023-24">\n' +
+      '          <svg class="geo-map" viewBox="' + esc(paths.viewBox) + '" role="img" aria-label="Map of Michigan postsecondary institutions, sized by ' + esc(l.label.toLowerCase()) + ' completions, ' + esc(awardsPeriod) + '">\n' +
       outlines + '\n' + dots + '\n          </svg>\n          </div>\n' +
       '          <div class="geo-listwrap">\n' +
       '          <p class="board-sub">Largest by completions &mdash; ' + esc(l.label) + '</p>\n' +
@@ -1484,11 +1491,11 @@ function geoIpedsBlock(geo) {
       '          </div>\n          </div>';
   }).join('\n');
   return '          <div class="geo-block">\n' +
-    '          <p class="board-sub">Where the completions are &mdash; postsecondary institutions, 2023&ndash;24 awards</p>\n' +
+    '          <p class="board-sub">Where the completions are &mdash; postsecondary institutions, ' + esc(awardsPeriod) + ' awards</p>\n' +
     '          <p class="geo-selector" role="group" aria-label="Field of study">\n' + buttons + '\n          </p>\n' +
     layerHtml + '\n' +
     '          <p class="board-note">Dots sit at the coordinates IPEDS publishes for each ' +
-    'institution; size is completions in the selected field (all award levels). Field is the ' +
+    'institution; size is first-major awards in the selected field (all award levels); second majors are excluded to avoid counting a degree twice. Field is the ' +
     'IPEDS CIP family. The list is the record; the map is the picture of it.</p>\n' +
     '          </div>';
 }
@@ -1551,7 +1558,7 @@ function geoPseoBlock(geo) {
       '            <thead><tr><th scope="col">Horizon</th><th scope="col">25th</th><th scope="col">Median</th><th scope="col">75th</th></tr></thead>\n' +
       '            <tbody>\n' + [1, 5, 10].map(earnRow).filter(Boolean).join('\n') + '\n            </tbody>\n          </table></div>\n' +
       [1, 5, 10].map(retLine).filter(Boolean).join('\n') + '\n' +
-      (umFlows ? '          <p class="board-sub">Top industries at year 1</p>\n' + umFlows + '\n' : '') +
+      (umFlows ? '          <p class="board-sub">Selected industries at year 1</p>\n' + umFlows + '\n' : '') +
       '          <p class="board-note"><b>Coverage:</b> the University of Michigan is the only ' +
       'Michigan institution in PSEO &mdash; its graduates are about 10% of statewide graduates ' +
       '(2015 estimate, per the Census partner file). Institution-level outcomes exist for it ' +
@@ -1564,7 +1571,7 @@ function geoPseoBlock(geo) {
     '          <p class="geo-caption">' + esc(pseo.statewideFlows.label || '') + '</p>\n' +
     bars + '\n' + spot + '\n' +
     '          <p class="board-note">Counts are graduates the Census Bureau matched to employment ' +
-    'one year after graduation, pooled across the 2001&ndash;2021 cohorts in this release; the ' +
+    'one year after graduation. ' + esc(pseo.vintage) + '. The ' +
     'field median is the field&rsquo;s year-1 median earnings across all industries. Rows the ' +
     'source suppresses are excluded, never estimated.</p>\n' +
     '          </div>';
@@ -1607,16 +1614,16 @@ function geoNote(geo) {
   }
   if (geo.qcew && geo.paths) {
     parts.push('county employment by industry from the BLS Quarterly Census of Employment and ' +
-      'Wages (2024 annual averages; industry rows are private ownership &mdash; the grain at ' +
+      'Wages (' + esc(geo.qcew.vintage) + '; industry rows are private ownership &mdash; the grain at ' +
       'which QCEW publishes them &mdash; and suppressed cells are shown as not disclosed, never as zero)');
   }
   if (geo.ipeds) {
     parts.push('institutions and completions from the National Center for Education Statistics&rsquo; ' +
-      'IPEDS (2024 survey cycle; completions are 2023&ndash;24 awards)');
+      'IPEDS (' + esc(geo.ipeds.vintage) + ')');
   }
   if (geo.pseo) {
     parts.push('graduate outcomes from the U.S. Census Bureau&rsquo;s Post-Secondary Employment ' +
-      'Outcomes (release R2026Q2, cohorts 2001&ndash;2021) &mdash; the University of Michigan is ' +
+      'Outcomes (' + esc(geo.pseo.vintage) + ') &mdash; the University of Michigan is ' +
       'Michigan&rsquo;s only PSEO partner institution, so institution-level outcomes are shown ' +
       'for it alone, beside the Census state aggregates');
   }
@@ -1740,7 +1747,11 @@ function buildSignals(posts) {
     '{{DETAIL_HTML}}': detailHtml(snap.pulse, outlook, posts, geo),
     '{{LANES_HTML}}': lanesHtml,
     '{{GEO_NOTE}}': geoNote(geo),
+    '{{SOURCE_NOTE}}': 'The detail tables reproduce selected MCDA occupation projections with their stated provenance and separate geographic horizons. Education figures retain each publisher and source period. Pupil membership: ' + esc((outlook.education.figures.find(f => f.id === 'pupil-membership') || {}).publisherTag || 'source unavailable') + ' &mdash; a proposed conference estimate, not an audited count.',
     '{{UPDATED_LINE}}': updatedLine,
+    '{{REFRESHED_LINE}}': Number.isFinite(Date.parse(snap.updatedUtc))
+      ? '<p class="signals-updated" title="Time of the latest Signals snapshot update; individual economic figures retain their published vintages."><strong>Last refreshed:</strong> <time datetime="' + escAttr(snap.updatedUtc) + '">' + esc(fmtUpdated(snap.updatedUtc)) + '</time></p>'
+      : '<p class="signals-updated">Last refresh time unavailable.</p>',
     '{{NEWSLETTER_TOP_HTML}}': newsletterBlock('signals-top', { variant: 'compact' }),
     '{{NEWSLETTER_HTML}}': newsletterBlock('signals'),
   }));
@@ -1845,7 +1856,8 @@ function buildSignals(posts) {
    id="newsletter" anchor survives on the /signals/ foot block
    only — the spec 020 emails' CTA links target
    /signals/#newsletter. */
-const NL_DONE_LEDE = 'We sent a confirmation email to the address you gave us. Click the link in it \u2014 good for 48 hours \u2014 and editions arrive after the required monthly economic releases. No click, no emails: that\u2019s the deal.';
+const NL_DONE_LEDE = 'We sent a confirmation email to the address you gave us. Click the link in it \u2014 good for 48 hours \u2014 and the first edition arrives after the monthly economic releases. No click, no emails: that\u2019s the deal.';
+
 const NL_FINE_FULL = 'One email a month. We send a confirmation first \u2014 nothing arrives until you click it. Unsubscribe in one click, any time. <strong>No tracking pixels, no per-reader analytics.</strong> <a href="/privacy/">Privacy policy</a>';
 const NL_FINE_COMPACT = 'One email a month \u00b7 confirmation first \u00b7 one-click unsubscribe \u00b7 <strong>no tracking pixels</strong>. <a href="/privacy/">Privacy policy</a>';
 
@@ -1888,7 +1900,8 @@ function newsletterBlock(source, opts) {
   }
   const issue = source === 'issue';
   const eyebrow = issue ? 'READING SOMEONE ELSE\u2019S COPY?' : 'THE AXIOVEX SIGNAL \u2014 MONTHLY';
-  const heading = issue ? 'Get your own, monthly.' : 'The month, in your inbox.';
+  const heading = issue ? 'Get the monthly edition.' : 'The month, in your inbox.';
+
   const lede = issue
     ? 'The same edition, in your own inbox \u2014 after the monthly economic releases, with the numbers, their vintages, and why they matter.'
     : 'What changed in Michigan industry and the field \u2192 one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.';
@@ -1986,7 +1999,8 @@ function buildNewsletter() {
         '              <p class="nl-card-sections">What changed \u00b7 Michigan Pulse \u00b7 Why it matters \u00b7 Watchlist</p>\n' +
         '              <a class="explore" href="/newsletter/' + issue.date + '/">READ THE WEB EDITION \u2192</a>\n' +
         '            </article>').join('\n            ')
-    : '<p class="nl-empty">No editions yet. The first goes out after the required monthly economic releases.</p>';
+    : '<p class="nl-empty">No editions yet. The first goes out after the monthly economic releases.</p>';
+
   mkdirSync(path.join(ROOT, 'newsletter'), { recursive: true });
   writeFileSync(path.join(ROOT, 'newsletter', 'index.html'), fill(indexTpl, {
     '{{ISSUE_ROWS}}': rows,
@@ -2127,7 +2141,7 @@ function breakingEntry() {
 }
 
 function breakingHtml(entry) {
-  return '<div class="breaking-banner" role="region" aria-label="Breaking news">\n' +
+  return '<div class="breaking-banner" data-expires="' + escAttr(entry.expiresUtc) + '" role="region" aria-label="Breaking news">\n' +
     '    <a class="breaking-link" href="' + escAttr(entry.url) + '" target="_blank" rel="noopener">' +
     '<span class="breaking-lead">BREAKING</span> ' +
     '<span class="breaking-headline">' + esc(entry.headline) + '</span> ' +
@@ -2136,7 +2150,7 @@ function breakingHtml(entry) {
     '    <button class="breaking-dismiss" type="button" aria-label="Dismiss breaking news banner" ' +
     'data-breaking-dismiss="' + escAttr(entry.id) + '">&#10005;</button>\n' +
     '  </div>\n' +
-    '  <script src="/breaking.v1.js" defer></script>';
+    '  <script src="/breaking.v2.js" defer></script>';
 }
 
 function buildBreaking() {
@@ -2146,6 +2160,8 @@ function buildBreaking() {
     'index.html',
     path.join('contact', 'index.html'),
     path.join('privacy', 'index.html'),
+    path.join('disclaimer', 'index.html'),
+    path.join('research', 'index.html'),
     path.join('blog', 'index.html'),
     path.join('documents', 'index.html'),
     path.join('signals', 'index.html'),
@@ -2295,3 +2311,26 @@ const newsletterIssues = buildNewsletter();
 writeSitemap(posts, docsInfo, signalsInfo, newsletterIssues);
 buildNewsletterChrome();
 buildBreaking();
+
+// Real 404 responses on Pages disable its implicit SPA/homepage fallback.
+writeFileSync(path.join(ROOT, '404.html'), readFileSync(path.join(ROOT, 'scripts/templates/not-found.html'), 'utf8'));
+// Public, source-linked text for AI readers; never include the unlisted hub.
+const machinePages = [...readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+const machineText = [readFileSync(path.join(ROOT, 'llms.txt'), 'utf8').trim()];
+for (const url of machinePages) {
+  const pathname = new URL(url).pathname;
+  if (pathname === '/research/' || !url.startsWith(SITE + '/')) continue;
+  const file = path.join(ROOT, pathname, 'index.html');
+  if (!existsSync(file)) continue;
+  const html = readFileSync(file, 'utf8');
+  const main = /<main\b[^>]*>([\s\S]*?)<\/main>/i.exec(html)?.[1] || '';
+  const text = main.replace(/<(div|p)\b[^>]*\bhidden[^>]*>[\s\S]*?<\/\1>/gi, '')
+    .replace(/<a\b[^>]*href=["'](https?:\/\/[^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi, '$2 ($1)')
+    .replace(/<(script|style|form|svg)\b[^>]*>[\s\S]*?<\/\1>/gi, '')
+    .replace(/<!--[\s\S]*?-->/g, '').replace(/<\/[^>]+>/g, '\n').replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
+    .replace(/&#39;|&rsquo;|&lsquo;/g, "'").replace(/&nbsp;/g, ' ').replace(/&mdash;/g, '—').replace(/&ndash;/g, '–')
+    .replace(/[ \t]+/g, ' ').replace(/ *\n */g, '\n').replace(/\n{3,}/g, '\n\n').trim();
+  machineText.push('## ' + url + '\n\n' + text);
+}
+writeFileSync(path.join(ROOT, 'llms-full.txt'), machineText.join('\n\n') + '\n');

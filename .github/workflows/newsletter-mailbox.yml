@@ -1,0 +1,46 @@
+name: Newsletter mailbox authorization and delivery verification
+on:
+  schedule:
+    - cron: '47 13 * * *'
+  workflow_dispatch:
+    inputs:
+      action:
+        type: choice
+        default: preflight
+        options: [preflight, delivery_test]
+permissions:
+  contents: read
+concurrency:
+  group: newsletter-mailbox-verification
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      NEWSLETTER_MAILBOX_CLIENT_ID: ${{ vars.NEWSLETTER_MAILBOX_CLIENT_ID }}
+      NEWSLETTER_MAILBOX_TENANT_ID: ${{ vars.NEWSLETTER_MAILBOX_TENANT_ID }}
+      NEWSLETTER_MAILBOX_AUTHORIZED_AT: ${{ vars.NEWSLETTER_MAILBOX_AUTHORIZED_AT }}
+      NEWSLETTER_MAILBOX_REFRESH_TOKEN: ${{ secrets.NEWSLETTER_MAILBOX_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test scripts/ops/mailbox-check.test.mjs
+      - name: Verify read-only access to Tristen mailbox
+        run: node scripts/ops/mailbox-check.mjs preflight
+      - name: Send one review only to Tristen
+        if: inputs.action == 'delivery_test'
+        env:
+          NEWSLETTER_SEND_SECRET: ${{ secrets.NEWSLETTER_SEND_SECRET }}
+        run: node scripts/ops/review-current-newsletter.mjs --send
+      - name: Observe the matching delivered HTML newsletter
+        if: inputs.action == 'delivery_test'
+        run: node scripts/ops/mailbox-check.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: newsletter-mailbox-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ops-output/email-review/
+          retention-days: 90

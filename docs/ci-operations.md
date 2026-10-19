@@ -1,5 +1,34 @@
 # Website operations after Meta Muse
 
+## Authoritative amendment — October 19, 2026
+
+Supersedes conflicting earlier weekly/Wednesday and unconditional calendar
+release rules below. Owner directs automatic monthly report and customer
+newsletter release after economic releases, normally near the 30th at 10 ET
+(February last day), with daily catch-up until the next month-end cycle. The month-end runner
+checks actual target-month state + 83-county availability before sending.
+Decision OPS-2026-10-19-MONTH-END is recorded in
+`docs/decisions/2026-10-19-month-end-publication.md` and project info; executable
+policy is `data/publication-policy.json`. Standing authorization covers the
+deterministic source-only monthly edition. Discretionary editorial/research,
+blog and LinkedIn work retains review; do not manufacture issue approval.
+
+The owner's October 12 .msg is the founder report presentation reference.
+Include current subscriber counts, dated net changes and latest-timestamp
+flows. Missing history is unavailable, never an assumed zero. Aggregate daily
+snapshots begin with this implementation; no reader tracking is added.
+Cloudflare traffic uses matching UTC daily windows with daily uniques summed
+as visitor-days, complete day coverage and reconciled status totals. Preserve
+raw API contradictions and exclude impossible adaptive status findings.
+Daily/weekly/monthly reports include a live technical SEO/AEO audit; pinned
+aeo.js 0.0.16 supplies independently labeled readiness/citability scores.
+Seobility's historical 90 is never represented as a current reading.
+
+Economic/API-secret source inventory: `data/report-sources.json` and
+`docs/report-data-sources.md`. All existing pack keys are injected in CI; BEA
+key was added and verified the same day (Actions run 39292582186). Actual source vintages remain visible.
+
+
 The source inventory is specs 006 (analytics + SEO/AEO), 007 (monthly
 workforce study/article/social), 014 (map vintages), 019 (analysis pack),
 020 (newsletter), 022 (newsletter loop test), 023/024 (unlisted research hub).
@@ -12,19 +41,19 @@ No Muse service is required by the new Actions runners.
 |---|---|---|
 | Daily analytics | Every day 08:39, prior day vs trailing 7-day average | `operations.yml`, daily report |
 | Weekly analytics + SEO/AEO | Monday 09:39, last 7 days vs previous 7 | weekly report + live technical health |
-| Monthly analytics | 30th 09:39; February last day; prior calendar month | monthly report |
+| Monthly report + newsletter | Near 30th 10 ET, February last day; wait for source release | monthly-publication.yml; check daily until the next month-end cycle |
 | Push health | Website changes on main | live technical health |
 | Workforce study/draft | 29th 09:39; February last day; prior data month | Docker collect/analyze/build, reviewed-edition verification, LAUS refresh, review artifacts |
 | Workforce publication | 30th 09:00; January data publishes March 1 | Human editorial/publication gate; see below |
 | LinkedIn personal/company | Publication day 10:30 / following Tuesday 09:30 | Human signed-in steps; no CI browser session migrated |
-| Newsletter preparation | Before Wednesday issue | Tuesday 09:39 candidate/evidence artifacts |
-| Newsletter delivery | Wednesday 10:00 | Wednesday 10:00 slot; exact-byte per-issue approval required |
-| Signals/Pulse | Hourly | Existing `signals-sync.yml`, unchanged |
+| Newsletter preparation | 29th 09:39; February last day | workforce + candidate artifacts |
+| Newsletter delivery | Monthly, after verified economic releases | monthly-publication.yml; deterministic source-only standing authorization |
+| Signals headlines / Pulse / breaking | Every 15 min / hourly / every 5 min | `signals-sync.yml`; actual content ingest, rebuilt insights, source-verified banner |
 | Shared documents/blog | Push / every 15 minutes | Existing `site-sync.yml`, unchanged |
-| Analysis pack | Monday 12:23 UTC | Existing `data-pack-sync.yml`, unchanged |
+| Analysis pack + county insights | Daily 12:23 UTC | `data-pack-sync.yml`; keyed sources, LAUS and public Signals rebuild |
 
 Actions schedules are approximate. The runner fires at :39 in UTC hours
-12–15 (:00 in UTC hours 14/15 on Wednesday for newsletter sending), then gates
+12–15; monthly release checks run at :00 in UTC hours 14/15 daily, then gates
 on America/New_York local hour and minute. Both DST offsets are
 covered with one eligible slot per task per day. Manual dispatch recovers
 missed schedules. Gates use the nominal UTC cron slot so runner queue delays
@@ -104,11 +133,11 @@ sending. Add `--send` only when the owner requests a preview. The authenticated
 `/api/ops/preview` route hardcodes tristen@axiovexsystems.com, uses the dedicated
 Newsletter sender, and does not access subscriber storage or issue approvals.
 The preview is labeled REVIEW ONLY and cannot unsubscribe or distribute to the
-list. Customer sends continue to require their existing exact-issue approval.
+list. Monthly source-only editions follow the standing authorization above; discretionary editorial sends require exact-issue approval.
 
-## Newsletter review and send
+## Discretionary editorial review and manual send (no weekly timer)
 
-1. Download Tuesday's candidate snapshot and editorial template. Complete
+1. Download the month-end candidate snapshot and editorial template. Complete
    editorial review, source/cause checks, NDR suppression review and address.
 2. Run `node scripts/newsletter/assemble.mjs YYYY-MM-DD editorial.json`.
    Review the rendered email and web edition. The source and email live at
@@ -122,7 +151,7 @@ list. Customer sends continue to require their existing exact-issue approval.
 
    Compute the hash with `sha256sum newsletter/issues/YYYY-MM-DD.email.json`.
    Never manufacture an approval. The approval file records an actual review.
-4. Merge the reviewed files before Wednesday. The scheduled send only accepts
+4. Merge the reviewed files before manual dispatch. The manual CLI only accepts
    today's issue, checks the exact-byte approval and calls the existing
    production sender. Missing approval or secret blocks all sending.
 
@@ -159,3 +188,165 @@ Merge the CI branch to main to activate schedules. Run the `health`, `daily`,
 credentials before considering the migration complete. Old Muse timers
 cannot be disabled from this checkout; disable them in Muse if it returns,
 especially subscriber sends and article/social publishing.
+
+## Monthly release operation
+
+`monthly-publication.yml` owns the release; `operations.yml` cannot dispatch
+a monthly/customer send. On each eligible day: refresh existing keyed sources;
+verify state + county target month; generate and email the founder report;
+render/commit the monthly issue + web edition; wait for verified deployment;
+reserve `month-end-attempt-YYYY-MM` before calling the existing active-only
+sender. The reservation prevents automatic replay after partial uncertainty.
+Manual dispatch respects the same date and source gates. A held source gate
+writes evidence and sends nothing; an execution failure fails the job. The
+first eligible cycle is September data on October 30. API keys remain in
+GitHub; no new Microsoft/Cloudflare administrator permissions are needed.
+
+Subscriber measurements use an authenticated production-only endpoint. It
+returns aggregate counts/source totals, latest-timestamp flows, sender gauge
+and dated net active changes from saved aggregate snapshots. It never returns
+subscriber addresses, confirmation tokens or unsubscribe tokens. Repeated
+confirm/unsubscribe history is not reconstructable from the existing schema;
+first baseline net change is explicitly unknown.
+
+## Source-refresh verification — October 19
+
+Actions run 39292582186 confirmed the newly added BEA_API_KEY works: all
+three BEA series refreshed. FRED, DOL, JOLTS and Scorecard also refreshed;
+Census returned unchanged. EIA timed out and kept its last-good snapshot.
+The pack runner now records per-source success/failure/skipped state, emits
+visible warnings, and retains an artifact rather than implying every source
+passed because some did. Manual data-pack dispatch accepts a single source
+for isolated verification. The monthly founder report consumes this manifest.
+An EIA parsing defect was also corrected: null/blank prices no longer become
+zero; actual zero values remain valid.
+
+## Historical traffic coverage correction — October 19
+
+Inspection of the old monthly artifacts found only two returned September
+dates and an empty August result. Those are not complete monthly totals or
+a zero baseline. Reports now keep observed subsets separate from headline
+metrics: a missing full window is unavailable, with no percentage change or
+zero-5xx claim manufactured. A partial report can still be delivered.
+
+Authenticated `/api/ops/traffic-archive` saves validated aggregate UTC daily
+rollups in D1 and restores them on later runs. The API stores only counts,
+status totals, country totals and daily uniques, with a capture timestamp;
+no visitor identifiers, URLs, addresses or tracking are stored there. Fresh
+Cloudflare rows supersede the same archived day. Raw responses and merged
+day evidence remain in CI artifacts. Retained evidence improves future
+monthly coverage; it cannot recover data absent before collection began.
+
+Every daily/weekly/monthly report also pulls and verifies all available closed
+UTC days in the preceding 90 days before aggregation. This bootstraps the
+archive and repairs missed daily collections while the source still retains
+them. Current-month missing-date lists and exact round-trip verification are
+saved as backfill-verification.json. The archive keeps older saved dates; the
+90-day query window does not delete them. An archive/backfill failure makes
+coverage partial and remains visible instead of silently claiming persistence.
+
+## Production verification — October 19
+
+- BEA secret/collector passed run 39292582186 (three series).
+- Isolated EIA retry passed run 39294037013: both API routes returned valid
+  data, unchanged July reference period. The first timeout was transient;
+  the old period reflects the source, not an authentication failure.
+- Traffic archive was backfilled and read back successfully: 20 complete
+  days, September 29 through October 18; every completed October day present.
+  Cloudflare zone creation is September 29, explaining the two-day September
+  collection. A full pre-zone September/August baseline is unavailable.
+- Production aggregate subscriber endpoint passed, initialized its dated
+  baseline and returned counts only; first historical net change is unknown.
+- Manual monthly dispatch exposed an empty-cron parsing defect before any
+  send. The scheduler now treats empty dispatch cron as manual and has an
+  explicit regression test, plus queued DST-offset tests.
+
+
+## October 19 migration coverage audit
+
+Authoritative duty inventory: `data/operations-duties.json`. Daily
+`migration-audit.yml` checks workflow availability, enabled status, last
+successful execution age and latest completed failures. Its artifact includes
+all automatic duties and explicitly retained review/interactive duties.
+See `docs/muse-migration-audit.md` for findings and limits.
+
+The old breaking-news Muse timer is replaced by `signals-sync.yml`:
+five-minute feed/source checks, 15-minute headline ingestion, hourly BLS,
+source-verified automatic banner publication and expiry. Source-check artifacts
+are retained even if no content changed. No timestamp-only snapshot commits.
+Daily pack sync now also refreshes county rates (including revisions within
+the same month), recalculates public insight arithmetic, and rebuilds Signals.
+
+
+## Remaining-duty jobs
+
+`annual-refresh.yml` checks primary annual sources weekly (Tuesday), validates
+structured tables, rebuilds public content and commits verified changes. 404
+for the next IPEDS cycle or QCEW year means not released; other failures remain
+visible. Source bytes and SHA-256 receipts are retained for 90 days.
+
+`newsletter-browser.yml` runs on relevant pushes/PRs and weekly, retaining ten
+browser lifecycle checks and mobile confirmation screenshots. It uses real
+functions against isolated SQLite and captured delivery with public Turnstile
+keys. The production site continues to use Managed Turnstile and Microsoft.
+
+`linkedin-publish.yml` validates personal identity, app-bound scope and expiry
+hourly. A data-ready article queues the authorized personal publication; the
+company reshare follows next Tuesday at 09:30 Eastern. Company credentials
+must come from the separately approved company app. Manual `preflight` never
+publishes. Before any POST, an attempt is committed and uploaded; unresolved
+attempts require reconciliation rather than replay. Accepted IDs are committed.
+
+Local authorization: `node scripts/ops/linkedin-authorize.mjs` (personal) or
+`--company` (company). Use only localhost's setup form; it saves tokens directly
+to Actions secrets. Register `http://localhost:8766/callback` on each app. Never
+paste client secrets into terminal command arguments or commit them.
+
+
+## Read-only inbox verification
+
+Owner-approved Microsoft app `832e46b9-6552-4ee3-a4ab-5d58f97cae5d` uses delegated
+Mail.Read, User.Read and offline access for Tristen. It has no tenant-wide mailbox
+permission or send/delete scope. Run `node scripts/ops/mailbox-authorize.mjs CLIENT_ID`
+for a temporary localhost PKCE callback. The server closes on completion and saves
+the refresh token directly to repository Actions secrets. GitHub checks run with
+the owner's computer off. Reauthorization may be needed when Microsoft expires or
+revokes the original session; the daily preflight fails visibly and warns at 75 days.
+
+`newsletter-mailbox.yml` runs a daily read-only preflight. Manual `delivery_test`
+first checks authorization, sends the current source-based newsletter only to
+Tristen through the existing fixed-recipient preview endpoint, then searches only
+matching Axiovex review mail. Sender, recipient, subject, timestamp, HTML tables,
+postal footer and review notice must all pass within two minutes. Artifacts retain
+boolean checks and a hashed message identifier, never raw received mail or tokens.
+
+After initial CI delivery proof, `NEWSLETTER_VERIFY_INBOX=true` enables this gate
+between the final monthly preview and customer send. It is bound to that preview's
+send time and exact outbound email hash. The server acceptance receipt remains
+separate from inbox evidence. This does not automate a real production Managed
+Turnstile challenge; the isolated browser job covers lifecycle logic separately.
+
+Annual BLS fallback: the official HTML, workbook and bulk hosts may reject GitHub
+runners. The keyed API returns named measures for every member of the verified
+831-occupation 2025–35 universe. Missing measures, missing occupations or a newer
+base year fail until a new universe is verified. Other providers continue to run.
+
+
+## Publication identity and branch rules
+
+The owner-only branch freeze rejected GitHub Actions pushes even when collectors
+and builders succeeded. Six content writers now use the owner-approved private
+AXIOVEX Website CI Publisher app, installed only on this repository, to mint a
+contents-write token. GITHUB_TOKEN contents permissions stay read-only. The app
+has no workflow/secret/organization administration grant. Its normal-update
+exception applies only to main; other branches and main deletion/force-pushes
+remain owner-only. See the CI-publisher decision for the exact boundaries.
+
+App pushes skip recursive site-sync and expensive push-triggered health jobs.
+Scheduled checks still run, and every writer rebuilds content before pushing.
+Cloudflare deployment is not suppressed. Installation tokens expire after an
+hour and are revoked at job completion by the official token action.
+
+The real Tristen-only delivery test passed in run 39324152242. The received HTML
+newsletter passed sender, recipient, subject, freshness, HTML, table, postal and
+review-notice checks. NEWSLETTER_VERIFY_INBOX=true is now enabled for month-end.

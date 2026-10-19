@@ -1,0 +1,93 @@
+[
+  {
+    "id": "daily-analytics-subscribers",
+    "source": "specs/006-analytics-reporting",
+    "workflow": "operations.yml",
+    "mode": "automatic",
+    "description": "Daily HTML report, persistent complete-day archive, subscriber counts and change"
+  },
+  {
+    "id": "weekly-seo-aeo",
+    "source": "specs/006-analytics-reporting",
+    "workflow": "operations.yml",
+    "mode": "automatic",
+    "description": "Weekly comparison and independent live SEO/AEO; health on code push"
+  },
+  {
+    "id": "monthly-report-newsletter",
+    "source": "docs/decisions/2026-10-19-month-end-publication.md",
+    "workflow": "monthly-publication.yml",
+    "mode": "automatic",
+    "description": "Data gate, report, publish, exact final preview to Tristen, active subscriber send"
+  },
+  {
+    "id": "signals-headlines-pulse-insights",
+    "source": "specs/004-signals-pulse",
+    "workflow": "signals-sync.yml",
+    "mode": "automatic",
+    "description": "Headlines every 15 minutes, Pulse hourly, rebuild calculated insights"
+  },
+  {
+    "id": "breaking-news-banner",
+    "source": "docs/decisions/2026-10-19-breaking-news-ci.md",
+    "workflow": "signals-sync.yml",
+    "mode": "automatic",
+    "description": "Five-minute source checks, verified automatic banner and expiry"
+  },
+  {
+    "id": "economic-pack-county-content",
+    "source": "data/report-sources.json",
+    "workflow": "data-pack-sync.yml",
+    "mode": "automatic",
+    "description": "Daily keyed source and monthly county refresh; rebuild public insights"
+  },
+  {
+    "id": "shared-documents-blog-sync",
+    "source": ".github/workflows/site-sync.yml",
+    "workflow": "site-sync.yml",
+    "mode": "automatic",
+    "description": "Push and 15-minute document checks; build blog, feed, sitemap"
+  },
+  {
+    "id": "monthly-workforce-evidence",
+    "source": "scripts/ops/workforce.sh",
+    "workflow": "operations.yml",
+    "mode": "automatic",
+    "description": "29th evidence collect/analyze/build and reviewed-edition verification; artifacts to founders"
+  },
+  {
+    "id": "workforce-editorial-publication",
+    "source": "docs/decisions/2026-10-19-remaining-duties.md",
+    "workflow": "monthly-publication.yml",
+    "mode": "automatic",
+    "description": "Data-ready source-only workforce article and newsletter link; interpretive research editions remain reviewed"
+  },
+  {
+    "id": "linkedin-publication",
+    "source": "data/linkedin-policy.json",
+    "workflow": "linkedin-publish.yml",
+    "mode": "automatic",
+    "description": "Hourly OAuth preflight and publication queue: authorized personal post, following-Tuesday company reshare; company product approval/token remains externally gated"
+  },
+  {
+    "id": "newsletter-browser-loop",
+    "source": "scripts/newsletter/browser-loop.py",
+    "workflow": "newsletter-browser.yml",
+    "mode": "automatic",
+    "description": "Weekly browser/function signup-confirm-send-unsubscribe lifecycle with official test Turnstile; live inbox evidence is handled by the separate mailbox job. Production Managed challenge remains an interactive observation."
+  },
+  {
+    "id": "annual-outlook-map-vintages",
+    "source": "scripts/ops/annual-refresh.mjs",
+    "workflow": "annual-refresh.yml",
+    "mode": "automatic",
+    "description": "Weekly discovered MCDA/BLS/PSEO/IPEDS/QCEW and pupil-source refresh; pinned MDE releases reconciled; CEPI interactive indicators remain dated reviewed inputs"
+  },
+  {
+    "id": "newsletter-inbox-delivery",
+    "source": "scripts/ops/mailbox-check.mjs",
+    "workflow": "newsletter-mailbox.yml",
+    "mode": "automatic",
+    "description": "Daily read-only authorization check; explicit manual Tristen-only delivery test; monthly final preview receipt gate enabled after verified CI inbox delivery"
+  }
+]

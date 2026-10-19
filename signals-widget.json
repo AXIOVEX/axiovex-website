@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-19T13:27:47.017Z",
+  "updatedUtc": "2026-10-19T18:29:51.120Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -23,10 +23,58 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
+      "title": "Why Digital Leadership Fails When Decisions Drift Away From Operational Reality",
+      "source": "Automation Alley",
+      "date": "2026-10-19",
+      "url": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "Why Digital Leadership Fails When Decisions Drift Away From Operational Reality",
+      "source": "Automation Alley",
+      "date": "2026-10-19",
+      "url": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/"
+    },
+    {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Energy Department Advances Constitution Pipeline Project with $42 Million in Defense Production Act Funding",
+      "source": "U.S. Department of Energy",
+      "date": "2026-10-19",
+      "url": "https://www.energy.gov/articles/energy-department-advances-constitution-pipeline-project-42-million-defense-production-act"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Cleveland-Cliffs CEO blames Canada for Stelco layoffs",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-19",
+      "url": "https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "MIT’s TechAMP finds early success after first year, could expand",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-19",
+      "url": "https://www.manufacturingdive.com/news/mit-techamp-finds-early-success-after-first-year-expansion-teledyne-defense/833324/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
       "title": "From Auburn Hills to Luxembourg: Christian Lopez’s Co-op experience",
       "source": "Manufacturing Dive",
       "date": "2026-10-19",
       "url": "https://www.manufacturingdive.com/spons/from-auburn-hills-to-luxembourg-christian-lopezs-co-op-experience/832608/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "How AI, digital twins and real-time simulation are accelerating manufacturing innovation",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-19",
+      "url": "https://www.manufacturingdive.com/spons/how-ai-digital-twins-and-real-time-simulation-are-accelerating-manufacturi/833255/"
     },
     {
       "lane": "funding-policy",
@@ -39,26 +87,10 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "How AI, digital twins and real-time simulation are accelerating manufacturing innovation",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-19",
-      "url": "https://www.manufacturingdive.com/spons/how-ai-digital-twins-and-real-time-simulation-are-accelerating-manufacturi/833255/"
-    },
-    {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
       "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
       "source": "Automation Alley",
       "date": "2026-10-16",
       "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-16",
-      "url": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/"
     },
     {
       "lane": "manufacturing",
@@ -69,44 +101,12 @@
       "url": "https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/"
     },
     {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Avio’s plan to meet the US’ solid rocket motors demand",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-16",
-      "url": "https://www.manufacturingdive.com/news/avio-usa-ceo-james-syring-solid-rocket-motor-manufacturing-plant-virginia/832755/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
-      "source": "Automation Alley",
-      "date": "2026-10-16",
-      "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
-      "source": "USAspending (Treasury)",
-      "date": "2026-10-16",
-      "url": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0054_3600_-NONE-_-NONE-"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
-      "source": "USAspending (Treasury)",
-      "date": "2026-10-16",
-      "url": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0053_3600_-NONE-_-NONE-"
-    },
-    {
       "lane": "ot-security",
       "laneLabel": "OT cybersecurity",
-      "title": "Eclipse Foundation Eclipse Milo",
+      "title": "CISA Malcolm",
       "source": "CISA",
       "date": "2026-10-15",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
     },
     {
       "lane": "ai-standards",

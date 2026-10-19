@@ -1,0 +1,140 @@
+name: Monthly report and customer newsletter (after economic releases)
+on:
+  schedule:
+    - cron: '0 14 * * *'
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: monthly-economic-publication
+  cancel-in-progress: false
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      active: ${{ steps.plan.outputs.active }}
+      dataMonth: ${{ steps.plan.outputs.dataMonth }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - id: plan
+        env:
+          SCHEDULE_CRON: ${{ github.event.schedule }}
+        run: node scripts/ops/month-end.mjs plan
+  publish:
+    needs: plan
+    if: needs.plan.outputs.active == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+      actions: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
+      CLOUDFLARE_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
+      NEWSLETTER_SEND_SECRET: ${{ secrets.NEWSLETTER_SEND_SECRET }}
+      PACK_STATUS_FILE: ops-output/economic-refresh.json
+      REPORT_DATA_MONTH: ${{ needs.plan.outputs.dataMonth }}
+      NEWSLETTER_VERIFY_INBOX: ${{ vars.NEWSLETTER_VERIFY_INBOX }}
+    steps:
+      - name: Create scoped website publisher token
+        id: publisher
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.AXIOVEX_PUBLISH_APP_ID }}
+          private-key: ${{ secrets.AXIOVEX_PUBLISH_PRIVATE_KEY }}
+          owner: AXIOVEX
+          repositories: axiovex-website
+          permission-contents: write
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.publisher.outputs.token }}
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check durable monthly send reservation
+        id: prior
+        run: |
+          name="month-end-attempt-$REPORT_DATA_MONTH"
+          prior=$(gh api --paginate "repos/$GITHUB_REPOSITORY/actions/artifacts?name=$name" --jq '.artifacts[].name')
+          if [ -n "$prior" ]; then
+            echo 'exists=true' >> "$GITHUB_OUTPUT"
+            echo 'This data month already has a send attempt. No automatic replay; inspect its send ledger if recovery is needed.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Verify automation before refreshing sources
+        if: steps.prior.outputs.exists != 'true'
+        run: node --test scripts/ops/*.test.mjs
+      - name: Refresh current state, county and analysis inputs
+        if: steps.prior.outputs.exists != 'true'
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          DOL_API_KEY: ${{ secrets.DOL_API_KEY }}
+          CENSUS_API_KEY: ${{ secrets.CENSUS_API_KEY }}
+          BEA_API_KEY: ${{ secrets.BEA_API_KEY }}
+          DATAGOV_API_KEY: ${{ secrets.DATAGOV_API_KEY }}
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+        run: |
+          node scripts/fetch-signals.mjs
+          node scripts/fetch-geo.mjs laus
+          node scripts/fetch-pack.mjs
+      - name: Require released data for the intended month
+        id: economic
+        if: steps.prior.outputs.exists != 'true'
+        run: node scripts/ops/month-end.mjs check
+      - name: Install locked independent SEO and AEO audit tools
+        if: steps.economic.outputs.ready == 'true'
+        run: |
+          npm ci --prefix scripts/ops/audit-tools --ignore-scripts --no-audit --no-fund
+          echo "OPS_AEO_CLI=$GITHUB_WORKSPACE/scripts/ops/audit-tools/node_modules/aeo.js/dist/cli.mjs" >> "$GITHUB_ENV"
+          echo "OPS_SEO_MODULE_ROOT=$GITHUB_WORKSPACE/scripts/ops/audit-tools/node_modules" >> "$GITHUB_ENV"
+      - name: Build monthly report including website health
+        if: steps.economic.outputs.ready == 'true'
+        run: node scripts/ops/run-report.mjs monthly
+      - name: Send formatted monthly report to the founders
+        if: steps.economic.outputs.ready == 'true'
+        env:
+          REPORT_KIND: monthly
+        run: node scripts/ops/mail.mjs
+      - name: Publish newsletter source and verify its web edition
+        if: steps.economic.outputs.ready == 'true'
+        run: node scripts/ops/month-end.mjs publish
+      - name: Send the exact final edition to Tristen first
+        if: steps.economic.outputs.ready == 'true'
+        run: node scripts/ops/month-end.mjs preview
+      - name: Observe the exact review delivery before customer sending
+        if: steps.economic.outputs.ready == 'true' && vars.NEWSLETTER_VERIFY_INBOX == 'true'
+        env:
+          NEWSLETTER_MAILBOX_CLIENT_ID: ${{ vars.NEWSLETTER_MAILBOX_CLIENT_ID }}
+          NEWSLETTER_MAILBOX_TENANT_ID: ${{ vars.NEWSLETTER_MAILBOX_TENANT_ID }}
+          NEWSLETTER_MAILBOX_AUTHORIZED_AT: ${{ vars.NEWSLETTER_MAILBOX_AUTHORIZED_AT }}
+          NEWSLETTER_MAILBOX_REFRESH_TOKEN: ${{ secrets.NEWSLETTER_MAILBOX_REFRESH_TOKEN }}
+        run: node scripts/ops/mailbox-check.mjs
+      - name: Prepare durable reservation before customer sending
+        if: steps.economic.outputs.ready == 'true'
+        run: |
+          mkdir -p send-reservation
+          printf '%s\n' "$GITHUB_RUN_ID" > send-reservation/run-id.txt
+      - uses: actions/upload-artifact@v4
+        if: steps.economic.outputs.ready == 'true'
+        with:
+          name: month-end-attempt-${{ needs.plan.outputs.dataMonth }}
+          path: send-reservation/
+          retention-days: 90
+      - name: Send the verified monthly customer edition
+        if: steps.economic.outputs.ready == 'true'
+        run: node scripts/ops/month-end.mjs send
+      - name: Keep source readiness, report, email and send evidence
+        if: always() && steps.prior.outputs.exists != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: month-end-${{ needs.plan.outputs.dataMonth }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ops-output/
+          if-no-files-found: warn
+          retention-days: 90

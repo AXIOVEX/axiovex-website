@@ -12,22 +12,22 @@ test('ET schedules run once across both UTC offsets', () => {
   assert.deepEqual(due(new Date('2026-10-19T14:39:00Z')), []);
   assert.deepEqual(due(new Date('2026-12-07T13:39:00Z')), ['daily']);
   assert.deepEqual(due(new Date('2026-12-07T14:39:00Z')), ['weekly', 'health']);
-  assert.deepEqual(due(new Date('2026-10-21T14:00:00Z')), ['newsletter-send']);
+  assert.deepEqual(due(new Date('2026-10-21T14:00:00Z')), []);
   assert.deepEqual(due(new Date('2026-10-21T14:39:00Z')), []);
   assert.deepEqual(due(new Date('2026-10-21T15:00:00Z')), []);
-  assert.deepEqual(due(new Date('2026-12-09T15:00:00Z')), ['newsletter-send']);
-  assert.deepEqual(due(new Date('2026-10-20T13:39:00Z')), ['newsletter-draft']);
+  assert.deepEqual(due(new Date('2026-12-09T15:00:00Z')), []);
+  assert.deepEqual(due(new Date('2026-10-20T13:39:00Z')), []);
 });
 test('runner queue delays do not lose a scheduled task', () => {
   const slot = scheduledTime('39 12 * * *', new Date('2026-10-19T16:17:22Z'));
   assert.equal(slot.toISOString(), '2026-10-19T12:39:00.000Z');
   assert.deepEqual(due(slot), ['daily']);
-  assert.deepEqual(due(scheduledTime('0 14 * * 3', new Date('2026-10-21T18:20:00Z'))), ['newsletter-send']);
+  assert.deepEqual(due(scheduledTime('0 14 * * 3', new Date('2026-10-21T18:20:00Z'))), []);
   assert.throws(() => scheduledTime('39 12,13 * * *'));
 });
 test('monthly amendments include leap years and February last day', () => {
-  assert.deepEqual(due(new Date('2027-02-28T14:39:00Z')), ['monthly', 'workforce']);
-  assert.deepEqual(due(new Date('2028-02-29T14:39:00Z')), ['monthly', 'workforce', 'newsletter-draft']);
+  assert.deepEqual(due(new Date('2027-02-28T14:39:00Z')), ['workforce', 'newsletter-draft']);
+  assert.deepEqual(due(new Date('2028-02-29T14:39:00Z')), ['workforce', 'newsletter-draft']);
   assert.deepEqual(windows('monthly', new Date('2026-10-30T13:39:00Z')), { start: '2026-09-01', end: '2026-10-01', previous: '2026-08-01' });
 });
 test('report windows use ET midnight including DST transitions', () => {
@@ -72,4 +72,14 @@ test('research noindex is intentional; public pages must stay indexable', () => 
   assert.equal(inspect(html, 'https://axiovexsystems.com/research/').checks.indexingPolicy, true);
   assert.equal(inspect(html, 'https://axiovexsystems.com/').checks.indexingPolicy, false);
   assert.equal(inspect('', 'https://axiovexsystems.com/research/').checks.indexingPolicy, false);
+});
+
+
+test('BitConcepts and internal research discovery links are confined to research', () => {
+  const link = '<a href="https://bitconcepts.tech/research/">Research</a>';
+  assert.equal(inspect(link, 'https://axiovexsystems.com/').checks.bitConceptsLinkPolicy, false);
+  assert.equal(inspect(link, 'https://axiovexsystems.com/research/').checks.bitConceptsLinkPolicy, true);
+  assert.equal(inspect('<a href="https://www.bitconcepts.tech/">External</a>', 'https://axiovexsystems.com/blog/').checks.bitConceptsLinkPolicy, false);
+  assert.equal(inspect('<a href="/research/">Hub</a>', 'https://axiovexsystems.com/').checks.researchUnlistedLinks, false);
+  assert.equal(inspect('<a href="/research/records/evidence.json">Evidence</a>', 'https://axiovexsystems.com/research/').checks.researchUnlistedLinks, true);
 });

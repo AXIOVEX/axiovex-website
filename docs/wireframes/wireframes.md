@@ -981,6 +981,54 @@ as accordion rows.
   Implementation proceeds on staging (T004–T006);
   production promotion stays a separate gate (T007).
 
+## WF-11 amendment — October 19, owner-directed refresh timestamp
+
+Tristen requests a visible last-refresh date/time on Signals. Add one small,
+centered metadata line directly below the introductory lede and above the
+newsletter/Highlights region: **Last refreshed: October 19, 2026 at 9:27 AM ET**
+(example only). Use existing signals-updated typography and an accessible
+`time` element carrying the original UTC timestamp. The value comes from
+`data/signals.json.updatedUtc`, the last snapshot update, never page-load or
+build time. Keep each economic dataset's own published reference vintage.
+No stylesheet changes are required. This direct owner request authorizes
+the placement and wording; update this frame before implementing it.
+
+## SEO corrections — October 19, owner-directed
+
+Owner requests alternate SEO checkers and fixes to verified findings. Add a
+minimal branded 404 page: existing navy page, Axiovex logo, centered “Page not
+found” heading, one explanation and links to Home and Signals. Return HTTP404
+and noindex; exclude from sitemap. This replaces the unintended homepage
+fallback for unknown paths. Existing typography/palette are reused. Replace
+the workforce article's generic “here” release link text with the descriptive
+“verified September 2026 workforce release”; preserve its target and facts.
+These targeted technical corrections follow the owner's direct instruction.
+
+WF-18 research tracker correction: retain the current research content and
+expand/collapse layout; change invalid paragraph elements inside summary to
+phrasing spans. A scoped rule preserves their existing block layout, margins,
+line height and color exactly. Research stylesheet advances v39 to v40 for
+cache busting; noindex and exclusion from public discovery remain intact.
+# October 19, 2026 operational amendment — existing WF-G7
+
+Owner requested automatic breaking-news activation in CI. Banner anatomy,
+placement, responsive layout and dismissal are unchanged. The existing strip
+now activates after source verification under
+`docs/decisions/2026-10-19-breaking-news-ci.md`, and disappears at expiry.
+Signals keeps its existing visible last-refresh timestamp; its existing summary
+column now also includes source-linked manufacturing-production change and
+83-county unemployment range, recomputed from the refreshed FRED/BLS inputs; checks with no
+content changes are recorded as CI artifacts rather than fresh data claims.
+
+October 19 remaining-duties amendment: the data-ready monthly release creates
+a source-only workforce article using the existing article template and
+newsletter article card. Layout and visual design are unchanged. The article
+labels itself an automated data brief and preserves source vintages.
+
+Newsletter browser-loop verification found overflow in the existing WF-17
+landing card at 390px. Keep its current anatomy and palette, but include the
+card padding inside its declared width so it fits the viewport.
+
 
 ## WF-19 — Thesis alignment (October 19, 2026; approved for staging)
 

@@ -1,0 +1,62 @@
+{
+  "verifiedUtc": "2026-10-19T18:40:22.531274+00:00",
+  "site": "https://axiovexsystems.com/signals/",
+  "implementationPRs": [
+    11,
+    12,
+    13
+  ],
+  "checks": {
+    "nodeTests": 43,
+    "workflowLint": "all workflows pass actionlint",
+    "signalsAndBreakingRun": 39303395718,
+    "breakingSources": {
+      "successful": 6,
+      "total": 6,
+      "qualified": 0
+    },
+    "economicRefreshRun": 39304059527,
+    "economicSources": "all seven successful after bounded retry",
+    "countyRefresh": "successful; published reference month 2026-08",
+    "seoRun": 39303442462,
+    "lighthousePublicPages": {
+      "count": 14,
+      "score": 100
+    },
+    "htmlValidation": {
+      "pages": 15,
+      "errors": 0
+    },
+    "migrationAuditRun": 39304051058,
+    "migrationFailures": [],
+    "monthlyPlanGateRun": 39303408229,
+    "monthlyPlanResult": "success; outside release window, publication skipped",
+    "priorWorkforceEvidenceRun": 39288123897,
+    "priorWeeklyReportRun": 39288118894,
+    "priorNewsletterPreparationRun": 39286896031
+  },
+  "liveContent": [
+    "Source-linked US manufacturing-production change (FRED IPMAN)",
+    "83-county unemployment range and spread (BLS LAUS)"
+  ],
+  "renderVerification": {
+    "widths": [
+      390,
+      1280
+    ],
+    "insights": "visible, no horizontal overflow",
+    "banner": "local synthetic fixture activated and expired; no test banner published"
+  },
+  "duties": "data/operations-duties.json",
+  "residualReviewDependencies": [
+    "workforce interpretation and publication approval",
+    "LinkedIn signed-in publisher/token",
+    "full Managed Turnstile and inbox-observation loop",
+    "annual projections, education and map vintage review"
+  ],
+  "limits": [
+    "GitHub schedules are best effort",
+    "Workflow success alone does not certify every source; collector coverage artifacts are authoritative",
+    "Old private Muse state not exported cannot be independently inventoried"
+  ]
+}

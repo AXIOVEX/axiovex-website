@@ -373,3 +373,12 @@ every stale run — and (iv) logs the run as degraded rather than
 a clean no-candidate. Implemented in the website-breaking-news-check
 job body the same day; the FR-010/FR-012 detection-and-approval
 model is unchanged (the job still never posts).
+# Amendment 3 — owner-authorized automatic CI publication (2026-10-19)
+
+The October 19 direction to run a fast checker and trigger the banner replaces
+the Meta Muse job and FR-012's per-entry approval requirement for the narrow
+source-verified automatic criteria in
+`docs/decisions/2026-10-19-breaking-news-ci.md`. All other curation remains
+manual. The five-minute CI monitor is now authoritative; older descriptions
+of the hourly external job below are historical. Same layout, single entry,
+verbatim headline, twelve-hour expiry, URL deduplication and audit trail.

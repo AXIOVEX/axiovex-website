@@ -6,7 +6,7 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { spawnSync } from 'node:child_process';
 
-function run(mode, { key = '', apiError = false } = {}) {
+function run(mode, { key = '', apiError = false, missingRows = false } = {}) {
   const temp = mkdtempSync(path.join(tmpdir(), 'axiovex-ops-test-'));
   const hook = path.join(temp, 'mock.mjs');
   writeFileSync(hook, `
@@ -14,9 +14,15 @@ function run(mode, { key = '', apiError = false } = {}) {
       if (String(url).includes('/zones?')) return Response.json({success:true,result:[{id:'a'.repeat(32)}]});
       if (${apiError}) return Response.json({errors:[{message:'permission denied'}]});
       const query = JSON.parse(options.body).query;
-      const rows = query.includes('httpRequests1')
-        ? [{dimensions:{datetime:'2026-10-18T12:00:00Z'},sum:{requests:10,bytes:200,cachedBytes:50,responseStatusMap:[{edgeResponseStatus:200,requests:10}]}}]
-        : [{count:5,dimensions:{clientRequestHTTPHost:'axiovexsystems.com',clientRequestPath:'/signals/'}}];
+      let rows;
+      if (query.includes('httpRequests1dGroups')) {
+        const start = /date_geq:"([^"]+)"/.exec(query)[1], end = /date_lt:"([^"]+)"/.exec(query)[1];
+        rows = [];
+        for(let d = new Date(start + 'T00:00:00Z'); d.toISOString().slice(0,10) < end; d.setUTCDate(d.getUTCDate()+1)) {
+          rows.push({dimensions:{date:d.toISOString().slice(0,10)},uniq:{uniques:3},sum:{requests:10,bytes:200,cachedBytes:50,responseStatusMap:[{edgeResponseStatus:200,requests:10}],countryMap:[{clientCountryName:'US',requests:10}]}});
+        }
+        if (${missingRows}) rows = rows.slice(0, 2);
+      } else rows = [{count:5,dimensions:{clientRequestHTTPHost:'axiovexsystems.com',clientRequestPath:'/signals/'}}];
       return Response.json({data:{viewer:{zones:[{rows}]}},errors:null});
     };
   `);
@@ -31,22 +37,33 @@ test('missing credentials produce a saved failed report', () => {
   assert.equal(result.status, 1);
   assert.match(result.report, /Missing CLOUDFLARE_ANALYTICS_TOKEN/);
 });
+test('incomplete monthly windows produce unavailable totals and a usable partial report, not false zero baselines', () => {
+  const result = run('monthly', { key: 'test-only', missingRows: true });
+  assert.equal(result.status, 2);
+  assert.match(result.report, /\| Requests \| Unavailable \| Unavailable \| Unavailable \|/);
+  assert.match(result.report, /observed subset/);
+  assert.match(result.report, /cannot establish zero 5xx/);
+  const data = JSON.parse(readFileSync(path.join(result.temp, 'window.json'), 'utf8'));
+  assert.equal(data.totals.previous.requests, null);
+  assert.equal(data.totals.current.complete, false);
+  assert.equal(data.totals.current.observed.requests, 20);
+});
 test('API errors preserve raw evidence and fail closed', () => {
   const result = run('weekly', { key: 'test-only', apiError: true });
   assert.equal(result.status, 1);
   assert.match(result.report, /API rejected query/);
-  assert.ok(existsSync(path.join(result.temp, 'current-hourly-0.json')));
-  assert.ok(existsSync(path.join(result.temp, 'current-utc-fallback.json')));
+  assert.ok(existsSync(path.join(result.temp, 'current-utc.json')));
+
 });
 test('measured reports save normalized responses and disclose missing sections', () => {
   const result = run('weekly', { key: 'test-only' });
   assert.equal(result.status, 2);
-  assert.match(result.report, /200 \(OK\): 40/);
-  assert.match(result.report, /Distinct visitors unavailable/);
+  assert.match(result.report, /200 \(OK\): 70/);
+  assert.match(result.report, /visitor-days/);
   assert.match(result.report, /Daily request trend/);
   assert.match(result.report, /Path movers/);
   const snapshot = JSON.parse(readFileSync(path.join(result.temp, 'window.json'), 'utf8'));
-  assert.equal(snapshot.totals.current.requests, 40);
+  assert.equal(snapshot.totals.current.requests, 70);
   assert.equal(snapshot.totals.current.cacheRatio, 0.25);
   assert.equal(snapshot.movers[0].change, 0);
   assert.ok(!result.report.includes('test-only'));
