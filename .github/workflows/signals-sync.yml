@@ -11,7 +11,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: signals-sync
+  group: site-content-sync
   cancel-in-progress: false
 jobs:
   sync:

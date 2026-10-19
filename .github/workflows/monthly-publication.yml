@@ -26,6 +26,9 @@ jobs:
           SCHEDULE_CRON: ${{ github.event.schedule }}
         run: node scripts/ops/month-end.mjs plan
   publish:
+    concurrency:
+      group: site-content-sync
+      cancel-in-progress: false
     needs: plan
     if: needs.plan.outputs.active == 'true'
     runs-on: ubuntu-latest
