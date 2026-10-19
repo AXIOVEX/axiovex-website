@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "publication_date": "2026-10-19",
+  "publication_type": "recovered_archival_report",
+  "repository": "AXIOVEX/axiovex-website",
+  "record_path": "research/records/2026-10-19-discriminating-studies",
+  "limitations": "Underlying source changes and complete raw results were not recovered; the original source inventory remains private. This publication is not a current independent reproduction.",
+  "files": [
+    {
+      "path": "findings.md",
+      "bytes": 20075,
+      "sha256": "c459d48a43dc65b8d233c566fdbf81bc1892ad29d1e82fe501accb8ecb477f0b",
+      "git_blob_sha": "d158f1cc8df653cfbe54e73d4bde547d2933495f"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 1928,
+      "sha256": "9a74282533fd89185b0649a6a2eac9453194299c296f209fc7a4c7d063d49332",
+      "git_blob_sha": "b3d6588e8cd7888088a2d82c758ca8523854921b"
+    }
+  ]
+}
