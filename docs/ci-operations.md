@@ -350,3 +350,10 @@ hour and are revoked at job completion by the official token action.
 The real Tristen-only delivery test passed in run 39324152242. The received HTML
 newsletter passed sender, recipient, subject, freshness, HTML, table, postal and
 review-notice checks. NEWSLETTER_VERIFY_INBOX=true is now enabled for month-end.
+
+
+On code-push health runs, CI waits for the exact commit's successful production
+Cloudflare check before crawling, then allows a short edge-propagation interval.
+A staging check cannot satisfy this gate; failed or missing deployment evidence
+holds the audit. Token access to Checks is read-only. Scheduled reports audit
+the currently live site without waiting for a new deployment.
