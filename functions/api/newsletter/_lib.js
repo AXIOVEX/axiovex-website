@@ -351,7 +351,7 @@ export function landingResponse(state) {
   <title>${content.title} | The Axiovex Signal — Axiovex Systems</title>
   <style>
     body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #081F32; color: #F7FCFF; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif; }
-    main { width: min(620px, calc(100% - 48px)); border: 1px solid rgba(0,222,246,.25); border-radius: 14px; padding: 36px; background: rgba(247,252,255,.03); text-align: center; }
+    main { box-sizing: border-box; width: min(620px, calc(100% - 48px)); border: 1px solid rgba(0,222,246,.25); border-radius: 14px; padding: 36px; background: rgba(247,252,255,.03); text-align: center; }
     .eyebrow { color: #00DEF6; font-size: 12px; letter-spacing: .14em; font-weight: 700; margin: 0 0 10px; }
     h1 { margin: 0 0 12px; font-size: 30px; line-height: 1.2; }
     p { color: rgba(247,252,255,.76); line-height: 1.65; }

@@ -1,0 +1,40 @@
+name: Newsletter browser and delivery-contract tests
+on:
+  push:
+    branches: [main]
+    paths: ['functions/**', 'scripts/newsletter/**', 'newsletter-signup*.js', 'scripts/templates/**', '.github/workflows/newsletter-browser.yml']
+  pull_request:
+    paths: ['functions/**', 'scripts/newsletter/**', 'newsletter-signup*.js', 'scripts/templates/**', '.github/workflows/newsletter-browser.yml']
+  schedule:
+    - cron: '19 12 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned browser driver
+        run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Exercise real newsletter functions and negative cases
+        env:
+          HARNESS_EVIDENCE: ops-output/newsletter-harness
+        run: node scripts/newsletter/test-harness.mjs
+      - name: Exercise signup, test mail, confirmation, unsubscribe and suppression in a browser
+        run: python scripts/newsletter/browser-loop.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: newsletter-browser-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ops-output/
+          retention-days: 90

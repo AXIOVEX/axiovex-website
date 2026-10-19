@@ -4,6 +4,7 @@ import { pathToFileURL } from 'node:url';
 import { localParts, shift, scheduledTime } from './calendar.mjs';
 import { save, summary } from './io.mjs';
 import { renderEmail } from '../newsletter/render.mjs';
+import { prepareBrief } from './workforce-brief.mjs';
 export const policy = JSON.parse(readFileSync(new URL('../../data/publication-policy.json', import.meta.url), 'utf8'));
 export function cycle(now = new Date()) {
   const p = localParts(now), day = +p.day;
@@ -88,14 +89,9 @@ async function main() {
   }
   if (problems.length) throw new Error('Economic data are not ready; publication refused');
   if (mode === 'publish') {
+    const brief = prepareBrief(signals, geo, plan);
     const issue = makeIssue(signals, geo, plan);
-    // Reuse the newest blog metadata without inventing an article or changing it.
-    const posts = readdirSync('blog/posts').filter(f => f.endsWith('.md')).sort().reverse();
-    if (posts[0]) {
-      const source = readFileSync(`blog/posts/${posts[0]}`, 'utf8');
-      const title = /^title:\s*(.+)$/m.exec(source)?.[1], slug = /^slug:\s*(.+)$/m.exec(source)?.[1], date = /^date:\s*(.+)$/m.exec(source)?.[1];
-      if (title && slug && date) issue.article = { title, date, url: `https://axiovexsystems.com/blog/${slug}/` };
-    }
+    issue.article = { title: brief.title, date: brief.date, url: brief.articleUrl };
     const email = renderEmail(issue);
     mkdirSync('newsletter/issues', { recursive: true });
     writeFileSync(`newsletter/issues/${plan.date}.json`, JSON.stringify(issue, null, 2) + '\n');
@@ -111,7 +107,8 @@ async function main() {
     const url = `https://axiovexsystems.com/newsletter/${plan.date}/`;
     for (let attempt = 0; attempt < 24; attempt++) {
       const response = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(20000) });
-      if (response.status === 200 && (await response.text()).includes(issue.lede.replaceAll('&', '&amp;'))) { console.log('Published newsletter verified live.'); return; }
+      const article = await fetch(brief.articleUrl, { cache: 'no-store', signal: AbortSignal.timeout(20000) });
+      if (response.status === 200 && (await response.text()).includes(issue.lede.replaceAll('&', '&amp;')) && article.ok && (await article.text()).includes(brief.title)) { console.log('Published newsletter and workforce brief verified live.'); return; }
       await new Promise(resolve => setTimeout(resolve, 10000));
     }
     throw new Error('Newsletter deployment not verified; customer send refused');

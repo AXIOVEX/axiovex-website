@@ -1,13 +1,13 @@
 {
-  "source": "U.S. Census Bureau, Post-Secondary Employment Outcomes (PSEO), LEHD \u2014 Michigan release files pseoe_mi.csv (earnings) + pseof_mi.csv (flows); labels from the LEHD Public Use Data Schema V4.9.0",
+  "source": "U.S. Census Bureau, Post-Secondary Employment Outcomes (PSEO), LEHD — Michigan release files pseoe_mi.csv (earnings) + pseof_mi.csv (flows); labels from the LEHD Public Use Data Schema V4.9.0",
   "sourceUrl": "https://lehd.ces.census.gov/data/pseo/latest_release/mi/",
-  "vintage": "Release R2026Q2 (version_pseo.txt: PSEOE MI 26 2001-2021 V4.14.1 2026Q2); graduate cohorts 2001-2021 pooled",
-  "retrievedOn": "2026-10-06",
+  "vintage": "Release R2026Q2 (PSEOE MI 26 2001-2021 V4.14.1 2026Q2 pseopu_mi_20260715_1529); graduate cohorts 2001-2021 pooled",
+  "retrievedOn": "2026-10-19",
   "coverage": {
     "partnerInstitutions": [
       "University of Michigan (OPEID 00232500)"
     ],
-    "coverageNote": "pseo_mi_partners.txt states the University of Michigan is the only Michigan institution in PSEO and that its graduates are ~10% of statewide graduates. Statewide rows are Census state aggregates, not a sum of Michigan partner institutions."
+    "coverageNote": "Census lists University of Michigan as the Michigan data contributor; coverage is 10% of statewide graduates in its 2015 estimate, not a current statewide coverage measure. State aggregate rows are published by Census, not computed by summing institutions."
   },
   "selection": "Bachelor's degrees (degree_level 05), all cohorts pooled (grad_cohort 0000), national outcomes (geo_level N). Published rows only: status flag 1 in the source's status_* columns; every other row is counted under excludedRows, never carried.",
   "excludedRows": {
@@ -16,7 +16,7 @@
     "umichIndustryFlows": 0
   },
   "statewideFlows": {
-    "label": "Michigan bachelor's graduates, all institutions (state aggregate) \u2014 top field-to-industry flows, one year after graduation",
+    "label": "Michigan bachelor's graduates, all institutions (state aggregate) — selected field-to-industry flows, one year after graduation",
     "rows": [
       {
         "cip": "14",

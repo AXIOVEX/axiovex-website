@@ -276,3 +276,28 @@ source-verified automatic banner publication and expiry. Source-check artifacts
 are retained even if no content changed. No timestamp-only snapshot commits.
 Daily pack sync now also refreshes county rates (including revisions within
 the same month), recalculates public insight arithmetic, and rebuilds Signals.
+
+
+## Remaining-duty jobs
+
+`annual-refresh.yml` checks primary annual sources weekly (Tuesday), validates
+structured tables, rebuilds public content and commits verified changes. 404
+for the next IPEDS cycle or QCEW year means not released; other failures remain
+visible. Source bytes and SHA-256 receipts are retained for 90 days.
+
+`newsletter-browser.yml` runs on relevant pushes/PRs and weekly, retaining ten
+browser lifecycle checks and mobile confirmation screenshots. It uses real
+functions against isolated SQLite and captured delivery with public Turnstile
+keys. The production site continues to use Managed Turnstile and Microsoft.
+
+`linkedin-publish.yml` validates personal identity, app-bound scope and expiry
+hourly. A data-ready article queues the authorized personal publication; the
+company reshare follows next Tuesday at 09:30 Eastern. Company credentials
+must come from the separately approved company app. Manual `preflight` never
+publishes. Before any POST, an attempt is committed and uploaded; unresolved
+attempts require reconciliation rather than replay. Accepted IDs are committed.
+
+Local authorization: `node scripts/ops/linkedin-authorize.mjs` (personal) or
+`--company` (company). Use only localhost's setup form; it saves tokens directly
+to Actions secrets. Register `http://localhost:8766/callback` on each app. Never
+paste client secrets into terminal command arguments or commit them.

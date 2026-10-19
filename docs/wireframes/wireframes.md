@@ -1019,3 +1019,12 @@ Signals keeps its existing visible last-refresh timestamp; its existing summary
 column now also includes source-linked manufacturing-production change and
 83-county unemployment range, recomputed from the refreshed FRED/BLS inputs; checks with no
 content changes are recorded as CI artifacts rather than fresh data claims.
+
+October 19 remaining-duties amendment: the data-ready monthly release creates
+a source-only workforce article using the existing article template and
+newsletter article card. Layout and visual design are unchanged. The article
+labels itself an automated data brief and preserves source vintages.
+
+Newsletter browser-loop verification found overflow in the existing WF-17
+landing card at 390px. Keep its current anatomy and palette, but include the
+card padding inside its declared width so it fits the viewport.

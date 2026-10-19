@@ -46,8 +46,21 @@
 - Meta Muse duty inventory: data/operations-duties.json; audit findings and
   residual review/session duties: docs/muse-migration-audit.md. Daily
   migration-audit.yml checks enabled/recent/successful execution. Verification:
-  docs/verification/2026-10-19-signals-and-muse-ci.json. Do not claim editorial,
-  LinkedIn, annual-vintage review or interactive mail-loop duties are unattended.
+  docs/verification/2026-10-19-signals-and-muse-ci.json. See the October 19 remaining-duties decision for the source-only article,
+  hourly LinkedIn publisher, weekly annual refresh and browser lifecycle CI.
+  Company API approval and actual mailbox observation remain separate gates.
 - Economic pack refresh retries transient failed providers once and fails on
   any remaining failed/skipped source, retaining both attempts and last-good
   data. All seven pack sources plus county refresh verified in run 39304059527.
+
+- Remaining-duty implementation: docs/decisions/2026-10-19-remaining-duties.md.
+  LinkedIn personal app 264153192 and company-only app 264163092; the latter's
+  Axiovex Page association is verified. Never attach Share/OIDC to the company
+  app: LinkedIn requires Community Management to be its only product.
+  Tokens stay in Actions secrets, IDs/expiry in variables. No posts are sent
+  merely to test authentication. Expiry warnings begin 14 days ahead.
+- Annual collector: scripts/ops/annual-refresh.mjs + annual-tables.py. MDE pinned
+  articles and interactive CEPI inputs have explicitly limited discovery;
+  never claim the whole education source universe is automatically refreshed.
+- Newsletter browser evidence uses public test Turnstile and captured messages;
+  it does not represent real inbox receipt. No production bot bypass.

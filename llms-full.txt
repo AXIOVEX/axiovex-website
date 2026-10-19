@@ -1786,17 +1786,17 @@ Four-year dropout rate 7.1%
 CEPI VIA MDE, FEB 2026
 
 Teacher-preparation enrollees 14,819
-&middot; 2023–24 &middot; trough 6,859 in 2016–17 &middot;
+&middot; 2023-24 &middot; trough 6,859 in 2016–17 &middot;
 MDE, SEP 2025
 
 Teacher-preparation completers 2,961
-&middot; 2023–24 &middot; 2,258 in 2019–20 &middot;
+&middot; 2023-24 &middot; 2,258 in 2019–20 &middot;
 MDE, SEP 2025
 
-Pupil membership 1,371,800
-&middot; FY2025–26 &middot; budget-consensus estimate
+Pupil membership 1,360,000
+&middot; FY2026–27 &middot; proposed conference estimate
 , not an audited count &middot;
-HOUSE FISCAL AGENCY, JAN 2026
+PUPIL COUNT ESTIMATES - MAY 2026
 
 One row is deliberately absent: postsecondary completions by field — no Michigan by-field series has been verified from its source (IPEDS) yet, so the row does not appear. The block grows by verification, never by substitution.
 
@@ -2069,7 +2069,7 @@ Mackinac
 
 Shading follows the rate only; the table is the record. Rates are the source's published values for the month named. October 2025 is a genuine hole in this series — the source published no values for that month (federal lapse in appropriations) — shown as not published, never interpolated.
 
-Employment by county and industry — 2024 annual averages
+Employment by county and industry — 2025 annual averages
 
 All industries
 
@@ -2117,501 +2117,465 @@ Fewest jobs in this industry
 Most jobs in this industry
 Not disclosed
 
-Total employment by county (all ownerships) &middot; BLS QCEW, 2024 annual averages
+Total employment by county (all ownerships) &middot; BLS QCEW, 2025 annual averages
 
 County
 Total employment
 of which private
 
 Wayne
-725,504
-641,267
+721,389
+636,226
 
 Oakland
-723,862
-676,710
+720,266
+673,280
 
 Kent
-415,565
-389,176
+417,408
+390,596
 
 Macomb
-336,295
-301,041
+331,515
+296,284
 
 Washtenaw
-217,948
-133,668
+219,230
+134,542
 
 Ingham
-155,500
-109,332
+155,298
+108,056
 
 Genesee
-133,787
-115,450
+134,908
+116,565
 
 Ottawa
-131,885
-115,836
+129,408
+113,317
 
 Kalamazoo
-120,708
-107,943
+122,119
+109,092
 
 Saginaw
-79,478
-69,046
+80,210
+69,804
 
 Livingston
-64,380
-57,331
+64,689
+57,529
 
 Muskegon
-63,475
-56,184
+62,026
+54,648
 
 Berrien
-60,626
-52,285
+60,632
+52,215
 
 Jackson
-55,945
-48,044
+55,466
+47,479
 
 Calhoun
-54,415
-43,495
+54,949
+44,258
 
 Grand Traverse
-51,962
-46,298
+52,238
+47,140
 
 Eaton
-44,501
-38,488
-
-St. Clair
-42,283
-35,949
+45,625
+39,598
 
 Allegan
-41,360
-35,861
+43,686
+37,785
+
+St. Clair
+41,734
+35,277
 
 Monroe
-41,159
-35,905
+40,577
+35,197
 
 Midland
-38,288
-35,244
+38,301
+35,189
 
 Bay
-34,112
-29,008
-
-Isabella
-26,640
-18,552
+34,153
+29,019
 
 Marquette
-26,385
-21,458
+26,924
+21,496
+
+Isabella
+26,856
+18,219
 
 Lenawee
-25,796
-21,435
+25,857
+21,506
 
 Lapeer
-21,986
-17,911
+22,229
+18,076
 
 Van Buren
-21,597
-17,076
+21,582
+16,993
 
 St. Joseph
-21,098
-18,495
-
-Clinton
-18,614
-16,594
+20,801
+18,204
 
 Ionia
-18,530
-15,129
+18,832
+15,373
+
+Clinton
+18,741
+16,700
 
 Emmet
-17,742
-15,501
+17,859
+15,603
 
 Montcalm
-16,263
-13,129
+16,387
+13,239
 
 Shiawassee
-15,541
-12,392
+15,490
+12,310
 
 Branch
-15,240
-12,605
+15,400
+12,753
 
 Delta
-13,848
-11,863
+13,886
+11,850
 
 Dickinson
-13,798
-11,235
+13,696
+11,168
 
 Barry
-13,236
-11,094
+13,286
+11,086
 
 Wexford
-13,163
-10,903
-
-Hillsdale
-12,854
-10,580
+13,082
+10,872
 
 Chippewa
-12,793
-6,499
-
-Mecosta
-12,746
-8,842
+12,796
+6,520
 
 Gratiot
-12,359
-9,821
-
-Alpena
-12,191
-9,511
+12,739
+10,153
 
 Houghton
-12,124
-8,884
+12,476
+9,179
+
+Hillsdale
+12,461
+10,222
+
+Mecosta
+12,262
+8,208
 
 Tuscola
-12,102
-9,312
+12,153
+9,350
+
+Alpena
+12,115
+9,419
 
 Newaygo
-11,901
-9,855
+11,796
+9,722
 
 Huron
-11,234
-9,592
+11,350
+9,693
 
 Charlevoix
-10,983
-9,247
+10,881
+9,155
 
 Otsego
-10,703
-9,484
+10,549
+9,300
 
 Sanilac
-10,437
-9,154
+10,347
+9,056
 
 Mason
-10,186
-8,576
+10,162
+8,511
 
 Cass
-9,373
-7,415
+9,582
+7,207
 
 Osceola
-8,011
-7,032
-
-Iosco
-7,724
-6,299
-
-Manistee
-7,281
-4,893
+7,692
+6,689
 
 Clare
-7,261
-5,743
+7,670
+6,152
 
-Menominee
-7,149
-5,103
+Iosco
+7,624
+6,154
+
+Manistee
+7,448
+5,082
 
 Leelanau
-6,662
-4,978
+7,359
+5,120
+
+Menominee
+7,115
+4,996
 
 Oceana
-6,470
-5,237
-
-Roscommon
-6,429
-5,179
+6,510
+5,256
 
 Cheboygan
-6,140
-5,022
+6,125
+5,014
+
+Roscommon
+6,103
+4,819
 
 Ogemaw
-6,008
-5,272
+6,086
+5,348
 
 Antrim
-5,128
-4,147
-
-Gogebic
-5,046
-3,556
+5,061
+4,046
 
 Benzie
-4,882
-4,138
+5,028
+4,219
 
 Kalkaska
-4,860
-3,700
+4,924
+3,702
+
+Gogebic
+4,848
+3,377
 
 Mackinac
-4,836
-3,836
+4,804
+3,804
 
 Gladwin
-4,593
-3,836
+4,495
+3,728
 
 Missaukee
-4,213
-3,734
+4,110
+3,633
 
 Crawford
-4,105
-3,273
+4,065
+3,259
 
 Arenac
-4,077
-3,523
+3,940
+3,410
 
 Iron
-3,410
-2,600
+3,371
+2,566
 
 Baraga
-2,973
-1,389
+2,965
+1,337
 
 Schoolcraft
-2,702
-1,702
+2,764
+1,735
 
 Alger
-2,650
-1,824
+2,678
+1,853
 
 Presque Isle
-2,595
-1,978
+2,561
+1,955
 
 Montmorency
-2,050
+2,056
 1,626
 
 Luce
-1,786
-976
+1,932
+1,111
 
 Lake
-1,721
-1,280
+1,694
+1,256
 
 Alcona
-1,494
-1,178
+1,533
+1,204
 
 Oscoda
-1,364
-1,017
+1,363
+1,008
 
 Ontonagon
 1,338
-905
+898
 
 Keweenaw
-478
-349
+498
+366
 
-Agriculture, forestry, fishing and hunting — private employment by county &middot; BLS QCEW, 2024 annual averages
+Agriculture, forestry, fishing and hunting — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Ottawa
-3,561
-3.34
+3,556
+3.48
 
 Kent
-2,741
-0.81
+2,609
+0.79
 
 Allegan
-1,743
-5.21
-
-Kalamazoo
-1,485
-1.52
-
-Macomb
-1,466
-0.54
+1,765
+5.11
 
 Van Buren
-1,312
-7.51
+1,346
+7.89
 
-Berrien
-1,186
-2.42
+Macomb
+1,294
+0.49
+
+Ionia
+1,019
+6.84
 
 Oakland
-970
+958
 0.17
 
 Missaukee
-961
-28.18
+870
+26.78
 
 St. Joseph
-859
-5.03
-
-Clinton
-791
-5.25
+781
+4.75
 
 Ingham
-766
+750
 0.61
 
-Calhoun
-754
-1.71
-
 Wayne
-598
-0.10
+632
+0.11
+
+Muskegon
+621
+1.27
+
+Lenawee
+524
+2.56
 
 Newaygo
-500
-5.19
+487
+5.22
 
-Bay
-432
-1.56
-
-Eaton
-417
-1.16
-
-Livingston
-390
-0.75
+Montcalm
+435
+3.36
 
 Grand Traverse
-321
-0.76
-
-Lapeer
-299
-1.68
-
-Jackson
-296
-0.65
+316
+0.77
 
 Hillsdale
-265
-2.55
+289
+2.93
 
-Branch
-239
-1.94
+Lapeer
+272
+1.55
 
 Isabella
-232
-1.08
+251
+1.18
 
-Ogemaw
-185
-3.80
+Branch
+216
+1.77
 
 Marquette
-169
-0.79
-
-Kalkaska
-150
-3.81
+160
+0.75
 
 Wexford
-133
-1.25
+146
+1.41
 
-Emmet
-120
-0.84
+Kalkaska
+136
+3.49
 
 Osceola
-111
-1.71
+134
+2.20
+
+Emmet
+126
+0.89
+
+Eaton
+94
+0.26
 
 Otsego
-86
-0.99
-
-St. Clair
 85
-0.25
-
-Luce
-56
-3.87
+1.02
 
 Charlevoix
-53
-0.60
+55
+0.64
 
 Alpena
 48
-0.49
-
-Lake
-45
-3.23
-
-Keweenaw
-12
-3.10
-
-Oscoda
-11
-1.00
+0.50
 
 Alcona
 Not disclosed
@@ -2637,7 +2601,19 @@ Barry
 Not disclosed
 —
 
+Bay
+Not disclosed
+—
+
 Benzie
+Not disclosed
+—
+
+Berrien
+Not disclosed
+—
+
+Calhoun
 Not disclosed
 —
 
@@ -2654,6 +2630,10 @@ Not disclosed
 —
 
 Clare
+Not disclosed
+—
+
+Clinton
 Not disclosed
 —
 
@@ -2693,10 +2673,6 @@ Huron
 Not disclosed
 —
 
-Ionia
-Not disclosed
-—
-
 Iosco
 Not disclosed
 —
@@ -2705,11 +2681,31 @@ Iron
 Not disclosed
 —
 
+Jackson
+Not disclosed
+—
+
+Kalamazoo
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
 Leelanau
 Not disclosed
 —
 
-Lenawee
+Livingston
+Not disclosed
+—
+
+Luce
 Not disclosed
 —
 
@@ -2741,15 +2737,7 @@ Monroe
 Not disclosed
 —
 
-Montcalm
-Not disclosed
-—
-
 Montmorency
-Not disclosed
-—
-
-Muskegon
 Not disclosed
 —
 
@@ -2757,7 +2745,15 @@ Oceana
 Not disclosed
 —
 
+Ogemaw
+Not disclosed
+—
+
 Ontonagon
+Not disclosed
+—
+
+Oscoda
 Not disclosed
 —
 
@@ -2785,6 +2781,10 @@ Shiawassee
 Not disclosed
 —
 
+St. Clair
+Not disclosed
+—
+
 Tuscola
 Not disclosed
 —
@@ -2793,119 +2793,91 @@ Washtenaw
 Not disclosed
 —
 
-Mining, quarrying, and oil and gas extraction — private employment by county &middot; BLS QCEW, 2024 annual averages
+Mining, quarrying, and oil and gas extraction — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Marquette
-1,185
-11.87
+1,247
+12.64
 
 Wayne
-582
-0.21
+569
+0.22
 
 Kalkaska
-332
-18.06
+330
+18.28
 
 Isabella
-330
-3.27
-
-Otsego
-232
-5.73
-
-Oakland
-226
-0.08
+318
+3.23
 
 Grand Traverse
-187
-0.95
+266
+1.39
 
-Ingham
-111
-0.19
-
-Lapeer
-99
-1.19
+Oakland
+228
+0.09
 
 Kent
-98
-0.06
+109
+0.07
 
-Berrien
-94
-0.41
+Lapeer
+95
+1.17
 
-Ottawa
-65
+Ingham
+76
 0.13
 
-Calhoun
-53
-0.26
+Otsego
+72
+1.86
 
-Eaton
-42
-0.25
+Ottawa
+68
+0.14
 
-Macomb
-41
-0.03
+Muskegon
+62
+0.27
 
 Alpena
-40
-0.87
+42
+0.95
+
+Eaton
+41
+0.25
 
 Missaukee
-38
-2.38
+36
+2.39
 
-Jackson
-37
-0.17
+Macomb
+35
+0.03
 
 Osceola
-36
-1.19
-
-St. Clair
 30
-0.19
-
-Livingston
-27
-0.11
+1.06
 
 Allegan
-25
-0.16
-
-Ogemaw
-25
-1.10
-
-Kalamazoo
-24
-0.05
-
-Bay
-15
-0.12
+23
+0.14
 
 Wexford
-15
-0.30
+16
+0.33
 
-Clinton
-11
-0.16
+Montcalm
+8
+0.13
 
 Alcona
 Not disclosed
@@ -2931,11 +2903,23 @@ Barry
 Not disclosed
 —
 
+Bay
+Not disclosed
+—
+
 Benzie
 Not disclosed
 —
 
+Berrien
+Not disclosed
+—
+
 Branch
+Not disclosed
+—
+
+Calhoun
 Not disclosed
 —
 
@@ -2956,6 +2940,10 @@ Not disclosed
 —
 
 Clare
+Not disclosed
+—
+
+Clinton
 Not disclosed
 —
 
@@ -3015,6 +3003,14 @@ Iron
 Not disclosed
 —
 
+Jackson
+Not disclosed
+—
+
+Kalamazoo
+Not disclosed
+—
+
 Keweenaw
 Not disclosed
 —
@@ -3028,6 +3024,10 @@ Not disclosed
 —
 
 Lenawee
+Not disclosed
+—
+
+Livingston
 Not disclosed
 —
 
@@ -3063,15 +3063,7 @@ Monroe
 Not disclosed
 —
 
-Montcalm
-Not disclosed
-—
-
 Montmorency
-Not disclosed
-—
-
-Muskegon
 Not disclosed
 —
 
@@ -3080,6 +3072,10 @@ Not disclosed
 —
 
 Oceana
+Not disclosed
+—
+
+Ogemaw
 Not disclosed
 —
 
@@ -3115,6 +3111,10 @@ Shiawassee
 Not disclosed
 —
 
+St. Clair
+Not disclosed
+—
+
 St. Joseph
 Not disclosed
 —
@@ -3131,92 +3131,88 @@ Washtenaw
 Not disclosed
 —
 
-Utilities — private employment by county &middot; BLS QCEW, 2024 annual averages
+Utilities — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
+Wayne
+3,263
+1.17
+
 Oakland
-1,632
-0.59
+1,679
+0.60
 
 Kent
-847
-0.54
+850
+0.53
 
 Ottawa
-678
-1.35
-
-Washtenaw
-397
-0.48
+698
+1.40
 
 Macomb
-352
+360
 0.28
 
 Grand Traverse
-235
-1.19
-
-Muskegon
-227
-0.94
+237
+1.17
 
 Charlevoix
-192
-4.60
+185
+4.40
 
-Montcalm
-131
-2.12
+Midland
+158
+1.07
 
 Mason
-109
-2.81
+118
+3.00
+
+Montcalm
+95
+1.50
 
 Otsego
-92
-2.26
+95
+2.33
 
 Allegan
-88
-0.56
+91
+0.54
 
 Dickinson
-75
-1.43
+76
+1.44
 
 Branch
-57
-0.98
-
-Lapeer
-54
-0.65
+69
+1.16
 
 Delta
 51
-0.97
+0.95
 
 Manistee
-48
-1.73
+47
+1.63
 
 Ingham
-27
-0.05
-
-Cheboygan
-15
-0.64
+23
+0.04
 
 Iron
 13
 1.00
 
+Cheboygan
+11
+0.46
+
 Alcona
 Not disclosed
 —
@@ -3349,6 +3345,10 @@ Lake
 Not disclosed
 —
 
+Lapeer
+Not disclosed
+—
+
 Leelanau
 Not disclosed
 —
@@ -3381,10 +3381,6 @@ Menominee
 Not disclosed
 —
 
-Midland
-Not disclosed
-—
-
 Missaukee
 Not disclosed
 —
@@ -3394,6 +3390,10 @@ Not disclosed
 —
 
 Montmorency
+Not disclosed
+—
+
+Muskegon
 Not disclosed
 —
 
@@ -3461,7 +3461,7 @@ Van Buren
 Not disclosed
 —
 
-Wayne
+Washtenaw
 Not disclosed
 —
 
@@ -3469,337 +3469,333 @@ Wexford
 Not disclosed
 —
 
-Construction — private employment by county &middot; BLS QCEW, 2024 annual averages
+Construction — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Oakland
-32,506
+32,969
 0.86
 
 Wayne
-23,670
-0.62
+24,687
+0.65
 
 Kent
-20,290
-0.93
+20,754
+0.94
 
 Macomb
-17,630
-1.00
+18,024
+1.03
 
 Ottawa
-6,952
-1.00
-
-Kalamazoo
-6,522
+7,064
 1.03
 
 Genesee
-6,477
-0.92
+6,857
+0.96
+
+Kalamazoo
+6,145
+0.95
 
 Ingham
-6,106
-0.75
+5,972
+0.73
 
 Washtenaw
-4,907
+4,949
 0.43
 
 Livingston
-4,536
-1.34
+4,651
+1.36
 
 Saginaw
-3,351
-0.80
+3,365
+0.79
 
 Grand Traverse
-3,190
+3,247
 1.17
 
 Allegan
-2,974
-1.37
+3,135
+1.35
 
 St. Clair
-2,641
-1.19
+2,787
+1.26
 
 Muskegon
-2,424
-0.73
+2,468
+0.75
 
 Jackson
-2,405
-0.82
-
-Midland
-2,209
-1.10
+2,442
+0.83
 
 Clinton
-2,096
-2.15
-
-Berrien
-1,974
-0.62
+2,194
+2.21
 
 Monroe
-1,940
-0.90
+1,953
+0.91
+
+Berrien
+1,934
+0.60
 
 Calhoun
-1,831
-0.64
+1,926
+0.66
 
 Isabella
-1,653
-1.18
+1,694
+1.19
 
 Eaton
-1,555
+1,624
 0.67
 
-Bay
-1,520
-0.85
-
 Emmet
-1,501
-1.61
+1,558
+1.65
+
+Bay
+1,482
+0.82
 
 Marquette
-1,461
-1.05
+1,462
+1.02
 
 Dickinson
-1,407
+1,410
 1.94
 
 Lapeer
-1,273
-1.10
+1,259
+1.07
+
+Lenawee
+1,011
+0.74
 
 Osceola
-938
-2.23
+918
+2.25
 
 Houghton
-788
-1.24
+897
+1.36
 
 Shiawassee
-773
-0.95
+822
+1.00
 
-St. Joseph
-741
-0.67
+Ionia
+813
+0.81
 
 Van Buren
-696
-0.61
-
-Montcalm
-678
-0.79
-
-Charlevoix
-670
-1.16
+770
+0.67
 
 Chippewa
-652
-0.97
+759
+1.12
 
-Delta
-639
-0.88
+Montcalm
+724
+0.83
 
-Otsego
-626
-1.11
+St. Joseph
+692
+0.63
 
-Tuscola
-625
-0.98
-
-Barry
-607
-0.87
+Charlevoix
+674
+1.17
 
 Cheboygan
-581
-1.80
+674
+2.08
+
+Otsego
+647
+1.16
+
+Barry
+642
+0.91
 
 Kalkaska
-559
-2.19
+635
+2.43
 
-Leelanau
-545
-1.56
-
-Mason
-545
-1.02
+Tuscola
+626
+0.97
 
 Newaygo
-539
-0.86
+582
+0.93
+
+Mason
+543
+1.01
+
+Leelanau
+540
+1.38
 
 Huron
-523
+533
 0.89
 
 Branch
-487
-0.61
+517
+0.63
 
 Antrim
-483
-1.79
-
-Alpena
-479
-0.75
+509
+1.90
 
 Benzie
-472
-1.84
+504
+1.89
 
-Gladwin
-453
-1.88
+Alpena
+464
+0.72
 
 Sanilac
-442
-0.81
-
-Clare
-391
-1.03
+438
+0.80
 
 Hillsdale
-385
-0.57
+418
+0.63
+
+Gladwin
+417
+1.75
+
+Clare
+416
+1.02
 
 Cass
-361
-0.73
+384
+0.76
 
 Iosco
-322
-0.79
-
-Manistee
-315
+330
 0.82
 
 Oceana
-298
-0.88
-
-Ogemaw
-289
-0.92
-
-Wexford
-289
-0.42
-
-Gratiot
-288
-0.44
+324
+0.94
 
 Roscommon
-285
-0.84
+316
+0.98
+
+Wexford
+288
+0.42
+
+Ogemaw
+287
+0.89
+
+Gratiot
+283
+0.42
+
+Manistee
+283
+0.72
 
 Mackinac
-232
-0.91
-
-Iron
-217
-1.21
-
-Gogebic
-201
-0.76
+251
+0.99
 
 Missaukee
-198
-0.90
+204
+0.94
+
+Iron
+187
+1.05
 
 Mecosta
-168
-0.25
-
-Menominee
-155
-0.41
+176
+0.27
 
 Schoolcraft
-151
-1.06
-
-Alger
-108
-0.78
+146
+1.00
 
 Arenac
-108
-0.50
+116
+0.56
 
 Presque Isle
 105
 0.77
 
-Baraga
-79
-0.51
-
 Lake
-78
-0.86
-
-Oscoda
-75
-1.05
-
-Crawford
-70
-0.32
+79
+0.88
 
 Ontonagon
-67
-0.95
+64
+0.90
 
 Alcona
-47
-0.60
-
-Luce
-32
-0.34
-
-Keweenaw
-19
-0.76
-
-Ionia
 Not disclosed
 —
 
-Lenawee
+Alger
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Crawford
+Not disclosed
+—
+
+Delta
+Not disclosed
+—
+
+Gogebic
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Menominee
+Not disclosed
+—
+
+Midland
 Not disclosed
 —
 
@@ -3807,1231 +3803,559 @@ Montmorency
 Not disclosed
 —
 
-Manufacturing — private employment by county &middot; BLS QCEW, 2024 annual averages
+Oscoda
+Not disclosed
+—
+
+Manufacturing — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Wayne
-89,659
-1.50
+85,201
+1.46
 
 Oakland
-68,661
-1.15
-
-Macomb
-63,562
-2.30
+65,725
+1.13
 
 Kent
-62,796
+62,100
 1.84
+
+Macomb
+60,825
+2.27
 
 Ottawa
-40,464
-3.73
+37,739
+3.61
 
 Kalamazoo
-21,198
-2.14
+20,822
+2.11
 
 Allegan
-13,777
-4.05
-
-Genesee
-13,485
-1.23
+15,284
+4.33
 
 Muskegon
-13,093
-2.51
+13,579
+2.71
+
+Genesee
+13,272
+1.22
 
 Washtenaw
-11,602
-0.65
-
-Berrien
-11,601
-2.33
+11,228
+0.63
 
 Saginaw
-10,729
-1.64
+10,964
+1.69
 
-Ingham
-10,106
-0.79
+Berrien
+10,798
+2.20
 
 Calhoun
-10,071
-2.25
+10,032
+2.26
+
+Ingham
+9,439
+0.75
 
 Livingston
-9,756
-1.84
+9,358
+1.79
 
 Jackson
-9,250
+8,984
 2.01
 
 Eaton
-7,983
-2.18
-
-St. Joseph
-7,477
-4.31
-
-St. Clair
-6,768
-1.95
-
-Monroe
-5,814
-1.72
-
-Lapeer
-4,738
-2.62
-
-Midland
-4,610
-1.47
-
-Grand Traverse
-4,503
-1.05
-
-Bay
-4,440
-1.58
-
-Lenawee
-4,313
-2.04
-
-Branch
-3,704
-2.96
-
-Ionia
-3,673
-2.41
-
-Barry
-3,667
-3.37
-
-Hillsdale
-3,601
-3.41
-
-Van Buren
-3,524
-1.99
-
-Wexford
-3,171
-2.93
-
-Montcalm
-3,141
-2.35
-
-Dickinson
-2,859
-2.52
-
-Charlevoix
-2,747
-3.04
-
-Sanilac
-2,720
-3.17
-
-Isabella
-2,589
-1.18
-
-Osceola
-2,518
-3.83
-
-Newaygo
-2,211
+8,337
 2.26
 
-Menominee
-2,163
-3.68
+St. Joseph
+7,181
+4.27
 
-Cass
-2,023
-2.63
-
-Delta
-1,988
-1.75
-
-Mason
-1,973
-2.36
-
-Alpena
-1,896
-1.89
-
-Shiawassee
-1,771
-1.39
-
-Gratiot
-1,751
-1.72
-
-Clinton
-1,671
-1.09
-
-Huron
-1,669
-1.81
-
-Emmet
-1,564
-1.07
-
-Tuscola
-1,421
-1.43
-
-Oceana
-1,401
-2.64
-
-Mecosta
-1,226
-1.17
-
-Marquette
-1,185
-0.55
-
-Manistee
-1,058
+St. Clair
+5,961
 1.77
 
-Iosco
-1,006
-1.59
+Monroe
+5,648
+1.72
 
-Otsego
-998
-1.13
+Grand Traverse
+4,658
+1.10
 
-Gladwin
-940
+Lapeer
+4,474
 2.49
 
-Houghton
-939
-0.94
-
-Clare
-924
-1.55
-
-Arenac
-879
-2.62
-
-Crawford
-719
-2.13
-
-Antrim
-685
-1.63
-
-Missaukee
-680
-1.96
-
-Gogebic
-611
-1.47
-
-Chippewa
-589
-0.56
-
-Leelanau
-556
-1.02
-
-Baraga
-520
-2.13
-
-Montmorency
-441
-2.62
-
-Alger
-397
-1.82
-
-Roscommon
-355
-0.67
-
-Ogemaw
-341
-0.69
-
-Benzie
-301
-0.75
-
-Iron
-287
-1.02
-
-Kalkaska
-287
-0.72
-
-Schoolcraft
-196
-0.88
-
-Alcona
-181
-1.47
-
-Oscoda
-148
-1.32
-
-Cheboygan
-143
-0.28
-
-Presque Isle
-122
-0.57
-
-Mackinac
-108
-0.27
-
-Lake
-63
-0.45
-
-Luce
-60
-0.41
-
-Keweenaw
-55
-1.40
-
-Ontonagon
-20
-0.18
-
-Wholesale trade — private employment by county &middot; BLS QCEW, 2024 annual averages
-
-County
-Employment (private)
-Location quotient
-
-Oakland
-38,222
-1.34
-
-Kent
-27,544
-1.68
-
-Macomb
-10,075
-0.76
-
-Genesee
-6,480
-1.23
-
-Washtenaw
-6,324
-0.74
-
-Ottawa
-5,141
-0.99
-
-Kalamazoo
-5,036
-1.06
-
-Ingham
-2,773
-0.45
-
-Livingston
-2,689
-1.06
-
-Saginaw
-2,386
-0.76
-
-Allegan
-2,079
-1.28
-
-Berrien
-1,822
-0.76
-
-Muskegon
-1,497
-0.60
-
-Grand Traverse
-1,482
-0.72
-
 Bay
-1,340
-1.00
-
-Jackson
-1,241
-0.56
-
-Clinton
-931
-1.27
-
-Branch
-727
-1.21
-
-Gratiot
-606
-1.24
+4,397
+1.59
 
 Lenawee
-527
-0.52
+4,321
+2.07
 
-Van Buren
-510
-0.60
+Midland
+4,310
+1.39
 
-Lapeer
-481
-0.56
-
-Tuscola
-428
-0.90
-
-Menominee
-384
-1.36
-
-St. Joseph
-380
-0.46
+Branch
+3,763
+3.02
 
 Ionia
-375
-0.51
-
-Delta
-366
-0.67
-
-Dickinson
-349
-0.64
-
-Otsego
-341
-0.81
-
-Cass
-324
-0.88
+3,642
+2.39
 
 Barry
-310
-0.59
-
-Montcalm
-295
-0.46
-
-Leelanau
-291
-1.11
-
-Manistee
-263
-0.92
-
-Oceana
-260
-1.02
-
-Clare
-240
-0.84
+3,551
+3.31
 
 Hillsdale
-229
-0.45
-
-Kalkaska
-219
-1.14
-
-Osceola
-176
-0.56
-
-Cheboygan
-163
-0.67
-
-Crawford
-124
-0.77
-
-Mason
-114
-0.28
-
-Charlevoix
-109
-0.25
-
-Arenac
-104
-0.65
-
-Antrim
-86
-0.43
-
-Baraga
-52
-0.44
-
-Iron
-29
-0.22
-
-Luce
-25
-0.36
-
-Alcona
-11
-0.19
-
-Alger
-Not disclosed
-—
-
-Alpena
-Not disclosed
-—
-
-Benzie
-Not disclosed
-—
-
-Calhoun
-Not disclosed
-—
-
-Chippewa
-Not disclosed
-—
-
-Eaton
-Not disclosed
-—
-
-Emmet
-Not disclosed
-—
-
-Gladwin
-Not disclosed
-—
-
-Gogebic
-Not disclosed
-—
-
-Houghton
-Not disclosed
-—
-
-Huron
-Not disclosed
-—
-
-Iosco
-Not disclosed
-—
-
-Isabella
-Not disclosed
-—
-
-Keweenaw
-Not disclosed
-—
-
-Lake
-Not disclosed
-—
-
-Mackinac
-Not disclosed
-—
-
-Marquette
-Not disclosed
-—
-
-Mecosta
-Not disclosed
-—
-
-Midland
-Not disclosed
-—
-
-Missaukee
-Not disclosed
-—
-
-Monroe
-Not disclosed
-—
-
-Montmorency
-Not disclosed
-—
-
-Newaygo
-Not disclosed
-—
-
-Ogemaw
-Not disclosed
-—
-
-Ontonagon
-Not disclosed
-—
-
-Oscoda
-Not disclosed
-—
-
-Presque Isle
-Not disclosed
-—
-
-Roscommon
-Not disclosed
-—
-
-Sanilac
-Not disclosed
-—
-
-Schoolcraft
-Not disclosed
-—
-
-Shiawassee
-Not disclosed
-—
-
-St. Clair
-Not disclosed
-—
-
-Wayne
-Not disclosed
-—
-
-Wexford
-Not disclosed
-—
-
-Retail trade — private employment by county &middot; BLS QCEW, 2024 annual averages
-
-County
-Employment (private)
-Location quotient
-
-Oakland
-71,533
-0.99
-
-Wayne
-64,087
-0.88
-
-Macomb
-40,456
-1.20
-
-Kent
-34,924
-0.84
-
-Genesee
-17,957
-1.34
-
-Washtenaw
-15,024
-0.69
-
-Kalamazoo
-12,358
-1.03
-
-Ingham
-12,012
-0.77
-
-Muskegon
-11,104
-1.75
-
-Saginaw
-10,842
-1.37
-
-Ottawa
-10,500
-0.80
-
-Livingston
-8,298
-1.29
-
-Grand Traverse
-7,218
-1.39
-
-Berrien
-7,096
-1.17
-
-Jackson
-6,349
-1.14
-
-Calhoun
-5,710
-1.05
-
-Eaton
-5,476
-1.23
-
-Monroe
-5,380
-1.31
-
-St. Clair
-5,342
-1.27
-
-Bay
-4,591
-1.35
-
-Marquette
-3,613
-1.37
-
-Lenawee
-3,612
-1.40
-
-Midland
-3,254
-0.85
-
-Allegan
-3,192
-0.77
-
-Isabella
-3,119
-1.17
-
-Lapeer
-2,958
-1.35
-
-Emmet
-2,948
-1.66
-
-Clinton
-2,617
-1.41
+3,510
+3.49
 
 Van Buren
-2,574
-1.19
-
-St. Joseph
-2,453
-1.16
+3,500
+2.01
 
 Montcalm
-2,399
-1.48
-
-Mecosta
-2,362
-1.86
-
-Otsego
-2,260
-2.11
-
-Shiawassee
-2,209
-1.42
-
-Delta
-2,044
-1.48
-
-Dickinson
-2,030
-1.47
-
-Hillsdale
-1,853
-1.44
+3,101
+2.34
 
 Wexford
-1,831
-1.39
+2,981
+2.82
 
-Newaygo
-1,775
-1.49
-
-Ionia
-1,747
-0.94
-
-Branch
-1,739
-1.14
-
-Alpena
-1,601
-1.31
-
-Houghton
-1,563
-1.29
-
-Chippewa
-1,554
-1.22
-
-Ogemaw
-1,515
+Dickinson
+2,786
 2.52
 
-Mason
-1,491
-1.47
-
-Tuscola
-1,398
-1.16
+Charlevoix
+2,660
+3.03
 
 Sanilac
-1,299
-1.25
+2,628
+3.14
+
+Isabella
+2,465
+1.14
+
+Menominee
+2,134
+3.71
+
+Osceola
+2,128
+3.42
+
+Cass
+2,031
+2.62
+
+Newaygo
+1,962
+2.06
+
+Delta
+1,930
+1.72
+
+Shiawassee
+1,899
+1.52
+
+Mason
+1,877
+2.29
+
+Alpena
+1,811
+1.85
 
 Gratiot
-1,295
-1.05
-
-Cheboygan
-1,245
-2.03
-
-Barry
-1,223
-0.93
+1,793
+1.74
 
 Huron
-1,202
-1.07
+1,583
+1.73
 
-Roscommon
-1,171
-1.82
+Emmet
+1,576
+1.09
 
-Manistee
-1,097
-1.51
+Clinton
+1,572
+1.04
 
 Oceana
-1,096
-1.70
+1,455
+2.77
 
-Iosco
-1,057
-1.37
+Tuscola
+1,310
+1.33
+
+Manistee
+1,231
+2.05
+
+Marquette
+1,225
+0.56
+
+Otsego
+974
+1.14
 
 Clare
+961
+1.55
+
+Houghton
+938
+0.93
+
+Gladwin
+923
+2.54
+
+Iosco
+851
+1.38
+
+Mecosta
+801
+0.81
+
+Arenac
+769
+2.42
+
+Antrim
+676
+1.65
+
+Missaukee
+650
+1.96
+
+Crawford
+626
+1.91
+
+Chippewa
+593
+0.57
+
+Gogebic
+580
+1.48
+
+Leelanau
+541
+0.91
+
+Baraga
+499
+2.08
+
+Montmorency
+433
+2.61
+
+Alger
+385
+1.78
+
+Ogemaw
+330
+0.67
+
+Roscommon
+277
+0.56
+
+Iron
+276
+1.01
+
+Benzie
+275
+0.68
+
+Kalkaska
+271
+0.68
+
+Cheboygan
+258
+0.52
+
+Schoolcraft
+193
+0.86
+
+Alcona
+175
+1.41
+
+Oscoda
+131
+1.19
+
+Presque Isle
+114
+0.55
+
+Lake
+75
+0.55
+
+Keweenaw
+Not disclosed
+—
+
+Luce
+Not disclosed
+—
+
+Mackinac
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Wholesale trade — private employment by county &middot; BLS QCEW, 2025 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Oakland
+36,823
+1.32
+
+Kent
+27,438
+1.70
+
+Wayne
+24,711
+0.88
+
+Macomb
+10,278
+0.80
+
+Genesee
+6,684
+1.28
+
+Washtenaw
+6,462
+0.76
+
+Kalamazoo
+5,077
+1.07
+
+Ottawa
+5,075
+1.01
+
+Livingston
+2,738
+1.09
+
+Ingham
+2,647
+0.44
+
+Saginaw
+2,501
+0.80
+
+Allegan
+2,111
+1.25
+
+Muskegon
+1,477
+0.61
+
+Grand Traverse
+1,411
+0.70
+
+Bay
+1,335
+1.01
+
+Jackson
+1,182
+0.55
+
+Clinton
 938
 1.29
 
-Charlevoix
-895
-0.82
-
-Cass
-793
-0.85
-
-Gogebic
-755
-1.50
-
-Antrim
-711
-1.39
-
-Arenac
-682
-1.67
-
-Iron
-626
-1.84
-
-Missaukee
-610
-1.45
-
-Leelanau
-609
-0.92
-
-Benzie
-600
-1.23
-
-Gladwin
-555
-1.21
-
-Crawford
-546
-1.33
-
-Menominee
-531
-0.74
-
-Kalkaska
-472
-0.97
-
-Mackinac
-470
-0.97
-
-Osceola
-407
-0.51
-
-Ontonagon
-392
-2.93
-
-Presque Isle
-376
-1.45
-
-Schoolcraft
-318
-1.18
-
-Alcona
-296
-1.98
-
-Luce
-263
-1.47
-
-Montmorency
-229
-1.12
-
-Oscoda
-226
-1.66
-
-Alger
-201
-0.76
-
-Lake
-193
-1.12
-
-Baraga
-153
-0.52
-
-Keweenaw
-37
-0.78
-
-Transportation and warehousing — private employment by county &middot; BLS QCEW, 2024 annual averages
-
-County
-Employment (private)
-Location quotient
-
-Wayne
-58,035
-1.89
-
-Oakland
-15,153
-0.49
-
-Macomb
-13,767
-0.97
-
-Kent
-12,941
-0.74
-
-Washtenaw
-4,348
-0.47
-
-Ingham
-4,315
-0.66
-
-Eaton
-3,996
-2.12
-
-Ottawa
-3,001
-0.54
-
-Monroe
-2,107
-1.21
-
-Calhoun
-1,940
-0.84
+Gratiot
+897
+1.82
 
 Branch
-1,432
-2.22
-
-Iosco
-1,422
-4.35
-
-Allegan
-1,156
-0.66
-
-Grand Traverse
-993
-0.45
-
-Isabella
-936
-0.83
-
-St. Clair
-916
-0.51
-
-Muskegon
-834
-0.31
-
-Clinton
-791
-1.00
-
-Marquette
-696
-0.62
-
-Shiawassee
-650
-0.99
-
-Wexford
-552
-0.99
-
-Delta
-473
-0.81
-
-Midland
-438
-0.27
-
-Huron
-410
-0.86
-
-Dickinson
-371
-0.64
-
-Montcalm
-351
-0.51
-
-Otsego
-342
-0.75
-
-Lapeer
-338
-0.36
-
-Ogemaw
-307
+721
 1.21
 
-Mason
-287
-0.67
+Sanilac
+583
+1.45
 
-Chippewa
-275
-0.51
+Van Buren
+477
+0.57
 
-Mackinac
-259
-1.26
+Lapeer
+462
+0.54
 
-Mecosta
-225
-0.42
-
-Missaukee
-196
-1.10
-
-Cheboygan
-187
-0.72
-
-Newaygo
-173
-0.34
-
-Gogebic
-97
-0.45
-
-Manistee
-77
-0.25
-
-Alger
-74
-0.66
-
-Charlevoix
-71
-0.15
-
-Roscommon
-66
-0.24
-
-Iron
-52
-0.36
-
-Schoolcraft
-31
-0.27
-
-Leelanau
-30
-0.11
-
-Montmorency
-22
-0.25
-
-Alcona
-Not disclosed
-—
+Tuscola
+409
+0.87
 
 Alpena
-Not disclosed
-—
+400
+0.85
+
+Midland
+383
+0.26
+
+St. Joseph
+375
+0.47
+
+Menominee
+356
+1.29
+
+Dickinson
+351
+0.66
+
+Delta
+348
+0.65
+
+Otsego
+347
+0.85
+
+Ionia
+342
+0.47
+
+Barry
+309
+0.60
+
+Leelanau
+304
+1.07
+
+Cass
+298
+0.80
+
+Montcalm
+294
+0.46
+
+Manistee
+275
+0.95
+
+Oceana
+259
+1.03
+
+Kalkaska
+219
+1.15
+
+Hillsdale
+206
+0.43
+
+Osceola
+168
+0.56
+
+Cheboygan
+157
+0.66
+
+Crawford
+123
+0.78
+
+Mason
+104
+0.26
+
+Charlevoix
+93
+0.22
 
 Antrim
+82
+0.42
+
+Roscommon
+45
+0.19
+
+Baraga
+42
+0.37
+
+Iron
+28
+0.21
+
+Luce
+27
+0.36
+
+Alcona
+10
+0.17
+
+Alger
 Not disclosed
 —
 
 Arenac
-Not disclosed
-—
-
-Baraga
-Not disclosed
-—
-
-Barry
-Not disclosed
-—
-
-Bay
 Not disclosed
 —
 
@@ -5043,7 +4367,11 @@ Berrien
 Not disclosed
 —
 
-Cass
+Calhoun
+Not disclosed
+—
+
+Chippewa
 Not disclosed
 —
 
@@ -5051,6 +4379,662 @@ Clare
 Not disclosed
 —
 
+Eaton
+Not disclosed
+—
+
+Emmet
+Not disclosed
+—
+
+Gladwin
+Not disclosed
+—
+
+Gogebic
+Not disclosed
+—
+
+Houghton
+Not disclosed
+—
+
+Huron
+Not disclosed
+—
+
+Iosco
+Not disclosed
+—
+
+Isabella
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Lake
+Not disclosed
+—
+
+Lenawee
+Not disclosed
+—
+
+Mackinac
+Not disclosed
+—
+
+Marquette
+Not disclosed
+—
+
+Mecosta
+Not disclosed
+—
+
+Missaukee
+Not disclosed
+—
+
+Monroe
+Not disclosed
+—
+
+Montmorency
+Not disclosed
+—
+
+Newaygo
+Not disclosed
+—
+
+Ogemaw
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Oscoda
+Not disclosed
+—
+
+Presque Isle
+Not disclosed
+—
+
+Schoolcraft
+Not disclosed
+—
+
+Shiawassee
+Not disclosed
+—
+
+St. Clair
+Not disclosed
+—
+
+Wexford
+Not disclosed
+—
+
+Retail trade — private employment by county &middot; BLS QCEW, 2025 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Oakland
+69,758
+0.98
+
+Wayne
+64,685
+0.91
+
+Macomb
+40,380
+1.23
+
+Kent
+36,743
+0.89
+
+Genesee
+18,342
+1.38
+
+Washtenaw
+16,818
+0.78
+
+Kalamazoo
+12,258
+1.02
+
+Ingham
+11,838
+0.77
+
+Saginaw
+10,844
+1.37
+
+Ottawa
+10,692
+0.84
+
+Muskegon
+8,500
+1.39
+
+Livingston
+8,167
+1.28
+
+Berrien
+7,330
+1.22
+
+Grand Traverse
+7,169
+1.39
+
+Jackson
+6,129
+1.12
+
+Eaton
+5,755
+1.28
+
+Calhoun
+5,685
+1.05
+
+Monroe
+5,572
+1.39
+
+St. Clair
+5,266
+1.28
+
+Bay
+4,574
+1.36
+
+Lenawee
+3,673
+1.44
+
+Marquette
+3,579
+1.35
+
+Midland
+3,256
+0.86
+
+Allegan
+3,182
+0.74
+
+Isabella
+3,047
+1.15
+
+Lapeer
+2,959
+1.35
+
+Emmet
+2,928
+1.66
+
+Clinton
+2,576
+1.39
+
+Van Buren
+2,569
+1.20
+
+St. Joseph
+2,446
+1.19
+
+Montcalm
+2,394
+1.48
+
+Mecosta
+2,277
+1.88
+
+Shiawassee
+2,225
+1.45
+
+Otsego
+2,218
+2.13
+
+Dickinson
+1,961
+1.45
+
+Delta
+1,902
+1.39
+
+Wexford
+1,850
+1.43
+
+Ionia
+1,763
+0.95
+
+Newaygo
+1,740
+1.49
+
+Branch
+1,703
+1.12
+
+Alpena
+1,652
+1.38
+
+Houghton
+1,628
+1.32
+
+Hillsdale
+1,550
+1.26
+
+Ogemaw
+1,516
+2.52
+
+Chippewa
+1,514
+1.20
+
+Mason
+1,501
+1.49
+
+Tuscola
+1,367
+1.14
+
+Gratiot
+1,331
+1.06
+
+Sanilac
+1,316
+1.29
+
+Barry
+1,251
+0.95
+
+Cheboygan
+1,214
+2.01
+
+Huron
+1,212
+1.08
+
+Roscommon
+1,158
+1.92
+
+Oceana
+1,127
+1.75
+
+Iosco
+1,081
+1.43
+
+Manistee
+1,061
+1.44
+
+Clare
+968
+1.28
+
+Charlevoix
+931
+0.87
+
+Cass
+781
+0.82
+
+Gogebic
+767
+1.60
+
+Antrim
+709
+1.42
+
+Arenac
+651
+1.67
+
+Iron
+645
+1.94
+
+Benzie
+636
+1.28
+
+Crawford
+596
+1.48
+
+Missaukee
+586
+1.44
+
+Leelanau
+583
+0.80
+
+Gladwin
+563
+1.27
+
+Menominee
+495
+0.70
+
+Mackinac
+476
+1.00
+
+Kalkaska
+460
+0.95
+
+Osceola
+423
+0.56
+
+Ontonagon
+380
+2.87
+
+Presque Isle
+371
+1.47
+
+Schoolcraft
+314
+1.15
+
+Alcona
+294
+1.94
+
+Luce
+268
+1.40
+
+Oscoda
+223
+1.66
+
+Montmorency
+220
+1.08
+
+Alger
+211
+0.80
+
+Lake
+208
+1.24
+
+Baraga
+163
+0.56
+
+Keweenaw
+36
+0.73
+
+Transportation and warehousing — private employment by county &middot; BLS QCEW, 2025 annual averages
+
+County
+Employment (private)
+Location quotient
+
+Wayne
+55,199
+1.80
+
+Oakland
+15,402
+0.50
+
+Kent
+13,563
+0.76
+
+Macomb
+12,510
+0.89
+
+Ingham
+5,059
+0.77
+
+Eaton
+4,858
+2.51
+
+Ottawa
+2,780
+0.51
+
+Monroe
+1,892
+1.10
+
+Calhoun
+1,879
+0.80
+
+Iosco
+1,431
+4.42
+
+Branch
+1,404
+2.15
+
+Allegan
+1,112
+0.60
+
+Grand Traverse
+992
+0.45
+
+St. Clair
+948
+0.53
+
+Clinton
+848
+1.06
+
+Marquette
+687
+0.60
+
+Isabella
+552
+0.48
+
+Wexford
+545
+0.98
+
+Delta
+486
+0.82
+
+Midland
+467
+0.29
+
+Huron
+415
+0.86
+
+Clare
+390
+1.20
+
+Chippewa
+371
+0.68
+
+Montcalm
+338
+0.49
+
+Dickinson
+336
+0.58
+
+Otsego
+325
+0.72
+
+Ogemaw
+277
+1.07
+
+Mackinac
+262
+1.28
+
+Mason
+242
+0.56
+
+Missaukee
+211
+1.21
+
+Newaygo
+183
+0.37
+
+Cheboygan
+169
+0.65
+
+Arenac
+119
+0.71
+
+Charlevoix
+79
+0.17
+
+Manistee
+68
+0.21
+
+Roscommon
+64
+0.25
+
+Iron
+52
+0.36
+
+Schoolcraft
+31
+0.26
+
+Leelanau
+27
+0.09
+
+Montmorency
+24
+0.27
+
+Presque Isle
+20
+0.18
+
+Ontonagon
+7
+0.12
+
+Alcona
+Not disclosed
+—
+
+Alger
+Not disclosed
+—
+
+Alpena
+Not disclosed
+—
+
+Antrim
+Not disclosed
+—
+
+Baraga
+Not disclosed
+—
+
+Barry
+Not disclosed
+—
+
+Bay
+Not disclosed
+—
+
+Benzie
+Not disclosed
+—
+
+Berrien
+Not disclosed
+—
+
+Cass
+Not disclosed
+—
+
 Crawford
 Not disclosed
 —
@@ -5064,6 +5048,10 @@ Not disclosed
 —
 
 Gladwin
+Not disclosed
+—
+
+Gogebic
 Not disclosed
 —
 
@@ -5103,6 +5091,10 @@ Lake
 Not disclosed
 —
 
+Lapeer
+Not disclosed
+—
+
 Lenawee
 Not disclosed
 —
@@ -5115,15 +5107,19 @@ Luce
 Not disclosed
 —
 
+Mecosta
+Not disclosed
+—
+
 Menominee
 Not disclosed
 —
 
-Oceana
+Muskegon
 Not disclosed
 —
 
-Ontonagon
+Oceana
 Not disclosed
 —
 
@@ -5135,15 +5131,15 @@ Oscoda
 Not disclosed
 —
 
-Presque Isle
-Not disclosed
-—
-
 Saginaw
 Not disclosed
 —
 
 Sanilac
+Not disclosed
+—
+
+Shiawassee
 Not disclosed
 —
 
@@ -5159,291 +5155,255 @@ Van Buren
 Not disclosed
 —
 
-Information — private employment by county &middot; BLS QCEW, 2024 annual averages
+Washtenaw
+Not disclosed
+—
+
+Information — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Oakland
-13,074
-0.96
+12,510
+0.95
 
 Wayne
-5,836
-0.43
+5,462
+0.41
 
 Kent
-4,273
+4,185
 0.55
 
 Washtenaw
-3,909
+3,869
 0.96
 
 Ingham
-2,234
-0.77
+2,043
+0.72
 
 Macomb
-1,887
+1,822
 0.30
 
 Genesee
-850
-0.34
+872
+0.35
 
 Kalamazoo
-695
-0.31
-
-Saginaw
-687
-0.46
+632
+0.28
 
 Ottawa
-667
-0.27
+603
+0.25
 
 Grand Traverse
-662
-0.68
+596
+0.62
 
-Eaton
-506
-0.61
+Saginaw
+513
+0.35
 
 Livingston
-415
-0.34
+447
+0.38
 
-Berrien
-386
-0.34
+Eaton
+412
+0.49
 
 Bay
-297
-0.46
+411
+0.66
+
+Berrien
+395
+0.36
 
 Lenawee
-293
-0.61
+268
+0.57
 
 Muskegon
-264
-0.22
-
-Marquette
-249
-0.50
-
-Delta
-242
-0.93
+266
+0.23
 
 Monroe
 213
-0.28
-
-Midland
-207
 0.29
 
-Huron
-197
-0.94
+Montcalm
+200
+0.67
 
 St. Clair
-194
+185
 0.24
 
 Wexford
-194
-0.79
+182
+0.76
 
-Calhoun
+Huron
 181
-0.18
-
-Isabella
-179
-0.36
+0.87
 
 Lapeer
-179
+177
 0.43
 
 Allegan
-178
-0.23
+173
+0.22
+
+Calhoun
+169
+0.17
 
 Shiawassee
-174
-0.60
+167
+0.59
 
 Emmet
-169
-0.51
-
-Mason
-169
-0.89
+160
+0.49
 
 Jackson
-148
-0.14
+159
+0.16
+
+Houghton
+153
+0.67
 
 Alpena
 141
-0.62
-
-Montcalm
-132
-0.43
-
-Houghton
-130
-0.57
-
-Barry
-119
-0.48
+0.64
 
 Sanilac
-114
-0.58
-
-Van Buren
-109
-0.27
-
-Tuscola
-104
-0.46
+136
+0.72
 
 Mecosta
-102
-0.43
+111
+0.49
+
+Tuscola
+108
+0.49
 
 Antrim
-97
-1.01
+99
+1.07
 
-Hillsdale
-91
-0.38
-
-Branch
-84
-0.29
+Mason
+99
+0.53
 
 Clinton
-83
-0.24
+89
+0.26
 
-Dickinson
-72
-0.28
+Branch
+86
+0.31
+
+Barry
+84
+0.35
 
 Charlevoix
-71
-0.34
+83
+0.42
+
+Dickinson
+74
+0.30
+
+Hillsdale
+74
+0.32
 
 Iosco
-55
-0.38
-
-Ogemaw
-48
-0.43
+54
+0.39
 
 Otsego
 48
-0.24
-
-Chippewa
-47
-0.20
+0.25
 
 Gratiot
-46
-0.20
-
-Manistee
-41
-0.30
+44
+0.19
 
 Leelanau
-40
-0.32
-
-St. Joseph
-40
-0.10
-
-Newaygo
-36
-0.16
-
-Gogebic
-31
+44
 0.33
 
-Kalkaska
-30
-0.33
+Chippewa
+42
+0.18
 
-Presque Isle
-26
-0.53
-
-Ionia
-23
-0.07
-
-Crawford
-22
+Manistee
+39
 0.29
 
-Benzie
-20
-0.22
+Newaygo
+34
+0.16
 
-Gladwin
-19
+Presque Isle
+29
+0.62
+
+Benzie
+25
+0.27
+
+Kalkaska
+20
 0.22
 
 Roscommon
 18
-0.15
+0.16
+
+Gladwin
+17
+0.21
 
 Cass
 16
 0.09
 
-Alcona
-14
-0.50
-
 Iron
 14
-0.22
-
-Cheboygan
-10
-0.09
+0.23
 
 Clare
-9
-0.07
-
-Missaukee
-7
+12
 0.09
 
-Oscoda
-6
-0.23
+Ionia
+12
+0.03
+
+Cheboygan
+9
+0.08
+
+Oceana
+9
+0.08
+
+Alcona
+Not disclosed
+—
 
 Alger
 Not disclosed
@@ -5454,6 +5414,22 @@ Not disclosed
 —
 
 Baraga
+Not disclosed
+—
+
+Crawford
+Not disclosed
+—
+
+Delta
+Not disclosed
+—
+
+Gogebic
+Not disclosed
+—
+
+Isabella
 Not disclosed
 —
 
@@ -5473,7 +5449,19 @@ Mackinac
 Not disclosed
 —
 
+Marquette
+Not disclosed
+—
+
 Menominee
+Not disclosed
+—
+
+Midland
+Not disclosed
+—
+
+Missaukee
 Not disclosed
 —
 
@@ -5481,7 +5469,7 @@ Montmorency
 Not disclosed
 —
 
-Oceana
+Ogemaw
 Not disclosed
 —
 
@@ -5493,313 +5481,333 @@ Osceola
 Not disclosed
 —
 
+Oscoda
+Not disclosed
+—
+
 Schoolcraft
 Not disclosed
 —
 
-Finance and insurance — private employment by county &middot; BLS QCEW, 2024 annual averages
+St. Joseph
+Not disclosed
+—
+
+Van Buren
+Not disclosed
+—
+
+Finance and insurance — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Oakland
-42,518
-1.45
+44,955
+1.54
 
 Wayne
-27,371
-0.93
+26,321
+0.90
 
 Kent
-15,039
+15,037
 0.89
 
 Ingham
-6,758
-1.07
+6,861
+1.09
 
 Macomb
-5,596
-0.41
+5,627
+0.42
 
 Eaton
-4,836
-2.68
+4,899
+2.65
 
 Genesee
-3,920
-0.72
+3,897
+0.71
 
 Washtenaw
-3,448
-0.39
+3,684
+0.41
 
 Kalamazoo
-3,326
+3,384
 0.68
 
 Saginaw
-2,868
-0.89
+2,920
+0.90
 
 Ottawa
-2,381
-0.44
+2,389
+0.46
 
 Grand Traverse
-2,283
-1.08
+2,338
+1.10
 
 Berrien
-2,013
-0.82
-
-Jackson
-1,579
-0.70
+2,084
+0.85
 
 Livingston
-1,558
-0.60
+1,607
+0.61
+
+Jackson
+1,550
+0.69
 
 Lenawee
-1,035
-0.99
-
-Muskegon
-955
-0.37
+1,053
+1.00
 
 Calhoun
-943
-0.43
+1,002
+0.45
+
+Muskegon
+995
+0.40
 
 St. Clair
-861
-0.50
-
-Isabella
-705
-0.65
+898
+0.53
 
 Monroe
-684
-0.41
+708
+0.43
 
 Marquette
-673
-0.63
+703
+0.64
 
-Ionia
-646
-0.86
+Isabella
+694
+0.64
 
 Midland
-641
-0.41
+677
+0.44
 
 Barry
-617
-1.15
-
-Newaygo
-596
+665
 1.23
 
-Bay
-587
-0.42
+Ionia
+642
+0.84
 
-Clinton
-587
-0.78
+Newaygo
+599
+1.25
+
+Bay
+598
+0.43
+
+Lapeer
+521
+0.58
 
 Branch
-509
+512
 0.82
 
 Otsego
-482
-1.11
-
-Lapeer
-449
-0.50
-
-St. Joseph
-445
-0.52
-
-Huron
-442
-0.97
+504
+1.18
 
 Alpena
-429
-0.87
+446
+0.91
+
+Huron
+444
+0.96
 
 Delta
-423
-0.75
+443
+0.79
 
-Allegan
-384
-0.23
+Clinton
+420
+0.55
+
+St. Joseph
+417
+0.49
 
 Houghton
-375
-0.76
+376
+0.74
+
+Allegan
+369
+0.21
 
 Gratiot
-328
-0.65
+325
+0.63
 
 Sanilac
-321
-0.76
+324
+0.77
 
 Emmet
-317
+321
 0.44
 
 Montcalm
-307
-0.47
+302
+0.45
 
 Dickinson
-259
-0.46
-
-Hillsdale
-258
-0.49
-
-Chippewa
-253
-0.49
-
-Shiawassee
-253
-0.40
-
-Tuscola
-246
+277
 0.50
 
-Mason
-240
-0.58
+Hillsdale
+254
+0.50
 
-Cass
-228
+Chippewa
+252
+0.49
+
+Mason
+247
 0.60
 
+Tuscola
+245
+0.50
+
+Cass
+242
+0.62
+
 Van Buren
+236
+0.27
+
+Shiawassee
 221
-0.25
+0.35
 
 Benzie
-199
-1.00
-
-Cheboygan
-196
-0.79
-
-Iosco
-175
-0.56
+210
+1.03
 
 Wexford
-150
-0.28
+203
+0.38
 
-Charlevoix
-145
-0.33
+Cheboygan
+202
+0.81
+
+Iosco
+185
+0.60
 
 Mecosta
-136
-0.26
+138
+0.28
 
 Manistee
-128
+130
 0.43
 
 Menominee
-119
-0.41
+123
+0.43
+
+Charlevoix
+117
+0.27
 
 Iron
-117
-0.85
+115
+0.84
 
 Ogemaw
-113
-0.46
-
-Roscommon
-104
-0.40
-
-Gogebic
-103
-0.50
+111
+0.45
 
 Leelanau
-100
-0.37
+102
+0.34
+
+Roscommon
+102
+0.41
 
 Presque Isle
-98
-0.93
+101
+0.97
 
-Osceola
-95
-0.29
-
-Gladwin
-94
+Gogebic
+99
 0.50
 
-Antrim
-92
-0.44
-
 Oceana
+99
+0.37
+
+Antrim
+95
+0.46
+
+Osceola
+93
+0.30
+
+Gladwin
 92
-0.35
+0.50
+
+Mackinac
+88
+0.45
 
 Clare
 82
-0.28
-
-Mackinac
-81
-0.41
+0.26
 
 Montmorency
-65
-0.78
+64
+0.77
 
 Alger
-59
-0.55
+62
+0.57
 
 Crawford
-51
-0.31
-
-Kalkaska
-33
-0.17
-
-Alcona
-29
-0.48
+50
+0.30
 
 Arenac
+45
+0.28
+
+Kalkaska
+41
+0.21
+
+Oscoda
+38
+0.69
+
+Missaukee
+31
+0.19
+
+Alcona
 Not disclosed
 —
 
@@ -5819,15 +5827,7 @@ Luce
 Not disclosed
 —
 
-Missaukee
-Not disclosed
-—
-
 Ontonagon
-Not disclosed
-—
-
-Oscoda
 Not disclosed
 —
 
@@ -5835,308 +5835,300 @@ Schoolcraft
 Not disclosed
 —
 
-Real estate and rental and leasing — private employment by county &middot; BLS QCEW, 2024 annual averages
+Real estate and rental and leasing — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Oakland
-19,133
+18,941
 1.70
 
 Wayne
-7,272
-0.65
+7,440
+0.67
 
 Kent
-4,513
-0.70
+4,731
+0.73
 
 Macomb
-3,986
-0.76
+3,963
+0.77
 
 Washtenaw
-2,581
-0.76
+2,562
+0.75
 
 Ingham
-2,360
-0.98
+2,336
+0.97
 
 Kalamazoo
-1,793
-0.96
+1,769
+0.94
 
 Genesee
-1,784
-0.86
+1,694
+0.81
 
 Ottawa
-1,064
-0.52
-
-Livingston
-959
-0.96
-
-Grand Traverse
-624
-0.77
-
-Muskegon
-623
-0.63
-
-Saginaw
-614
-0.50
-
-Clinton
-553
-1.91
-
-Jackson
-532
-0.61
-
-Berrien
-493
-0.52
-
-Bay
-407
-0.77
-
-Eaton
-387
+1,118
 0.56
 
+Livingston
+944
+0.94
+
+Muskegon
+622
+0.65
+
+Saginaw
+613
+0.49
+
+Grand Traverse
+612
+0.76
+
+Jackson
+550
+0.64
+
+Berrien
+503
+0.54
+
+Clinton
+431
+1.49
+
+Bay
+397
+0.75
+
 Allegan
-371
+391
 0.58
 
+Eaton
+378
+0.54
+
 Midland
-348
+350
 0.59
 
 St. Clair
-290
-0.44
-
-Emmet
-264
-0.96
-
-Marquette
-264
-0.64
+301
+0.47
 
 Isabella
-254
-0.61
-
-Calhoun
-238
-0.28
+282
+0.68
 
 Monroe
-223
-0.35
-
-Charlevoix
-204
-1.20
-
-Lapeer
-201
-0.59
-
-Lenawee
-155
-0.39
-
-Shiawassee
-117
-0.48
-
-Leelanau
-114
-1.10
-
-Gladwin
-113
-1.58
-
-Houghton
-113
-0.60
-
-Mason
-109
-0.69
-
-Alpena
-108
-0.57
-
-Van Buren
-96
-0.29
-
-Chippewa
-87
+279
 0.44
 
-Wexford
-80
-0.39
+Marquette
+248
+0.59
 
-Mecosta
-73
-0.37
-
-St. Joseph
-73
-0.22
-
-Tuscola
-67
-0.36
-
-Antrim
-64
-0.80
-
-Benzie
-64
+Emmet
+233
 0.84
 
-Kalkaska
-64
-0.85
+Lapeer
+219
+0.64
+
+Calhoun
+210
+0.25
+
+Charlevoix
+189
+1.12
+
+Lenawee
+146
+0.36
+
+Leelanau
+120
+1.05
+
+Gladwin
+119
+1.71
+
+Houghton
+119
+0.62
+
+Mason
+118
+0.75
+
+Shiawassee
+116
+0.48
+
+Alpena
+114
+0.61
+
+Chippewa
+86
+0.43
+
+Wexford
+84
+0.41
+
+Mecosta
+80
+0.42
 
 Otsego
-64
-0.39
+79
+0.48
 
-Roscommon
+Tuscola
+70
+0.37
+
+Antrim
+67
+0.86
+
+Gratiot
+63
+0.32
+
+Benzie
 60
-0.60
+0.77
 
-Dickinson
-56
-0.26
-
-Barry
-55
-0.27
+Hillsdale
+60
+0.31
 
 Menominee
-55
-0.50
+60
+0.54
 
-Delta
+Kalkaska
+56
+0.73
+
+Dickinson
 54
 0.25
 
-Gratiot
-53
-0.28
-
-Iosco
-52
-0.43
-
-Oceana
-51
-0.51
-
-Cheboygan
-50
-0.52
-
 Ionia
-50
-0.17
-
-Cass
-48
-0.33
-
-Clare
-45
-0.40
-
-Hillsdale
-44
-0.22
-
-Branch
-42
+53
 0.18
 
-Ogemaw
-39
-0.42
+Roscommon
+53
+0.56
 
-Manistee
-38
-0.34
+Barry
+52
+0.25
+
+Cass
+49
+0.33
 
 Mackinac
-37
-0.49
+49
+0.66
 
-Newaygo
-36
-0.19
+Cheboygan
+45
+0.47
+
+Branch
+44
+0.18
+
+Oceana
+44
+0.44
+
+Ogemaw
+44
+0.47
+
+Delta
+43
+0.20
+
+Clare
+38
+0.32
 
 Sanilac
+38
+0.24
+
+Newaygo
+37
+0.20
+
+Manistee
 36
-0.22
+0.31
 
 Montcalm
-33
+34
 0.13
 
 Alger
-26
-0.63
+30
+0.72
 
-Iron
-26
-0.49
+Iosco
+30
+0.25
 
 Montmorency
 24
 0.75
 
-Alcona
-23
-0.99
-
-Osceola
-23
-0.18
-
 Gogebic
-21
-0.27
+19
+0.25
+
+Iron
+19
+0.36
 
 Presque Isle
-18
-0.45
+15
+0.38
 
 Crawford
-13
-0.20
+12
+0.19
 
 Huron
 11
 0.06
 
+Oscoda
+10
+0.47
+
+Alcona
+Not disclosed
+—
+
 Arenac
 Not disclosed
 —
@@ -6165,7 +6157,7 @@ Ontonagon
 Not disclosed
 —
 
-Oscoda
+Osceola
 Not disclosed
 —
 
@@ -6173,225 +6165,213 @@ Schoolcraft
 Not disclosed
 —
 
-Professional and technical services — private employment by county &middot; BLS QCEW, 2024 annual averages
+St. Joseph
+Not disclosed
+—
+
+Van Buren
+Not disclosed
+—
+
+Professional and technical services — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Oakland
-93,104
-1.85
+88,666
+1.78
 
 Wayne
-53,927
-1.07
+53,725
+1.08
 
 Macomb
-30,840
+30,317
 1.32
 
 Kent
-19,530
-0.68
+19,984
+0.69
 
 Washtenaw
-17,908
-1.18
+17,686
+1.17
 
 Ingham
-7,664
-0.71
+7,394
+0.69
 
 Kalamazoo
-5,959
+5,981
 0.71
 
 Genesee
-5,055
-0.54
+4,839
+0.52
 
 Livingston
-4,832
+4,829
 1.08
 
 Ottawa
-4,764
-0.52
+4,500
+0.50
 
 Saginaw
-2,524
-0.46
-
-Jackson
-2,275
-0.58
+2,776
+0.50
 
 Calhoun
-2,246
-0.59
+2,273
+0.60
+
+Jackson
+2,182
+0.57
 
 Van Buren
-2,178
-1.45
+2,024
+1.36
 
 Grand Traverse
-2,117
-0.59
-
-Muskegon
-1,848
-0.42
-
-St. Clair
-1,487
-0.51
+2,017
+0.56
 
 Bay
-1,411
-0.59
+1,432
+0.61
+
+St. Clair
+1,365
+0.47
 
 Berrien
-1,375
-0.33
+1,348
+0.32
 
 Midland
-1,035
+1,028
 0.39
 
 Marquette
-846
-0.46
-
-Allegan
-720
-0.25
-
-Shiawassee
-686
-0.63
+839
+0.45
 
 Houghton
-671
-0.80
+678
+0.79
 
 Isabella
-639
-0.34
-
-St. Joseph
-583
-0.40
-
-Lapeer
-524
-0.34
-
-Lenawee
-469
-0.26
-
-Dickinson
-370
-0.39
-
-Cass
-343
-0.53
-
-Sanilac
-300
-0.41
-
-Otsego
-271
+673
 0.36
 
-Cheboygan
-261
-0.61
+Allegan
+651
+0.22
 
-Clare
-252
+St. Joseph
+646
+0.45
+
+Shiawassee
+535
 0.50
 
-Montcalm
-182
-0.16
+Dickinson
+360
+0.38
 
-Antrim
-173
+Alpena
+358
+0.43
+
+Otsego
+280
+0.38
+
+Sanilac
+265
+0.37
+
+Clare
+256
 0.48
 
-Arenac
-161
-0.57
+Chippewa
+241
+0.27
+
+Montcalm
+192
+0.17
 
 Iosco
 124
-0.23
+0.24
 
 Benzie
 120
 0.35
 
+Antrim
+118
+0.34
+
 Iron
-120
+118
 0.51
 
 Manistee
-98
-0.19
-
-Oceana
-96
-0.21
-
-Crawford
-87
-0.30
-
-Gogebic
-71
+105
 0.20
 
-Roscommon
-65
-0.15
-
-Missaukee
-61
+Oceana
+94
 0.21
 
-Ogemaw
-59
-0.14
+Menominee
+86
+0.18
+
+Gogebic
+72
+0.22
+
+Kalkaska
+67
+0.20
+
+Missaukee
+62
+0.22
 
 Schoolcraft
-53
-0.28
+49
+0.26
 
 Alger
 45
 0.24
 
-Lake
-32
-0.27
-
 Presque Isle
-32
-0.18
+34
+0.19
+
+Lake
+33
+0.28
 
 Alcona
 23
 0.22
 
-Oscoda
-17
-0.18
+Ontonagon
+16
+0.17
 
-Alpena
+Arenac
 Not disclosed
 —
 
@@ -6407,15 +6387,23 @@ Branch
 Not disclosed
 —
 
+Cass
+Not disclosed
+—
+
 Charlevoix
 Not disclosed
 —
 
-Chippewa
+Cheboygan
 Not disclosed
 —
 
 Clinton
+Not disclosed
+—
+
+Crawford
 Not disclosed
 —
 
@@ -6451,15 +6439,19 @@ Ionia
 Not disclosed
 —
 
-Kalkaska
-Not disclosed
-—
-
 Keweenaw
 Not disclosed
 —
 
+Lapeer
+Not disclosed
+—
+
 Leelanau
+Not disclosed
+—
+
+Lenawee
 Not disclosed
 —
 
@@ -6479,10 +6471,6 @@ Mecosta
 Not disclosed
 —
 
-Menominee
-Not disclosed
-—
-
 Monroe
 Not disclosed
 —
@@ -6491,15 +6479,27 @@ Montmorency
 Not disclosed
 —
 
+Muskegon
+Not disclosed
+—
+
 Newaygo
 Not disclosed
 —
 
-Ontonagon
+Ogemaw
 Not disclosed
 —
 
 Osceola
+Not disclosed
+—
+
+Oscoda
+Not disclosed
+—
+
+Roscommon
 Not disclosed
 —
 
@@ -6511,111 +6511,91 @@ Wexford
 Not disclosed
 —
 
-Management of companies and enterprises — private employment by county &middot; BLS QCEW, 2024 annual averages
+Management of companies and enterprises — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Wayne
-19,605
-1.60
+20,770
+1.72
 
 Oakland
-15,819
-1.30
+14,992
+1.24
 
 Macomb
-8,888
-1.57
+8,510
+1.53
 
 Kent
-5,587
-0.80
+5,348
+0.77
 
 Midland
-3,834
-5.94
+3,941
+6.14
 
 Ingham
-2,567
-0.98
+2,612
+1.00
 
 Washtenaw
-1,845
-0.50
+1,813
+0.49
 
 Livingston
-567
-0.52
+632
+0.58
 
 Jackson
-566
-0.60
-
-Calhoun
-429
-0.47
+573
+0.62
 
 Genesee
-378
-0.17
+404
+0.18
+
+Calhoun
+388
+0.42
 
 Marquette
-351
-0.79
+353
+0.78
 
 Saginaw
-269
-0.20
+226
+0.17
 
 Van Buren
-257
-0.71
+213
+0.59
 
 Ottawa
-230
-0.10
-
-Kalamazoo
-158
-0.08
-
-Berrien
-119
-0.12
-
-St. Joseph
-79
-0.22
-
-Allegan
-77
-0.11
-
-Muskegon
-77
-0.07
-
-Grand Traverse
-46
-0.05
-
-Roscommon
-43
-0.40
-
-Lenawee
-40
+187
 0.09
 
-Cass
-13
-0.08
+Kalamazoo
+142
+0.07
 
-Lapeer
-10
-0.03
+Berrien
+130
+0.13
+
+Allegan
+79
+0.11
+
+Bay
+73
+0.13
+
+Grand Traverse
+43
+0.05
 
 Alcona
 Not disclosed
@@ -6645,15 +6625,15 @@ Barry
 Not disclosed
 —
 
-Bay
-Not disclosed
-—
-
 Benzie
 Not disclosed
 —
 
 Branch
+Not disclosed
+—
+
+Cass
 Not disclosed
 —
 
@@ -6749,7 +6729,15 @@ Lake
 Not disclosed
 —
 
+Lapeer
+Not disclosed
+—
+
 Leelanau
+Not disclosed
+—
+
+Lenawee
 Not disclosed
 —
 
@@ -6793,6 +6781,10 @@ Montmorency
 Not disclosed
 —
 
+Muskegon
+Not disclosed
+—
+
 Newaygo
 Not disclosed
 —
@@ -6825,6 +6817,10 @@ Presque Isle
 Not disclosed
 —
 
+Roscommon
+Not disclosed
+—
+
 Sanilac
 Not disclosed
 —
@@ -6841,6 +6837,10 @@ St. Clair
 Not disclosed
 —
 
+St. Joseph
+Not disclosed
+—
+
 Tuscola
 Not disclosed
 —
@@ -6849,257 +6849,241 @@ Wexford
 Not disclosed
 —
 
-Administrative and waste services — private employment by county &middot; BLS QCEW, 2024 annual averages
+Administrative and waste services — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Oakland
-49,441
-1.16
+49,524
+1.19
 
 Kent
-48,794
-1.99
+46,901
+1.94
 
 Wayne
-38,789
-0.91
-
-Macomb
-14,731
-0.74
-
-Genesee
-10,721
-1.36
-
-Washtenaw
-7,195
-0.56
-
-Ottawa
-6,750
-0.87
-
-Ingham
-5,843
-0.64
-
-Kalamazoo
-5,719
-0.80
-
-Saginaw
-5,214
-1.11
-
-Berrien
-3,037
+35,537
 0.85
 
-Midland
-3,036
-1.35
-
-Jackson
-2,986
-0.91
-
-Calhoun
-2,414
+Macomb
+14,364
 0.75
 
+Genesee
+10,594
+1.35
+
+Ottawa
+6,718
+0.90
+
+Washtenaw
+5,608
+0.44
+
+Kalamazoo
+5,603
+0.79
+
+Ingham
+5,314
+0.59
+
+Saginaw
+5,023
+1.08
+
+Midland
+2,909
+1.31
+
+Jackson
+2,742
+0.85
+
+Berrien
+2,557
+0.73
+
+Calhoun
+2,485
+0.78
+
 Monroe
-2,310
-0.95
+2,195
+0.93
 
 Livingston
-2,149
-0.57
+2,007
+0.53
 
 Muskegon
-1,553
-0.42
-
-Grand Traverse
-1,398
-0.46
-
-Eaton
-1,137
+1,539
 0.43
 
-Lapeer
-1,113
-0.86
+Grand Traverse
+1,485
+0.49
 
-Emmet
-925
-0.89
+Bay
+1,150
+0.58
+
+Lapeer
+1,097
+0.85
+
+Eaton
+1,069
+0.40
 
 Allegan
-872
-0.36
-
-Clinton
-872
-0.80
+970
+0.38
 
 Delta
-861
-1.06
+935
+1.16
 
-Marquette
-783
-0.50
-
-Van Buren
-758
-0.60
-
-Tuscola
-591
+Clinton
+903
 0.83
 
-Lenawee
-561
-0.37
+Emmet
+892
+0.86
+
+Van Buren
+811
+0.65
+
+Marquette
+789
+0.51
+
+Kalkaska
+602
+2.11
+
+Tuscola
+577
+0.82
 
 Montcalm
-517
-0.54
-
-Mecosta
-498
-0.66
-
-Newaygo
-498
-0.71
-
-Wexford
-455
-0.59
-
-Gratiot
-452
-0.62
-
-Hillsdale
-445
-0.59
-
-Huron
-391
-0.59
-
-Branch
-374
-0.42
-
-Cass
-350
-0.63
-
-St. Joseph
-334
-0.27
-
-Barry
-331
-0.42
-
-Charlevoix
-322
-0.50
-
-Mason
-282
-0.47
-
-Leelanau
-251
-0.64
-
-Arenac
-242
-1.01
-
-Clare
-223
+497
 0.52
 
-Osceola
-200
-0.42
+Wexford
+493
+0.65
+
+Mecosta
+455
+0.64
+
+Gratiot
+390
+0.53
+
+Huron
+386
+0.59
+
+Cass
+384
+0.69
+
+Branch
+370
+0.41
+
+Hillsdale
+370
+0.51
+
+Charlevoix
+340
+0.54
+
+Mason
+294
+0.50
+
+Barry
+291
+0.38
+
+Leelanau
+271
+0.63
+
+Clare
+211
+0.47
 
 Iosco
 191
-0.42
+0.43
 
 Benzie
-156
-0.54
-
-Sanilac
-154
-0.25
-
-Houghton
-151
-0.21
-
-Gladwin
-129
-0.48
-
-Manistee
-104
-0.24
-
-Presque Isle
-91
+174
 0.60
 
-Ogemaw
-71
-0.20
-
-Oscoda
-69
-0.86
-
-Roscommon
-68
-0.18
-
-Mackinac
-66
+Houghton
+170
 0.23
 
-Alcona
-36
-0.41
+Sanilac
+156
+0.26
 
-Gogebic
-30
-0.10
-
-Missaukee
-28
-0.11
-
-Schoolcraft
-17
-0.11
-
-Alger
-Not disclosed
-—
+Menominee
+155
+0.38
 
 Alpena
+152
+0.22
+
+Gladwin
+116
+0.44
+
+Manistee
+111
+0.26
+
+Ogemaw
+78
+0.22
+
+Missaukee
+67
+0.28
+
+Presque Isle
+44
+0.30
+
+Alcona
+43
+0.48
+
+Gogebic
+28
+0.10
+
+Ontonagon
+22
+0.28
+
+Montmorency
+12
+0.10
+
+Alger
 Not disclosed
 —
 
@@ -7107,11 +7091,11 @@ Antrim
 Not disclosed
 —
 
-Baraga
+Arenac
 Not disclosed
 —
 
-Bay
+Baraga
 Not disclosed
 —
 
@@ -7143,10 +7127,6 @@ Isabella
 Not disclosed
 —
 
-Kalkaska
-Not disclosed
-—
-
 Keweenaw
 Not disclosed
 —
@@ -7155,15 +7135,19 @@ Lake
 Not disclosed
 —
 
+Lenawee
+Not disclosed
+—
+
 Luce
 Not disclosed
 —
 
-Menominee
+Mackinac
 Not disclosed
 —
 
-Montmorency
+Newaygo
 Not disclosed
 —
 
@@ -7171,7 +7155,11 @@ Oceana
 Not disclosed
 —
 
-Ontonagon
+Osceola
+Not disclosed
+—
+
+Oscoda
 Not disclosed
 —
 
@@ -7179,6 +7167,14 @@ Otsego
 Not disclosed
 —
 
+Roscommon
+Not disclosed
+—
+
+Schoolcraft
+Not disclosed
+—
+
 Shiawassee
 Not disclosed
 —
@@ -7187,225 +7183,217 @@ St. Clair
 Not disclosed
 —
 
-Educational services — private employment by county &middot; BLS QCEW, 2024 annual averages
+St. Joseph
+Not disclosed
+—
+
+Educational services — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Oakland
-11,862
-0.79
+11,704
+0.78
 
 Wayne
-11,073
+11,076
 0.74
 
 Kent
-10,460
-1.22
+10,519
+1.21
 
 Washtenaw
-3,590
-0.80
-
-Ottawa
-2,959
-1.09
-
-Ingham
-2,582
-0.80
+3,461
+0.76
 
 Kalamazoo
-2,538
-1.02
+2,968
+1.17
 
-Macomb
-2,396
-0.34
+Ottawa
+2,906
+1.08
+
+Ingham
+2,596
+0.80
 
 Genesee
-2,394
-0.87
+2,471
+0.88
+
+Macomb
+2,259
+0.33
 
 Lenawee
-1,384
-2.59
+1,406
+2.61
 
 Grand Traverse
-1,273
-1.18
+1,360
+1.25
 
 Berrien
-1,259
-1.00
+1,307
+1.03
 
 Jackson
-1,057
-0.91
+1,008
+0.87
 
 Eaton
-910
+938
 0.99
 
 Calhoun
-836
-0.74
+826
+0.72
 
 Midland
-726
-0.92
+754
+0.94
 
 Muskegon
-725
-0.55
+726
+0.56
 
 Allegan
-518
-0.61
-
-Saginaw
-439
-0.27
-
-Monroe
-395
-0.46
+519
+0.57
 
 Livingston
-379
-0.28
+445
+0.33
+
+Saginaw
+436
+0.26
+
+Monroe
+384
+0.45
 
 St. Clair
-304
-0.35
+309
+0.36
 
 Bay
-172
-0.24
+164
+0.23
 
 Isabella
-159
+160
 0.29
 
 Lapeer
-145
-0.32
+132
+0.28
 
 Ionia
-132
-0.34
-
-Wexford
-123
-0.45
+130
+0.33
 
 Clinton
-119
+122
 0.31
-
-Leelanau
-114
-0.83
 
 Barry
-109
-0.40
+120
+0.43
 
-Marquette
-107
-0.20
+Wexford
+118
+0.43
 
 Shiawassee
-103
-0.32
+115
+0.36
 
-Emmet
-83
-0.23
-
-Mecosta
-83
-0.31
-
-Delta
-74
-0.26
+Leelanau
+111
+0.72
 
 Newaygo
-74
-0.30
+90
+0.37
+
+Emmet
+89
+0.24
+
+Mecosta
+80
+0.31
+
+Van Buren
+79
+0.18
+
+Delta
+76
+0.26
 
 Dickinson
 69
 0.24
 
-Van Buren
-69
+St. Joseph
+65
 0.15
 
 Chippewa
-52
-0.20
-
-St. Joseph
-49
-0.11
+48
+0.18
 
 Houghton
-48
-0.19
-
-Cheboygan
-38
-0.30
+44
+0.17
 
 Mackinac
-34
-0.34
+38
+0.38
 
 Huron
-31
-0.13
-
-Sanilac
-31
-0.14
-
-Branch
-29
-0.09
-
-Tuscola
-23
-0.09
+35
+0.15
 
 Mason
+30
+0.14
+
+Cass
 21
-0.10
+0.11
 
 Benzie
-19
-0.19
+18
+0.17
+
+Tuscola
+16
+0.06
 
 Montcalm
 15
 0.04
 
-Alpena
-14
-0.06
-
 Gladwin
-8
-0.08
+9
+0.10
 
 Alcona
 Not disclosed
 —
 
 Alger
+Not disclosed
+—
+
+Alpena
 Not disclosed
 —
 
@@ -7421,11 +7409,15 @@ Baraga
 Not disclosed
 —
 
-Cass
+Branch
 Not disclosed
 —
 
 Charlevoix
+Not disclosed
+—
+
+Cheboygan
 Not disclosed
 —
 
@@ -7477,6 +7469,10 @@ Manistee
 Not disclosed
 —
 
+Marquette
+Not disclosed
+—
+
 Menominee
 Not disclosed
 —
@@ -7521,257 +7517,253 @@ Roscommon
 Not disclosed
 —
 
+Sanilac
+Not disclosed
+—
+
 Schoolcraft
 Not disclosed
 —
 
-Health care and social assistance — private employment by county &middot; BLS QCEW, 2024 annual averages
+Health care and social assistance — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Wayne
-116,757
-1.12
+120,842
+1.13
 
 Oakland
-110,614
-1.07
+115,468
+1.09
 
 Kent
-67,987
-1.14
+68,533
+1.11
 
 Macomb
-43,428
-0.90
+42,720
+0.87
 
 Washtenaw
-28,273
-0.90
+28,974
+0.89
 
 Ingham
-24,527
-1.10
+24,713
+1.08
 
 Genesee
-23,203
+24,144
 1.21
 
 Kalamazoo
-20,432
+21,318
 1.18
 
 Saginaw
-14,629
-1.28
+14,868
+1.26
 
 Grand Traverse
-10,937
+11,318
 1.47
 
 Muskegon
-10,424
-1.15
+11,063
+1.21
 
 Ottawa
-9,743
-0.52
-
-Midland
-8,647
-1.58
+9,789
+0.51
 
 Calhoun
-8,542
-1.10
+8,872
+1.09
+
+Midland
+8,869
+1.57
 
 Jackson
-8,476
-1.06
+8,565
+1.05
 
 Berrien
-8,001
-0.92
+8,144
+0.91
 
 Livingston
-7,974
-0.86
+8,022
+0.84
 
 St. Clair
-7,082
-1.17
+7,276
+1.18
 
 Bay
-6,019
-1.23
-
-Marquette
-4,928
-1.30
+6,069
+1.20
 
 Monroe
-4,683
-0.79
+4,442
+0.74
 
 Lenawee
-3,610
-0.98
+3,598
+0.94
 
 Isabella
-3,145
-0.82
-
-Emmet
-2,741
-1.08
+3,211
+0.81
 
 Allegan
-2,612
+2,841
 0.44
 
+Emmet
+2,753
+1.04
+
 Shiawassee
-2,551
+2,632
 1.15
 
 Eaton
-2,514
-0.39
-
-St. Joseph
-2,247
-0.74
+2,571
+0.38
 
 Montcalm
-2,182
-0.94
+2,308
+0.95
 
-Tuscola
-1,960
-1.13
-
-Delta
-1,935
-0.97
-
-Alpena
-1,917
-1.10
+St. Joseph
+2,264
+0.74
 
 Clinton
-1,908
-0.72
+2,167
+0.78
+
+Tuscola
+2,078
+1.16
 
 Lapeer
-1,895
-0.60
-
-Houghton
-1,792
-1.03
-
-Wexford
-1,655
-0.88
-
-Huron
-1,644
-1.02
-
-Mecosta
-1,597
-0.87
-
-Van Buren
-1,388
-0.45
-
-Newaygo
-1,317
-0.77
-
-Ionia
-1,242
-0.47
-
-Barry
-1,237
-0.65
-
-Dickinson
-1,206
+2,018
 0.61
 
-Mason
-1,163
-0.80
+Delta
+1,989
+0.97
 
-Sanilac
-1,149
-0.77
+Houghton
+1,771
+0.96
 
-Clare
-1,074
+Wexford
+1,745
+0.90
+
+Huron
+1,725
 1.03
 
-Osceola
-963
-0.84
+Mecosta
+1,499
+0.83
 
-Branch
-846
-0.39
+Newaygo
+1,436
+0.82
+
+Van Buren
+1,421
+0.45
+
+Dickinson
+1,292
+0.64
+
+Ionia
+1,277
+0.46
+
+Barry
+1,262
+0.64
+
+Mason
+1,225
+0.82
+
+Ogemaw
+1,126
+1.25
+
+Clare
+1,072
+0.95
+
+Osceola
+1,002
+0.88
 
 Crawford
-788
+807
 1.34
 
 Chippewa
-776
+787
 0.42
 
-Cheboygan
-563
-0.64
-
 Leelanau
-529
-0.55
+563
+0.52
 
 Gladwin
-466
-0.71
+509
+0.77
+
+Cass
+430
+0.30
 
 Benzie
-453
-0.65
+427
+0.58
 
 Mackinac
-398
-0.57
+416
+0.59
 
 Iron
-277
-0.57
+268
+0.54
 
 Alcona
-148
-0.69
+155
+0.68
 
 Schoolcraft
-123
-0.32
+127
+0.31
+
+Luce
+103
+0.36
 
 Ontonagon
 65
-0.34
-
-Oscoda
-54
-0.28
+0.33
 
 Alger
+Not disclosed
+—
+
+Alpena
 Not disclosed
 —
 
@@ -7787,11 +7779,15 @@ Baraga
 Not disclosed
 —
 
-Cass
+Branch
 Not disclosed
 —
 
 Charlevoix
+Not disclosed
+—
+
+Cheboygan
 Not disclosed
 —
 
@@ -7823,11 +7819,11 @@ Lake
 Not disclosed
 —
 
-Luce
+Manistee
 Not disclosed
 —
 
-Manistee
+Marquette
 Not disclosed
 —
 
@@ -7847,7 +7843,7 @@ Oceana
 Not disclosed
 —
 
-Ogemaw
+Oscoda
 Not disclosed
 —
 
@@ -7863,301 +7859,305 @@ Roscommon
 Not disclosed
 —
 
-Arts, entertainment, and recreation — private employment by county &middot; BLS QCEW, 2024 annual averages
+Sanilac
+Not disclosed
+—
+
+Arts, entertainment, and recreation — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Oakland
-11,009
-0.90
+12,086
+0.98
 
 Wayne
-10,748
-0.88
+11,067
+0.90
 
 Kent
-4,889
-0.70
+5,680
+0.79
 
 Macomb
-3,004
-0.53
+3,140
+0.55
 
 Washtenaw
-2,641
-0.72
-
-Genesee
-1,842
-0.82
+2,878
+0.77
 
 Kalamazoo
-1,838
+1,905
 0.91
 
+Genesee
+1,757
+0.76
+
 Ingham
-1,506
-0.58
+1,611
+0.61
 
 Ottawa
-1,393
-0.63
+1,408
+0.64
 
 Livingston
-1,112
+1,142
 1.03
 
 Muskegon
-970
-0.91
+949
+0.89
 
 Berrien
-866
-0.85
-
-Grand Traverse
-754
-0.86
+852
+0.82
 
 Saginaw
-712
-0.53
+776
+0.56
 
-Midland
-711
-1.10
+Grand Traverse
+740
+0.83
 
 Allegan
-647
-0.93
+734
+0.98
+
+Midland
+708
+1.08
 
 Emmet
-596
-2.00
+618
+2.02
 
 Jackson
-584
-0.62
-
-Bay
-559
-0.97
+544
+0.57
 
 Calhoun
-540
-0.59
+538
+0.57
 
 St. Clair
-487
+492
 0.69
 
 Monroe
-455
-0.66
-
-Clinton
-427
-1.36
-
-Lenawee
-392
-0.90
-
-Eaton
-371
-0.50
-
-Isabella
-362
-0.81
-
-Marquette
-346
-0.78
-
-Charlevoix
-302
-1.64
-
-Van Buren
-278
-0.77
-
-Manistee
-221
-1.81
-
-Otsego
-218
-1.21
-
-Shiawassee
-217
-0.83
-
-Antrim
-213
-2.47
-
-Ionia
-210
-0.67
-
-Cass
-193
-1.23
-
-Lapeer
-193
-0.52
-
-Barry
-190
-0.85
-
-Mecosta
-182
-0.85
-
-Delta
-171
-0.73
-
-Roscommon
-168
-1.55
-
-Leelanau
-163
-1.46
-
-Wexford
-160
-0.72
-
-Branch
-153
-0.60
-
-Benzie
-138
-1.68
-
-Dickinson
-136
-0.59
-
-Montcalm
-131
-0.48
-
-Mason
-130
-0.76
-
-St. Joseph
-128
-0.36
-
-Cheboygan
-127
-1.23
-
-Oceana
-126
-1.16
-
-Clare
-121
-0.99
-
-Sanilac
-119
+473
 0.68
 
-Newaygo
-116
+Clinton
+447
+1.39
+
+Isabella
+432
+0.94
+
+Lenawee
+418
+0.94
+
+Marquette
+355
+0.77
+
+Bay
+341
 0.58
 
-Gogebic
-115
-1.36
+Eaton
+307
+0.39
 
-Tuscola
-109
-0.54
+Charlevoix
+304
+1.63
 
-Huron
-108
-0.57
+Van Buren
+288
+0.78
 
-Alpena
-103
-0.50
+Manistee
+252
+1.98
 
-Houghton
-100
-0.49
+Lapeer
+241
+0.63
 
-Iosco
-97
+Cass
+227
+1.38
+
+Shiawassee
+223
+0.84
+
+Ionia
+221
+0.69
+
+Antrim
+207
+2.39
+
+Otsego
+190
+1.05
+
+Barry
+171
 0.75
 
+Branch
+171
+0.65
+
+Mecosta
+168
+0.80
+
+Leelanau
+161
+1.28
+
+Roscommon
+158
+1.51
+
+Gogebic
+153
+1.84
+
+Dickinson
+152
+0.65
+
+Wexford
+146
+0.65
+
+Benzie
+141
+1.64
+
+St. Joseph
+141
+0.40
+
+Delta
+137
+0.58
+
+Oceana
+135
+1.21
+
+Cheboygan
+131
+1.25
+
+Clare
+131
+1.00
+
+Sanilac
+128
+0.72
+
+Mason
+120
+0.69
+
+Huron
+118
+0.61
+
+Houghton
+117
+0.55
+
+Tuscola
+115
+0.55
+
+Montcalm
+106
+0.38
+
 Iron
-92
-1.61
+103
+1.78
+
+Alpena
+98
+0.47
+
+Montmorency
+95
+2.70
+
+Iosco
+91
+0.70
 
 Chippewa
-85
+88
 0.40
 
 Mackinac
-79
-0.97
-
-Montmorency
-78
-2.26
+77
+0.94
 
 Ogemaw
-78
-0.77
+74
+0.71
 
 Gratiot
-73
-0.35
-
-Arenac
-54
-0.79
-
-Gladwin
-50
-0.65
+66
+0.30
 
 Hillsdale
-47
-0.22
+57
+0.27
+
+Gladwin
+48
+0.62
 
 Menominee
-43
-0.36
+48
+0.39
+
+Kalkaska
+47
+0.56
+
+Alger
+38
+0.83
 
 Osceola
-28
-0.21
+24
+0.18
 
-Schoolcraft
-18
-0.40
+Luce
+17
+0.51
 
 Alcona
 Not disclosed
 —
 
-Alger
+Arenac
 Not disclosed
 —
 
@@ -8169,10 +8169,6 @@ Crawford
 Not disclosed
 —
 
-Kalkaska
-Not disclosed
-—
-
 Keweenaw
 Not disclosed
 —
@@ -8181,11 +8177,11 @@ Lake
 Not disclosed
 —
 
-Luce
+Missaukee
 Not disclosed
 —
 
-Missaukee
+Newaygo
 Not disclosed
 —
 
@@ -8201,301 +8197,305 @@ Presque Isle
 Not disclosed
 —
 
-Accommodation and food services — private employment by county &middot; BLS QCEW, 2024 annual averages
+Schoolcraft
+Not disclosed
+—
+
+Accommodation and food services — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Wayne
-60,098
-0.91
+61,021
+0.93
 
 Oakland
-57,076
-0.87
+55,988
+0.86
 
 Kent
-31,658
-0.84
+30,965
+0.82
 
 Macomb
-28,154
-0.92
+29,370
+0.98
 
 Washtenaw
-13,791
-0.70
+13,550
+0.68
 
 Genesee
-13,246
+13,301
 1.09
 
+Ottawa
+11,150
+0.95
+
 Kalamazoo
-11,060
-1.01
+10,998
+0.99
 
 Ingham
-10,705
+10,674
 0.76
 
-Ottawa
-10,395
-0.87
-
 Saginaw
-8,057
-1.11
+8,280
+1.14
 
 Livingston
-7,462
-1.27
+7,867
+1.34
 
 Muskegon
-6,838
-1.18
+7,257
+1.29
 
 Berrien
-6,789
+6,752
 1.23
 
 Grand Traverse
-6,035
-1.28
+6,339
+1.34
 
 St. Clair
-5,028
+4,941
 1.31
 
 Jackson
-4,590
-0.90
-
-Monroe
-4,278
-1.14
-
-Calhoun
-4,275
-0.86
-
-Bay
-3,975
-1.28
-
-Eaton
-3,624
-0.90
-
-Allegan
-3,120
-0.83
-
-Marquette
-3,108
-1.30
-
-Midland
-2,955
-0.85
-
-Emmet
-2,402
-1.49
-
-Isabella
-2,298
-0.95
-
-Van Buren
-2,200
-1.12
-
-Lenawee
-2,151
-0.92
-
-Lapeer
-2,121
-1.06
-
-Roscommon
-1,916
-3.28
-
-Charlevoix
-1,834
-1.84
-
-Montcalm
-1,744
-1.18
-
-Clinton
-1,619
+4,828
 0.96
 
-Branch
-1,606
-1.16
+Calhoun
+4,624
+0.93
+
+Monroe
+4,218
+1.15
+
+Bay
+3,861
+1.25
+
+Eaton
+3,605
+0.87
+
+Allegan
+3,066
+0.77
+
+Marquette
+3,018
+1.24
+
+Midland
+2,820
+0.81
+
+Emmet
+2,413
+1.49
+
+Lapeer
+2,406
+1.19
+
+Isabella
+2,325
+0.95
+
+Lenawee
+2,180
+0.93
+
+Van Buren
+2,134
+1.09
+
+Charlevoix
+1,764
+1.79
+
+Montcalm
+1,703
+1.15
 
 St. Joseph
-1,596
-0.83
+1,617
+0.86
 
-Mackinac
-1,566
-3.56
+Roscommon
+1,612
+2.91
 
-Shiawassee
-1,427
-1.01
+Branch
+1,587
+1.14
+
+Clinton
+1,531
+0.90
 
 Houghton
-1,396
-1.27
+1,456
+1.29
 
-Barry
-1,354
-1.13
+Mackinac
+1,391
+3.19
 
 Otsego
-1,353
-1.39
+1,316
+1.38
+
+Barry
+1,284
+1.07
+
+Shiawassee
+1,258
+0.90
 
 Benzie
-1,225
-2.76
+1,252
+2.75
 
 Delta
-1,219
-0.97
-
-Ionia
-1,207
-0.72
+1,231
+0.98
 
 Dickinson
 1,164
-0.93
-
-Cass
-1,156
-1.36
-
-Mecosta
-1,094
 0.94
 
+Ionia
+1,163
+0.68
+
+Mecosta
+1,141
+1.03
+
+Cass
+1,137
+1.31
+
 Wexford
-1,052
-0.88
-
-Chippewa
-1,047
-0.90
-
-Cheboygan
-1,040
-1.86
+1,129
+0.95
 
 Mason
-1,014
-1.09
+1,054
+1.14
 
-Tuscola
+Cheboygan
+1,015
+1.83
+
+Chippewa
 992
-0.90
+0.86
 
 Leelanau
-987
-1.63
+990
+1.48
 
 Alpena
-932
-0.84
+987
+0.90
 
-Sanilac
-882
-0.93
-
-Antrim
-835
-1.79
-
-Hillsdale
-816
-0.70
-
-Clare
-812
-1.23
+Tuscola
+981
+0.89
 
 Huron
-799
-0.78
+862
+0.84
 
-Oceana
-754
-1.28
-
-Newaygo
-753
-0.70
-
-Iosco
-681
-0.97
-
-Ogemaw
-676
-1.24
-
-Manistee
-666
-1.01
-
-Gratiot
-637
-0.57
-
-Gogebic
-560
-1.22
-
-Menominee
-484
+Hillsdale
+833
 0.74
 
-Gladwin
-465
-1.11
+Antrim
+815
+1.78
 
-Arenac
-346
-0.93
+Clare
+796
+1.14
+
+Sanilac
+780
+0.83
+
+Manistee
+735
+1.09
+
+Ogemaw
+729
+1.32
+
+Oceana
+694
+1.18
+
+Gratiot
+690
+0.60
+
+Iosco
+656
+0.95
+
+Gogebic
+550
+1.25
+
+Alger
+518
+2.13
+
+Menominee
+492
+0.76
+
+Gladwin
+443
+1.09
+
+Kalkaska
+431
+0.97
+
+Luce
+357
+2.04
 
 Iron
-314
-1.01
-
-Schoolcraft
-305
-1.24
+304
+0.99
 
 Osceola
-282
-0.39
+258
+0.37
 
 Montmorency
-189
-1.01
+193
+1.04
 
 Alcona
 Not disclosed
 —
 
-Alger
+Arenac
 Not disclosed
 —
 
@@ -8507,10 +8507,6 @@ Crawford
 Not disclosed
 —
 
-Kalkaska
-Not disclosed
-—
-
 Keweenaw
 Not disclosed
 —
@@ -8519,11 +8515,11 @@ Lake
 Not disclosed
 —
 
-Luce
+Missaukee
 Not disclosed
 —
 
-Missaukee
+Newaygo
 Not disclosed
 —
 
@@ -8539,629 +8535,597 @@ Presque Isle
 Not disclosed
 —
 
-Other services, except public administration — private employment by county &middot; BLS QCEW, 2024 annual averages
+Schoolcraft
+Not disclosed
+—
+
+Other services, except public administration — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
-Wayne
-22,945
-1.05
-
 Oakland
-21,497
-0.99
+22,562
+1.04
+
+Wayne
+22,494
+1.04
 
 Kent
-13,090
-1.05
+13,393
+1.07
 
 Macomb
-9,649
-0.95
-
-Ingham
-6,042
-1.29
-
-Washtenaw
-4,901
-0.75
-
-Ottawa
-4,789
-1.21
-
-Genesee
-4,021
-1.00
-
-Kalamazoo
-4,000
-1.10
-
-Saginaw
-2,539
-1.06
-
-Berrien
-2,176
-1.19
-
-Livingston
-2,157
-1.11
-
-Grand Traverse
-1,858
-1.19
-
-Muskegon
-1,828
-0.96
-
-Midland
-1,816
-1.58
-
-Jackson
-1,765
-1.05
-
-Eaton
-1,565
-1.17
-
-Calhoun
-1,363
-0.83
-
-St. Clair
-1,301
-1.02
-
-Monroe
-1,199
-0.97
-
-Allegan
-1,169
+9,385
 0.94
 
-Bay
-1,020
+Ingham
+5,813
+1.25
+
+Washtenaw
+5,388
+0.82
+
+Ottawa
+4,582
+1.18
+
+Kalamazoo
+4,294
+1.17
+
+Genesee
+4,011
 0.99
 
-Delta
-885
-2.12
-
-Marquette
-860
-1.08
-
-Lenawee
-757
+Saginaw
+2,342
 0.97
 
-Lapeer
-753
-1.14
+Berrien
+2,232
+1.23
+
+Livingston
+2,123
+1.09
+
+Midland
+2,041
+1.77
+
+Jackson
+1,972
+1.18
+
+Grand Traverse
+1,807
+1.15
+
+Muskegon
+1,790
+0.96
+
+Eaton
+1,610
+1.18
+
+St. Clair
+1,353
+1.08
+
+Calhoun
+1,334
+0.81
+
+Monroe
+1,332
+1.09
+
+Bay
+1,225
+1.19
+
+Allegan
+1,167
+0.89
 
 Clinton
-750
-1.34
+901
+1.60
+
+Delta
+877
+2.10
+
+Lapeer
+762
+1.14
+
+Lenawee
+762
+0.98
 
 Emmet
-682
-1.28
+733
+1.37
 
 St. Joseph
-641
-1.01
+643
+1.03
 
-Cass
-598
-2.12
+Ionia
+560
+0.99
 
 Newaygo
 558
-1.56
+1.58
 
 Van Buren
-538
+541
 0.83
 
-Ionia
-526
-0.94
-
-Isabella
-524
-0.65
-
 Mecosta
-514
-1.34
+522
+1.42
+
+Branch
+474
+1.03
 
 Barry
-476
-1.19
+464
+1.16
 
 Otsego
-466
+460
 1.45
 
+Montcalm
+433
+0.88
+
 Alpena
-430
+426
 1.17
 
 Wexford
-409
-1.03
+423
+1.08
 
 Clare
-408
-1.87
-
-Montcalm
-408
-0.83
+414
+1.80
 
 Shiawassee
 389
-0.83
+0.84
+
+Houghton
+372
+0.99
 
 Tuscola
 362
 0.99
 
-Houghton
-351
-0.96
-
-Huron
-344
-1.02
-
-Branch
-333
-0.73
+Sanilac
+332
+1.07
 
 Hillsdale
-323
-0.83
+322
+0.86
 
-Gladwin
-304
-2.20
+Huron
+317
+0.93
 
 Gratiot
-282
+290
 0.76
-
-Menominee
-270
-1.25
 
 Charlevoix
-266
-0.80
+287
+0.88
+
+Cass
+265
+0.92
+
+Menominee
+262
+1.23
 
 Dickinson
-264
-0.64
-
-Gogebic
-254
-1.67
-
-Sanilac
-238
-0.76
-
-Manistee
-237
-1.08
+258
+0.63
 
 Mason
-236
+235
 0.77
 
-Iosco
-230
-0.99
-
 Leelanau
-227
-1.13
+232
+1.05
 
-Osceola
-217
-0.90
+Manistee
+232
+1.04
 
-Roscommon
-215
-1.11
-
-Chippewa
-211
-0.55
-
-Ogemaw
-206
-1.14
+Iosco
+224
+0.98
 
 Cheboygan
-202
+219
+1.19
+
+Chippewa
+218
+0.57
+
+Osceola
+213
+0.92
+
+Roscommon
+212
+1.16
+
+Gladwin
+201
+1.49
+
+Ogemaw
+199
 1.09
 
 Antrim
-174
-1.13
-
-Iron
-165
-1.61
+178
+1.17
 
 Benzie
-158
+161
 1.07
+
+Iron
+159
+1.57
 
 Crawford
-153
-1.24
+154
+1.26
 
-Mackinac
-144
-0.99
+Gogebic
+151
+1.04
 
 Oceana
-142
-0.73
+149
+0.76
 
 Kalkaska
-114
-0.78
+131
+0.89
+
+Mackinac
+130
+0.90
 
 Missaukee
-112
-0.88
+116
+0.94
 
 Presque Isle
-95
-1.22
+91
+1.18
 
 Schoolcraft
-87
-1.07
-
-Alcona
-82
-1.82
+88
+1.06
 
 Arenac
 79
-0.64
+0.67
+
+Alcona
+76
+1.65
 
 Oscoda
 73
 1.78
 
 Lake
-51
-0.98
+49
+0.96
 
 Montmorency
-50
-0.81
-
-Luce
-42
-0.78
-
-Alger
-34
-0.43
-
-Ontonagon
-34
-0.84
-
-Keweenaw
-14
-0.97
+49
+0.79
 
 Baraga
+42
+0.47
+
+Luce
+41
+0.71
+
+Alger
 Not disclosed
 —
 
-Unclassified — private employment by county &middot; BLS QCEW, 2024 annual averages
+Isabella
+Not disclosed
+—
+
+Keweenaw
+Not disclosed
+—
+
+Marquette
+Not disclosed
+—
+
+Ontonagon
+Not disclosed
+—
+
+Unclassified — private employment by county &middot; BLS QCEW, 2025 annual averages
 
 County
 Employment (private)
 Location quotient
 
 Oakland
-2,660
-2.64
+2,340
+2.52
 
 Wayne
-1,638
-1.62
+1,524
+1.64
 
 Kent
-1,175
-2.03
+1,153
+2.14
 
 Macomb
-1,132
-2.41
-
-Washtenaw
-478
-1.57
-
-Livingston
-410
-4.57
-
-Ottawa
-339
-1.84
-
-Ingham
-329
-1.52
-
-Genesee
-307
-1.65
-
-Kalamazoo
-248
-1.47
-
-Muskegon
-200
-2.26
-
-Jackson
-191
-2.45
-
-Grand Traverse
-183
-2.53
-
-Berrien
-171
-2.02
-
-Allegan
-159
-2.76
-
-Monroe
-152
-2.65
-
-Eaton
-120
-1.93
-
-Saginaw
-118
-1.06
-
-St. Joseph
-112
-3.81
-
-Clinton
-103
-3.97
-
-Calhoun
-100
-1.32
-
-Lenawee
-100
-2.78
-
-Dickinson
-88
-4.57
-
-Lapeer
-88
-2.87
-
-Midland
-84
-1.57
-
-Marquette
-72
-1.96
-
-Van Buren
-72
-2.39
-
-Bay
-68
-1.43
-
-Alpena
-66
-3.88
-
-St. Clair
-66
-1.12
-
-Emmet
-62
-2.51
-
-Hillsdale
-60
-3.35
-
-Mecosta
-58
-3.26
-
-Montcalm
-56
-2.47
-
-Sanilac
-50
-3.44
-
-Leelanau
-49
-5.27
-
-Huron
-44
-2.81
-
-Ionia
-42
-1.63
-
-Isabella
-42
-1.13
-
-Charlevoix
-36
-2.35
-
-Cass
-34
-2.60
-
-Iron
-34
-7.15
-
-Otsego
-34
-2.28
-
-Tuscola
-34
-2.01
-
-Chippewa
-32
-1.79
-
-Delta
-28
-1.45
-
-Shiawassee
-26
-1.20
-
-Antrim
-25
-3.50
-
-Roscommon
-25
-2.79
-
-Branch
-22
-1.04
-
-Cheboygan
-22
+1,100
 2.57
 
-Houghton
-22
-1.30
+Washtenaw
+440
+1.55
+
+Livingston
+378
+4.52
+
+Ottawa
+296
+1.77
+
+Ingham
+286
+1.43
+
+Genesee
+270
+1.55
+
+Kalamazoo
+214
+1.36
+
+Grand Traverse
+188
+2.79
+
+Muskegon
+185
+2.31
+
+Berrien
+149
+1.90
+
+Monroe
+148
+2.82
+
+Jackson
+132
+1.84
+
+Allegan
+124
+2.20
+
+Saginaw
+113
+1.09
+
+Clinton
+104
+4.30
+
+Eaton
+100
+1.70
+
+Calhoun
+96
+1.35
+
+Lapeer
+84
+2.93
+
+Lenawee
+83
+2.49
+
+Dickinson
+79
+4.47
+
+Alpena
+64
+4.09
+
+St. Clair
+64
+1.19
+
+Emmet
+60
+2.60
+
+Bay
+59
+1.34
+
+Hillsdale
+58
+3.60
+
+Montcalm
+58
+2.74
+
+Sanilac
+52
+3.89
+
+Mecosta
+50
+3.16
+
+Leelanau
+48
+5.05
+
+Ionia
+45
+1.85
+
+Branch
+40
+2.01
+
+Huron
+40
+2.73
+
+Oceana
+39
+4.64
+
+Cass
+37
+2.99
+
+Iron
+32
+7.35
+
+Chippewa
+31
+1.88
+
+Otsego
+31
+2.28
+
+Charlevoix
+30
+2.13
+
+Tuscola
+29
+1.85
 
 Barry
-21
-1.14
+28
+1.63
 
-Iosco
-21
-1.95
+Houghton
+26
+1.61
 
-Clare
-20
-1.98
+Shiawassee
+25
+1.25
+
+Cheboygan
+24
+3.03
+
+Gladwin
+23
+3.96
 
 Newaygo
-20
-1.21
+22
+1.44
 
-Wexford
+Clare
 19
-1.04
+1.92
 
 Mason
 18
-1.27
+1.37
+
+Roscommon
+18
+2.28
+
+Iosco
+17
+1.73
+
+Wexford
+16
+0.95
 
 Gratiot
-17
-0.99
+15
+0.91
+
+Antrim
+13
+1.99
 
 Presque Isle
 13
-3.59
+3.93
 
-Gogebic
+Benzie
 12
-1.71
+1.85
 
 Kalkaska
 12
-1.77
+1.89
 
-Alcona
-11
-5.28
-
-Gladwin
-11
-1.72
-
-Benzie
-10
-1.47
-
-Oscoda
-7
-3.68
-
-Missaukee
+Manistee
 6
-1.02
+0.62
 
 Lake
 5
-2.08
+2.29
 
-Manistee
-3
-0.30
-
-Crawford
-1
-0.17
+Alcona
+Not disclosed
+—
 
 Alger
 Not disclosed
@@ -9172,6 +9136,22 @@ Not disclosed
 —
 
 Baraga
+Not disclosed
+—
+
+Crawford
+Not disclosed
+—
+
+Delta
+Not disclosed
+—
+
+Gogebic
+Not disclosed
+—
+
+Isabella
 Not disclosed
 —
 
@@ -9187,15 +9167,23 @@ Mackinac
 Not disclosed
 —
 
+Marquette
+Not disclosed
+—
+
 Menominee
 Not disclosed
 —
 
-Montmorency
+Midland
 Not disclosed
 —
 
-Oceana
+Missaukee
+Not disclosed
+—
+
+Montmorency
 Not disclosed
 —
 
@@ -9211,13 +9199,25 @@ Osceola
 Not disclosed
 —
 
+Oscoda
+Not disclosed
+—
+
 Schoolcraft
+Not disclosed
+—
+
+St. Joseph
+Not disclosed
+—
+
+Van Buren
 Not disclosed
 —
 
 Shading is the employment level on each industry's own scale — never the location quotient, which appears only in the table (the county's share of its jobs in the industry, against the national share; above 1.00 = more concentrated than the nation). Industry rows are QCEW's private-ownership rows — the grain at which QCEW publishes county-by-industry data; the All-industries layer is the published county total across all ownerships. &ldquo;Not disclosed&rdquo; means the source publishes no value for that county and industry (suppressed, or no establishments reported) — never zero.
 
-Where the completions are — postsecondary institutions, 2023–24 awards
+Where the completions are — postsecondary institutions, 2023-24 awards
 
 All fields
 
@@ -9231,9 +9231,9 @@ Engineering
 
 Computer & information sciences
 
-Education
-
 Biological & biomedical sciences
+
+Education
 
 Psychology
 
@@ -9251,9 +9251,9 @@ Communication & journalism
 
 Homeland security & protective services
 
-Multi/interdisciplinary studies
-
 Parks, recreation & fitness
+
+Multi/interdisciplinary studies
 
 Mechanic & repair technologies
 
@@ -9263,25 +9263,25 @@ Transportation
 
 Physical sciences
 
-Mathematics & statistics
-
 Natural resources & conservation
 
-English & literature
+Mathematics & statistics
 
 Precision production
+
+English & literature
 
 Family & consumer sciences
 
 Agriculture
-
-Languages & linguistics
 
 Theology & religious vocations
 
 Construction trades
 
 Architecture
+
+Languages & linguistics
 
 History
 
@@ -9299,41 +9299,41 @@ Military technologies
 
 Largest by completions — All fields
 
-University of Michigan-Ann Arbor &middot; Ann Arbor 17,020
+University of Michigan-Ann Arbor &middot; Ann Arbor 16,039
 
-Michigan State University &middot; East Lansing 13,017
+Michigan State University &middot; East Lansing 12,632
 
-Wayne State University &middot; Detroit 6,566
+Wayne State University &middot; Detroit 6,378
 
-Grand Valley State University &middot; Allendale 6,172
+Grand Valley State University &middot; Allendale 5,519
 
-Western Michigan University &middot; Kalamazoo 4,454
+Western Michigan University &middot; Kalamazoo 4,259
 
-Central Michigan University &middot; Mount Pleasant 4,372
+Oakland University &middot; Rochester Hills 4,158
 
-Oakland University &middot; Rochester Hills 4,198
+Central Michigan University &middot; Mount Pleasant 4,152
 
 Washtenaw Community College &middot; Ann Arbor 3,634
 
 Plus 151 more institutions on the map; the map carries every institution in the layer.
 
-Listed without a dot (the source publishes no completions for 2023–24): ACUPUNCTURE AND MASSAGE SCHOOL OF ORIENTAL MEDICINE &middot; SOUTHFILED USA.
+Listed without a dot (the source publishes no completions for 2023-24): ACUPUNCTURE AND MASSAGE SCHOOL OF ORIENTAL MEDICINE &middot; SOUTHFILED USA.
 
 Largest by completions — Health professions
 
 University of Michigan-Ann Arbor &middot; Ann Arbor 1,294
 
-Wayne State University &middot; Detroit 1,251
+Wayne State University &middot; Detroit 1,250
 
-Michigan State University &middot; East Lansing 1,247
+Michigan State University &middot; East Lansing 1,243
 
 Oakland University &middot; Rochester Hills 1,100
 
-Grand Valley State University &middot; Allendale 992
+Grand Valley State University &middot; Allendale 986
 
 University of Michigan-Flint &middot; Flint 656
 
-Eastern Michigan University &middot; Ypsilanti 638
+Eastern Michigan University &middot; Ypsilanti 637
 
 Ferris State University &middot; Big Rapids 596
 
@@ -9341,21 +9341,21 @@ Plus 93 more institutions on the map; the map carries every institution in the l
 
 Largest by completions — Business & management
 
-Michigan State University &middot; East Lansing 2,160
+Michigan State University &middot; East Lansing 2,158
 
-University of Michigan-Ann Arbor &middot; Ann Arbor 1,810
+University of Michigan-Ann Arbor &middot; Ann Arbor 1,676
 
-Wayne State University &middot; Detroit 1,358
+Wayne State University &middot; Detroit 1,208
 
-Grand Valley State University &middot; Allendale 1,317
+Grand Valley State University &middot; Allendale 1,091
 
-Central Michigan University &middot; Mount Pleasant 1,063
+Central Michigan University &middot; Mount Pleasant 984
 
-Western Michigan University &middot; Kalamazoo 972
+Western Michigan University &middot; Kalamazoo 953
 
-Northwood University &middot; Midland 723
+Northwood University &middot; Midland 707
 
-Oakland University &middot; Rochester Hills 701
+Oakland University &middot; Rochester Hills 696
 
 Plus 66 more institutions on the map; the map carries every institution in the layer.
 
@@ -9383,33 +9383,33 @@ Largest by completions — Engineering
 
 University of Michigan-Ann Arbor &middot; Ann Arbor 2,900
 
-Michigan Technological University &middot; Houghton 960
+Michigan Technological University &middot; Houghton 949
 
-Michigan State University &middot; East Lansing 932
+Michigan State University &middot; East Lansing 924
 
 University of Michigan-Dearborn &middot; Dearborn 622
 
-Wayne State University &middot; Detroit 425
+Wayne State University &middot; Detroit 424
 
-Oakland University &middot; Rochester Hills 371
+Oakland University &middot; Rochester Hills 365
 
 University of Detroit Mercy &middot; Detroit 341
 
-Kettering University &middot; Flint 321
+Kettering University &middot; Flint 313
 
 Plus 35 more institutions on the map; the map carries every institution in the layer.
 
 Largest by completions — Computer & information sciences
 
-University of Michigan-Ann Arbor &middot; Ann Arbor 1,980
+University of Michigan-Ann Arbor &middot; Ann Arbor 1,889
 
-Central Michigan University &middot; Mount Pleasant 569
+Central Michigan University &middot; Mount Pleasant 567
 
-Michigan State University &middot; East Lansing 466
+Michigan State University &middot; East Lansing 465
 
 University of Michigan-Dearborn &middot; Dearborn 369
 
-Grand Valley State University &middot; Allendale 351
+Grand Valley State University &middot; Allendale 349
 
 DSDT &middot; Detroit 260
 
@@ -9419,63 +9419,63 @@ Oakland University &middot; Rochester Hills 238
 
 Plus 59 more institutions on the map; the map carries every institution in the layer.
 
-Largest by completions — Education
-
-Grand Valley State University &middot; Allendale 687
-
-Eastern Michigan University &middot; Ypsilanti 591
-
-Central Michigan University &middot; Mount Pleasant 504
-
-Michigan State University &middot; East Lansing 503
-
-Western Michigan University &middot; Kalamazoo 482
-
-Wayne State University &middot; Detroit 359
-
-Oakland University &middot; Rochester Hills 358
-
-Saginaw Valley State University &middot; University Center 229
-
-Plus 47 more institutions on the map; the map carries every institution in the layer.
-
 Largest by completions — Biological & biomedical sciences
 
-Michigan State University &middot; East Lansing 1,460
+Michigan State University &middot; East Lansing 1,407
 
-University of Michigan-Ann Arbor &middot; Ann Arbor 1,341
+University of Michigan-Ann Arbor &middot; Ann Arbor 1,302
 
-Grand Valley State University &middot; Allendale 422
+Grand Valley State University &middot; Allendale 405
 
-Wayne State University &middot; Detroit 275
+Wayne State University &middot; Detroit 273
 
-Central Michigan University &middot; Mount Pleasant 185
+Central Michigan University &middot; Mount Pleasant 181
 
 Oakland University &middot; Rochester Hills 168
 
-Western Michigan University &middot; Kalamazoo 165
+Western Michigan University &middot; Kalamazoo 161
 
 University of Detroit Mercy &middot; Detroit 143
 
 Plus 33 more institutions on the map; the map carries every institution in the layer.
 
+Largest by completions — Education
+
+Eastern Michigan University &middot; Ypsilanti 537
+
+Central Michigan University &middot; Mount Pleasant 498
+
+Michigan State University &middot; East Lansing 497
+
+Western Michigan University &middot; Kalamazoo 447
+
+Grand Valley State University &middot; Allendale 401
+
+Wayne State University &middot; Detroit 359
+
+Oakland University &middot; Rochester Hills 358
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 227
+
+Plus 47 more institutions on the map; the map carries every institution in the layer.
+
 Largest by completions — Psychology
 
-University of Michigan-Ann Arbor &middot; Ann Arbor 778
+University of Michigan-Ann Arbor &middot; Ann Arbor 712
 
-Michigan State University &middot; East Lansing 630
+Michigan State University &middot; East Lansing 551
 
-Wayne State University &middot; Detroit 464
+Wayne State University &middot; Detroit 458
 
-Grand Valley State University &middot; Allendale 343
+Grand Valley State University &middot; Allendale 307
 
-Central Michigan University &middot; Mount Pleasant 253
+Western Michigan University &middot; Kalamazoo 217
 
-Western Michigan University &middot; Kalamazoo 233
+Oakland University &middot; Rochester Hills 216
 
-Oakland University &middot; Rochester Hills 219
+Central Michigan University &middot; Mount Pleasant 209
 
-Eastern Michigan University &middot; Ypsilanti 199
+Eastern Michigan University &middot; Ypsilanti 193
 
 Plus 39 more institutions on the map; the map carries every institution in the layer.
 
@@ -9501,35 +9501,35 @@ Plus 48 more institutions on the map; the map carries every institution in the l
 
 Largest by completions — Social sciences
 
-University of Michigan-Ann Arbor &middot; Ann Arbor 1,364
+University of Michigan-Ann Arbor &middot; Ann Arbor 1,220
 
-Michigan State University &middot; East Lansing 799
+Michigan State University &middot; East Lansing 749
 
-Wayne State University &middot; Detroit 217
+Wayne State University &middot; Detroit 210
 
-Grand Valley State University &middot; Allendale 201
+Grand Valley State University &middot; Allendale 184
 
-Eastern Michigan University &middot; Ypsilanti 140
+Eastern Michigan University &middot; Ypsilanti 133
 
-University of Michigan-Dearborn &middot; Dearborn 133
+University of Michigan-Dearborn &middot; Dearborn 121
 
-Central Michigan University &middot; Mount Pleasant 113
+Hillsdale College &middot; Hillsdale 100
 
-Hillsdale College &middot; Hillsdale 104
+Central Michigan University &middot; Mount Pleasant 91
 
 Plus 28 more institutions on the map; the map carries every institution in the layer.
 
 Largest by completions — Visual & performing arts
 
-University of Michigan-Ann Arbor &middot; Ann Arbor 563
+University of Michigan-Ann Arbor &middot; Ann Arbor 536
 
-Michigan State University &middot; East Lansing 438
+Michigan State University &middot; East Lansing 426
 
-Western Michigan University &middot; Kalamazoo 255
+Western Michigan University &middot; Kalamazoo 247
 
-Grand Valley State University &middot; Allendale 177
+Grand Valley State University &middot; Allendale 172
 
-Oakland University &middot; Rochester Hills 160
+Oakland University &middot; Rochester Hills 159
 
 Wayne State University &middot; Detroit 152
 
@@ -9565,11 +9565,11 @@ University of Michigan-Ann Arbor &middot; Ann Arbor 687
 
 Wayne State University &middot; Detroit 367
 
-Grand Valley State University &middot; Allendale 276
+Grand Valley State University &middot; Allendale 275
 
 Eastern Michigan University &middot; Ypsilanti 177
 
-Central Michigan University &middot; Mount Pleasant 176
+Central Michigan University &middot; Mount Pleasant 174
 
 Oakland University &middot; Rochester Hills 162
 
@@ -9581,27 +9581,27 @@ Plus 34 more institutions on the map; the map carries every institution in the l
 
 Largest by completions — Communication & journalism
 
-Michigan State University &middot; East Lansing 1,001
+Michigan State University &middot; East Lansing 978
 
-University of Michigan-Ann Arbor &middot; Ann Arbor 241
+Grand Valley State University &middot; Allendale 222
 
-Grand Valley State University &middot; Allendale 225
+University of Michigan-Ann Arbor &middot; Ann Arbor 219
 
-Central Michigan University &middot; Mount Pleasant 166
+Central Michigan University &middot; Mount Pleasant 161
 
-Wayne State University &middot; Detroit 141
+Wayne State University &middot; Detroit 138
 
-Eastern Michigan University &middot; Ypsilanti 117
+Eastern Michigan University &middot; Ypsilanti 108
 
-Oakland University &middot; Rochester Hills 105
+Oakland University &middot; Rochester Hills 103
 
-Western Michigan University &middot; Kalamazoo 103
+Western Michigan University &middot; Kalamazoo 94
 
 Plus 38 more institutions on the map; the map carries every institution in the layer.
 
 Largest by completions — Homeland security & protective services
 
-Michigan State University &middot; East Lansing 371
+Michigan State University &middot; East Lansing 343
 
 Ferris State University &middot; Big Rapids 246
 
@@ -9611,43 +9611,23 @@ Washtenaw Community College &middot; Ann Arbor 140
 
 Wayne State University &middot; Detroit 140
 
-Grand Valley State University &middot; Allendale 117
+Madonna University &middot; Livonia 113
 
-Madonna University &middot; Livonia 114
+Grand Valley State University &middot; Allendale 107
 
 Delta College &middot; University Center 93
 
 Plus 44 more institutions on the map; the map carries every institution in the layer.
 
-Largest by completions — Multi/interdisciplinary studies
-
-University of Michigan-Ann Arbor &middot; Ann Arbor 848
-
-Michigan State University &middot; East Lansing 370
-
-Western Michigan University &middot; Kalamazoo 289
-
-Eastern Michigan University &middot; Ypsilanti 178
-
-University of Michigan-Dearborn &middot; Dearborn 93
-
-Michigan Technological University &middot; Houghton 92
-
-Grand Valley State University &middot; Allendale 70
-
-University of Michigan-Flint &middot; Flint 65
-
-Plus 34 more institutions on the map; the map carries every institution in the layer.
-
 Largest by completions — Parks, recreation & fitness
 
 University of Michigan-Ann Arbor &middot; Ann Arbor 377
 
-Michigan State University &middot; East Lansing 325
+Michigan State University &middot; East Lansing 323
 
-Grand Valley State University &middot; Allendale 238
+Grand Valley State University &middot; Allendale 235
 
-Central Michigan University &middot; Mount Pleasant 186
+Central Michigan University &middot; Mount Pleasant 179
 
 Wayne State University &middot; Detroit 159
 
@@ -9656,6 +9636,26 @@ Western Michigan University &middot; Kalamazoo 116
 Adrian College &middot; Adrian 72
 
 Northern Michigan University &middot; Marquette 72
+
+Plus 34 more institutions on the map; the map carries every institution in the layer.
+
+Largest by completions — Multi/interdisciplinary studies
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 730
+
+Michigan State University &middot; East Lansing 342
+
+Western Michigan University &middot; Kalamazoo 277
+
+Eastern Michigan University &middot; Ypsilanti 177
+
+University of Michigan-Dearborn &middot; Dearborn 93
+
+Michigan Technological University &middot; Houghton 91
+
+Grand Valley State University &middot; Allendale 69
+
+University of Michigan-Flint &middot; Flint 65
 
 Plus 34 more institutions on the map; the map carries every institution in the layer.
 
@@ -9681,7 +9681,7 @@ Plus 30 more institutions on the map; the map carries every institution in the l
 
 Largest by completions — Legal professions
 
-Michigan State University &middot; East Lansing 397
+Michigan State University &middot; East Lansing 392
 
 University of Michigan-Ann Arbor &middot; Ann Arbor 358
 
@@ -9691,9 +9691,9 @@ Wayne State University &middot; Detroit 158
 
 Thomas M Cooley Law School &middot; Lansing 142
 
-Grand Valley State University &middot; Allendale 56
-
 Henry Ford College &middot; Dearborn 47
+
+Grand Valley State University &middot; Allendale 44
 
 Oakland Community College &middot; Auburn Hills 39
 
@@ -9703,7 +9703,7 @@ Largest by completions — Transportation
 
 U.S. Truck Driver Training School &middot; Sterling Heights 790
 
-Western Michigan University &middot; Kalamazoo 266
+Western Michigan University &middot; Kalamazoo 243
 
 Wayne County Community College District &middot; Detroit 234
 
@@ -9721,55 +9721,35 @@ Plus 2 more institutions on the map; the map carries every institution in the la
 
 Largest by completions — Physical sciences
 
-University of Michigan-Ann Arbor &middot; Ann Arbor 392
+University of Michigan-Ann Arbor &middot; Ann Arbor 364
 
-Michigan State University &middot; East Lansing 229
+Michigan State University &middot; East Lansing 224
 
 Wayne State University &middot; Detroit 124
 
 Michigan Technological University &middot; Houghton 72
 
-Western Michigan University &middot; Kalamazoo 48
+Western Michigan University &middot; Kalamazoo 47
 
-Central Michigan University &middot; Mount Pleasant 42
+Central Michigan University &middot; Mount Pleasant 41
 
-Eastern Michigan University &middot; Ypsilanti 36
+Eastern Michigan University &middot; Ypsilanti 35
 
 Jackson College &middot; Jackson 35
 
 Plus 24 more institutions on the map; the map carries every institution in the layer.
 
-Largest by completions — Mathematics & statistics
-
-University of Michigan-Ann Arbor &middot; Ann Arbor 535
-
-Michigan State University &middot; East Lansing 145
-
-Grand Valley State University &middot; Allendale 95
-
-Michigan Technological University &middot; Houghton 82
-
-Wayne State University &middot; Detroit 43
-
-Central Michigan University &middot; Mount Pleasant 39
-
-Hillsdale College &middot; Hillsdale 39
-
-Western Michigan University &middot; Kalamazoo 34
-
-Plus 22 more institutions on the map; the map carries every institution in the layer.
-
 Largest by completions — Natural resources & conservation
 
-University of Michigan-Ann Arbor &middot; Ann Arbor 364
+University of Michigan-Ann Arbor &middot; Ann Arbor 336
 
-Michigan State University &middot; East Lansing 232
+Michigan State University &middot; East Lansing 223
 
-Grand Valley State University &middot; Allendale 96
+Grand Valley State University &middot; Allendale 91
 
-Northern Michigan University &middot; Marquette 85
+Northern Michigan University &middot; Marquette 84
 
-Michigan Technological University &middot; Houghton 70
+Michigan Technological University &middot; Houghton 67
 
 Central Michigan University &middot; Mount Pleasant 43
 
@@ -9779,25 +9759,25 @@ Oakland University &middot; Rochester Hills 27
 
 Plus 20 more institutions on the map; the map carries every institution in the layer.
 
-Largest by completions — English & literature
+Largest by completions — Mathematics & statistics
 
-University of Michigan-Ann Arbor &middot; Ann Arbor 157
+University of Michigan-Ann Arbor &middot; Ann Arbor 450
 
-Grand Valley State University &middot; Allendale 111
+Michigan State University &middot; East Lansing 134
 
-Michigan State University &middot; East Lansing 103
+Grand Valley State University &middot; Allendale 88
 
-Oakland University &middot; Rochester Hills 86
+Michigan Technological University &middot; Houghton 76
 
-Western Michigan University &middot; Kalamazoo 64
+Wayne State University &middot; Detroit 43
 
-Wayne State University &middot; Detroit 56
+Central Michigan University &middot; Mount Pleasant 36
 
-Central Michigan University &middot; Mount Pleasant 53
+Western Michigan University &middot; Kalamazoo 32
 
-Northern Michigan University &middot; Marquette 36
+Hillsdale College &middot; Hillsdale 28
 
-Plus 29 more institutions on the map; the map carries every institution in the layer.
+Plus 22 more institutions on the map; the map carries every institution in the layer.
 
 Largest by completions — Precision production
 
@@ -9819,13 +9799,33 @@ Kalamazoo Valley Community College &middot; Kalamazoo 43
 
 Plus 24 more institutions on the map; the map carries every institution in the layer.
 
+Largest by completions — English & literature
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 125
+
+Grand Valley State University &middot; Allendale 106
+
+Michigan State University &middot; East Lansing 99
+
+Oakland University &middot; Rochester Hills 84
+
+Wayne State University &middot; Detroit 55
+
+Western Michigan University &middot; Kalamazoo 55
+
+Central Michigan University &middot; Mount Pleasant 52
+
+Northern Michigan University &middot; Marquette 36
+
+Plus 28 more institutions on the map; the map carries every institution in the layer.
+
 Largest by completions — Family & consumer sciences
 
 Wayne State University &middot; Detroit 152
 
-Michigan State University &middot; East Lansing 96
+Michigan State University &middot; East Lansing 95
 
-Central Michigan University &middot; Mount Pleasant 71
+Central Michigan University &middot; Mount Pleasant 66
 
 Grand Rapids Community College &middot; Grand Rapids 61
 
@@ -9841,7 +9841,7 @@ Plus 21 more institutions on the map; the map carries every institution in the l
 
 Largest by completions — Agriculture
 
-Michigan State University &middot; East Lansing 549
+Michigan State University &middot; East Lansing 547
 
 Baker College &middot; Owosso 58
 
@@ -9853,35 +9853,15 @@ Ross Medical Education Center-Canton &middot; Canton 20
 
 Ross Medical Education Center-Portage &middot; Portage 15
 
-Andrews University &middot; Berrien Springs 9
-
 Michigan Career and Technical Institute &middot; Plainwell 9
 
-Plus 20 more institutions on the map; the map carries every institution in the layer.
+Ross Medical Education Center-New Baltimore &middot; New Baltimore 9
 
-Largest by completions — Languages & linguistics
-
-University of Michigan-Ann Arbor &middot; Ann Arbor 221
-
-Michigan State University &middot; East Lansing 109
-
-Kalamazoo College &middot; Kalamazoo 51
-
-Wayne State University &middot; Detroit 51
-
-Western Michigan University &middot; Kalamazoo 45
-
-Hope College &middot; Holland 37
-
-Oakland University &middot; Rochester Hills 36
-
-Grand Valley State University &middot; Allendale 33
-
-Plus 23 more institutions on the map; the map carries every institution in the layer.
+Plus 19 more institutions on the map; the map carries every institution in the layer.
 
 Largest by completions — Theology & religious vocations
 
-Andrews University &middot; Berrien Springs 183
+Andrews University &middot; Berrien Springs 177
 
 Western Theological Seminary &middot; Holland 159
 
@@ -9929,7 +9909,7 @@ University of Detroit Mercy &middot; Detroit 74
 
 Henry Ford College &middot; Dearborn 36
 
-Andrews University &middot; Berrien Springs 27
+Andrews University &middot; Berrien Springs 25
 
 Wayne State University &middot; Detroit 22
 
@@ -9939,23 +9919,43 @@ Eastern Michigan University &middot; Ypsilanti 11
 
 Plus 4 more institutions on the map; the map carries every institution in the layer.
 
+Largest by completions — Languages & linguistics
+
+University of Michigan-Ann Arbor &middot; Ann Arbor 131
+
+Michigan State University &middot; East Lansing 70
+
+Wayne State University &middot; Detroit 39
+
+University of Detroit Mercy &middot; Detroit 30
+
+Grand Valley State University &middot; Allendale 26
+
+Western Michigan University &middot; Kalamazoo 23
+
+Oakland University &middot; Rochester Hills 21
+
+Kalamazoo College &middot; Kalamazoo 15
+
+Plus 22 more institutions on the map; the map carries every institution in the layer.
+
 Largest by completions — History
 
-University of Michigan-Ann Arbor &middot; Ann Arbor 120
+University of Michigan-Ann Arbor &middot; Ann Arbor 97
 
-Grand Valley State University &middot; Allendale 66
+Grand Valley State University &middot; Allendale 64
 
-Michigan State University &middot; East Lansing 54
+Michigan State University &middot; East Lansing 47
 
-Hillsdale College &middot; Hillsdale 51
+Hillsdale College &middot; Hillsdale 46
 
-Oakland University &middot; Rochester Hills 40
+Oakland University &middot; Rochester Hills 39
 
-Wayne State University &middot; Detroit 33
+Wayne State University &middot; Detroit 32
 
-Eastern Michigan University &middot; Ypsilanti 26
+Eastern Michigan University &middot; Ypsilanti 24
 
-Central Michigan University &middot; Mount Pleasant 24
+Central Michigan University &middot; Mount Pleasant 22
 
 Plus 23 more institutions on the map; the map carries every institution in the layer.
 
@@ -9981,41 +9981,41 @@ Plus 14 more institutions on the map; the map carries every institution in the l
 
 Largest by completions — Philosophy & religious studies
 
-University of Michigan-Ann Arbor &middot; Ann Arbor 68
+University of Michigan-Ann Arbor &middot; Ann Arbor 51
 
-Hope College &middot; Holland 29
+Hillsdale College &middot; Hillsdale 20
 
-Hillsdale College &middot; Hillsdale 23
+Andrews University &middot; Berrien Springs 19
 
-Andrews University &middot; Berrien Springs 21
+Wayne State University &middot; Detroit 19
 
-Wayne State University &middot; Detroit 21
+Hope College &middot; Holland 15
 
-Western Michigan University &middot; Kalamazoo 17
-
-Kalamazoo College &middot; Kalamazoo 13
+Western Michigan University &middot; Kalamazoo 13
 
 Cornerstone University &middot; Grand Rapids 11
+
+Sacred Heart Major Seminary &middot; Detroit 10
 
 Plus 18 more institutions on the map; the map carries every institution in the layer.
 
 Largest by completions — Area & ethnic studies
 
-University of Michigan-Ann Arbor &middot; Ann Arbor 116
+University of Michigan-Ann Arbor &middot; Ann Arbor 80
 
-Wayne State University &middot; Detroit 20
+Wayne State University &middot; Detroit 18
 
-University of Michigan-Dearborn &middot; Dearborn 18
+University of Michigan-Dearborn &middot; Dearborn 16
 
-Central Michigan University &middot; Mount Pleasant 16
+Central Michigan University &middot; Mount Pleasant 15
 
 Henry Ford College &middot; Dearborn 14
 
-Kalamazoo College &middot; Kalamazoo 14
+Kalamazoo College &middot; Kalamazoo 11
 
-Michigan State University &middot; East Lansing 13
+Michigan State University &middot; East Lansing 10
 
-Eastern Michigan University &middot; Ypsilanti 11
+Eastern Michigan University &middot; Ypsilanti 9
 
 Plus 14 more institutions on the map; the map carries every institution in the layer.
 
@@ -10049,11 +10049,11 @@ Northern Michigan University &middot; Marquette 23
 
 Lake Superior State University &middot; Sault Ste Marie 2
 
-Dots sit at the coordinates IPEDS publishes for each institution; size is completions in the selected field (all award levels). Field is the IPEDS CIP family. The list is the record; the map is the picture of it.
+Dots sit at the coordinates IPEDS publishes for each institution; size is first-major awards in the selected field (all award levels); second majors are excluded to avoid counting a degree twice. Field is the IPEDS CIP family. The list is the record; the map is the picture of it.
 
 Graduate pipelines — field of study to industry, one year out
 
-Michigan bachelor's graduates, all institutions (state aggregate) — top field-to-industry flows, one year after graduation
+Michigan bachelor's graduates, all institutions (state aggregate) — selected field-to-industry flows, one year after graduation
 
 Engineering &rarr; Manufacturing 4,345
 &middot; 1,514 in Michigan &middot; field median, year 1: $75,007
@@ -10118,7 +10118,7 @@ Employed 5 years out 71,863
 Employed 10 years out 44,483
 &middot; 13,377 in Michigan (30.1%)
 
-Top industries at year 1
+Selected industries at year 1
 
 Professional, Scientific, and Technical Services 16,524
 &middot; 5,569 in Michigan
@@ -10138,7 +10138,7 @@ Manufacturing 6,529
 Coverage:
 the University of Michigan is the only Michigan institution in PSEO — its graduates are about 10% of statewide graduates (2015 estimate, per the Census partner file). Institution-level outcomes exist for it alone; this is not a school-by-school Michigan pipeline, and no other Michigan school is ranked or implied here.
 
-Counts are graduates the Census Bureau matched to employment one year after graduation, pooled across the 2001–2021 cohorts in this release; the field median is the field's year-1 median earnings across all industries. Rows the source suppresses are excluded, never estimated.
+Counts are graduates the Census Bureau matched to employment one year after graduation. Release R2026Q2 (PSEOE MI 26 2001-2021 V4.14.1 2026Q2 pseopu_mi_20260715_1529); graduate cohorts 2001-2021 pooled. The field median is the field's year-1 median earnings across all industries. Rows the source suppresses are excluded, never estimated.
 
 GO DEEPER
 
@@ -10304,7 +10304,7 @@ USASPENDING (TREASURY)
 Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $46,457 award, October 15, 2026
 (https://www.usaspending.gov/award/CONT_AWD_36C26127P0069_3600_-NONE-_-NONE-) &middot; October 15, 2026
 
-Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce the committed datasets behind the boards: Michigan occupation projections from the Michigan Center for Data and Analytics, transcribed via the Axiovex workforce study's September edition (a direct read of MCDA's tables is pending and will supersede the transcription), and education figures as published by CEPI via MDE (February 2026), MDE (September 2025), and the House Fiscal Agency (January 2026 consensus; pupil membership is a budget estimate, as its source labels it). Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2024 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023–24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (release R2026Q2, cohorts 2001–2021) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 19, 2026 at 2:29 PM ET. See our Disclaimer
+Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce the committed datasets behind the boards: Michigan occupation projections from the Michigan Center for Data and Analytics, transcribed via the Axiovex workforce study's September edition (a direct read of MCDA's tables is pending and will supersede the transcription), and education figures as published by CEPI via MDE (February 2026), MDE (September 2025), and the House Fiscal Agency (January 2026 consensus; pupil membership is a budget estimate, as its source labels it). Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2025 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023-24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (Release R2026Q2 (PSEOE MI 26 2001-2021 V4.14.1 2026Q2 pseopu_mi_20260715_1529); graduate cohorts 2001-2021 pooled) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 19, 2026 at 2:29 PM ET. See our Disclaimer
 .
 
 THE AXIOVEX SIGNAL — MONTHLY

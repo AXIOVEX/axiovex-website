@@ -1,0 +1,83 @@
+name: Workforce LinkedIn publication
+on:
+  schedule:
+    - cron: '30 * * * *'
+  workflow_dispatch:
+    inputs:
+      action:
+        type: choice
+        default: preflight
+        options: [preflight, publish]
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: linkedin-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      LINKEDIN_COMPANY_ACCESS_TOKEN: ${{ secrets.LINKEDIN_COMPANY_ACCESS_TOKEN }}
+      LINKEDIN_COMPANY_CLIENT_SECRET: ${{ secrets.LINKEDIN_COMPANY_CLIENT_SECRET }}
+      LINKEDIN_COMPANY_EXPIRES_AT: ${{ vars.LINKEDIN_COMPANY_EXPIRES_AT }}
+      LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+      LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+      LINKEDIN_PERSON_URN: ${{ vars.LINKEDIN_PERSON_URN }}
+      LINKEDIN_EXPIRES_AT: ${{ vars.LINKEDIN_EXPIRES_AT }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test scripts/ops/linkedin.test.mjs
+      - id: plan
+        run: node scripts/ops/linkedin.mjs plan
+      - name: Verify authorized identity and token lifetime
+        if: steps.plan.outputs.due == 'true' || inputs.action == 'preflight' || github.event_name == 'schedule'
+        run: node scripts/ops/linkedin.mjs preflight
+      - name: Refuse any earlier publication attempt
+        if: steps.plan.outputs.due == 'true' && inputs.action != 'preflight'
+        env:
+          RESERVATION: ${{ steps.plan.outputs.reservation }}
+        run: |
+          count=$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=$RESERVATION" --jq '.total_count')
+          test "$count" = 0 || { echo 'Prior attempt exists; reconcile before retrying.'; exit 1; }
+          mkdir -p publication-reservation
+          printf '%s\n' "$GITHUB_RUN_ID" > publication-reservation/run.txt
+      - name: Persist attempt before any social POST
+        if: steps.plan.outputs.due == 'true' && inputs.action != 'preflight'
+        run: |
+          node scripts/ops/linkedin.mjs reserve
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/publications/
+          git commit -m 'Reserve LinkedIn workforce publication attempt'
+          git pull --rebase origin main
+          git push origin main
+      - uses: actions/upload-artifact@v4
+        if: steps.plan.outputs.due == 'true' && inputs.action != 'preflight'
+        with:
+          name: ${{ steps.plan.outputs.reservation }}
+          path: publication-reservation/
+          retention-days: 90
+      - name: Publish one due personal post or company reshare
+        if: steps.plan.outputs.due == 'true' && inputs.action != 'preflight'
+        run: |
+          node scripts/ops/linkedin.mjs publish
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/publications/
+          git commit -m 'Record accepted LinkedIn workforce publication'
+          git pull --rebase origin main
+          git push origin main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: linkedin-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ops-output/linkedin/
+          retention-days: 90

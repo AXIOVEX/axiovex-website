@@ -31,26 +31,37 @@ data-gated monthly report and newsletter; final preview to Tristen before the
 active-subscriber send; persistent aggregate traffic archive; evidence-study
 execution; shared-document synchronization; blog/feed/sitemap generation.
 
-## Remaining review/session dependencies
+## Remaining duties migrated October 19
 
-- Workforce research interpretation, cause claims, new reviewed editions,
-  article and social editorial approval remain review tasks. CI executes the
-  evidence pipeline, sends its review instructions to the founders and retains
-  artifacts; it does not manufacture a new reviewed release.
-- LinkedIn personal/company publication has no signed-in CI publisher or token.
-  This was not migrated as an automatic publishing job.
-- The full newsletter Managed Turnstile/confirmation/unsubscribe browser loop
-  and actual inbox observation need an interactive browser/mailbox. CI covers
-  API, fixed-recipient preview, rendering and sender behavior. Microsoft
-  acceptance is not proof of inbox delivery.
-- Annual projections, education and annual geographic vintages remain clearly
-  dated review inputs. A fixed-year collector is not a latest-vintage service.
-- Historical Muse SEO score state and subscriber history were not exported.
-  Missing history remains unavailable; new measurements are retained forward.
+- Monthly data-ready publication now creates a source-linked workforce article,
+  freezes its source hash, links it in the newsletter and queues social copy.
+  Causal interpretation and reviewed research editions remain editorial work.
+- LinkedIn has separate personal and company OAuth apps. Personal identity and
+  token are saved in GitHub; company association is verified and the Community
+  Management access application is in progress. The hourly job validates scope
+  and expiry before reserving a post. A committed attempt record plus artifact
+  prevents replay after an ambiguous response, even after artifact expiration.
+- Weekly newsletter browser CI executes the real signup, confirmation, send,
+  unsubscribe and suppression functions with a real browser and official test
+  Turnstile keys. Captured mail proves content and lifecycle, not real inbox
+  delivery or production Managed-challenge completion. Those live observations
+  remain separately required; Mail.Send does not provide mailbox read access.
+- Weekly annual-source CI discovers MCDA current workbook links, reads current
+  BLS/PSEO releases, advances IPEDS only when both files are available, probes
+  the newest completed QCEW year and follows Treasury's current pupil handout.
+  Fixed MDE teacher tables are reconciled; CEPI's interactive indicators remain
+  dated, reviewed inputs. A newly published MDE article is not automatically
+  discovered by re-reading the old article. Unsupported schemas fail visibly.
+- The current refresh advanced QCEW to 2025, excluded duplicate second-major
+  awards in IPEDS, dated PSEO's 10% coverage as its 2015 estimate, and replaced
+  the January pupil figure with the May conference's proposed FY2026–27
+  estimate. Teacher enrollment stays 14,819; 17,780 includes completers.
+- Historical Muse SEO score state and pre-baseline subscriber history were not
+  exported. Missing historical evidence remains unavailable.
 
-These are explicit residual duties, not a claim that every old Muse activity
-has become fully unattended. The current implementation removes Muse from
-automatic website monitoring and deterministic publication.
+The daily audit now checks eight execution workflows, including the three new
+jobs. Passing workflow execution is not a claim of company-product approval,
+external inbox delivery, or new editorial review.
 
 Live verification also exposed GitHub concurrency pending-run replacement when
 unrelated writers shared one group. Each workflow keeps its own queue so a
