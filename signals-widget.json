@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-19T01:16:01.211Z",
+  "updatedUtc": "2026-10-19T06:16:19.700Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -31,10 +31,10 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
-      "source": "Manufacturing Dive",
+      "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
+      "source": "Automation Alley",
       "date": "2026-10-16",
-      "url": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/"
+      "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
     },
     {
       "lane": "michigan",
@@ -43,6 +43,14 @@
       "source": "Automation Alley",
       "date": "2026-10-16",
       "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Manufacturing tech orders hit 3rd-highest monthly total: AMT",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-16",
+      "url": "https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/"
     },
     {
       "lane": "manufacturing",
@@ -61,12 +69,20 @@
       "url": "https://www.manufacturingdive.com/news/avio-usa-ceo-james-syring-solid-rocket-motor-manufacturing-plant-virginia/832755/"
     },
     {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
-      "source": "Automation Alley",
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
+      "source": "USAspending (Treasury)",
       "date": "2026-10-16",
-      "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
+      "url": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0054_3600_-NONE-_-NONE-"
+    },
+    {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
+      "source": "USAspending (Treasury)",
+      "date": "2026-10-16",
+      "url": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0053_3600_-NONE-_-NONE-"
     },
     {
       "lane": "funding-policy",
@@ -91,22 +107,6 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-15",
       "url": "https://www.manufacturingdive.com/news/what-manufacturing-plant-managers-think-of-the-ai-and-automation-boom/832776/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Nestlé to spend additional $1B on manufacturing operations in Mexico",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-15",
-      "url": "https://www.manufacturingdive.com/news/nestle-investment-mexico-coffee-pet-food-emerging-markets/833093/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Applied Materials opens $5B semiconductor innovation center",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-15",
-      "url": "https://www.manufacturingdive.com/news/applied-materials-epic-semiconductor-innovation-center/833029/"
     },
     {
       "lane": "ai-standards",

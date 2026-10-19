@@ -1,10 +1,17 @@
 {
-  "updatedUtc": "2026-10-19T01:16:01.211Z",
+  "updatedUtc": "2026-10-19T06:16:19.700Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
+          "link": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/",
+          "date": "2026-10-16"
+        },
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
@@ -24,13 +31,6 @@
           "sourceId": "manufacturing-dive",
           "title": "Avio’s plan to meet the US’ solid rocket motors demand",
           "link": "https://www.manufacturingdive.com/news/avio-usa-ceo-james-syring-solid-rocket-motor-manufacturing-plant-virginia/832755/",
-          "date": "2026-10-16"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
-          "link": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/",
           "date": "2026-10-16"
         },
         {
@@ -240,6 +240,20 @@
           "date": "2026-10-19"
         },
         {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0054_3600_-NONE-_-NONE-",
+          "date": "2026-10-16"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0053_3600_-NONE-_-NONE-",
+          "date": "2026-10-16"
+        },
+        {
           "source": "U.S. Department of Energy",
           "sourceId": "doe",
           "title": "Energy Department Announces Virginia and West Virginia Transmission Project to Receive Defense Production Act Funding, Strengthening National Security and Grid Reliability",
@@ -273,20 +287,6 @@
           "title": "Energy Department Announces 2026 Ernest Orlando Lawrence Award Winners",
           "link": "https://www.energy.gov/articles/energy-department-announces-2026-ernest-orlando-lawrence-award-winners",
           "date": "2026-10-13"
-        },
-        {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces New Genesis Mission Awards to Advance Super Intelligence for Science",
-          "link": "https://www.energy.gov/articles/energy-department-announces-new-genesis-mission-awards-advance-super-intelligence-science",
-          "date": "2026-10-08"
-        },
-        {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "U.S. Department of Energy Awards $96 Million to 67 Early Career Scientists",
-          "link": "https://www.energy.gov/articles/us-department-energy-awards-96-million-67-early-career-scientists",
-          "date": "2026-10-08"
         }
       ]
     }
