@@ -64,6 +64,7 @@ def mcda():
         group['period'] = f'{start}-{end}'
         group['horizon'] = f'{start}–{end[-2:]}'
         source['period'] = group['period']
+    outlook['michiganOccupations']['viaStudy'] = False
     save('data/outlook.json',outlook)
 
 def bls():

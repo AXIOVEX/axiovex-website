@@ -502,7 +502,8 @@
     ],
     "studyName": "Axiovex workforce study",
     "studyRetrievedOn": "2026-09-27",
-    "viaStudy": true
+    "viaStudy": false,
+    "retrievedOn": "2026-10-19"
   },
   "michiganProjections": {
     "agency": "Michigan Center for Data and Analytics",
