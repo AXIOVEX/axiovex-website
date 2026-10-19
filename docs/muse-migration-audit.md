@@ -56,3 +56,8 @@ Live verification also exposed GitHub concurrency pending-run replacement when
 unrelated writers shared one group. Each workflow keeps its own queue so a
 new site-sync cannot cancel a pending economic refresh. Git rebase/push errors
 remain visible rather than being ignored.
+
+Economic refresh verification found FRED HTTP 502 and EIA timeout despite the
+outer job succeeding. The CI wrapper now retries only transient failed sources
+once, preserves both attempts, and fails the job if any requested source is
+still failed or skipped. Successful sources and last-good snapshots survive.
