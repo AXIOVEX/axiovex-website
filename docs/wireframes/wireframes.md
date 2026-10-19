@@ -992,3 +992,10 @@ brand, founders, existing evidence assets, contact behavior and staging guards.
 Homepage metadata/FAQ and contact positioning follow the visible copy. No thesis
 PDF, internal financing details or new partner claims are published. Tristen approved WF-19 for staging in this chat on October 19, 2026.
 Production promotion remains separate.
+
+
+WF-19 owner amendment, October 19: change the AI question to “Do you offer AI
+training and engineering?” Add exploratory startup/growth packages (websites,
+corporate operating systems and Michigan business-resource guidance), including
+existing companies. The package scope, pricing, access, eligibility and funding
+remain unconfirmed. This specific amendment was directed by Tristen in chat.

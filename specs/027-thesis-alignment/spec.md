@@ -35,3 +35,8 @@ The existing public research link responds HTTP 200; /research/ stays unlisted.
 The generator owns new home/contact templates, and styles.v41.css scopes the
 approved hero fit. Staging newsletter copy now follows the previously approved
 monthly cadence; this does not alter production or send mail.
+
+Owner amendment: use “Do you offer” for the AI question and describe startup
+and business growth packages as exploratory, including websites, corporate
+operating systems and Michigan resource guidance for new/existing businesses.
+Scope, pricing, eligibility and funding are not promised.
