@@ -18,10 +18,10 @@
           "kind": "observed",
           "direction": "supports",
           "source_quality": "test",
-          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
           "source_id": "verification026",
-          "observed_at": "2026-10-19T17:29:24.988Z",
-          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
         }
       ],
       "falsification_tests": [
@@ -46,10 +46,10 @@
           "kind": "observed",
           "direction": "supports",
           "source_quality": "test",
-          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
           "source_id": "verification026",
-          "observed_at": "2026-10-19T17:29:24.988Z",
-          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
         }
       ],
       "falsification_tests": [
@@ -61,7 +61,7 @@
       "id": "C026-3",
       "kind": "requirement",
       "status": "draft",
-      "text": "The article explicitly labels its findings as an archival account without current independent reproduction.",
+      "text": "The article labels the four recovered scientific findings as an archival account without current independent reproduction.",
       "source_ref": "specs/026-recovered-research-publication/spec.md#FR-002",
       "boundary": [
         "October 19 recovered-report article"
@@ -74,10 +74,10 @@
           "kind": "observed",
           "direction": "supports",
           "source_quality": "test",
-          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
           "source_id": "verification026",
-          "observed_at": "2026-10-19T17:29:24.988Z",
-          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
         }
       ],
       "falsification_tests": [
@@ -102,10 +102,10 @@
           "kind": "observed",
           "direction": "supports",
           "source_quality": "test",
-          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
           "source_id": "verification026",
-          "observed_at": "2026-10-19T17:29:24.988Z",
-          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
         }
       ],
       "falsification_tests": [
@@ -130,10 +130,10 @@
           "kind": "observed",
           "direction": "supports",
           "source_quality": "test",
-          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
           "source_id": "verification026",
-          "observed_at": "2026-10-19T17:29:24.988Z",
-          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
         }
       ],
       "falsification_tests": [
@@ -160,10 +160,10 @@
           "kind": "observed",
           "direction": "supports",
           "source_quality": "test",
-          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
           "source_id": "verification026",
-          "observed_at": "2026-10-19T17:29:24.988Z",
-          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
         }
       ],
       "falsification_tests": [
@@ -188,10 +188,10 @@
           "kind": "observed",
           "direction": "supports",
           "source_quality": "test",
-          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
           "source_id": "verification026",
-          "observed_at": "2026-10-19T17:29:24.988Z",
-          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
         }
       ],
       "falsification_tests": [
@@ -216,14 +216,272 @@
           "kind": "observed",
           "direction": "supports",
           "source_quality": "test",
-          "description": "Current checksum, preservation, CSP and browser assertions passed; website-only boundary.",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
           "source_id": "verification026",
-          "observed_at": "2026-10-19T17:29:24.988Z",
-          "content_hash": "91abc35ab1f9913a29f5c7d37cf00dc5909ffb0bea3af815ecc9db56f713154d"
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
         }
       ],
       "falsification_tests": [
         "Inspect computed article-link color; an unreadable default blue or a color outside the approved palette falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-9",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The runtime article reports the exact fresh result counts from the supplied validation receipts.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-009",
+      "boundary": [
+        "Current runtime section and the supplied aggregate receipts"
+      ],
+      "depends_on": [],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
+        }
+      ],
+      "falsification_tests": [
+        "Any difference from 222 tests and 7 experiment checks per Python version, 40 Lean jobs or 27 governance commands falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-10",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The runtime section distinguishes validation of the surviving feature-034 baseline from the missing feature-035 source.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-009",
+      "boundary": [
+        "Current article and runtime availability note"
+      ],
+      "depends_on": [],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
+        }
+      ],
+      "falsification_tests": [
+        "A claim of recovered or freshly replayed feature 035 source falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-11",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The runtime section discloses that the retained Python 3.12 stdout is incomplete.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-011",
+      "boundary": [
+        "Current article, availability note and focused completion receipt"
+      ],
+      "depends_on": [],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
+        }
+      ],
+      "falsification_tests": [
+        "Omission of the 54-byte stdout limitation falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-12",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The eight public runtime assets preserve the exact independently reviewed handoff bytes.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-010",
+      "boundary": [
+        "Eight frozen public runtime assets"
+      ],
+      "depends_on": [],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
+        }
+      ],
+      "falsification_tests": [
+        "Any mismatch with the independent handoff SHA256 or size falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-13",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The article keeps source integration open.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-011",
+      "boundary": [
+        "Website publication only"
+      ],
+      "depends_on": [],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
+        }
+      ],
+      "falsification_tests": [
+        "A claim that website publication completed source integration falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-14",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The article states that no Docker image build was performed.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-011",
+      "boundary": [
+        "Executed staged Python installation boundary only"
+      ],
+      "depends_on": [],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
+        }
+      ],
+      "falsification_tests": [
+        "A claim of a completed Docker image build falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-15",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The runtime section identifies the separate completion evidence for Python 3.12.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-011",
+      "boundary": [
+        "Current article, availability note and focused completion receipt"
+      ],
+      "depends_on": [
+        "C026-11"
+      ],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
+        }
+      ],
+      "falsification_tests": [
+        "Omission of the completion receipt linking observed exit code and JUnit totals falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-16",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The article keeps required current-head source CI open.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-011",
+      "boundary": [
+        "Website publication only"
+      ],
+      "depends_on": [
+        "C026-13"
+      ],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
+        }
+      ],
+      "falsification_tests": [
+        "A claim that current-head source CI passed falsifies."
+      ],
+      "uncertainty": "low"
+    },
+    {
+      "id": "C026-17",
+      "kind": "requirement",
+      "status": "draft",
+      "text": "The article states that no container execution was performed.",
+      "source_ref": "specs/026-recovered-research-publication/spec.md#FR-011",
+      "boundary": [
+        "Executed staged Python installation boundary only"
+      ],
+      "depends_on": [
+        "C026-14"
+      ],
+      "conflicts_with": [],
+      "evidence": [
+        {
+          "ref": "specs/026-recovered-research-publication/verification/results.json",
+          "kind": "observed",
+          "direction": "supports",
+          "source_quality": "test",
+          "description": "Current checksum, exact public runtime handoff, result fidelity, scope and desktop/mobile CSP assertions; website publication only.",
+          "source_id": "verification026",
+          "observed_at": "2026-10-19T17:52:18.834Z",
+          "content_hash": "706da525bb2138d6517d21b549b8e9a596760499679401a62be735f8648bb7ad"
+        }
+      ],
+      "falsification_tests": [
+        "A claim of completed container execution falsifies."
       ],
       "uncertainty": "low"
     }

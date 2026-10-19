@@ -29,8 +29,10 @@ the source inventory or the underlying source changes. This current README
 and release manifest describe the files actually available here.
 
 REPRODUCTION STATUS
-This archive alone is insufficient to reproduce the four studies. A later
-runtime-validation update must name the exact surviving source baseline,
-environment versions, commands and results. Passing checks on an older
-baseline cannot be called a reproduction of the missing discriminating-studies
-source or its complete raw records.
+This archive alone is insufficient to reproduce the four studies. A separate
+October 19 runtime-validation update is now available at:
+/research/records/2026-10-19-runtime-recovery/README.txt
+It identifies the exact surviving feature-034 baseline and fresh checks of the
+repaired runtime. Its passing checks cannot be called a reproduction of the
+missing feature-035 discriminating-studies source or its complete raw records.
+The exact original report remains unchanged.

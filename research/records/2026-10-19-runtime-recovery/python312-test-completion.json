@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "scope": "Focused completion verification without publishing existing private test names or source inventories.",
+  "package_sha256": "4dfca5d28d5fc1655c4e987fcce41963cb269d68efb80478199d0079909f190f",
+  "python_version": "3.12.15",
+  "pytest_returncode": 0,
+  "completed_tests": 222,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "existing_cases": 211,
+  "new_runtime_regression_cases": 11,
+  "started_utc": "2026-10-19T17:25:43.151435+00:00",
+  "finished_utc": "2026-10-19T17:27:30.230458+00:00",
+  "elapsed_seconds": 107.079,
+  "junit_sha256": "9e8955eb75c8ea207fcca3dd4773a31b198d88244538c9ee6f6ed721baa4c8b4",
+  "command_receipt_sha256": "9648385635b307b300b80e53e6941262eb1953360705117b2729ff27189fec92",
+  "retained_stdout_bytes": 54,
+  "retained_stdout_sha256": "6eeb7d3eec55e471cdd55ace12dd4240767a01bfd6128ba04c7624e78b0c4bf5",
+  "stdout_capture_complete": false,
+  "note": "The retained stdout contains 54 progress characters and does not contain the completion line. Successful completion and 222 passing cases are supported by the observed process exit code and the independently parsed retained JUnit record. The JUnit case inventory remains local; no replacement transcript was invented.",
+  "status": "pass_with_partial_stdout_capture"
+}

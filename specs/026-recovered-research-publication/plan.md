@@ -29,7 +29,7 @@ older staging tree. Re-read both refs before each mutation.
 
 Sync latest main into staging with a genuine merge preserving the existing
 staging `_headers` and `robots.txt`. Apply only the reviewed publication paths
-to that base. Verify https://staging.axiovexsystems.com/research/ and its file
+to that base. Verify https://axiovex-website-staging.pages.dev/research/ and its file
 hashes. Promote selected publication paths onto the latest main, excluding
 the staging guards, and verify https://axiovexsystems.com/research/.
 The existing Pages projects deploy committed root output with no build step.
@@ -71,3 +71,43 @@ availability note and their publication checksums. The original private source
 inventory is excluded, including from links, release manifests, evidence and
 other attachments. The preceding private checkpoint is preserved for audit;
 this corrected package uses a new checkpoint and does not republish it.
+
+## Completed initial deployment and runtime continuation
+
+The initial report was published to staging commit
+`c9f88f0df70a11bebdfd45315dddf1a68493b16b`, then merged to production through
+PR #7 at `f53c2499afa06c4a3326e240ca7a0653a7742b27`. Actual HTTPS asset,
+crawler-header and cloud-browser interaction checks passed for both. The
+production zone performs its existing contact-email obfuscation: both tokens
+decode to the expected contact address, the known same-origin decoder is the
+only script insertion, and the remaining HTML matches the frozen bytes.
+No Cloudflare or security setting was changed to accommodate that behavior.
+
+The eight frozen runtime assets were separately committed to staging at
+`652a64985e21bbcbec659f67dd2e47b036ae3485`, tree
+`8a4fa2c9a1ad1a46651b277d8923bf00de1bab76`. The new article checkpoint starts
+from that stage and changes only reviewed publication paths. Production is
+prepared from the latest main and retains unrelated concurrent changes.
+
+Append the runtime results to the same October 19 article. Keep the original
+findings byte-identical, update its current availability note, and bind the
+eight runtime assets plus their new README in a download checksum manifest.
+The runtime ZIP and eight staged asset bytes are immutable. Verify all linked
+files, the exact result counts, the partial-stdout disclosure, the missing035
+boundary, unchanged tracker behavior and desktop/mobile rendering under CSP.
+Then rerun the atomic website AEE claims against those current verification
+receipts. Source integration remains a separate open engineering task.
+
+## Combined checkpoint after concurrent main update
+
+Before production promotion, current main moved to
+`48681df4b2e188ef711889edef8a57fdb030d698`. Preserve its summary span markup,
+stylesheet40 and all unrelated HTML. Graft only the reviewed October19 basis
+and article body onto that exact main file. The combined checkpoint starts
+from staging `999ff5fa046773ecffe8a316da2a86c8889017d8`, tree
+`e4ef3fd6a93aef239f417ac3603864c0f827b57c`. Include the exact main stylesheet40
+for staging; it is already present on main. Recheck the combined page and AEE
+claims, while reusing the unchanged runtime assets and scientific results.
+The preceding runtime staging variant passed all16 HTTPS asset checks; its
+cloud-browser verification stopped before the article checks, so it is not
+recorded as a completed runtime deployment gate.

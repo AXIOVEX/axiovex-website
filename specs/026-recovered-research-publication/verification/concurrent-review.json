@@ -1,0 +1,128 @@
+{
+  "schema": "website-runtime-concurrent-merge-review-v1",
+  "reviewed_utc": "2026-10-19T17:54:33.328867+00:00",
+  "status": "pass",
+  "blocking_findings": [],
+  "scope": "Independent byte-preservation review of the concurrent website merge. The previous content-fidelity review remains applicable to the identical article basis/body and downloads. No science/runtime commands were rerun; no website files were edited; no remote operations were performed. Browser, CSP, deployment and publication checks are separate.",
+  "latest_main_commit_prefix": "48681df4",
+  "bound_inputs": {
+    "latest_main_html": {
+      "bytes": 49080,
+      "sha256": "07a0476a85dd0cdc0806b4772872bedae5168a6adefe8b68a649586a1844b734"
+    },
+    "latest_main_css40": {
+      "bytes": 56583,
+      "sha256": "c51af7c3e78be3c616487e25bfa9526bb9212d6973bab4e4ada57cd53d7374d0"
+    },
+    "reviewed_026c_html": {
+      "bytes": 52846,
+      "sha256": "891fdb1749b0821e948518836856ec9fd683a7e01a20871e0500f0189978d335"
+    },
+    "merged_html": {
+      "bytes": 52942,
+      "sha256": "c40340fe426b83842b95eb1ce80d275799479dc9e7091cd6eec21f704c92f0c6"
+    },
+    "current_css40": {
+      "bytes": 56583,
+      "sha256": "c51af7c3e78be3c616487e25bfa9526bb9212d6973bab4e4ada57cd53d7374d0"
+    }
+  },
+  "prior_content_review": {
+    "filename": "website-runtime-followup-review.json",
+    "sha256": "17d78fef44e2cff83a236014c0619ae496666d17c624780e5a955a5fe1b6940f"
+  },
+  "article_id": "finite-model-records-2026-10-19",
+  "preservation": {
+    "article_body_byte_identical_to_reviewed_026c": true,
+    "body_segment_definition": "All bytes following the target article closing summary tag through the byte before its closing details tag; includes body markup and surrounding whitespace.",
+    "article_body_bytes": 8298,
+    "article_body_sha256": "a5f676c9d8676e5852412dfa12e0398187325ba322b1c207997938e2c787a96d",
+    "basis_inner_bytes_identical_to_reviewed_026c": true,
+    "basis_inner_bytes": 110,
+    "basis_inner_sha256": "1e11f4a139d4aeef514b89ebcb0bb6d3398d23caad70b4ca84532155cf4434d8",
+    "expected_merge_equals_actual_bytes": true,
+    "reversing_only_basis_inner_and_body_replacements_restores_latest_main_bytes": true,
+    "all_other_latest_main_html_bytes_preserved": true,
+    "article_summaries": 4,
+    "summary_span_children": 16,
+    "summary_p_children": 0,
+    "each_summary_preserves_date_title_basis_more_span_classes": true,
+    "stylesheet_reference": "/styles.v40.css",
+    "latest_main_css40_byte_identical": true
+  },
+  "frozen_assets_verified": 8,
+  "frozen_assets": [
+    {
+      "filename": "runtime-repair-and-validation-036.zip",
+      "bytes": 268828,
+      "sha256": "4dfca5d28d5fc1655c4e987fcce41963cb269d68efb80478199d0079909f190f"
+    },
+    {
+      "filename": "runtime-validation-summary.json",
+      "bytes": 11266,
+      "sha256": "ce92fbb69bdeb44c8e973f48da90fd6b0d508001993eb334ca59d548960add5e"
+    },
+    {
+      "filename": "runtime-release-manifest.json",
+      "bytes": 45327,
+      "sha256": "318c1c17cb1275a9b1ab92b30f35a8c851cc03fef729def63fa174fdcffb8487"
+    },
+    {
+      "filename": "package-verification.json",
+      "bytes": 791,
+      "sha256": "04c3cd3f4fa3261b1ceeacfbf1d5d87ac8d160964e0bca22b35f508a5ca87c20"
+    },
+    {
+      "filename": "public-scope-audit.json",
+      "bytes": 1896,
+      "sha256": "a39afe72f5ea3b76e613fc9d6fde2b75e65bec604bb10874ffef7f19350dc3d2"
+    },
+    {
+      "filename": "python312-test-completion.json",
+      "bytes": 1289,
+      "sha256": "e2feecac5d60e3a9dfcf69717a6251df62f761db82bc6faba7ca4d6db7eeb252"
+    },
+    {
+      "filename": "convergence.md",
+      "bytes": 5521,
+      "sha256": "3fb00436448f810143b99a7fdb642ccf61050c9bd349684ef9e8ca914f91b56c"
+    },
+    {
+      "filename": "runtime-setup.md",
+      "bytes": 10412,
+      "sha256": "140d5e6b190c583c13f98a459de425ea91a920306c21bae5d3bd2db9259a784d"
+    }
+  ],
+  "other_previously_reviewed_records_unchanged": [
+    {
+      "path": "research/records/2026-10-19-runtime-recovery/README.txt",
+      "bytes": 4682,
+      "sha256": "e4ae7c269063d39d2e895ece50e8db1a42803fbdea189673be772cab2d790867"
+    },
+    {
+      "path": "research/records/2026-10-19-runtime-recovery/download-checksums.json",
+      "bytes": 2015,
+      "sha256": "541982dcee8b2e81286b3909242ae232b05b71d013bc8e6c374627bbabe46592"
+    },
+    {
+      "path": "research/records/2026-10-19-discriminating-studies/README.txt",
+      "bytes": 2066,
+      "sha256": "79170d80bb66af4ed743236748a7511784d7a583b1896fd14e05152e25d9da57"
+    },
+    {
+      "path": "research/records/2026-10-19-discriminating-studies/release-manifest.json",
+      "bytes": 866,
+      "sha256": "fc1a577ce73a3bd2b7d877dbd5d1eede9fdae9088561aaa97efa3b5adb828dce"
+    }
+  ],
+  "claims_and_limits_inherited_from_unchanged_reviewed_content": {
+    "tests_per_python_version": 222,
+    "experiment_control_replay_checks_per_python_version": 7,
+    "lean_build_jobs": 40,
+    "baseline_governance_commands": 27,
+    "missing_feature035_source_and_raw_results_distinguished": true,
+    "prior300_test_claims_not_current_evidence": true,
+    "python312_retained_stdout_gap_accurately_limited": true,
+    "docker_image_build_and_source_current_head_ci_not_claimed": true
+  }
+}

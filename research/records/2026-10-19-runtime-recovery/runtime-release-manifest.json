@@ -1,0 +1,1065 @@
+{
+  "schema_version": "1.0",
+  "release": "runtime-recovery-036-revision-2",
+  "created_utc": "2026-10-19T17:33:04.293084+00:00",
+  "baseline_commit": "8409f6506bd7c96ab44e44770537e349f1fcfdd1",
+  "scope": "Only newly authored runtime work, focused evidence and a minimal necessary engineering patch; no detailed pre-existing private-source inventory.",
+  "file_count_excluding_manifest": 211,
+  "files": [
+    {
+      "path": "ENGINEERING.patch",
+      "bytes": 3399,
+      "sha256": "71c2f40a55f5c8bb555e1065bfa396d03b01d6c4bdfd593d3c68310a3115be02"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3262,
+      "sha256": "e5872a46e6e86b119de726f707ea793d89158545dba66c01d031f426ad64f778"
+    },
+    {
+      "path": "overlay/scripts/bootstrap_graphviz036.py",
+      "bytes": 11851,
+      "sha256": "d17eef949f721c24c719fd8a152c41410f278664724f94e3332d004bc1257137"
+    },
+    {
+      "path": "overlay/scripts/bootstrap_python036.py",
+      "bytes": 9631,
+      "sha256": "933081b38a6f44642f8adca737792a05e95bc6bfa10fc2aca376b7dd249108fb"
+    },
+    {
+      "path": "overlay/scripts/install_spec_kit036.py",
+      "bytes": 5249,
+      "sha256": "d03e867cb2d264dde6706bb3626c6be5cb8e1192d4b5c5d1bebf8c084c2d2f8f"
+    },
+    {
+      "path": "overlay/scripts/run_framework036_aee.py",
+      "bytes": 3091,
+      "sha256": "746e5db2262b8d60ba7435a942c00a9c8a9209b3e92a6e9802a1eba1155abe4e"
+    },
+    {
+      "path": "overlay/scripts/validate_runtime036.py",
+      "bytes": 5652,
+      "sha256": "bc3c6da6a7f5f4e4d506453835950d0c72dad4d04a9f998f1a6c5f4923101df3"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/aee/after_implement.json",
+      "bytes": 8999,
+      "sha256": "8f4df9cdb3c0d2c1ca05abe6fb6053810731bfaa30a79b1979bf967dec882874"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/aee/after_plan.json",
+      "bytes": 8994,
+      "sha256": "f30c53fa26669d79ffa55abf91d7e8d4742ca60a50c9ee4e30127158cdae2ab7"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/aee/after_specify.json",
+      "bytes": 8997,
+      "sha256": "80f4bdb44c3e54df24b5953eff1a275c44b4df934d6f6841bd0b717c27059a35"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/aee/after_tasks.json",
+      "bytes": 8995,
+      "sha256": "f3092422d56ee1300142baceb046f63b2196c09b20c7d4f12053ebdf95884591"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/aee/challenge-after_implement.json",
+      "bytes": 334,
+      "sha256": "d599e3a1d4ddba817f30994032f5605c5b2f4ddc023252eee905d55b94ad084f"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/aee/history/after_implement-8f4df9cdb3c0d2c1ca05abe6fb6053810731bfaa30a79b1979bf967dec882874-inputs.json",
+      "bytes": 325,
+      "sha256": "b26ee0aaea9b701e4039d658d6a7c6f42c3a60241f3f78e3c6dd8ad21b476cc9"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/aee/history/after_implement-8f4df9cdb3c0d2c1ca05abe6fb6053810731bfaa30a79b1979bf967dec882874.json",
+      "bytes": 8999,
+      "sha256": "8f4df9cdb3c0d2c1ca05abe6fb6053810731bfaa30a79b1979bf967dec882874"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/aee/history/after_plan-f30c53fa26669d79ffa55abf91d7e8d4742ca60a50c9ee4e30127158cdae2ab7-inputs.json",
+      "bytes": 320,
+      "sha256": "073e27294afa63cc01f10377058a0106793b4a8b21f2a8cd10eb948206916cbc"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/aee/history/after_plan-f30c53fa26669d79ffa55abf91d7e8d4742ca60a50c9ee4e30127158cdae2ab7.json",
+      "bytes": 8994,
+      "sha256": "f30c53fa26669d79ffa55abf91d7e8d4742ca60a50c9ee4e30127158cdae2ab7"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/aee/history/after_specify-80f4bdb44c3e54df24b5953eff1a275c44b4df934d6f6841bd0b717c27059a35-inputs.json",
+      "bytes": 323,
+      "sha256": "ca7313c1ad2cbf72f1cda8caea414a1bf28fc43fd7e82113a8010442ee57fc30"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/aee/history/after_specify-80f4bdb44c3e54df24b5953eff1a275c44b4df934d6f6841bd0b717c27059a35.json",
+      "bytes": 8997,
+      "sha256": "80f4bdb44c3e54df24b5953eff1a275c44b4df934d6f6841bd0b717c27059a35"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/aee/history/after_tasks-f3092422d56ee1300142baceb046f63b2196c09b20c7d4f12053ebdf95884591-inputs.json",
+      "bytes": 321,
+      "sha256": "6f623589c9dea1cc73042a65aa318a76b21814dfbb85804186c4dd49f49364e2"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/aee/history/after_tasks-f3092422d56ee1300142baceb046f63b2196c09b20c7d4f12053ebdf95884591.json",
+      "bytes": 8995,
+      "sha256": "f3092422d56ee1300142baceb046f63b2196c09b20c7d4f12053ebdf95884591"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/aee-claims.json",
+      "bytes": 5215,
+      "sha256": "9102d1502015d8833ae38cf046ebedc9207d16165825f84c7ee6a7303b9a5074"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/analysis.md",
+      "bytes": 730,
+      "sha256": "843bded2a75b4ca379d380bc1d4f160cde6cba2aa4e6f56b1f69eb0b2c54f8f7"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/checklists/requirements.md",
+      "bytes": 645,
+      "sha256": "ba1daf3bd87d70236704a8ec0cb602413c9f08da6a11440b6fe671cc112cba34"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/clarifications.md",
+      "bytes": 838,
+      "sha256": "e50a3e23498cb8aee7c0119ec332cb180dfd9de7513c730d9f7efa5f1a3f8eff"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/constraints-py311.txt",
+      "bytes": 622,
+      "sha256": "0652ad73af350f5170f3602ce87036c6d7aae0501ba9e95a059897e874b8a4eb"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/constraints-py312.txt",
+      "bytes": 622,
+      "sha256": "d624f9d614c1f532015d91c1d524dfac3444cb2a413fca246791cc3fd6c08b7d"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/convergence.md",
+      "bytes": 5521,
+      "sha256": "3fb00436448f810143b99a7fdb642ccf61050c9bd349684ef9e8ca914f91b56c"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/README.md",
+      "bytes": 2805,
+      "sha256": "9e774a521de2c6a53272ac8018d5e16149e98f9fcf1d7dbe98654429d23c8268"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/bootstrap_graphviz036.py",
+      "bytes": 11851,
+      "sha256": "d17eef949f721c24c719fd8a152c41410f278664724f94e3332d004bc1257137"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/dot-version.json",
+      "bytes": 397,
+      "sha256": "561951ddc6d037e4af040035333199581254952721d04646436437839fcfa5cc"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/dot-version.log",
+      "bytes": 34,
+      "sha256": "cdaf5667c6d21a76a8c632b1321964f1faabc6987b38806db929c73904dfdb12"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/dot-wrapper.sh",
+      "bytes": 319,
+      "sha256": "16fc858d73408128014f6e2e82b0f954485e7a8170f00e378bcbd352983273bc"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-graphviz.json",
+      "bytes": 719,
+      "sha256": "e51983a74bb9a19257927398266b3116aeef44dbd37451e995b1168c6f0b6ba5"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-graphviz.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libann0.json",
+      "bytes": 714,
+      "sha256": "2d4555b596236249e2cb5faa696032be9b996bee1b673d96598c611ec955a050"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libann0.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libcdt5.json",
+      "bytes": 716,
+      "sha256": "ab7c1ab953349eb8953bd9a0724bab24f7c88c1857b5d83977ae1d7adaaa2e17"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libcdt5.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libcgraph6.json",
+      "bytes": 725,
+      "sha256": "3d53ecd8e14aaa7f4731eef743d226ccd3a57a18284d08b2d7905f1e81f9c3b3"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libcgraph6.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libgd3.json",
+      "bytes": 710,
+      "sha256": "4e27dea6fd4e45923138fdf43b714981989d9bb220a1f4b87ff03a36a8f927a2"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libgd3.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libgts-0.7-5t64.json",
+      "bytes": 748,
+      "sha256": "0901173e7998fcfb8aa2f11c365031b7f0a4c5de7219dc52e2637c2e0d04025d"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libgts-0.7-5t64.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libgvc6.json",
+      "bytes": 716,
+      "sha256": "4456fcea45f7785d7e90830359f8a73e67a4b18f61a1005b7898f0d377b5b16f"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libgvc6.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libgvpr2.json",
+      "bytes": 719,
+      "sha256": "3bd37ff734eed9ac63f2807da387026c032957520b262f5b1db9224db5a02fcf"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libgvpr2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-liblab-gamut1.json",
+      "bytes": 733,
+      "sha256": "78d1cca7d709040191b9bcd60971d3aec65257e410096a0960d815b2f43c17c8"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-liblab-gamut1.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libpathplan4.json",
+      "bytes": 731,
+      "sha256": "5a461732a75e9f8245455dfc077480981694ca1beb6e24d3b0fbee472643e057"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libpathplan4.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libxdot4.json",
+      "bytes": 719,
+      "sha256": "333af3d9dc87de8c8c62500f7ae21ea5ce046567963898d7c6fe4196ab51161d"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/download-libxdot4.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-graphviz.json",
+      "bytes": 516,
+      "sha256": "b8377e3bebae05f87abfa6436316437554dc9c37ddb1e606ac12154a23ae0cff"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-graphviz.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libann0.json",
+      "bytes": 514,
+      "sha256": "0ff33f247360a0644a14e379d94eddd6e6960bf4ddcef4a13b4b986610432daf"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libann0.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libcdt5.json",
+      "bytes": 513,
+      "sha256": "2b8963f2c03960a542974d863136f487d99c08495b280dfab17fccbaf02d9d84"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libcdt5.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libcgraph6.json",
+      "bytes": 520,
+      "sha256": "4b15b9a9e24a0b899e0b74a9d36a39dae1b42aed5cf2a1414f7e585b6dcd1d06"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libcgraph6.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libgd3.json",
+      "bytes": 511,
+      "sha256": "53be6a76e0592c792070bea0125df481fd105c803fe3c28b7b4c1600ba1a9ddc"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libgd3.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libgts-0.7-5t64.json",
+      "bytes": 530,
+      "sha256": "5afc8af04e2a4343bac10c4b660fbc250b21ca13d7f65c71be50348101a5151d"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libgts-0.7-5t64.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libgvc6.json",
+      "bytes": 514,
+      "sha256": "ab34073aa0a318a96596e36788f3c54041521f120570f3b7affb509a22d73b3c"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libgvc6.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libgvpr2.json",
+      "bytes": 516,
+      "sha256": "66eae5a884c8cd08bf3e3ab3efef7187b8c35b78ed73b12a8f6d1b6905742542"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libgvpr2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-liblab-gamut1.json",
+      "bytes": 526,
+      "sha256": "aa9b1a8679ff019a6df1399e56d3899f88e0d07efb908a85352dc300fe2b2801"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-liblab-gamut1.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libpathplan4.json",
+      "bytes": 524,
+      "sha256": "8ef91f17546f78999d6d8718b728fa500b7076593776ecf48a830a21f829dd26"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libpathplan4.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libxdot4.json",
+      "bytes": 516,
+      "sha256": "8dc7bab9a013fd6378358f3890905327475db9f6b1f385fc39e55e6c45ef42e4"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/extract-libxdot4.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/graphviz-lock.json",
+      "bytes": 14866,
+      "sha256": "d2182cfb9b2b2af1f77934f80259174c4d7c7e3ce02645aed62e48418c403346"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/host-packages-after.json",
+      "bytes": 391,
+      "sha256": "d072014a479348f926c8763736bbf05e29261e9e0cf8e9ad39ea1d5829f8bd8c"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/host-packages-before.json",
+      "bytes": 392,
+      "sha256": "3badc6d18bc276ee0beb3cac29754111e2a5b8fe39be066ad63a41025155550d"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-00.json",
+      "bytes": 452,
+      "sha256": "321c30e9e1f22f36ace3736cc54375f29f6d17d527f36639585d938d32fe181d"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-00.log",
+      "bytes": 1106,
+      "sha256": "429658973193944954842ffd3b8d4e5a9a3c11f53f9607aa7b736ddf9d81cbdd"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-01.json",
+      "bytes": 458,
+      "sha256": "83c09916a7397ce0933067f9326af380770bd721ba8725886e210429593e52a2"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-01.log",
+      "bytes": 1106,
+      "sha256": "fc828b246f651f33c516147fd465cdbe4a42ea97f088617c690aeb36a94be8d8"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-02.json",
+      "bytes": 449,
+      "sha256": "08970e47d39417ad7415bea093b2eaa0b2567263fa18d35b69eec4236fd9db06"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-02.log",
+      "bytes": 3606,
+      "sha256": "1ada1093c678de60fa3345d30eb41a2aac388dafdc3286d4732da31fe6ecd88a"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-03.json",
+      "bytes": 459,
+      "sha256": "b9a48b4cd1a23661bb4aa6c88302f5efa8a5aff3fc868e3c7a8a02e5d42a6d52"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-03.log",
+      "bytes": 1571,
+      "sha256": "3f38d45785d3cd7c26d7d5b30cebc9ef22ee3f0cf7f802a8128f1e582cf07e6a"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-04.json",
+      "bytes": 453,
+      "sha256": "8c13469724ccf388cd501c1e32246b79fc7ee78c0353bb7cca41124ff8963bc8"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-04.log",
+      "bytes": 3867,
+      "sha256": "697ae41d38b053d0f1d0c7bc55570e8f91e759baa175e7ffa4d4c27da6228a94"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-05.json",
+      "bytes": 453,
+      "sha256": "c7f817b2226ed3cbac5de3d5d4149bbbbbbf42e1c202b9ef4a62da0be7fe78b8"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-05.log",
+      "bytes": 1258,
+      "sha256": "98051e9e70d1290d5635f8592d8f99aa391147274a1cf9e912c674ce585ac47a"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-06.json",
+      "bytes": 452,
+      "sha256": "30e0db886dc1a3ce97de3a4f5b6a06da465244a99e4bd8648137afa9717a08bf"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-06.log",
+      "bytes": 1908,
+      "sha256": "050aa6fe0c2b71abac0db8369630871e09b4dfcdfb79995db550bdd772bd8350"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-07.json",
+      "bytes": 452,
+      "sha256": "985e0736514a4d9816e097abe1e14c2d74f0f02046604cc3ed37a74aea6feab8"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-07.log",
+      "bytes": 1754,
+      "sha256": "ac04e8d564b8e72cfb59aab0c5fff65b2bd7d69b92d70b86ea35f2f5baae50cc"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-08.json",
+      "bytes": 423,
+      "sha256": "64ce8a62775ea94952e3c1b2754cf49fed803d2cbc721743e37ab18f8db47a1e"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/ldd-08.log",
+      "bytes": 1106,
+      "sha256": "d58d8f78f0ce35c54d3a891e1eeee370d794ef30f6a3410619ced193092ff671"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/native-dependencies.json",
+      "bytes": 7145,
+      "sha256": "a160f4bae30a06edbe60f97bf06dacff47b245e032faecad9c8ee5490bd87597"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/official-package-stanzas.txt",
+      "bytes": 13932,
+      "sha256": "812d1084d5d806ceec4d97141d1fc2cce820411453d5333600fbe71d4b9b0289"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/os-release.txt",
+      "bytes": 400,
+      "sha256": "3e5851448bae5b36f351becde037a8b13b77307279f484eda808f8177d9a4293"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/package-verification.json",
+      "bytes": 13994,
+      "sha256": "b2a2f0e53cd8af52bddd3bbc133043edab6031fec66cd941e09c69eb6992cfc9"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/plugin-configuration.json",
+      "bytes": 405,
+      "sha256": "5b4980c6ec2c176a9397e054c0073cc0545a37a4b752f0131c78314f34f56f0a"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/plugin-configuration.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/render-png.json",
+      "bytes": 590,
+      "sha256": "05a8b6dc2ad6af7f8ca05e69ce78ab1ccf9da2073fcd707754fe97ca08d8ef19"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/render-png.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/render-smoke.dot",
+      "bytes": 124,
+      "sha256": "84f726f66297479a18feef4ea61a3a1c62f79fb8471cbd72d18a360ce2cac3dc"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/render-smoke.png",
+      "bytes": 9559,
+      "sha256": "817cb3c60a60fbaefc72f8188c5b9ee00c6dcfe0fa507571cff2dcc83484249c"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/render-smoke.svg",
+      "bytes": 2382,
+      "sha256": "07dccca84258a1388b5211d7e4cd634ab1c8425dab94418028da9bf8d983fe67"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/render-svg.json",
+      "bytes": 590,
+      "sha256": "afe60558383b7cb2369258d72e6c82c8ed1833b49e4025c14cc88974025bff0e"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/render-svg.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/graphviz/summary.json",
+      "bytes": 1329,
+      "sha256": "25272998c5c7887fb40a3bb14a858411103a353275c915c92803a8a7ae19b94f"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/independent-review.json",
+      "bytes": 6004,
+      "sha256": "e9e949d0b6f4d08aa650c44cda5072739aac9afbc6ba79603510314a3b784f03"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/README.md",
+      "bytes": 3147,
+      "sha256": "06a88491d6861d84eb594278fdb820b5cbe149940826bf9e0f8473e58386bb6e"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/archive-verification.json",
+      "bytes": 630,
+      "sha256": "b6f88f980cbb81abcca9b2e8ed0dbafb07697a7d1c43a62b466b2ec9d0cd91ed"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/extract.json",
+      "bytes": 555,
+      "sha256": "1325086b99838cb8bbabd4beefbaf6139b5a8810cf76c543482211f6bf33847d"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/extract.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/lake-build.json",
+      "bytes": 528,
+      "sha256": "a52898ea57dccd83998e2b7f8f6ba91179daa56d47b88bfa7fdcd6a4b78f62d1"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/lake-build.log",
+      "bytes": 1779,
+      "sha256": "656bcfaeb7d901e23dccdc3077699b91674abf9b625df02cb562e70214a04bd0"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/lake-version.json",
+      "bytes": 535,
+      "sha256": "da65e5a4aa5dfcb53aa68bcca02c823a8f0b78c6c3694817bae5310ce63fde50"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/lake-version.log",
+      "bytes": 53,
+      "sha256": "e475ba02fef5717a6caa256e1e25ac50268497b7d1e36955357f37b4701ee4a0"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/lean-version.json",
+      "bytes": 535,
+      "sha256": "8aaa87af7f06e428ba86e313da38313b74270eee3930c35df07246ab91f3886c"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/lean-version.log",
+      "bytes": 106,
+      "sha256": "63f3e16bf0258e2cc0ab3010eb1830723df9bb85097b7b72b0137b9be25a78e9"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/official-release.json",
+      "bytes": 22259,
+      "sha256": "7f00cb7a90bdf94e3d6290da9f3a4231a9046500ea9bc4c49dfdc6854defd3c5"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/proof-placeholders.json",
+      "bytes": 572,
+      "sha256": "b00c5821ac43d3eca65d71007905c7d46fc927a0676668e34449184206aced1d"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/proof-placeholders.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/recovery-start.json",
+      "bytes": 429,
+      "sha256": "f22b099726ef4e422aeff585e3f64737752f59825a9f51c60a75ab6f12f51521"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/lean/summary.json",
+      "bytes": 1788,
+      "sha256": "56ce19445c401db5951ac2d0ab171030c06bc16a12c4eb2d5605e84e86aa553d"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap-recovery.json",
+      "bytes": 445,
+      "sha256": "8535147bbb8c081e10ef0b0a393e8463b54846b0cb8e7d140338841cf3e4fbee"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311/dependencies.log",
+      "bytes": 1306,
+      "sha256": "5ed6aae5d8a1c29770d10422436e2356dc14461d00398f09eb8b21f94661a8e0"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311/editable.log",
+      "bytes": 552,
+      "sha256": "d8968d91f75f245855f1cb6b1adec351a13b1dc82a964a32c1c95a2f710f3920"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311/interpreter.log",
+      "bytes": 36,
+      "sha256": "09c6993f8f8cb95ee513ff467bdcdd07350b9086dd8c674920d1fdd1dfafdec6"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311/pip-check.log",
+      "bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311/probe.log",
+      "bytes": 172,
+      "sha256": "2952f9e6eef85cd4ffa388d0ee6e07387705073a4a920eb73c3c7e990638698b"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311/receipt.json",
+      "bytes": 5057,
+      "sha256": "e1de5f739deaad259b6fca7fae8b7c8e9535ca7cfb6577381852573bfa722ae9"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311/venv.log",
+      "bytes": 340,
+      "sha256": "eac07f6fb4b57de3fa144cc73ac570ee7d3c6e217f1ffa69f478f2cf48180b4b"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311-final/dependencies.log",
+      "bytes": 789,
+      "sha256": "f74d240d4164479aa0d71f2079c6219bda5984af62513e35ffb860176680c337"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311-final/editable.log",
+      "bytes": 549,
+      "sha256": "947236da8e10f68ac051610406075861c54e05bfc79211a16354f1aafede90f2"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311-final/environment.json",
+      "bytes": 8447,
+      "sha256": "514e85a121ec70bd2434317af3fc9f4a29062a47ad3714163d7f6c2bbb2c96bf"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311-final/interpreter.log",
+      "bytes": 36,
+      "sha256": "09c6993f8f8cb95ee513ff467bdcdd07350b9086dd8c674920d1fdd1dfafdec6"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311-final/pip-check.log",
+      "bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311-final/probe.log",
+      "bytes": 8447,
+      "sha256": "514e85a121ec70bd2434317af3fc9f4a29062a47ad3714163d7f6c2bbb2c96bf"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311-final/receipt.json",
+      "bytes": 4919,
+      "sha256": "d9ba8706c09bae726c1118526da37eff7785e9642acfe75e9f9201609ddf03f3"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap311-final/venv.log",
+      "bytes": 337,
+      "sha256": "545106608abed6e7a4b5c731f9e004d4930a134541ec8747eb197f684bb089d3"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312/dependencies.log",
+      "bytes": 1169,
+      "sha256": "bcb080ff72f084bcc094a80d2da701cf0104e4c5ffc4523efa01583527cdf566"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312/editable.log",
+      "bytes": 552,
+      "sha256": "8177f349ccf2b7a29b3a62fd6ae8405f34d736073d01cd06f9c9c6c21f888172"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312/interpreter.log",
+      "bytes": 36,
+      "sha256": "2a1b6dbb1527c55f41fbb631a01013b305d866ce3809ac33e1b2fb1b4cdc1190"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312/pip-check.log",
+      "bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312/probe.log",
+      "bytes": 275,
+      "sha256": "c80df5acd603f89884886636cf60090de2873f5f8f4893042152dfba9dffa78d"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312/receipt.json",
+      "bytes": 5057,
+      "sha256": "2120abd53deb8f04ec513dcf2f0e804d928fd90a8e3ee49f0f8e96f8cc5ad7d8"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312/venv.log",
+      "bytes": 340,
+      "sha256": "add1f8f35cc41150ed186a242f06d41c3f40fe99ea675abb7622f94be928353b"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-cold/dependencies.log",
+      "bytes": 1309,
+      "sha256": "213bd4ca9bfccf0e229aea6ffc39d28fe204e9dbf84ada59d2d4138453c483f3"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-cold/editable.log",
+      "bytes": 555,
+      "sha256": "2540f6a2cc89d4ce0fcc50da4e7123913b90719490cd8aa6b27d175947f02e1c"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-cold/environment.json",
+      "bytes": 8703,
+      "sha256": "87488d28eb2f4f19c2d7eadce6890f1d6ece8d97095c346ba685fdefeea679a8"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-cold/interpreter.log",
+      "bytes": 192,
+      "sha256": "4a265c748372d0510e98da4121a2e74c65b618e3b46f044271978c05efa0e592"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-cold/pip-check.log",
+      "bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-cold/probe.log",
+      "bytes": 8703,
+      "sha256": "87488d28eb2f4f19c2d7eadce6890f1d6ece8d97095c346ba685fdefeea679a8"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-cold/receipt.json",
+      "bytes": 4985,
+      "sha256": "41c0c83b2fde3ab323394c9b92e4bce98c60e3c9a0a07336773c9a1c65442c2a"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-cold/venv.log",
+      "bytes": 348,
+      "sha256": "5bd85725226e992681172e2897f5e1a3d3b76e3acb14f43fa1cee23d0cd7c539"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-final/dependencies.log",
+      "bytes": 789,
+      "sha256": "c21772aedb9813fde7ba333a13a6db45e99337559456583a8384578bd50fd849"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-final/editable.log",
+      "bytes": 549,
+      "sha256": "778c26f2012da1daa259edf7654017632a27e4b6a149526a30e9e08bdbcd067c"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-final/environment.json",
+      "bytes": 8447,
+      "sha256": "3c8baabfcb01ce07325a5631c5df633ebc334bb8e897971e7cbd10ab6d48ef2b"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-final/interpreter.log",
+      "bytes": 36,
+      "sha256": "2a1b6dbb1527c55f41fbb631a01013b305d866ce3809ac33e1b2fb1b4cdc1190"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-final/pip-check.log",
+      "bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-final/probe.log",
+      "bytes": 8447,
+      "sha256": "3c8baabfcb01ce07325a5631c5df633ebc334bb8e897971e7cbd10ab6d48ef2b"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-final/receipt.json",
+      "bytes": 4919,
+      "sha256": "289b9f26458ae2ffb3b02b6421fa0fb514d54decf442d72711bae01b22324c1c"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python-bootstrap312-final/venv.log",
+      "bytes": 337,
+      "sha256": "969c5ec94676ddd088106b0144d3b354873f62688f46bc06b3d1d2a4b4e68dbe"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python311-experiments/validation.json",
+      "bytes": 3597,
+      "sha256": "a748244830d24d9e5a61303db5d751b2307bde8938b94b0e38829f8e72b85dde"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python311-tests/pytest.log",
+      "bytes": 352,
+      "sha256": "bf09c707582ff8d3fa6a109c97ed7cff5e21a312e6bd232eda485c19278e4352"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python311-tests/validation.json",
+      "bytes": 1461,
+      "sha256": "3ef10949c6deaa0e9f1236d609df2bd06cd3bdfcb4e96d224f8a78387f6b6857"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python312-experiments/validation.json",
+      "bytes": 3623,
+      "sha256": "8e59284691a85669498830707a4c26ea2f5a527e72568bf0830f87c77f130f7f"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python312-tests/pytest.log",
+      "bytes": 54,
+      "sha256": "6eeb7d3eec55e471cdd55ace12dd4240767a01bfd6128ba04c7624e78b0c4bf5"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/python312-tests/validation.json",
+      "bytes": 1461,
+      "sha256": "9648385635b307b300b80e53e6941262eb1953360705117b2729ff27189fec92"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/spec-kit/console-help.log",
+      "bytes": 3752,
+      "sha256": "851afdd090fbf3cd72724f4f01efe7c89f0c804aeff700c6a712e3ff7a094575"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/spec-kit/dependencies.log",
+      "bytes": 4727,
+      "sha256": "fbb987588cb809c2b4a85e3b1f7fc366d6653416f0fc620771f830e5398a1f20"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/spec-kit/installed-source.log",
+      "bytes": 287,
+      "sha256": "d384dcd1ad60364ec06d08a8242b05a4f612c8557fc50db1d5ad56c35384e73a"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/spec-kit/pip-check.log",
+      "bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/spec-kit/receipt.json",
+      "bytes": 3019,
+      "sha256": "d204e9f6301df17952967db2e3b5b508c05e4f3db53f7012f6b9471487eb5b60"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/spec-kit/source-install.log",
+      "bytes": 800,
+      "sha256": "2fa1a944f8b488fa4d60e82fed56118a381eec2b90c0045bccbc80989c4283f1"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/copied-package-installed.json",
+      "bytes": 780,
+      "sha256": "ad0bce1771cb26938f8cd46b75ac167580caa6d0312248b9f3fb68dbd7eda377"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/copied-package-installed.log",
+      "bytes": 3233,
+      "sha256": "8c73dc3e34c233ef574ebd488f97725669da5041fbde6ae8cc8acb5049704c11"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/docker-hash-locked-dependencies.json",
+      "bytes": 738,
+      "sha256": "b9e6fefb5f426214fcc0a7e3ae28e86906615b24430b6c8a0f1a1385f18cd888"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/docker-hash-locked-dependencies.log",
+      "bytes": 7059,
+      "sha256": "d0e465a9f9d87580361486c77d2b32617bf468c78ad70f8f8d576eedf0609236"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/empty-venv.json",
+      "bytes": 781,
+      "sha256": "c7b3e02f23baeeab4931ec8e2c770be92e4cb4db42e7929af1ce663c9c82a82c"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/empty-venv.log",
+      "bytes": 307,
+      "sha256": "735fe7f2ded63b9fd823029e7b597907d89191e84cd3cfdd355240a6169c055a"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/environment-probe.json",
+      "bytes": 1437,
+      "sha256": "3bd8d58919203e4be3e90055dd0b835a86301346bc45d2648602cb4189659f20"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/environment-probe.log",
+      "bytes": 8919,
+      "sha256": "9ba3077c29d8a27394f63b01fcf58ecadac7ec9618bcf2dddf43e267d22c3323"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/environment.json",
+      "bytes": 8919,
+      "sha256": "9ba3077c29d8a27394f63b01fcf58ecadac7ec9618bcf2dddf43e267d22c3323"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/missing-package-rejected.json",
+      "bytes": 778,
+      "sha256": "e455376fb6e0e191820154d3cde7336416ce081c0eb47f46f19ab213ca999144"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/missing-package-rejected.log",
+      "bytes": 368,
+      "sha256": "d5d2cf278988e83a9bee05a7999aa9b117ca1130e0e679271054423d681e1507"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/pip-check.json",
+      "bytes": 600,
+      "sha256": "4bba727efe8f629d8446f0b30e2c5083e57df79fd1883606343937f449d786ed"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/pip-check.log",
+      "bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/progress.json",
+      "bytes": 6776,
+      "sha256": "7e473d62df3244f96365f84966c8dd0c6069a5c95d58bae4bd80569f640f1ae6"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/seed-locked-pip.json",
+      "bytes": 988,
+      "sha256": "71f0c36709c3fb6171c55222f0be52ed88388903d5fa9d6297d04f73d3ea3bbb"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/seed-locked-pip.log",
+      "bytes": 181,
+      "sha256": "2a045dfd8d925807c67fa9929f0ec99ebfa2b8c414c36af632921c596046fe3b"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/seed-pip.lock",
+      "bytes": 180,
+      "sha256": "c2994f69de41643a555f0ea92ddbf5dbb17b047d759f82cd1f8f9e92d9a35a58"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/evidence/staged-install/summary.json",
+      "bytes": 9316,
+      "sha256": "484bed511a0c732d456d1c2cc2ab2470a237cdc46abf393ec2a544dbc5fed564"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/graphviz-lock.json",
+      "bytes": 14866,
+      "sha256": "d2182cfb9b2b2af1f77934f80259174c4d7c7e3ce02645aed62e48418c403346"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/locks/python311.in",
+      "bytes": 272,
+      "sha256": "95f375126f142040df733a2e463db19f1b434ca5e49f6ec7434eecb9e78e2f07"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/locks/python311.lock",
+      "bytes": 76552,
+      "sha256": "f230b54bc01e25092f7e55a48a7114df4a11b5e5ead8606ad47f2181d1f429ad"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/locks/python312.in",
+      "bytes": 272,
+      "sha256": "708ff6f9d8cc9875a37081cd270303f89fe76fa6a5607ef3bef2bab005ca232c"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/locks/python312.lock",
+      "bytes": 75872,
+      "sha256": "16125e5a5363d7af2f07126b2b10835e9fc375e59555ec6645756d48129a2b51"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/locks/spec-kit312.in",
+      "bytes": 198,
+      "sha256": "bcc2c43dacd171f169f0ed1e1f01c801461cdbb5c16bd9b9ec14de2e00c52081"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/locks/spec-kit312.lock",
+      "bytes": 9866,
+      "sha256": "53d4135fd2219d40275f58c64536940ae7d8226c93079563cec0a0c92e4704d2"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/plan.md",
+      "bytes": 1203,
+      "sha256": "1cb00f5815cabc485371d8c7fd31c127886b4254fe3c1c3a26023cc28fcccf6b"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/runtime-lock.json",
+      "bytes": 3207,
+      "sha256": "bd58a7d6cfb1bc66440cc9c2fe3ddfa0b17f216ba3a0ae7296b590c26bf2a125"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/runtime-setup.md",
+      "bytes": 10412,
+      "sha256": "140d5e6b190c583c13f98a459de425ea91a920306c21bae5d3bd2db9259a784d"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/spec-kit-lock.json",
+      "bytes": 377,
+      "sha256": "41a87bcc1c5cc2b753d54e18770eac46c28f27ec068351be9e3e5727b6aff82b"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/spec.md",
+      "bytes": 2966,
+      "sha256": "c750267c06b54137dbcb47c9e7298fd836c1adea3c1ed3f52f217f2fa849adcc"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/tasks.md",
+      "bytes": 893,
+      "sha256": "5e4b4dcf27aed8668dce76bb5055db53895fdf0d8f6e54b4febb9f8904c299a3"
+    },
+    {
+      "path": "overlay/specs/036-runtime-reproducibility/validation-summary.json",
+      "bytes": 11266,
+      "sha256": "ce92fbb69bdeb44c8e973f48da90fd6b0d508001993eb334ca59d548960add5e"
+    },
+    {
+      "path": "overlay/tests/test_runtime_bootstrap036.py",
+      "bytes": 3561,
+      "sha256": "a7c9ba2591446df5bd0830664dcf466a4764433d25e6980b5cae86a4b0dfcae7"
+    }
+  ]
+}
