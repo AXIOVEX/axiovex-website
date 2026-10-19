@@ -40,7 +40,7 @@ export function renderDimensions(dimensions) {
   return Object.entries(dimensions).map(([key, value]) => key === 'edgeResponseStatus' ? statusLabel(value) : value).join(' · ');
 }
 
-async function graphql(token, query, name) {
+export async function graphql(token, query, name) {
   const response = await request('https://api.cloudflare.com/client/v4/graphql', {
     method: 'POST', headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({ query }),
