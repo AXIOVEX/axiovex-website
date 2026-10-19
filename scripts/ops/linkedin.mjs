@@ -61,7 +61,7 @@ async function main() {
       if (!response.ok) throw Error(`LinkedIn ${target} token inspection HTTP ${response.status}`);
       const info = await response.json();
       const required = target === 'company' ? 'w_organization_social' : 'w_member_social';
-      if (!info.active || info.client_id !== clientId || !String(info.scope).split(/[ ,]+/).includes(required) || info.expires_at*1000 <= Date.now()) throw Error(`LinkedIn ${target} token lacks active publishing scope`);
+      if (!info.active || info.client_id !== clientId || !String(info.scope).split(/[ ,]+/).includes(required) || !Number.isFinite(Number(info.expires_at)) || info.expires_at*1000 <= Date.now()) throw Error(`LinkedIn ${target} token lacks active publishing scope`);
       if (info.expires_at*1000-Date.now()<14*86400000) console.log(`::warning::LinkedIn ${target} token expires within 14 days; reauthorize`);
     }
     const result = { authorized: true, member: profile.name, expiresAt: new Date(expiry).toISOString(), organizationUrn: linkedinPolicy.organizationUrn, companyProductApproval: 'Required separately; personal authorization is not proof of company posting permission' };

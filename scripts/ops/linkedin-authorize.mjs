@@ -16,7 +16,7 @@ function variable(name, value) {
   const r = spawnSync('gh', ['variable', 'set', name, '--body', value, '--repo', 'AXIOVEX/axiovex-website'], { encoding: 'utf8' });
   if (r.status !== 0) throw new Error('Could not save GitHub variable ' + name);
 }
-const form = `<!doctype html><html lang="en"><meta charset="utf-8"><title>Axiovex LinkedIn authorization</title><body><h1>Axiovex ${target} publishing authorization</h1><p>App credentials are sent only to this loopback server and LinkedIn. The accepted token is saved directly to GitHub Actions secrets. No token is displayed.</p><form method="post" action="/configure"><input type="hidden" name="nonce" value="${nonce}"><p><label>Client ID <input name="clientId" required value="${target === 'personal' ? linkedinPolicy.clientId : ''}"></label></p><p><label>Client secret <input name="clientSecret" type="password" required autocomplete="off"></label></p><button>Authorize LinkedIn and save repository credentials</button></form></body></html>`;
+const form = `<!doctype html><html lang="en"><meta charset="utf-8"><title>Axiovex LinkedIn authorization</title><body><h1>Axiovex ${target} publishing authorization</h1><p>App credentials are sent only to this loopback server and LinkedIn. The accepted token is saved directly to GitHub Actions secrets. No token is displayed.</p><form method="post" action="/configure"><input type="hidden" name="nonce" value="${nonce}"><p><label>Client ID <input name="clientId" required value="${target === 'personal' ? linkedinPolicy.clientId : linkedinPolicy.companyClientId}"></label></p><p><label>Client secret <input name="clientSecret" type="password" required autocomplete="off"></label></p><button>Authorize LinkedIn and save repository credentials</button></form></body></html>`;
 const server = createServer(async (req, res) => {
   res.setHeader('Cache-Control', 'no-store');
   res.setHeader('Content-Security-Policy', "default-src 'none'; form-action 'self' https://www.linkedin.com; frame-ancestors 'none'; base-uri 'none'");
@@ -31,7 +31,7 @@ const server = createServer(async (req, res) => {
       const fields = new URLSearchParams(raw);
       if (fields.get('nonce') !== nonce || !/^https?:\/\/(localhost|127\.0\.0\.1):8766$/.test(req.headers.origin || '')) throw new Error('Invalid local setup request');
       const clientId = fields.get('clientId'), clientSecret = fields.get('clientSecret');
-      if (!clientId || !clientSecret || target === 'personal' && clientId !== linkedinPolicy.clientId) throw new Error('Invalid app credentials');
+      if (!clientId || !clientSecret || clientId !== (target === 'personal' ? linkedinPolicy.clientId : linkedinPolicy.companyClientId)) throw new Error('Invalid app credentials');
       credentials = { clientId, clientSecret };
       const scope = target === 'personal' ? 'openid profile w_member_social' : 'w_organization_social r_organization_social';
       const params = new URLSearchParams({ response_type: 'code', client_id: clientId, redirect_uri: redirect, state, scope });
