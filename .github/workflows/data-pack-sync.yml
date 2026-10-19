@@ -28,6 +28,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
@@ -50,12 +51,7 @@ jobs:
           EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
           PACK_STATUS_FILE: ops-output/economic-refresh.json
           SOURCE_ID: ${{ inputs.source || 'all' }}
-        run: |
-          if [ "$SOURCE_ID" = all ]; then
-            node scripts/fetch-pack.mjs
-          else
-            node scripts/fetch-pack.mjs --only "$SOURCE_ID"
-          fi
+        run: node scripts/ops/refresh-pack.mjs
 
       - name: Refresh county data and rebuild public Signals insights
         id: geo
