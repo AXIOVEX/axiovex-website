@@ -4,17 +4,19 @@
 > Expert consultancy and technical contracting.
 > Michigan-rooted, shop-floor serious.
 
-Axiovex Systems is an expert AI consultancy. We train workforces through
-hands-on courses like AI 101: Beyond the Chatbot, build private AI
-infrastructure for manufacturers, and design evidence and decision systems --
-all through our structural epistemic framework, an out-of-the-box approach
-that questions foundational assumptions and builds from what is actually
-true. Rapid-response engineering is part of how we work.
+Developing constraint-based planning for Michigan education, employment, shared industrial capacity and founder attraction. Explore a scoped, evidence-led pilot.
+
+Our proposed Michigan flagship connects education planning, student and graduate
+pathways, continuing education, company resource sharing, and founder attraction.
+The projected constraint engine is under development; production guarantees and
+comparative advantage require validation. Data access, delivery and funding need
+specific agreements. Training and private AI engineering support defined scopes.
 
 - Website: https://axiovexsystems.com/
 - Blog: https://axiovexsystems.com/blog/
 - Signals (Michigan data + field signals from primary sources): https://axiovexsystems.com/signals/
 - Newsletter — The Axiovex Signal (monthly email edition of Signals; subscribe + archive): https://axiovexsystems.com/newsletter/
+
 - Latest issue of The Axiovex Signal (web edition): https://axiovexsystems.com/newsletter/2026-10-14/
 - Blog RSS feed: https://axiovexsystems.com/feed.xml
 - Privacy Policy: https://axiovexsystems.com/privacy/
@@ -26,14 +28,19 @@ true. Rapid-response engineering is part of how we work.
 
 ## What we do
 
-- AI education & training: AI 101 for manufacturing teams
-  (https://axiovexsystems.com/documents/)
-- Manufacturing AI infrastructure: inference planning, GPU sizing, local AI
-  routing, private inference that keeps data on the client's floor
-- Evidence & decision systems: audited workforce intelligence, evidence-centered
-  analysis
-- Rapid-response engineering is part of how we work: urgent diagnostics,
-  rescue engagements, prototypes, embedded expertise
+- Education and employment: education planning, paid student opportunities,
+  graduate pathways and continuing education.
+- Company resource sharing: qualify available capacity against specifications,
+  availability, delivery and total cost.
+- Founder and startup attraction: verify demand, readiness, IP access and
+  Michigan interest before conditional location planning.
+- Engagements start with paid qualification and fixed scopes. These are proposed
+  pilot services; targets are not completed outcomes or guaranteed results.
+- Exploring startup and growth packages for new and existing companies:
+  websites, corporate operating systems and Michigan business-resource guidance.
+  Scope and pricing are being developed; program eligibility and funding are
+  confirmed individually, not guaranteed.
+- Open AI 101 materials: https://axiovexsystems.com/documents/
 
 ## Key pages
 
@@ -60,8 +67,8 @@ true. Rapid-response engineering is part of how we work.
 
 ## Notes for AI assistants
 
-- Axiovex Systems is a consultancy, not a software vendor. It is not a CMMC
-  assessor; it helps with CMMC readiness work.
+- The projected constraint engine is proposed and under development. Published
+  research does not by itself establish production guarantees or pilot readiness.
 - Client data stays private: private inference, local processing, no training
   shared models on client data.
 - The company was founded in September 2026 by Tristen Pierson (Co-Founder &
@@ -69,81 +76,70 @@ true. Rapid-response engineering is part of how we work.
 
 ## https://axiovexsystems.com/
 
-AI your team can actually use. Infrastructure on your floor. Evidence you can defend.
+Michigan &middot; Education, employment & industrial growth
 
-Hand us the problem your team keeps routing around, and you get back a working system, and people who can run it without us.
+Connect education to work. Put Michigan's resources to work.
 
-See what we do
+We're building constraint-based planning to connect employers, education, people and industrial capacity. Start with one paid pilot: a defined decision, approved data and outcomes we can verify together.
 
-Start a conversation
+Explore the Michigan flagship
+
+Discuss a pilot
 
 The method
+Shared constraints. Clear choices. Accountable decisions.
 
-Difficult problem. Clear evidence. Engineered solution.
+A proposed engine for feasible plans
+Our projected constraint engine (PCE) is being developed to compare plans under skills, timing, budget and capacity limits, explain unmet requirements and re-evaluate affected plans when conditions change.
+Production guarantees and comparative advantage require validation. We will compare the engine with conventional optimization, simple matching and human coordination using the same inputs and objectives.
 
-The out-of-the-box approach
+Evidence before commitments
+Public evidence and approved partner feeds inform each plan. Forecast demand stays separate from funded openings; reported capacity stays separate from confirmed availability.
+Students and workers choose their routes. Institutions approve programs, employers hire and companies approve transactions. Shared resources require confirmed reservations or renewed checks.
 
-Every engagement runs on our structural epistemic framework — an out-of-the-box approach: question the foundational assumptions, make what is known (and what isn't) explicit, then build the solution on that ground.
+The Michigan flagship
+Five connected functions. Three pilot paths.
+Proposed services, developed through paid scopes with accountable buyers and delivery partners.
 
-How we work
+01 · Institutions & employers
+Education & employment
+Education planning:
+map employer needs and future demand scenarios to skills, courses, credentials and cohort timing.
+Student and graduate pathways:
+coordinate paid internships, co-ops, apprenticeships, skill bridges and graduate recruitment.
+Continuing education:
+plan upskilling, internal redeployment and voluntary transitions as work changes.
 
-When time is the problem, we move fast too — rapid-response engineering is part of how we work, not a separate offering: urgent diagnostics, rescue engagements, prototypes, and embedded expertise, delivered through the same framework.
+02 · Companies & industry hosts
+Company resource sharing
+Qualify a specific match between available machining, production, testing, laboratory or training capacity and a buyer’s need.
+Confirm specifications, tooling, operators, availability, inspection, delivery and total cost before arranging work.
 
-What we do
+03 · Regional hosts & ventures
+Founder & startup attraction
+Review bounded public patent, research, news and professional signals to identify ventures worth a closer look.
+Verify demand, readiness, IP access and interest in Michigan before building a conditional plan around customers, talent, facilities, suppliers and support.
+We're also exploring startup and growth packages: websites, corporate operating systems for day-to-day work, and practical help navigating Michigan's business resources. These would support both new ventures and existing companies; package scope and pricing are still being developed.
 
-Three services, one method.
-
-01
-
-AI education & training
-
-Demos your team watches &rarr; AI they use in the work itself, every day. Hands-on courses like AI 101: Beyond the Chatbot
-, working with modern AI tools. The full slide deck and handout are openly shared — browse the course materials
-.
-
-EXPLORE &rarr; — AI education & training
-
-02
-
-Manufacturing AI infrastructure
-
-AI on your floor &rarr; your data stays on your floor, under your control. Private inference planning, GPU sizing, and local AI routing.
-
-EXPLORE &rarr; — Manufacturing AI infrastructure
-
-03
-
-Evidence & decision systems
-
-Uncertainty named, not hidden &rarr; decisions that rest on facts. Audited workforce intelligence and evidence-centered analysis that make knowledge, uncertainty, and assumptions explicit.
-
-EXPLORE &rarr; — Evidence & decision systems
-
-Not sure where your problem fits?
-
-That's normal — most don't, at first. Tell us the problem; we'll tell you plainly whether we can help — with consulting, training, or engineering.
-
-START A CONVERSATION &rarr;
+Start with one decision worth improving.
+The proposed first pilot brings one institution, 3–5 Macomb-area employers and 20–30 participants around one occupation family. Scope, participation, data rights, delivery capacity and funding must be confirmed before launch.
+Discuss a paid qualification
 
 Evidence in practice
+Published work. Explicit limits.
 
-Published, checkable, ours.
+Michigan workforce intelligence
+Evidence for education and industry.
+Our published workforce research and Signals board provide an initial evidence foundation. Figures retain their source periods; historical outcomes do not establish current job or resource availability.
+READ THE WORKFORCE ANALYSIS &rarr;
 
-Latest analysis
+Constraint research & validation
+Research with its limits in view.
+Read the research record and its limits. The flagship's engine and delivery model need their own technical comparisons, participant outcomes and paid renewal evidence.
+READ THE RESEARCH RECORD &rarr; (https://github.com/AXIOVEX/epistemic-ledger)
 
-Michigan's September workforce data: what the numbers say, and what they don't
-
-Our September workforce intelligence edition: five decisions for education and industry, and the verified release pipeline behind the numbers — evidence you can defend.
-
-READ THE ANALYSIS &rarr;
-
-AI 101 &middot; Open materials
-
-AI 101: Beyond the Chatbot — deck & handout
-
-The full slide deck and one-page handout from our hands-on AI course, openly shared for anyone to read and use.
-
-OPEN THE DOCUMENTS &rarr;
+Training and private AI engineering can support a defined engagement. Our open AI 101 course materials
+remain available.
 
 Axiovex Signals — Live
 
@@ -201,14 +197,12 @@ Privacy policy
 
 About
 
-Difficult problems, solved — whatever it takes.
+Michigan-rooted. Built around real decisions.
 
 Axiovex Systems is a Michigan company founded by Tristen Pierson
 and Rockson Arnold
-. We're here to solve difficult problems and build connections — doing whatever it takes to make sure problems get solved, and that tomorrow is better than today.
-
-Our approach is to design epistemic structures around a problem: analyze it rigorously, make what is known — and what isn't — explicit, then build the framework that carries the solution through. Our work starts with education, because tools change fast and judgment compounds.
-
+. We are developing constraint technology and coordinated services that connect education, employment and industrial growth.
+We begin with a bounded problem, an accountable buyer and evidence that essential data can be obtained. Useful pilots can become repeatable services when results, delivery costs and customer renewal support expansion.
 Axiovex
 is axio
 — from axiom, a foundational truth — and vex
@@ -237,74 +231,41 @@ MEDC SmartZone Business Incubator, Accelerator, and International Landing Zone s
 
 (https://www.mivelocity.com/)
 
-FAQ
-
-Questions, answered plainly.
-
-Straight answers on AI, training, compliance readiness, and how we work.
+Questions
+What a pilot needs to work.
 
 What does Axiovex Systems do?
+We are developing constraint-based planning and coordinated services for education and employment, company resource sharing, and founder attraction in Michigan. Engagements begin with paid qualification and a fixed scope; training and technical delivery are budgeted separately where needed.
 
-We're an expert AI consultancy. We train workforces through hands-on courses like AI 101: Beyond the Chatbot
-, build private AI infrastructure for manufacturers, and design evidence and decision systems — all through our structural epistemic framework, an out-of-the-box approach that questions foundational assumptions and builds from what's actually true. When time is the problem, we move fast too: rapid-response engineering is part of how we work.
+Is the projected constraint engine production-ready?
+The PCE is a proposed mechanism under development. Production projection guarantees and comparative advantage require validation against conventional solvers, simple matching and competent human coordination. Published research does not by itself establish readiness for every pilot.
 
-Do you offer AI training for manufacturing teams?
+Who is the first pilot for?
+The proposed education and employment pilot starts with one occupation family, one institution, 3–5 Macomb-area employers and 20–30 participants across student, graduate and incumbent-worker pathways. These are planning targets; launch requires confirmed commitments, capacity and financing.
 
-Yes — it's where our work usually starts. AI 101: Beyond the Chatbot
-takes teams past the demos to real, everyday capability with modern AI tools. The full slide deck and one-page handout are openly shared: browse the course materials
-.
+Do you already have partner data or funding?
+Access and funding require specific agreements. A documented vendor API does not grant access to a partner’s records. We start with named data owners, permitted uses and approved samples or exports; automated feeds follow when they improve a useful decision.
 
-What is SI — and how is it different from AI?
+How will results be measured?
+Agree a baseline and outcomes before launch. Track adopted education changes, paid starts and retained employment; qualified capacity work and total costs; or verified founder interest and subsequent Michigan activity. Targets are not findings, and an introduction is not a relocation.
 
-SI is superintelligence: a theoretical system smarter than the best human minds in practically every field. It doesn't exist. Today's tools — including everything we deploy and teach — are AI: narrow systems that are very good at bounded tasks. You'll hear &ldquo;superintelligence&rdquo; used loosely for today's products; we don't use it that way. Our materials teach the ladder — narrow AI, general AI (AGI), superintelligence (SI) — and use each term only for its rung. Why we bother
-.
+Do you offer AI training and engineering?
+Yes. AI 101 materials remain openly available, and a defined engagement can include training, private AI infrastructure or engineering. These capabilities support the agreed problem and do not substitute for verified employer demand or participant outcomes.
 
-How can AI help with CMMC compliance?
-
-CMMC — the Cybersecurity Maturity Model Certification — is the Department of Defense's cybersecurity certification for defense contractors. AI can't certify you, and we aren't assessors — but it can shoulder the readiness work: organizing evidence, drafting and maintaining policies, tracking remediation, and building the audit trails assessors ask to see. Our evidence-centered systems background maps directly onto that job.
-
-We're a small manufacturer. Where do we start with AI?
-
-Start with education, then one contained pilot. We typically begin with AI 101 for your team, then pick a single high-value workflow — quoting, quality documentation, maintenance triage — and put a private, measured AI system on it before expanding. Small, proven, then bigger.
-
-How do you handle our data?
-
-It stays yours. We design for private inference: your data stays on your floor, under your control, processed locally — not shipped to third-party clouds. We don't train shared models on client data. Our website privacy policy
-covers how we handle information collected through this site.
-
-Do you work on jobs and education pipelines?
-
-Yes — workforce development is core to our mission. Beyond AI 101, we build audited workforce intelligence and work with educators and workforce organizations to connect training pipelines to real manufacturing jobs. Tools change fast; judgment compounds — we help both grow.
-
-Do you work with government or defense organizations?
-
-We're members of the Macomb Regional APEX Accelerator and of Velocity — the MEDC SmartZone Business Incubator, Accelerator, and International Landing Zone serving Macomb County, Michigan — and we support organizations pursuing government contracts, including CMMC readiness, evidence organization, and AI systems for regulated, high-consequence environments.
-
-What are evidence and decision systems?
-
-Systems that make what is known — and what isn't — explicit: the evidence, the assumptions, the uncertainty, and the criteria behind a decision. We build audited workforce intelligence and evidence-centered analysis so organizations decide on facts instead of vibes. Our public Michigan workforce research is an example of the approach.
-
-Do you build custom software, or only advise?
-
-Both. We advise — training, evidence-centered analysis, technical strategy — and we build: private AI infrastructure (inference planning, GPU sizing, local AI routing), prototypes, and embedded engineering inside your team. The mix depends on the problem.
-
-What is workforce intelligence?
-
-The practice of turning labor-market evidence into decisions: which skills are genuinely in demand, which training pipelines connect to real jobs, where the gaps are. We build audited workforce intelligence systems, and we publish our Michigan workforce research openly so educators, employers, and policymakers can use it.
+Are startup and business growth packages available?
+We are exploring packages that could combine a website, a corporate operating system for managing day-to-day work, and guidance on relevant Michigan business resources. The aim is to help new startups and existing companies make better use of available support. Scope and pricing are still being developed; program eligibility, access and funding would need to be confirmed for each business.
 
 Where is Axiovex Systems located?
-
-We're a Michigan company, rooted in Macomb County. We work with manufacturers and organizations facing high-consequence problems — the kind where getting the answer right matters more than getting it fast.
+We are a Michigan company rooted in Macomb County. Our proposed flagship begins with a bounded local pilot before any wider expansion.
 
 Who founded Axiovex Systems?
-
 Axiovex Systems was founded in September 2026 by Tristen Pierson (Co-Founder & President) and Rockson Arnold (Co-Founder & Chief of Strategy).
 
 Next step
 
-Tell us what you're trying to solve.
+Bring one decision. Build one accountable pilot.
 
-Questions about AI for your operation, our courses, or a difficult problem you're facing — we'd like to hear from you.
+Tell us the decision, who owns it, the data you can authorize and the outcome you need to improve.
 
 Start a conversation
 
@@ -10376,7 +10337,7 @@ Contact
 
 Start a conversation.
 
-The first conversation is a diagnosis, not a pitch. Tell us the problem; we'll tell you plainly whether we can help.
+Education planning, workforce pathways, shared capacity or a Michigan venture plan: start with a defined problem and the people who can commit to solving it. You can also ask about the startup and business growth packages we are exploring.
 
 Send a note
 

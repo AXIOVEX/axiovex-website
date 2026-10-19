@@ -1,0 +1,21 @@
+{
+  "checkedUtc": "2026-10-19T21:31:31.093469+00:00",
+  "scope": "local browser and content validation; live staging deployment checked separately",
+  "htmlValidate": "10.5.0, no errors on homepage/contact/newsletter landing",
+  "buildReproducible": true,
+  "desktopViewport": 1280,
+  "mobile": {
+    "allLinks": true,
+    "faqCount": 9,
+    "faqSchemaMatches": true,
+    "offerWording": true,
+    "overflow": false,
+    "startupPackage": true,
+    "width": 390
+  },
+  "contactMobileOverflow": false,
+  "contactFieldsAndAction": "unchanged",
+  "researchSourceHTTP": 200,
+  "stagingHeadersAndRobots": "unchanged",
+  "thesisPdfUploaded": false
+}

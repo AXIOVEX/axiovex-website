@@ -14,6 +14,11 @@ export function inspect(html, url) {
     // Specs 023/024 intentionally keep the research hub unlisted/noindex.
     indexingPolicy: /<meta\b[^>]*content=["'][^"']*noindex/i.test(html) === (new URL(url).pathname === '/research/'),
   };
+  const page = new URL(url);
+  const research = page.pathname.startsWith('/research/');
+  const links = [...html.matchAll(/<a\b[^>]*href=["']([^"']+)["']/gi)].map(m => { try { return new URL(m[1], url); } catch { return null; } }).filter(Boolean);
+  checks.bitConceptsLinkPolicy = research || links.every(link => !/(^|\.)bitconcepts\.tech$/i.test(link.hostname));
+  checks.researchUnlistedLinks = research || links.every(link => link.origin !== page.origin || !/^\/research(?:\/|$)/.test(link.pathname));
   const canonical = (html.match(/<link\b[^>]*rel=["']canonical["'][^>]*>/i) || [])[0] || '';
   checks.canonical = /href=["']([^"']+)["']/i.exec(canonical)?.[1] === url;
   const blocks = [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
@@ -40,6 +45,8 @@ async function main() {
       if (pathname === '/__axiovex_missing_seo_probe__/') entry.checks.missingPageNoindex = /name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(body);
       if (pathname === '/llms.txt' || pathname === '/llms-full.txt') entry.checks.machineText = /text\/plain/i.test(response.headers.get('content-type') || '') && !/<(?:!doctype|html)\b/i.test(body);
       entry.checks.edgeIndexingPolicy = !/noindex/i.test(response.headers.get('x-robots-tag') || '') || ['/research/', '/__axiovex_missing_seo_probe__/'].includes(pathname);
+      if (pathname === '/research/') entry.checks.researchResponseNoindex = /noindex/i.test(response.headers.get('x-robots-tag') || '');
+      if (pathname === '/robots.txt') entry.checks.researchOmittedFromRobots = !body.includes('/research');
       if (pathname === '/robots.txt') entry.checks.productionCrawl = !/Disallow:\s*\/\s*(?:\r?\n|$)/i.test(body);
       if (pathname === '/sitemap.xml') entry.checks.sitemap = sitemapResponse.status === 200 && discovered.length > 0;
       if (pathname === '/sitemap.xml' || pathname === '/llms.txt' || pathname === '/llms-full.txt') entry.checks.researchUnlisted = !body.includes(BASE + '/research/');
@@ -69,7 +76,7 @@ async function main() {
   }
   if (linked.size > 150) throw new Error('Local resource audit exceeds bounded size');
   for (const url of linked) {
-    try { const r = await request(url, { method: 'HEAD' }); results.push({ url, status: r.status, checks: { linkedResource: r.status === 200 } }); }
+    try { const r = await request(url, { method: 'HEAD' }); const checks = { linkedResource: r.status === 200 }; if (new URL(url).pathname.startsWith('/research/')) checks.researchAssetNoindex = /noindex/i.test(r.headers.get('x-robots-tag') || ''); results.push({ url, status: r.status, checks }); }
     catch (error) { results.push({ url, error: error.message, checks: { linkedResource: false } }); }
   }
   const failed = results.flatMap(r => Object.entries(r.checks).filter(([, ok]) => !ok).map(([name]) => `${r.url}: ${name}${r.error ? ' — ' + r.error : ''}`));
