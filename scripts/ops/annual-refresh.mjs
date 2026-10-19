@@ -17,6 +17,21 @@ export function blsTable(html) {
   if (selected.length !== 5 || selected.some(r => !r.name || !Number.isFinite(r.jobsChange) || !Number.isFinite(r.pctChange))) throw Error('BLS projection table schema changed');
   return { horizon: `${years[1]}–${years[2].slice(-2)}`, rows: selected };
 }
+export function blsApiTable(catalog, series) {
+  if (new Set(series.map(s=>s.seriesID)).size!==catalog.rows.length || series.length!==catalog.rows.length) throw Error('BLS occupation API coverage incomplete');
+  const rows=catalog.rows.map(expected=>{
+    const source=series.find(s=>s.seriesID===expected.id);
+    const latest=source?.data?.filter(r=>r.period==='A01').sort((a,b)=>Number(b.year)-Number(a.year))[0];
+    if (!latest || Number(latest.year)!==catalog.baseYear) throw Error('BLS API base year changed or data missing; verify the new occupation universe before ranking');
+    const aspects=Object.fromEntries((latest.aspects||[]).map(a=>[a.name,a.value]));
+    const parse=value=>typeof value==='string' && value.trim() && Number.isFinite(Number(value)) ? Number(value) : NaN;
+    const change=parse(aspects['Numerical employment change']),pct=parse(aspects['Percent employment change']),projected=parse(aspects['Projected employment']),base=parse(latest.value);
+    if (![change,pct,projected,base].every(Number.isFinite) || base<0 || projected<0 || Math.abs(projected-base-change)>.21) throw Error('BLS API named projection measures do not reconcile');
+    return {name:expected.name,jobsChange:Math.round(change*1000),pctChange:pct};
+  });
+  const horizon=`${catalog.baseYear}–${String(catalog.projectionYear).slice(-2)}`;
+  return {rise:[...rows].sort((a,b)=>b.pctChange-a.pctChange).slice(0,5),fall:[...rows].sort((a,b)=>a.pctChange-b.pctChange).slice(0,5),horizon,vintage:horizon,sourceFileUrl:'https://api.bls.gov/publicAPI/v2/timeseries/data/'};
+}
 async function main() {
   mkdirSync(dir, { recursive: true });
   const evidence = { checkedUtc: new Date().toISOString(), sources: [], failed: false };
@@ -36,6 +51,23 @@ async function main() {
   };
   const failures=[];
   async function check(name, fn) { try { await fn(); } catch(e) { failures.push(`${name}: ${e.message}`); console.error(failures.at(-1)); } }
+  async function projectionApi() {
+    if (!process.env.BLS_API_KEY) throw Error('BLS_API_KEY required for complete occupation API fallback');
+    const catalog=JSON.parse(readFileSync('data/bls-projection-catalog.json'));
+    if (catalog.rows.length<500 || catalog.projectionYear-catalog.baseYear!==10) throw Error('Invalid BLS projection universe');
+    const all=[];
+    for(let i=0;i<catalog.rows.length;i+=50) {
+      const response=await fetch('https://api.bls.gov/publicAPI/v2/timeseries/data/',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({registrationkey:process.env.BLS_API_KEY,seriesid:catalog.rows.slice(i,i+50).map(r=>r.id),startyear:String(catalog.baseYear),endyear:String(new Date().getUTCFullYear()),aspects:true}),signal:AbortSignal.timeout(60000)});
+      if(!response.ok) throw Error(`BLS projection API HTTP ${response.status}`);
+      const result=await response.json();
+      if(result.status!=='REQUEST_SUCCEEDED' || !Array.isArray(result.Results?.series)) throw Error('BLS projection API request not processed');
+      all.push(...result.Results.series);
+    }
+    const table=blsApiTable(catalog,all);
+    writeFileSync(`${dir}/bls-api-series.json`,JSON.stringify(all));
+    evidence.sources.push({url:table.sourceFileUrl,state:'named API measures',occupations:all.length,baseYear:catalog.baseYear,projectionYear:catalog.projectionYear,sha256:createHash('sha256').update(JSON.stringify(all)).digest('hex')});
+    const outlook=JSON.parse(readFileSync('data/outlook.json'));Object.assign(outlook.blsProjections,table);save('data/outlook.json',outlook);
+  }
   try {
     let outlook = JSON.parse(readFileSync('data/outlook.json'));
     await check('BLS projections', async () => {
@@ -54,6 +86,7 @@ async function main() {
         } catch(workbookError) {
           if (!/HTTP 403/.test(workbookError.message)) throw workbookError;
           // BLS separately publishes the same matrix in its bulk/API service.
+          try {
           for (const file of ['ep.dates','ep.industry','ep.occupation','ep.series','ep.data.1.AllData','ep.aspect']) await download('https://download.bls.gov/pub/time.series/ep/'+file,file);
           const dates=readFileSync(`${dir}/ep.dates`,'utf8').split(/\r?\n/).find(l=>l.startsWith('optd\t'))?.trim().split('\t');
           if (!dates) throw Error('BLS occupation projection dates absent');
@@ -61,6 +94,7 @@ async function main() {
           if (!response.ok) throw Error(`BLS aspect validation API HTTP ${response.status}`);
           writeFileSync(`${dir}/ep-api-validation.json`,JSON.stringify(await response.json()));
           py('bls-bulk');
+          } catch(bulkError) { if(!/HTTP 403/.test(bulkError.message)) throw bulkError; await projectionApi(); }
         }
         outlook=JSON.parse(readFileSync('data/outlook.json'));
       }

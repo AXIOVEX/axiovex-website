@@ -32,6 +32,8 @@ jobs:
       - name: Refresh official tables and annual map inputs
         id: sources
         continue-on-error: true
+        env:
+          BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
         run: node scripts/ops/annual-refresh.mjs
       - name: Build last-good public data
         run: node scripts/build-site.mjs
