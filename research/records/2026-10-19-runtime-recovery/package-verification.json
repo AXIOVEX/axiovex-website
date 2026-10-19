@@ -1,0 +1,30 @@
+{
+  "status": "pass",
+  "patched_existing_files": 4,
+  "new_and_evidence_files_verified": 211,
+  "minimal_patch_matches_current_engineering_files": true,
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "apply",
+        "--unidiff-zero",
+        "--check",
+        "/workspace/scratch/c2f788a632d6/runtime-deliverables/runtime-repair-036/ENGINEERING.patch"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "argv": [
+        "git",
+        "apply",
+        "--unidiff-zero",
+        "/workspace/scratch/c2f788a632d6/runtime-deliverables/runtime-repair-036/ENGINEERING.patch"
+      ],
+      "returncode": 0,
+      "output": ""
+    }
+  ],
+  "scope": "Patch application and included-file integrity only; no source CI or complete baseline publication implied."
+}
