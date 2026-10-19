@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync, mkdirSync, appendFileSync, readdirSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
-import { localParts, shift } from './calendar.mjs';
+import { localParts, shift, scheduledTime } from './calendar.mjs';
 import { save, summary } from './io.mjs';
 import { renderEmail } from '../newsletter/render.mjs';
 export const policy = JSON.parse(readFileSync(new URL('../../data/publication-policy.json', import.meta.url), 'utf8'));
@@ -16,6 +16,11 @@ export function cycle(now = new Date()) {
   const dataMonth = data.toISOString().slice(0, 7);
   const active = dataMonth >= policy.firstDataMonth;
   return { active, releaseMonth, dataMonth, date: `${p.year}-${p.month}-${p.day}` };
+}
+export function publicationPlan(now = new Date(), cron = '') {
+  const slot = cron.trim() ? scheduledTime(cron, now) : now;
+  const plan = cycle(slot);
+  return { ...plan, active: plan.active && (!cron.trim() || +localParts(slot).hour === policy.releaseHour) };
 }
 export function checkEconomicData(signals, geo, dataMonth) {
   const problems = [];
@@ -61,13 +66,9 @@ async function main() {
   const plan = cycle();
   if (mode === 'plan') {
     // Both UTC offsets are scheduled, but only 10:00 Eastern is eligible.
-    const nominal = process.env.SCHEDULE_CRON?.split(' ');
-    const nominalNow = new Date();
-    if (nominal) { nominalNow.setUTCHours(+nominal[1], +nominal[0], 0, 0); if (nominalNow > new Date()) nominalNow.setUTCDate(nominalNow.getUTCDate() - 1); }
-    const p = localParts(nominalNow);
-    const active = plan.active && (!nominal || +p.hour === policy.releaseHour);
-    if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, `active=${active}\ndataMonth=${plan.dataMonth}\n`);
-    console.log(JSON.stringify({ ...plan, active })); return;
+    const scheduled = publicationPlan(new Date(), process.env.SCHEDULE_CRON || '');
+    if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, `active=${scheduled.active}\ndataMonth=${scheduled.dataMonth}\n`);
+    console.log(JSON.stringify(scheduled)); return;
   }
   if (!plan.active) throw new Error('Outside the month-end publication window');
   const signals = JSON.parse(readFileSync('data/signals.json', 'utf8'));

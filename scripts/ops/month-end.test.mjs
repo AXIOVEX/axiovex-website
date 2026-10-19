@@ -1,9 +1,17 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { cycle, checkEconomicData, makeIssue, policy } from './month-end.mjs';
+import { cycle, checkEconomicData, makeIssue, policy, publicationPlan } from './month-end.mjs';
 import { windows } from './calendar.mjs';
 import { validateDailyRows, measuredInsights } from './analytics.mjs';
+test('manual dispatch empty cron and queued DST schedules preserve the release gate', () => {
+  assert.equal(publicationPlan(new Date('2026-10-19T17:00:00Z'), '').active, false);
+  assert.equal(publicationPlan(new Date('2026-10-30T17:00:00Z'), '').active, true);
+  assert.equal(publicationPlan(new Date('2026-10-30T17:00:00Z'), '0 14 * * *').active, true);
+  assert.equal(publicationPlan(new Date('2026-10-30T17:00:00Z'), '0 15 * * *').active, false);
+  assert.equal(publicationPlan(new Date('2026-11-30T18:00:00Z'), '0 14 * * *').active, false);
+  assert.equal(publicationPlan(new Date('2026-11-30T18:00:00Z'), '0 15 * * *').active, true);
+});
 test('monthly publication waits for month end and preserves data month during catch-up', () => {
   assert.equal(cycle(new Date('2026-10-21T14:00:00Z')).active, false);
   assert.equal(cycle(new Date('2026-10-29T14:00:00Z')).active, false);

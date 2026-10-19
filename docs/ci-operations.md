@@ -244,3 +244,19 @@ them. Current-month missing-date lists and exact round-trip verification are
 saved as backfill-verification.json. The archive keeps older saved dates; the
 90-day query window does not delete them. An archive/backfill failure makes
 coverage partial and remains visible instead of silently claiming persistence.
+
+## Production verification — October 19
+
+- BEA secret/collector passed run 39292582186 (three series).
+- Isolated EIA retry passed run 39294037013: both API routes returned valid
+  data, unchanged July reference period. The first timeout was transient;
+  the old period reflects the source, not an authentication failure.
+- Traffic archive was backfilled and read back successfully: 20 complete
+  days, September 29 through October 18; every completed October day present.
+  Cloudflare zone creation is September 29, explaining the two-day September
+  collection. A full pre-zone September/August baseline is unavailable.
+- Production aggregate subscriber endpoint passed, initialized its dated
+  baseline and returned counts only; first historical net change is unknown.
+- Manual monthly dispatch exposed an empty-cron parsing defect before any
+  send. The scheduler now treats empty dispatch cron as manual and has an
+  explicit regression test, plus queued DST-offset tests.
