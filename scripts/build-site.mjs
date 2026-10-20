@@ -351,7 +351,19 @@ function listeningHtml(data, opts) {
 
 function listeningSection(post) {
   const dataPath = path.join(ROOT, 'blog', 'listening', post.slug, 'chapters.json');
-  if (!existsSync(dataPath)) return '';
+  const hasData = existsSync(dataPath);
+  // The front-matter flag (blog/README.md, spec 029 standing rule):
+  // `listening: enabled: true` declares the article ships with a
+  // listening edition. The data file stays the operative gate
+  // (FR-005); the flag makes a missing edition loud in the build
+  // log instead of silent, and `enabled: false` suppresses the
+  // player even when data exists.
+  const flag = post.listening ? post.listening.enabled : undefined;
+  if (flag === 'true' && !hasData) {
+    console.log('blog: WARNING "' + post.slug + '" declares listening.enabled but blog/listening/' + post.slug + '/chapters.json is missing — no player emitted');
+    return '';
+  }
+  if (!hasData || flag === 'false') return '';
   return listeningHtml(JSON.parse(readFileSync(dataPath, 'utf8')));
 }
 
@@ -381,9 +393,17 @@ function parsePost(filePath) {
   const m = /^---\n([\s\S]*?)\n---\n?/.exec(raw);
   if (!m) throw new Error('missing front matter: ' + filePath);
   const fm = {};
+  let fmSection = null;
   for (const line of m[1].split('\n')) {
     const kv = /^([A-Za-z]+):\s*(.*)$/.exec(line);
-    if (kv) fm[kv[1]] = kv[2].trim();
+    if (kv) { fm[kv[1]] = kv[2].trim(); fmSection = kv[1]; continue; }
+    // One level of indented nesting (e.g. the `listening:` block) is
+    // collected into an object on its parent key.
+    const sub = /^\s+([A-Za-z]+):\s*(.*)$/.exec(line);
+    if (sub && fmSection) {
+      if (typeof fm[fmSection] !== 'object' || fm[fmSection] === null) fm[fmSection] = {};
+      fm[fmSection][sub[1]] = sub[2].trim();
+    }
   }
   const base = path.basename(filePath, '.md');
   const slug = fm.slug || base.replace(/^\d{4}-\d{2}-\d{2}-/, '');
@@ -391,7 +411,8 @@ function parsePost(filePath) {
     title: fm.title || slug,
     date: fm.date || '',
     description: fm.description || '',
-    tags: (fm.tags || '').split(',').map(s => s.trim()).filter(Boolean),
+    tags: (typeof fm.tags === 'string' ? fm.tags : '').split(',').map(s => s.trim()).filter(Boolean),
+    listening: (fm.listening && typeof fm.listening === 'object') ? fm.listening : null,
     slug,
     bodyMd: raw.slice(m[0].length),
     url: SITE + '/blog/' + slug + '/',

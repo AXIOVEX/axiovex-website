@@ -85,3 +85,47 @@ from the reference design; the visuals are this site's own
   "signal cast"; podcast/RSS distribution of the audio.
   Each is a later decision, informed by this pilot.
 - Any change to the article's text, claims, or metadata.
+
+## Amendment 2026-10-20 — standing rule: every article ships with one
+
+Owner direction, 2026-10-20, after approving the pilot
+(T008: "I love it"). The listening edition is not a one-off
+pilot feature; it is part of what an Axiovex blog article is.
+
+- **FR-009 — Template flag.** The blog post template and
+  authoring conventions (`blog/README.md`) carry a
+  `listening:` front-matter block (`enabled: true`) recording
+  that the article ships with a listening edition. Assets live
+  at `blog/listening/<slug>/` (`script.md` + `chapters.json`)
+  and `assets/audio/<slug>/`, exactly as the pilot established.
+- **FR-010 — Automated generation.** `scripts/build-listening.mjs`
+  generates an edition from a drafted script: it runs the
+  number-fidelity gate (FR-011), synthesizes one MP3 per
+  chapter in the pilot voice, probes durations, and writes
+  `chapters.json`. The build emits the player for ANY post with
+  a `chapters.json` (the FR-005 data gate, unchanged), honors
+  `enabled: false` as a suppressor, and warns loudly when a
+  post declares the flag but has no data file.
+- **FR-011 — Number-fidelity gate.** Every number in a script
+  — digits or spelled out — must appear in the article text.
+  The gate fails loudly, lists each mismatch, and synthesizes
+  nothing on failure. Script drafting remains the human/agent
+  step; everything after drafting is automated.
+- **FR-012 — Backfill and its promotion gate.** Every article
+  published at the time of this amendment, plus the two held
+  posts (Trinity, Lansing), received a listening edition on
+  staging in one batch (2026-10-20), each gate-passed. The
+  batch is staged for the owner's sampling; promotion to
+  production happens only on his say-so. The robots article's
+  production promotion — approved separately and executed
+  2026-10-20 — is unaffected. Held posts keep their hold;
+  their editions ship when the articles themselves release.
+
+**Recorded note on the pilot and the gate.** The pilot's
+robots script predates the gate. Run through the gate after
+the fact, it passes: its one initial flag was a parser
+artifact (the decade name "nineteen-nineties" read as the
+figure 19), fixed in the tool — decade names parse as
+decades, and clause punctuation breaks number runs so two
+adjacent figures cannot merge into a phantom. The pilot
+script itself was not altered.

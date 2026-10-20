@@ -64,3 +64,24 @@
   production guard blobs verified unchanged). Wider rollout (every
   article, signals briefing) proceeds as separate staged workstreams;
   backfill promotion beyond the robots article remains owner-gated.
+
+## Follow-on workstreams (owner direction, 2026-10-20)
+
+- [x] T009 **WS1 — player v3** (media session, mini-player, resume,
+  speed) on staging. Commit 754e9525.
+- [x] T010 **WS2 — robots edition promoted to production**
+  (file-level; guard blobs verified unchanged; homepage
+  byte-identical). Commits cca6895 / d00d600 (+ site-sync).
+- [x] T011 **WS3 — Signals Briefing, first edition** on staging
+  (2026-10-20 edition, 7 chapters, 5:47) + daily-regeneration
+  design drafted (daily-briefing-design.md; NO job created —
+  owner blesses the first edition first). Commit 59cac7cc.
+- [x] T012 **WS4 — pipeline**: `listening:` template flag +
+  build warning, `scripts/build-listening.mjs` generator with
+  the number-fidelity gate, spec amendment (FR-009–FR-012).
+- [x] T013 **WS4 — backfill batch on staging**: editions for all
+  five published posts + both held posts, each gate-passed;
+  held posts remain held.
+- [ ] T014 **GATE — owner samples the backfill batch** on
+  staging. Production promotion of the batch only on his
+  say-so (the robots promotion under T010 is unaffected).
