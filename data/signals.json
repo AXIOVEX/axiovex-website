@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-19T18:29:51.120Z",
+  "updatedUtc": "2026-10-20T08:21:00.362Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -270,22 +270,22 @@
         {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
+          "title": "General Services Administration → FCA US LLC — $61,630 award, October 16, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F000J_4732_47QMCA22D000N_4732",
+          "date": "2026-10-16"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "General Services Administration → FCA US LLC — $61,630 award, October 16, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F000K_4732_47QMCA22D000N_4732",
+          "date": "2026-10-16"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
           "title": "Department of Veterans Affairs → ELECTRA-MED CORPORATION — $21,507 award, October 15, 2026",
           "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0056_3600_36C10G24D0057_3600",
-          "date": "2026-10-15"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → WRIGHT & FILIPPIS, LLC — $20,246 award, October 15, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027N0083_3600_36C25025A0066_3600",
-          "date": "2026-10-15"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $46,457 award, October 15, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C26127P0069_3600_-NONE-_-NONE-",
           "date": "2026-10-15"
         }
       ]
