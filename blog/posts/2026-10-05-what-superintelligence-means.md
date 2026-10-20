@@ -4,6 +4,8 @@ date: 2026-10-05
 description: "Superintelligence" is being applied to tools that are not superintelligent. The ladder from narrow AI to AGI to SI, and what the confusion costs buyers and educators.
 tags: AI, superintelligence, terminology, education
 slug: what-superintelligence-means
+listening:
+  enabled: true
 ---
 Superintelligence is having a moment. A recent executive order proclaims the dawn of an era of "Super Intelligence," and public remarks have applied the term to today's AI models. Sandra Rogers, PhD, published a careful piece this week arguing that this is a category error worth correcting before it hardens into habit: [AI is not superintelligence, not yet anyway](https://www.linkedin.com/pulse/ai-superintelligence-yet-anyway-sandra-rogers-phd-8quqe/). She is right — and for the people we work with, the reason matters well beyond semantics.
 

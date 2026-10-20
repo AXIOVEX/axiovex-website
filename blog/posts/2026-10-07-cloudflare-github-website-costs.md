@@ -4,6 +4,8 @@ date: 2026-10-07
 description: A business website on GitHub + Cloudflare costs $0 a month in hosting and about $10 a year for the domain. Compared line by line with AWS, Azure, GoDaddy, and Namecheap — plus what databases and video streaming cost on each — here is the math, and an offer.
 tags: startups, websites, cloudflare, costs, small business
 slug: cloudflare-github-website-costs
+listening:
+  enabled: true
 ---
 When a new business asks us where their website should live, the assumption is usually that the answer is one of the big clouds — AWS or Azure — and that step one is finding a host. It is a reasonable assumption, and for most small business websites it is also an expensive one. There is a simpler combination — your site's files in a GitHub repository, delivered by Cloudflare — and for the kind of website most businesses actually have, it is better on the dimension that matters most at the start: cost.
 

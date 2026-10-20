@@ -4,6 +4,8 @@ date: 2026-10-08
 description: Oakland County has about 9,600 fewer employed residents than a year ago while the rest of metro Detroit edges up. The losses concentrate in engineering services and auto work — an EV pullback, a bank merger, and jobs consolidating out of the county — and part of the August drop may not be real. The numbers, and the evidence behind each cause.
 tags: workforce, michigan, manufacturing, labor market, oakland county
 slug: oakland-county-job-losses
+listening:
+  enabled: true
 ---
 Oakland County is moving the wrong way, and it is moving alone. In August 2026, **648,000** Oakland County residents were employed — about **9,600 fewer than a year earlier** — and the county unemployment rate stood at **4.7%**, up from 3.7% in August 2025 ([BLS Local Area Unemployment Statistics](https://www.bls.gov/lau/), county series for Oakland County; August 2026 is preliminary). Measured by where the jobs are instead of where the workers live, the picture matches: **701,900 jobs located in Oakland County in March 2026, down 1.7% from a year earlier**, while Michigan as a whole, Wayne County, and Macomb County each edged *up* 0.3% ([BLS Quarterly Census of Employment and Wages](https://www.bls.gov/regions/midwest/news-release/countyemploymentandwages_michigan.htm)).
 
