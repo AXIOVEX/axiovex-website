@@ -1,11 +1,11 @@
 # Proposal — Link, state & contrast standard (proposed WF-G9)
 
-**Status: PROPOSED — PENDING OWNER APPROVAL (Tristen Pierson).**
-Nothing in this document is approved design yet, and nothing on the
-website changes because of it. On approval it becomes wireframe frame
-**WF-G9** (a global standard, alongside WF-G1 header / WF-G4 footer /
-WF-G8 signup block), gains a revision-log entry in `wireframes.md`, and
-implementation runs through the spec-kit + AEE flow, staging first.
+**Status: APPROVED — Tristen Pierson, 2026-10-20.** This document is
+wireframe frame **WF-G9** (a global standard, alongside WF-G1 header /
+WF-G4 footer / WF-G8 signup block). The revision-log entry is recorded
+in `wireframes.md` (2026-10-20). Implementation ran staging-first the
+same day (see "Implementation" at the end of this document); production
+promotion stays a separate owner gate.
 
 **Drawn from:** the full-site audit of 2026-10-20
 (`2026-10-20-axiovex-full-site-audit.md`, delivered to the owner the
@@ -149,9 +149,39 @@ stylesheet change.
 5. This standard is added to the pre-promotion checklist used by the
    site workflow skill.
 
-## Proposed revision-log entry for wireframes.md (added on approval)
+## Revision-log entry for wireframes.md (added on approval, 2026-10-20)
 
-> 2026-10-20 — WF-G9 Link, state & contrast standard PROPOSED by the
-> full-site audit of the same date (18 paths, 41,636 evaluations; two
-> owner-reported defects retested fixed; four defect classes open).
-> Awaiting owner approval.
+> 2026-10-20 — WF-G9 Link, state & contrast standard APPROVED by
+> Tristen (proposed the same day by the full-site audit: 18 paths,
+> 41,636 evaluations; two owner-reported defects retested fixed; four
+> defect classes open). Implemented on staging the same day (below);
+> production promotion is a separate gate.
+
+## Implementation (staging, 2026-10-20)
+
+Built to this standard on the staging branch only, for owner review:
+
+1. **Class A** — `.nl-fine` moved from white 45% to the `--muted` token
+   (72%) in the new base stylesheet **styles.v44.css**: 4.16:1 →
+   **8.39:1** composited on the signup card (cascade-computed).
+2. **Class B** — `.nl-form input::placeholder { color: var(--muted);
+   opacity: 1; }` added in styles.v44.css (~8.7:1 composited on the
+   field background); no signup field ships a browser-default
+   placeholder color.
+3. **Class D / S6** — every template and generated page now pins
+   styles.v44.css; the hand-maintained /privacy/ and /disclaimer/
+   (were v37) and /research/ (was v40) pin v44 as well; the
+   2026-10-14 newsletter issue regenerated onto blog.v12.css.
+4. **Class C / S7** — the Listening Edition eyebrow in
+   `scripts/build-site.mjs` (`listeningHtml`, shared by article
+   editions and the Signals Briefing) is now an `<h2>` carrying the
+   same `.le-eyebrow` class and metrics — no visual change; the
+   chapter headline `<h3>` now sits under a section heading. On
+   /research/, "What stands" / "What does not stand" are `<h2>` with a
+   `.status-h` rule preserving their exact former metrics.
+5. **Verification** — the 2026-10-20 cascade auditor re-run against
+   staging.axiovexsystems.com post-deploy: 0 contrast failures,
+   heading skips resolved, every page on the current stylesheet
+   (totals in the implementation report). The audit method is
+   cascade-only: layout geometry remains unverified, as recorded in
+   the audit itself.
