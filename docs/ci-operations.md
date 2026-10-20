@@ -290,12 +290,14 @@ browser lifecycle checks and mobile confirmation screenshots. It uses real
 functions against isolated SQLite and captured delivery with public Turnstile
 keys. The production site continues to use Managed Turnstile and Microsoft.
 
-`linkedin-publish.yml` validates personal identity, app-bound scope and expiry
-hourly. A data-ready article queues the authorized personal publication; the
-company reshare follows next Tuesday at 09:30 Eastern. Company credentials
-must come from the separately approved company app. Manual `preflight` never
-publishes. Before any POST, an attempt is committed and uploaded; unresolved
-attempts require reconciliation rather than replay. Accepted IDs are committed.
+LinkedIn publication is not automated in CI (owner sorting rule,
+2026-10-20; `linkedin-publish.yml` removed). Posting in the owner's name is
+an owner-gated act: it runs from the Muse scheduler with verbatim
+owner-approved copy. The dormant helpers `scripts/ops/linkedin.mjs`,
+`scripts/ops/linkedin-authorize.mjs` and `data/linkedin-policy.json` remain
+in the repo; their safeguards — identity preflight, token scope/expiry
+checks and a durable exactly-once reservation recorded before any POST —
+are the checklist the scheduler jobs mirror.
 
 Local authorization: `node scripts/ops/linkedin-authorize.mjs` (personal) or
 `--company` (company). Use only localhost's setup form; it saves tokens directly
