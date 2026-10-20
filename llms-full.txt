@@ -1076,6 +1076,47 @@ Copy link
 
 More&hellip;
 
+Listening edition
+
+Narrated &middot; 5 chapters &middot; about 4 minutes
+
+THE WORD
+
+A term is being spent on tools that don't match it
+
+An executive order proclaims the dawn of an era of "Super Intelligence"; the term is being applied to today's AI models
+
+Sandra Rogers, PhD, argues this is a category error worth correcting before it hardens into habit
+
+When the words are wrong, budgets, timelines, training plans, and safety rules inherit the error
+
+Takeaway
+Vocabulary is a foundational assumption — get it wrong and everything built on it inherits the error.
+
+01
+A term is being spent on tools that don't match it
+
+02
+Three words, three different things
+
+03
+Buying and planning against a capability that isn't there
+
+04
+Oversight fits the category of the thing governed
+
+05
+Fixed terms, and one question to steal
+
+&#9654;
+
+0:00
+/ 4:20
+
+Chapter 1 of 5
+
+1&times;
+
 Superintelligence is having a moment. A recent executive order proclaims the dawn of an era of "Super Intelligence," and public remarks have applied the term to today's AI models. Sandra Rogers, PhD, published a careful piece this week arguing that this is a category error worth correcting before it hardens into habit: AI is not superintelligence, not yet anyway (https://www.linkedin.com/pulse/ai-superintelligence-yet-anyway-sandra-rogers-phd-8quqe/). She is right — and for the people we work with, the reason matters well beyond semantics.
 
 We are an engineering firm, not a linguistics seminar. But our whole method starts with questioning foundational assumptions until what is actually true falls out, and vocabulary is a foundational assumption. When the words are wrong, everything built on them — budgets, timelines, training plans, safety rules — inherits the error.
@@ -1186,6 +1227,50 @@ Text
 Copy link
 
 More&hellip;
+
+Listening edition
+
+Narrated &middot; 6 chapters &middot; about 5 minutes
+
+HEADLINE
+
+The headline figure is the least interesting part
+
+The September workforce edition is published: labor data through August, program planning, AI task analysis
+
+Evidence cutoff: September 26, 2026; every figure comes from the public September edition
+
+August unemployment was 5.0% — and that rate is not the story
+
+Takeaway
+Start with what the numbers actually say, not with the headline rate.
+
+01
+The headline figure is the least interesting part
+
+02
+A calm rate can conceal a shrinking labor force
+
+03
+More slack than the headline shows
+
+04
+The first three
+
+05
+Bridges, cohorts, and the radiology test
+
+06
+Every number traceable, every limit stated
+
+&#9654;
+
+0:00
+/ 5:22
+
+Chapter 1 of 6
+
+1&times;
 
 Our Michigan workforce intelligence project just published its September edition — new labor data through August, graduation-horizon program planning, and cross-sector analysis of AI task impacts. I want to walk through what the numbers actually say, because the headline figure is the least interesting part.
 
