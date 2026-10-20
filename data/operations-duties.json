@@ -29,10 +29,10 @@
   },
   {
     "id": "breaking-news-banner",
-    "source": "docs/decisions/2026-10-19-breaking-news-ci.md",
+    "source": "docs/decisions/2026-10-20-scheduler-actions-sorting.md",
     "workflow": "signals-sync.yml",
     "mode": "automatic",
-    "description": "Five-minute source checks, verified automatic banner and expiry"
+    "description": "Five-minute source checks record verified candidates as run evidence. Banner activation is owner-gated via the Muse scheduler judgment check (2026-10-20 sorting rule); CI never sets the banner."
   },
   {
     "id": "economic-pack-county-content",

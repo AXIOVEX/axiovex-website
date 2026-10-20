@@ -37,10 +37,12 @@ jobs:
           node-version: '24'
       - name: Test source verification, significance, expiry and computed insights
         run: node --test scripts/ops/breaking.test.mjs scripts/ops/signals-context.test.mjs
-      - name: Check breaking sources and update banner state
+      - name: Check breaking sources and record verified candidates (detect-only; banner activation is owner-gated)
         id: breaking
         if: github.event_name != 'pull_request'
         continue-on-error: true
+        env:
+          BREAKING_MODE: detect
         run: node scripts/ops/breaking.mjs
       - name: Fetch fresh headlines and economic Pulse
         id: signals
