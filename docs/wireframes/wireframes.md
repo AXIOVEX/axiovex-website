@@ -980,6 +980,23 @@ as accordion rows.
   in hand belongs to a different program's Spec 033).
   Implementation proceeds on staging (T004–T006);
   production promotion stays a separate gate (T007).
+- **2026-10-20** — APPROVED by Tristen: **WF-G9 Link, state &
+  contrast standard** (full text:
+  `link-state-contrast-standard-proposal-2026-10-20.md`), proposed
+  the same day by the full-site audit (18 paths, 41,636
+  cascade-computed contrast evaluations; two owner-reported
+  defects retested fixed; four defect classes open: signup fine
+  print at 4.16:1, unstyled signup placeholders, h1 -> h3 heading
+  skips, stylesheet version drift). The standard: prose-link colors
+  per state (cyan / visited #8BE9FF), components state-invariant,
+  base link rules scoped at zero specificity (`:where()`), 4.5:1 /
+  3:1 contrast floors judged composited with no fine-print
+  exemption, placeholders are text, one current stylesheet
+  version on every page, heading order is part of the frame, and
+  verification with seeded history. Implemented on staging the
+  same day (styles.v44.css; pins unified; Listening Edition
+  eyebrow promoted to <h2>; research status heads re-leveled);
+  production promotion stays a separate gate.
 
 ## WF-11 amendment — October 19, owner-directed refresh timestamp
 
