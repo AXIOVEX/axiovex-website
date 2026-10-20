@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-20T20:46:56.652Z",
+  "updatedUtc": "2026-10-20T22:15:19.850Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -71,14 +71,6 @@
     {
       "lane": "ot-security",
       "laneLabel": "OT cybersecurity",
-      "title": "WAGO OS Linux",
-      "source": "CISA",
-      "date": "2026-10-20",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
       "title": "Moxa AIG-302 ThingsPro Edge",
       "source": "CISA",
       "date": "2026-10-20",
@@ -107,6 +99,14 @@
       "source": "Automation Alley",
       "date": "2026-10-19",
       "url": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Cleveland-Cliffs CEO blames Canada for Stelco layoffs",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-19",
+      "url": "https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/"
     },
     {
       "lane": "ai-standards",

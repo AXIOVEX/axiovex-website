@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-20T20:46:56.652Z",
+  "updatedUtc": "2026-10-20T22:15:19.850Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -180,13 +180,6 @@
         {
           "source": "CISA",
           "sourceId": "cisa-ics",
-          "title": "WAGO OS Linux",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02",
-          "date": "2026-10-20"
-        },
-        {
-          "source": "CISA",
-          "sourceId": "cisa-ics",
           "title": "Moxa AIG-302 ThingsPro Edge",
           "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03",
           "date": "2026-10-20"
@@ -225,6 +218,13 @@
           "title": "Guangzhou Juan IoT Technology EseeCloud",
           "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02",
           "date": "2026-10-15"
+        },
+        {
+          "source": "CISA",
+          "sourceId": "cisa-ics",
+          "title": "Inductive Automation Ignition Software",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01",
+          "date": "2026-10-13"
         }
       ]
     },
