@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-20T18:26:49.715Z",
+  "updatedUtc": "2026-10-20T20:46:56.652Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -45,6 +45,22 @@
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
     },
     {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Energy Department Announces New Investments to Strengthen America's Power Grid and Lower Electricity Costs",
+      "source": "U.S. Department of Energy",
+      "date": "2026-10-20",
+      "url": "https://www.energy.gov/articles/energy-department-announces-new-investments-strengthen-americas-power-grid-and-lower"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Lawsuit accuses Essity, Edgewell, J&J of violating PFAS ban in California",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-20",
+      "url": "https://www.manufacturingdive.com/news/carefree-edgewell-essity-jj-gelsons-lawsuit-pfoa-pfas-california/833296/"
+    },
+    {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
       "title": "Cleveland-Cliffs posts ‘strongest’ quarter in three years: CFO",
@@ -85,28 +101,12 @@
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
     },
     {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Energy Department Advances Constitution Pipeline Project with $42 Million in Defense Production Act Funding",
-      "source": "U.S. Department of Energy",
-      "date": "2026-10-19",
-      "url": "https://www.energy.gov/articles/energy-department-advances-constitution-pipeline-project-42-million-defense-production-act"
-    },
-    {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
       "title": "Why Digital Leadership Fails When Decisions Drift Away From Operational Reality",
       "source": "Automation Alley",
       "date": "2026-10-19",
       "url": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Cleveland-Cliffs CEO blames Canada for Stelco layoffs",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-19",
-      "url": "https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/"
     },
     {
       "lane": "ai-standards",
