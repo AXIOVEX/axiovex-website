@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { criterion, fresh, sourceConfirms, chooseEntry } from './breaking.mjs';
 import { parseFeed } from '../lib/news-feeds.mjs';
-import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -60,5 +60,27 @@ test('complete monitor publishes verified evidence once, expires it and exposes 
     assert.equal(JSON.parse(readFileSync(join(dir, 'data/breaking.json'))).active, null);
     assert.equal(run({ TEST_OUTAGE: '1' }).status, 1);
     assert.equal(JSON.parse(readFileSync(join(dir, 'ops-output/breaking/check.json'))).partial, true);
+  } finally { rmSync(dir, { recursive: true, force: true }); }
+});
+
+test('detect-only mode records verified candidates but never writes the banner or seen state', () => {
+  const dir = mkdtempSync(join(tmpdir(), 'axiovex-breaking-detect-'));
+  try {
+    mkdirSync(join(dir, 'data'));
+    const published = new Date(Date.now() - 300000).toISOString();
+    writeFileSync(join(dir, 'data/signal-sources.json'), JSON.stringify({ feeds: [{ id: 'manufacturing-dive', name: 'Fixture publisher', url: 'https://publisher.example/feed' }] }));
+    writeFileSync(join(dir, 'data/breaking.json'), JSON.stringify({ active: null }));
+    const feed = `<rss><item><title>${item.title}</title><link>https://publisher.example/story</link><pubDate>${published}</pubDate></item></rss>`;
+    const html = `<h1>${item.title}</h1><meta property="article:published_time" content="${published}">`;
+    const mock = join(dir, 'mock.mjs');
+    writeFileSync(mock, `globalThis.fetch = async url => { const r = new Response(url.endsWith('/feed') ? ${JSON.stringify(feed)} : ${JSON.stringify(html)}); Object.defineProperty(r, 'url', { value: url }); return r; };`);
+    const run = spawnSync(process.execPath, ['--import', pathToFileURL(mock).href, resolve('scripts/ops/breaking.mjs')], { cwd: dir, encoding: 'utf8', env: { ...process.env, GITHUB_STEP_SUMMARY: '', BREAKING_MODE: 'detect' } });
+    assert.equal(run.status, 0, run.stderr + run.stdout);
+    assert.equal(JSON.parse(readFileSync(join(dir, 'data/breaking.json'))).active, null);
+    assert.equal(existsSync(join(dir, 'data/breaking-state.json')), false);
+    const check = JSON.parse(readFileSync(join(dir, 'ops-output/breaking/check.json')));
+    assert.equal(check.mode, 'detect');
+    assert.equal(check.verified.length, 1);
+    assert.equal(check.verified[0].headline, item.title);
   } finally { rmSync(dir, { recursive: true, force: true }); }
 });

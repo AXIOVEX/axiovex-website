@@ -3,6 +3,12 @@ import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 import { decode, parseFeed, preciseTime } from '../lib/news-feeds.mjs';
 
+// Owner sorting rule, 2026-10-20 (docs/decisions/2026-10-20-scheduler-actions-sorting.md):
+// in detect mode CI only records verified candidates as run evidence; it never
+// writes data/breaking.json or the seen state. Banner activation is an
+// owner-gated judgment act performed from the Muse scheduler.
+const DETECT_ONLY = process.env.BREAKING_MODE === 'detect';
+
 export function criterion(item, sourceId) {
   const t = item.title;
   if (/\b(opinion|podcast|webinar|preview|roundup|could|may|might|proposed)\b/i.test(t)) return null;
@@ -70,13 +76,15 @@ async function main() {
   const active = chooseEntry(before.active, verified, seen, now);
   if (active) seen[active.id] = active.publishedUtc;
   const after = { active };
-  if (JSON.stringify(before) !== JSON.stringify(after)) writeFileSync('data/breaking.json', JSON.stringify(after, null, 2) + '\n');
+  if (!DETECT_ONLY && JSON.stringify(before) !== JSON.stringify(after)) writeFileSync('data/breaking.json', JSON.stringify(after, null, 2) + '\n');
   const state = { seen: Object.fromEntries(Object.entries(seen).filter(([, t]) => now - Date.parse(t) < 30 * 86400000)) };
-  if (!existsSync(statePath) || readFileSync(statePath, 'utf8') !== JSON.stringify(state, null, 2) + '\n') writeFileSync(statePath, JSON.stringify(state, null, 2) + '\n');
+  if (!DETECT_ONLY && (!existsSync(statePath) || readFileSync(statePath, 'utf8') !== JSON.stringify(state, null, 2) + '\n')) writeFileSync(statePath, JSON.stringify(state, null, 2) + '\n');
   mkdirSync('ops-output/breaking', { recursive: true });
-  const report = { checkedUtc: new Date(now).toISOString(), partial: results.some(r => !r.ok), sources: results.map(({ items, ...r }) => ({ ...r, candidates: items.length })), rejected, verified, active };
+  const report = { checkedUtc: new Date(now).toISOString(), mode: DETECT_ONLY ? 'detect' : 'activate', partial: results.some(r => !r.ok), sources: results.map(({ items, ...r }) => ({ ...r, candidates: items.length })), rejected, verified, active };
   writeFileSync('ops-output/breaking/check.json', JSON.stringify(report, null, 2) + '\n');
-  const summary = `Breaking news: ${results.filter(r => r.ok).length}/${results.length} feeds checked; ${verified.length} verified candidates; banner ${active ? active.id : 'inactive'}. Coverage ${report.partial ? 'PARTIAL' : 'complete'}.`;
+  const summary = DETECT_ONLY
+    ? `Breaking news (detect-only; banner activation is owner-gated): ${results.filter(r => r.ok).length}/${results.length} feeds checked; ${verified.length} verified candidates recorded as evidence; committed banner unchanged (${before.active ? before.active.id : 'inactive'}). Coverage ${report.partial ? 'PARTIAL' : 'complete'}.`
+    : `Breaking news: ${results.filter(r => r.ok).length}/${results.length} feeds checked; ${verified.length} verified candidates; banner ${active ? active.id : 'inactive'}. Coverage ${report.partial ? 'PARTIAL' : 'complete'}.`;
   console.log(summary);
   if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary + '\n');
   for (const r of results.filter(r => !r.ok)) console.log(`::warning::${r.id}: ${r.error}`);

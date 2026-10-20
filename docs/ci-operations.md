@@ -41,13 +41,13 @@ No Muse service is required by the new Actions runners.
 |---|---|---|
 | Daily analytics | Every day 08:39, prior day vs trailing 7-day average | `operations.yml`, daily report |
 | Weekly analytics + SEO/AEO | Monday 09:39, last 7 days vs previous 7 | weekly report + live technical health |
-| Monthly report + newsletter | Near 30th 10 ET, February last day; wait for source release | monthly-publication.yml; check daily until the next month-end cycle |
+| Monthly report | Near 30th 10 ET, February last day; wait for source release | monthly-publication.yml builds the report and emails the founders; it does not publish or send the customer newsletter (2026-10-20) |
 | Push health | Website changes on main | live technical health |
 | Workforce study/draft | 29th 09:39; February last day; prior data month | Docker collect/analyze/build, reviewed-edition verification, LAUS refresh, review artifacts |
 | Workforce publication | 30th 09:00; January data publishes March 1 | Human editorial/publication gate; see below |
 | LinkedIn personal/company | Publication day 10:30 / following Tuesday 09:30 | Human signed-in steps; no CI browser session migrated |
 | Newsletter preparation | 29th 09:39; February last day | workforce + candidate artifacts |
-| Newsletter delivery | Monthly, after verified economic releases | monthly-publication.yml; deterministic source-only standing authorization |
+| Newsletter delivery | Monthly, after verified economic releases | Not automated in CI: owner-gated in the Muse scheduler (2026-10-20 sorting rule); operations.yml prepares candidates only |
 | Signals headlines / Pulse / breaking | Every 15 min / hourly / every 5 min | `signals-sync.yml`; actual content ingest, rebuilt insights, source-verified banner |
 | Shared documents/blog | Push / every 15 minutes | Existing `site-sync.yml`, unchanged |
 | Analysis pack + county insights | Daily 12:23 UTC | `data-pack-sync.yml`; keyed sources, LAUS and public Signals rebuild |
@@ -189,18 +189,21 @@ credentials before considering the migration complete. Old Muse timers
 cannot be disabled from this checkout; disable them in Muse if it returns,
 especially subscriber sends and article/social publishing.
 
-## Monthly release operation
+## Monthly report operation
 
-`monthly-publication.yml` owns the release; `operations.yml` cannot dispatch
-a monthly/customer send. On each eligible day: refresh existing keyed sources;
-verify state + county target month; generate and email the founder report;
-render/commit the monthly issue + web edition; wait for verified deployment;
-reserve `month-end-attempt-YYYY-MM` before calling the existing active-only
-sender. The reservation prevents automatic replay after partial uncertainty.
-Manual dispatch respects the same date and source gates. A held source gate
-writes evidence and sends nothing; an execution failure fails the job. The
-first eligible cycle is September data on October 30. API keys remain in
-GitHub; no new Microsoft/Cloudflare administrator permissions are needed.
+`monthly-publication.yml` builds the monthly founders' report only
+(owner sorting rule, 2026-10-20). On each eligible day it refreshes existing
+keyed sources inside the runner (nothing is committed), verifies the state +
+county target month, builds the monthly report including website health, and
+emails it to the founders. It does not publish a newsletter issue or web
+edition, does not publish the workforce brief, and never sends the customer
+newsletter: those are owner-gated acts in the Muse scheduler. The
+`month-end.mjs publish/preview/send` modes remain in the repo, unused by CI,
+for the human-gated process. Manual dispatch respects the same date and
+source gates. A held source gate writes evidence and sends nothing; an
+execution failure fails the job. The first eligible cycle is September data
+on October 30. API keys remain in GitHub; no new Microsoft/Cloudflare
+administrator permissions are needed.
 
 Subscriber measurements use an authenticated production-only endpoint. It
 returns aggregate counts/source totals, latest-timestamp flows, sender gauge
@@ -290,12 +293,14 @@ browser lifecycle checks and mobile confirmation screenshots. It uses real
 functions against isolated SQLite and captured delivery with public Turnstile
 keys. The production site continues to use Managed Turnstile and Microsoft.
 
-`linkedin-publish.yml` validates personal identity, app-bound scope and expiry
-hourly. A data-ready article queues the authorized personal publication; the
-company reshare follows next Tuesday at 09:30 Eastern. Company credentials
-must come from the separately approved company app. Manual `preflight` never
-publishes. Before any POST, an attempt is committed and uploaded; unresolved
-attempts require reconciliation rather than replay. Accepted IDs are committed.
+LinkedIn publication is not automated in CI (owner sorting rule,
+2026-10-20; `linkedin-publish.yml` removed). Posting in the owner's name is
+an owner-gated act: it runs from the Muse scheduler with verbatim
+owner-approved copy. The dormant helpers `scripts/ops/linkedin.mjs`,
+`scripts/ops/linkedin-authorize.mjs` and `data/linkedin-policy.json` remain
+in the repo; their safeguards — identity preflight, token scope/expiry
+checks and a durable exactly-once reservation recorded before any POST —
+are the checklist the scheduler jobs mirror.
 
 Local authorization: `node scripts/ops/linkedin-authorize.mjs` (personal) or
 `--company` (company). Use only localhost's setup form; it saves tokens directly
