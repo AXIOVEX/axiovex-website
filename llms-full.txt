@@ -166,9 +166,9 @@ Michigan's numbers, and the field items that matter to the people who make thing
 
 AUTOMATION ALLEY
 
-Why Digital Leadership Fails When Decisions Drift Away From Operational Reality (https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/)
+Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit (https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/)
 
-October 19, 2026
+October 20, 2026
 
 NIST
 
@@ -178,13 +178,13 @@ October 8, 2026
 
 CISA
 
-CISA Malcolm (https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01)
+HMS Networks PEAK-System PCAN Windows drivers (https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01)
 
-October 15, 2026
+October 20, 2026
 
 SEE ALL SIGNALS &rarr;
 
-Snapshot updated October 20, 2026 at 4:21 AM ET. Headline, source, and date only — every card links to the publisher.
+Snapshot updated October 20, 2026 at 1:22 PM ET. Headline, source, and date only — every card links to the publisher.
 
 THE AXIOVEX SIGNAL — MONTHLY
 
@@ -1299,7 +1299,7 @@ What we're watching.
 Michigan's numbers and the field items that matter — manufacturing, AI, workforce, and industrial security — gathered from primary sources and refreshed automatically.
 
 Last refreshed:
-October 20, 2026 at 4:21 AM ET
+October 20, 2026 at 1:22 PM ET
 
 The Axiovex Signal — in your inbox, monthly.
 
@@ -10157,6 +10157,14 @@ The September edition — Axiovex workforce study &rarr; (https://github.com/AXI
 Manufacturing & automation
 
 AUTOMATION ALLEY
+Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit
+(https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/) &middot; October 20, 2026
+
+MANUFACTURING DIVE
+Cleveland-Cliffs posts ‘strongest’ quarter in three years: CFO
+(https://www.manufacturingdive.com/news/cleveland-cliffs-posts-strongest-quarter-three-years-cfo-says-q3-2026/833456/) &middot; October 20, 2026
+
+AUTOMATION ALLEY
 Why Digital Leadership Fails When Decisions Drift Away From Operational Reality
 (https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/) &middot; October 19, 2026
 
@@ -10179,14 +10187,6 @@ How AI, digital twins and real-time simulation are accelerating manufacturing in
 AUTOMATION ALLEY
 Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity
 (https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/) &middot; October 16, 2026
-
-MANUFACTURING DIVE
-Alcoa plans to sell part of its Massena East site for $315M
-(https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/) &middot; October 16, 2026
-
-MANUFACTURING DIVE
-Manufacturing tech orders hit 3rd-highest monthly total: AMT
-(https://www.manufacturingdive.com/news/august-manufacturing-tech-orders-facilities-amt-caterpillar-hewlett-packard/833155/) &middot; October 16, 2026
 
 AI, standards & research
 
@@ -10211,6 +10211,10 @@ NIST-Developed Quantum Sensors Improve Nuclear Monitoring
 (https://www.nist.gov/news-events/news/2026/09/nist-developed-quantum-sensors-improve-nuclear-monitoring) &middot; September 10, 2026
 
 Michigan workforce & industry
+
+AUTOMATION ALLEY
+Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit
+(https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/) &middot; October 20, 2026
 
 AUTOMATION ALLEY
 Why Digital Leadership Fails When Decisions Drift Away From Operational Reality
@@ -10240,11 +10244,27 @@ MICHIGAN WARN (LEO)
 HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026
 (https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75) &middot; October 8, 2026
 
-AXIOVEX
-Oakland County is losing jobs. Here is why.
-(https://axiovexsystems.com/blog/oakland-county-job-losses/) &middot; October 8, 2026
-
 OT cybersecurity
+
+CISA
+HMS Networks PEAK-System PCAN Windows drivers
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01) &middot; October 20, 2026
+
+CISA
+WAGO OS Linux
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02) &middot; October 20, 2026
+
+CISA
+Moxa AIG-302 ThingsPro Edge
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03) &middot; October 20, 2026
+
+CISA
+Hitachi Energy MicroSCADA X SYS600 Product
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04) &middot; October 20, 2026
+
+CISA
+Hitachi Energy RTU500 Product
+(https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05) &middot; October 20, 2026
 
 CISA
 CISA Malcolm
@@ -10257,26 +10277,6 @@ Eclipse Foundation Eclipse Milo
 CISA
 Guangzhou Juan IoT Technology EseeCloud
 (https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02) &middot; October 15, 2026
-
-CISA
-Inductive Automation Ignition Software
-(https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01) &middot; October 13, 2026
-
-CISA
-Swann Communications SWIFI-SE2KIC
-(https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02) &middot; October 13, 2026
-
-CISA
-Red Lion Controls N-Tron 700 Series (Update A)
-(https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01) &middot; October 8, 2026
-
-CISA
-Grid Protection Alliance openPDC and openHistorian
-(https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02) &middot; October 8, 2026
-
-CISA
-Satel Netco Design
-(https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03) &middot; October 8, 2026
 
 Funding & policy
 
@@ -10312,7 +10312,7 @@ USASPENDING (TREASURY)
 Department of Veterans Affairs → ELECTRA-MED CORPORATION — $21,507 award, October 15, 2026
 (https://www.usaspending.gov/award/CONT_AWD_36C10X27K0056_3600_36C10G24D0057_3600) &middot; October 15, 2026
 
-Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce selected MCDA occupation projections with their stated provenance and separate geographic horizons. Education figures retain each publisher and source period. Pupil membership: PUPIL COUNT ESTIMATES - MAY 2026 — a proposed conference estimate, not an audited count. Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2025 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023-24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (Release R2026Q2 (PSEOE MI 26 2001-2021 V4.14.1 2026Q2 pseopu_mi_20260715_1529); graduate cohorts 2001-2021 pooled) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 20, 2026 at 4:21 AM ET. See our Disclaimer
+Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce selected MCDA occupation projections with their stated provenance and separate geographic horizons. Education figures retain each publisher and source period. Pupil membership: PUPIL COUNT ESTIMATES - MAY 2026 — a proposed conference estimate, not an audited count. Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2025 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023-24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (Release R2026Q2 (PSEOE MI 26 2001-2021 V4.14.1 2026Q2 pseopu_mi_20260715_1529); graduate cohorts 2001-2021 pooled) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 20, 2026 at 1:22 PM ET. See our Disclaimer
 .
 
 THE AXIOVEX SIGNAL — MONTHLY
