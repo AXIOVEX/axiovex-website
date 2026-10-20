@@ -800,6 +800,53 @@ Copy link
 
 More&hellip;
 
+Listening edition
+
+Narrated &middot; 7 chapters &middot; about 7 minutes
+
+HEADLINE
+
+The expensive assumption
+
+The usual assumption: a business website belongs on AWS or Azure — reasonable, and expensive
+
+The alternative: site files in a GitHub repository, delivered by Cloudflare — $0 a month in hosting
+
+The domain costs about $10 a year; this site's cost $10.46
+
+Takeaway
+Every price in this edition is as published on October 7, 2026 — check the vendor's current page before you budget.
+
+01
+The expensive assumption
+
+02
+Most business websites are just pages
+
+03
+The big clouds meter success
+
+04
+Rent forever, and the builder keeps your site
+
+05
+Databases and video, same pattern
+
+06
+Where the big clouds are the right answer
+
+07
+Take the toolkit, or take a hand
+
+&#9654;
+
+0:00
+/ 7:02
+
+Chapter 1 of 7
+
+1&times;
+
 When a new business asks us where their website should live, the assumption is usually that the answer is one of the big clouds — AWS or Azure — and that step one is finding a host. It is a reasonable assumption, and for most small business websites it is also an expensive one. There is a simpler combination — your site's files in a GitHub repository, delivered by Cloudflare — and for the kind of website most businesses actually have, it is better on the dimension that matters most at the start: cost.
 
 We know, because it is how this website runs, and how we have built and run client websites since. Let us show the numbers.
