@@ -305,7 +305,8 @@ function syncDocs(sharedDir) {
    rendered on the article page. The gate is the data file
    blog/listening/<slug>/chapters.json; articles without one emit
    nothing (FR-005). Script discipline: spec 029 FR-001/FR-002. */
-function listeningHtml(data) {
+function listeningHtml(data, opts) {
+  opts = opts || {};
   const chapters = data.chapters || [];
   if (!chapters.length) return '';
   const totalSec = chapters.reduce((a, c) => a + (c.durationSec || 0), 0);
@@ -319,11 +320,11 @@ function listeningHtml(data) {
     '<span class="le-ttl">' + esc(c.headline) + '</span></button></li>').join('\n');
   const points = (first.points || []).map(p => '                <li>' + esc(p) + '</li>').join('\n');
   const json = JSON.stringify(data).replace(/<\//g, '<\\/');
-  return '<link rel="stylesheet" href="/blog/listening.v2.css">\n' +
-    '        <section class="listening" id="listening-edition" aria-label="Listening edition">\n' +
+  return '<link rel="stylesheet" href="/blog/listening.v3.css">\n' +
+    '        <section class="listening" id="listening-edition" aria-label="' + (opts.ariaLabel || 'Listening edition') + '">\n' +
     '          <div class="listening-head">\n' +
-    '            <p class="le-eyebrow">Listening edition</p>\n' +
-    '            <p class="le-meta">Narrated &middot; ' + chapters.length + ' chapters &middot; about ' + mins + ' minutes</p>\n' +
+    '            <p class="le-eyebrow">' + (opts.eyebrow || 'Listening edition') + '</p>\n' +
+    '            <p class="le-meta">' + (opts.metaPrefix || '') + 'Narrated &middot; ' + chapters.length + ' chapters &middot; about ' + mins + ' minutes</p>\n' +
     '          </div>\n' +
     '          <div class="le-stage">\n' +
     '            <article class="le-card" aria-live="polite">\n' +
@@ -339,10 +340,12 @@ function listeningHtml(data) {
     '            <span class="le-time"><span data-le-elapsed>0:00</span> / <span data-le-total>' + fmt(totalSec) + '</span></span>\n' +
     '            <input type="range" class="le-progress" data-le-progress min="0" max="1000" value="0" aria-label="Seek through the listening edition">\n' +
     '            <span class="le-now" data-le-now>Chapter 1 of ' + chapters.length + '</span>\n' +
+    '            <button type="button" class="le-rate" data-le-rate aria-label="Playback speed" title="Playback speed">1&times;</button>\n' +
+    '            <button type="button" class="le-resume" data-le-resume hidden></button>\n' +
     '          </div>\n' +
     '          <audio data-le-audio preload="metadata"></audio>\n' +
     '          <script type="application/json" data-le-data>' + json + '</script>\n' +
-    '          <script src="/blog/listening.v1.js" defer></script>\n' +
+    '          <script src="/blog/listening.v3.js" defer></script>\n' +
     '        </section>';
 }
 
