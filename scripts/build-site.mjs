@@ -355,6 +355,27 @@ function listeningSection(post) {
   return listeningHtml(JSON.parse(readFileSync(dataPath, 'utf8')));
 }
 
+/* Signals Briefing (spec 029): the spoken edition of the Signals
+   board. Editions live at signals/listening/<YYYY-MM-DD>/ with the
+   same chapters.json shape as article listening editions; the
+   newest edition is rendered at the top of /signals/. Content
+   discipline: the edition script restates the committed
+   data/signals.json snapshot only (see the edition's script.md). */
+function signalsBriefingSection() {
+  const base = path.join(ROOT, 'signals', 'listening');
+  if (!existsSync(base)) return '';
+  const dates = readdirSync(base).filter(d => /^\d{4}-\d{2}-\d{2}$/.test(d)).sort();
+  if (!dates.length) return '';
+  const dataPath = path.join(base, dates[dates.length - 1], 'chapters.json');
+  if (!existsSync(dataPath)) return '';
+  const data = JSON.parse(readFileSync(dataPath, 'utf8'));
+  return listeningHtml(data, {
+    eyebrow: 'Signals briefing',
+    ariaLabel: 'Signals briefing',
+    metaPrefix: esc(data.dateLabel || data.editionDate || '') + ' &middot; as of ' + esc(data.asOf || '') + ' &middot; ',
+  });
+}
+
 function parsePost(filePath) {
   const raw = readFileSync(filePath, 'utf8');
   const m = /^---\n([\s\S]*?)\n---\n?/.exec(raw);
@@ -1808,6 +1829,7 @@ function buildSignals(posts) {
     '{{REFRESHED_LINE}}': Number.isFinite(Date.parse(snap.updatedUtc))
       ? '<p class="signals-updated" title="Time of the latest Signals snapshot update; individual economic figures retain their published vintages."><strong>Last refreshed:</strong> <time datetime="' + escAttr(snap.updatedUtc) + '">' + esc(fmtUpdated(snap.updatedUtc)) + '</time></p>'
       : '<p class="signals-updated">Last refresh time unavailable.</p>',
+    '{{SIGNALS_BRIEFING_HTML}}': signalsBriefingSection(),
     '{{NEWSLETTER_TOP_HTML}}': newsletterBlock('signals-top', { variant: 'compact' }),
     '{{NEWSLETTER_HTML}}': newsletterBlock('signals'),
   }));
