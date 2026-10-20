@@ -82,6 +82,15 @@
 - [x] T013 **WS4 — backfill batch on staging**: editions for all
   five published posts + both held posts, each gate-passed;
   held posts remain held.
-- [ ] T014 **GATE — owner samples the backfill batch** on
+- [x] T014 **GATE — owner samples the backfill batch** on
   staging. Production promotion of the batch only on his
   say-so (the robots promotion under T010 is unaffected).
+
+  **Gate record (2026-10-20):** Tristen approved wholesale —
+  "Promote the whole backfill batch to production." The four
+  published articles' editions (workforce, superintelligence,
+  cloudflare, oakland) were promoted to `main` file-level the
+  same day, with production guard blobs verified unchanged.
+  The held posts' editions (Trinity, Lansing) were NOT part
+  of this promotion — they ship with their articles via their
+  publish jobs. The Signals Briefing keeps its own gate (T011).

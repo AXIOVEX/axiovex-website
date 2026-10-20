@@ -1,112 +1,112 @@
 {
-  "updatedUtc": "2026-10-20T08:21:00.362Z",
+  "updatedUtc": "2026-10-20T20:46:56.652Z",
   "pulse": [
     {
       "label": "MI manufacturing",
-      "value": "586.7k",
-      "period": "August 2026"
+      "value": "584.8k",
+      "period": "September 2026"
     },
     {
       "label": "MI unemployment",
       "value": "5.0%",
-      "period": "August 2026"
+      "period": "September 2026"
     },
     {
       "label": "MI labor force",
-      "value": "4.85M",
-      "period": "August 2026"
+      "value": "4.83M",
+      "period": "September 2026"
     }
   ],
-  "pulsePeriod": "August 2026",
+  "pulsePeriod": "September 2026",
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Why Digital Leadership Fails When Decisions Drift Away From Operational Reality",
+      "title": "Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit",
       "source": "Automation Alley",
-      "date": "2026-10-19",
-      "url": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/"
+      "date": "2026-10-20",
+      "url": "https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/"
     },
     {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "Why Digital Leadership Fails When Decisions Drift Away From Operational Reality",
+      "title": "Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit",
       "source": "Automation Alley",
-      "date": "2026-10-19",
-      "url": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Energy Department Advances Constitution Pipeline Project with $42 Million in Defense Production Act Funding",
-      "source": "U.S. Department of Energy",
-      "date": "2026-10-19",
-      "url": "https://www.energy.gov/articles/energy-department-advances-constitution-pipeline-project-42-million-defense-production-act"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Cleveland-Cliffs CEO blames Canada for Stelco layoffs",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-19",
-      "url": "https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "MIT’s TechAMP finds early success after first year, could expand",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-19",
-      "url": "https://www.manufacturingdive.com/news/mit-techamp-finds-early-success-after-first-year-expansion-teledyne-defense/833324/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "From Auburn Hills to Luxembourg: Christian Lopez’s Co-op experience",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-19",
-      "url": "https://www.manufacturingdive.com/spons/from-auburn-hills-to-luxembourg-christian-lopezs-co-op-experience/832608/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "How AI, digital twins and real-time simulation are accelerating manufacturing innovation",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-19",
-      "url": "https://www.manufacturingdive.com/spons/how-ai-digital-twins-and-real-time-simulation-are-accelerating-manufacturi/833255/"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Bulk Manufacturer of Controlled Substances Application: Scottsdale Research Institute",
-      "source": "Federal Register",
-      "date": "2026-10-19",
-      "url": "https://www.federalregister.gov/documents/2026/10/19/2026-21360/bulk-manufacturer-of-controlled-substances-application-scottsdale-research-institute"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
-      "source": "Automation Alley",
-      "date": "2026-10-16",
-      "url": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Alcoa plans to sell part of its Massena East site for $315M",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-16",
-      "url": "https://www.manufacturingdive.com/news/alcoa-sell-massena-east-assets-315-m-q3-2026-south32-progress/833226/"
+      "date": "2026-10-20",
+      "url": "https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/"
     },
     {
       "lane": "ot-security",
       "laneLabel": "OT cybersecurity",
-      "title": "CISA Malcolm",
+      "title": "HMS Networks PEAK-System PCAN Windows drivers",
       "source": "CISA",
-      "date": "2026-10-15",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      "date": "2026-10-20",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+    },
+    {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Energy Department Announces New Investments to Strengthen America's Power Grid and Lower Electricity Costs",
+      "source": "U.S. Department of Energy",
+      "date": "2026-10-20",
+      "url": "https://www.energy.gov/articles/energy-department-announces-new-investments-strengthen-americas-power-grid-and-lower"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Lawsuit accuses Essity, Edgewell, J&J of violating PFAS ban in California",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-20",
+      "url": "https://www.manufacturingdive.com/news/carefree-edgewell-essity-jj-gelsons-lawsuit-pfoa-pfas-california/833296/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Cleveland-Cliffs posts ‘strongest’ quarter in three years: CFO",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-20",
+      "url": "https://www.manufacturingdive.com/news/cleveland-cliffs-posts-strongest-quarter-three-years-cfo-says-q3-2026/833456/"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "WAGO OS Linux",
+      "source": "CISA",
+      "date": "2026-10-20",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Moxa AIG-302 ThingsPro Edge",
+      "source": "CISA",
+      "date": "2026-10-20",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Hitachi Energy MicroSCADA X SYS600 Product",
+      "source": "CISA",
+      "date": "2026-10-20",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Hitachi Energy RTU500 Product",
+      "source": "CISA",
+      "date": "2026-10-20",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Why Digital Leadership Fails When Decisions Drift Away From Operational Reality",
+      "source": "Automation Alley",
+      "date": "2026-10-19",
+      "url": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/"
     },
     {
       "lane": "ai-standards",
