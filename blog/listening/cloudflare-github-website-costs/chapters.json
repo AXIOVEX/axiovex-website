@@ -1,0 +1,91 @@
+{
+  "slug": "cloudflare-github-website-costs",
+  "title": "Your website doesn't need a cloud bill: what hosting actually costs",
+  "voice": "Daniel - Steady Broadcaster (ElevenLabs)",
+  "chapters": [
+    {
+      "kicker": "HEADLINE",
+      "headline": "The expensive assumption",
+      "points": [
+        "The usual assumption: a business website belongs on AWS or Azure — reasonable, and expensive",
+        "The alternative: site files in a GitHub repository, delivered by Cloudflare — $0 a month in hosting",
+        "The domain costs about $10 a year; this site's cost $10.46"
+      ],
+      "takeaway": "Every price in this edition is as published on October 7, 2026 — check the vendor's current page before you budget.",
+      "audio": "/assets/audio/cloudflare-github-website-costs/ch-01.mp3",
+      "durationSec": 54
+    },
+    {
+      "kicker": "THE SHAPE",
+      "headline": "Most business websites are just pages",
+      "points": [
+        "Most business websites: pages, articles, a contact form, maybe a newsletter signup — written once, read many times",
+        "No server chewing on computation, no database cluster, nothing that needs to stay awake all night",
+        "AWS and Azure are built, brilliantly, for the other kind: applications, backends, compute that scales"
+      ],
+      "takeaway": "Putting a brochure-and-articles website on a big cloud is like leasing a delivery fleet to drive one van.",
+      "audio": "/assets/audio/cloudflare-github-website-costs/ch-02.mp3",
+      "durationSec": 51
+    },
+    {
+      "kicker": "THE TABLE IN WORDS",
+      "headline": "The big clouds meter success",
+      "points": [
+        "Azure Static Web Apps: $0 free tier, then $9 per app per month; 100 GB of bandwidth included, then $0.20 per GB",
+        "AWS: roughly $1–3 a month for the basics, assembled from parts — and the firewall is separate: $5 per rule set plus $1 per rule",
+        "A terabyte month, modeled: still $0 on Cloudflare Pages; roughly $189 on Azure — $9 for the app plus about $180 of bandwidth overage"
+      ],
+      "takeaway": "The big clouds meter the one thing a successful website uses most: bandwidth.",
+      "audio": "/assets/audio/cloudflare-github-website-costs/ch-03.mp3",
+      "durationSec": 65
+    },
+    {
+      "kicker": "THE TRADITIONAL HOSTS",
+      "headline": "Rent forever, and the builder keeps your site",
+      "points": [
+        "GoDaddy's builder: advertised around $9.99 a month, renewing around $12.99; a .com renews at roughly $19–23 a year",
+        "A site built in GoDaddy's builder cannot be taken elsewhere as-is — leaving means rebuilding",
+        "Namecheap is the fairest of the traditional hosts: $1.98 a month for the first year, renewing at $4.88, privacy protection included free — still rent, forever, for a mostly idle server"
+      ],
+      "takeaway": "The GitHub-plus-Cloudflare combination is not a cheaper rental. It removes the rental.",
+      "audio": "/assets/audio/cloudflare-github-website-costs/ch-04.mp3",
+      "durationSec": 64
+    },
+    {
+      "kicker": "BEYOND PAGES",
+      "headline": "Databases and video, same pattern",
+      "points": [
+        "Databases: Cloudflare's D1 starts with a generous free allowance — 5 GB of storage; Azure Cosmos DB has a lifetime free tier (1,000 RU/s, 25 GB); the smallest always-on AWS RDS database runs about $12 a month",
+        "Video: Cloudflare Stream is $5 per 1,000 minutes stored plus $1 per 1,000 minutes delivered, no bandwidth charges on top",
+        "Azure retired its media services in 2024; AWS assembles video from three separately metered parts; GoDaddy and Namecheap have no streaming product at all"
+      ],
+      "takeaway": "At every layer the pattern holds: bundled whole products, small versions tied to a rental, or separately metered parts.",
+      "audio": "/assets/audio/cloudflare-github-website-costs/ch-05.mp3",
+      "durationSec": 66
+    },
+    {
+      "kicker": "THE BOUNDARY",
+      "headline": "Where the big clouds are the right answer",
+      "points": [
+        "A real application backend — persistent servers, heavy databases, private networking — belongs on AWS or Azure",
+        "A compliance regime, a contract that names a specific cloud, or committed cloud spend settles the question by itself",
+        "This site, on the free combination: 100 out of 100 on AI-search readiness checks, 90% on independent SEO checks, $0 a month plus the $10.46-a-year domain"
+      ],
+      "takeaway": "Host the project that crosses the line on the big cloud — and keep your website where websites belong.",
+      "audio": "/assets/audio/cloudflare-github-website-costs/ch-06.mp3",
+      "durationSec": 58
+    },
+    {
+      "kicker": "THE OFFER",
+      "headline": "Take the toolkit, or take a hand",
+      "points": [
+        "The method is packaged and published free, under an open-source license: website-forge, linked in the article",
+        "It walks your own AI assistant through the same process: spec first, wireframes before pages, staging before live, verified by screenshots",
+        "Starting a business? The startup support package sets up domain, website, and professional email properly from day one"
+      ],
+      "takeaway": "The first conversation costs the same as the hosting: nothing.",
+      "audio": "/assets/audio/cloudflare-github-website-costs/ch-07.mp3",
+      "durationSec": 64
+    }
+  ]
+}
