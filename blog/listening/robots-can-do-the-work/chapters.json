@@ -1,7 +1,7 @@
 {
   "slug": "robots-can-do-the-work",
   "title": "Robots can do the work. Almost none of it pays yet.",
-  "voice": "Daniel - Steady Broadcaster (ElevenLabs)",
+  "voice": "Mr Wellington (ElevenLabs)",
   "chapters": [
     {
       "kicker": "HEADLINE",
@@ -13,7 +13,7 @@
       ],
       "takeaway": "Capability is not the headline. Cost is.",
       "audio": "/assets/audio/robots-can-do-the-work/ch-01.mp3",
-      "durationSec": 46.02
+      "durationSec": 46
     },
     {
       "kicker": "THE MAP",
@@ -25,7 +25,7 @@
       ],
       "takeaway": "Where a task happens decides whether a robot can do it at all.",
       "audio": "/assets/audio/robots-can-do-the-work/ch-02.mp3",
-      "durationSec": 64.46
+      "durationSec": 63
     },
     {
       "kicker": "EXPOSURE",
@@ -37,7 +37,7 @@
       ],
       "takeaway": "A job counts as exposed if a slice of its tasks is. That is not a robot doing the job.",
       "audio": "/assets/audio/robots-can-do-the-work/ch-03.mp3",
-      "durationSec": 67.8
+      "durationSec": 67
     },
     {
       "kicker": "THE GAP",
@@ -49,7 +49,7 @@
       ],
       "takeaway": "The weld was never the bottleneck. Everything around it is.",
       "audio": "/assets/audio/robots-can-do-the-work/ch-04.mp3",
-      "durationSec": 79.23
+      "durationSec": 78
     },
     {
       "kicker": "WHERE IT PAYS",
@@ -61,7 +61,7 @@
       ],
       "takeaway": "The leading edge is not a wave. It is one occupation where a structured task met a cost line.",
       "audio": "/assets/audio/robots-can-do-the-work/ch-05.mp3",
-      "durationSec": 72.31
+      "durationSec": 72
     },
     {
       "kicker": "FINE PRINT",
@@ -73,7 +73,7 @@
       ],
       "takeaway": "The binding constraint is not intelligence. It is hands.",
       "audio": "/assets/audio/robots-can-do-the-work/ch-06.mp3",
-      "durationSec": 68.17
+      "durationSec": 70
     },
     {
       "kicker": "CLOSE TO HOME",
@@ -85,7 +85,7 @@
       ],
       "takeaway": "Capability, cost, and observed use are three different numbers. Plan on the right one.",
       "audio": "/assets/audio/robots-can-do-the-work/ch-07.mp3",
-      "durationSec": 79.64
+      "durationSec": 79
     }
   ]
 }

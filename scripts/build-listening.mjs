@@ -21,8 +21,8 @@
  *      its chapter, synthesizes NOTHING, and exits 1. Fix the script,
  *      never the gate.
  *   4. Synthesizes one MP3 per chapter with the ElevenLabs connector
- *      CLI (voice: Daniel — Steady Broadcaster, id
- *      onwK4e9ZLuTAKqWW03F9) into assets/audio/<slug>/ch-NN.mp3,
+ *      CLI (voice: Mr Wellington, id
+ *      HSBWXljo3oivWhybh3YX) into assets/audio/<slug>/ch-NN.mp3,
  *      probes durations with ffprobe, writes
  *      blog/listening/<slug>/chapters.json, and refreshes the runtime
  *      figures recorded in script.md.
@@ -32,7 +32,7 @@
  *
  *   # Listening edition — <article title>
  *   <provenance / discipline lines>
- *   - Voice: Daniel - Steady Broadcaster (ElevenLabs)
+ *   - Voice: Mr Wellington (ElevenLabs)
  *   - Chapters: N · Total runtime: M:SS (seconds, measured per file)
  *   - Audio: /assets/audio/<slug>/ch-01.mp3 … ch-NN.mp3
  *
@@ -66,8 +66,8 @@ import os from 'node:os';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
-const VOICE_ID = 'onwK4e9ZLuTAKqWW03F9';
-const VOICE_NAME = 'Daniel - Steady Broadcaster (ElevenLabs)';
+const VOICE_ID = 'HSBWXljo3oivWhybh3YX';
+const VOICE_NAME = 'Mr Wellington (ElevenLabs)';
 const EL_CLI = path.join(os.homedir(), 'workspace/custom-connectors/custom.legacy-elevenlabs/bin/elevenlabs_api.py');
 
 const slug = process.argv[2];

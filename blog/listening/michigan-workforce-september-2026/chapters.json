@@ -1,7 +1,7 @@
 {
   "slug": "michigan-workforce-september-2026",
   "title": "Michigan's September workforce data: what the numbers say, and what they don't",
-  "voice": "Daniel - Steady Broadcaster (ElevenLabs)",
+  "voice": "Mr Wellington (ElevenLabs)",
   "chapters": [
     {
       "kicker": "HEADLINE",
@@ -13,7 +13,7 @@
       ],
       "takeaway": "Start with what the numbers actually say, not with the headline rate.",
       "audio": "/assets/audio/michigan-workforce-september-2026/ch-01.mp3",
-      "durationSec": 42
+      "durationSec": 43
     },
     {
       "kicker": "THE RATE",
@@ -25,7 +25,7 @@
       ],
       "takeaway": "When the labor force itself shrinks by 25,000, the unemployment rate stays deceptively calm.",
       "audio": "/assets/audio/michigan-workforce-september-2026/ch-02.mp3",
-      "durationSec": 50
+      "durationSec": 51
     },
     {
       "kicker": "THE WIDER LENS",
@@ -37,7 +37,7 @@
       ],
       "takeaway": "These measures count different populations — the report never adds them together, and treats warning signals as signals, not forecasts.",
       "audio": "/assets/audio/michigan-workforce-september-2026/ch-03.mp3",
-      "durationSec": 56
+      "durationSec": 58
     },
     {
       "kicker": "FIVE DECISIONS",
@@ -49,7 +49,7 @@
       ],
       "takeaway": "Match program capacity to verified regional demand — and keep the foundations while tasks change.",
       "audio": "/assets/audio/michigan-workforce-september-2026/ch-04.mp3",
-      "durationSec": 64
+      "durationSec": 63
     },
     {
       "kicker": "FIVE DECISIONS",
@@ -61,7 +61,7 @@
       ],
       "takeaway": "The cohort years are decision horizons, not occupation expiry dates.",
       "audio": "/assets/audio/michigan-workforce-september-2026/ch-05.mp3",
-      "durationSec": 62
+      "durationSec": 65
     },
     {
       "kicker": "THE STANDARD",
@@ -73,7 +73,7 @@
       ],
       "takeaway": "In a space full of confident forecasts, restraint is a feature.",
       "audio": "/assets/audio/michigan-workforce-september-2026/ch-06.mp3",
-      "durationSec": 48
+      "durationSec": 49
     }
   ]
 }

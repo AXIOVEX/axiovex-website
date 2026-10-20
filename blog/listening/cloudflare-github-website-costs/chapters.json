@@ -1,7 +1,7 @@
 {
   "slug": "cloudflare-github-website-costs",
   "title": "Your website doesn't need a cloud bill: what hosting actually costs",
-  "voice": "Daniel - Steady Broadcaster (ElevenLabs)",
+  "voice": "Mr Wellington (ElevenLabs)",
   "chapters": [
     {
       "kicker": "HEADLINE",
@@ -13,7 +13,7 @@
       ],
       "takeaway": "Every price in this edition is as published on October 7, 2026 — check the vendor's current page before you budget.",
       "audio": "/assets/audio/cloudflare-github-website-costs/ch-01.mp3",
-      "durationSec": 54
+      "durationSec": 57
     },
     {
       "kicker": "THE SHAPE",
@@ -25,7 +25,7 @@
       ],
       "takeaway": "Putting a brochure-and-articles website on a big cloud is like leasing a delivery fleet to drive one van.",
       "audio": "/assets/audio/cloudflare-github-website-costs/ch-02.mp3",
-      "durationSec": 51
+      "durationSec": 48
     },
     {
       "kicker": "THE TABLE IN WORDS",
@@ -37,7 +37,7 @@
       ],
       "takeaway": "The big clouds meter the one thing a successful website uses most: bandwidth.",
       "audio": "/assets/audio/cloudflare-github-website-costs/ch-03.mp3",
-      "durationSec": 65
+      "durationSec": 64
     },
     {
       "kicker": "THE TRADITIONAL HOSTS",
@@ -73,7 +73,7 @@
       ],
       "takeaway": "Host the project that crosses the line on the big cloud — and keep your website where websites belong.",
       "audio": "/assets/audio/cloudflare-github-website-costs/ch-06.mp3",
-      "durationSec": 58
+      "durationSec": 57
     },
     {
       "kicker": "THE OFFER",
@@ -85,7 +85,7 @@
       ],
       "takeaway": "The first conversation costs the same as the hosting: nothing.",
       "audio": "/assets/audio/cloudflare-github-website-costs/ch-07.mp3",
-      "durationSec": 64
+      "durationSec": 63
     }
   ]
 }

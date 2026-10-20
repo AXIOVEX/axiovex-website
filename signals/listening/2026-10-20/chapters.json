@@ -3,7 +3,7 @@
   "title": "Signals Briefing",
   "mediaTitle": "Axiovex Signals Briefing — Tuesday, October 20, 2026",
   "album": "Signals Briefing",
-  "voice": "Daniel - Steady Broadcaster (ElevenLabs)",
+  "voice": "Mr Wellington (ElevenLabs)",
   "editionDate": "2026-10-20",
   "dateLabel": "Tuesday, October 20, 2026",
   "asOf": "4:21 AM ET",
@@ -18,7 +18,7 @@
       ],
       "takeaway": "Everything in this briefing traces to the snapshot on the page below it: headlines, sources, and dates only.",
       "audio": "/assets/audio/signals-briefing/2026-10-20/ch-01.mp3",
-      "durationSec": 46
+      "durationSec": 44
     },
     {
       "kicker": "MANUFACTURING & AUTOMATION",
@@ -30,7 +30,7 @@
       ],
       "takeaway": "The lane is active at both ends — strategy talk at the top, and order books and asset sales underneath.",
       "audio": "/assets/audio/signals-briefing/2026-10-20/ch-02.mp3",
-      "durationSec": 48
+      "durationSec": 51
     },
     {
       "kicker": "MICHIGAN WORKFORCE & INDUSTRY",
@@ -54,7 +54,7 @@
       ],
       "takeaway": "A steady drumbeat of advisories — the lane rewards checking your own equipment list against it.",
       "audio": "/assets/audio/signals-briefing/2026-10-20/ch-04.mp3",
-      "durationSec": 48
+      "durationSec": 50
     },
     {
       "kicker": "AI, STANDARDS & RESEARCH",
@@ -66,7 +66,7 @@
       ],
       "takeaway": "No new standards or research items since October 8 — the lane to watch for a change of pace.",
       "audio": "/assets/audio/signals-briefing/2026-10-20/ch-05.mp3",
-      "durationSec": 50
+      "durationSec": 51
     },
     {
       "kicker": "FUNDING & POLICY",
@@ -78,7 +78,7 @@
       ],
       "takeaway": "Energy infrastructure takes the large funding; the award notices are small and specific.",
       "audio": "/assets/audio/signals-briefing/2026-10-20/ch-06.mp3",
-      "durationSec": 55
+      "durationSec": 59
     },
     {
       "kicker": "WHAT TO WATCH",
@@ -90,7 +90,7 @@
       ],
       "takeaway": "The board is the record — this briefing only reads it back.",
       "audio": "/assets/audio/signals-briefing/2026-10-20/ch-07.mp3",
-      "durationSec": 47
+      "durationSec": 48
     }
   ]
 }

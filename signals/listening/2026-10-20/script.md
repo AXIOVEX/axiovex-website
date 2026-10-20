@@ -12,11 +12,11 @@ newest item is old is reported as quiet, with the date.
 Audio: one MP3 per chapter (ElevenLabs), slide cards advance
 with the chapters. This file is the script of record.
 
-- Voice: Daniel - Steady Broadcaster (ElevenLabs)
-- Chapters: 7 · Total runtime: 5:47 (347 seconds, measured per file)
+- Voice: Mr Wellington (ElevenLabs)
+- Chapters: 7 · Total runtime: 5:56 (356 seconds, measured per file)
 - Audio: /assets/audio/signals-briefing/2026-10-20/ch-01.mp3 … ch-07.mp3
 
-## 01 · INTRO — The board as of Tuesday morning (0:46)
+## 01 · INTRO — The board as of Tuesday morning (0:44)
 
 **Key points**
 
@@ -30,7 +30,7 @@ with the chapters. This file is the script of record.
 
 Welcome to the Signals Briefing for Tuesday, October twentieth, twenty twenty-six. This is the spoken edition of the Axiovex Signals board: five lanes of Michigan workforce and industry news, read from the same data snapshot the page below is built from, current as of four twenty-one this morning, Eastern time. The board holds thirty-seven items. The newest arrived yesterday, October nineteenth, in three of the five lanes. One lane — artificial intelligence, standards, and research — has been quiet since October eighth, and this briefing will say so when we get there. First, the manufacturing lane.
 
-## 02 · MANUFACTURING & AUTOMATION — The busiest lane this week (0:48)
+## 02 · MANUFACTURING & AUTOMATION — The busiest lane this week (0:51)
 
 **Key points**
 
@@ -58,7 +58,7 @@ Manufacturing and automation is the busiest lane this week, with five items date
 
 Michigan's own numbers come from the Bureau of Labor Statistics, for August twenty twenty-six. Manufacturing employment stood at five hundred eighty-six thousand seven hundred, up one thousand one hundred on the month. The unemployment rate was five point zero percent, up a tenth of a point, and the labor force was four point eight five million. The state's WARN filings add three items. Kern J.G. Enterprise announced a permanent layoff in Sterling Heights — one hundred fifty-six jobs, effective August seventeenth. Lear Corporation will close a Sterling Heights facility — sixty-seven jobs, effective November ninth. And HealthEdge announced a permanent layoff in Detroit — fifty-three jobs, effective December first.
 
-## 04 · OT CYBERSECURITY — Eight advisories, all from CISA (0:48)
+## 04 · OT CYBERSECURITY — Eight advisories, all from CISA (0:50)
 
 **Key points**
 
@@ -72,7 +72,7 @@ Michigan's own numbers come from the Bureau of Labor Statistics, for August twen
 
 Operational technology security is all CISA this week — eight advisories on the board. The newest, dated Thursday, October fifteenth, cover Malcolm, CISA's network monitoring tool; the Eclipse Foundation's Milo; and Guangzhou Juan's EseeCloud. Tuesday's advisories cover Inductive Automation's Ignition software and a Swann Communications product. The October eighth batch covers Red Lion's N-Tron seven hundred series switches, Grid Protection Alliance's openPDC and openHistorian, and Satel's Netco Design. Every item in this lane is a product advisory — a notice for the operators who run this equipment, not an incident report.
 
-## 05 · AI, STANDARDS & RESEARCH — The quiet lane (0:50)
+## 05 · AI, STANDARDS & RESEARCH — The quiet lane (0:51)
 
 **Key points**
 
@@ -86,7 +86,7 @@ Operational technology security is all CISA this week — eight advisories on th
 
 This is the quiet lane. Artificial intelligence, standards, and research has five items on the board, and the newest is dated October eighth — twelve days ago. On that day, NIST announced it is joining a White House effort to drive what it calls a new golden age of science. Before that: on September eighteenth, NIST awarded more than one point seven million dollars for cybersecurity workforce development across eight states, and on September seventeenth, the National Science Foundation announced an investment in low-dimensional semiconductor technologies. Nothing has arrived in this lane since October eighth, and the briefing is not going to dress that up. Quiet is the news here.
 
-## 06 · FUNDING & POLICY — Energy takes the large funding (0:55)
+## 06 · FUNDING & POLICY — Energy takes the large funding (0:59)
 
 **Key points**
 
@@ -100,7 +100,7 @@ This is the quiet lane. Artificial intelligence, standards, and research has fiv
 
 Funding and policy closes the news lanes. On Monday, October nineteenth, the Department of Energy advanced the Constitution Pipeline project with forty-two million dollars in Defense Production Act funding. A second Energy Department item, from October sixteenth, sends Defense Production Act funding to a transmission project in Virginia and West Virginia. The federal award notices are smaller. On October sixteenth, the Department of Veterans Affairs awarded fifty-five thousand four hundred fourteen dollars to Hanger Prosthetics and Orthotics East, and the General Services Administration awarded sixty-one thousand six hundred thirty dollars to F.C.A. U.S. On October fifteenth, the V.A. awarded twenty-one thousand five hundred seven dollars to Electra-Med Corporation.
 
-## 07 · WHAT TO WATCH — Dates ahead on the board (0:47)
+## 07 · WHAT TO WATCH — Dates ahead on the board (0:48)
 
 **Key points**
 

@@ -15,11 +15,11 @@ and as digits in the key points; the article's tables are
 summarized in speech (their key rows), never read cell by
 cell; links are not read aloud.
 
-- Voice: Daniel - Steady Broadcaster (ElevenLabs)
-- Chapters: 7 · Total runtime: 7:02 (422 seconds, measured per file)
+- Voice: Mr Wellington (ElevenLabs)
+- Chapters: 7 · Total runtime: 6:59 (419 seconds, measured per file)
 - Audio: /assets/audio/cloudflare-github-website-costs/ch-01.mp3 … ch-07.mp3
 
-## 01 · HEADLINE — The expensive assumption (0:54)
+## 01 · HEADLINE — The expensive assumption (0:57)
 
 **Key points**
 
@@ -33,7 +33,7 @@ cell; links are not read aloud.
 
 When a new business asks us where their website should live, the assumption is usually that the answer is one of the big clouds — AWS or Azure — and that step one is finding a host. It is a reasonable assumption, and for most small business websites it is also an expensive one. There is a simpler combination: your site's files in a GitHub repository, delivered by Cloudflare. It is how this website runs. The hosting costs zero dollars a month, and the domain costs about ten dollars a year — this site's cost ten point four six dollars. Let us show the numbers. Every price here is as published on October seventh, twenty twenty-six; vendors change prices, so treat these as an honest snapshot for comparing the shape of the offers.
 
-## 02 · THE SHAPE — Most business websites are just pages (0:51)
+## 02 · THE SHAPE — Most business websites are just pages (0:48)
 
 **Key points**
 
@@ -47,7 +47,7 @@ When a new business asks us where their website should live, the assumption is u
 
 First, what kind of website are we talking about? Most business websites are the same shape: pages that describe what you do, articles or reports you publish, a contact form, maybe a newsletter signup. They do not run an application. There is no server chewing on computation, no database cluster, nothing that needs to stay awake all night. Pages are written once and read many times. AWS and Azure are built — brilliantly — for the other kind: applications, backends, private networks, compute that scales up and down. Putting a brochure-and-articles website on them is like leasing a delivery fleet to drive one van. You can do it. You will pay for the fleet.
 
-## 03 · THE TABLE IN WORDS — The big clouds meter success (1:05)
+## 03 · THE TABLE IN WORDS — The big clouds meter success (1:04)
 
 **Key points**
 
@@ -89,7 +89,7 @@ The traditional hosts charge differently: rent, forever. GoDaddy's website build
 
 What happens when your site grows past pages — a members area, a catalog, a course with video? Databases first. Cloudflare's D1 is a real SQL database with a generous free allowance — five gigabytes of storage on the free plan. Azure's Cosmos DB has a genuinely good lifetime free tier: one thousand requests per second of throughput and twenty-five gigabytes of storage. On AWS, the smallest always-on hosted database runs about twelve dollars a month before storage. Video: Cloudflare Stream bundles upload, encoding, player, and delivery at five dollars per one thousand minutes stored, plus one dollar per one thousand minutes delivered — with no bandwidth charges on top. Microsoft retired Azure Media Services in twenty twenty-four; AWS assembles video from three separately metered parts; GoDaddy and Namecheap offer no streaming product at all.
 
-## 06 · THE BOUNDARY — Where the big clouds are the right answer (0:58)
+## 06 · THE BOUNDARY — Where the big clouds are the right answer (0:57)
 
 **Key points**
 
@@ -103,7 +103,7 @@ What happens when your site grows past pages — a members area, a catalog, a co
 
 To be precise about the boundary: a real application backend belongs on AWS or Azure — that is what they are for. A compliance regime, or a contract that names a specific cloud, settles the question by itself. Video at library scale will push you toward paid, purpose-built services on any platform. If your project crosses one of those lines, host that project there — and keep your website where websites belong. A website built this way is plain files in a repository; it is never trapped. This site is the working example: it currently scores one hundred out of one hundred on AI-search readiness checks and ninety percent on independent SEO checks. Total monthly hosting cost: zero dollars, plus that ten point four six dollar a year domain.
 
-## 07 · THE OFFER — Take the toolkit, or take a hand (1:04)
+## 07 · THE OFFER — Take the toolkit, or take a hand (1:03)
 
 **Key points**
 

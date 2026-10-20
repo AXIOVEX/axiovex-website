@@ -94,3 +94,18 @@
   The held posts' editions (Trinity, Lansing) were NOT part
   of this promotion — they ship with their articles via their
   publish jobs. The Signals Briefing keeps its own gate (T011).
+
+- [x] T015 **WS5 — voice of record changed: Daniel → Mr Wellington**
+  (owner decision, 2026-10-20: "Switch everything to Mr Wellington").
+  `scripts/build-listening.mjs` pins now name Mr Wellington
+  (ElevenLabs shared-library voice `HSBWXljo3oivWhybh3YX`), replacing
+  Daniel — Steady Broadcaster (`onwK4e9ZLuTAKqWW03F9`). All six live
+  editions were re-synthesized in the new voice (same pipeline:
+  eleven_multilingual_v2, no voice-settings overrides), each
+  chapters.json rebuilt from newly measured durations — robots 7 ch
+  (477s → 475s), cloudflare 7 ch (422s → 419s), workforce 6 ch
+  (322s → 329s), superintelligence 5 ch (260s → 260s), oakland 7 ch
+  (468s → 484s), Signals Briefing 2026-10-20 7 ch (347s → 356s).
+  Scripts of record carry the new voice line and runtimes. The held
+  posts' editions (Trinity, Lansing) were NOT re-rendered — they
+  will be generated with the new default voice when they publish.
