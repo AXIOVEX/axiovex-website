@@ -323,7 +323,7 @@ function listeningHtml(data, opts) {
   return '<link rel="stylesheet" href="/blog/listening.v3.css">\n' +
     '        <section class="listening" id="listening-edition" aria-label="' + (opts.ariaLabel || 'Listening edition') + '">\n' +
     '          <div class="listening-head">\n' +
-    '            <p class="le-eyebrow">' + (opts.eyebrow || 'Listening edition') + '</p>\n' +
+    '            <h2 class="le-eyebrow">' + (opts.eyebrow || 'Listening edition') + '</h2>\n' +
     '            <p class="le-meta">' + (opts.metaPrefix || '') + 'Narrated &middot; ' + chapters.length + ' chapters &middot; about ' + mins + ' minutes</p>\n' +
     '          </div>\n' +
     '          <div class="le-stage">\n' +
