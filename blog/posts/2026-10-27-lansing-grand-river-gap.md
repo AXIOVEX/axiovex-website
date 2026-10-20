@@ -4,6 +4,8 @@ date: 2026-10-27
 description: Lansing Grand River builds its last CT5 on Dec 17, 2026 and its next in late 2028. Not a closure — a planning problem. The timeline and the math.
 tags: manufacturing, workforce, michigan, autos, planning
 slug: lansing-grand-river-gap
+listening:
+  enabled: true
 ---
 On December 17, 2026, the last current-generation Cadillac CT5 will come off the line at GM's Lansing Grand River Assembly plant. The next one — a new generation, confirmed for the same plant — is not expected until the second half of 2028. Between those two dates sits roughly **18 months with no car to build**, **350 workers** facing layoff effective January 14, 2027, and a **$1.25 billion** retooling program. Coverage of the announcement has mostly argued about whether the plant is "closing." It is not. The harder and more useful question is what an 18-month hole in a plant's calendar actually requires — from GM, from workers living on reduced pay, and from the suppliers whose order books have the same hole in them.
 

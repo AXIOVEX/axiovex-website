@@ -1,0 +1,91 @@
+{
+  "slug": "lansing-grand-river-gap",
+  "title": "Lansing Grand River's 18-month gap is a planning problem, not a closure",
+  "voice": "Daniel - Steady Broadcaster (ElevenLabs)",
+  "chapters": [
+    {
+      "kicker": "HEADLINE",
+      "headline": "A hole in the calendar, not a closing plant",
+      "points": [
+        "December 17, 2026: the last current-generation Cadillac CT5 comes off the line at Lansing Grand River",
+        "The next generation is confirmed for the same plant — not expected until the second half of 2028",
+        "Between the dates: roughly 18 months with no car to build, 350 workers facing layoff effective January 14, 2027, and a $1.25 billion retooling program"
+      ],
+      "takeaway": "Coverage has argued about whether the plant is closing. It is not — the useful question is what an 18-month hole actually requires.",
+      "audio": "/assets/audio/lansing-grand-river-gap/ch-01.mp3",
+      "durationSec": 61
+    },
+    {
+      "kicker": "THE FACTS",
+      "headline": "Temporary layoffs, a benefit, and the last vehicle",
+      "points": [
+        "350 employees at the assembly plant and Lansing Regional Stamping, laid off effective January 14, 2027",
+        "The layoffs are temporary: GM expects to call employees back after the changeover, some before the end of 2027",
+        "Affected employees may be eligible for transfers, or supplemental unemployment pay equivalent to 74% of their hourly wage under the GM–UAW contract"
+      ],
+      "takeaway": "The CT5 is the plant's last remaining vehicle — the Camaro ended there in December 2023, the CT4 in June 2026.",
+      "audio": "/assets/audio/lansing-grand-river-gap/ch-02.mp3",
+      "durationSec": 73
+    },
+    {
+      "kicker": "THREE CORRECTIONS",
+      "headline": "What the coverage gets wrong",
+      "points": [
+        "Not a closure — and \"18 months idle\" is an estimate, not a GM statement; GM has not published a day-by-day account of the retool",
+        "The $1.25 billion was redirected, not scrapped: announced in 2023 to convert the plant to EVs, backed by a $500 million federal grant in 2024, now aimed at the gasoline CT5",
+        "The 74% is a benefit, not a paycheck — supplemental unemployment pay, with eligibility rules and time limits a paycheck does not have"
+      ],
+      "takeaway": "Each correction changes what the gap means — for the plant, for the program, and for household math.",
+      "audio": "/assets/audio/lansing-grand-river-gap/ch-03.mp3",
+      "durationSec": 78
+    },
+    {
+      "kicker": "THE TIMELINE",
+      "headline": "Fixed dates, live decisions",
+      "points": [
+        "December 17, 2026: current CT5 production ends; January 14, 2027: layoffs take effect",
+        "During 2027: retooling under the $1.25 billion program, with some employees back before the year ends",
+        "Second half of 2028: next-generation CT5 production begins — the 2029 model year"
+      ],
+      "takeaway": "Every decision the gap forces — transfer or layoff, wait or train, hold staff or cut — is being made now, on the information available now.",
+      "audio": "/assets/audio/lansing-grand-river-gap/ch-04.mp3",
+      "durationSec": 79
+    },
+    {
+      "kicker": "THE HOUSEHOLD MATH",
+      "headline": "What 74% actually means",
+      "points": [
+        "Illustrative worker at $35 an hour, 40 hours a week: $1,400 a week gross",
+        "At 74%, support is about $1,036 a week — a shortfall of roughly $364 a week, about $1,580 a month",
+        "Out a full year, the forgone wages total about $18,900; across the full 18 months, about $28,400"
+      ],
+      "takeaway": "The 74% figure converts a layoff from an emergency into a slow squeeze — survivable with savings, corrosive without, and worse the longer the gap runs.",
+      "audio": "/assets/audio/lansing-grand-river-gap/ch-05.mp3",
+      "durationSec": 73
+    },
+    {
+      "kicker": "THE ORION WARNING",
+      "headline": "A gap planned at a year ran past three",
+      "points": [
+        "Forty miles east, Orion Assembly built the Bolt EV until production ended in December 2023",
+        "A $4 billion retool for electric trucks: the start slipped from 2024 to 2025, then to 2026",
+        "In June 2025 GM changed the product entirely — gasoline trucks and SUVs instead, production now expected from 2027"
+      ],
+      "takeaway": "Orion's timeline did not fail because the retooling was hard. It failed because the product plan underneath it kept moving — and Lansing's plan has already moved once.",
+      "audio": "/assets/audio/lansing-grand-river-gap/ch-06.mp3",
+      "durationSec": 76
+    },
+    {
+      "kicker": "THE TEST",
+      "headline": "Judged by conditions stated in advance",
+      "points": [
+        "Going well: GM holds the second-half-2028 restart, first recalls land in 2027, training seats exist and are filled, the stamping plant stays visibly working",
+        "Going badly: the restart drifts, \"temporary\" layoffs are extended or converted, the product changes again, the supplier base visibly thins",
+        "The unpriced options: train into the new plant during the layoff window, keep the stamping plant warm, plan for the supplier base — not just the plant"
+      ],
+      "takeaway": "A plant that stops for 18 months is not a crisis. A plant that stops for 18 months without a plan for the interval becomes one — slowly, then all at once at launch.",
+      "audio": "/assets/audio/lansing-grand-river-gap/ch-07.mp3",
+      "durationSec": 64
+    }
+  ]
+}
