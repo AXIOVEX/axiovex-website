@@ -39,10 +39,13 @@ starts one step earlier. It describes a system by the **limits** on
 it: the rules about what can happen and what cannot. Then it asks a
 simple question with surprising reach — if all we ever get to see is
 what those limits allow through, what does the world have to look
-like? Internally, the program is called **RCPH**. Everything it
-claims is registered publicly before the test runs, and the result
-is published either way — including when the answer is "we were
-wrong."
+like? Internally, the program is called **RCPH**. Every claim is
+written down with the test that could kill it, frozen, and
+registered publicly before the test runs — and the result is
+published either way, including when the answer is "we were
+wrong." (One study's registration paperwork needed repair after
+the fact; the note under 'The studies' below tells that story in
+full.)
 
 ### What we have learned so far
 
@@ -60,9 +63,12 @@ rather than melting gradually from one form into the next.
 **Gravity may be counting.** Take any region and draw its boundary —
 a fence. Now count the connections that cross the fence. The count
 grows with the *size of the fence*, not with the amount of stuff
-inside it. That is exactly how gravity behaves in the real world:
-its strength at a boundary depends on area, not volume, and nobody
-has ever fully explained why. In our framework the area pattern
+inside it. A pattern like that shows up in real physics in a
+famous place: the most a region of space can hold — measured as
+information, or disorder — grows with the area of its boundary,
+not with its volume. Black holes are where physics was first
+forced to face this, and nobody has ever fully explained why
+nature keeps its books by area. In our framework the area pattern
 falls out of pure counting. Here is the honest catch, and we state
 it as plainly as the result: the counting argument needs one extra
 rule — a limit on how much a boundary can carry. We tried to derive
@@ -90,11 +96,18 @@ it" — or doesn't. That report side of seeing is testable, and we
 test it in registered studies on public brain-imaging data. Our
 first strong idea about it failed its test, publicly, and we
 retired it. But there is a second side — what seeing *feels like*
-from the inside — and our work marks a hard boundary there: no
-record, of any kind, in any experiment, can carry the feeling
-itself, because records are exactly the things that get reported,
-stored, and read back. That is not an excuse for not studying it.
-It is a result about what kind of question it is.
+from the inside. We surveyed the serious scientific candidates
+for measuring that side directly, and tested each against a strict
+standard: a real measurement procedure, not a renaming of what
+people report, with a link to experience that could in principle
+fail its check. None met the standard. The strongest candidate — a
+score built from how the brain answers a magnetic pulse — measures
+whether experience is present, and roughly how rich it is, but not
+what it is like. Every route we found from a measurement to the
+feeling itself still passes through what the person reports; and
+where reports are absent, the link cannot be checked at all. That
+is a result about the present state of the question — no candidate
+has met the standard yet — not a proof that none ever could.
 
 **Why some questions stay stuck.** After dozens of tests, the
 failures fell into three piles, and the piles turned out to be more
@@ -146,6 +159,16 @@ with its test and its failure condition written down before the
 computation starts. The registrations and the verdicts are public —
 see the links at the bottom of this page.
 
+One study's paperwork needs an honest footnote. Its protocol was
+frozen and first submitted before the test ran — but the public
+registration was only completed the day after the study closed,
+because the notification email for the first submission never
+arrived and the study had to be registered again. The stray first
+registration later went public on its own and has been withdrawn
+as a duplicate, leaving exactly one registration of record. The
+timestamps and the frozen content are in that study's public
+record for anyone to check.
+
 ---
 
 ## The framework, in plain terms
@@ -181,8 +204,8 @@ memory, a data file, a fossil. Every fact anyone has ever checked
 arrived as a record. So the framework studies records directly —
 what a record can contain, what it cannot contain no matter how it
 is made, and what follows from that. The boundary around the
-feeling side of seeing, above, is one such result: it is a theorem
-about records before it is a claim about minds.
+feeling side of seeing, above, is one such result: it is a finding
+about what records can carry, stated before any claim about minds.
 
 **4. Counting is unforgiving — and that is its power.** Many of
 the framework's results come from counting: how many connections
@@ -230,8 +253,15 @@ underneath Program one: it is how we keep score on our own claims,
 and it is why every result above is stated with its mechanism and
 its reasons attached, never as a bare count.
 
-**Status line:** Framing paper published; ledger public and
-maintained; the method is in active use across both programs.
+**Status line:** Framing paper published; the ledger itself is
+working software, not a sketch — a public prototype (version
+0.11.1, October 2026) that stores every claim in an append-only
+record, automatically re-grades the claims a new fact touches
+along with everything that depends on them, and has completed
+measured evaluations — including a proof package in which a
+stronger local model cut a frozen downstream error score from
+0.4637 to 0.3194 on identical prompts. The method is in active use
+across both programs.
 
 ---
 
@@ -250,8 +280,9 @@ three public places:
 
 2. **The registered studies** — Open Science Framework
    (https://osf.io/nerxz/)
-   "Every study in Program one, registered before it ran, with
-   its verdict posted."
+   "Program one's registrations and verdicts — protocols frozen and
+   registered before the tests ran, with one documented paperwork
+   repair, noted on this page."
 
 3. **Research at BitConcepts** — BitConcepts
    (https://bitconcepts.tech/research/)
