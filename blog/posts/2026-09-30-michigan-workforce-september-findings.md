@@ -4,6 +4,8 @@ date: 2026-09-30
 description: Michigan's August unemployment was 5.0% — but the rate conceals a participation story. The September workforce edition: five decisions for education and industry.
 tags: workforce, michigan, research, AI, education
 slug: michigan-workforce-september-2026
+listening:
+  enabled: true
 ---
 Our Michigan workforce intelligence project just published its September edition — new labor data through August, graduation-horizon program planning, and cross-sector analysis of AI task impacts. I want to walk through what the numbers actually say, because the headline figure is the least interesting part.
 
