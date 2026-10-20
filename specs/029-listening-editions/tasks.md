@@ -39,7 +39,7 @@
   guard blobs identical. Live-browser listening pass
   by the parent agent (sandbox Playwright cannot reach
   public sites).
-- [ ] T008 **GATE — owner hears the pilot.** Production
+- [x] T008 **GATE — owner hears the pilot.** Production
   promotion and any wider rollout are decided by
   Tristen after listening. Not part of this pilot's
   execution.
@@ -56,3 +56,11 @@
   section on the production article. Remaining check is
   the parent's live-browser listening pass (T007 note:
   sandbox Playwright cannot reach public sites).
+
+  **Gate record (2026-10-20):** Tristen heard the pilot and approved it —
+  "I love it." Production promotion of the robots listening edition is
+  approved and executed as the WS2 step of the 2026-10-20 follow-on
+  direction (player v3 + blog.v12.css references, file-level promotion;
+  production guard blobs verified unchanged). Wider rollout (every
+  article, signals briefing) proceeds as separate staged workstreams;
+  backfill promotion beyond the robots article remains owner-gated.
