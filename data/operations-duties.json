@@ -18,7 +18,7 @@
     "source": "docs/decisions/2026-10-19-month-end-publication.md",
     "workflow": "monthly-publication.yml",
     "mode": "automatic",
-    "description": "Data gate, report, publish, exact final preview to Tristen, active subscriber send"
+    "description": "Data gate and monthly analytics report emailed to the founders. Customer newsletter send removed 2026-10-20 (owner sorting rule): sending is owner-gated in the Muse scheduler."
   },
   {
     "id": "signals-headlines-pulse-insights",
@@ -54,13 +54,6 @@
     "workflow": "operations.yml",
     "mode": "automatic",
     "description": "29th evidence collect/analyze/build and reviewed-edition verification; artifacts to founders"
-  },
-  {
-    "id": "workforce-editorial-publication",
-    "source": "docs/decisions/2026-10-19-remaining-duties.md",
-    "workflow": "monthly-publication.yml",
-    "mode": "automatic",
-    "description": "Data-ready source-only workforce article and newsletter link; interpretive research editions remain reviewed"
   },
   {
     "id": "newsletter-browser-loop",
