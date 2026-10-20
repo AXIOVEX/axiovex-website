@@ -319,7 +319,7 @@ function listeningHtml(data) {
     '<span class="le-ttl">' + esc(c.headline) + '</span></button></li>').join('\n');
   const points = (first.points || []).map(p => '                <li>' + esc(p) + '</li>').join('\n');
   const json = JSON.stringify(data).replace(/<\//g, '<\\/');
-  return '<link rel="stylesheet" href="/blog/listening.v1.css">\n' +
+  return '<link rel="stylesheet" href="/blog/listening.v2.css">\n' +
     '        <section class="listening" id="listening-edition" aria-label="Listening edition">\n' +
     '          <div class="listening-head">\n' +
     '            <p class="le-eyebrow">Listening edition</p>\n' +
