@@ -10,29 +10,29 @@
 - [x] T002 Write the spec package on `staging`
   (spec.md / plan.md / tasks.md; FR-001–FR-008,
   claims C-029-1..3).
-- [ ] T003 Write the listening script from the
+- [x] T003 Write the listening script from the
   published article text: 7 chapters, 6–8 minutes
   spoken, every figure identical to the article
   (C-029-1); chapter cards derived from each chapter's
   narration (C-029-2). Saved at
   `blog/listening/robots-can-do-the-work/script.md`.
-- [ ] T004 Synthesize one MP3 per chapter (ElevenLabs,
+- [x] T004 Synthesize one MP3 per chapter (ElevenLabs,
   Daniel — Steady Broadcaster) into
   `assets/audio/robots-can-do-the-work/`; measure each
   duration with ffprobe; write
   `blog/listening/robots-can-do-the-work/chapters.json`.
-- [ ] T005 Build hook: `{{LISTENING_HTML}}` slot in
+- [x] T005 Build hook: `{{LISTENING_HTML}}` slot in
   `scripts/templates/blog-article.html`; fill from
   chapter data in `scripts/build-site.mjs` (empty for
   articles without data — C-029-3); player assets
   `blog/listening.v1.css` / `blog/listening.v1.js`;
   generated pilot page updated to match build output.
-- [ ] T006 Commit to `staging` in logical commits
+- [x] T006 Commit to `staging` in logical commits
   (spec; script + audio + data; player + build) via
   the GitHub API — local git object writes are
   unavailable in the current sandbox (standing
   environment note, 2026-10-20).
-- [ ] T007 Verify on the staging deployment: player +
+- [x] T007 Verify on the staging deployment: player +
   chapter data in served HTML; all chapter MP3s 200 /
   audio type; exactly one newsletter form; Trinity +
   Lansing still 404 on staging; production unchanged;
@@ -43,3 +43,16 @@
   promotion and any wider rollout are decided by
   Tristen after listening. Not part of this pilot's
   execution.
+
+  **Execution record (2026-10-20):** commits on `staging` —
+  spec `674d412`; script + chapter data + audio `0279fb4`;
+  player + build hook + generated page `5f22183`. Verified on
+  the staging deployment: Listening Edition section in the
+  served HTML with 7 chapters / 477.6 s of measured audio;
+  all 7 chapter MP3s 200 audio/mpeg; player CSS/JS 200;
+  exactly one newsletter form on the page; Trinity and
+  Lansing still 404 on staging; staging guard blobs
+  unchanged; production (main) untouched — no listening
+  section on the production article. Remaining check is
+  the parent's live-browser listening pass (T007 note:
+  sandbox Playwright cannot reach public sites).
