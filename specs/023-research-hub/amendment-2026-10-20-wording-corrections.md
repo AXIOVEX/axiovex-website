@@ -76,3 +76,29 @@ page identity check (new gravity sentence present, old sentence
 absent) on https://axiovexsystems.com/research/. Verification
 records: `verification-2026-10-20-staging/` and
 `verification-2026-10-20-production/`.
+
+## Addendum 2026-10-20 — front-card fix (owner-approved follow-on)
+
+**Date:** 2026-10-20. **Owner approval:** Tristen, 2026-10-20
+("Approve the front-card fix — publish it"), given after the four
+corrections above were published, on the flag recorded at the end
+of this note ("Not changed … flagged for the owner").
+
+**The change (one card in the page's Open fronts block):**
+
+- Heading: "Program two — design phase" → "Program two — working
+  software"
+- Line: "The epistemic ledger's next stage is design work: the
+  schema, the scoring, and a working prototype." → "The epistemic
+  ledger is built and in use: a public prototype that stores every
+  claim and re-grades the ones new evidence touches."
+
+The card text lives only in the page source — the copy deck
+carries no Open fronts card copy — so this change touches
+`research/index.html` and this note only; the deck is unchanged.
+Same flow as the four corrections: staging first (verified live +
+screenshots of the locally served, byte-identical page), then the
+identical blob to production with the served-identity check (the
+new card line present; "design phase" and "next stage is design
+work" absent from the served HTML). Verification record:
+`verification-2026-10-20-frontcard/`.
