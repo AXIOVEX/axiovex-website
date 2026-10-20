@@ -300,6 +300,58 @@ function syncDocs(sharedDir) {
 }
 
 /* ================= Blog build ================= */
+/* Listening editions (spec 029): a sister deliverable of an article —
+   spoken chapters (one MP3 each) plus a slide card per chapter,
+   rendered on the article page. The gate is the data file
+   blog/listening/<slug>/chapters.json; articles without one emit
+   nothing (FR-005). Script discipline: spec 029 FR-001/FR-002. */
+function listeningHtml(data) {
+  const chapters = data.chapters || [];
+  if (!chapters.length) return '';
+  const totalSec = chapters.reduce((a, c) => a + (c.durationSec || 0), 0);
+  const fmt = s => { s = Math.max(0, Math.round(s)); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); };
+  const mins = Math.max(1, Math.round(totalSec / 60));
+  const first = chapters[0];
+  const items = chapters.map((c, i) =>
+    '              <li><button type="button" class="le-chapter" data-le-chapter="' + i + '"' +
+    (i === 0 ? ' aria-current="true"' : '') +
+    '><span class="le-num">' + String(i + 1).padStart(2, '0') + '</span>' +
+    '<span class="le-ttl">' + esc(c.headline) + '</span></button></li>').join('\n');
+  const points = (first.points || []).map(p => '                <li>' + esc(p) + '</li>').join('\n');
+  const json = JSON.stringify(data).replace(/<\//g, '<\\/');
+  return '<link rel="stylesheet" href="/blog/listening.v1.css">\n' +
+    '        <section class="listening" id="listening-edition" aria-label="Listening edition">\n' +
+    '          <div class="listening-head">\n' +
+    '            <p class="le-eyebrow">Listening edition</p>\n' +
+    '            <p class="le-meta">Narrated &middot; ' + chapters.length + ' chapters &middot; about ' + mins + ' minutes</p>\n' +
+    '          </div>\n' +
+    '          <div class="le-stage">\n' +
+    '            <article class="le-card" aria-live="polite">\n' +
+    '              <p class="le-kicker" data-le-kicker>' + esc(first.kicker) + '</p>\n' +
+    '              <h3 class="le-headline" data-le-headline>' + esc(first.headline) + '</h3>\n' +
+    '              <ul class="le-points" data-le-points>\n' + points + '\n              </ul>\n' +
+    '              <p class="le-takeaway"><span>Takeaway</span><span data-le-takeaway>' + esc(first.takeaway) + '</span></p>\n' +
+    '            </article>\n' +
+    '            <ol class="le-chapters">\n' + items + '\n            </ol>\n' +
+    '          </div>\n' +
+    '          <div class="le-controls">\n' +
+    '            <button type="button" class="le-play" data-le-play aria-label="Play">&#9654;</button>\n' +
+    '            <span class="le-time"><span data-le-elapsed>0:00</span> / <span data-le-total>' + fmt(totalSec) + '</span></span>\n' +
+    '            <input type="range" class="le-progress" data-le-progress min="0" max="1000" value="0" aria-label="Seek through the listening edition">\n' +
+    '            <span class="le-now" data-le-now>Chapter 1 of ' + chapters.length + '</span>\n' +
+    '          </div>\n' +
+    '          <audio data-le-audio preload="metadata"></audio>\n' +
+    '          <script type="application/json" data-le-data>' + json + '</script>\n' +
+    '          <script src="/blog/listening.v1.js" defer></script>\n' +
+    '        </section>';
+}
+
+function listeningSection(post) {
+  const dataPath = path.join(ROOT, 'blog', 'listening', post.slug, 'chapters.json');
+  if (!existsSync(dataPath)) return '';
+  return listeningHtml(JSON.parse(readFileSync(dataPath, 'utf8')));
+}
+
 function parsePost(filePath) {
   const raw = readFileSync(filePath, 'utf8');
   const m = /^---\n([\s\S]*?)\n---\n?/.exec(raw);
@@ -375,6 +427,7 @@ function buildBlog() {
       '{{TAGS_HTML}}': tagsHtml,
       '{{TAGS_DATA}}': escAttr(post.tags.join(', ')),
       '{{SHARE_TOP}}': shareRow(post.title, post.url, true),
+      '{{LISTENING_HTML}}': listeningSection(post),
       '{{BODY_HTML}}': renderMarkdown(post.bodyMd),
       '{{NEWSLETTER_HTML}}': newsletterBlock('article'),
       '{{MORE_HTML}}': moreHtml,
