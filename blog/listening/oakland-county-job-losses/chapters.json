@@ -1,7 +1,7 @@
 {
   "slug": "oakland-county-job-losses",
   "title": "Oakland County is losing jobs. Here is why.",
-  "voice": "Daniel - Steady Broadcaster (ElevenLabs)",
+  "voice": "Mr Wellington (ElevenLabs)",
   "chapters": [
     {
       "kicker": "HEADLINE",
@@ -13,7 +13,7 @@
       ],
       "takeaway": "The losses are specific — specific sectors, specific employers, specific places the work went.",
       "audio": "/assets/audio/oakland-county-job-losses/ch-01.mp3",
-      "durationSec": 59
+      "durationSec": 60
     },
     {
       "kicker": "WHERE THE JOBS WENT",
@@ -25,7 +25,7 @@
       ],
       "takeaway": "The single largest loss sits in the county's signature industry — the engineering and technical-services firms clustered around autos.",
       "audio": "/assets/audio/oakland-county-job-losses/ch-02.mp3",
-      "durationSec": 64
+      "durationSec": 68
     },
     {
       "kicker": "CAUSE ONE",
@@ -37,7 +37,7 @@
       ],
       "takeaway": "The direction, repeated across independent employers with the same stated reason, is hard to argue with.",
       "audio": "/assets/audio/oakland-county-job-losses/ch-03.mp3",
-      "durationSec": 84
+      "durationSec": 80
     },
     {
       "kicker": "CAUSE TWO",
@@ -49,7 +49,7 @@
       ],
       "takeaway": "None of these is a collapse — together they describe a footprint being consolidated elsewhere, one decision at a time.",
       "audio": "/assets/audio/oakland-county-job-losses/ch-04.mp3",
-      "durationSec": 68
+      "durationSec": 72
     },
     {
       "kicker": "THE AUGUST QUESTION",
@@ -61,7 +61,7 @@
       ],
       "takeaway": "Eight thousand layoffs in a month would show up in the claims data. Nothing did — the August cliff is most likely the model, not the economy.",
       "audio": "/assets/audio/oakland-county-job-losses/ch-05.mp3",
-      "durationSec": 95
+      "durationSec": 99
     },
     {
       "kicker": "THE OFFSETS",
@@ -73,7 +73,7 @@
       ],
       "takeaway": "The forward announcements are pledges, not payroll — GM Orion is the largest single rebound in view.",
       "audio": "/assets/audio/oakland-county-job-losses/ch-06.mp3",
-      "durationSec": 51
+      "durationSec": 53
     },
     {
       "kicker": "WHAT WE ARE WATCHING",
@@ -85,7 +85,7 @@
       ],
       "takeaway": "We will report what the checkpoints show, either way.",
       "audio": "/assets/audio/oakland-county-job-losses/ch-07.mp3",
-      "durationSec": 47
+      "durationSec": 52
     }
   ]
 }

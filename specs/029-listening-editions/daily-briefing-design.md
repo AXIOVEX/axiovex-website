@@ -70,3 +70,9 @@ time: after the morning signals-sync has refreshed
 - Does the daily edition also get announced anywhere (it is not
   a blog article; the Spec 028 posting cadence does not cover
   it), or does it simply live at the top of /signals/?
+
+**Amendment (2026-10-20) — voice of record.** The voice named in
+step 4 changed the same day: Mr Wellington (ElevenLabs
+shared-library voice `HSBWXljo3oivWhybh3YX`) replaces Daniel —
+Steady Broadcaster, by owner decision. See tasks.md T015. "Same
+voice as the pilot" in step 4 now means Mr Wellington.
