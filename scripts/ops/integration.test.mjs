@@ -80,3 +80,36 @@ test('legacy sender fails rather than reporting recipient failures as complete',
   assert.match(child.stderr, /Newsletter delivery incomplete/);
   assert.ok(!child.stdout.includes('send complete'));
 });
+
+test('complete windows with routine adaptive sampling caveats are not partial', () => {
+  const temp = mkdtempSync(path.join(tmpdir(), 'axiovex-ops-test-'));
+  const hook = path.join(temp, 'mock.mjs');
+  writeFileSync(hook, `
+    globalThis.fetch = async (url, options = {}) => {
+      const u = String(url);
+      if (u.includes('/api/ops/traffic-archive')) return Response.json({ ok: true, rows: [] });
+      if (u.includes('/zones?')) return Response.json({ success: true, result: [{ id: 'a'.repeat(32) }] });
+      const query = JSON.parse(options.body).query;
+      let rows;
+      if (query.includes('httpRequests1dGroups')) {
+        const start = /date_geq:"([^"]+)"/.exec(query)[1], end = /date_lt:"([^"]+)"/.exec(query)[1];
+        rows = [];
+        for (let d = new Date(start + 'T00:00:00Z'); d.toISOString().slice(0, 10) < end; d.setUTCDate(d.getUTCDate() + 1)) {
+          rows.push({ dimensions: { date: d.toISOString().slice(0, 10) }, uniq: { uniques: 3 }, sum: { requests: 10, bytes: 200, cachedBytes: 50, responseStatusMap: [{ edgeResponseStatus: 200, requests: 10 }], countryMap: [{ clientCountryName: 'US', requests: 10 }] } });
+        }
+      } else if (query.includes('clientRequestPath') && !query.includes('edgeResponseStatus')) {
+        rows = Array.from({ length: 100 }, (_, i) => ({ count: 5, dimensions: { clientRequestHTTPHost: 'axiovexsystems.com', clientRequestPath: '/p' + i + '/' } }));
+      } else rows = [{ count: 5, dimensions: { clientRequestHTTPHost: 'axiovexsystems.com', edgeResponseStatus: 200 } }];
+      return Response.json({ data: { viewer: { zones: [{ rows }] } }, errors: null });
+    };
+  `);
+  const child = spawnSync(process.execPath, ['--import', pathToFileURL(hook).href, 'scripts/ops/analytics.mjs', 'daily'], {
+    encoding: 'utf8', env: { ...process.env, CLOUDFLARE_ANALYTICS_TOKEN: 'test-only', OPS_OUTPUT: temp, GITHUB_STEP_SUMMARY: '' },
+  });
+  assert.equal(child.status, 0, child.stdout + child.stderr);
+  const report = readFileSync(path.join(temp, 'report.md'), 'utf8');
+  assert.match(report, /top 100 groups only/);
+  const data = JSON.parse(readFileSync(path.join(temp, 'window.json'), 'utf8'));
+  assert.deepEqual(data.gaps, []);
+  assert.ok(data.notes.some(n => n.includes('top 100 groups only')));
+});
