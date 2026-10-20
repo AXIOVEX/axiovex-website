@@ -378,6 +378,53 @@ Copy link
 
 More&hellip;
 
+Listening edition
+
+Narrated &middot; 7 chapters &middot; about 8 minutes
+
+HEADLINE
+
+The claim, and the number it buried
+
+Robots and AI together reach about 81% of U.S. job tasks — measured in tasks and working time, not jobs
+
+Robots are already cheaper than people for just 0.3% of job tasks
+
+The gap between what robots can do and what they cost is the study's real story
+
+Takeaway
+Capability is not the headline. Cost is.
+
+01
+The claim, and the number it buried
+
+02
+What the study actually measured
+
+03
+Tasks and hours, not jobs
+
+04
+Capable is not the same as cheaper
+
+05
+One occupation already clears the bar
+
+06
+Read it with both eyes open
+
+07
+What it means in Michigan
+
+&#9654;
+
+0:00
+/ 7:58
+
+Chapter 1 of 7
+
+1&times;
+
 A widely shared LinkedIn summary made the rounds this week with a striking claim: Anthropic has found that AI and robots together are already capable of performing tasks covering about 81% of U.S. employment
 . We read the study behind it — Russell Legate-Yang and Maxim Massenkoff's What work can robots do?
 , published by Anthropic's economics team on September 30, 2026 (Anthropic (https://www.anthropic.com/research/what-work-can-robots-do)). The summary's numbers are mostly right. Its unit is wrong — and the study's most useful figure for anyone who runs a plant or plans a workforce is the one the summary buried: 0.3%
