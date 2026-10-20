@@ -63,13 +63,6 @@
     "description": "Data-ready source-only workforce article and newsletter link; interpretive research editions remain reviewed"
   },
   {
-    "id": "linkedin-publication",
-    "source": "data/linkedin-policy.json",
-    "workflow": "linkedin-publish.yml",
-    "mode": "automatic",
-    "description": "Hourly OAuth preflight and publication queue: authorized personal post, following-Tuesday company reshare; company product approval/token remains externally gated"
-  },
-  {
     "id": "newsletter-browser-loop",
     "source": "scripts/newsletter/browser-loop.py",
     "workflow": "newsletter-browser.yml",
