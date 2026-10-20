@@ -4,6 +4,8 @@ date: 2026-10-21
 description: Trinity Health's filing names 557 Livonia IT jobs moving to an unnamed vendor Oct. 25–Nov. 29. Who holds them, what Michigan can absorb, and where the gaps are.
 tags: workforce, michigan, health care, information technology, layoffs, livonia
 slug: trinity-health-livonia-557
+listening:
+  enabled: true
 ---
 Starting Sunday, October 25, **557 people** who keep the computers running at one of the largest health systems in the country will begin losing their jobs — not because the work went away, but because the work is changing employers. Trinity Health, headquartered in Livonia, is handing its internal IT service desk and applications support to an outside technology company it has not named. The separations run in stages through **November 29, 2026**, and every one of the 557 positions sits at the system's headquarters campus at 20555 Victor Parkway in Livonia ([Detroit Free Press, September 8, 2026](https://www.freep.com/story/money/business/2026/09/08/trinity-health-livonia-layoffs/91658371007/)).
 
