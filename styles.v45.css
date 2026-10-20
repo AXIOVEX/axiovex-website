@@ -25,8 +25,7 @@
    a bare a:visited selector outranks single-class component styles such
    as the pill buttons, and repainted visited buttons' text pale-on-cyan.
    :where() adds zero specificity, so ANY component rule wins and only
-   links with no styling of their own take these colors. */
-   Component
+   links with no styling of their own take these colors. Component
    rules (nav, footer, cards, buttons) all outrank these element selectors,
    so styled links are unaffected. */
 a { color: var(--cyan); text-underline-offset: 3px; }
