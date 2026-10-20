@@ -145,11 +145,11 @@ Axiovex Signals — Live
 
 What we're watching.
 
-Michigan Pulse &middot; Aug 2026
+Michigan Pulse &middot; Sep 2026
 
 &middot;
 
-586.7k
+584.8k
 MI manufacturing employment
 
 &middot;
@@ -159,7 +159,7 @@ MI unemployment
 
 &middot;
 
-4.85M
+4.83M
 MI labor force
 
 Michigan's numbers, and the field items that matter to the people who make things — from primary sources, refreshed automatically.
@@ -184,7 +184,7 @@ October 20, 2026
 
 SEE ALL SIGNALS &rarr;
 
-Snapshot updated October 20, 2026 at 1:22 PM ET. Headline, source, and date only — every card links to the publisher.
+Snapshot updated October 20, 2026 at 2:26 PM ET. Headline, source, and date only — every card links to the publisher.
 
 THE AXIOVEX SIGNAL — MONTHLY
 
@@ -586,6 +586,53 @@ Text
 Copy link
 
 More&hellip;
+
+Listening edition
+
+Narrated &middot; 7 chapters &middot; about 8 minutes
+
+HEADLINE
+
+Moving the wrong way, and moving alone
+
+648,000 Oakland County residents were employed in August 2026 — about 9,600 fewer than a year earlier
+
+County unemployment rate 4.7%, up from 3.7% in August 2025
+
+701,900 jobs located in the county in March 2026, down 1.7% — while Michigan, Wayne, and Macomb each edged up 0.3%
+
+Takeaway
+The losses are specific — specific sectors, specific employers, specific places the work went.
+
+01
+Moving the wrong way, and moving alone
+
+02
+A concentrated decline, not a broad one
+
+03
+The EV pullback, in employers' own filings
+
+04
+Consolidation, including work that left the county
+
+05
+How much of the drop is real?
+
+06
+Smaller, but real
+
+07
+Checkpoints, not vibes
+
+&#9654;
+
+0:00
+/ 7:48
+
+Chapter 1 of 7
+
+1&times;
 
 Oakland County is moving the wrong way, and it is moving alone. In August 2026, 648,000
 Oakland County residents were employed — about 9,600 fewer than a year earlier
@@ -1431,7 +1478,7 @@ What we're watching.
 Michigan's numbers and the field items that matter — manufacturing, AI, workforce, and industrial security — gathered from primary sources and refreshed automatically.
 
 Last refreshed:
-October 20, 2026 at 1:22 PM ET
+October 20, 2026 at 2:26 PM ET
 
 The Axiovex Signal — in your inbox, monthly.
 
@@ -1440,13 +1487,13 @@ One email a month · confirmation first · one-click unsubscribe · no tracking 
 
 Highlights — the short version
 
-In August 2026, Michigan manufacturing employment rose 1.1k to 586.7k — 12.3k above its January low — while the labor force fell 25.5k to 4.85M and the unemployment rate rose 0.1 pts to 5.0%. Across the twelve months in the snapshot, the labor force is down 151.6k (&minus;3.0%) while total nonfarm employment is up 1.5k (+0.0%). In the published outlooks, nurse practitioners are the fastest-growing occupation on both boards — +41.5% in Michigan's 2024–34 projections (MCDA) and +41.0% nationally for 2025–35 (U.S. BLS) — and data entry keyers are among the fastest-falling on both (&minus;26.4% in Michigan, &minus;25.5% nationally). Michigan's class of 2025 graduated at just over 84%, up from 82.8% for the class of 2024.
+In September 2026, Michigan manufacturing employment fell 1.7k to 584.8k — 10.4k above its January low — while the labor force fell 25.8k to 4.83M and the unemployment rate held at 5.0%. Across the twelve months in the snapshot, the labor force is down 172.5k (&minus;3.5%) while total nonfarm employment is down 10.7k (&minus;0.2%). In the published outlooks, nurse practitioners are the fastest-growing occupation on both boards — +41.5% in Michigan's 2024–34 projections (MCDA) and +41.0% nationally for 2025–35 (U.S. BLS) — and data entry keyers are among the fastest-falling on both (&minus;26.4% in Michigan, &minus;25.5% nationally). Michigan's class of 2025 graduated at just over 84%, up from 82.8% for the class of 2024.
 
 U.S. manufacturing production rose 0.3% from 2026-08 to 2026-09 (FRED IPMAN, seasonally adjusted). This is national context, not a Michigan measure. FRED IPMAN (https://fred.stlouisfed.org/series/IPMAN)
 
 Across all 83 Michigan counties in 2026-08, unemployment ranged from 3.5% (Grand Traverse, Mackinac) to 8.6% (Oscoda), a 5.1 percentage-point spread (BLS LAUS, not seasonally adjusted, preliminary). BLS county data (https://www.bls.gov/lau/)
 
-Generated at build time from the data on this page &middot; Pulse snapshot: August 2026 &middot; Outlooks: Michigan MCDA 2024–34 &middot; U.S. BLS 2025–35 &middot; No forecasts — forward-looking figures are the publishing agencies' projections
+Generated at build time from the data on this page &middot; Pulse snapshot: September 2026 &middot; Outlooks: Michigan MCDA 2024–34 &middot; U.S. BLS 2025–35 &middot; No forecasts — forward-looking figures are the publishing agencies' projections
 
 Top riser &middot; Michigan outlook
 
@@ -1482,31 +1529,31 @@ Graduation rate — just over 84%
 
 class of 2025 &middot; &#9650; +1.2 pts vs class of 2024 &middot; CEPI via MDE
 
-Michigan Pulse &middot; U.S. Bureau of Labor Statistics &middot; August 2026
+Michigan Pulse &middot; U.S. Bureau of Labor Statistics &middot; September 2026
 
 Manufacturing employment
 
-586.7k
+584.8k
 
-&#9650; +1.1k MoM
+&#9660; -1.7k MoM
 
 Unemployment rate
 
 5.0%
 
-&#9650; +0.1 pts MoM
+&#9644; 0.0 pts MoM
 
 Labor force
 
-4.85M
+4.83M
 
-August 2026
+September 2026
 
 Total nonfarm employment
 
-4,505.9k
+4,505.8k
 
-August 2026
+September 2026
 
 Trends & outlook
 
@@ -1517,34 +1564,34 @@ The Pulse series as a trend board, published projections for what comes next, an
 Michigan Pulse series: latest value, month-over-month change, and change across the 12-month window
 
 Series
-Latest &middot; Aug 2026
+Latest &middot; Sep 2026
 Mo-Mo
 12-mo window
 Trend
 
 Manufacturing employment
-586.7k
-&#9650; +1.1k
-&#9650; +2.4k
-&#9650; +0.4%
+584.8k
+&#9660; &minus;1.7k
+&#9660; &minus;0.7k
+&#9660; &minus;0.1%
 
 Unemployment rate
 5.0%
-&#9650; +0.1 pts
-&#9650; +0.1 pts
-&#9650; +2.0%
+&#9644; 0.0 pts
+&#9644; 0.0 pts
+&#9644; 0.0%
 
 Labor force
-4.85M
-&#9660; &minus;25.5k
-&#9660; &minus;151.6k
-&#9660; &minus;3.0%
+4.83M
+&#9660; &minus;25.8k
+&#9660; &minus;172.5k
+&#9660; &minus;3.5%
 
 Total nonfarm employment
-4,505.9k
-&#9650; +5.3k
-&#9650; +1.5k
-&#9650; +0.0%
+4,505.8k
+&#9650; +2.1k
+&#9660; &minus;10.7k
+&#9660; &minus;0.2%
 
 Computed from BLS series — latest values verbatim from the snapshot; both deltas are arithmetic on each series' own monthly history. A missing month breaks the trend line; it is never interpolated.
 
@@ -1687,12 +1734,6 @@ Unemployment
 Labor force
 Nonfarm (k)
 
-Sep 2025
-584.3
-4.9%
-5,004,120
-4,504.4
-
 Oct 2025
 585.5
 —
@@ -1754,10 +1795,16 @@ Jul 2026
 4,500.6
 
 Aug 2026
-586.7
+586.5
 5.0%
-4,852,504
-4,505.9
+4,852,246
+4,503.7
+
+Sep 2026
+584.8
+5.0%
+4,826,439
+4,505.8
 
 Every point in the snapshot's trend arrays, as a table — the same values the sparklines draw. &ldquo;—&rdquo; is a month the published series does not contain (Oct 2025, unemployment + labor force): shown as a gap and captioned as missing in the source, never interpolated.
 
@@ -10444,7 +10491,7 @@ USASPENDING (TREASURY)
 Department of Veterans Affairs → ELECTRA-MED CORPORATION — $21,507 award, October 15, 2026
 (https://www.usaspending.gov/award/CONT_AWD_36C10X27K0056_3600_36C10G24D0057_3600) &middot; October 15, 2026
 
-Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce selected MCDA occupation projections with their stated provenance and separate geographic horizons. Education figures retain each publisher and source period. Pupil membership: PUPIL COUNT ESTIMATES - MAY 2026 — a proposed conference estimate, not an audited count. Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2025 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023-24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (Release R2026Q2 (PSEOE MI 26 2001-2021 V4.14.1 2026Q2 pseopu_mi_20260715_1529); graduate cohorts 2001-2021 pooled) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 20, 2026 at 1:22 PM ET. See our Disclaimer
+Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce selected MCDA occupation projections with their stated provenance and separate geographic horizons. Education figures retain each publisher and source period. Pupil membership: PUPIL COUNT ESTIMATES - MAY 2026 — a proposed conference estimate, not an audited count. Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2025 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023-24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (Release R2026Q2 (PSEOE MI 26 2001-2021 V4.14.1 2026Q2 pseopu_mi_20260715_1529); graduate cohorts 2001-2021 pooled) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 20, 2026 at 2:26 PM ET. See our Disclaimer
 .
 
 THE AXIOVEX SIGNAL — MONTHLY

@@ -1,23 +1,23 @@
 {
-  "updatedUtc": "2026-10-20T17:22:10.950Z",
+  "updatedUtc": "2026-10-20T18:26:49.715Z",
   "pulse": [
     {
       "label": "MI manufacturing",
-      "value": "586.7k",
-      "period": "August 2026"
+      "value": "584.8k",
+      "period": "September 2026"
     },
     {
       "label": "MI unemployment",
       "value": "5.0%",
-      "period": "August 2026"
+      "period": "September 2026"
     },
     {
       "label": "MI labor force",
-      "value": "4.85M",
-      "period": "August 2026"
+      "value": "4.83M",
+      "period": "September 2026"
     }
   ],
-  "pulsePeriod": "August 2026",
+  "pulsePeriod": "September 2026",
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {

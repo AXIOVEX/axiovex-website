@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-20T17:22:10.950Z",
+  "updatedUtc": "2026-10-20T18:26:49.715Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -293,21 +293,17 @@
   },
   "pulse": {
     "source": "U.S. Bureau of Labor Statistics",
-    "referenceMonth": "August 2026",
+    "referenceMonth": "September 2026",
     "tiles": [
       {
         "id": "SMU26000003000000001",
         "label": "Manufacturing employment",
-        "display": "586.7k",
+        "display": "584.8k",
         "delta": {
-          "direction": "up",
-          "text": "+1.1k MoM"
+          "direction": "down",
+          "text": "-1.7k MoM"
         },
         "trend": [
-          {
-            "ym": "2025-09",
-            "v": 584.3
-          },
           {
             "ym": "2025-10",
             "v": 585.5
@@ -350,7 +346,11 @@
           },
           {
             "ym": "2026-08",
-            "v": 586.7
+            "v": 586.5
+          },
+          {
+            "ym": "2026-09",
+            "v": 584.8
           }
         ]
       },
@@ -359,14 +359,10 @@
         "label": "Unemployment rate",
         "display": "5.0%",
         "delta": {
-          "direction": "up",
-          "text": "+0.1 pts MoM"
+          "direction": "flat",
+          "text": "0.0 pts MoM"
         },
         "trend": [
-          {
-            "ym": "2025-09",
-            "v": 4.9
-          },
           {
             "ym": "2025-10",
             "v": null
@@ -410,19 +406,19 @@
           {
             "ym": "2026-08",
             "v": 5
+          },
+          {
+            "ym": "2026-09",
+            "v": 5
           }
         ]
       },
       {
         "id": "LASST260000000000006",
         "label": "Labor force",
-        "display": "4.85M",
+        "display": "4.83M",
         "delta": null,
         "trend": [
-          {
-            "ym": "2025-09",
-            "v": 5004120
-          },
           {
             "ym": "2025-10",
             "v": null
@@ -465,20 +461,20 @@
           },
           {
             "ym": "2026-08",
-            "v": 4852504
+            "v": 4852246
+          },
+          {
+            "ym": "2026-09",
+            "v": 4826439
           }
         ]
       },
       {
         "id": "SMU26000000000000001",
         "label": "Total nonfarm employment",
-        "display": "4,505.9k",
+        "display": "4,505.8k",
         "delta": null,
         "trend": [
-          {
-            "ym": "2025-09",
-            "v": 4504.4
-          },
           {
             "ym": "2025-10",
             "v": 4516.5
@@ -521,7 +517,11 @@
           },
           {
             "ym": "2026-08",
-            "v": 4505.9
+            "v": 4503.7
+          },
+          {
+            "ym": "2026-09",
+            "v": 4505.8
           }
         ]
       }
