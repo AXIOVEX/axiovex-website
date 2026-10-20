@@ -1,7 +1,7 @@
 import { readFileSync, existsSync, mkdirSync, writeFileSync, appendFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 const duties = JSON.parse(readFileSync('data/operations-duties.json', 'utf8'));
-const limits = { 'operations.yml': 48, 'signals-sync.yml': 2, 'data-pack-sync.yml': 36, 'site-sync.yml': 6, 'monthly-publication.yml': 36, 'annual-refresh.yml': 192, 'linkedin-publish.yml': 3, 'newsletter-browser.yml': 192, 'newsletter-mailbox.yml': 36 };
+const limits = { 'operations.yml': 48, 'signals-sync.yml': 2, 'data-pack-sync.yml': 36, 'site-sync.yml': 6, 'monthly-publication.yml': 36, 'annual-refresh.yml': 192, 'newsletter-browser.yml': 192, 'newsletter-mailbox.yml': 36 };
 const repo = process.env.GITHUB_REPOSITORY || 'AXIOVEX/axiovex-website';
 const api = route => JSON.parse(execFileSync('gh', ['api', `repos/${repo}/${route}`], { encoding: 'utf8' }));
 const failures = [];
