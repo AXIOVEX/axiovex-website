@@ -184,7 +184,7 @@ October 20, 2026
 
 SEE ALL SIGNALS &rarr;
 
-Snapshot updated October 21, 2026 at 2:09 PM ET. Headline, source, and date only — every card links to the publisher.
+Snapshot updated October 21, 2026 at 5:51 PM ET. Headline, source, and date only — every card links to the publisher.
 
 THE AXIOVEX SIGNAL — MONTHLY
 
@@ -1779,7 +1779,7 @@ What we're watching.
 Michigan's numbers and the field items that matter — manufacturing, AI, workforce, and industrial security — gathered from primary sources and refreshed automatically.
 
 Last refreshed:
-October 21, 2026 at 2:09 PM ET
+October 21, 2026 at 5:51 PM ET
 
 Signals briefing
 
@@ -10739,6 +10739,10 @@ NIST-Developed Quantum Sensors Improve Nuclear Monitoring
 
 Michigan workforce & industry
 
+MICHIGAN WARN (LEO)
+Dakkota Integrated Systems, LLC — announced closure, Detroit, 397 jobs, effective December 31, 2026
+(https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-21-dakkota-integrated-systems-llc) &middot; October 21, 2026
+
 AUTOMATION ALLEY
 From Owner to Owner: How Praxis Business Brokers Guides Manufacturing Business Transitions
 (https://automationalley.com/2026/10/21/from-owner-to-owner-how-praxis-business-brokers-guides-manufacturing-business-transitions/) &middot; October 21, 2026
@@ -10761,15 +10765,11 @@ Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity
 
 MICHIGAN WARN (LEO)
 Kern J.G. Enterprise, Inc. — announced permanent layoff, Sterling Heights, 156 jobs, effective August 17, 2026
-(https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-08-28_WARN-Notice_Kern-JG-Enterprise.pdf?rev=dada26e68a0c4d0a999c5310d4a234ae&hash=4BDEA76ACA8C76587B0610D053D6557F) &middot; October 14, 2026
+(https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-14-kern-j-g-enterprise-inc) &middot; October 14, 2026
 
 AUTOMATION ALLEY
 HIROTEC’s Journey to Zero-Operator Manufacturing
 (https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/) &middot; October 12, 2026
-
-AXIOVEX
-Robots can do the work. Almost none of it pays yet.
-(https://axiovexsystems.com/blog/robots-can-do-the-work/) &middot; October 10, 2026
 
 OT cybersecurity
 
@@ -10839,7 +10839,7 @@ USASPENDING (TREASURY)
 General Services Administration → FCA US LLC — $61,630 award, October 16, 2026
 (https://www.usaspending.gov/award/CONT_AWD_47QMCA27F000J_4732_47QMCA22D000N_4732) &middot; October 16, 2026
 
-Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce selected MCDA occupation projections with their stated provenance and separate geographic horizons. Education figures retain each publisher and source period. Pupil membership: PUPIL COUNT ESTIMATES - MAY 2026 — a proposed conference estimate, not an audited count. Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2025 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023-24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (Release R2026Q2 (PSEOE MI 26 2001-2021 V4.14.1 2026Q2 pseopu_mi_20260715_1529); graduate cohorts 2001-2021 pooled) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 21, 2026 at 2:09 PM ET. See our Disclaimer
+Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce selected MCDA occupation projections with their stated provenance and separate geographic horizons. Education figures retain each publisher and source period. Pupil membership: PUPIL COUNT ESTIMATES - MAY 2026 — a proposed conference estimate, not an audited count. Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2025 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023-24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (Release R2026Q2 (PSEOE MI 26 2001-2021 V4.14.1 2026Q2 pseopu_mi_20260715_1529); graduate cohorts 2001-2021 pooled) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 21, 2026 at 5:51 PM ET. See our Disclaimer
 .
 
 THE AXIOVEX SIGNAL — MONTHLY
