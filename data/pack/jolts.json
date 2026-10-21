@@ -1,8 +1,8 @@
 {
   "source": "JOLTS (state)",
   "publisher": "U.S. Bureau of Labor Statistics",
-  "retrievedUtc": "2026-10-20T17:19:30.457Z",
-  "vintage": "BLS public API v2 retrieval 2026-10-20; state JOLTS annual-release vintage (monthly state estimates are revised with each July annual release)",
+  "retrievedUtc": "2026-10-21T17:22:26.941Z",
+  "vintage": "BLS public API v2 retrieval 2026-10-21; state JOLTS annual-release vintage (monthly state estimates are revised with each July annual release)",
   "referencePeriod": "2025-12",
   "series": [
     {
