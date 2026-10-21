@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { due, midnight, windows, scheduledTime } from './calendar.mjs';
 import { aggregate, delta, statusLabel, hourlyBatches, renderDimensions } from './analytics.mjs';
 import { verifyApproval } from './newsletter.mjs';
-import { inspect } from './health.mjs';
+import { inspect, robotsDisallowsResearch } from './health.mjs';
 
 test('ET schedules run once across both UTC offsets', () => {
   assert.deepEqual(due(new Date('2026-10-19T12:39:00Z')), ['daily']);
@@ -72,6 +72,18 @@ test('research noindex is intentional; public pages must stay indexable', () => 
   assert.equal(inspect(html, 'https://axiovexsystems.com/research/').checks.indexingPolicy, true);
   assert.equal(inspect(html, 'https://axiovexsystems.com/').checks.indexingPolicy, false);
   assert.equal(inspect('', 'https://axiovexsystems.com/research/').checks.indexingPolicy, false);
+});
+
+
+test('robots policy keeps the research hub disallowed for every crawler', () => {
+  const production = 'User-agent: *\nAllow: /\nDisallow: /research/\n\nSitemap: https://axiovexsystems.com/sitemap.xml\n';
+  assert.equal(robotsDisallowsResearch(production), true);
+  // The rule missing fails — omission is no longer the expectation.
+  assert.equal(robotsDisallowsResearch('User-agent: *\nAllow: /\n'), false);
+  // A rule narrowed to one named bot does not meet the all-crawlers policy.
+  assert.equal(robotsDisallowsResearch('User-agent: GPTBot\nDisallow: /research/\n\nUser-agent: *\nAllow: /\n'), false);
+  // A blanket Disallow is not the specific rule (productionCrawl forbids it separately).
+  assert.equal(robotsDisallowsResearch('User-agent: *\nDisallow: /\n'), false);
 });
 
 
