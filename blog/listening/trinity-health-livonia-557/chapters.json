@@ -1,0 +1,103 @@
+{
+  "slug": "trinity-health-livonia-557",
+  "title": "557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.",
+  "voice": "Daniel - Steady Broadcaster (ElevenLabs)",
+  "chapters": [
+    {
+      "kicker": "HEADLINE",
+      "headline": "The work is changing employers, not disappearing",
+      "points": [
+        "Starting Sunday, October 25, 557 people who keep the computers running at Trinity Health begin losing their jobs",
+        "The separations run in stages through November 29, 2026 — every position at the Livonia headquarters campus",
+        "The work — IT service desk and applications support — is moving to an outside technology company Trinity has not named"
+      ],
+      "takeaway": "The state's own filing says more than the press releases do — about who is affected, and whether Michigan can absorb them.",
+      "audio": "/assets/audio/trinity-health-livonia-557/ch-01.mp3",
+      "durationSec": 52
+    },
+    {
+      "kicker": "WHAT HAPPENED",
+      "headline": "An announcement in June, a number in September",
+      "points": [
+        "June 18, 2026: Trinity announced the move to an outside technology partner by the end of 2026 — with no job count",
+        "September 3: the WARN notice reached the state — 557 positions, all internal technology support, none clinical or patient-facing",
+        "The notice timing is contested: a 52-day gap to the first separations, against a 60-day federal notice rule — both claims are on the record"
+      ],
+      "takeaway": "This is the second time Trinity has run this play in 2026 — in January it cut 10.5% of its revenue cycle workforce.",
+      "audio": "/assets/audio/trinity-health-livonia-557/ch-02.mp3",
+      "durationSec": 82
+    },
+    {
+      "kicker": "WHO THE 557 ARE",
+      "headline": "Seven role families",
+      "points": [
+        "The position sheet lists 129 lines of job titles; the largest family is systems administration & infrastructure: 115",
+        "Service desk & support: 76 — including the filing's largest single title, IS Service Desk Support I, at 49",
+        "Applications analysis & engineering: 68; IT management & process: 67; clinical & imaging applications: 42; identity, access & security: 36; data & database: 18"
+      ],
+      "takeaway": "Not a cross-section of an IT department — an entire operating layer, lifted out at once.",
+      "audio": "/assets/audio/trinity-health-livonia-557/ch-03.mp3",
+      "durationSec": 65
+    },
+    {
+      "kicker": "THE DISCREPANCY",
+      "headline": "The filing's own numbers do not add up",
+      "points": [
+        "The position sheet's lines sum to 422 — the seven families above are the whole published list",
+        "The total printed at the bottom of the same document — the figure in the state's notice and every headline — is 557",
+        "That leaves 135 people inside the total with no title anywhere in the published list"
+      ],
+      "takeaway": "We do not know why, and the document does not say — the benign possibilities are stated as possibilities only; none is endorsed.",
+      "audio": "/assets/audio/trinity-health-livonia-557/ch-04.mp3",
+      "durationSec": 57
+    },
+    {
+      "kicker": "ABSORPTION",
+      "headline": "The openings exist; the timing does not work",
+      "points": [
+        "Computer user support specialists: 1,530 projected openings a year statewide, growth 2.0%, wages $22–$32 an hour",
+        "Computer systems analysts: 1,045 openings a year, growth 6.8%, $38–$58 an hour; CIS managers: 1,115 openings, growth 12.4%, $58–$84",
+        "Information security analysts: only 255 openings a year — but the fastest growth on the list, 25.6%; software developers: 3,360 openings, growth 20.4%"
+      ],
+      "takeaway": "Openings are a flow spread across twelve months and the whole state; 557 people in one metro enter the same segment inside a five-week window.",
+      "audio": "/assets/audio/trinity-health-livonia-557/ch-05.mp3",
+      "durationSec": 85
+    },
+    {
+      "kicker": "THE PORTABLE ASSET",
+      "headline": "Health-IT experience itself",
+      "points": [
+        "The deepest demand is adjacent to these workers: security (up 25.6%) and software development (up 20.4%)",
+        "Trinity runs on Epic, the dominant hospital platform — Corewell Health and Henry Ford Health hire Epic analysts continuously",
+        "Constraints: Wayne County unemployment stood at 6.9% in August 2026, and at least four health systems outsourced IT in 2026 — UnityPoint Health's 207 roles in April among them"
+      ],
+      "takeaway": "An Epic analyst at Trinity is not starting over at Corewell or Henry Ford — they are changing buildings. That helps one family much more than the others.",
+      "audio": "/assets/audio/trinity-health-livonia-557/ch-06.mp3",
+      "durationSec": 75
+    },
+    {
+      "kicker": "PATHWAYS",
+      "headline": "Real machinery, slower than the schedule",
+      "points": [
+        "Michigan Works! (SEMCA, for Wayne County) and the federal Dislocated Worker program: training capped at $5,000 per participant, work-based training at $10,000",
+        "Michigan Reconnect pays community-college tuition for residents 25 and older with no prior degree",
+        "Schoolcraft College, in Livonia itself, teaches the exact credentials this market asks for; the Going PRO Talent Fund reimburses employers roughly $2,000 per trainee, $3,500 for registered apprenticeships"
+      ],
+      "takeaway": "The pathways are real, and they are slower than the separation schedule — that gap is the actual workforce problem in this story.",
+      "audio": "/assets/audio/trinity-health-livonia-557/ch-07.mp3",
+      "durationSec": 75
+    },
+    {
+      "kicker": "WHAT WE ARE WATCHING",
+      "headline": "The vendor's name, and where the roles land",
+      "points": [
+        "First, the vendor's name — the single most consequential unknown in the story",
+        "Second, whether the vendor's roles are local: a transfer of employer, or an export of 557 jobs",
+        "Third, the notice dispute — whether the 60-day requirement was met will be sorted out by people with the actual notice dates"
+      ],
+      "takeaway": "On November 30, a nurse in one of 91 hospitals will still call a service desk when the system fails. The open question is who answers — in Michigan, or not.",
+      "audio": "/assets/audio/trinity-health-livonia-557/ch-08.mp3",
+      "durationSec": 78
+    }
+  ]
+}

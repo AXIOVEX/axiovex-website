@@ -280,7 +280,20 @@ The Axiovex blog.
 
 What the data actually says — on Michigan work, manufacturing AI, and engineering with evidence. Search the archive below.
 
-5 articles
+6 articles
+
+October 21, 2026
+557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.
+
+Trinity Health's filing names 557 Livonia IT jobs moving to an unnamed vendor Oct. 25–Nov. 29. Who holds them, what Michigan can absorb, and where the gaps are.
+workforce
+michigan
+health care
+information technology
+layoffs
+livonia
+
+Read article &rarr;
 
 October 10, 2026
 Robots can do the work. Almost none of it pays yet.
@@ -346,6 +359,294 @@ No articles match that search. Try a different term.
 Next step
 
 Working on something like this?
+
+If this analysis touches a problem you're facing, we'd like to hear about it.
+
+Start a conversation
+
+## https://axiovexsystems.com/blog/trinity-health-livonia-557/
+
+Home
+/ Blog
+/ 557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.
+
+October 21, 2026
+
+557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.
+
+workforce
+michigan
+health care
+information technology
+layoffs
+livonia
+
+X
+(https://twitter.com/intent/tweet?text=557%20IT%20jobs%20are%20leaving%20Trinity%20Health.%20The%20work%20is%20not%20leaving%20Michigan.&url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Ftrinity-health-livonia-557%2F) Facebook
+(https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Ftrinity-health-livonia-557%2F) LinkedIn
+(https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faxiovexsystems.com%2Fblog%2Ftrinity-health-livonia-557%2F) Email
+
+Text
+
+Copy link
+
+More&hellip;
+
+Listening edition
+
+Narrated &middot; 8 chapters &middot; about 9 minutes
+
+HEADLINE
+
+The work is changing employers, not disappearing
+
+Starting Sunday, October 25, 557 people who keep the computers running at Trinity Health begin losing their jobs
+
+The separations run in stages through November 29, 2026 — every position at the Livonia headquarters campus
+
+The work — IT service desk and applications support — is moving to an outside technology company Trinity has not named
+
+Takeaway
+The state's own filing says more than the press releases do — about who is affected, and whether Michigan can absorb them.
+
+01
+The work is changing employers, not disappearing
+
+02
+An announcement in June, a number in September
+
+03
+Seven role families
+
+04
+The filing's own numbers do not add up
+
+05
+The openings exist; the timing does not work
+
+06
+Health-IT experience itself
+
+07
+Real machinery, slower than the schedule
+
+08
+The vendor's name, and where the roles land
+
+&#9654;
+
+0:00
+/ 9:29
+
+Chapter 1 of 8
+
+1&times;
+
+Starting Sunday, October 25, 557 people
+who keep the computers running at one of the largest health systems in the country will begin losing their jobs — not because the work went away, but because the work is changing employers. Trinity Health, headquartered in Livonia, is handing its internal IT service desk and applications support to an outside technology company it has not named. The separations run in stages through November 29, 2026
+, and every one of the 557 positions sits at the system's headquarters campus at 20555 Victor Parkway in Livonia (Detroit Free Press, September 8, 2026 (https://www.freep.com/story/money/business/2026/09/08/trinity-health-livonia-layoffs/91658371007/)).
+
+Most layoff coverage stops at the headline number. This one deserves a closer read, because the state's own filing says more than the press releases do — about who exactly is affected, and about whether Michigan's labor market can actually take them. Here is what the filing and the state's demand data show — including the one number in the filing that does not explain itself.
+
+What happened
+
+The sequence is documented. On June 18, 2026
+, Trinity Health announced it would move its IT service desk and applications support to an outside technology partner by the end of 2026, saying health care technology had outgrown what one organization can sustain on its own, and that a partner "whose core business is technology support" offers expertise at the speed and scale health care now requires. It did not say how many jobs were involved. On September 3
+, the number arrived in a WARN notice filed with Michigan's Department of Labor and Economic Opportunity (LEO) (https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices): 557 positions
+, all of them internal technology support — none clinical or patient-facing. The notice arrived with a four-page position sheet, published by the state, listing every affected job title and how many people hold it — 129 lines
+of them. As the next section shows, the sheet's own lines do not add up to the notice's total (Becker's Hospital Review, September 8, 2026 (https://www.beckershospitalreview.com/healthcare-information-technology/digital-health/557-trinity-health-it-jobs-affected-by-outsourcing-shift/)).
+
+A WARN notice is the filing federal law requires before a mass layoff — at least 60 days' written notice for covered events. One detail of this filing is already contested: the Free Press reported the notice went to the state on September 3 and the first separations fall on October 25 — a 52-day gap — while Trinity Health states that the notices "were issued at least 60 days in advance," and a Chicago law firm, Strauss Borrelli PLLC, says it is investigating a possible violation of the federal WARN Act. Both claims are on the record; which one is right turns on when individual employees were notified, which the public filing does not show.
+
+This is also the second time Trinity Health has run this play in 2026. In January, it cut 10.5% of its revenue cycle workforce
+— the people who handle billing and payment operations — and moved some of that work to an external partner (Detroit Free Press (https://www.freep.com/story/money/business/2026/09/08/trinity-health-livonia-layoffs/91658371007/)). Trinity Health is not a marginal employer: 91 acute-care hospitals, about 133,000 employees across 23 states, a Michigan arm running nine hospitals with 26,000 employees. It reported a $1.3 billion net gain despite an operating loss in fiscal 2025, and has warned federal Medicaid changes could carry a $1.1 billion impact. The stated driver for this move is not savings — it is access to specialized expertise. Hold that claim up against the filing, because the filing is where it gets tested.
+
+Who the 557 actually are
+
+One hundred twenty-nine lines of job titles is a long list, and the pattern inside it matters more than the count. Grouping the position sheet's titles by the work they describe — combining the few it prints more than once — produces seven role families:
+
+Role family
+Positions
+What the filing shows
+
+Systems administration & infrastructure
+
+115
+
+The filing's largest family: 52 system-administrator-titled roles — 32 of them Windows (Wintel) server specialists, including 17
+Sys Admin II — Wintel Server, its second-largest single title — plus storage specialists (8), monitoring operators (13) and endpoint, client-technology and software-packaging engineers (23).
+
+Service desk & support
+
+76
+
+The outsourced function itself. The filing's largest single title is IS Service Desk Support I at 49
+; Support II adds 17
+, senior support 3, and downtime-center support 7. (The desk's 6 supervisors and 2 managers are counted under management.)
+
+Applications analysis & engineering
+
+68
+
+The analysts and engineers behind the hospital software the desk fields questions about: applications analysts at every level (Analyst I and Analyst II at 10 each), applications-technical analysts and engineers, programmer analysts, and 2 applications developers.
+
+IT management, process & service management
+
+67
+
+41 managers, directors and supervisors — including the service desk's own — plus 26 process and service-management (ITSM) staff: process analysts, asset-management analysts, trainers. The layer that manages the work is in the filing alongside the layer that does it.
+
+Clinical & imaging applications
+
+42
+
+The family that exists almost only inside health care: 19 clinical applications analysts and specialists who keep the clinical software configured, 20 imaging analysts who support the medical imaging systems, and 3 analysts for the imaging-records application.
+
+Identity, access & security
+
+36
+
+The team that controls who can log in to what — in a hospital, a compliance-critical function: 18 identity-and-access engineers, 9 identity technicians, and the filing's 9 security-titled roles (network security analysts, applications-security administrators, an endpoint-vulnerability engineer), grouped here because the work overlaps.
+
+Data & database
+
+18
+
+12 database administrators, 4 data engineers, and 2 business-intelligence and cloud-data-platform roles.
+
+Itemized in the published position sheet
+
+422
+
+The sum of every line in the sheet — and of every family above.
+
+Not itemized in the published filing
+
+135
+
+Inside the filing's printed total, but attached to no title anywhere in the published list. See the note below.
+
+Total, as printed in the filing
+
+557
+
+As filed with LEO, September 3, 2026.
+
+Reading this table honestly: every count in it comes from the position sheet itself — the full four-page list the state published with the notice. Its 129 printed lines name 122 distinct titles (a few titles print twice, with separate counts; we combined them). One thing in that sheet does not reconcile, and we are not going to smooth it over: its lines sum to 422
+, while the total printed at the bottom of the same document — the figure in the state's notice and in every headline — is 557
+. That leaves 135 people inside the total with no title in the published list
+. We do not know why, and the document does not say. Possible benign explanations — a second sheet that was not published, titles withheld from the public version, a total that also counts staff at another site — are stated here as possibilities only; none is endorsed. What can be checked is the arithmetic, and the arithmetic has a hole in it. (Press coverage reported 120 job titles; the sheet itself prints 129 lines.)
+
+With the whole list in hand, the shape is unmistakable: not a cross-section of an IT department, but an entire operating layer lifted out at once — the administrators who keep the servers running (115, the largest group; coverage has fixated on the service desk, second at 76), the applications analysts (68, plus 42 in clinical and imaging systems), the people who manage access (36), the data team (18), and the managers and process staff who run the operation (67). That is what "the function moved" looks like in a filing — a different event from 557 unrelated job losses.
+
+Can Michigan absorb them? Family by family
+
+The useful comparison is not "are there IT jobs in Michigan" — there are — but whether demand matches these specific skills, in this specific place, on this specific clock. The state's own long-range numbers come from the Michigan Center for Data and Analytics' Career Outlook through 2032 (https://www.michigan.gov/mcda) (the MCDA is the state's labor-market statistics office; the figures below are projected annual openings, which count replacement hiring — retirements and turnover — as well as growth):
+
+Computer user support specialists
+(the federal category the service desk maps to): 1,530 projected openings per year
+statewide, projected growth of 2.0%
+through 2032, typical wages of $22–$32 an hour
+.
+
+Computer systems analysts
+(the closest category for applications analysts): 1,045 openings per year
+, growth 6.8%
+, wages $38–$58 an hour
+.
+
+Computer and information systems managers
+: 1,115 openings per year
+, growth 12.4%
+, wages $58–$84 an hour
+.
+
+Information security analysts
+: only 255 openings per year
+statewide — but the fastest growth rate on the entire list, 25.6%
+, wages $38–$63 an hour
+.
+
+Software developers
+: 3,360 openings per year
+, growth 20.4%
+— the largest IT number in the state outlook, for the family this filing touches least.
+
+Read against the filing, three findings stand out.
+
+First, the aggregate math works and the timing math does not.
+Michigan projects roughly 1,500 support-specialist openings a year — but openings are a flow spread across twelve months and the whole state, while 557 people in one metro area enter the same segment of it inside a five-week window, starting this Sunday. Regional demand lists confirm the roles are live categories — a Michigan Works! agency's current list includes Computer Support Specialist, Database Administrator, Network Administrator and Systems Analyst (Capital Area Michigan Works!, May 11, 2026 (http://camw.org/sites/default/files/CAMW%21%20In%20Demand%20Occupation%20List%20as%20of%2005.11.2026.pdf)). The openings exist. They are not all in Wayne County, and they are not all open in November.
+
+Second, the deepest demand is adjacent to these workers, not identical to them.
+The state's fastest-growing IT categories are security (up 25.6%) and software development (up 20.4%, with 3,360 openings a year). The identity-and-access and security staff in this filing are closest to that demand — access management is core security work, and real postings back it up: Pure Michigan Talent Connect, the state's own job board, carries metro Detroit security-analyst postings whose preferred credentials are exactly the standard ones (CompTIA A+, Network+ and Security+ are named in a City of Detroit information security posting). Systems administrators — the filing's largest family at 115, including 52 administrator-titled roles and 32 Windows-server specialists — sit in between: their Windows-server, virtualization and scripting skills transfer to any large employer, and Michigan postings across sectors ask for precisely that stack. But for the service desk, at 76 the filing's second-largest family, projected growth is the flattest on the list at 2.0%. Experience moves sideways easily here; it does not automatically move up.
+
+Third, the single most portable asset in the building is the one no headline mentioned: health-IT experience itself.
+Trinity Health runs on Epic, the dominant hospital software platform, and Michigan's other large systems hire Epic application analysts continuously. Corewell Health, the state's largest system, has repeatedly posted Epic analyst roles in Southfield and Grand Rapids — several requiring Epic experience or certification, some accepting certification completed within 90 days of hire. Henry Ford Health in Detroit likewise posts systems-analyst roles on an ongoing basis. An applications analyst who supports Epic at Trinity is not starting over at Corewell or Henry Ford; they are changing buildings. That is a materially better position than the raw layoff number suggests — for that family. It does much less for the filing's 20 imaging analysts, whose skills assume a hospital, or for a service-desk worker competing for the same postings as everyone else.
+
+Two constraints cut across all of it. Location: Livonia is in Wayne County, where unemployment stood at 6.9% in August 2026
+— among the highest of Michigan's 83 counties — while the state's overall rate held at 5.0% in September
+, with employment falling by 27,000 that month even as the rate stayed flat (Michigan DTMB / Center for Data and Analytics, released October 16, 2026 (https://michiganbusinessnetwork.com/dtmb-michigan-jobless-rate-remains-stable-during-september/); county figure via BLS local data as compiled by USAFacts (https://usafacts.org/answers/what-is-the-unemployment-rate/county/wayne-county-mi/)). And competition: these 557 are not the only experienced IT staff looking — Becker's counts at least four health systems that outsourced IT in 2026, including UnityPoint Health's 207 roles in April, each putting similar workers into similar searches.
+
+The pathways that actually exist
+
+For the workers who need to move rather than transfer, Michigan's machinery is specific, and it has names:
+
+Michigan Works! and the Dislocated Worker program.
+A WARN filing is precisely the trigger this system is built for: services run through the local Michigan Works! agency — for Wayne County, SEMCA Michigan Works!
+(the Southeast Michigan Community Alliance). Under the federal Workforce Innovation and Opportunity Act (WIOA), laid-off workers qualify as dislocated workers for career services and, where funds allow, training money: SEMCA's local plan caps non-work-based training at $5,000 per participant
+and work-based training at $10,000
+, with supportive services (transportation, tools, fees) capped separately (SEMCA local plan (https://semcamiworks.org/wp-content/uploads/2026/07/WIOA-Mid-Cycle-Local-Plan-PI-24-13-2026-1.pdf)). Those caps matter: $5,000 covers a certification sequence. It does not cover a degree.
+
+Michigan Reconnect.
+The state's last-dollar scholarship pays in-district community-college tuition and mandatory fees for residents 25 and older
+with a high school credential and no prior college degree
+— covering certificates as well as associate degrees (Michigan Reconnect (https://www.michigan.gov/reconnect)). Two limits deserve plain statement: workers who already hold a degree are ineligible, and the 21-to-24 eligibility floor has moved with appropriations, so anyone under 25 should verify current terms directly.
+
+Community colleges with the actual programs.
+Schoolcraft College sits in Livonia itself, minutes from the Trinity campus, and its Computer Information Systems programs cover the exact credentials this market asks for — CompTIA Network+, Security+, Cloud+ and Linux+, and Cisco CCNA — alongside a dedicated Cybersecurity certificate (Schoolcraft College (https://www.schoolcraft.edu)). Oakland Community College offers a CIS degree and certificate with an Information Technology Support option, threading CompTIA A+ and Network+ and Cisco CCNA tracks through the coursework (Oakland Community College (https://www.oaklandcc.edu/programs/computer-information-systems/)). For an experienced sysadmin, the realistic use of these is not the degree — it is the missing credential: the Security+ or CCNA that turns years of unnamed experience into a line a hiring filter can read.
+
+Going PRO Talent Fund.
+For the receiving end: Michigan's Going PRO fund reimburses employers for short-term training leading to an industry-recognized credential — roughly $2,000 per trainee, $3,500 for registered apprenticeships
+— applied for through the local Michigan Works! agency (LEO, Going PRO Talent Fund (https://www.michigan.gov/talentfund)). A vendor or hospital hiring a bloc of these workers and certifying them on a new stack is exactly the use case the fund describes.
+
+None of this is fast or automatic. WIOA money requires enrollment and eligibility processing; Reconnect runs on a semester calendar; a certification takes months, not the five weeks between now and November 29. The pathways are real, and they are slower than the separation schedule. That gap — between the speed of the filing and the speed of the response — is the actual workforce problem in this story.
+
+What we are watching
+
+Three things will tell us how this lands. First, the vendor's name.
+It is the single most consequential unknown in the story: an unnamed vendor cannot be checked for local presence, hiring volume, or pay bands, and affected employees are being asked to apply to it blind. Second, whether the vendor's roles are local.
+The work supports a national system from Livonia, but the vendor's delivery centers could be anywhere. If the jobs return as Michigan postings, this is a transfer of employer; if not, it is an export of 557 jobs, and the absorption question above becomes the whole story. Third, the notice dispute.
+Whether the 60-day requirement was met will be sorted out by people with the actual notice dates; if it was not, the remedy the law provides — back pay and benefits for the violation period — lands on the same workers this analysis is about.
+
+The work itself is not disappearing. On November 30, a nurse in one of 91 hospitals will still call a service desk when the system fails, and someone will still administer the servers, manage the access, and keep the imaging systems running. The open question is narrower than the headline: whether the people doing that work in Michigan next year are these 557, employed by someone else — or whether Michigan trained for a demand it then let leave.
+
+Figures: Trinity Health WARN notice and its published position sheet, filed with Michigan LEO, September 3, 2026 — the title and family counts are computed from the position sheet itself (its lines sum to 422 of the 557 printed total, as disclosed in the table note); Becker's Hospital Review and the Detroit Free Press for background and the notice dispute; Michigan Center for Data and Analytics, Career Outlook through 2032; SEMCA Michigan Works! WIOA local plan; Michigan DTMB employment release, October 16, 2026. WARN figures are announced actions as filed. Projected openings are long-run annual averages, not current vacancy counts, and are labeled as such wherever used.
+
+THE AXIOVEX SIGNAL — MONTHLY
+
+The month, in your inbox.
+
+What changed in Michigan industry and the field → one email, after the monthly economic releases, with the numbers, their vintages, and why they matter.
+
+One email a month. We send a confirmation first — nothing arrives until you click it. Unsubscribe in one click, any time. No tracking pixels, no per-reader analytics.
+Privacy policy
+
+More analysis
+October 10, 2026
+Robots can do the work. Almost none of it pays yet.
+
+Read article &rarr;
+
+October 8, 2026
+Oakland County is losing jobs. Here is why.
+
+Read article &rarr;
+
+&larr; All articles
+
+Next step
+
+Questions about this analysis?
 
 If this analysis touches a problem you're facing, we'd like to hear about it.
 
@@ -540,13 +841,13 @@ One email a month. We send a confirmation first — nothing arrives until you cl
 Privacy policy
 
 More analysis
-October 8, 2026
-Oakland County is losing jobs. Here is why.
+October 21, 2026
+557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.
 
 Read article &rarr;
 
-October 7, 2026
-Your website doesn't need a cloud bill: what hosting actually costs
+October 8, 2026
+Oakland County is losing jobs. Here is why.
 
 Read article &rarr;
 
@@ -800,13 +1101,13 @@ One email a month. We send a confirmation first — nothing arrives until you cl
 Privacy policy
 
 More analysis
-October 10, 2026
-Robots can do the work. Almost none of it pays yet.
+October 21, 2026
+557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.
 
 Read article &rarr;
 
-October 7, 2026
-Your website doesn't need a cloud bill: what hosting actually costs
+October 10, 2026
+Robots can do the work. Almost none of it pays yet.
 
 Read article &rarr;
 
@@ -1124,13 +1425,13 @@ One email a month. We send a confirmation first — nothing arrives until you cl
 Privacy policy
 
 More analysis
-October 10, 2026
-Robots can do the work. Almost none of it pays yet.
+October 21, 2026
+557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.
 
 Read article &rarr;
 
-October 8, 2026
-Oakland County is losing jobs. Here is why.
+October 10, 2026
+Robots can do the work. Almost none of it pays yet.
 
 Read article &rarr;
 
@@ -1275,13 +1576,13 @@ One email a month. We send a confirmation first — nothing arrives until you cl
 Privacy policy
 
 More analysis
-October 10, 2026
-Robots can do the work. Almost none of it pays yet.
+October 21, 2026
+557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.
 
 Read article &rarr;
 
-October 8, 2026
-Oakland County is losing jobs. Here is why.
+October 10, 2026
+Robots can do the work. Almost none of it pays yet.
 
 Read article &rarr;
 
@@ -1446,13 +1747,13 @@ One email a month. We send a confirmation first — nothing arrives until you cl
 Privacy policy
 
 More analysis
-October 10, 2026
-Robots can do the work. Almost none of it pays yet.
+October 21, 2026
+557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.
 
 Read article &rarr;
 
-October 8, 2026
-Oakland County is losing jobs. Here is why.
+October 10, 2026
+Robots can do the work. Almost none of it pays yet.
 
 Read article &rarr;
 
@@ -10438,6 +10739,10 @@ NIST-Developed Quantum Sensors Improve Nuclear Monitoring
 
 Michigan workforce & industry
 
+AXIOVEX
+557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.
+(https://axiovexsystems.com/blog/trinity-health-livonia-557/) &middot; October 21, 2026
+
 AUTOMATION ALLEY
 Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit
 (https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/) &middot; October 20, 2026
@@ -10465,10 +10770,6 @@ Robots can do the work. Almost none of it pays yet.
 MICHIGAN WARN (LEO)
 Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026
 (https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation) &middot; October 8, 2026
-
-MICHIGAN WARN (LEO)
-HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026
-(https://www.michigan.gov/leo/-/media/Project/Websites/leo/Documents/WD-DATA_PUBLIC_WARN_NOTICES4/2026/2026-10-01-WARN-Notice_HealthEdge.pdf?rev=c3d5f8d8b0dd491fbc092f8bafc99293&hash=B21E3E439740C87C0FD72456FB4CFB75) &middot; October 8, 2026
 
 OT cybersecurity
 

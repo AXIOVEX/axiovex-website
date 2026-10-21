@@ -21,16 +21,16 @@
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit",
-      "source": "Automation Alley",
-      "date": "2026-10-20",
-      "url": "https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/"
-    },
-    {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
+      "title": "557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.",
+      "source": "Axiovex",
+      "date": "2026-10-21",
+      "url": "https://axiovexsystems.com/blog/trinity-health-livonia-557/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
       "title": "Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit",
       "source": "Automation Alley",
       "date": "2026-10-20",
@@ -69,6 +69,14 @@
       "url": "https://www.manufacturingdive.com/news/cleveland-cliffs-posts-strongest-quarter-three-years-cfo-says-q3-2026/833456/"
     },
     {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit",
+      "source": "Automation Alley",
+      "date": "2026-10-20",
+      "url": "https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/"
+    },
+    {
       "lane": "ot-security",
       "laneLabel": "OT cybersecurity",
       "title": "Moxa AIG-302 ThingsPro Edge",
@@ -99,14 +107,6 @@
       "source": "Automation Alley",
       "date": "2026-10-19",
       "url": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Cleveland-Cliffs CEO blames Canada for Stelco layoffs",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-19",
-      "url": "https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/"
     },
     {
       "lane": "ai-standards",
