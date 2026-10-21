@@ -2,7 +2,7 @@
      predictions, and the archived releases each render from ONE data array
      below; filter-chip counts are computed from the board array. Content:
      specs/024-research-hub-tracker-remodel/tracker-content.md (approved
-     2026-10-13). Snapshot date: October 13, 2026. */
+     2026-10-13). Snapshot date: October 20, 2026. */
   var STUDIES = [
     { line: "Study 011", osf: "J6PF9", title: "The cooperative-phenotype claim", outcome: "noeffect", pill: "No effect found",
       meaning: "We claimed that measured traits and profiles — beyond the game's payoffs — would improve predictions of who cooperates, by a margin fixed in advance. On both adequate datasets the improvement missed the margin, and the claim stands demoted.",
