@@ -165,7 +165,7 @@ export function testAllowlist(env) {
 // The single outbound path for ALL newsletter mail (FR-017): on staging,
 // recipients outside the allowlist are refused here, in code.
 // Returns 'sent' | 'blocked-allowlist' | 'not-configured' | 'failed'.
-export async function sendNewsletterMail(env, { to, subject, html, text, unsubscribeUrl }) {
+export async function sendNewsletterMail(env, { to, subject, html, text, unsubscribeUrl, from, fromName }) {
   const allow = testAllowlist(env);
   if (allow && !allow.has(to.toLowerCase())) {
     console.error(`newsletter mail blocked by staging allowlist for ${to}`);
@@ -177,6 +177,10 @@ export async function sendNewsletterMail(env, { to, subject, html, text, unsubsc
     env.NEWSLETTER_MAIL_CAPTURE.push({ to, subject, html, text, unsubscribeUrl: unsubscribeUrl || null });
     return "sent";
   }
+  // Optional sender override (privacy notices send as privacy@);
+  // the defaults keep every existing caller byte-identical.
+  const senderFrom = from || NEWSLETTER_FROM;
+  const senderName = fromName || NEWSLETTER_FROM_NAME;
   const accessToken = await getGraphToken(env);
   if (!accessToken) return "not-configured";
   const cleanSubject = subject.replace(/[\r\n]+/g, " ");
@@ -200,9 +204,9 @@ export async function sendNewsletterMail(env, { to, subject, html, text, unsubsc
       };
       const b64 = (s) => b64raw(s).replace(/.{76}(?=.)/g, "$&\r\n");
       const mime = [
-        `From: ${NEWSLETTER_FROM_NAME} <${NEWSLETTER_FROM}>`,
+        `From: ${senderName} <${senderFrom}>`,
         `To: ${to}`,
-        `Reply-To: ${NEWSLETTER_FROM}`,
+        `Reply-To: ${senderFrom}`,
         `Subject: ${cleanSubject}`,
         "MIME-Version: 1.0",
         ...(unsubscribeUrl
@@ -224,7 +228,7 @@ export async function sendNewsletterMail(env, { to, subject, html, text, unsubsc
         "",
       ].join("\r\n");
       response = await fetch(
-        `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(NEWSLETTER_FROM)}/sendMail`,
+        `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(senderFrom)}/sendMail`,
         {
           method: "POST",
           headers: { authorization: `Bearer ${accessToken}`, "content-type": "text/plain" },
@@ -248,12 +252,12 @@ export async function sendNewsletterMail(env, { to, subject, html, text, unsubsc
             ? { contentType: "html", content: html }
             : { contentType: "text", content: text || "" },
           toRecipients: [{ emailAddress: { address: to } }],
-          replyTo: [{ emailAddress: { address: NEWSLETTER_FROM, name: NEWSLETTER_FROM_NAME } }],
+          replyTo: [{ emailAddress: { address: senderFrom, name: senderName } }],
         },
         saveToSentItems: false,
       };
       response = await fetch(
-        `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(NEWSLETTER_FROM)}/sendMail`,
+        `https://graph.microsoft.com/v1.0/users/${encodeURIComponent(senderFrom)}/sendMail`,
         {
           method: "POST",
           headers: { authorization: `Bearer ${accessToken}`, "content-type": "application/json" },
