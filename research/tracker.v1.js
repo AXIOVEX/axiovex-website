@@ -2,7 +2,7 @@
      predictions, and the archived releases each render from ONE data array
      below; filter-chip counts are computed from the board array. Content:
      specs/024-research-hub-tracker-remodel/tracker-content.md (approved
-     2026-10-13). Snapshot date: October 20, 2026. */
+     2026-10-13). Snapshot date: October 21, 2026. */
   var STUDIES = [
     { line: "Study 011", osf: "J6PF9", title: "The cooperative-phenotype claim", outcome: "noeffect", pill: "No effect found",
       meaning: "We claimed that measured traits and profiles — beyond the game's payoffs — would improve predictions of who cooperates, by a margin fixed in advance. On both adequate datasets the improvement missed the margin, and the claim stands demoted.",
@@ -60,13 +60,13 @@
       boundary: "Its public registration is the re-registration of record dated 2026-10-12 (see the releases below); the original submission stands as a duplicate and is not the record." },
     { line: "Study 033", osf: "C5RJM", title: "Which connections carry the record", outcome: "noeffect", pill: "No effect found",
       meaning: "Every rearrangement of the flip couplings — weaker, tree-shaped, re-paired, one family switched off entirely — left the record in place on all 36 configurations. At the level this test was built to judge, no special carrier showed up, and the claim stands demoted.",
-      boundary: "One guard measurement did move — switching off the z-type couplings shifted where the record starts, on every configuration. The carriers could not be separated here. That onset signal is what the onset study above chased; it closed unjudged, and its successor is chasing the signal now." },
+      boundary: "One guard measurement did move — switching off the z-type couplings shifted where the record starts, on every configuration. The carriers could not be separated here. That onset signal is what the onset study above chased; it closed unjudged, and its successor has since answered the question — the onset is held by the filled channel, not by the family filling it." },
     { line: "Study 034", osf: "YWRE8", title: "What holds the record's onset in place", outcome: "inconclusive", pill: "Inconclusive",
       meaning: "It removed one family of couplings — the ones that flip pairs of spins together — on fresh examples, to test whether that family is what holds the record's starting point where it is. On every example that finished, removing it moved the starting point earlier (11 of 12), and no other removal moved it at all. But all six of the largest examples were killed by the computing environment hours in, before producing any result. Under the rules fixed in advance, that sample was too incomplete to judge: the claim stands unjudged — neither confirmed nor refuted.",
       boundary: "What sent the kills is not established; the pattern fits the machine running out of memory, but that is consistency, not proof, and the study's record says so. A second check added one clean fact: removing the family moves where the record starts without weakening how strongly it stands. The question was registered again the day this study closed — the next card is its successor." },
-    { line: "Study 037", osf: "Q6FU9", title: "What holds the record's onset in place — asked again", outcome: null, offscale: true, running: true, pill: "Registered — running",
-      meaning: "The same question as the card above, asked again on fresh examples — because the first asking could not be completed, not because its answer was in doubt. The science is unchanged: the same tests, the same failure conditions. What changed is the execution: the computation saves its work piece by piece, so an interrupted run loses only the piece in flight, and the largest examples run on a machine with room to finish them. It was registered on October 20, 2026, after its protocol was frozen and before any scored computation ran.",
-      boundary: "A running study has no verdict and claims none. Its registration is public: osf.io/q6fu9 (DOI 10.17605/OSF.IO/Q6FU9)." }
+    { line: "Study 037", osf: "Q6FU9", title: "What holds the record's onset in place — asked again", outcome: "confirmed", pill: "Confirmed",
+      meaning: "The same question as the card above, asked again on fresh examples — and this time every one of the eighteen examples finished, including all six at the largest size, the ones the first asking lost. Removing the pair-flipping couplings moved the record's starting point earlier in 17 of 18 examples, and the move deepened with size: one step at the smaller sizes, two at the largest, three in a single case. Then the decisive test: the pair-flipping couplings were replaced, in turn, by two entirely different families — one flipping four spins at once, keeping the family's even-flip pattern; one flipping three, breaking it — each at the same count and the same total strength as the family removed. Both held the starting point exactly where it was, in every example. What holds the onset is not which couplings fill the channel that links pairs of spins, and not the pattern they follow: it is that the channel is filled to its capacity — a slot any suitable coupling can occupy. Of the three explanations registered before the run, exactly one predicted this pattern, and it is the one the data matched.",
+      boundary: "Confirmed inside this model family, at the sizes run. The study settles which property of the couplings does the holding — it does not explain why a filled channel sets the depth at all. It also cannot yet separate what 'capacity' means: the substitutes matched the original family in count and in total strength at once, so whether the slot's capacity is the count, the strength, or the two together is untested, and whether the deepening continues past the largest size run is unmeasured. A registered secondary check adds one clean fact: the interventions move where the record starts without thinning how strongly it stands — the record's height reading was flat under every intervention at every size." }
   ];
 
   var PREDICTIONS = [
@@ -76,7 +76,8 @@
       status: "Live — unjudged", statusClass: "pill pill-inconclusive",
       notes: [
         { date: "2026-10-12", text: "The pooled form of this idea was rejected under Study 018; the contrast form was never verdict-bearing in that study and survives it." },
-        { date: "2026-10-13", text: "The consciousness line was reactivated. This prediction may not be frozen for its test until the dataset pilot gate passes." }
+        { date: "2026-10-13", text: "The consciousness line was reactivated. This prediction may not be frozen for its test until the dataset pilot gate passes." },
+        { date: "2026-10-21", text: "The first readability pilot has run and failed its gate — in that dataset, where a faint stimulus appeared could be read clearly in too few people — so this prediction still cannot be frozen for its test. The claim was not tested and stays unjudged. A second pilot, on a dataset that records a report of seeing on every trial, is running." }
       ] },
     { kicker: "Prediction · The physical leg (Study 014's protocol)", live: false,
       title: "In a physical system, the record texture will show the derived dose pattern",
