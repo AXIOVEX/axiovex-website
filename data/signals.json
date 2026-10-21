@@ -1,10 +1,31 @@
 {
-  "updatedUtc": "2026-10-21T05:21:58.086Z",
+  "updatedUtc": "2026-10-21T18:09:16.421Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "From Owner to Owner: How Praxis Business Brokers Guides Manufacturing Business Transitions",
+          "link": "https://automationalley.com/2026/10/21/from-owner-to-owner-how-praxis-business-brokers-guides-manufacturing-business-transitions/",
+          "date": "2026-10-21"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Apple adds iPhone component, materials makers to its US supplier network",
+          "link": "https://www.manufacturingdive.com/news/apple-adds-iphone-component-materials-makers-to-its-us-supplier-network/833600/",
+          "date": "2026-10-21"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "The US faces national security risks without aluminum smelters: report",
+          "link": "https://www.manufacturingdive.com/news/us-faces-national-security-risks-without-aluminum-smelters-report/833591/",
+          "date": "2026-10-21"
+        },
         {
           "source": "Automation Alley",
           "sourceId": "automation-alley",
@@ -38,27 +59,6 @@
           "sourceId": "manufacturing-dive",
           "title": "Cleveland-Cliffs CEO blames Canada for Stelco layoffs",
           "link": "https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/",
-          "date": "2026-10-19"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "MIT’s TechAMP finds early success after first year, could expand",
-          "link": "https://www.manufacturingdive.com/news/mit-techamp-finds-early-success-after-first-year-expansion-teledyne-defense/833324/",
-          "date": "2026-10-19"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "US semiconductor supply chain relies on vulnerable, hidden inputs: SIA",
-          "link": "https://www.manufacturingdive.com/news/us-semiconductor-supply-chain-vulnerable-hidden-inputs-sia/833388/",
-          "date": "2026-10-19"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "From Auburn Hills to Luxembourg: Christian Lopez’s Co-op experience",
-          "link": "https://www.manufacturingdive.com/spons/from-auburn-hills-to-luxembourg-christian-lopezs-co-op-experience/832608/",
           "date": "2026-10-19"
         }
       ]
@@ -111,6 +111,13 @@
         {
           "source": "Automation Alley",
           "sourceId": "automation-alley",
+          "title": "From Owner to Owner: How Praxis Business Brokers Guides Manufacturing Business Transitions",
+          "link": "https://automationalley.com/2026/10/21/from-owner-to-owner-how-praxis-business-brokers-guides-manufacturing-business-transitions/",
+          "date": "2026-10-21"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
           "title": "Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit",
           "link": "https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/",
           "date": "2026-10-20"
@@ -156,13 +163,6 @@
           "title": "Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026",
           "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation",
           "date": "2026-10-08"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "The Michigan Opportunity Podcast: Zach Bishop, President, 4Flutes",
-          "link": "https://automationalley.com/2026/10/07/the-michigan-opportunity-podcast-zach-bishop-president-4flutes/",
-          "date": "2026-10-07"
         }
       ]
     },

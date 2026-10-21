@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-21T05:21:58.086Z",
+  "updatedUtc": "2026-10-21T18:09:16.421Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -21,20 +21,44 @@
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "From Owner to Owner: How Praxis Business Brokers Guides Manufacturing Business Transitions",
+      "source": "Automation Alley",
+      "date": "2026-10-21",
+      "url": "https://automationalley.com/2026/10/21/from-owner-to-owner-how-praxis-business-brokers-guides-manufacturing-business-transitions/"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "From Owner to Owner: How Praxis Business Brokers Guides Manufacturing Business Transitions",
+      "source": "Automation Alley",
+      "date": "2026-10-21",
+      "url": "https://automationalley.com/2026/10/21/from-owner-to-owner-how-praxis-business-brokers-guides-manufacturing-business-transitions/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Apple adds iPhone component, materials makers to its US supplier network",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-21",
+      "url": "https://www.manufacturingdive.com/news/apple-adds-iphone-component-materials-makers-to-its-us-supplier-network/833600/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "The US faces national security risks without aluminum smelters: report",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-21",
+      "url": "https://www.manufacturingdive.com/news/us-faces-national-security-risks-without-aluminum-smelters-report/833591/"
+    },
+    {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
       "title": "557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.",
       "source": "Axiovex",
       "date": "2026-10-21",
       "url": "https://axiovexsystems.com/blog/trinity-health-livonia-557/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit",
-      "source": "Automation Alley",
-      "date": "2026-10-20",
-      "url": "https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/"
     },
     {
       "lane": "ot-security",
@@ -51,6 +75,14 @@
       "source": "U.S. Department of Energy",
       "date": "2026-10-20",
       "url": "https://www.energy.gov/articles/energy-department-announces-new-investments-strengthen-americas-power-grid-and-lower"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit",
+      "source": "Automation Alley",
+      "date": "2026-10-20",
+      "url": "https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/"
     },
     {
       "lane": "manufacturing",
@@ -75,38 +107,6 @@
       "source": "Automation Alley",
       "date": "2026-10-20",
       "url": "https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Moxa AIG-302 ThingsPro Edge",
-      "source": "CISA",
-      "date": "2026-10-20",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Hitachi Energy MicroSCADA X SYS600 Product",
-      "source": "CISA",
-      "date": "2026-10-20",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Hitachi Energy RTU500 Product",
-      "source": "CISA",
-      "date": "2026-10-20",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Why Digital Leadership Fails When Decisions Drift Away From Operational Reality",
-      "source": "Automation Alley",
-      "date": "2026-10-19",
-      "url": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/"
     },
     {
       "lane": "ai-standards",

@@ -166,9 +166,9 @@ Michigan's numbers, and the field items that matter to the people who make thing
 
 AUTOMATION ALLEY
 
-Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit (https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/)
+From Owner to Owner: How Praxis Business Brokers Guides Manufacturing Business Transitions (https://automationalley.com/2026/10/21/from-owner-to-owner-how-praxis-business-brokers-guides-manufacturing-business-transitions/)
 
-October 20, 2026
+October 21, 2026
 
 NIST
 
@@ -184,7 +184,7 @@ October 20, 2026
 
 SEE ALL SIGNALS &rarr;
 
-Snapshot updated October 21, 2026 at 1:21 AM ET. Headline, source, and date only — every card links to the publisher.
+Snapshot updated October 21, 2026 at 2:09 PM ET. Headline, source, and date only — every card links to the publisher.
 
 THE AXIOVEX SIGNAL — MONTHLY
 
@@ -1779,7 +1779,7 @@ What we're watching.
 Michigan's numbers and the field items that matter — manufacturing, AI, workforce, and industrial security — gathered from primary sources and refreshed automatically.
 
 Last refreshed:
-October 21, 2026 at 1:21 AM ET
+October 21, 2026 at 2:09 PM ET
 
 Signals briefing
 
@@ -10684,6 +10684,18 @@ The September edition — Axiovex workforce study &rarr; (https://github.com/AXI
 Manufacturing & automation
 
 AUTOMATION ALLEY
+From Owner to Owner: How Praxis Business Brokers Guides Manufacturing Business Transitions
+(https://automationalley.com/2026/10/21/from-owner-to-owner-how-praxis-business-brokers-guides-manufacturing-business-transitions/) &middot; October 21, 2026
+
+MANUFACTURING DIVE
+Apple adds iPhone component, materials makers to its US supplier network
+(https://www.manufacturingdive.com/news/apple-adds-iphone-component-materials-makers-to-its-us-supplier-network/833600/) &middot; October 21, 2026
+
+MANUFACTURING DIVE
+The US faces national security risks without aluminum smelters: report
+(https://www.manufacturingdive.com/news/us-faces-national-security-risks-without-aluminum-smelters-report/833591/) &middot; October 21, 2026
+
+AUTOMATION ALLEY
 Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit
 (https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/) &middot; October 20, 2026
 
@@ -10702,18 +10714,6 @@ Why Digital Leadership Fails When Decisions Drift Away From Operational Reality
 MANUFACTURING DIVE
 Cleveland-Cliffs CEO blames Canada for Stelco layoffs
 (https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/) &middot; October 19, 2026
-
-MANUFACTURING DIVE
-MIT’s TechAMP finds early success after first year, could expand
-(https://www.manufacturingdive.com/news/mit-techamp-finds-early-success-after-first-year-expansion-teledyne-defense/833324/) &middot; October 19, 2026
-
-MANUFACTURING DIVE
-US semiconductor supply chain relies on vulnerable, hidden inputs: SIA
-(https://www.manufacturingdive.com/news/us-semiconductor-supply-chain-vulnerable-hidden-inputs-sia/833388/) &middot; October 19, 2026
-
-MANUFACTURING DIVE
-From Auburn Hills to Luxembourg: Christian Lopez’s Co-op experience
-(https://www.manufacturingdive.com/spons/from-auburn-hills-to-luxembourg-christian-lopezs-co-op-experience/832608/) &middot; October 19, 2026
 
 AI, standards & research
 
@@ -10738,6 +10738,10 @@ NIST-Developed Quantum Sensors Improve Nuclear Monitoring
 (https://www.nist.gov/news-events/news/2026/09/nist-developed-quantum-sensors-improve-nuclear-monitoring) &middot; September 10, 2026
 
 Michigan workforce & industry
+
+AUTOMATION ALLEY
+From Owner to Owner: How Praxis Business Brokers Guides Manufacturing Business Transitions
+(https://automationalley.com/2026/10/21/from-owner-to-owner-how-praxis-business-brokers-guides-manufacturing-business-transitions/) &middot; October 21, 2026
 
 AXIOVEX
 557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.
@@ -10766,10 +10770,6 @@ HIROTEC’s Journey to Zero-Operator Manufacturing
 AXIOVEX
 Robots can do the work. Almost none of it pays yet.
 (https://axiovexsystems.com/blog/robots-can-do-the-work/) &middot; October 10, 2026
-
-MICHIGAN WARN (LEO)
-Lear Corporation — announced facility closure, Sterling Heights, 67 jobs, effective November 9, 2026
-(https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-lear-corporation) &middot; October 8, 2026
 
 OT cybersecurity
 
@@ -10839,7 +10839,7 @@ USASPENDING (TREASURY)
 General Services Administration → FCA US LLC — $61,630 award, October 16, 2026
 (https://www.usaspending.gov/award/CONT_AWD_47QMCA27F000J_4732_47QMCA22D000N_4732) &middot; October 16, 2026
 
-Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce selected MCDA occupation projections with their stated provenance and separate geographic horizons. Education figures retain each publisher and source period. Pupil membership: PUPIL COUNT ESTIMATES - MAY 2026 — a proposed conference estimate, not an audited count. Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2025 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023-24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (Release R2026Q2 (PSEOE MI 26 2001-2021 V4.14.1 2026Q2 pseopu_mi_20260715_1529); graduate cohorts 2001-2021 pooled) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 21, 2026 at 1:21 AM ET. See our Disclaimer
+Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce selected MCDA occupation projections with their stated provenance and separate geographic horizons. Education figures retain each publisher and source period. Pupil membership: PUPIL COUNT ESTIMATES - MAY 2026 — a proposed conference estimate, not an audited count. Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2025 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023-24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (Release R2026Q2 (PSEOE MI 26 2001-2021 V4.14.1 2026Q2 pseopu_mi_20260715_1529); graduate cohorts 2001-2021 pooled) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 21, 2026 at 2:09 PM ET. See our Disclaimer
 .
 
 THE AXIOVEX SIGNAL — MONTHLY
