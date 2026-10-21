@@ -60,10 +60,13 @@
       boundary: "Its public registration is the re-registration of record dated 2026-10-12 (see the releases below); the original submission stands as a duplicate and is not the record." },
     { line: "Study 033", osf: "C5RJM", title: "Which connections carry the record", outcome: "noeffect", pill: "No effect found",
       meaning: "Every rearrangement of the flip couplings — weaker, tree-shaped, re-paired, one family switched off entirely — left the record in place on all 36 configurations. At the level this test was built to judge, no special carrier showed up, and the claim stands demoted.",
-      boundary: "One guard measurement did move — switching off the z-type couplings shifted where the record starts, on every configuration. The carriers could not be separated here, and that onset signal is what Study 034 is now chasing." },
-    { line: "Study 034", osf: "YWRE8", title: "What holds the record's onset in place", outcome: null, offscale: true, running: true, pill: "Approved — running",
-      meaning: "Approved on 2026-10-13 and running. It swaps the class of dynamics that generates the record and watches whether the record's starting point moves — the question Study 033's guard measurement raised.",
-      boundary: "A running study has no verdict and claims none." }
+      boundary: "One guard measurement did move — switching off the z-type couplings shifted where the record starts, on every configuration. The carriers could not be separated here. That onset signal is what the onset study above chased; it closed unjudged, and its successor is chasing the signal now." },
+    { line: "Study 034", osf: "YWRE8", title: "What holds the record's onset in place", outcome: "inconclusive", pill: "Inconclusive",
+      meaning: "It removed one family of couplings — the ones that flip pairs of spins together — on fresh examples, to test whether that family is what holds the record's starting point where it is. On every example that finished, removing it moved the starting point earlier (11 of 12), and no other removal moved it at all. But all six of the largest examples were killed by the computing environment hours in, before producing any result. Under the rules fixed in advance, that sample was too incomplete to judge: the claim stands unjudged — neither confirmed nor refuted.",
+      boundary: "What sent the kills is not established; the pattern fits the machine running out of memory, but that is consistency, not proof, and the study's record says so. A second check added one clean fact: removing the family moves where the record starts without weakening how strongly it stands. The question was registered again the day this study closed — the next card is its successor." },
+    { line: "Study 037", osf: "Q6FU9", title: "What holds the record's onset in place — asked again", outcome: null, offscale: true, running: true, pill: "Registered — running",
+      meaning: "The same question as the card above, asked again on fresh examples — because the first asking could not be completed, not because its answer was in doubt. The science is unchanged: the same tests, the same failure conditions. What changed is the execution: the computation saves its work piece by piece, so an interrupted run loses only the piece in flight, and the largest examples run on a machine with room to finish them. It was registered on October 20, 2026, after its protocol was frozen and before any scored computation ran.",
+      boundary: "A running study has no verdict and claims none. Its registration is public: osf.io/q6fu9 (DOI 10.17605/OSF.IO/Q6FU9)." }
   ];
 
   var PREDICTIONS = [
@@ -105,7 +108,8 @@
     { name: "Study 031 registration", doi: "R5Y2G", note: "a graded monotone dose–response of the recovery gap (replacement of record, as Study 021)" },
     { name: "Study 032 registration", doi: "Q8TMG", note: "a graded dilution of a recovery-bound violation (re-registration of record, 2026-10-12; the original submission is a duplicate, not the record)" },
     { name: "Study 033 registration", doi: "C5RJM", note: "what carries the record texture's robustness to flip coupling?" },
-    { name: "Study 034 registration", doi: "YWRE8", note: "what holds the record's onset in place?" }
+    { name: "Study 034 registration", doi: "YWRE8", note: "what holds the record's onset in place?" },
+    { name: "Study 037 registration", doi: "Q6FU9", note: "what holds the record's onset in place — the same question, asked again on fresh configurations" }
   ];
 
   function renderBoard() {
