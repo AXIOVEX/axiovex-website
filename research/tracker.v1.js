@@ -77,7 +77,8 @@
       notes: [
         { date: "2026-10-12", text: "The pooled form of this idea was rejected under Study 018; the contrast form was never verdict-bearing in that study and survives it." },
         { date: "2026-10-13", text: "The consciousness line was reactivated. This prediction may not be frozen for its test until the dataset pilot gate passes." },
-        { date: "2026-10-21", text: "The first readability pilot has run and failed its gate — in that dataset, where a faint stimulus appeared could be read clearly in too few people — so this prediction still cannot be frozen for its test. The claim was not tested and stays unjudged. A second pilot, on a dataset that records a report of seeing on every trial, is running." }
+        { date: "2026-10-21", text: "The first readability pilot has run and failed its gate — in that dataset, where a faint stimulus appeared could be read clearly in too few people — so this prediction still cannot be frozen for its test. The claim was not tested and stays unjudged. A second pilot, on a dataset that records a report of seeing on every trial, is running." },
+        { date: "2026-10-21", text: "The second readability pilot has run and also failed its gate — what a faint stimulus was could be read clearly in 20 of 35 people, short of the 30 required, and the typical clear reading fell short of the 0.60 bar — so this prediction still cannot be frozen for its test. The claim was not tested and stays unjudged. Three public datasets have now been audited as arenas for it, and none currently provides a workable one." }
       ] },
     { kicker: "Prediction · The physical leg (Study 014's protocol)", live: false,
       title: "In a physical system, the record texture will show the derived dose pattern",
