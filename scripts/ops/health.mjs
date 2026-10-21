@@ -28,6 +28,29 @@ export function inspect(html, url) {
   checks.imageAlt = [...html.matchAll(/<img\b[^>]*>/gi)].every(m => /\balt\s*=/i.test(m[0]));
   return { url, checks };
 }
+// Owner policy (2026-10-20): production robots.txt must keep the research hub
+// blocked from crawlers — a Disallow for /research/ in the all-crawlers
+// (User-agent: *) group — while the pages still serve to humans. The check
+// fails if that rule is missing or narrowed to named bots only.
+export function robotsDisallowsResearch(body) {
+  let agents = [];
+  let inRules = false;
+  for (const raw of body.split(/\r?\n/)) {
+    const line = raw.replace(/#.*$/, '').trim();
+    if (!line) continue;
+    const field = /^([a-z-]+)\s*:\s*(.*)$/i.exec(line);
+    if (!field) continue;
+    const name = field[1].toLowerCase(), value = field[2].trim();
+    if (name === 'user-agent') {
+      if (inRules) { agents = []; inRules = false; }
+      agents.push(value.toLowerCase());
+    } else if (name === 'disallow' || name === 'allow') {
+      inRules = true;
+      if (name === 'disallow' && (value === '/research/' || value === '/research') && agents.includes('*')) return true;
+    }
+  }
+  return false;
+}
 const paths = ['/', '/signals/', '/documents/', '/blog/', '/newsletter/', '/research/', '/contact/'];
 async function main() {
   const results = [], documents = new Map();
@@ -46,7 +69,7 @@ async function main() {
       if (pathname === '/llms.txt' || pathname === '/llms-full.txt') entry.checks.machineText = /text\/plain/i.test(response.headers.get('content-type') || '') && !/<(?:!doctype|html)\b/i.test(body);
       entry.checks.edgeIndexingPolicy = !/noindex/i.test(response.headers.get('x-robots-tag') || '') || ['/research/', '/__axiovex_missing_seo_probe__/'].includes(pathname);
       if (pathname === '/research/') entry.checks.researchResponseNoindex = /noindex/i.test(response.headers.get('x-robots-tag') || '');
-      if (pathname === '/robots.txt') entry.checks.researchOmittedFromRobots = !body.includes('/research');
+      if (pathname === '/robots.txt') entry.checks.researchDisallowedInRobots = robotsDisallowsResearch(body);
       if (pathname === '/robots.txt') entry.checks.productionCrawl = !/Disallow:\s*\/\s*(?:\r?\n|$)/i.test(body);
       if (pathname === '/sitemap.xml') entry.checks.sitemap = sitemapResponse.status === 200 && discovered.length > 0;
       if (pathname === '/sitemap.xml' || pathname === '/llms.txt' || pathname === '/llms-full.txt') entry.checks.researchUnlisted = !body.includes(BASE + '/research/');
