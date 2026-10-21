@@ -1,0 +1,55 @@
+name: Privacy policy update notices
+
+# Owner directive 2026-10-21: when the privacy policy changes on
+# main, every active newsletter subscriber is emailed a notice of
+# the update from newsletter@axiovexsystems.com (the generic site
+# sender; privacy@ is not a mailbox in the tenant). Delivery runs
+# through the secret-gated Pages endpoint
+# functions/api/ops/privacy-notify.js, which enforces exactly-once
+# per policy version in D1 (privacy_notice_log) — a repeat push or
+# re-run for an already-notified version sends nothing.
+on:
+  push:
+    branches: [main]
+    paths: ['privacy/index.html']
+  workflow_dispatch:
+    inputs:
+      policy_date:
+        description: 'Policy date as shown on the page (e.g. October 20, 2026). Blank = read from the page.'
+        type: string
+        required: false
+      summary:
+        description: 'What-changed summary override. Blank = the endpoint default.'
+        type: string
+        required: false
+      dry_run:
+        description: 'Render and count only — send nothing, record nothing.'
+        type: boolean
+        default: true
+permissions:
+  contents: read
+concurrency:
+  group: privacy-policy-notify
+  cancel-in-progress: false
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Send (or dry-run) the privacy policy update notice
+        env:
+          NEWSLETTER_SEND_SECRET: ${{ secrets.NEWSLETTER_SEND_SECRET }}
+          POLICY_DATE: ${{ inputs.policy_date }}
+          POLICY_SUMMARY: ${{ inputs.summary }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
+        run: node scripts/ops/privacy-notify.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: privacy-notify-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ops-output/
+          retention-days: 90
