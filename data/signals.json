@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-20T22:15:19.850Z",
+  "updatedUtc": "2026-10-21T05:21:58.086Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -254,6 +254,13 @@
           "date": "2026-10-19"
         },
         {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $42,816 award, October 19, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C24527P0066_3600_-NONE-_-NONE-",
+          "date": "2026-10-19"
+        },
+        {
           "source": "U.S. Department of Energy",
           "sourceId": "doe",
           "title": "Energy Department Announces Virginia and West Virginia Transmission Project to Receive Defense Production Act Funding, Strengthening National Security and Grid Reliability",
@@ -279,13 +286,6 @@
           "sourceId": "usaspending-awards",
           "title": "General Services Administration → FCA US LLC — $61,630 award, October 16, 2026",
           "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F000J_4732_47QMCA22D000N_4732",
-          "date": "2026-10-16"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "General Services Administration → FCA US LLC — $61,630 award, October 16, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F000K_4732_47QMCA22D000N_4732",
           "date": "2026-10-16"
         }
       ]

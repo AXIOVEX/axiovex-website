@@ -184,7 +184,7 @@ October 20, 2026
 
 SEE ALL SIGNALS &rarr;
 
-Snapshot updated October 20, 2026 at 6:15 PM ET. Headline, source, and date only — every card links to the publisher.
+Snapshot updated October 21, 2026 at 1:21 AM ET. Headline, source, and date only — every card links to the publisher.
 
 THE AXIOVEX SIGNAL — MONTHLY
 
@@ -1478,7 +1478,7 @@ What we're watching.
 Michigan's numbers and the field items that matter — manufacturing, AI, workforce, and industrial security — gathered from primary sources and refreshed automatically.
 
 Last refreshed:
-October 20, 2026 at 6:15 PM ET
+October 21, 2026 at 1:21 AM ET
 
 Signals briefing
 
@@ -10518,6 +10518,10 @@ FEDERAL REGISTER
 Bulk Manufacturer of Controlled Substances Application: Scottsdale Research Institute
 (https://www.federalregister.gov/documents/2026/10/19/2026-21360/bulk-manufacturer-of-controlled-substances-application-scottsdale-research-institute) &middot; October 19, 2026
 
+USASPENDING (TREASURY)
+Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $42,816 award, October 19, 2026
+(https://www.usaspending.gov/award/CONT_AWD_36C24527P0066_3600_-NONE-_-NONE-) &middot; October 19, 2026
+
 U.S. DEPARTMENT OF ENERGY
 Energy Department Announces Virginia and West Virginia Transmission Project to Receive Defense Production Act Funding, Strengthening National Security and Grid Reliability
 (https://www.energy.gov/articles/energy-department-announces-virginia-and-west-virginia-transmission-project-receive) &middot; October 16, 2026
@@ -10534,11 +10538,7 @@ USASPENDING (TREASURY)
 General Services Administration → FCA US LLC — $61,630 award, October 16, 2026
 (https://www.usaspending.gov/award/CONT_AWD_47QMCA27F000J_4732_47QMCA22D000N_4732) &middot; October 16, 2026
 
-USASPENDING (TREASURY)
-General Services Administration → FCA US LLC — $61,630 award, October 16, 2026
-(https://www.usaspending.gov/award/CONT_AWD_47QMCA27F000K_4732_47QMCA22D000N_4732) &middot; October 16, 2026
-
-Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce selected MCDA occupation projections with their stated provenance and separate geographic horizons. Education figures retain each publisher and source period. Pupil membership: PUPIL COUNT ESTIMATES - MAY 2026 — a proposed conference estimate, not an audited count. Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2025 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023-24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (Release R2026Q2 (PSEOE MI 26 2001-2021 V4.14.1 2026Q2 pseopu_mi_20260715_1529); graduate cohorts 2001-2021 pooled) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 20, 2026 at 6:15 PM ET. See our Disclaimer
+Signals are headlines from public sources, gathered automatically and filtered to the topics we work in. Inclusion is not endorsement, and Axiovex adds no commentary to them here. Pulse figures are U.S. Bureau of Labor Statistics statistics, shown with their reference month. Outlook figures are employment projections published by the U.S. Bureau of Labor Statistics and the Michigan Center for Data and Analytics, shown with their horizon and vintage; they are those agencies' modeled outlook, not Axiovex forecasts. Education figures are Michigan CEPI statistics, shown with their vintage. Trend deltas on this page are computed from the published series. The highlights summary is generated at build time from the figures on this page; it states only what those figures show. The detail tables reproduce selected MCDA occupation projections with their stated provenance and separate geographic horizons. Education figures retain each publisher and source period. Pupil membership: PUPIL COUNT ESTIMATES - MAY 2026 — a proposed conference estimate, not an audited count. Geography: county unemployment from the BLS Local Area Unemployment Statistics (August 2026, preliminary); county employment by industry from the BLS Quarterly Census of Employment and Wages (2025 annual averages; industry rows are private ownership — the grain at which QCEW publishes them — and suppressed cells are shown as not disclosed, never as zero); institutions and completions from the National Center for Education Statistics' IPEDS (2024 survey cycle; completions are 2023-24 awards); graduate outcomes from the U.S. Census Bureau's Post-Secondary Employment Outcomes (Release R2026Q2 (PSEOE MI 26 2001-2021 V4.14.1 2026Q2 pseopu_mi_20260715_1529); graduate cohorts 2001-2021 pooled) — the University of Michigan is Michigan's only PSEO partner institution, so institution-level outcomes are shown for it alone, beside the Census state aggregates. Snapshot updated October 21, 2026 at 1:21 AM ET. See our Disclaimer
 .
 
 THE AXIOVEX SIGNAL — MONTHLY
