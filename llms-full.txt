@@ -10647,7 +10647,7 @@ Legal
 
 Privacy Policy
 
-Last updated: October 9, 2026
+Last updated: October 20, 2026
 
 1. Who we are
 
@@ -10658,15 +10658,32 @@ Axiovex Systems, LLC ("Axiovex Systems," "we," "us," or "our") is a Michigan com
 2. Information we collect
 
 Information you provide.
-The Site has no accounts or newsletter sign-ups. You can share personal information with us directly in two ways: by emailing us, or through the contact form — in either case, typically your name, email address, and the contents of your message. The contact form is protected by Cloudflare Turnstile, a spam check run by Cloudflare. The form delivers your message to our mailbox, and we do not store form submissions anywhere else.
+The Site has no accounts. You can share personal information with us directly in three ways: by emailing us; through the contact form, which asks for your name, email address, topic, and message, and optionally your company; or by signing up for our newsletter with your email address (see the newsletter section below). The contact form delivers your message to our mailbox, and we do not store form submissions anywhere else. Both forms are protected by Cloudflare Turnstile, a spam check run by Cloudflare (see the cookies and local storage section).
 
 Information collected automatically.
-The Site is a static website hosted on Cloudflare Pages. Like most websites, our hosting provider processes limited technical data to deliver and protect the Site, such as your IP address, browser type, and the pages you request. We review aggregate statistics derived from this technical data — for example, how many requests each page receives — to operate the Site. We do not combine this data with any other personal information.
+The Site is a static website hosted on Cloudflare Pages. Like most websites, our hosting provider processes limited technical data to deliver and protect the Site, such as your IP address, browser type, and the pages you request. We review aggregate statistics derived from this technical data — for example, how many requests each page receives and which countries the requests come from — to operate the Site. Those statistics are computed from our hosting provider's server logs; no analytics script runs in your browser. We do not combine this data with any other personal information. When you submit a form, our anti-abuse rate limiting also records a one-way cryptographic hash of your IP address — never the address itself — so automated abuse can be slowed down.
 
 What we do not collect.
-We do not use cookies, analytics scripts, advertising pixels, or other tracking technologies on the Site. Your browser may store small functional preferences on your own device — for example, remembering that you dismissed a banner, or how you left a panel — which never leave your device and are not used to track you. We do not build profiles of visitors, and we do not collect information from children.
+We do not use analytics scripts, advertising pixels, or other cross-site tracking technologies, and we do not set cookies of our own (the next section explains the full picture). We do not build profiles of visitors, and we do not knowingly collect information from children.
 
-3. How we use information
+3. Cookies and local storage
+
+We set no cookies.
+This Site does not set cookies of its own, and nothing on the Site reads cookies. Because we set no cookies and run no optional tracking, there is no cookie banner and nothing to opt out of here.
+
+The spam check on our forms.
+The contact form and the newsletter signup include a spam check called Turnstile, run by Cloudflare. The check runs in a frame served by Cloudflare, and while it runs Cloudflare may use its own strictly necessary storage on its own domain (challenges.cloudflare.com). That storage belongs to Cloudflare, exists only to tell people from automated bots, and is not used to track you across other websites. If you block it, the forms cannot verify a submission and will not send.
+
+Local storage on your own device.
+A few features keep small pieces of information in your browser's local storage, on your device only. They are never sent to us or to anyone else:
+
+Whether you dismissed the breaking-news banner, so it stays dismissed;
+
+For our audio editions, where you stopped listening — the chapter and the position, kept for seven days so you can pick up where you left off — and the playback speed you chose.
+
+You can clear these at any time through your browser's site-data settings; the Site works without them. All of the Site's media, including the audio editions, is served from this Site itself, so no outside media service sees what you read or listen to here.
+
+4. How we use information
 
 We use the information described above only to:
 
@@ -10678,12 +10695,12 @@ Comply with legal obligations.
 
 We do not use your information for advertising, and we do not sell or share your personal information with third parties for marketing purposes.
 
-4. How we share information
+5. How we share information
 
 We share personal information only in these limited circumstances:
 
 Service providers.
-Companies that help us operate the Site — for example, our hosting provider (Cloudflare) and our email provider — process information on our behalf and only as instructed by us.
+Companies that help us operate the Site process information on our behalf and only as instructed by us: Cloudflare hosts the Site, runs the spam checks on our forms, and stores the newsletter subscriber list; Microsoft (Microsoft 365) provides our email, receives contact-form deliveries, and sends the newsletter from our own mailbox.
 
 Legal requirements.
 If required by law, court order, or government request, or where we believe disclosure is necessary to protect our rights, visitors, or the public.
@@ -10691,15 +10708,15 @@ If required by law, court order, or government request, or where we believe disc
 Business transfers.
 In connection with a merger, acquisition, or sale of assets, information may be transferred as part of that transaction.
 
-5. Data retention
+6. Data retention
 
-We keep email correspondence for as long as needed to respond to your inquiry and maintain business records, then delete or archive it when it is no longer needed. Technical logs retained by our hosting provider are subject to that provider's own retention practices.
+We keep email correspondence for as long as needed to respond to your inquiry and maintain business records, then delete or archive it when it is no longer needed. Newsletter records are kept while you are subscribed; if you unsubscribe, we keep your address only on a suppression record so it cannot be re-added without a fresh confirmation (see the newsletter section). A newsletter confirmation link expires after 48 hours. Technical logs retained by our hosting provider are subject to that provider's own retention practices.
 
-6. Data security
+7. Data security
 
 We use reasonable administrative, technical, and physical safeguards to protect information in our care, including encrypted (HTTPS) connections to the Site. No method of transmission over the internet is completely secure, and we cannot guarantee absolute security.
 
-7. Your rights
+8. Your rights
 
 Depending on where you live, you may have rights over your personal information:
 
@@ -10715,32 +10732,32 @@ with consumer privacy laws grant similar rights of access, correction, deletion,
 To exercise any of these rights, email legal@axiovexsystems.com
 . We will verify your identity before responding and will respond within the time required by applicable law.
 
-8. Children's privacy
+9. Children's privacy
 
 The Site is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact us and we will delete it.
 
-9. Third-party links
+10. Third-party links
 
 The Site links to third-party websites and services, including LinkedIn, GitHub, our public course materials, and the websites of organizations we belong to. This policy does not apply to those sites; their own privacy policies govern your use of them.
 
-10. Do Not Track
+11. Do Not Track
 
 Because the Site uses no tracking technologies, there is nothing to disable in response to Do Not Track signals.
 
-11. Changes to this policy
+12. Changes to this policy
 
 We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date above. Material changes will be reflected on this page.
 
-12. Contact us
+13. Contact us
 
 Questions about this Privacy Policy or our privacy practices: legal@axiovexsystems.com
 .
 
-13. The Axiovex Signal newsletter
+14. The Axiovex Signal newsletter
 
 If you subscribe to The Axiovex Signal
 , our monthly newsletter, we collect your email address
-, your subscription status, and the timestamps of your signup, confirmation, and any unsubscribe — nothing else. We use that information only to send the newsletter you asked for. Subscribing requires a confirmation click (double opt-in); until you confirm, nothing is sent to your address.
+, your subscription status, the timestamps of your signup, confirmation, and any unsubscribe, and which signup form you used (for example, the one on the Signals page or in an article) — nothing else. We use that information only to send the newsletter you asked for. Subscribing requires a confirmation click (double opt-in); until you confirm, nothing is sent to your address.
 
 Two processors handle this data for us: Microsoft
 (Microsoft 365 sends the newsletter from our own tenant mailbox) and Cloudflare
@@ -10751,7 +10768,10 @@ The newsletter carries no tracking pixels and no per-reader analytics
 
 Every issue carries a one-click unsubscribe, and it takes effect immediately. When you unsubscribe, we keep your address on a suppression record — held so that the address cannot be silently re-added — and it is never used for any other purpose. Subscribing again is always possible, and always takes a fresh confirmation click.
 
-14. Our Disclaimer
+Unsubscribing stops the emails. If you would rather have your record removed entirely — including from the suppression record — email legal@axiovexsystems.com
+and we will delete it.
+
+15. Our Disclaimer
 
 This policy covers personal information only. Reliance on the Site's published content — our analysis, the figures we republish, and the projections we show — is covered by our Disclaimer
 .
