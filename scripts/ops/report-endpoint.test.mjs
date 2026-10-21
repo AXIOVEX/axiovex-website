@@ -20,7 +20,7 @@ test('report endpoint fixes recipients, rejects overrides and is production-only
   assert.equal((await call(undefined, { NEWSLETTER_GRAPH_CLIENT_SECRET: '' })).status, 503);
   assert.equal((await call({ kind: 'daily', report: 'x'.repeat(262145) })).status, 413);
 });
-test('report uses Microsoft Newsletter mailbox and only the two founders', async t => {
+test('report uses Microsoft Analytics mailbox and only the two founders', async t => {
   const requests = [];
   t.mock.method(globalThis, 'fetch', async (url, options) => {
     requests.push({ url, options });
@@ -29,8 +29,9 @@ test('report uses Microsoft Newsletter mailbox and only the two founders', async
   const response = await call();
   assert.equal(response.status, 202);
   assert.equal(requests.length, 2);
-  assert.match(requests[1].url, /newsletter%40axiovexsystems\.com\/sendMail$/);
+  assert.match(requests[1].url, /analytics%40axiovexsystems\.com\/sendMail$/);
   const payload = JSON.parse(requests[1].options.body);
+  assert.deepEqual(payload.message.from, { emailAddress: { address: 'analytics@axiovexsystems.com', name: 'Axiovex Analytics' } });
   assert.deepEqual(payload.message.toRecipients.map(r => r.emailAddress.address), ['tristen@axiovexsystems.com', 'rockson@axiovexsystems.com']);
   assert.equal(payload.saveToSentItems, true);
   assert.equal(payload.message.body.contentType, 'HTML');
