@@ -1,7 +1,8 @@
 // CI -> Cloudflare -> Microsoft Graph. Microsoft application credentials stay
 // in Pages; the existing Newsletter app remains scoped to the Newsletter mailbox.
 import { renderReportEmail } from './_report-email.js';
-const FROM = 'newsletter@axiovexsystems.com';
+const FROM = 'analytics@axiovexsystems.com';
+const FROM_NAME = 'Axiovex Analytics';
 const RECIPIENTS = ['tristen@axiovexsystems.com', 'rockson@axiovexsystems.com'];
 const KINDS = new Set(['daily', 'weekly', 'monthly', 'health', 'workforce', 'newsletter-draft']);
 const MAX_BYTES = 262144;
@@ -51,6 +52,7 @@ export async function onRequest({ request, env }) {
       method: 'POST', signal: AbortSignal.timeout(20000),
       headers: { Authorization: `Bearer ${token.access_token}`, 'content-type': 'application/json' },
       body: JSON.stringify({ message: {
+        from: { emailAddress: { address: FROM, name: FROM_NAME } },
         subject: `Axiovex website — ${body.kind} report ${date}`,
         body: { contentType: 'HTML', content: rendered.html },
         toRecipients: RECIPIENTS.map(address => ({ emailAddress: { address } })),
