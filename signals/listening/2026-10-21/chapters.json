@@ -1,0 +1,96 @@
+{
+  "slug": "signals-briefing",
+  "title": "Signals Briefing",
+  "mediaTitle": "Axiovex Signals Briefing — Wednesday, October 21, 2026",
+  "album": "Signals Briefing",
+  "voice": "Mr Wellington (ElevenLabs)",
+  "editionDate": "2026-10-21",
+  "dateLabel": "Wednesday, October 21, 2026",
+  "asOf": "1:21 AM ET",
+  "chapters": [
+    {
+      "kicker": "INTRO",
+      "headline": "The board as of Wednesday morning",
+      "points": [
+        "Spoken edition of the Signals board; data as of 1:21 AM ET, Wednesday, October 21, 2026",
+        "37 items across five lanes; the newest items are dated Tuesday, October 20",
+        "Four lanes have new items; AI, standards & research has been quiet since October 8"
+      ],
+      "takeaway": "Everything in this briefing traces to the snapshot on the page below it: headlines, sources, and dates only.",
+      "audio": "/assets/audio/signals-briefing/2026-10-21/ch-01.mp3",
+      "durationSec": 55
+    },
+    {
+      "kicker": "MANUFACTURING & AUTOMATION",
+      "headline": "Three new items, all from Tuesday",
+      "points": [
+        "Three items dated October 20, including Automation Alley on succession planning for manufacturing owners",
+        "Manufacturing Dive: a lawsuit accuses Essity, Edgewell, and J&J of violating a PFAS ban in California (October 20)",
+        "Manufacturing Dive: Cleveland-Cliffs posts its ‘strongest’ quarter in three years, per its CFO (October 20)"
+      ],
+      "takeaway": "All three of the lane's new items are dated the same day — Tuesday, October 20.",
+      "audio": "/assets/audio/signals-briefing/2026-10-21/ch-02.mp3",
+      "durationSec": 45
+    },
+    {
+      "kicker": "MICHIGAN WORKFORCE & INDUSTRY",
+      "headline": "September totals, one new item",
+      "points": [
+        "Michigan manufacturing employment: 584.8k in September 2026, down 1.7k on the month (BLS)",
+        "Unemployment 5.0% (flat on the month); labor force 4.83 million",
+        "The lane's one new item (October 20): Automation Alley on succession planning for manufacturing owners"
+      ],
+      "takeaway": "September's totals are close to flat — manufacturing employment down a little, the jobless rate unchanged.",
+      "audio": "/assets/audio/signals-briefing/2026-10-21/ch-03.mp3",
+      "durationSec": 53
+    },
+    {
+      "kicker": "OT CYBERSECURITY",
+      "headline": "Four new CISA advisories",
+      "points": [
+        "Four new CISA advisories dated October 20, at the top of an eight-item lane",
+        "October 20: HMS Networks PEAK-System PCAN Windows drivers; Moxa AIG-302 ThingsPro Edge",
+        "October 20: Hitachi Energy MicroSCADA X SYS600 Product; Hitachi Energy RTU500 Product"
+      ],
+      "takeaway": "Four product advisories in one day — the lane rewards checking your own equipment list against it.",
+      "audio": "/assets/audio/signals-briefing/2026-10-21/ch-04.mp3",
+      "durationSec": 45
+    },
+    {
+      "kicker": "AI, STANDARDS & RESEARCH",
+      "headline": "The quiet lane",
+      "points": [
+        "Quiet lane: the newest item is dated October 8 — NIST joins a White House science effort",
+        "September 18: NIST awards more than $1.7 million for cybersecurity workforce development across 8 states",
+        "September 17: NSF invests in translating low-dimensional semiconductor technologies"
+      ],
+      "takeaway": "No new standards or research items since October 8 — the lane to watch for a change of pace.",
+      "audio": "/assets/audio/signals-briefing/2026-10-21/ch-05.mp3",
+      "durationSec": 51
+    },
+    {
+      "kicker": "FUNDING & POLICY",
+      "headline": "One new item, about the grid",
+      "points": [
+        "One new item (October 20): the Energy Department announces new investments to strengthen America's power grid and lower electricity costs",
+        "The lane's previous items are dated October 19, including $42 million in Defense Production Act funding for the Constitution Pipeline",
+        "Federal award notices on the board are dated October 19 and October 16"
+      ],
+      "takeaway": "One new item today, and it is about the power grid — the rest of the lane stands as yesterday's edition left it.",
+      "audio": "/assets/audio/signals-briefing/2026-10-21/ch-06.mp3",
+      "durationSec": 43
+    },
+    {
+      "kicker": "WHAT TO WATCH",
+      "headline": "Dates ahead on the board",
+      "points": [
+        "Lear's Sterling Heights closure takes effect November 9 (67 jobs); HealthEdge's Detroit layoff, December 1 (53 jobs)",
+        "The AI, standards & research lane has been quiet since October 8",
+        "Four lanes posted new items on October 20; the next snapshot shows whether that pace holds"
+      ],
+      "takeaway": "The board is the record — this briefing only reads it back.",
+      "audio": "/assets/audio/signals-briefing/2026-10-21/ch-07.mp3",
+      "durationSec": 51
+    }
+  ]
+}
