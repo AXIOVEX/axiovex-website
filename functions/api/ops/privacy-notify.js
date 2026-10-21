@@ -18,13 +18,15 @@
 
 import {
   jsonResponse, storeReady, sendNewsletterMail, unsubscribeToken,
-  siteBase, NEWSLETTER_FROM, SEND_PACE_MS,
+  siteBase, SEND_PACE_MS,
 } from "../newsletter/_lib.js";
 import { emailLayout, esc } from "./_email-layout.js";
 
 const CHUNK = 25;
 export const PRIVACY_SUBJECT = "Our privacy policy was updated";
 export const PRIVACY_POLICY_URL = "https://axiovexsystems.com/privacy/";
+export const PRIVACY_FROM = "privacy@axiovexsystems.com";
+export const PRIVACY_FROM_NAME = "Axiovex Systems";
 const DEFAULT_SUMMARY =
   "The revised policy describes our current practices in plain language — what we collect and why, who processes it for us, how long we keep it, and the rights and choices you have, including asking for your information to be deleted.";
 
@@ -63,7 +65,7 @@ export function renderPrivacyNotice({ policyDate, summary, unsubscribeUrl }) {
   const footer =
     `You are receiving this notice because you subscribe to The Axiovex Signal, the Axiovex Systems newsletter.<br>` +
     `<a href="${esc(unsubscribeUrl)}">Unsubscribe</a> · <a href="${PRIVACY_POLICY_URL}">Privacy policy</a><br>` +
-    `Axiovex Systems · Sent from ${esc(NEWSLETTER_FROM)}`;
+    `Axiovex Systems · Sent from ${esc(PRIVACY_FROM)}`;
   const html = emailLayout({
     title: PRIVACY_SUBJECT,
     eyebrow: "Axiovex Systems · Privacy notice",
@@ -126,7 +128,7 @@ export async function onRequest({ request, env }) {
       dryRun: true,
       versionKey,
       policyDate,
-      from: NEWSLETTER_FROM,
+      from: PRIVACY_FROM,
       recipientCount: recipients.length,
       alreadyLogged: recipients.length - pending.length,
       wouldSend: pending.length,
@@ -151,6 +153,8 @@ export async function onRequest({ request, env }) {
     const unsubscribeUrl = `${base}/newsletter/unsubscribe?t=${token}`;
     const message = renderPrivacyNotice({ policyDate, summary, unsubscribeUrl });
     const status = await sendNewsletterMail(env, {
+      from: PRIVACY_FROM,
+      fromName: PRIVACY_FROM_NAME,
       to: email,
       subject: message.subject,
       html: message.html,
@@ -175,7 +179,7 @@ export async function onRequest({ request, env }) {
     dryRun: false,
     versionKey,
     policyDate,
-    from: NEWSLETTER_FROM,
+    from: PRIVACY_FROM,
     total: recipients.length,
     alreadyLogged: logged.size,
     attempted: batch.length,
