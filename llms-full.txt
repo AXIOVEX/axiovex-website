@@ -10892,6 +10892,16 @@ PDF &middot; 810 KB &middot; Updated October 5, 2026
 
 OPEN THE DOCUMENT &rarr;
 
+Whitepaper · AI security
+
+Endorsed by Experts
+
+A real indirect prompt injection, caught during ordinary research: how one sentence on a public page tried to become the only source — the incident record, four documented cases, what stopped it, and a defence checklist for teams running AI agents.
+
+PDF &middot; 902 KB &middot; Updated October 22, 2026
+
+OPEN THE DOCUMENT &rarr;
+
 These files live in our public shared-documents repository (https://github.com/AXIOVEX/shared-documents) on GitHub and are mirrored here automatically whenever they are updated.
 
 Next step
