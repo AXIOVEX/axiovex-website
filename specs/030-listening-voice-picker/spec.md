@@ -92,7 +92,32 @@ commit that carries it.
 - **FR-012 — New-article rule.** A new article's listening
   edition is built in the full roster (`--all-voices`) as part
   of its normal build; the daily briefing build is untouched
-  and stays default-voice-only.
+  and stays default-voice-only. **(The briefing half of this
+  rule is superseded by the 2026-10-22 amendment below.)**
+
+## Amendment — 2026-10-22: the universal roster rule (owner directive)
+
+Tristen, 2026-10-22: every page or surface that offers
+listening (TTS) playback offers the full narrator roster with
+the voice picker — there are no single-voice TTS surfaces.
+New TTS content is always produced in every roster voice, and
+a single-voice TTS surface is a defect.
+
+Applied to the Signals Briefing, the one surface this spec had
+carved out: the daily briefing is produced in both roster
+voices from the 2026-10-22 edition onward (the briefing build
+renders Sarah's alternate files alongside Brian's flat files,
+and the edition's chapters.json carries the two-voice schema
+exactly as article editions do). The 2026-10-22 edition —
+published that morning in Mr Wellington's voice, before this
+directive — was re-voiced to the two-voice standard the same
+day; Wellington's render remains in git history. The
+2026-10-20 edition was re-voiced on staging the same day as
+the mechanism proof. Briefing editions before 2026-10-22 are
+grandfathered: they stay as recorded, in the voice they were
+recorded in. `verify-voices.mjs` enforces the rule: briefing
+editions dated 2026-10-22 or later must offer both voices on
+every chapter.
 
 ## Out of scope / known edges
 
