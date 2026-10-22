@@ -320,7 +320,7 @@ function listeningHtml(data, opts) {
     '<span class="le-ttl">' + esc(c.headline) + '</span></button></li>').join('\n');
   const points = (first.points || []).map(p => '                <li>' + esc(p) + '</li>').join('\n');
   const json = JSON.stringify(data).replace(/<\//g, '<\\/');
-  return '<link rel="stylesheet" href="/blog/listening.v3.css">\n' +
+  return '<link rel="stylesheet" href="/blog/listening.v4.css">\n' +
     '        <section class="listening" id="listening-edition" aria-label="' + (opts.ariaLabel || 'Listening edition') + '">\n' +
     '          <div class="listening-head">\n' +
     '            <h2 class="le-eyebrow">' + (opts.eyebrow || 'Listening edition') + '</h2>\n' +
@@ -345,7 +345,7 @@ function listeningHtml(data, opts) {
     '          </div>\n' +
     '          <audio data-le-audio preload="metadata"></audio>\n' +
     '          <script type="application/json" data-le-data>' + json + '</script>\n' +
-    '          <script src="/blog/listening.v3.js" defer></script>\n' +
+    '          <script src="/blog/listening.v4.js" defer></script>\n' +
     '        </section>';
 }
 
