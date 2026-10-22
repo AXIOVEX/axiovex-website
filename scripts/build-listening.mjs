@@ -1,8 +1,26 @@
 #!/usr/bin/env node
-/* build-listening.mjs — listening-edition generator (spec 029, WS4).
+/* build-listening.mjs — listening-edition generator (spec 029, WS4;
+ * voice roster added by spec 030).
  *
  * Usage:
  *   node scripts/build-listening.mjs <slug> [--check-only]
+ *   node scripts/build-listening.mjs <slug> --voice <id|name>
+ *   node scripts/build-listening.mjs <slug> --all-voices [--force]
+ *   node scripts/build-listening.mjs --samples [--force]
+ *
+ * Voices (spec 030): every article edition is narrated in a roster
+ * of voices (VOICES below). The DEFAULT voice (Brian) is the track
+ * at the flat paths assets/audio/<slug>/ch-NN.mp3 and the voice a
+ * first-time listener hears; each other voice lives in
+ * assets/audio/<slug>/<voice-id>/. chapters.json carries the roster
+ * and a per-voice entry per chapter; the flat audio/durationSec
+ * fields always describe the default voice. The standard ARTICLE
+ * build is `--all-voices`; a plain invocation renders the default
+ * voice only, which is what the daily Signals Briefing flow relies
+ * on (briefings stay single-voice). Already-rendered files are
+ * never re-rendered unless --force is passed.
+ * --samples renders the shared picker sample sentence once per
+ * roster voice into assets/audio/voice-samples/<voice-id>.mp3.
  *
  * What it does, given a blog post slug:
  *   1. Finds the post at blog/posts/*-<slug>.md (front-matter slug match).
@@ -21,18 +39,20 @@
  *      its chapter, synthesizes NOTHING, and exits 1. Fix the script,
  *      never the gate.
  *   4. Synthesizes one MP3 per chapter with the ElevenLabs connector
- *      CLI (voice: Mr Wellington, id
- *      HSBWXljo3oivWhybh3YX) into assets/audio/<slug>/ch-NN.mp3,
- *      probes durations with ffprobe, writes
+ *      CLI for each selected voice (see the roster note above) into
+ *      assets/audio/<slug>/ch-NN.mp3 (default voice) or
+ *      assets/audio/<slug>/<voice-id>/ch-NN.mp3 (the other voices),
+ *      probes durations with ffprobe, merges the results into
  *      blog/listening/<slug>/chapters.json, and refreshes the runtime
- *      figures recorded in script.md.
+ *      figures recorded in script.md from the DEFAULT voice's
+ *      durations.
  *
  * Script file format (the pilot's format — blog/listening/
  * robots-can-do-the-work/script.md is the worked example):
  *
  *   # Listening edition — <article title>
  *   <provenance / discipline lines>
- *   - Voice: Mr Wellington (ElevenLabs)
+ *   - Voice: Brian (ElevenLabs)
  *   - Chapters: N · Total runtime: M:SS (seconds, measured per file)
  *   - Audio: /assets/audio/<slug>/ch-01.mp3 … ch-NN.mp3
  *
@@ -66,13 +86,86 @@ import os from 'node:os';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
-const VOICE_ID = 'HSBWXljo3oivWhybh3YX';
-const VOICE_NAME = 'Mr Wellington (ElevenLabs)';
 const EL_CLI = path.join(os.homedir(), 'workspace/custom-connectors/custom.legacy-elevenlabs/bin/elevenlabs_api.py');
 
-const slug = process.argv[2];
-const checkOnly = process.argv.includes('--check-only');
-if (!slug) { console.error('usage: node scripts/build-listening.mjs <slug> [--check-only]'); process.exit(2); }
+/* The narrator roster (spec 030 — owner decisions 2026-10-22:
+ * the roster is TWO voices, Brian the default and Sarah the
+ * alternate; eight voices were auditioned and five further
+ * voices were rendered before the owner narrowed the roster —
+ * those renders were out of scope and are not shipped). The
+ * order here is the order the player's picker lists them in.
+ * Ids are the ElevenLabs voice ids; the default voice's id also
+ * names nothing on disk — the default track keeps the flat
+ * paths (see header). */
+const VOICES = [
+  { id: 'nPczCjzI2devNBz1zQrb', name: 'Brian', description: 'Deep and resonant, comforting and steady.' },
+  { id: 'EXAVITQu4vr4xnSDxMaL', name: 'Sarah', description: 'Warm and reassuring, with a calm, confident delivery.' },
+];
+const DEFAULT_VOICE = VOICES[0];
+const DEFAULT_VOICE_NAME = DEFAULT_VOICE.name + ' (ElevenLabs)';
+/* The picker's sample sentence — identical in every voice, so
+ * listeners compare the voice, not the words (spec 030, D3). */
+const SAMPLE_TEXT = 'Welcome to an Axiovex listening edition. The article is read aloud, chapter by chapter, so you can listen the way you would read \u2014 and you can choose the voice that reads it to you.';
+
+const rawArgs = process.argv.slice(2);
+const checkOnly = rawArgs.includes('--check-only');
+const allVoices = rawArgs.includes('--all-voices');
+const forceRender = rawArgs.includes('--force');
+const samplesMode = rawArgs.includes('--samples');
+const voiceOptIdx = rawArgs.indexOf('--voice');
+const voiceOpt = voiceOptIdx >= 0 ? rawArgs[voiceOptIdx + 1] : null;
+const slug = rawArgs.find((a, i) => !a.startsWith('--') && (voiceOptIdx < 0 || i !== voiceOptIdx + 1));
+
+/* ---------------- shared synthesis helpers ---------------- */
+const env = { ...process.env, PYTHONPATH: '/opt/muse/skills/custom-connector-setup/bin' };
+function fmt(s) { s = Math.max(0, Math.round(s)); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
+/* Writes in this environment can be intermittently denied
+ * ("Operation not permitted" on content writes — see the repo's
+ * AGENTS.md notes). A 0-byte or missing file after a "successful"
+ * call is a failed write: verify by size and retry a few times
+ * before believing any output exists. */
+function fileSize(p) { try { return statSync(p).size; } catch { return -1; } }
+function synthesize(text, out, voiceId) {
+  for (let attempt = 1; attempt <= 4; attempt++) {
+    try { rmSync(out, { force: true }); } catch { /* ignore */ }
+    try {
+      execFileSync('python3', [EL_CLI, 'tts', '--text', text, '--voice', voiceId, '--out', out],
+        { env, stdio: 'pipe' });
+    } catch { /* fall through to the size check */ }
+    if (fileSize(out) > 10000) return;
+    console.error(`  write of ${path.basename(out)} did not land (attempt ${attempt}/4) — retrying`);
+  }
+  throw new Error(`synthesis failed: ${out} never landed after 4 attempts`);
+}
+function probeDuration(out) {
+  return Math.round(parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', out], { encoding: 'utf8' }).trim()));
+}
+function writeVerified(p, content) {
+  for (let attempt = 1; attempt <= 4; attempt++) {
+    try { writeFileSync(p, content); } catch { /* retry below */ }
+    if (fileSize(p) === Buffer.byteLength(content)) return;
+  }
+  throw new Error(`write failed: ${p} never landed after 4 attempts`);
+}
+
+/* ---------------- picker sample clips (no slug needed) ---------------- */
+if (samplesMode) {
+  const dir = path.join(ROOT, 'assets', 'audio', 'voice-samples');
+  mkdirSync(dir, { recursive: true });
+  for (const v of VOICES) {
+    const out = path.join(dir, v.id + '.mp3');
+    if (!forceRender && fileSize(out) > 5000) {
+      console.log(`sample ${v.name}: already rendered (${probeDuration(out)}s) — skipped`);
+      continue;
+    }
+    synthesize(SAMPLE_TEXT, out, v.id);
+    console.log(`sample ${v.name}: synthesized, ${probeDuration(out)}s`);
+  }
+  console.log('done: picker sample clips in assets/audio/voice-samples/');
+  process.exit(0);
+}
+
+if (!slug) { console.error('usage: node scripts/build-listening.mjs <slug> [--check-only] [--voice <id|name>] [--all-voices] [--force] | --samples [--force]'); process.exit(2); }
 
 /* ---------------- post + script loading ---------------- */
 const postsDir = path.join(ROOT, 'blog', 'posts');
@@ -252,56 +345,119 @@ if (checkOnly) { console.log('--check-only: stopping before synthesis.'); proces
 /* ---------------- synthesis ---------------- */
 const audioDir = path.join(ROOT, 'assets', 'audio', slug);
 mkdirSync(audioDir, { recursive: true });
-const env = { ...process.env, PYTHONPATH: '/opt/muse/skills/custom-connector-setup/bin' };
-function fmt(s) { s = Math.max(0, Math.round(s)); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
-/* Writes in this environment can be intermittently denied
- * ("Operation not permitted" on content writes — see the repo's
- * AGENTS.md notes). A 0-byte or missing file after a "successful"
- * call is a failed write: verify by size and retry a few times
- * before believing any output exists. */
-function fileSize(p) { try { return statSync(p).size; } catch { return -1; } }
-function synthesize(text, out) {
-  for (let attempt = 1; attempt <= 4; attempt++) {
-    try { rmSync(out, { force: true }); } catch { /* ignore */ }
-    try {
-      execFileSync('python3', [EL_CLI, 'tts', '--text', text, '--voice', VOICE_ID, '--out', out],
-        { env, stdio: 'pipe' });
-    } catch { /* fall through to the size check */ }
-    if (fileSize(out) > 10000) return;
-    console.error(`  write of ${path.basename(out)} did not land (attempt ${attempt}/4) — retrying`);
-  }
-  throw new Error(`synthesis failed: ${out} never landed after 4 attempts`);
-}
-function writeVerified(p, content) {
-  for (let attempt = 1; attempt <= 4; attempt++) {
-    try { writeFileSync(p, content); } catch { /* retry below */ }
-    if (fileSize(p) === Buffer.byteLength(content)) return;
-  }
-  throw new Error(`write failed: ${p} never landed after 4 attempts`);
-}
-const outChapters = [];
-for (const c of chapters) {
-  const nn = ('0' + c.num).slice(-2);
-  const out = path.join(audioDir, `ch-${nn}.mp3`);
-  synthesize(c.narration, out);
-  const dur = parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', out], { encoding: 'utf8' }).trim());
-  const durationSec = Math.round(dur);
-  console.log(`ch-${nn}: synthesized, ${durationSec}s`);
-  outChapters.push({ kicker: c.kicker, headline: c.headline, points: c.points, takeaway: c.takeaway,
-    audio: `/assets/audio/${slug}/ch-${nn}.mp3`, durationSec });
-}
-const totalSec = outChapters.reduce((a, c) => a + c.durationSec, 0);
-const data = { slug, title: postTitle, voice: VOICE_NAME, chapters: outChapters };
-const dataPath = path.join(ROOT, 'blog', 'listening', slug, 'chapters.json');
-writeVerified(dataPath, JSON.stringify(data, null, 2) + '\n');
 
-/* Refresh the runtime figures in script.md so the script of record stays true. */
-let updated = scriptRaw.replace(/- Chapters: \d+ · Total runtime: [^\n]*/,
-  `- Chapters: ${chapters.length} · Total runtime: ${fmt(totalSec)} (${totalSec} seconds, measured per file)`);
+/* Which voices this run renders: --all-voices = the whole roster,
+ * --voice <id|name> = one voice, no option = the default voice only
+ * (the behaviour the daily briefing flow relies on). */
+function resolveVoice(opt) {
+  const v = VOICES.find(v => v.id === opt || v.name.toLowerCase() === String(opt).toLowerCase());
+  if (!v) { console.error(`FAIL: unknown voice "${opt}" — roster ids/names: ${VOICES.map(v => v.name).join(', ')}`); process.exit(2); }
+  return v;
+}
+const selectedVoices = allVoices ? VOICES : [voiceOpt ? resolveVoice(voiceOpt) : DEFAULT_VOICE];
+
+/* Load any existing chapters.json so a run for one voice MERGES
+ * into the edition's data instead of dropping the other voices
+ * (spec 030, D3). Static chapter fields always refresh from the
+ * script; audio entries survive unless re-rendered here. */
+const dataPath = path.join(ROOT, 'blog', 'listening', slug, 'chapters.json');
+let data = { chapters: [] };
+if (existsSync(dataPath)) {
+  try { data = JSON.parse(readFileSync(dataPath, 'utf8')); } catch { data = { chapters: [] }; }
+}
+if (!Array.isArray(data.chapters)) data.chapters = [];
+data.slug = slug;
+data.title = postTitle;
+data.voice = DEFAULT_VOICE_NAME;
+data.defaultVoice = DEFAULT_VOICE.id;
+data.voices = VOICES.map(v => ({ id: v.id, name: v.name, description: v.description }));
 chapters.forEach((c, i) => {
-  const head = `## ${('0' + c.num).slice(-2)} · ${c.kicker} — ${c.headline}`;
-  updated = updated.replace(new RegExp(head.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '( \\([\\d:]+\\))?'),
-    `${head} (${fmt(outChapters[i].durationSec)})`);
+  const prev = data.chapters[i] || {};
+  const merged = {
+    kicker: c.kicker, headline: c.headline, points: c.points, takeaway: c.takeaway,
+    voices: (prev.voices && typeof prev.voices === 'object') ? prev.voices : {},
+  };
+  if (prev.audio) merged.audio = prev.audio;
+  if (prev.durationSec) merged.durationSec = prev.durationSec;
+  data.chapters[i] = merged;
 });
-writeVerified(scriptPath, updated);
-console.log(`done: ${chapters.length} chapters, total runtime ${fmt(totalSec)} — chapters.json written for "${slug}".`);
+data.chapters.length = chapters.length;
+
+function renderVoice(voice) {
+  const isDefault = voice.id === DEFAULT_VOICE.id;
+  const dir = isDefault ? audioDir : path.join(audioDir, voice.id);
+  mkdirSync(dir, { recursive: true });
+  chapters.forEach((c, i) => {
+    const nn = ('0' + c.num).slice(-2);
+    const out = path.join(dir, `ch-${nn}.mp3`);
+    const entryAudio = isDefault ? `/assets/audio/${slug}/ch-${nn}.mp3` : `/assets/audio/${slug}/${voice.id}/ch-${nn}.mp3`;
+    /* Skip only audio this data model itself recorded for THIS
+     * voice. For the default track that means a per-voice entry
+     * pointing at the flat path AND the file present: the flat
+     * files on disk may be a PREVIOUS default voice's renders
+     * (spec 030 build finding, 2026-10-22 — after the default
+     * changed Wellington → Brian, a bare file-exists check nearly
+     * recorded Wellington's files as Brian's). Alternate folders
+     * are voice-specific, so file presence is proof enough there. */
+    const prevEntry = data.chapters[i].voices && data.chapters[i].voices[voice.id];
+    const alreadyThisVoice = fileSize(out) > 10000 &&
+      (!isDefault || (prevEntry && prevEntry.audio === entryAudio));
+    if (!forceRender && alreadyThisVoice) {
+      console.log(`${voice.name} ch-${nn}: already rendered — skipped`);
+    } else {
+      synthesize(c.narration, out, voice.id);
+      console.log(`${voice.name} ch-${nn}: synthesized`);
+    }
+    const durationSec = probeDuration(out);
+    console.log(`${voice.name} ch-${nn}: ${durationSec}s`);
+    const entry = {
+      audio: isDefault ? `/assets/audio/${slug}/ch-${nn}.mp3` : `/assets/audio/${slug}/${voice.id}/ch-${nn}.mp3`,
+      durationSec,
+    };
+    data.chapters[i].voices[voice.id] = entry;
+    if (isDefault) { data.chapters[i].audio = entry.audio; data.chapters[i].durationSec = entry.durationSec; }
+  });
+}
+for (const voice of selectedVoices) renderVoice(voice);
+
+/* chapters.json keeps a stable key order: per chapter the flat
+ * default-track fields precede the per-voice map (spec 030, D3). */
+const ordered = {
+  slug: data.slug, title: data.title, voice: data.voice,
+  defaultVoice: data.defaultVoice, voices: data.voices,
+  chapters: data.chapters.map(c => {
+    const o = { kicker: c.kicker, headline: c.headline, points: c.points, takeaway: c.takeaway };
+    if (c.audio) o.audio = c.audio;
+    if (c.durationSec) o.durationSec = c.durationSec;
+    /* Only roster voices are written out: if the roster ever
+     * narrows, a routine re-run prunes the dropped voices'
+     * entries instead of leaving them in the data forever. */
+    o.voices = {};
+    for (const v of VOICES) if (c.voices && c.voices[v.id]) o.voices[v.id] = c.voices[v.id];
+    return o;
+  }),
+};
+writeVerified(dataPath, JSON.stringify(ordered, null, 2) + '\n');
+
+/* Refresh the runtime figures in script.md so the script of record
+ * stays true. The figures describe the DEFAULT voice's track, so
+ * they are taken from the default voice's OWN per-voice entries —
+ * never from whatever the flat fields happened to hold — and
+ * script.md is touched only when the default voice is fully on
+ * record (rendered in this run or an earlier one). */
+const defaultDurs = ordered.chapters.map(c => c.voices && c.voices[DEFAULT_VOICE.id] && c.voices[DEFAULT_VOICE.id].durationSec);
+if (defaultDurs.every(d => typeof d === 'number' && d > 0)) {
+  let updated = scriptRaw.replace(/^- Voice:.*$/m, `- Voice: ${DEFAULT_VOICE_NAME}`);
+  const totalSec = defaultDurs.reduce((a, b) => a + b, 0);
+  updated = updated.replace(/- Chapters: \d+ · Total runtime: [^\n]*/,
+    `- Chapters: ${chapters.length} · Total runtime: ${fmt(totalSec)} (${totalSec} seconds, measured per file)`);
+  chapters.forEach((c, i) => {
+    const head = `## ${('0' + c.num).slice(-2)} · ${c.kicker} — ${c.headline}`;
+    updated = updated.replace(new RegExp(head.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '( \\([\\d:]+\\))?'),
+      `${head} (${fmt(defaultDurs[i])})`);
+  });
+  writeVerified(scriptPath, updated);
+  console.log(`done: ${chapters.length} chapters; default voice (${DEFAULT_VOICE.name}) total runtime ${fmt(totalSec)} — chapters.json + script.md updated for "${slug}".`);
+} else {
+  console.log(`done: ${chapters.length} chapters rendered for ${selectedVoices.map(v => v.name).join(', ')} — chapters.json updated for "${slug}" (script.md left as-is: the default voice is not fully on record yet).`);
+}
