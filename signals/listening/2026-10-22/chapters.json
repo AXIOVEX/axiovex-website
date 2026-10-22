@@ -1,0 +1,96 @@
+{
+  "slug": "signals-briefing",
+  "title": "Signals Briefing",
+  "mediaTitle": "Axiovex Signals Briefing \u2014 Thursday, October 22, 2026",
+  "album": "Signals Briefing",
+  "voice": "Mr Wellington (ElevenLabs)",
+  "editionDate": "2026-10-22",
+  "dateLabel": "Thursday, October 22, 2026",
+  "asOf": "1:19 AM ET",
+  "chapters": [
+    {
+      "kicker": "INTRO",
+      "headline": "The board as of Thursday morning",
+      "points": [
+        "Spoken edition of the Signals board; data as of 1:19 AM ET, Thursday, October 22, 2026",
+        "37 items across five lanes; the newest items are dated Wednesday, October 21",
+        "Three lanes have new items; OT cybersecurity has none since October 20, and AI, standards & research has been quiet since October 8"
+      ],
+      "takeaway": "Everything in this briefing traces to the snapshot on the page below it: headlines, sources, and dates only.",
+      "audio": "/assets/audio/signals-briefing/2026-10-22/ch-01.mp3",
+      "durationSec": 64
+    },
+    {
+      "kicker": "MANUFACTURING & AUTOMATION",
+      "headline": "Three new items, all from Wednesday",
+      "points": [
+        "Three items dated October 21, including Automation Alley on Praxis Business Brokers guiding manufacturing business transitions",
+        "Manufacturing Dive: Apple adds iPhone component and materials makers to its US supplier network (October 21)",
+        "Manufacturing Dive: the US faces national security risks without aluminum smelters, per a report (October 21)"
+      ],
+      "takeaway": "All three of the lane's new items are dated the same day \u2014 Wednesday, October 21.",
+      "audio": "/assets/audio/signals-briefing/2026-10-22/ch-02.mp3",
+      "durationSec": 44
+    },
+    {
+      "kicker": "MICHIGAN WORKFORCE & INDUSTRY",
+      "headline": "September totals, two new items",
+      "points": [
+        "Michigan manufacturing employment: 584.8k in September 2026, down 1.7k on the month (BLS)",
+        "Unemployment 5.0% (flat on the month); labor force 4.83 million",
+        "Two new items (October 21): the Praxis Business Brokers piece, and a Dakkota Integrated Systems closure in Detroit \u2014 397 jobs, effective December 31"
+      ],
+      "takeaway": "September's totals are close to flat, and the lane's big new item is a Detroit closure notice dated to the end of the year.",
+      "audio": "/assets/audio/signals-briefing/2026-10-22/ch-03.mp3",
+      "durationSec": 59
+    },
+    {
+      "kicker": "OT CYBERSECURITY",
+      "headline": "No new advisories since Tuesday",
+      "points": [
+        "No new items since yesterday's edition; the lane's newest advisories are dated October 20",
+        "October 20: HMS Networks PEAK-System PCAN Windows drivers; Moxa AIG-302 ThingsPro Edge",
+        "October 20: Hitachi Energy MicroSCADA X SYS600 Product; Hitachi Energy RTU500 Product"
+      ],
+      "takeaway": "No new advisories today \u2014 Tuesday's four stand at the top of the lane, and the check-your-equipment advice stands with them.",
+      "audio": "/assets/audio/signals-briefing/2026-10-22/ch-04.mp3",
+      "durationSec": 52
+    },
+    {
+      "kicker": "AI, STANDARDS & RESEARCH",
+      "headline": "The quiet lane",
+      "points": [
+        "Quiet lane: the newest item is dated October 8 \u2014 NIST joins a White House science effort",
+        "September 18: NIST awards more than $1.7 million for cybersecurity workforce development across 8 states",
+        "September 17: NSF invests in translating low-dimensional semiconductor technologies"
+      ],
+      "takeaway": "No new standards or research items since October 8 \u2014 the lane to watch for a change of pace.",
+      "audio": "/assets/audio/signals-briefing/2026-10-22/ch-05.mp3",
+      "durationSec": 50
+    },
+    {
+      "kicker": "FUNDING & POLICY",
+      "headline": "Four award notices join the board",
+      "points": [
+        "Four federal award notices are new on the board since yesterday's edition, dated October 20 and October 19",
+        "Department of Veterans Affairs awards to TRILLAMED LLC: $757K and $736K (October 20); to ALLIANT ENTERPRISES, LLC: $31,050 (October 20)",
+        "General Services Administration award to FORD MOTOR CO: $47,395 (October 19)"
+      ],
+      "takeaway": "The lane's news is award notices \u2014 three dated October 20 and one dated October 19, all newly on the board since yesterday's edition.",
+      "audio": "/assets/audio/signals-briefing/2026-10-22/ch-06.mp3",
+      "durationSec": 64
+    },
+    {
+      "kicker": "WHAT TO WATCH",
+      "headline": "Dates ahead on the board",
+      "points": [
+        "HealthEdge's Detroit layoff takes effect December 1 (53 jobs); Dakkota Integrated Systems' Detroit closure, December 31 (397 jobs)",
+        "The AI, standards & research lane has been quiet since October 8",
+        "Manufacturing and Michigan posted new items dated October 21; the next snapshot shows whether that pace holds"
+      ],
+      "takeaway": "The board is the record \u2014 this briefing only reads it back.",
+      "audio": "/assets/audio/signals-briefing/2026-10-22/ch-07.mp3",
+      "durationSec": 56
+    }
+  ]
+}
