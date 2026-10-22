@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-22T18:29:37.903Z",
+  "updatedUtc": "2026-10-22T19:27:27.970Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -29,7 +29,7 @@
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "Lockheed, Pentagon reach $7B F-35 fighter jet deal",
+          "title": "Lockheed, Pentagon reached F-35 fighter jet deal for $7B",
           "link": "https://www.manufacturingdive.com/news/lockheed-martin-dod-war-f-35-lightning-contract-q3-2026/833692/",
           "date": "2026-10-22"
         },
@@ -173,58 +173,58 @@
         {
           "source": "CISA",
           "sourceId": "cisa-ics",
-          "title": "HMS Networks PEAK-System PCAN Windows drivers",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01",
-          "date": "2026-10-20"
+          "title": "Kiloview E3 NDI Encoder",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01",
+          "date": "2026-10-22"
         },
         {
           "source": "CISA",
           "sourceId": "cisa-ics",
-          "title": "Moxa AIG-302 ThingsPro Edge",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03",
-          "date": "2026-10-20"
+          "title": "Siemens Industrial Edge App Publisher",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02",
+          "date": "2026-10-22"
         },
         {
           "source": "CISA",
           "sourceId": "cisa-ics",
-          "title": "Hitachi Energy MicroSCADA X SYS600 Product",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04",
-          "date": "2026-10-20"
+          "title": "Siemens Software Center",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-03",
+          "date": "2026-10-22"
         },
         {
           "source": "CISA",
           "sourceId": "cisa-ics",
-          "title": "Hitachi Energy RTU500 Product",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05",
-          "date": "2026-10-20"
+          "title": "Siemens Capital Embedded AR Classic",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-04",
+          "date": "2026-10-22"
         },
         {
           "source": "CISA",
           "sourceId": "cisa-ics",
-          "title": "CISA Malcolm",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01",
-          "date": "2026-10-15"
+          "title": "Siemens SENTRON 3NA COM Fuse",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-05",
+          "date": "2026-10-22"
         },
         {
           "source": "CISA",
           "sourceId": "cisa-ics",
-          "title": "Eclipse Foundation Eclipse Milo",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01",
-          "date": "2026-10-15"
+          "title": "Siemens PSS(R)SINCAL",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-06",
+          "date": "2026-10-22"
         },
         {
           "source": "CISA",
           "sourceId": "cisa-ics",
-          "title": "Guangzhou Juan IoT Technology EseeCloud",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02",
-          "date": "2026-10-15"
+          "title": "Siemens SIMATIC IPCs",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-07",
+          "date": "2026-10-22"
         },
         {
           "source": "CISA",
           "sourceId": "cisa-ics",
-          "title": "Inductive Automation Ignition Software",
-          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01",
-          "date": "2026-10-13"
+          "title": "Siemens APOGEE, TALON and Desigo PXC/PXM Products",
+          "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08",
+          "date": "2026-10-22"
         }
       ]
     },

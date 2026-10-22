@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-22T18:29:37.903Z",
+  "updatedUtc": "2026-10-22T19:27:27.970Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -37,6 +37,14 @@
       "url": "https://automationalley.com/2026/10/22/3d-printed-fixed-wing-drone-design-and-manufacturing-guide/"
     },
     {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Kiloview E3 NDI Encoder",
+      "source": "CISA",
+      "date": "2026-10-22",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
+    },
+    {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
       "title": "3M expands collaboration with Amazon, forms GSEO partnership",
@@ -55,50 +63,42 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Lockheed, Pentagon reach $7B F-35 fighter jet deal",
+      "title": "Lockheed, Pentagon reached F-35 fighter jet deal for $7B",
       "source": "Manufacturing Dive",
       "date": "2026-10-22",
       "url": "https://www.manufacturingdive.com/news/lockheed-martin-dod-war-f-35-lightning-contract-q3-2026/833692/"
     },
     {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "From Owner to Owner: How Praxis Business Brokers Guides Manufacturing Business Transitions",
-      "source": "Automation Alley",
-      "date": "2026-10-21",
-      "url": "https://automationalley.com/2026/10/21/from-owner-to-owner-how-praxis-business-brokers-guides-manufacturing-business-transitions/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Apple adds iPhone component, materials makers to its US supplier network",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-21",
-      "url": "https://www.manufacturingdive.com/news/apple-adds-iphone-component-materials-makers-to-its-us-supplier-network/833600/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Micron announces new investment in critical minerals manufacturing",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-21",
-      "url": "https://www.manufacturingdive.com/news/micron-investment-critical-minerals-manufacturing-indium/833640/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "The US faces national security risks without aluminum smelters: report",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-21",
-      "url": "https://www.manufacturingdive.com/news/us-faces-national-security-risks-without-aluminum-smelters-report/833591/"
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Siemens Industrial Edge App Publisher",
+      "source": "CISA",
+      "date": "2026-10-22",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02"
     },
     {
       "lane": "ot-security",
       "laneLabel": "OT cybersecurity",
-      "title": "HMS Networks PEAK-System PCAN Windows drivers",
+      "title": "Siemens Software Center",
       "source": "CISA",
-      "date": "2026-10-20",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+      "date": "2026-10-22",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-03"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Siemens Capital Embedded AR Classic",
+      "source": "CISA",
+      "date": "2026-10-22",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-04"
+    },
+    {
+      "lane": "ot-security",
+      "laneLabel": "OT cybersecurity",
+      "title": "Siemens SENTRON 3NA COM Fuse",
+      "source": "CISA",
+      "date": "2026-10-22",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-05"
     },
     {
       "lane": "funding-policy",
