@@ -60,9 +60,17 @@
   sitemap.xml (lastmod advanced to 2026-10-22 by the site-sync
   bot's regeneration) and llms.txt routes readers to /documents/
   — the same treatment the AI 101 documents receive.
-- [ ] T008 **GATE — blog article (FR-006).** Not in this
-  execution. Owner approves the blog draft + staging render and
-  sets the go-live date.
+- [ ] T008 **GATE — blog article (FR-006).** Owner ordered
+  publication 2026-10-22 (publish now; go-live date 2026-10-22).
+  Article `blog/posts/2026-10-22-endorsed-by-experts.md` +
+  listening edition built under the universal roster rule
+  (spec 030): `build-listening.mjs endorsed-by-experts
+  --all-voices` — fidelity gate PASS (6 chapters, 898 spoken
+  words); 5,200 narration characters per voice, 10,400 total;
+  Brian default (flat paths, 5:39 total) + Sarah alternate;
+  `verify-voices.mjs` PASS on the local tree. Staged with the
+  full site build; production promotion + rendered verification
+  recorded below on completion.
 - [ ] T009 **GATE — LinkedIn sequence (FR-007).** Not in this
   execution. Copy owner-approved verbatim; personal post on the
   article's day ~10:30 ET (link in first comment); company-page
