@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-21T21:51:04.267Z",
+  "updatedUtc": "2026-10-22T05:19:28.938Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -240,6 +240,27 @@
           "date": "2026-10-20"
         },
         {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → TRILLAMED LLC — $757K award, October 20, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0034_3600_36C10G22D0050_3600",
+          "date": "2026-10-20"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → TRILLAMED LLC — $736K award, October 20, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0042_3600_36C10G22D0031_3600",
+          "date": "2026-10-20"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $31,050 award, October 20, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C26027P0047_3600_-NONE-_-NONE-",
+          "date": "2026-10-20"
+        },
+        {
           "source": "U.S. Department of Energy",
           "sourceId": "doe",
           "title": "Energy Department Advances Constitution Pipeline Project with $42 Million in Defense Production Act Funding",
@@ -261,32 +282,11 @@
           "date": "2026-10-19"
         },
         {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces Virginia and West Virginia Transmission Project to Receive Defense Production Act Funding, Strengthening National Security and Grid Reliability",
-          "link": "https://www.energy.gov/articles/energy-department-announces-virginia-and-west-virginia-transmission-project-receive",
-          "date": "2026-10-16"
-        },
-        {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0053_3600_-NONE-_-NONE-",
-          "date": "2026-10-16"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → HANGER PROSTHETICS & ORTHOTICS EAST, INC. — $55,414 award, October 16, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C25027P0054_3600_-NONE-_-NONE-",
-          "date": "2026-10-16"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "General Services Administration → FCA US LLC — $61,630 award, October 16, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F000J_4732_47QMCA22D000N_4732",
-          "date": "2026-10-16"
+          "title": "General Services Administration → FORD MOTOR CO — $47,395 award, October 19, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F000M_4732_47QMCA22D000P_4732",
+          "date": "2026-10-19"
         }
       ]
     }
