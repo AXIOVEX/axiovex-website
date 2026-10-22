@@ -997,6 +997,25 @@ as accordion rows.
   same day (styles.v44.css; pins unified; Listening Edition
   eyebrow promoted to <h2>; research status heads re-leveled);
   production promotion stays a separate gate.
+- **2026-10-22** — APPROVED by Tristen: **WF-04 amendment —
+  listening-edition voice picker** (spec 030; full amendment text
+  at the end of this file). The listening-edition controls row
+  gains a Voice button + narrator panel (radio list with per-voice
+  sample clips) immediately after the speed button; the control
+  renders only on editions offering more than one voice; the
+  choice persists on-device across editions; the mini-player
+  reflects the choice and gains no controls; WF-11 inherits the
+  component unchanged while briefings stay single-voice. Roster
+  (owner decisions 2026-10-22, from audition previews,
+  HUMAN-AS-ORACLE): TWO voices — Brian (the default; also the
+  Signals Briefing voice from this date) and Sarah. Eight
+  voices were auditioned; the owner first approved all eight,
+  then narrowed the roster to these two the same day, and
+  Mr Wellington leaves the article picker (his article audio
+  is removed from the deploy by this change; past briefings
+  keep their recorded voice). Implemented on staging
+  (listening.v4.js / listening.v4.css); production promotion
+  stays a separate gate.
 
 ## WF-11 amendment — October 19, owner-directed refresh timestamp
 
@@ -1070,3 +1089,110 @@ October 19 production SEO follow-up, authorized by Tristen: shorten only the
 homepage search/social/WebPage title to “Axiovex Systems | Michigan Constraint
 Planning” after aeo.js flagged the prior title length. Visible hero and service
 copy retain WF-19 and its approved business-package amendment.
+
+## WF-04 amendment — Listening-edition voice picker (October 22, 2026; approved, spec 030)
+
+Owner request (Tristen, 2026-10-21): "Add setting on the website to
+change voices. Allow several more voices, a few females and other
+voices that may resonate well for listeners." Owner decisions
+2026-10-22: Brian is the default voice (Tristen, replying to the
+Brian audition: "I like all of these but can we make this one the
+default?"), and the roster is narrowed to two voices — Brian and
+Sarah — from the eight auditioned.
+
+The listening-edition component (spec 029) as it stood:
+
+```
+LISTENING EDITION
+Narrated · 7 chapters · about 8 minutes
+┌────────────────────────────────┬─────────────────────────────────┐
+│ CHAPTER CARD (aria-live)       │ CHAPTER LIST                    │
+│ KICKER                         │  01  The claim, and the number… │
+│ Headline                       │  02  What the study measured    │
+│ · key point                    │  03  Tasks and hours, not jobs  │
+│ · key point                    │  …one row per chapter…          │
+│ · key point                    │                                 │
+│ Takeaway — one line            │                                 │
+└────────────────────────────────┴─────────────────────────────────┘
+[▶]  0:00 / 7:55  [ ─────── progress (whole edition) ─────── ]
+     Chapter 1 of 7        [ 1× ]  [ ↩ Resume at 3:12 ]
+```
+
+The delta — one new control in the controls row, immediately after
+the speed button, in the same button idiom. Nothing else moves.
+
+```
+[▶]  0:00 / 7:55  [ ─────── progress (whole edition) ─────── ]
+     Chapter 1 of 7        [ 1× ]  [ Voice: Brian ▾ ]  [ ↩ Resume ]
+                                        │ (panel opens below the row,
+                                        │  anchored to the right edge)
+                                        ▼
+                          ┌──────────────────────────────────┐
+                          │ NARRATOR                         │
+                          │ ● Brian (default)          [ ▶ ] │
+                          │   Deep and resonant,             │
+                          │   comforting and steady.         │
+                          │ ○ Sarah                    [ ▶ ] │
+                          │   Warm and reassuring, with a    │
+                          │   calm, confident delivery.      │
+                          │                                  │
+                          │ Your choice is kept on this      │
+                          │ device for every listening       │
+                          │ edition.                         │
+                          └──────────────────────────────────┘
+```
+
+- **The button** always names the narrator who will play:
+  `Voice: Brian` by default. One tap opens the panel; one tap on
+  a name chooses and closes.
+- **The panel** is a radio list: one row per roster voice — name,
+  a one-line plain description, and a sample button (▶) playing a
+  short clip of the same sentence in that voice, so listeners
+  compare the voice, not the words. Choosing a voice does not
+  restart the edition: same chapter, same place in it, play/pause
+  state kept (switching behaviour: spec 030, D4).
+- **Sample playback** uses its own quiet audio path: starting a
+  sample pauses the edition if it is playing; the edition does
+  not auto-resume afterwards.
+- **Presence rule:** the control renders only when the edition
+  actually offers more than one voice. A single-voice edition
+  shows exactly the pre-amendment frame — no greyed-out control,
+  no explanation copy. (This keeps the Signals Briefing frame
+  unchanged while briefings are narrated in the default voice
+  only.)
+
+States:
+
+| State | What the listener sees |
+|---|---|
+| First visit, no saved choice | Button reads `Voice: Brian`; the default voice plays |
+| Choice saved on this device | Button names the saved voice on every edition, every page |
+| Panel open | Radio list as drawn; current voice marked ●; Esc or an outside tap closes |
+| Sample playing | That row's ▶ becomes ❚❚; any other sample or a choice stops it |
+| Mid-edition switch | Chapter card, chapter list position, and progress stay; the time readouts re-total for the new voice's chapter lengths |
+| Saved voice not in this edition's roster | The default voice plays and the button names it (no error, no dead choice) |
+| Storage unavailable (private mode etc.) | Picker works for the visit; nothing is remembered — same degradation as the speed and resume features |
+
+Mobile (≤720px): the controls row wraps as before; the Voice
+button sits on the wrapped row beside the speed button and the
+Resume button. The panel spans the player's full width under the
+controls row; each voice row is a full-width tap target (≥44px
+tall). **The mini-player does not gain a voice control** — it
+keeps exactly its four elements (play/pause, chapter title,
+progress, close) and plays whichever voice is selected.
+
+What does NOT change: layout, grid, chapter card, chapter list,
+progress model, speed values, Resume behaviour, Media Session
+behaviour; the meta line's words and slot (its minutes figure
+follows the selected voice's measured chapter lengths, as the
+totals already recompute); no new page, account, or settings
+screen anywhere else on the site; one newsletter form per page;
+all global components (WF-G1…G9) untouched; player assets keep
+the versioned-name discipline (listening.v4.js / listening.v4.css);
+audio stays served from this site itself.
+
+Privacy note carried with this frame: the remembered voice is one
+more item kept in the browser's local storage on the listener's
+own device, alongside speed and resume — nothing is sent to the
+site. The privacy policy's §3 list gains the voice choice in the
+same release (spec 030, R9).
