@@ -394,7 +394,7 @@ More&hellip;
 
 Listening edition
 
-Narrated &middot; 8 chapters &middot; about 9 minutes
+Narrated &middot; 8 chapters &middot; about 8 minutes
 
 HEADLINE
 
@@ -436,7 +436,7 @@ The vendor's name, and where the roles land
 &#9654;
 
 0:00
-/ 9:29
+/ 7:52
 
 Chapter 1 of 8
 
@@ -681,7 +681,7 @@ More&hellip;
 
 Listening edition
 
-Narrated &middot; 7 chapters &middot; about 8 minutes
+Narrated &middot; 7 chapters &middot; about 7 minutes
 
 HEADLINE
 
@@ -720,7 +720,7 @@ What it means in Michigan
 &#9654;
 
 0:00
-/ 7:55
+/ 6:44
 
 Chapter 1 of 7
 
@@ -890,7 +890,7 @@ More&hellip;
 
 Listening edition
 
-Narrated &middot; 7 chapters &middot; about 8 minutes
+Narrated &middot; 7 chapters &middot; about 6 minutes
 
 HEADLINE
 
@@ -929,7 +929,7 @@ Checkpoints, not vibes
 &#9654;
 
 0:00
-/ 8:04
+/ 6:24
 
 Chapter 1 of 7
 
@@ -1150,7 +1150,7 @@ More&hellip;
 
 Listening edition
 
-Narrated &middot; 7 chapters &middot; about 7 minutes
+Narrated &middot; 7 chapters &middot; about 6 minutes
 
 HEADLINE
 
@@ -1189,7 +1189,7 @@ Take the toolkit, or take a hand
 &#9654;
 
 0:00
-/ 6:59
+/ 6:00
 
 Chapter 1 of 7
 
@@ -1506,7 +1506,7 @@ Fixed terms, and one question to steal
 &#9654;
 
 0:00
-/ 4:20
+/ 3:37
 
 Chapter 1 of 5
 
@@ -1625,7 +1625,7 @@ More&hellip;
 
 Listening edition
 
-Narrated &middot; 6 chapters &middot; about 5 minutes
+Narrated &middot; 6 chapters &middot; about 4 minutes
 
 HEADLINE
 
@@ -1661,7 +1661,7 @@ Every number traceable, every limit stated
 &#9654;
 
 0:00
-/ 5:29
+/ 4:26
 
 Chapter 1 of 6
 
@@ -10980,7 +10980,7 @@ A few features keep small pieces of information in your browser's local storage,
 
 Whether you dismissed the breaking-news banner, so it stays dismissed;
 
-For our audio editions, where you stopped listening — the chapter and the position, kept for seven days so you can pick up where you left off — and the playback speed you chose.
+For our audio editions, where you stopped listening — the chapter and the position, kept for seven days so you can pick up where you left off — and the playback speed and narrator voice you chose.
 
 You can clear these at any time through your browser's site-data settings; the Site works without them. All of the Site's media, including the audio editions, is served from this Site itself, so no outside media service sees what you read or listen to here.
 
