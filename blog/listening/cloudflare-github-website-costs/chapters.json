@@ -1,7 +1,20 @@
 {
   "slug": "cloudflare-github-website-costs",
   "title": "Your website doesn't need a cloud bill: what hosting actually costs",
-  "voice": "Mr Wellington (ElevenLabs)",
+  "voice": "Brian (ElevenLabs)",
+  "defaultVoice": "nPczCjzI2devNBz1zQrb",
+  "voices": [
+    {
+      "id": "nPczCjzI2devNBz1zQrb",
+      "name": "Brian",
+      "description": "Deep and resonant, comforting and steady."
+    },
+    {
+      "id": "EXAVITQu4vr4xnSDxMaL",
+      "name": "Sarah",
+      "description": "Warm and reassuring, with a calm, confident delivery."
+    }
+  ],
   "chapters": [
     {
       "kicker": "HEADLINE",
@@ -13,7 +26,17 @@
       ],
       "takeaway": "Every price in this edition is as published on October 7, 2026 — check the vendor's current page before you budget.",
       "audio": "/assets/audio/cloudflare-github-website-costs/ch-01.mp3",
-      "durationSec": 57
+      "durationSec": 46,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/cloudflare-github-website-costs/ch-01.mp3",
+          "durationSec": 46
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/cloudflare-github-website-costs/EXAVITQu4vr4xnSDxMaL/ch-01.mp3",
+          "durationSec": 47
+        }
+      }
     },
     {
       "kicker": "THE SHAPE",
@@ -25,7 +48,17 @@
       ],
       "takeaway": "Putting a brochure-and-articles website on a big cloud is like leasing a delivery fleet to drive one van.",
       "audio": "/assets/audio/cloudflare-github-website-costs/ch-02.mp3",
-      "durationSec": 48
+      "durationSec": 44,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/cloudflare-github-website-costs/ch-02.mp3",
+          "durationSec": 44
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/cloudflare-github-website-costs/EXAVITQu4vr4xnSDxMaL/ch-02.mp3",
+          "durationSec": 40
+        }
+      }
     },
     {
       "kicker": "THE TABLE IN WORDS",
@@ -37,7 +70,17 @@
       ],
       "takeaway": "The big clouds meter the one thing a successful website uses most: bandwidth.",
       "audio": "/assets/audio/cloudflare-github-website-costs/ch-03.mp3",
-      "durationSec": 64
+      "durationSec": 55,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/cloudflare-github-website-costs/ch-03.mp3",
+          "durationSec": 55
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/cloudflare-github-website-costs/EXAVITQu4vr4xnSDxMaL/ch-03.mp3",
+          "durationSec": 55
+        }
+      }
     },
     {
       "kicker": "THE TRADITIONAL HOSTS",
@@ -49,7 +92,17 @@
       ],
       "takeaway": "The GitHub-plus-Cloudflare combination is not a cheaper rental. It removes the rental.",
       "audio": "/assets/audio/cloudflare-github-website-costs/ch-04.mp3",
-      "durationSec": 64
+      "durationSec": 52,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/cloudflare-github-website-costs/ch-04.mp3",
+          "durationSec": 52
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/cloudflare-github-website-costs/EXAVITQu4vr4xnSDxMaL/ch-04.mp3",
+          "durationSec": 50
+        }
+      }
     },
     {
       "kicker": "BEYOND PAGES",
@@ -61,7 +114,17 @@
       ],
       "takeaway": "At every layer the pattern holds: bundled whole products, small versions tied to a rental, or separately metered parts.",
       "audio": "/assets/audio/cloudflare-github-website-costs/ch-05.mp3",
-      "durationSec": 66
+      "durationSec": 58,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/cloudflare-github-website-costs/ch-05.mp3",
+          "durationSec": 58
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/cloudflare-github-website-costs/EXAVITQu4vr4xnSDxMaL/ch-05.mp3",
+          "durationSec": 59
+        }
+      }
     },
     {
       "kicker": "THE BOUNDARY",
@@ -73,7 +136,17 @@
       ],
       "takeaway": "Host the project that crosses the line on the big cloud — and keep your website where websites belong.",
       "audio": "/assets/audio/cloudflare-github-website-costs/ch-06.mp3",
-      "durationSec": 57
+      "durationSec": 52,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/cloudflare-github-website-costs/ch-06.mp3",
+          "durationSec": 52
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/cloudflare-github-website-costs/EXAVITQu4vr4xnSDxMaL/ch-06.mp3",
+          "durationSec": 49
+        }
+      }
     },
     {
       "kicker": "THE OFFER",
@@ -85,7 +158,17 @@
       ],
       "takeaway": "The first conversation costs the same as the hosting: nothing.",
       "audio": "/assets/audio/cloudflare-github-website-costs/ch-07.mp3",
-      "durationSec": 63
+      "durationSec": 53,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/cloudflare-github-website-costs/ch-07.mp3",
+          "durationSec": 53
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/cloudflare-github-website-costs/EXAVITQu4vr4xnSDxMaL/ch-07.mp3",
+          "durationSec": 52
+        }
+      }
     }
   ]
 }

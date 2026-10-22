@@ -13,11 +13,11 @@ spoken in the narration and as digits in the key points;
 links and URLs are not read aloud — the reports are "linked
 in the article."
 
-- Voice: Mr Wellington (ElevenLabs)
-- Chapters: 6 · Total runtime: 5:29 (329 seconds, measured per file)
+- Voice: Brian (ElevenLabs)
+- Chapters: 6 · Total runtime: 4:26 (266 seconds, measured per file)
 - Audio: /assets/audio/michigan-workforce-september-2026/ch-01.mp3 … ch-06.mp3
 
-## 01 · HEADLINE — The headline figure is the least interesting part (0:43)
+## 01 · HEADLINE — The headline figure is the least interesting part (0:33)
 
 **Key points**
 
@@ -31,7 +31,7 @@ in the article."
 
 Our Michigan workforce intelligence project just published its September edition: new labor data through August, graduation-horizon program planning, and cross-sector analysis of AI task impacts. The evidence cutoff is September twenty-sixth, twenty twenty-six, and every figure in this edition comes from that public report. Michigan's August unemployment rate was five point zero percent. That sounds like the story. It is not — the headline figure is the least interesting part of the data, and the rest of this edition walks through why.
 
-## 02 · THE RATE — A calm rate can conceal a shrinking labor force (0:51)
+## 02 · THE RATE — A calm rate can conceal a shrinking labor force (0:39)
 
 **Key points**
 
@@ -45,7 +45,7 @@ Our Michigan workforce intelligence project just published its September edition
 
 Michigan's August seasonally adjusted unemployment rate was five point zero percent, against four point one percent nationally. On its own, that looks like a modest gap. But the report pairs it with the rest of the picture: participation at fifty-eight point eight percent, an employment-population ratio of fifty-five point nine percent — and monthly employment and labor-force declines that both totaled twenty-five thousand. That last detail is the one that matters. When the labor force itself shrinks by twenty-five thousand in a month, the unemployment rate stays deceptively calm. If you are deciding which training programs to expand or close, the rate alone will mislead you.
 
-## 03 · THE WIDER LENS — More slack than the headline shows (0:58)
+## 03 · THE WIDER LENS — More slack than the headline shows (0:44)
 
 **Key points**
 
@@ -59,7 +59,7 @@ Michigan's August seasonally adjusted unemployment rate was five point zero perc
 
 The broader U six measure — nine point one percent for the July twenty twenty-five to June twenty twenty-six window — captures more of the slack, but note the vintage: it is not an August reading. Recent graduates faced about five point six percent unemployment in the second quarter, with degree-based underemployment at forty-two percent. These measure different populations and cannot be added together. Two yellow flags sit alongside: September's final national consumer sentiment index fell to forty-eight point one, from fifty-one point seven in August, and Chicago Fed district respondents reported below-average hiring indexes even as manufacturing activity strengthened. The report treats these as warning signals, not as a forecast of Michigan job losses.
 
-## 04 · FIVE DECISIONS — The first three (1:03)
+## 04 · FIVE DECISIONS — The first three (0:56)
 
 **Key points**
 
@@ -73,7 +73,7 @@ The broader U six measure — nine point one percent for the July twenty twenty-
 
 The edition's core is five recommendations for education and industry. The first three: redesign narrow task training first — standalone typing, data-entry, and routine transaction-processing curricula need immediate review, while transferable business knowledge is preserved. Second, retain foundations in AI-exposed professions — software, accounting, legal support, engineering, media, and medical imaging face task change, and students still need to define requirements, evaluate outputs, and manage risk. AI exposure alone does not establish occupation decline. Third, prioritize Michigan demand and replacement needs: state projections show growth in industrial maintenance, cybersecurity, software, data science, nursing, and electrical work — and declining occupations can still have substantial annual openings.
 
-## 05 · FIVE DECISIONS — Bridges, cohorts, and the radiology test (1:05)
+## 05 · FIVE DECISIONS — Bridges, cohorts, and the radiology test (0:53)
 
 **Key points**
 
@@ -87,7 +87,7 @@ The edition's core is five recommendations for education and industry. The first
 
 The fourth decision: build skills bridges before layoffs — assess incumbent skills, secure a real receiving role, pay for supervised learning, and verify competence through work samples, tracking wages and sustained employment rather than just course completion. The fifth: plan by graduation cohort — short credentials for twenty twenty-seven, associate pathways for twenty twenty-eight, bachelor's programs for twenty thirty, longer professional pathways for twenty thirty-two and beyond. Those are decision horizons, not occupation expiry dates. The report's worked example is radiology: official projections do not establish radiologist obsolescence — Michigan projects growth, and the ACR describes persistent shortages. Preserve clinical preparation, and add AI evaluation and imaging informatics on top.
 
-## 06 · THE STANDARD — Every number traceable, every limit stated (0:49)
+## 06 · THE STANDARD — Every number traceable, every limit stated (0:41)
 
 **Key points**
 

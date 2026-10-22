@@ -1,7 +1,20 @@
 {
   "slug": "oakland-county-job-losses",
   "title": "Oakland County is losing jobs. Here is why.",
-  "voice": "Mr Wellington (ElevenLabs)",
+  "voice": "Brian (ElevenLabs)",
+  "defaultVoice": "nPczCjzI2devNBz1zQrb",
+  "voices": [
+    {
+      "id": "nPczCjzI2devNBz1zQrb",
+      "name": "Brian",
+      "description": "Deep and resonant, comforting and steady."
+    },
+    {
+      "id": "EXAVITQu4vr4xnSDxMaL",
+      "name": "Sarah",
+      "description": "Warm and reassuring, with a calm, confident delivery."
+    }
+  ],
   "chapters": [
     {
       "kicker": "HEADLINE",
@@ -13,7 +26,17 @@
       ],
       "takeaway": "The losses are specific — specific sectors, specific employers, specific places the work went.",
       "audio": "/assets/audio/oakland-county-job-losses/ch-01.mp3",
-      "durationSec": 60
+      "durationSec": 45,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/oakland-county-job-losses/ch-01.mp3",
+          "durationSec": 45
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/oakland-county-job-losses/EXAVITQu4vr4xnSDxMaL/ch-01.mp3",
+          "durationSec": 48
+        }
+      }
     },
     {
       "kicker": "WHERE THE JOBS WENT",
@@ -25,7 +48,17 @@
       ],
       "takeaway": "The single largest loss sits in the county's signature industry — the engineering and technical-services firms clustered around autos.",
       "audio": "/assets/audio/oakland-county-job-losses/ch-02.mp3",
-      "durationSec": 68
+      "durationSec": 58,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/oakland-county-job-losses/ch-02.mp3",
+          "durationSec": 58
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/oakland-county-job-losses/EXAVITQu4vr4xnSDxMaL/ch-02.mp3",
+          "durationSec": 61
+        }
+      }
     },
     {
       "kicker": "CAUSE ONE",
@@ -37,7 +70,17 @@
       ],
       "takeaway": "The direction, repeated across independent employers with the same stated reason, is hard to argue with.",
       "audio": "/assets/audio/oakland-county-job-losses/ch-03.mp3",
-      "durationSec": 80
+      "durationSec": 66,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/oakland-county-job-losses/ch-03.mp3",
+          "durationSec": 66
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/oakland-county-job-losses/EXAVITQu4vr4xnSDxMaL/ch-03.mp3",
+          "durationSec": 67
+        }
+      }
     },
     {
       "kicker": "CAUSE TWO",
@@ -49,7 +92,17 @@
       ],
       "takeaway": "None of these is a collapse — together they describe a footprint being consolidated elsewhere, one decision at a time.",
       "audio": "/assets/audio/oakland-county-job-losses/ch-04.mp3",
-      "durationSec": 72
+      "durationSec": 57,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/oakland-county-job-losses/ch-04.mp3",
+          "durationSec": 57
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/oakland-county-job-losses/EXAVITQu4vr4xnSDxMaL/ch-04.mp3",
+          "durationSec": 57
+        }
+      }
     },
     {
       "kicker": "THE AUGUST QUESTION",
@@ -61,7 +114,17 @@
       ],
       "takeaway": "Eight thousand layoffs in a month would show up in the claims data. Nothing did — the August cliff is most likely the model, not the economy.",
       "audio": "/assets/audio/oakland-county-job-losses/ch-05.mp3",
-      "durationSec": 99
+      "durationSec": 79,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/oakland-county-job-losses/ch-05.mp3",
+          "durationSec": 79
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/oakland-county-job-losses/EXAVITQu4vr4xnSDxMaL/ch-05.mp3",
+          "durationSec": 76
+        }
+      }
     },
     {
       "kicker": "THE OFFSETS",
@@ -73,7 +136,17 @@
       ],
       "takeaway": "The forward announcements are pledges, not payroll — GM Orion is the largest single rebound in view.",
       "audio": "/assets/audio/oakland-county-job-losses/ch-06.mp3",
-      "durationSec": 53
+      "durationSec": 41,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/oakland-county-job-losses/ch-06.mp3",
+          "durationSec": 41
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/oakland-county-job-losses/EXAVITQu4vr4xnSDxMaL/ch-06.mp3",
+          "durationSec": 42
+        }
+      }
     },
     {
       "kicker": "WHAT WE ARE WATCHING",
@@ -85,7 +158,17 @@
       ],
       "takeaway": "We will report what the checkpoints show, either way.",
       "audio": "/assets/audio/oakland-county-job-losses/ch-07.mp3",
-      "durationSec": 52
+      "durationSec": 38,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/oakland-county-job-losses/ch-07.mp3",
+          "durationSec": 38
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/oakland-county-job-losses/EXAVITQu4vr4xnSDxMaL/ch-07.mp3",
+          "durationSec": 41
+        }
+      }
     }
   ]
 }

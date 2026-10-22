@@ -1,7 +1,20 @@
 {
   "slug": "robots-can-do-the-work",
   "title": "Robots can do the work. Almost none of it pays yet.",
-  "voice": "Mr Wellington (ElevenLabs)",
+  "voice": "Brian (ElevenLabs)",
+  "defaultVoice": "nPczCjzI2devNBz1zQrb",
+  "voices": [
+    {
+      "id": "nPczCjzI2devNBz1zQrb",
+      "name": "Brian",
+      "description": "Deep and resonant, comforting and steady."
+    },
+    {
+      "id": "EXAVITQu4vr4xnSDxMaL",
+      "name": "Sarah",
+      "description": "Warm and reassuring, with a calm, confident delivery."
+    }
+  ],
   "chapters": [
     {
       "kicker": "HEADLINE",
@@ -13,7 +26,17 @@
       ],
       "takeaway": "Capability is not the headline. Cost is.",
       "audio": "/assets/audio/robots-can-do-the-work/ch-01.mp3",
-      "durationSec": 46
+      "durationSec": 38,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/robots-can-do-the-work/ch-01.mp3",
+          "durationSec": 38
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/robots-can-do-the-work/EXAVITQu4vr4xnSDxMaL/ch-01.mp3",
+          "durationSec": 39
+        }
+      }
     },
     {
       "kicker": "THE MAP",
@@ -25,7 +48,17 @@
       ],
       "takeaway": "Where a task happens decides whether a robot can do it at all.",
       "audio": "/assets/audio/robots-can-do-the-work/ch-02.mp3",
-      "durationSec": 63
+      "durationSec": 55,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/robots-can-do-the-work/ch-02.mp3",
+          "durationSec": 55
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/robots-can-do-the-work/EXAVITQu4vr4xnSDxMaL/ch-02.mp3",
+          "durationSec": 55
+        }
+      }
     },
     {
       "kicker": "EXPOSURE",
@@ -37,7 +70,17 @@
       ],
       "takeaway": "A job counts as exposed if a slice of its tasks is. That is not a robot doing the job.",
       "audio": "/assets/audio/robots-can-do-the-work/ch-03.mp3",
-      "durationSec": 67
+      "durationSec": 56,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/robots-can-do-the-work/ch-03.mp3",
+          "durationSec": 56
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/robots-can-do-the-work/EXAVITQu4vr4xnSDxMaL/ch-03.mp3",
+          "durationSec": 58
+        }
+      }
     },
     {
       "kicker": "THE GAP",
@@ -49,7 +92,17 @@
       ],
       "takeaway": "The weld was never the bottleneck. Everything around it is.",
       "audio": "/assets/audio/robots-can-do-the-work/ch-04.mp3",
-      "durationSec": 78
+      "durationSec": 64,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/robots-can-do-the-work/ch-04.mp3",
+          "durationSec": 64
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/robots-can-do-the-work/EXAVITQu4vr4xnSDxMaL/ch-04.mp3",
+          "durationSec": 65
+        }
+      }
     },
     {
       "kicker": "WHERE IT PAYS",
@@ -61,7 +114,17 @@
       ],
       "takeaway": "The leading edge is not a wave. It is one occupation where a structured task met a cost line.",
       "audio": "/assets/audio/robots-can-do-the-work/ch-05.mp3",
-      "durationSec": 72
+      "durationSec": 62,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/robots-can-do-the-work/ch-05.mp3",
+          "durationSec": 62
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/robots-can-do-the-work/EXAVITQu4vr4xnSDxMaL/ch-05.mp3",
+          "durationSec": 62
+        }
+      }
     },
     {
       "kicker": "FINE PRINT",
@@ -73,7 +136,17 @@
       ],
       "takeaway": "The binding constraint is not intelligence. It is hands.",
       "audio": "/assets/audio/robots-can-do-the-work/ch-06.mp3",
-      "durationSec": 70
+      "durationSec": 55,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/robots-can-do-the-work/ch-06.mp3",
+          "durationSec": 55
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/robots-can-do-the-work/EXAVITQu4vr4xnSDxMaL/ch-06.mp3",
+          "durationSec": 62
+        }
+      }
     },
     {
       "kicker": "CLOSE TO HOME",
@@ -85,7 +158,17 @@
       ],
       "takeaway": "Capability, cost, and observed use are three different numbers. Plan on the right one.",
       "audio": "/assets/audio/robots-can-do-the-work/ch-07.mp3",
-      "durationSec": 79
+      "durationSec": 74,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/robots-can-do-the-work/ch-07.mp3",
+          "durationSec": 74
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/robots-can-do-the-work/EXAVITQu4vr4xnSDxMaL/ch-07.mp3",
+          "durationSec": 71
+        }
+      }
     }
   ]
 }

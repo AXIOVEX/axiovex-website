@@ -1,7 +1,20 @@
 {
   "slug": "trinity-health-livonia-557",
   "title": "557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.",
-  "voice": "Daniel - Steady Broadcaster (ElevenLabs)",
+  "voice": "Brian (ElevenLabs)",
+  "defaultVoice": "nPczCjzI2devNBz1zQrb",
+  "voices": [
+    {
+      "id": "nPczCjzI2devNBz1zQrb",
+      "name": "Brian",
+      "description": "Deep and resonant, comforting and steady."
+    },
+    {
+      "id": "EXAVITQu4vr4xnSDxMaL",
+      "name": "Sarah",
+      "description": "Warm and reassuring, with a calm, confident delivery."
+    }
+  ],
   "chapters": [
     {
       "kicker": "HEADLINE",
@@ -13,7 +26,17 @@
       ],
       "takeaway": "The state's own filing says more than the press releases do — about who is affected, and whether Michigan can absorb them.",
       "audio": "/assets/audio/trinity-health-livonia-557/ch-01.mp3",
-      "durationSec": 52
+      "durationSec": 39,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/trinity-health-livonia-557/ch-01.mp3",
+          "durationSec": 39
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/trinity-health-livonia-557/EXAVITQu4vr4xnSDxMaL/ch-01.mp3",
+          "durationSec": 40
+        }
+      }
     },
     {
       "kicker": "WHAT HAPPENED",
@@ -25,7 +48,17 @@
       ],
       "takeaway": "This is the second time Trinity has run this play in 2026 — in January it cut 10.5% of its revenue cycle workforce.",
       "audio": "/assets/audio/trinity-health-livonia-557/ch-02.mp3",
-      "durationSec": 82
+      "durationSec": 62,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/trinity-health-livonia-557/ch-02.mp3",
+          "durationSec": 62
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/trinity-health-livonia-557/EXAVITQu4vr4xnSDxMaL/ch-02.mp3",
+          "durationSec": 67
+        }
+      }
     },
     {
       "kicker": "WHO THE 557 ARE",
@@ -37,7 +70,17 @@
       ],
       "takeaway": "Not a cross-section of an IT department — an entire operating layer, lifted out at once.",
       "audio": "/assets/audio/trinity-health-livonia-557/ch-03.mp3",
-      "durationSec": 65
+      "durationSec": 56,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/trinity-health-livonia-557/ch-03.mp3",
+          "durationSec": 56
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/trinity-health-livonia-557/EXAVITQu4vr4xnSDxMaL/ch-03.mp3",
+          "durationSec": 57
+        }
+      }
     },
     {
       "kicker": "THE DISCREPANCY",
@@ -49,7 +92,17 @@
       ],
       "takeaway": "We do not know why, and the document does not say — the benign possibilities are stated as possibilities only; none is endorsed.",
       "audio": "/assets/audio/trinity-health-livonia-557/ch-04.mp3",
-      "durationSec": 57
+      "durationSec": 49,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/trinity-health-livonia-557/ch-04.mp3",
+          "durationSec": 49
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/trinity-health-livonia-557/EXAVITQu4vr4xnSDxMaL/ch-04.mp3",
+          "durationSec": 50
+        }
+      }
     },
     {
       "kicker": "ABSORPTION",
@@ -61,7 +114,17 @@
       ],
       "takeaway": "Openings are a flow spread across twelve months and the whole state; 557 people in one metro enter the same segment inside a five-week window.",
       "audio": "/assets/audio/trinity-health-livonia-557/ch-05.mp3",
-      "durationSec": 85
+      "durationSec": 72,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/trinity-health-livonia-557/ch-05.mp3",
+          "durationSec": 72
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/trinity-health-livonia-557/EXAVITQu4vr4xnSDxMaL/ch-05.mp3",
+          "durationSec": 73
+        }
+      }
     },
     {
       "kicker": "THE PORTABLE ASSET",
@@ -73,7 +136,17 @@
       ],
       "takeaway": "An Epic analyst at Trinity is not starting over at Corewell or Henry Ford — they are changing buildings. That helps one family much more than the others.",
       "audio": "/assets/audio/trinity-health-livonia-557/ch-06.mp3",
-      "durationSec": 75
+      "durationSec": 66,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/trinity-health-livonia-557/ch-06.mp3",
+          "durationSec": 66
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/trinity-health-livonia-557/EXAVITQu4vr4xnSDxMaL/ch-06.mp3",
+          "durationSec": 69
+        }
+      }
     },
     {
       "kicker": "PATHWAYS",
@@ -85,7 +158,17 @@
       ],
       "takeaway": "The pathways are real, and they are slower than the separation schedule — that gap is the actual workforce problem in this story.",
       "audio": "/assets/audio/trinity-health-livonia-557/ch-07.mp3",
-      "durationSec": 75
+      "durationSec": 66,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/trinity-health-livonia-557/ch-07.mp3",
+          "durationSec": 66
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/trinity-health-livonia-557/EXAVITQu4vr4xnSDxMaL/ch-07.mp3",
+          "durationSec": 69
+        }
+      }
     },
     {
       "kicker": "WHAT WE ARE WATCHING",
@@ -97,7 +180,17 @@
       ],
       "takeaway": "On November 30, a nurse in one of 91 hospitals will still call a service desk when the system fails. The open question is who answers — in Michigan, or not.",
       "audio": "/assets/audio/trinity-health-livonia-557/ch-08.mp3",
-      "durationSec": 78
+      "durationSec": 62,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/trinity-health-livonia-557/ch-08.mp3",
+          "durationSec": 62
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/trinity-health-livonia-557/EXAVITQu4vr4xnSDxMaL/ch-08.mp3",
+          "durationSec": 65
+        }
+      }
     }
   ]
 }
