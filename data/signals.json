@@ -1,10 +1,17 @@
 {
-  "updatedUtc": "2026-10-22T05:19:28.938Z",
+  "updatedUtc": "2026-10-22T15:28:38.023Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
       "title": "Manufacturing & automation",
       "items": [
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
+          "title": "3D Printed Fixed-Wing Drone Design and Manufacturing Guide",
+          "link": "https://automationalley.com/2026/10/22/3d-printed-fixed-wing-drone-design-and-manufacturing-guide/",
+          "date": "2026-10-22"
+        },
         {
           "source": "Automation Alley",
           "sourceId": "automation-alley",
@@ -52,13 +59,6 @@
           "sourceId": "automation-alley",
           "title": "Why Digital Leadership Fails When Decisions Drift Away From Operational Reality",
           "link": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/",
-          "date": "2026-10-19"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Cleveland-Cliffs CEO blames Canada for Stelco layoffs",
-          "link": "https://www.manufacturingdive.com/news/cleveland-cliffs-ceo-lourenco-goncalves-blames-canada-stelco-layoffs/833352/",
           "date": "2026-10-19"
         }
       ]
@@ -111,6 +111,13 @@
         {
           "source": "Automation Alley",
           "sourceId": "automation-alley",
+          "title": "3D Printed Fixed-Wing Drone Design and Manufacturing Guide",
+          "link": "https://automationalley.com/2026/10/22/3d-printed-fixed-wing-drone-design-and-manufacturing-guide/",
+          "date": "2026-10-22"
+        },
+        {
+          "source": "Automation Alley",
+          "sourceId": "automation-alley",
           "title": "From Owner to Owner: How Praxis Business Brokers Guides Manufacturing Business Transitions",
           "link": "https://automationalley.com/2026/10/21/from-owner-to-owner-how-praxis-business-brokers-guides-manufacturing-business-transitions/",
           "date": "2026-10-21"
@@ -156,13 +163,6 @@
           "title": "HIROTEC’s Journey to Zero-Operator Manufacturing",
           "link": "https://automationalley.com/2026/10/12/hirotecs-journey-to-zero-operator-manufacturing/",
           "date": "2026-10-12"
-        },
-        {
-          "source": "Michigan WARN (LEO)",
-          "sourceId": "michigan-warn",
-          "title": "HealthEdge, d/b/a as UST HealthProof — announced permanent layoff, Detroit, 53 jobs, effective December 1, 2026",
-          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-08-healthedge-d-b-a-as-ust-healthproof",
-          "date": "2026-10-08"
         }
       ]
     },

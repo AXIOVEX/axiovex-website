@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-22T05:19:28.938Z",
+  "updatedUtc": "2026-10-22T15:28:38.023Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -23,18 +23,26 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "From Owner to Owner: How Praxis Business Brokers Guides Manufacturing Business Transitions",
+      "title": "3D Printed Fixed-Wing Drone Design and Manufacturing Guide",
       "source": "Automation Alley",
-      "date": "2026-10-21",
-      "url": "https://automationalley.com/2026/10/21/from-owner-to-owner-how-praxis-business-brokers-guides-manufacturing-business-transitions/"
+      "date": "2026-10-22",
+      "url": "https://automationalley.com/2026/10/22/3d-printed-fixed-wing-drone-design-and-manufacturing-guide/"
     },
     {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "Dakkota Integrated Systems, LLC — announced closure, Detroit, 397 jobs, effective December 31, 2026",
-      "source": "Michigan WARN (LEO)",
+      "title": "3D Printed Fixed-Wing Drone Design and Manufacturing Guide",
+      "source": "Automation Alley",
+      "date": "2026-10-22",
+      "url": "https://automationalley.com/2026/10/22/3d-printed-fixed-wing-drone-design-and-manufacturing-guide/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "From Owner to Owner: How Praxis Business Brokers Guides Manufacturing Business Transitions",
+      "source": "Automation Alley",
       "date": "2026-10-21",
-      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-21-dakkota-integrated-systems-llc"
+      "url": "https://automationalley.com/2026/10/21/from-owner-to-owner-how-praxis-business-brokers-guides-manufacturing-business-transitions/"
     },
     {
       "lane": "manufacturing",
@@ -51,6 +59,14 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-21",
       "url": "https://www.manufacturingdive.com/news/us-faces-national-security-risks-without-aluminum-smelters-report/833591/"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "Dakkota Integrated Systems, LLC — announced closure, Detroit, 397 jobs, effective December 31, 2026",
+      "source": "Michigan WARN (LEO)",
+      "date": "2026-10-21",
+      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-21-dakkota-integrated-systems-llc"
     },
     {
       "lane": "michigan",
@@ -91,22 +107,6 @@
       "source": "Automation Alley",
       "date": "2026-10-20",
       "url": "https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Lawsuit accuses Essity, Edgewell, J&J of violating PFAS ban in California",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-20",
-      "url": "https://www.manufacturingdive.com/news/carefree-edgewell-essity-jj-gelsons-lawsuit-pfoa-pfas-california/833296/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Cleveland-Cliffs posts ‘strongest’ quarter in three years: CFO",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-20",
-      "url": "https://www.manufacturingdive.com/news/cleveland-cliffs-posts-strongest-quarter-three-years-cfo-says-q3-2026/833456/"
     },
     {
       "lane": "ai-standards",
