@@ -14,11 +14,11 @@ article's sector table is summarized in speech (its largest
 rows), never read cell by cell; links are not read aloud —
 sources are "linked in the article."
 
-- Voice: Mr Wellington (ElevenLabs)
-- Chapters: 7 · Total runtime: 8:04 (484 seconds, measured per file)
+- Voice: Brian (ElevenLabs)
+- Chapters: 7 · Total runtime: 6:24 (384 seconds, measured per file)
 - Audio: /assets/audio/oakland-county-job-losses/ch-01.mp3 … ch-07.mp3
 
-## 01 · HEADLINE — Moving the wrong way, and moving alone (1:00)
+## 01 · HEADLINE — Moving the wrong way, and moving alone (0:45)
 
 **Key points**
 
@@ -32,7 +32,7 @@ sources are "linked in the article."
 
 Oakland County is moving the wrong way, and it is moving alone. In August twenty twenty-six, six hundred forty-eight thousand Oakland County residents were employed — about nine thousand six hundred fewer than a year earlier — and the county unemployment rate stood at four point seven percent, up from three point seven percent in August twenty twenty-five. Measured by where the jobs are instead of where the workers live, the picture matches: seven hundred one thousand nine hundred jobs located in Oakland County in March twenty twenty-six, down one point seven percent from a year earlier, while Michigan as a whole, Wayne County, and Macomb County each edged up zero point three percent. Here is what the evidence shows — including the part of the drop we cannot yet explain.
 
-## 02 · WHERE THE JOBS WENT — A concentrated decline, not a broad one (1:08)
+## 02 · WHERE THE JOBS WENT — A concentrated decline, not a broad one (0:58)
 
 **Key points**
 
@@ -46,7 +46,7 @@ Oakland County is moving the wrong way, and it is moving alone. In August twenty
 
 The University of Michigan's Research Seminar in Quantitative Economics publishes an annual outlook for the county, and its April twenty twenty-six edition puts the county's twenty twenty-five private-sector loss at roughly three thousand seven hundred jobs — against a forecast, a year earlier, of a three thousand four hundred job gain. The sector detail shows a concentrated decline, not a broad one. The largest loss is professional, scientific, and technical services, down four thousand six hundred six — the engineering, research, and technical-services firms clustered around the auto industry. Health care and social assistance, the county's largest sector, grew by four thousand six hundred fifty-five. Motor vehicle manufacturing fell one thousand four hundred twenty-eight. And the outlook projects professional and technical services to lose roughly two thousand six hundred more jobs through twenty twenty-eight.
 
-## 03 · CAUSE ONE — The EV pullback, in employers' own filings (1:20)
+## 03 · CAUSE ONE — The EV pullback, in employers' own filings (1:06)
 
 **Key points**
 
@@ -60,7 +60,7 @@ The University of Michigan's Research Seminar in Quantitative Economics publishe
 
 The best-documented driver is the electric-vehicle retrenchment, stated in employers' own WARN filings — the state's record of covered layoffs and closures. Webasto closed its Rochester Hills plant, two hundred forty-four jobs, and consolidated its New Hudson operation, one hundred thirty-four jobs, into Plymouth Township. Dana Thermal Products in Auburn Hills filed for two hundred jobs, citing EV demand and customer orders. Freudenberg Battery Power Systems and XALT Energy in Auburn Hills filed for ninety-four combined, citing the collapse in heavy-duty EV demand, and ceased operations. Avancez in Hazel Park filed for one hundred forty-three after GM cancelled the second shift at Factory Zero. Akebono in Farmington Hills filed for forty-eight, mostly engineering roles. And the county's expected offset kept slipping: GM's Orion Township plant, idle since Bolt production ended in twenty twenty-three, reversed in June twenty twenty-five from electric trucks to gasoline SUVs and pickups, with production now expected from early twenty twenty-seven.
 
-## 04 · CAUSE TWO — Consolidation, including work that left the county (1:12)
+## 04 · CAUSE TWO — Consolidation, including work that left the county (0:57)
 
 **Key points**
 
@@ -74,7 +74,7 @@ The best-documented driver is the electric-vehicle retrenchment, stated in emplo
 
 The largest single event is not automotive at all. The Fifth Third–Comerica merger, closed in February twenty twenty-six, produced the county's two biggest WARN filings of twenty twenty-six: five hundred two jobs in Farmington Hills and two hundred thirty-four in Auburn Hills, phased from July through November, alongside seventy-five Michigan branch closures. A year earlier, Flagstar Bank's Troy operation shed roughly four hundred seventy-six positions across three filings after its mortgage-servicing business was sold. Other work did not disappear — it moved. Tribar Manufacturing consolidated Wixom, one hundred eighty-eight jobs, to Howell in Livingston County. Akasol is moving production from Hazel Park toward Seneca, South Carolina — one hundred eighty-eight jobs across its Hazel Park and Warren sites. The Kresge Foundation will move its headquarters from Troy to Detroit, though not until twenty twenty-eight.
 
-## 05 · THE AUGUST QUESTION — How much of the drop is real? (1:39)
+## 05 · THE AUGUST QUESTION — How much of the drop is real? (1:19)
 
 **Key points**
 
@@ -88,7 +88,7 @@ The largest single event is not automotive at all. The Fifth Third–Comerica me
 
 Honesty about the headline number matters, so the article digs into its weakest part. Roughly eight thousand of the nine thousand six hundred job drop appears in a single month — August twenty twenty-six — and that month does not behave like layoffs. People did not move into unemployment; they vanished from the count. Statewide, employed residents fell about twenty-five thousand while the number of unemployed Michiganders was unchanged — a labor-force exit on paper, with participation falling to fifty-eight point eight percent. The claims data contradict a layoff wave: initial claims were three thousand seven hundred thirty-nine in the week ended August twenty-ninth, down four hundred sixty from the week before, and insured unemployment fell all summer, from about fifty-one thousand in late July to under forty thousand by early September. Every region moved the same way — employment down six to seven percent over the year and unemployment also down ten to fourteen percent. Real job losses do not lower unemployment everywhere at once. A shifted statistical baseline does — and the baseline did shift, when new census population controls cut the national estimates by about one point four million on paper in January twenty twenty-six.
 
-## 06 · THE OFFSETS — Smaller, but real (0:53)
+## 06 · THE OFFSETS — Smaller, but real (0:41)
 
 **Key points**
 
@@ -102,7 +102,7 @@ Honesty about the headline number matters, so the article digs into its weakest 
 
 The counter-evidence is real, if smaller. Health care added four thousand six hundred fifty-five jobs in twenty twenty-five. Stellantis hired roughly two thousand engineers at its Auburn Hills headquarters in spring twenty twenty-six — then confirmed a white-collar hiring pause in September, citing cost pressure. Looking forward, the announcements are pledges, not payroll: Slate Auto committed to three hundred ninety-two jobs in Troy over five years; Methode Electronics is moving its headquarters from Chicago to Southfield, with ninety jobs projected by twenty thirty; and GM Orion's gasoline-truck production, from early twenty twenty-seven, is the largest single rebound in view.
 
-## 07 · WHAT WE ARE WATCHING — Checkpoints, not vibes (0:52)
+## 07 · WHAT WE ARE WATCHING — Checkpoints, not vibes (0:38)
 
 **Key points**
 

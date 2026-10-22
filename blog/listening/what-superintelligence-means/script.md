@@ -12,11 +12,11 @@ the article's own; the article is deliberately number-free
 and so is this script; links are not read aloud — Sandra
 Rogers' piece is "linked in the article."
 
-- Voice: Mr Wellington (ElevenLabs)
-- Chapters: 5 · Total runtime: 4:20 (260 seconds, measured per file)
+- Voice: Brian (ElevenLabs)
+- Chapters: 5 · Total runtime: 3:37 (217 seconds, measured per file)
 - Audio: /assets/audio/what-superintelligence-means/ch-01.mp3 … ch-05.mp3
 
-## 01 · THE WORD — A term is being spent on tools that don't match it (0:51)
+## 01 · THE WORD — A term is being spent on tools that don't match it (0:45)
 
 **Key points**
 
@@ -30,7 +30,7 @@ Rogers' piece is "linked in the article."
 
 Superintelligence is having a moment. A recent executive order proclaims the dawn of an era of Super Intelligence, and public remarks have applied the term to today's AI models. Sandra Rogers published a careful piece this week arguing that this is a category error worth correcting before it hardens into habit. She is right — and the reason matters well beyond semantics. We are an engineering firm, not a linguistics seminar. But our whole method starts with questioning foundational assumptions until what is actually true falls out, and vocabulary is a foundational assumption. When the words are wrong, everything built on them — budgets, timelines, training plans, safety rules — inherits the error.
 
-## 02 · THE LADDER — Three words, three different things (0:59)
+## 02 · THE LADDER — Three words, three different things (0:48)
 
 **Key points**
 
@@ -44,7 +44,7 @@ Superintelligence is having a moment. A recent executive order proclaims the daw
 
 The field has a standard ladder, and it is worth being precise about the rungs. Narrow AI is everything that actually exists today: chatbots, image generators, recommendation engines, agentic assistants that book meetings and write code — extraordinary at bounded tasks, and without understanding beyond them. Artificial general intelligence would be a machine with human-level intellect across domains, able to reason, plan, and learn in unrelated contexts the way a person can. It is a theoretical milestone. It does not exist. Superintelligence would be an intellect beyond the best human minds in practically every field — thinking faster, and in directions we could not follow. It does not exist either, and serious researchers debate whether it should ever be built.
 
-## 03 · THE COST — Buying and planning against a capability that isn't there (0:58)
+## 03 · THE COST — Buying and planning against a capability that isn't there (0:48)
 
 **Key points**
 
@@ -58,7 +58,7 @@ The field has a standard ladder, and it is worth being precise about the rungs. 
 
 It would be easy to shrug this off as vocabulary drift. It is not harmless. Start with buying. When a pitch deck says superintelligence, a buyer hears a capability that does not exist — and budgets, schedules, and staffing get built against it. We teach a line in our AI one-oh-one course that applies verbatim here: confident wording does not mean the claim is right. A term is not evidence. Then planning. Different measures cannot be added together just because they sound similar, and the same discipline applies to technology categories. A training program designed for narrow AI — the tools that exist — looks nothing like one designed for a hypothetical general intelligence. Plan for science fiction and you misallocate real money, real curriculum, and real people's time.
 
-## 04 · THE COST — Oversight fits the category of the thing governed (0:31)
+## 04 · THE COST — Oversight fits the category of the thing governed (0:24)
 
 **Key points**
 
@@ -72,7 +72,7 @@ It would be easy to shrug this off as vocabulary drift. It is not harmless. Star
 
 The third cost is oversight. Governance fits the category of the thing governed. A narrow tool needs what we already know how to do: access controls, verification, a human accountable for the output. Blurring the category cuts both ways — it makes people fear the tool they actually have, and under-prepares them for systems that do not exist yet. Precision is what keeps both errors out.
 
-## 05 · THE FIX — Fixed terms, and one question to steal (1:01)
+## 05 · THE FIX — Fixed terms, and one question to steal (0:52)
 
 **Key points**
 

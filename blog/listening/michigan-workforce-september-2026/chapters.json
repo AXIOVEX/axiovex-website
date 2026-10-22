@@ -1,7 +1,20 @@
 {
   "slug": "michigan-workforce-september-2026",
   "title": "Michigan's September workforce data: what the numbers say, and what they don't",
-  "voice": "Mr Wellington (ElevenLabs)",
+  "voice": "Brian (ElevenLabs)",
+  "defaultVoice": "nPczCjzI2devNBz1zQrb",
+  "voices": [
+    {
+      "id": "nPczCjzI2devNBz1zQrb",
+      "name": "Brian",
+      "description": "Deep and resonant, comforting and steady."
+    },
+    {
+      "id": "EXAVITQu4vr4xnSDxMaL",
+      "name": "Sarah",
+      "description": "Warm and reassuring, with a calm, confident delivery."
+    }
+  ],
   "chapters": [
     {
       "kicker": "HEADLINE",
@@ -13,7 +26,17 @@
       ],
       "takeaway": "Start with what the numbers actually say, not with the headline rate.",
       "audio": "/assets/audio/michigan-workforce-september-2026/ch-01.mp3",
-      "durationSec": 43
+      "durationSec": 33,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/michigan-workforce-september-2026/ch-01.mp3",
+          "durationSec": 33
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/michigan-workforce-september-2026/EXAVITQu4vr4xnSDxMaL/ch-01.mp3",
+          "durationSec": 34
+        }
+      }
     },
     {
       "kicker": "THE RATE",
@@ -25,7 +48,17 @@
       ],
       "takeaway": "When the labor force itself shrinks by 25,000, the unemployment rate stays deceptively calm.",
       "audio": "/assets/audio/michigan-workforce-september-2026/ch-02.mp3",
-      "durationSec": 51
+      "durationSec": 39,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/michigan-workforce-september-2026/ch-02.mp3",
+          "durationSec": 39
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/michigan-workforce-september-2026/EXAVITQu4vr4xnSDxMaL/ch-02.mp3",
+          "durationSec": 44
+        }
+      }
     },
     {
       "kicker": "THE WIDER LENS",
@@ -37,7 +70,17 @@
       ],
       "takeaway": "These measures count different populations — the report never adds them together, and treats warning signals as signals, not forecasts.",
       "audio": "/assets/audio/michigan-workforce-september-2026/ch-03.mp3",
-      "durationSec": 58
+      "durationSec": 44,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/michigan-workforce-september-2026/ch-03.mp3",
+          "durationSec": 44
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/michigan-workforce-september-2026/EXAVITQu4vr4xnSDxMaL/ch-03.mp3",
+          "durationSec": 45
+        }
+      }
     },
     {
       "kicker": "FIVE DECISIONS",
@@ -49,7 +92,17 @@
       ],
       "takeaway": "Match program capacity to verified regional demand — and keep the foundations while tasks change.",
       "audio": "/assets/audio/michigan-workforce-september-2026/ch-04.mp3",
-      "durationSec": 63
+      "durationSec": 56,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/michigan-workforce-september-2026/ch-04.mp3",
+          "durationSec": 56
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/michigan-workforce-september-2026/EXAVITQu4vr4xnSDxMaL/ch-04.mp3",
+          "durationSec": 59
+        }
+      }
     },
     {
       "kicker": "FIVE DECISIONS",
@@ -61,7 +114,17 @@
       ],
       "takeaway": "The cohort years are decision horizons, not occupation expiry dates.",
       "audio": "/assets/audio/michigan-workforce-september-2026/ch-05.mp3",
-      "durationSec": 65
+      "durationSec": 53,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/michigan-workforce-september-2026/ch-05.mp3",
+          "durationSec": 53
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/michigan-workforce-september-2026/EXAVITQu4vr4xnSDxMaL/ch-05.mp3",
+          "durationSec": 51
+        }
+      }
     },
     {
       "kicker": "THE STANDARD",
@@ -73,7 +136,17 @@
       ],
       "takeaway": "In a space full of confident forecasts, restraint is a feature.",
       "audio": "/assets/audio/michigan-workforce-september-2026/ch-06.mp3",
-      "durationSec": 49
+      "durationSec": 41,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/michigan-workforce-september-2026/ch-06.mp3",
+          "durationSec": 41
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/michigan-workforce-september-2026/EXAVITQu4vr4xnSDxMaL/ch-06.mp3",
+          "durationSec": 41
+        }
+      }
     }
   ]
 }

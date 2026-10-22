@@ -14,11 +14,11 @@ article's position-sheet table is summarized in speech (the
 role families and the largest titles), never read cell by
 cell; links are not read aloud.
 
-- Voice: Daniel - Steady Broadcaster (ElevenLabs)
-- Chapters: 8 · Total runtime: 9:29 (569 seconds, measured per file)
+- Voice: Brian (ElevenLabs)
+- Chapters: 8 · Total runtime: 7:52 (472 seconds, measured per file)
 - Audio: /assets/audio/trinity-health-livonia-557/ch-01.mp3 … ch-08.mp3
 
-## 01 · HEADLINE — The work is changing employers, not disappearing (0:52)
+## 01 · HEADLINE — The work is changing employers, not disappearing (0:39)
 
 **Key points**
 
@@ -32,7 +32,7 @@ cell; links are not read aloud.
 
 Starting Sunday, October twenty-fifth, five hundred fifty-seven people who keep the computers running at one of the largest health systems in the country will begin losing their jobs — not because the work went away, but because the work is changing employers. Trinity Health, headquartered in Livonia, is handing its internal IT service desk and applications support to an outside technology company it has not named. The separations run in stages through November twenty-ninth, twenty twenty-six, and every one of the five hundred fifty-seven positions sits at the system's headquarters campus in Livonia. Most layoff coverage stops at the headline number. This one deserves a closer read.
 
-## 02 · WHAT HAPPENED — An announcement in June, a number in September (1:22)
+## 02 · WHAT HAPPENED — An announcement in June, a number in September (1:02)
 
 **Key points**
 
@@ -46,7 +46,7 @@ Starting Sunday, October twenty-fifth, five hundred fifty-seven people who keep 
 
 The sequence is documented. On June eighteenth, twenty twenty-six, Trinity Health announced it would move its IT service desk and applications support to an outside technology partner by the end of twenty twenty-six. It did not say how many jobs were involved. On September third, the number arrived in a WARN notice filed with the state's Department of Labor and Economic Opportunity: five hundred fifty-seven positions, all of them internal technology support — none clinical or patient-facing. One detail is already contested: the Free Press reported a fifty-two day gap between the notice and the first separations, against the federal rule of at least sixty days' written notice, while Trinity states the notices were issued at least sixty days in advance. A Chicago law firm says it is investigating a possible violation. Both claims are on the record. Trinity is not a marginal employer: ninety-one acute-care hospitals, about one hundred thirty-three thousand employees across twenty-three states, and a Michigan arm running nine hospitals with twenty-six thousand employees.
 
-## 03 · WHO THE 557 ARE — Seven role families (1:05)
+## 03 · WHO THE 557 ARE — Seven role families (0:56)
 
 **Key points**
 
@@ -60,7 +60,7 @@ The sequence is documented. On June eighteenth, twenty twenty-six, Trinity Healt
 
 The WARN notice arrived with a four-page position sheet, published by the state, listing every affected job title and how many people hold it — one hundred twenty-nine lines of them. Grouped by the work they describe, there are seven role families. The largest is systems administration and infrastructure: one hundred fifteen people, including fifty-two system-administrator-titled roles, thirty-two of them Windows server specialists. The service desk itself is second, at seventy-six — its largest single title holds forty-nine people. Then applications analysis and engineering at sixty-eight; IT management and process staff at sixty-seven; clinical and imaging applications at forty-two; identity, access, and security at thirty-six; and data and database at eighteen. The shape is unmistakable: not a cross-section of an IT department, but an entire operating layer lifted out at once.
 
-## 04 · THE DISCREPANCY — The filing's own numbers do not add up (0:57)
+## 04 · THE DISCREPANCY — The filing's own numbers do not add up (0:49)
 
 **Key points**
 
@@ -74,7 +74,7 @@ The WARN notice arrived with a four-page position sheet, published by the state,
 
 One thing in that sheet does not reconcile, and the article does not smooth it over. The sheet's lines sum to four hundred twenty-two. The total printed at the bottom of the same document — the figure in the state's notice and in every headline — is five hundred fifty-seven. That leaves one hundred thirty-five people inside the total with no title anywhere in the published list. The sheet prints one hundred twenty-nine lines naming one hundred twenty-two distinct titles; press coverage reported one hundred twenty job titles. Possible benign explanations — a second sheet that was not published, titles withheld from the public version, a total that also counts staff at another site — are stated as possibilities only. None is endorsed. What can be checked is the arithmetic, and the arithmetic has a hole in it.
 
-## 05 · ABSORPTION — The openings exist; the timing does not work (1:25)
+## 05 · ABSORPTION — The openings exist; the timing does not work (1:12)
 
 **Key points**
 
@@ -88,7 +88,7 @@ One thing in that sheet does not reconcile, and the article does not smooth it o
 
 Can Michigan absorb them? The state's long-range outlook gives projected annual openings, family by family. Computer user support specialists — the category the service desk maps to: one thousand five hundred thirty openings a year, growth of two point zero percent, typical wages of twenty-two to thirty-two dollars an hour. Computer systems analysts: one thousand forty-five openings, growth six point eight percent. Computer and information systems managers: one thousand one hundred fifteen openings, growth twelve point four percent. Information security analysts: only two hundred fifty-five openings a year — but the fastest growth rate on the entire list, twenty-five point six percent. Software developers: three thousand three hundred sixty openings a year — the largest IT number in the state outlook, for the family this filing touches least. The aggregate math works. The timing math does not: openings are a flow spread across twelve months and the whole state, while five hundred fifty-seven people in one metro area enter the same segment of it inside a five-week window.
 
-## 06 · THE PORTABLE ASSET — Health-IT experience itself (1:15)
+## 06 · THE PORTABLE ASSET — Health-IT experience itself (1:06)
 
 **Key points**
 
@@ -102,7 +102,7 @@ Can Michigan absorb them? The state's long-range outlook gives projected annual 
 
 The single most portable asset in the building is the one no headline mentioned: health-IT experience itself. Trinity Health runs on Epic, the dominant hospital software platform, and Michigan's other large systems hire Epic application analysts continuously. Corewell Health has repeatedly posted Epic analyst roles, some accepting certification completed within ninety days of hire; Henry Ford Health in Detroit likewise posts systems-analyst roles on an ongoing basis. An applications analyst who supports Epic at Trinity is not starting over — they are changing buildings. Two constraints cut across all of it. Location: Livonia is in Wayne County, where unemployment stood at six point nine percent in August twenty twenty-six — among the highest of Michigan's eighty-three counties. And competition: at least four health systems outsourced IT in twenty twenty-six, including UnityPoint Health's two hundred seven roles in April — each putting similar workers into similar searches.
 
-## 07 · PATHWAYS — Real machinery, slower than the schedule (1:15)
+## 07 · PATHWAYS — Real machinery, slower than the schedule (1:06)
 
 **Key points**
 
@@ -116,7 +116,7 @@ The single most portable asset in the building is the one no headline mentioned:
 
 For the workers who need to move rather than transfer, Michigan's machinery is specific. A WARN filing is precisely the trigger the Michigan Works! system is built for — for Wayne County, SEMCA Michigan Works! Under the federal workforce act, laid-off workers qualify as dislocated workers for career services and, where funds allow, training money: the local plan caps non-work-based training at five thousand dollars per participant and work-based training at ten thousand dollars. Michigan Reconnect pays in-district community-college tuition for residents twenty-five and older with no prior college degree. Schoolcraft College sits in Livonia itself, minutes from the Trinity campus, teaching the exact credentials this market asks for. And the Going PRO Talent Fund reimburses employers roughly two thousand dollars per trainee — three thousand five hundred for registered apprenticeships. None of this is fast. A certification takes months, not the five weeks between now and November twenty-ninth.
 
-## 08 · WHAT WE ARE WATCHING — The vendor's name, and where the roles land (1:18)
+## 08 · WHAT WE ARE WATCHING — The vendor's name, and where the roles land (1:02)
 
 **Key points**
 

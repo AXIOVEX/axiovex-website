@@ -1,7 +1,20 @@
 {
   "slug": "what-superintelligence-means",
   "title": "What superintelligence actually means — and why today's AI isn't it",
-  "voice": "Mr Wellington (ElevenLabs)",
+  "voice": "Brian (ElevenLabs)",
+  "defaultVoice": "nPczCjzI2devNBz1zQrb",
+  "voices": [
+    {
+      "id": "nPczCjzI2devNBz1zQrb",
+      "name": "Brian",
+      "description": "Deep and resonant, comforting and steady."
+    },
+    {
+      "id": "EXAVITQu4vr4xnSDxMaL",
+      "name": "Sarah",
+      "description": "Warm and reassuring, with a calm, confident delivery."
+    }
+  ],
   "chapters": [
     {
       "kicker": "THE WORD",
@@ -13,7 +26,17 @@
       ],
       "takeaway": "Vocabulary is a foundational assumption — get it wrong and everything built on it inherits the error.",
       "audio": "/assets/audio/what-superintelligence-means/ch-01.mp3",
-      "durationSec": 51
+      "durationSec": 45,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/what-superintelligence-means/ch-01.mp3",
+          "durationSec": 45
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/what-superintelligence-means/EXAVITQu4vr4xnSDxMaL/ch-01.mp3",
+          "durationSec": 45
+        }
+      }
     },
     {
       "kicker": "THE LADDER",
@@ -25,7 +48,17 @@
       ],
       "takeaway": "Every tool we deploy, teach, or evaluate sits on the first rung. All of it.",
       "audio": "/assets/audio/what-superintelligence-means/ch-02.mp3",
-      "durationSec": 59
+      "durationSec": 48,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/what-superintelligence-means/ch-02.mp3",
+          "durationSec": 48
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/what-superintelligence-means/EXAVITQu4vr4xnSDxMaL/ch-02.mp3",
+          "durationSec": 50
+        }
+      }
     },
     {
       "kicker": "THE COST",
@@ -37,7 +70,17 @@
       ],
       "takeaway": "Confident wording does not mean the claim is right.",
       "audio": "/assets/audio/what-superintelligence-means/ch-03.mp3",
-      "durationSec": 58
+      "durationSec": 48,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/what-superintelligence-means/ch-03.mp3",
+          "durationSec": 48
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/what-superintelligence-means/EXAVITQu4vr4xnSDxMaL/ch-03.mp3",
+          "durationSec": 51
+        }
+      }
     },
     {
       "kicker": "THE COST",
@@ -49,7 +92,17 @@
       ],
       "takeaway": "Governance fits the category of the thing governed.",
       "audio": "/assets/audio/what-superintelligence-means/ch-04.mp3",
-      "durationSec": 31
+      "durationSec": 24,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/what-superintelligence-means/ch-04.mp3",
+          "durationSec": 24
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/what-superintelligence-means/EXAVITQu4vr4xnSDxMaL/ch-04.mp3",
+          "durationSec": 25
+        }
+      }
     },
     {
       "kicker": "THE FIX",
@@ -61,7 +114,17 @@
       ],
       "takeaway": "The next time a pitch says superintelligence, ask: which rung? If the speaker can't answer, you have learned something about the pitch.",
       "audio": "/assets/audio/what-superintelligence-means/ch-05.mp3",
-      "durationSec": 61
+      "durationSec": 52,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/what-superintelligence-means/ch-05.mp3",
+          "durationSec": 52
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/what-superintelligence-means/EXAVITQu4vr4xnSDxMaL/ch-05.mp3",
+          "durationSec": 54
+        }
+      }
     }
   ]
 }
