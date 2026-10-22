@@ -60,16 +60,20 @@ and again in our tests: when these systems change, they tend to
 **flip, not slide** — a state holds, holds, holds, and then switches,
 rather than melting gradually from one form into the next.
 
-**Gravity may be counting.** Take any region and draw its boundary —
-a fence. Now count the connections that cross the fence. The count
-grows with the *size of the fence*, not with the amount of stuff
-inside it. A pattern like that shows up in real physics in a
-famous place: the most a region of space can hold — measured as
-information, or disorder — grows with the area of its boundary,
-not with its volume. Black holes are where physics was first
-forced to face this, and nobody has ever fully explained why
-nature keeps its books by area. In our framework the area pattern
-falls out of pure counting. Here is the honest catch, and we state
+**Gravity may be counting.** Take any region and cut it at its widest
+slice. Now count the elements that straddle the cut — the last layer
+inside it and the first layer outside. That count grows with the *size of
+the slice*, not with the amount of stuff inside the region. A pattern like
+that shows up in real physics in a famous place: the most a region of
+space can hold — measured as information, or disorder — grows with the
+area of its boundary, not with its volume. Black holes are where physics
+was first forced to face this, and nobody has ever fully explained why
+nature keeps its books by area. Counts of this kind were first studied in
+the causal-set literature in 2015, which established the growth law and
+its exact constants for surfaces without end. What this program added is
+the same count for a *finite* region — whose slice has an edge, and the
+edge changes the count by an amount that can be computed exactly — and
+registered tests of those exact numbers, on the board below. Here is the honest catch, and we state
 it as plainly as the result: the counting argument needs one extra
 rule — a limit on how much a boundary can carry. We tried to derive
 that rule from the framework's basic assumptions, and we could not.
