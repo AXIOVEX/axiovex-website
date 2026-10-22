@@ -60,17 +60,27 @@
   sitemap.xml (lastmod advanced to 2026-10-22 by the site-sync
   bot's regeneration) and llms.txt routes readers to /documents/
   — the same treatment the AI 101 documents receive.
-- [ ] T008 **GATE — blog article (FR-006).** Owner ordered
-  publication 2026-10-22 (publish now; go-live date 2026-10-22).
-  Article `blog/posts/2026-10-22-endorsed-by-experts.md` +
-  listening edition built under the universal roster rule
-  (spec 030): `build-listening.mjs endorsed-by-experts
-  --all-voices` — fidelity gate PASS (6 chapters, 898 spoken
-  words); 5,200 narration characters per voice, 10,400 total;
-  Brian default (flat paths, 5:39 total) + Sarah alternate;
-  `verify-voices.mjs` PASS on the local tree. Staged with the
-  full site build; production promotion + rendered verification
-  recorded below on completion.
+- [x] T008 **Blog article (FR-006) — PUBLISHED 2026-10-22.**
+  Owner ordered publication 2026-10-22 (publish now; go-live
+  date 2026-10-22). Article
+  `blog/posts/2026-10-22-endorsed-by-experts.md` + listening
+  edition built under the universal roster rule (spec 030):
+  `build-listening.mjs endorsed-by-experts --all-voices` —
+  fidelity gate PASS (6 chapters, 898 spoken words); 5,200
+  narration characters per voice, 10,400 total; Brian default
+  (flat paths, 5:39 total) + Sarah alternate;
+  `verify-voices.mjs` PASS on the local tree. Staging commit
+  f14eb2e (full site build; staging's stale generated blog
+  files regenerated — index went 5 → 7 articles, adding this
+  article and the already-committed Trinity post). Production:
+  file-level promotion commit 0646787 (16 files, every blob
+  byte-identical to staging), site-sync regeneration 2e6b772.
+  Verified on production: article page live with both
+  whitepaper links; chapters.json serves both voices with
+  Brian as default; sampled MP3s from both voices serve 200;
+  blog index lists the article first, dated October 22, 2026;
+  guards at baselines (robots c6d05246…, _headers 7742d340…).
+  Live: https://axiovexsystems.com/blog/endorsed-by-experts/
 - [ ] T009 **GATE — LinkedIn sequence (FR-007).** Not in this
   execution. Copy owner-approved verbatim; personal post on the
   article's day ~10:30 ET (link in first comment); company-page
