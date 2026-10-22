@@ -246,17 +246,23 @@ boundary line. Filter counts are computed from the array.
    could not separate the candidates.
 10. **Study 024 — The boundary counting law.** CONFIRMED.
     Registration 67CR9 · 10.17605/OSF.IO/67CR9. Meaning:
-    count the connections crossing a region's boundary
-    and the count grows by an exact law — with the size
-    of the boundary, not the amount inside it. The
-    measured exponent sat on the predicted value at every
-    scale (0.5126, inside the registered band around
-    one-half), and the law's coefficient matched its
-    prediction as well. Boundary: the law is confirmed
-    inside this model. Gravity's version needs one extra
-    rule — a limit on what a boundary can carry — which
-    is an open premise this study did not test (see the
-    framework section).
+    Count the elements straddling a region's boundary —
+    the last layer inside the cut and the first layer
+    outside it — and the count grows by an exact law:
+    with the size of the boundary, not the amount
+    inside it. The measured exponent sat on the
+    predicted value at every scale (0.5126, inside the
+    registered band around one-half), and the law's
+    coefficient matched its prediction as well.
+    Boundary: The law is confirmed inside this model.
+    The growth law for counts of this kind was first
+    established in the causal-set literature in 2015;
+    this study's contribution is the exact finite-size
+    form for a finite region, and its registered test.
+    Gravity's version needs one extra rule — a limit on
+    what a boundary can carry — which is an open
+    premise this study did not test (see the framework
+    section).
 11. **Study 025 — The plateau-height claim.** REJECTED.
     Registration 8UYJG · 10.17605/OSF.IO/8UYJG. Meaning:
     building on Study 023, we claimed the record's
