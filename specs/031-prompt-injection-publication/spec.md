@@ -6,10 +6,12 @@ website-side change (documents mirror + blog article) lands on
 
 **Created**: 2026-10-22
 
-**Status**: IN EXECUTION — owner go given 2026-10-22 ("ASAP") for
-the whitepaper **document** under the publish pre-authorization
-below. Blog article (FR-006) and LinkedIn (FR-007) are **not** part
-of this execution and remain gated.
+**Status**: WHITEPAPER DOCUMENT PUBLISHED 2026-10-22 — owner go
+given 2026-10-22 ("ASAP") under the publish pre-authorization
+below; FR-001…FR-005 executed and verified (see tasks.md T006/T007
+for the staging + production served-identity evidence). Blog
+article (FR-006) and LinkedIn (FR-007) are **not** part of this
+execution and remain gated.
 
 **Direction (owner, 2026-10-22)**: publish the prompt-injection case
 (research run of 2026-10-22; primary record

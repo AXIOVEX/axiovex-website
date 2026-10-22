@@ -27,13 +27,39 @@
   `docs/endorsed-by-experts-prompt-injection.pdf`, sources at
   `src/whitepaper/`, `docs.json` entry (order 3), README +
   CHANGELOG updated. Commit `a2f0457`, pushed.
-- [ ] T006 Staging verification (FR-004): site-sync dispatched
-  against `staging`; card + PDF + served-byte markers verified;
-  /documents/ screenshots at desktop + mobile recorded.
-- [ ] T007 Production publication (FR-005) under the
-  pre-authorization: merge `staging` → `main` (guard proofs per
-  spec 010), then the four served-identity checks of
-  spec.md §Authorization on production, recorded here.
+- [x] T006 Staging verification (FR-004) — COMPLETED 2026-10-22.
+  Note: `site-sync.yml` dispatched against `staging` built the
+  mirror but its publish step refuses non-main branches
+  ("Automated publication is restricted to this repository main
+  branch"), so the mirror was built locally in the staging
+  worktree (generator output scoped to the documents files only)
+  and committed as `20e2168`. Verified on
+  staging.axiovexsystems.com: card on /documents/ with the
+  approved title/description; PDF 200 + `application/pdf`; served
+  bytes byte-identical to the final build (sha256 f8cbb9c9…)
+  with the Exhibit A line and © footer in the text layer;
+  /documents/ rendered at desktop (1440) + mobile (390) and
+  inspected.
+- [x] T007 Production publication (FR-005) — COMPLETED
+  2026-10-22 under the pre-authorization. Promotion was
+  file-level (the house pattern; a branch merge would have
+  replayed unrelated staging history): one git-data-API commit
+  on `main`, `722cb73`, carrying exactly documents/index.html
+  (diff vs. previous main = the new card only), the PDF, and this
+  spec package. Guards after the commit: `robots.txt` blob
+  c6d05246…, `_headers` blob 7742d340… — both unchanged
+  (spec-010 baselines). Served-identity checks on production:
+  (1) card rendered on https://axiovexsystems.com/documents/
+  with the approved title/description at desktop + mobile;
+  (2) PDF 200 + `application/pdf` at
+  /documents/files/endorsed-by-experts-prompt-injection.pdf;
+  (3) served bytes byte-identical to the final branded build
+  (sha256 f8cbb9c9…) — title page, Exhibit A line, and © footer
+  markers all present in the served text layer; (4)
+  discoverability parity: /documents/ is the indexed unit in
+  sitemap.xml (lastmod advanced to 2026-10-22 by the site-sync
+  bot's regeneration) and llms.txt routes readers to /documents/
+  — the same treatment the AI 101 documents receive.
 - [ ] T008 **GATE — blog article (FR-006).** Not in this
   execution. Owner approves the blog draft + staging render and
   sets the go-live date.
@@ -42,5 +68,7 @@
   article's day ~10:30 ET (link in first comment); company-page
   re-share the following Tuesday ~09:30 ET; each verified live
   with its URL recorded.
-- [ ] T010 Close out: spec status + tasks updated; outcome
-  recorded in the project record.
+- [x] T010 Close out: spec status + tasks updated with the
+  staging/production evidence (this file); outcome reported to
+  the owner 2026-10-22. Blog (T008) and LinkedIn (T009) remain
+  open as separate owner gates.
