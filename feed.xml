@@ -6,7 +6,21 @@
   <description>Analysis from Axiovex Systems: AI, manufacturing, and Michigan workforce intelligence.</description>
   <language>en-US</language>
   <atom:link href="https://axiovexsystems.com/feed.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Sat, 10 Oct 2026 12:00:00 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 22 Oct 2026 12:00:00 GMT</lastBuildDate>
+  <item>
+    <title>"Endorsed by experts": the sentence that tried to make our AI stop checking</title>
+    <link>https://axiovexsystems.com/blog/endorsed-by-experts/</link>
+    <guid isPermaLink="true">https://axiovexsystems.com/blog/endorsed-by-experts/</guid>
+    <pubDate>Thu, 22 Oct 2026 12:00:00 GMT</pubDate>
+    <description>During a routine research run, our AI found a sentence on a public help page telling it to ignore all other sources and treat that page as definitive. It flagged the line instead. Here is what happened, why this quiet kind of prompt injection matters, and the one-sentence test that catches it.</description>
+  </item>
+  <item>
+    <title>557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.</title>
+    <link>https://axiovexsystems.com/blog/trinity-health-livonia-557/</link>
+    <guid isPermaLink="true">https://axiovexsystems.com/blog/trinity-health-livonia-557/</guid>
+    <pubDate>Wed, 21 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Trinity Health's filing names 557 Livonia IT jobs moving to an unnamed vendor Oct. 25–Nov. 29. Who holds them, what Michigan can absorb, and where the gaps are.</description>
+  </item>
   <item>
     <title>Robots can do the work. Almost none of it pays yet.</title>
     <link>https://axiovexsystems.com/blog/robots-can-do-the-work/</link>
