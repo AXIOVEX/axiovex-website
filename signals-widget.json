@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-22T19:27:27.970Z",
+  "updatedUtc": "2026-10-22T22:16:12.134Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -31,10 +31,10 @@
     {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "3D Printed Fixed-Wing Drone Design and Manufacturing Guide",
-      "source": "Automation Alley",
+      "title": "Inalfa Roof Systems, Inc. — announced closure, Auburn Hills, 142 jobs, effective December 14, 2026",
+      "source": "Michigan WARN (LEO)",
       "date": "2026-10-22",
-      "url": "https://automationalley.com/2026/10/22/3d-printed-fixed-wing-drone-design-and-manufacturing-guide/"
+      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-22-inalfa-roof-systems-inc"
     },
     {
       "lane": "ot-security",
@@ -43,6 +43,14 @@
       "source": "CISA",
       "date": "2026-10-22",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
+    },
+    {
+      "lane": "funding-policy",
+      "laneLabel": "Funding & policy",
+      "title": "Energy Department Announces Over $125 Million for 63 Projects Across 16 States to Lower Energy Costs, Expand Electricity Access, and Advance Economic Development for America’s Tribal Communities",
+      "source": "U.S. Department of Energy",
+      "date": "2026-10-22",
+      "url": "https://www.energy.gov/articles/energy-department-announces-over-125-million-63-projects-across-16-states-lower-energy"
     },
     {
       "lane": "manufacturing",
@@ -63,10 +71,18 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Lockheed, Pentagon reached F-35 fighter jet deal for $7B",
+      "title": "Lockheed, Pentagon reach $7B F-35 fighter jet deal",
       "source": "Manufacturing Dive",
       "date": "2026-10-22",
       "url": "https://www.manufacturingdive.com/news/lockheed-martin-dod-war-f-35-lightning-contract-q3-2026/833692/"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "3D Printed Fixed-Wing Drone Design and Manufacturing Guide",
+      "source": "Automation Alley",
+      "date": "2026-10-22",
+      "url": "https://automationalley.com/2026/10/22/3d-printed-fixed-wing-drone-design-and-manufacturing-guide/"
     },
     {
       "lane": "ot-security",
@@ -91,22 +107,6 @@
       "source": "CISA",
       "date": "2026-10-22",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-04"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Siemens SENTRON 3NA COM Fuse",
-      "source": "CISA",
-      "date": "2026-10-22",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-05"
-    },
-    {
-      "lane": "funding-policy",
-      "laneLabel": "Funding & policy",
-      "title": "Energy Department Announces New Investments to Strengthen America's Power Grid and Lower Electricity Costs",
-      "source": "U.S. Department of Energy",
-      "date": "2026-10-20",
-      "url": "https://www.energy.gov/articles/energy-department-announces-new-investments-strengthen-americas-power-grid-and-lower"
     },
     {
       "lane": "ai-standards",
