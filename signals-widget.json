@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-22T15:28:38.023Z",
+  "updatedUtc": "2026-10-22T18:29:37.903Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -39,6 +39,30 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
+      "title": "3M expands collaboration with Amazon, forms GSEO partnership",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-22",
+      "url": "https://www.manufacturingdive.com/news/3m-amazon-gseo-expanded-beam-optical-fairmont-plant-closure-q3-2026/833615/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Honeywell Technologies raises 2026 outlook due to data center, AI demand",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-22",
+      "url": "https://www.manufacturingdive.com/news/honeywell-technologies-raises-2026-outlook-after-spinoff-aerospace-operations-q3-2026/833718/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Lockheed, Pentagon reach $7B F-35 fighter jet deal",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-22",
+      "url": "https://www.manufacturingdive.com/news/lockheed-martin-dod-war-f-35-lightning-contract-q3-2026/833692/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
       "title": "From Owner to Owner: How Praxis Business Brokers Guides Manufacturing Business Transitions",
       "source": "Automation Alley",
       "date": "2026-10-21",
@@ -55,34 +79,18 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
+      "title": "Micron announces new investment in critical minerals manufacturing",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-21",
+      "url": "https://www.manufacturingdive.com/news/micron-investment-critical-minerals-manufacturing-indium/833640/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
       "title": "The US faces national security risks without aluminum smelters: report",
       "source": "Manufacturing Dive",
       "date": "2026-10-21",
       "url": "https://www.manufacturingdive.com/news/us-faces-national-security-risks-without-aluminum-smelters-report/833591/"
-    },
-    {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
-      "title": "Dakkota Integrated Systems, LLC — announced closure, Detroit, 397 jobs, effective December 31, 2026",
-      "source": "Michigan WARN (LEO)",
-      "date": "2026-10-21",
-      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-21-dakkota-integrated-systems-llc"
-    },
-    {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
-      "title": "From Owner to Owner: How Praxis Business Brokers Guides Manufacturing Business Transitions",
-      "source": "Automation Alley",
-      "date": "2026-10-21",
-      "url": "https://automationalley.com/2026/10/21/from-owner-to-owner-how-praxis-business-brokers-guides-manufacturing-business-transitions/"
-    },
-    {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
-      "title": "557 IT jobs are leaving Trinity Health. The work is not leaving Michigan.",
-      "source": "Axiovex",
-      "date": "2026-10-21",
-      "url": "https://axiovexsystems.com/blog/trinity-health-livonia-557/"
     },
     {
       "lane": "ot-security",
@@ -99,14 +107,6 @@
       "source": "U.S. Department of Energy",
       "date": "2026-10-20",
       "url": "https://www.energy.gov/articles/energy-department-announces-new-investments-strengthen-americas-power-grid-and-lower"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit",
-      "source": "Automation Alley",
-      "date": "2026-10-20",
-      "url": "https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/"
     },
     {
       "lane": "ai-standards",

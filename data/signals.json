@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-22T15:28:38.023Z",
+  "updatedUtc": "2026-10-22T18:29:37.903Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -10,6 +10,27 @@
           "sourceId": "automation-alley",
           "title": "3D Printed Fixed-Wing Drone Design and Manufacturing Guide",
           "link": "https://automationalley.com/2026/10/22/3d-printed-fixed-wing-drone-design-and-manufacturing-guide/",
+          "date": "2026-10-22"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "3M expands collaboration with Amazon, forms GSEO partnership",
+          "link": "https://www.manufacturingdive.com/news/3m-amazon-gseo-expanded-beam-optical-fairmont-plant-closure-q3-2026/833615/",
+          "date": "2026-10-22"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Honeywell Technologies raises 2026 outlook due to data center, AI demand",
+          "link": "https://www.manufacturingdive.com/news/honeywell-technologies-raises-2026-outlook-after-spinoff-aerospace-operations-q3-2026/833718/",
+          "date": "2026-10-22"
+        },
+        {
+          "source": "Manufacturing Dive",
+          "sourceId": "manufacturing-dive",
+          "title": "Lockheed, Pentagon reach $7B F-35 fighter jet deal",
+          "link": "https://www.manufacturingdive.com/news/lockheed-martin-dod-war-f-35-lightning-contract-q3-2026/833692/",
           "date": "2026-10-22"
         },
         {
@@ -29,37 +50,16 @@
         {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "The US faces national security risks without aluminum smelters: report",
-          "link": "https://www.manufacturingdive.com/news/us-faces-national-security-risks-without-aluminum-smelters-report/833591/",
+          "title": "Micron announces new investment in critical minerals manufacturing",
+          "link": "https://www.manufacturingdive.com/news/micron-investment-critical-minerals-manufacturing-indium/833640/",
           "date": "2026-10-21"
         },
         {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit",
-          "link": "https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/",
-          "date": "2026-10-20"
-        },
-        {
           "source": "Manufacturing Dive",
           "sourceId": "manufacturing-dive",
-          "title": "Lawsuit accuses Essity, Edgewell, J&J of violating PFAS ban in California",
-          "link": "https://www.manufacturingdive.com/news/carefree-edgewell-essity-jj-gelsons-lawsuit-pfoa-pfas-california/833296/",
-          "date": "2026-10-20"
-        },
-        {
-          "source": "Manufacturing Dive",
-          "sourceId": "manufacturing-dive",
-          "title": "Cleveland-Cliffs posts ‘strongest’ quarter in three years: CFO",
-          "link": "https://www.manufacturingdive.com/news/cleveland-cliffs-posts-strongest-quarter-three-years-cfo-says-q3-2026/833456/",
-          "date": "2026-10-20"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Why Digital Leadership Fails When Decisions Drift Away From Operational Reality",
-          "link": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/",
-          "date": "2026-10-19"
+          "title": "The US faces national security risks without aluminum smelters: report",
+          "link": "https://www.manufacturingdive.com/news/us-faces-national-security-risks-without-aluminum-smelters-report/833591/",
+          "date": "2026-10-21"
         }
       ]
     },
