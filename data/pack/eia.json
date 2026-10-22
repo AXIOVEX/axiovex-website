@@ -1,7 +1,7 @@
 {
   "source": "EIA",
   "publisher": "U.S. Energy Information Administration",
-  "retrievedUtc": "2026-10-08T20:10:21.940Z",
+  "retrievedUtc": "2026-10-22T17:19:28.647Z",
   "vintage": "EIA API v2 monthly series, latest 24 months per series",
   "referencePeriod": "2026-07",
   "series": [
@@ -32,51 +32,51 @@
         },
         {
           "period": "2025-01",
-          "value": 8.52
+          "value": 8.43
         },
         {
           "period": "2025-02",
-          "value": 8.56
+          "value": 8.48
         },
         {
           "period": "2025-03",
-          "value": 8.52
+          "value": 8.45
         },
         {
           "period": "2025-04",
-          "value": 8.55
+          "value": 8.47
         },
         {
           "period": "2025-05",
-          "value": 8.64
+          "value": 8.55
         },
         {
           "period": "2025-06",
-          "value": 8.78
+          "value": 8.71
         },
         {
           "period": "2025-07",
-          "value": 8.94
+          "value": 8.87
         },
         {
           "period": "2025-08",
-          "value": 8.44
+          "value": 8.4
         },
         {
           "period": "2025-09",
-          "value": 8.42
+          "value": 8.36
         },
         {
           "period": "2025-10",
-          "value": 8.5
+          "value": 8.42
         },
         {
           "period": "2025-11",
-          "value": 8.46
+          "value": 8.37
         },
         {
           "period": "2025-12",
-          "value": 8.68
+          "value": 8.59
         },
         {
           "period": "2026-01",
