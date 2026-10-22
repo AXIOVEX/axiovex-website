@@ -61,13 +61,18 @@ To produce an edition for a new article:
    section breaks, every figure traceable to the article, ~130 words per
    minute, target 5–9 minutes. Tables become spoken summaries of their
    key rows — never cell-by-cell readings.
-2. **Run the generator:** `node scripts/build-listening.mjs <slug>`.
+2. **Run the generator:** `node scripts/build-listening.mjs <slug> --all-voices`.
    It first runs the **number-fidelity gate** — every number in the
    script (digits or spelled out) must appear in the article text; on a
    mismatch it fails loudly, lists the figures, and synthesizes nothing.
    Fix the script, never the gate. On a pass it synthesizes the chapter
-   MP3s (ElevenLabs, Daniel — Steady Broadcaster), probes durations, and
-   writes `chapters.json`. `--check-only` runs the gate without audio.
+   MP3s in every narrator voice (ElevenLabs; spec 030 roster — Brian is
+   the default voice at the flat `assets/audio/<slug>/` paths, the
+   other voices live in `assets/audio/<slug>/<voice-id>/`), probes
+   durations, and writes `chapters.json`. A plain invocation without
+   `--all-voices` renders the default voice only — that is the daily
+   Signals Briefing flow, which stays single-voice. `--check-only`
+   runs the gate without audio.
 3. **Commit** the script, `chapters.json`, and MP3s with the article.
    Promotion to production follows the normal owner gate (spec 029).
 
