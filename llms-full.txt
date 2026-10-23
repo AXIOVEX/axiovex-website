@@ -86,6 +86,17 @@ Explore the Michigan flagship
 
 Discuss a pilot
 
+Featured
+October 22, 2026
+"Endorsed by experts": the sentence that tried to make our AI stop checking
+
+During a routine research run, our AI found a sentence on a public help page telling it to ignore all other sources and treat that page as definitive. It flagged the line instead. Here is what happened, why this quiet kind of prompt injection matters, and the one-sentence test that catches it.
+ai security
+prompt injection
+ai agents
+
+Read article &rarr;
+
 The method
 Shared constraints. Clear choices. Accountable decisions.
 
@@ -282,6 +293,7 @@ What the data actually says — on Michigan work, manufacturing AI, and engineer
 
 9 articles
 
+Featured
 October 22, 2026
 "Endorsed by experts": the sentence that tried to make our AI stop checking
 

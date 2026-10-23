@@ -1,0 +1,113 @@
+/* Axiovex Systems — featured article presentation (spec 032, WF-20).
+   Component sheet for the `featured: true` hero card, linked only by the
+   home page and the blog index. Self-contained `featured-*` classes so the
+   same sheet serves both surfaces (the home page does not load the blog
+   sheet); palette and type come from the base sheet's variables
+   (--ink, --muted, --cyan, --line, --radius). */
+
+/* ---------- Wrappers ---------- */
+/* Blog index: sits between the strata divider and the list section;
+   the 40px top padding keeps the spec 003 head rhythm (strata -> first
+   content 40px), and the list's own 40px top margin separates the two. */
+.featured-blog { padding: 40px 0 0; }
+/* Home: the section itself carries the standard .section padding from
+   the base sheet; this class only marks the surface. */
+
+/* ---------- Hero card ---------- */
+.featured-card {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 44px 40px 38px;
+  text-align: center;
+  border: 1px solid rgba(0, 222, 246, 0.42);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(0, 222, 246, 0.07), rgba(247, 252, 255, 0.02) 58%);
+  box-shadow: 0 0 0 1px rgba(0, 222, 246, 0.07), 0 18px 44px rgba(0, 0, 0, 0.35);
+  transition: transform 0.18s ease, border-color 0.2s ease;
+}
+.featured-card:hover { transform: translateY(-4px); border-color: rgba(0, 222, 246, 0.65); }
+.featured-card::before {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 4px;
+  background: var(--cyan);
+  border-radius: 2px;
+  margin: 0 auto 20px;
+}
+.featured-eyebrow {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 5px 16px;
+  border: 1px solid rgba(0, 222, 246, 0.45);
+  border-radius: 999px;
+  background: rgba(0, 222, 246, 0.1);
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.featured-date {
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.featured-card h2 {
+  font-size: clamp(28px, 4.2vw, 40px);
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  margin: 12px 0 14px;
+}
+.featured-card h2 a { color: var(--ink); text-decoration: none; }
+.featured-card h2 a:hover { color: var(--cyan); }
+.featured-desc {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.55;
+  max-width: 640px;
+  margin: 0 auto 20px;
+}
+.featured-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.featured-tag {
+  font-size: 13px;
+  color: var(--cyan);
+  background: rgba(0, 222, 246, 0.08);
+  border: 1px solid rgba(0, 222, 246, 0.25);
+  border-radius: 999px;
+  padding: 5px 14px;
+  text-decoration: none;
+  display: inline-block;
+}
+.featured-tag:hover { background: rgba(0, 222, 246, 0.16); }
+.featured-link {
+  display: inline-block;
+  background: var(--cyan);
+  color: #04222B;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 14px 30px;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+.featured-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 222, 246, 0.35);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 720px) {
+  .featured-card { padding: 32px 22px 28px; }
+  .featured-desc { font-size: 16px; }
+}

@@ -492,6 +492,58 @@ function parsePost(filePath) {
   };
 }
 
+/* Featured article presentation (spec 032, WF-20): the post whose
+   front matter carries `featured: true` renders as a hero card on
+   the blog index and as a section on the home page — same flag,
+   same post data, no hard-coded article content anywhere. Both
+   surfaces render nothing when no post is featured. Styles live in
+   the versioned component sheet featured.v1.css. */
+function featuredPostOf(posts) {
+  return (posts || []).find(p => p.featured) || null;
+}
+
+function featuredHeroCard(post) {
+  const tags = post.tags.length
+    ? '<div class="featured-tags">' + post.tags.map(t =>
+        '<a class="featured-tag" href="/blog/?q=' + encodeURIComponent(t) + '">' + esc(t) + '</a>').join('') + '</div>'
+    : '';
+  return '<article class="featured-card">' +
+    '<p class="featured-eyebrow">Featured</p>' +
+    '<p class="featured-date">' + fmtDate(post.date) + '</p>' +
+    '<h2><a href="/blog/' + post.slug + '/">' + esc(post.title) + '</a></h2>' +
+    '<p class="featured-desc">' + esc(post.description) + '</p>' + tags +
+    '<a class="featured-link" href="/blog/' + post.slug + '/">Read article &rarr;</a></article>';
+}
+
+function featuredSectionHtml(post, surface) {
+  if (!post) return '';
+  if (surface === 'home') {
+    return '\n    <section class="section featured-section featured-home">\n' +
+      '      <div class="container">\n        ' + featuredHeroCard(post) + '\n      </div>\n    </section>\n    ';
+  }
+  return '<section class="featured-section featured-blog" aria-label="Featured article">\n' +
+    '        <div class="container">\n          ' + featuredHeroCard(post) + '\n        </div>\n      </section>';
+}
+
+/* Fills the FEATURED markers in the generated home page (template:
+   scripts/templates/home.html) from the same featured post the blog
+   index hero carries. Runs after buildBlog() has ordered the posts;
+   later home injections (Signals, NLHOME) re-read index.html, so
+   marker blocks never disturb each other. */
+function buildFeaturedHome(posts) {
+  const post = featuredPostOf(posts);
+  const homePath = path.join(ROOT, 'index.html');
+  const home = readFileSync(homePath, 'utf8');
+  const re = /(<!-- FEATURED:START -->)[\s\S]*?(<!-- FEATURED:END -->)/;
+  if (re.test(home)) {
+    // Replacer function, not a string: post text can contain '$'.
+    writeFileSync(homePath, home.replace(re, (m, g1, g2) => g1 + featuredSectionHtml(post, 'home') + g2));
+  } else {
+    console.warn('featured: FEATURED markers not found in index.html — home section skipped');
+  }
+  console.log('featured: home section ' + (post ? 'carries "' + post.slug + '"' : 'empty (no featured post)'));
+}
+
 function buildBlog() {
   const postsDir = path.join(ROOT, 'blog', 'posts');
   let posts = readdirSync(postsDir)
@@ -500,7 +552,10 @@ function buildBlog() {
     .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
   // Featured article (owner rule, 2026-10-23): a post whose front matter
   // carries `featured: true` leads every ordered surface the blog builds
-  // (index cards, feed, More-analysis cards) ahead of the date order;
+  // (index cards, feed, More-analysis cards) ahead of the date order.
+  // Spec 032 (WF-20) adds the presentation: the featured post renders
+  // as a hero on the blog index (out of the card list) and as the home
+  // page's Featured section — see featuredSectionHtml/buildFeaturedHome;
   // all other posts keep their newest-first order. Dates stay truthful —
   // featuring is position, never a date change.
   posts = [...posts.filter(p => p.featured), ...posts.filter(p => !p.featured)];
@@ -572,7 +627,12 @@ function buildBlog() {
     }
   }
 
-  const cards = posts.map(p => {
+  // Spec 032 (WF-20): the featured post leaves the chronological
+  // list and renders as the hero in {{FEATURED_SECTION}} instead —
+  // it never appears twice on the index. Count text still counts
+  // every published post, the hero included.
+  const featuredPost = featuredPostOf(posts);
+  const cards = posts.filter(p => p !== featuredPost).map(p => {
     const search = (p.title + ' ' + p.description + ' ' + p.tags.join(' ')).toLowerCase();
     const tags = p.tags.length
       ? '<div class="post-tags">' + p.tags.map(t =>
@@ -586,7 +646,11 @@ function buildBlog() {
   }).join('\n        ');
   const countText = posts.length + (posts.length === 1 ? ' article' : ' articles');
   writeFileSync(path.join(ROOT, 'blog', 'index.html'),
-    fill(indexTpl, { '{{POST_CARDS}}': cards, '{{POST_COUNT_TEXT}}': countText }));
+    fill(indexTpl, {
+      '{{POST_CARDS}}': cards,
+      '{{POST_COUNT_TEXT}}': countText,
+      '{{FEATURED_SECTION}}': featuredSectionHtml(featuredPost, 'blog'),
+    }));
 
   console.log('blog: built index + ' + posts.length + ' article(s)');
   return posts;
@@ -2483,6 +2547,7 @@ if (existsSync(sharedDir)) {
   console.warn('shared-documents checkout not found at ' + sharedDir + ' — documents page left unchanged');
 }
 const posts = buildBlog();
+buildFeaturedHome(posts);
 buildFeed(posts);
 const signalsInfo = buildSignals(posts);
 const newsletterIssues = buildNewsletter();

@@ -1016,6 +1016,22 @@ as accordion rows.
   keep their recorded voice). Implemented on staging
   (listening.v4.js / listening.v4.css); production promotion
   stays a separate gate.
+- **2026-10-23** — APPROVED by Tristen: **WF-20 Featured
+  article** (spec 032; full frame text at the end of this
+  file). The post carrying `featured: true` gains a hero
+  presentation on two surfaces: a FEATURED section at the top
+  of WF-03 (blog index) above the chronological list — which
+  no longer repeats the featured post — and a Featured
+  article section on WF-01/WF-02 (home) immediately after
+  the hero. Both render from the same front-matter flag and
+  post data; neither renders when no post is featured.
+  Direction given by the owner against the live blog index
+  ("make a top section for featured articles… show feature
+  article section on the home page too"), design approved
+  the same day ("Build both"). Implemented on staging
+  (generator + `featured.v1.css`); production promotion
+  awaits the owner's approval of the rendered staging
+  screenshots (spec 032 T007).
 
 ## WF-11 amendment — October 19, owner-directed refresh timestamp
 
@@ -1196,3 +1212,48 @@ more item kept in the browser's local storage on the listener's
 own device, alongside speed and resume — nothing is sent to the
 site. The privacy policy's §3 list gains the voice choice in the
 same release (spec 030, R9).
+
+## WF-20 — Featured article (October 23, 2026; approved, spec 032)
+
+One data source, two surfaces. The generator already orders the
+post whose front matter carries `featured: true` first; this
+frame gives that post a hero presentation instead of an ordinary
+card, driven entirely by the flag + the post's own front matter
+(title, date, description, tags, slug). No article data is
+hard-coded anywhere; moving the flag moves both surfaces on the
+next build. When no post is featured, neither surface renders
+anything.
+
+**WF-03 Blog index — FEATURED section.** Between the strata
+divider and the chronological list, a full-width hero card in
+the page container, centered like the post cards but distinct:
+a "FEATURED" eyebrow label with the cyan accent bar, the date
+in the standard post-date style, the headline at hero scale
+(clamp ~30–40px), the excerpt (the post description) at lede
+size, the tag pills, and a "Read article →" call to action.
+The card carries a stronger border/glow treatment than a normal
+`.post-card` so it reads as the featured piece at a glance. The
+featured post does NOT repeat in the chronological list below;
+all other posts keep their newest-first order, and the list's
+search/count behaviour is unchanged.
+
+**WF-01/WF-02 Home — Featured article section.** Immediately
+after the hero (below the strata divider, before The method),
+a section in the standard section rhythm carrying the same hero
+card: same eyebrow, date, headline, excerpt, tags, and
+"Read article →" link to the article. No other home section
+changes; the section adds NO newsletter form (the home page
+keeps exactly its existing NLHOME form).
+
+**Mobile (390px).** The hero card stacks as a single column
+(it is one card by construction); headline and excerpt scale
+down with the clamps; padding tightens to the normal-card
+mobile values; tags wrap.
+
+What does NOT change: the featured flag's ordering effect on
+the feed and the article pages' More-analysis cards; article
+pages themselves; dates (featuring is position, never a date
+change); all global components (WF-G1…G9) untouched; one
+newsletter form per page; styles ship as the new versioned
+component sheet `featured.v1.css`, linked only from the home
+and blog-index templates — no existing stylesheet is edited.
