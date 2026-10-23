@@ -40,3 +40,15 @@ commit).
   screenshots (desktop + mobile) inspected.
 - Production: same identity checks on axiovexsystems.com
   after the push; screenshots inspected.
+
+## Production record (2026-10-23)
+
+Promoted the same day: cherry-picked to main as 1fafa42
+(3 files only; robots.txt and _headers untouched — guard
+check empty). Cloudflare Pages production deployment of
+1fafa42 succeeded; https://axiovexsystems.com/research/
+serves the new card, and the production page is byte-identical
+to the verified staging page apart from Cloudflare's
+per-request email-obfuscation tokens. Staging verification
+record: verification-2026-10-23-paper-link/ (on staging;
+commit 97b3f71).
