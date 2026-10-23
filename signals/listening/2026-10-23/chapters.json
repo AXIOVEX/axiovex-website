@@ -1,0 +1,179 @@
+{
+  "slug": "signals-briefing",
+  "title": "Signals Briefing",
+  "mediaTitle": "Axiovex Signals Briefing — Friday, October 23, 2026",
+  "album": "Signals Briefing",
+  "voice": "Brian (ElevenLabs)",
+  "defaultVoice": "nPczCjzI2devNBz1zQrb",
+  "voices": [
+    {
+      "id": "nPczCjzI2devNBz1zQrb",
+      "name": "Brian",
+      "description": "Deep and resonant, comforting and steady."
+    },
+    {
+      "id": "EXAVITQu4vr4xnSDxMaL",
+      "name": "Sarah",
+      "description": "Warm and reassuring, with a calm, confident delivery."
+    }
+  ],
+  "editionDate": "2026-10-23",
+  "dateLabel": "Friday, October 23, 2026",
+  "asOf": "3:24 AM ET",
+  "chapters": [
+    {
+      "kicker": "INTRO",
+      "headline": "The board as of Friday morning",
+      "points": [
+        "Spoken edition of the Signals board; data as of 3:24 AM ET, Friday, October 23, 2026",
+        "37 items across five lanes; 20 items are new since yesterday's edition, and the newest is dated October 23",
+        "Four lanes have new items; AI, standards & research has been quiet since October 8"
+      ],
+      "takeaway": "Everything in this briefing traces to the snapshot on the page below it: headlines, sources, and dates only.",
+      "audio": "/assets/audio/signals-briefing/2026-10-23/ch-01.mp3",
+      "durationSec": 49,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/signals-briefing/2026-10-23/ch-01.mp3",
+          "durationSec": 49
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/signals-briefing/2026-10-23/EXAVITQu4vr4xnSDxMaL/ch-01.mp3",
+          "durationSec": 48
+        }
+      }
+    },
+    {
+      "kicker": "MANUFACTURING & AUTOMATION",
+      "headline": "Five new items, four dated Thursday",
+      "points": [
+        "October 22: 3D Printed Fixed-Wing Drone Design and Manufacturing Guide (Automation Alley); 3M expands collaboration with Amazon, forms GSEO partnership (Manufacturing Dive)",
+        "October 22: Honeywell Technologies raises 2026 outlook due to data center, AI demand; Lockheed, Pentagon reach $7B F-35 fighter jet deal (Manufacturing Dive)",
+        "October 21: Micron announces new investment in critical minerals manufacturing (Manufacturing Dive)"
+      ],
+      "takeaway": "Five new items in one edition — four dated Thursday and one dated Wednesday.",
+      "audio": "/assets/audio/signals-briefing/2026-10-23/ch-02.mp3",
+      "durationSec": 46,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/signals-briefing/2026-10-23/ch-02.mp3",
+          "durationSec": 46
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/signals-briefing/2026-10-23/EXAVITQu4vr4xnSDxMaL/ch-02.mp3",
+          "durationSec": 49
+        }
+      }
+    },
+    {
+      "kicker": "MICHIGAN WORKFORCE & INDUSTRY",
+      "headline": "September totals, two new items",
+      "points": [
+        "Michigan manufacturing employment: 584.8k in September 2026, down 1.7k on the month (BLS)",
+        "Unemployment 5.0% (flat on the month); labor force 4.83 million",
+        "Two new items (October 22): 3D Printed Fixed-Wing Drone Design and Manufacturing Guide, and Inalfa Roof Systems, Inc. — announced closure, Auburn Hills, 142 jobs, effective December 14, 2026"
+      ],
+      "takeaway": "September's totals are close to flat, and the lane's big new item is an Auburn Hills closure notice dated to mid-December.",
+      "audio": "/assets/audio/signals-briefing/2026-10-23/ch-03.mp3",
+      "durationSec": 44,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/signals-briefing/2026-10-23/ch-03.mp3",
+          "durationSec": 44
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/signals-briefing/2026-10-23/EXAVITQu4vr4xnSDxMaL/ch-03.mp3",
+          "durationSec": 46
+        }
+      }
+    },
+    {
+      "kicker": "OT CYBERSECURITY",
+      "headline": "Eight new advisories, all dated Thursday",
+      "points": [
+        "Eight new CISA advisories dated October 22 — the whole eight-item lane is new since yesterday's edition",
+        "Seven Siemens products: Siemens Industrial Edge App Publisher; Siemens Software Center; Siemens Capital Embedded AR Classic; Siemens SENTRON 3NA COM Fuse",
+        "Siemens PSS(R)SINCAL; Siemens SIMATIC IPCs; Siemens APOGEE, TALON and Desigo PXC/PXM Products; and Kiloview E3 NDI Encoder"
+      ],
+      "takeaway": "Eight product advisories in one day — the lane rewards checking your own equipment list against it.",
+      "audio": "/assets/audio/signals-briefing/2026-10-23/ch-04.mp3",
+      "durationSec": 40,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/signals-briefing/2026-10-23/ch-04.mp3",
+          "durationSec": 40
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/signals-briefing/2026-10-23/EXAVITQu4vr4xnSDxMaL/ch-04.mp3",
+          "durationSec": 39
+        }
+      }
+    },
+    {
+      "kicker": "AI, STANDARDS & RESEARCH",
+      "headline": "The quiet lane",
+      "points": [
+        "Quiet lane: the newest item is dated October 8 — NIST Joins White House Effort to Drive ‘A New Golden Age of Science’",
+        "September 18: NIST Awards More Than $1.7 Million to Support Cybersecurity Workforce Development Across 8 States",
+        "September 17: NSF invests in translating low-dimensional semiconductor technologies to establish U.S. leadership in microelectronics"
+      ],
+      "takeaway": "No new standards or research items since October 8 — the lane to watch for a change of pace.",
+      "audio": "/assets/audio/signals-briefing/2026-10-23/ch-05.mp3",
+      "durationSec": 42,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/signals-briefing/2026-10-23/ch-05.mp3",
+          "durationSec": 42
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/signals-briefing/2026-10-23/EXAVITQu4vr4xnSDxMaL/ch-05.mp3",
+          "durationSec": 42
+        }
+      }
+    },
+    {
+      "kicker": "FUNDING & POLICY",
+      "headline": "Five new items, the newest dated today",
+      "points": [
+        "Energy Department to Use Defense Production Act Funding to Restart American Refinery and Expand Refining Capacity (October 23)",
+        "Energy Department Announces Over $125 Million for 63 Projects Across 16 States to Lower Energy Costs, Expand Electricity Access, and Advance Economic Development for America’s Tribal Communities (October 22)",
+        "Department of Veterans Affairs → CREATIVE ABILITY SOLUTIONS, LLC — $29,502 award, October 21, 2026; Environmental Protection Agency → LESSORS, INC — $22,608 award, October 21, 2026; Council of the Inspectors General on Integrity and Efficiency → COMMUNICATIONS PROFESSIONALS INC. — $19,729 award, October 21, 2026"
+      ],
+      "takeaway": "The lane's news runs from a refinery funding item dated today to three small award notices dated Wednesday.",
+      "audio": "/assets/audio/signals-briefing/2026-10-23/ch-06.mp3",
+      "durationSec": 57,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/signals-briefing/2026-10-23/ch-06.mp3",
+          "durationSec": 57
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/signals-briefing/2026-10-23/EXAVITQu4vr4xnSDxMaL/ch-06.mp3",
+          "durationSec": 62
+        }
+      }
+    },
+    {
+      "kicker": "WHAT TO WATCH",
+      "headline": "Dates ahead on the board",
+      "points": [
+        "Inalfa Roof Systems' Auburn Hills closure takes effect December 14 (142 jobs); Dakkota Integrated Systems' Detroit closure, December 31 (397 jobs)",
+        "The AI, standards & research lane has been quiet since October 8",
+        "Four lanes posted new items dated October 22, and the funding lane added an item dated October 23; the next snapshot shows whether that pace holds"
+      ],
+      "takeaway": "The board is the record — this briefing only reads it back.",
+      "audio": "/assets/audio/signals-briefing/2026-10-23/ch-07.mp3",
+      "durationSec": 46,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/signals-briefing/2026-10-23/ch-07.mp3",
+          "durationSec": 46
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/signals-briefing/2026-10-23/EXAVITQu4vr4xnSDxMaL/ch-07.mp3",
+          "durationSec": 45
+        }
+      }
+    }
+  ]
+}
