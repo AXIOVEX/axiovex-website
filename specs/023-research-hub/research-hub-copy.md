@@ -296,11 +296,12 @@ amendment-2026-10-23-paper-link.md.]
    back here."
 
 4. **The boundary-counting paper and its evidence** — Zenodo
-   (https://doi.org/10.5281/zenodo.23600630)
-   "Everything behind the paper in 'Gravity may be counting'
-   above, public now: both registered tests' full data, the
-   frozen code, the run logs, the derivations, and the
-   computer-checked proof companion."
+   (https://doi.org/10.5281/zenodo.23604642)
+   "The paper itself, public now — plus everything behind it
+   in 'Gravity may be counting' above: both registered tests'
+   full data, the frozen code, the run logs, the derivations,
+   and the computer-checked proof companion (evidence
+   package: doi.org/10.5281/zenodo.23600630)."
 
 ---
 
