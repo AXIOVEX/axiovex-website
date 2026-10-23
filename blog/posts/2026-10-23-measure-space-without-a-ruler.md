@@ -55,4 +55,4 @@ This is a result about a model of spacetime: a better ruler for that model, not 
 
 If spacetime really is built from events and their causal links, then counting is a way of measuring — and getting the edges right is the difference between a rough guess and a prediction that lands.
 
-*The paper's reproducibility package (data + code) is public on Zenodo: [records/23600630](https://zenodo.org/records/23600630). The Lean formalization is at [records/23600458](https://zenodo.org/records/23600458). More explainers will live here on the blog as the work produces them.*
+*The paper itself is public on Zenodo: [records/23604642](https://zenodo.org/records/23604642). Its reproducibility package (data + code) is at [records/23600630](https://zenodo.org/records/23600630), and the Lean formalization at [records/23600458](https://zenodo.org/records/23600458). More explainers will live here on the blog as the work produces them.*
