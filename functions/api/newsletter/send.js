@@ -28,16 +28,16 @@ const CHUNK = 25;
 const PLACEHOLDER_ADDRESS = "[Postal address pending — owner decision, spec 020 FR-018]";
 // Spec 022 FR-022-3: the loop-test probe. Test mode can mail
 // the environment's probe address and no other — the mapping
-// is the guardrail. One probe per environment (spec 022
-// read-path correction, 2026-10-10): staging's probe is the
-// owner's gmail, whose delivery the loop runner can observe
-// directly; production's probe is tristen@axiovexsystems.com,
-// whose delivery the runner asserts via mail-status + sends
-// evidence and an M365 mailbox search. Any ENVIRONMENT other
-// than staging resolves to the production probe.
+// is the guardrail. One probe per environment, and since the
+// owner directive of 2026-10-23 both environments use the
+// SAME dedicated test recipient —
+// tristen.pierson+newsletter-loop@gmail.com — whose delivery
+// the loop runner observes in Gmail; tests never mail the
+// owner's real addresses. Any ENVIRONMENT other than staging
+// resolves to the production probe.
 const LOOP_TEST_RECIPIENTS = {
-  staging: "tristen.pierson@gmail.com",
-  production: "tristen@axiovexsystems.com",
+  staging: "tristen.pierson+newsletter-loop@gmail.com",
+  production: "tristen.pierson+newsletter-loop@gmail.com",
 };
 function loopTestRecipient(env) {
   return env.ENVIRONMENT === "staging" ? LOOP_TEST_RECIPIENTS.staging : LOOP_TEST_RECIPIENTS.production;
