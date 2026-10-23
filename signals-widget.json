@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-23T07:24:36.236Z",
+  "updatedUtc": "2026-10-23T16:23:05.055Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -21,20 +21,20 @@
   "pulseSource": "U.S. Bureau of Labor Statistics",
   "headlines": [
     {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Energy Department Designates Helium as Critical Material to Strengthen American Manufacturing and Supply Chain Security",
+      "source": "U.S. Department of Energy",
+      "date": "2026-10-23",
+      "url": "https://www.energy.gov/articles/energy-department-designates-helium-critical-material-strengthen-american-manufacturing"
+    },
+    {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
       "title": "Energy Department to Use Defense Production Act Funding to Restart American Refinery and Expand Refining Capacity",
       "source": "U.S. Department of Energy",
       "date": "2026-10-23",
       "url": "https://www.energy.gov/articles/energy-department-use-defense-production-act-funding-restart-american-refinery-and-expand"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "3D Printed Fixed-Wing Drone Design and Manufacturing Guide",
-      "source": "Automation Alley",
-      "date": "2026-10-22",
-      "url": "https://automationalley.com/2026/10/22/3d-printed-fixed-wing-drone-design-and-manufacturing-guide/"
     },
     {
       "lane": "michigan",
@@ -55,6 +55,14 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
+      "title": "3D Printed Fixed-Wing Drone Design and Manufacturing Guide",
+      "source": "Automation Alley",
+      "date": "2026-10-22",
+      "url": "https://automationalley.com/2026/10/22/3d-printed-fixed-wing-drone-design-and-manufacturing-guide/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
       "title": "3M expands collaboration with Amazon, forms GSEO partnership",
       "source": "Manufacturing Dive",
       "date": "2026-10-22",
@@ -71,7 +79,7 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Lockheed, Pentagon reach $7B F-35 fighter jet deal",
+      "title": "Lockheed, Pentagon reached F-35 fighter jet deal for $7B",
       "source": "Manufacturing Dive",
       "date": "2026-10-22",
       "url": "https://www.manufacturingdive.com/news/lockheed-martin-dod-war-f-35-lightning-contract-q3-2026/833692/"
@@ -99,14 +107,6 @@
       "source": "CISA",
       "date": "2026-10-22",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-03"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Siemens Capital Embedded AR Classic",
-      "source": "CISA",
-      "date": "2026-10-22",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-04"
     },
     {
       "lane": "ai-standards",
