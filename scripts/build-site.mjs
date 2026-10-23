@@ -413,6 +413,7 @@ function parsePost(filePath) {
     description: fm.description || '',
     tags: (typeof fm.tags === 'string' ? fm.tags : '').split(',').map(s => s.trim()).filter(Boolean),
     listening: (fm.listening && typeof fm.listening === 'object') ? fm.listening : null,
+    featured: fm.featured === 'true',
     slug,
     bodyMd: raw.slice(m[0].length),
     url: SITE + '/blog/' + slug + '/',
@@ -425,6 +426,12 @@ function buildBlog() {
     .filter(f => f.endsWith('.md'))
     .map(f => parsePost(path.join(postsDir, f)))
     .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  // Featured article (owner rule, 2026-10-23): a post whose front matter
+  // carries `featured: true` leads every ordered surface the blog builds
+  // (index cards, feed, More-analysis cards) ahead of the date order;
+  // all other posts keep their newest-first order. Dates stay truthful —
+  // featuring is position, never a date change.
+  posts = [...posts.filter(p => p.featured), ...posts.filter(p => !p.featured)];
 
   // Date discipline (owner rule, 2026-10-12): a post's date is its ACTUAL
   // release date. A future-dated post is not yet released, so it is held

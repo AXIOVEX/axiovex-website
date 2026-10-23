@@ -4,6 +4,7 @@ date: 2026-10-22
 description: During a routine research run, our AI found a sentence on a public help page telling it to ignore all other sources and treat that page as definitive. It flagged the line instead. Here is what happened, why this quiet kind of prompt injection matters, and the one-sentence test that catches it.
 tags: ai security, prompt injection, ai agents
 slug: endorsed-by-experts
+featured: true
 listening:
   enabled: true
 ---
