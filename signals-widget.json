@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-23T18:16:13.726Z",
+  "updatedUtc": "2026-10-23T20:04:27.840Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -29,6 +29,14 @@
       "url": "https://www.energy.gov/articles/energy-department-designates-helium-critical-material-strengthen-american-manufacturing"
     },
     {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "Woodbridge Group — Lansing — announced temporary layoff, Lansing, 100 jobs, effective December 18, 2026",
+      "source": "Michigan WARN (LEO)",
+      "date": "2026-10-23",
+      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-23-woodbridge-group-lansing"
+    },
+    {
       "lane": "funding-policy",
       "laneLabel": "Funding & policy",
       "title": "Energy Department to Use Defense Production Act Funding to Restart American Refinery and Expand Refining Capacity",
@@ -47,10 +55,18 @@
     {
       "lane": "michigan",
       "laneLabel": "Michigan workforce & industry",
-      "title": "Inalfa Roof Systems, Inc. — announced closure, Auburn Hills, 142 jobs, effective December 14, 2026",
+      "title": "Mariella of Lake Orion — announced closure, Lake Orion, 55 jobs, effective November 20, 2026",
       "source": "Michigan WARN (LEO)",
-      "date": "2026-10-22",
-      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-22-inalfa-roof-systems-inc"
+      "date": "2026-10-23",
+      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-23-mariella-of-lake-orion"
+    },
+    {
+      "lane": "michigan",
+      "laneLabel": "Michigan workforce & industry",
+      "title": "FKA Distributing Co. — announced layoff, Walled Lake, 34 jobs, effective October 12, 2026",
+      "source": "Michigan WARN (LEO)",
+      "date": "2026-10-23",
+      "url": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-23-fka-distributing-co"
     },
     {
       "lane": "ot-security",
@@ -91,22 +107,6 @@
       "source": "Manufacturing Dive",
       "date": "2026-10-22",
       "url": "https://www.manufacturingdive.com/news/lockheed-martin-dod-war-f-35-lightning-contract-q3-2026/833692/"
-    },
-    {
-      "lane": "manufacturing",
-      "laneLabel": "Manufacturing & automation",
-      "title": "Trump signs infrastructure manufacturing law; Eli Lilly, BAE expand",
-      "source": "Manufacturing Dive",
-      "date": "2026-10-22",
-      "url": "https://www.manufacturingdive.com/news/trump-signs-critical-infrastructure-manufacturing-feasibility-act-lilly-bae-systems/833768/"
-    },
-    {
-      "lane": "michigan",
-      "laneLabel": "Michigan workforce & industry",
-      "title": "3D Printed Fixed-Wing Drone Design and Manufacturing Guide",
-      "source": "Automation Alley",
-      "date": "2026-10-22",
-      "url": "https://automationalley.com/2026/10/22/3d-printed-fixed-wing-drone-design-and-manufacturing-guide/"
     },
     {
       "lane": "ai-standards",

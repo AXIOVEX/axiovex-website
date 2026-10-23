@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-23T18:16:13.726Z",
+  "updatedUtc": "2026-10-23T20:04:27.840Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -109,6 +109,27 @@
       "title": "Michigan workforce & industry",
       "items": [
         {
+          "source": "Michigan WARN (LEO)",
+          "sourceId": "michigan-warn",
+          "title": "FKA Distributing Co. — announced layoff, Walled Lake, 34 jobs, effective October 12, 2026",
+          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-23-fka-distributing-co",
+          "date": "2026-10-23"
+        },
+        {
+          "source": "Michigan WARN (LEO)",
+          "sourceId": "michigan-warn",
+          "title": "Mariella of Lake Orion — announced closure, Lake Orion, 55 jobs, effective November 20, 2026",
+          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-23-mariella-of-lake-orion",
+          "date": "2026-10-23"
+        },
+        {
+          "source": "Michigan WARN (LEO)",
+          "sourceId": "michigan-warn",
+          "title": "Woodbridge Group — Lansing — announced temporary layoff, Lansing, 100 jobs, effective December 18, 2026",
+          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-23-woodbridge-group-lansing",
+          "date": "2026-10-23"
+        },
+        {
           "source": "Automation Alley",
           "sourceId": "automation-alley",
           "title": "3D Printed Fixed-Wing Drone Design and Manufacturing Guide",
@@ -142,27 +163,6 @@
           "title": "Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit",
           "link": "https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/",
           "date": "2026-10-20"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Why Digital Leadership Fails When Decisions Drift Away From Operational Reality",
-          "link": "https://automationalley.com/2026/10/19/why-digital-leadership-fails-when-decisions-drift-away-from-operational-reality/",
-          "date": "2026-10-19"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Beyond the Vehicle: Detroit Must Seize Its New Mobility Opportunity",
-          "link": "https://automationalley.com/2026/10/16/beyond-the-vehicle-detroit-must-seize-its-new-mobility-opportunity/",
-          "date": "2026-10-16"
-        },
-        {
-          "source": "Michigan WARN (LEO)",
-          "sourceId": "michigan-warn",
-          "title": "Kern J.G. Enterprise, Inc. — announced permanent layoff, Sterling Heights, 156 jobs, effective August 17, 2026",
-          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-14-kern-j-g-enterprise-inc",
-          "date": "2026-10-14"
         }
       ]
     },
