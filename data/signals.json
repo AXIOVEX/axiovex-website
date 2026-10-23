@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-22T22:44:27.843Z",
+  "updatedUtc": "2026-10-23T05:20:42.995Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -235,9 +235,37 @@
         {
           "source": "U.S. Department of Energy",
           "sourceId": "doe",
+          "title": "Energy Department to Use Defense Production Act Funding to Restart American Refinery and Expand Refining Capacity",
+          "link": "https://www.energy.gov/articles/energy-department-use-defense-production-act-funding-restart-american-refinery-and-expand",
+          "date": "2026-10-23"
+        },
+        {
+          "source": "U.S. Department of Energy",
+          "sourceId": "doe",
           "title": "Energy Department Announces Over $125 Million for 63 Projects Across 16 States to Lower Energy Costs, Expand Electricity Access, and Advance Economic Development for America’s Tribal Communities",
           "link": "https://www.energy.gov/articles/energy-department-announces-over-125-million-63-projects-across-16-states-lower-energy",
           "date": "2026-10-22"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → CREATIVE ABILITY SOLUTIONS, LLC — $29,502 award, October 21, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C24627P0069_3600_-NONE-_-NONE-",
+          "date": "2026-10-21"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Environmental Protection Agency → LESSORS, INC — $22,608 award, October 21, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_68HERL27F0018_6800_68HERH22A0032_6800",
+          "date": "2026-10-21"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "Council of the Inspectors General on Integrity and Efficiency → COMMUNICATIONS PROFESSIONALS INC. — $19,729 award, October 21, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_9531BL27F0001_9511_47QSWA18D001S_4732",
+          "date": "2026-10-21"
         },
         {
           "source": "U.S. Department of Energy",
@@ -259,34 +287,6 @@
           "title": "Department of Veterans Affairs → TRILLAMED LLC — $736K award, October 20, 2026",
           "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0042_3600_36C10G22D0031_3600",
           "date": "2026-10-20"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $31,050 award, October 20, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C26027P0047_3600_-NONE-_-NONE-",
-          "date": "2026-10-20"
-        },
-        {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Advances Constitution Pipeline Project with $42 Million in Defense Production Act Funding",
-          "link": "https://www.energy.gov/articles/energy-department-advances-constitution-pipeline-project-42-million-defense-production-act",
-          "date": "2026-10-19"
-        },
-        {
-          "source": "Federal Register",
-          "sourceId": "federal-register",
-          "title": "Bulk Manufacturer of Controlled Substances Application: Scottsdale Research Institute",
-          "link": "https://www.federalregister.gov/documents/2026/10/19/2026-21360/bulk-manufacturer-of-controlled-substances-application-scottsdale-research-institute",
-          "date": "2026-10-19"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → ALLIANT ENTERPRISES, LLC — $42,816 award, October 19, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C24527P0066_3600_-NONE-_-NONE-",
-          "date": "2026-10-19"
         }
       ]
     }
