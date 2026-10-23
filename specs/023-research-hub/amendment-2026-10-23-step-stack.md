@@ -31,3 +31,13 @@ site-wide, and editing it in place would also sit behind the
 Staged + rendered-verified on staging, then promoted to
 production by cherry-pick of this commit alone (same scoped
 promotion as the day's other hub changes).
+
+## Production record (2026-10-23)
+
+Verified on staging first (deployment of e7fd10d succeeded;
+rendered screenshot shows the four chips stacked 1 → 2 → 3 → 4,
+each on its own line). Promoted by cherry-pick to main as
+5a2fc8d (research/index.html + this record only; robots.txt and
+_headers untouched). Production deployment succeeded; the live
+page serves the override and a render of the production bytes
+shows the stacked steps.
