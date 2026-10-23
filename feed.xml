@@ -15,6 +15,13 @@
     <description>During a routine research run, our AI found a sentence on a public help page telling it to ignore all other sources and treat that page as definitive. It flagged the line instead. Here is what happened, why this quiet kind of prompt injection matters, and the one-sentence test that catches it.</description>
   </item>
   <item>
+    <title>Measure space. Without a ruler.</title>
+    <link>https://axiovexsystems.com/blog/measure-space-without-a-ruler/</link>
+    <guid isPermaLink="true">https://axiovexsystems.com/blog/measure-space-without-a-ruler/</guid>
+    <pubDate>Fri, 23 Oct 2026 12:00:00 GMT</pubDate>
+    <description>Can you measure the size of a slice of space by counting events? The 60-second explainer — video and full text — of the separator-counting paper: count the two causal layers straddling a slice, correct exactly for the diamond's edges, and the prediction lands within 0.8% of the simulations.</description>
+  </item>
+  <item>
     <title>Why structure comes first: a look at Structural Psychology</title>
     <link>https://axiovexsystems.com/blog/structural-psychology/</link>
     <guid isPermaLink="true">https://axiovexsystems.com/blog/structural-psychology/</guid>
