@@ -51,3 +51,12 @@ Staged + verified on staging (rendered check of the article
 section). Production promotion awaits the owner's go —
 this amendment was prepared on his "can we incorporate
 them?" and is held at staging until he approves.
+
+## Production record (2026-10-23)
+
+Promoted on the owner's go the same day: cherry-picked to
+main as 09169ad (3 files only; robots.txt and _headers
+untouched). The production deployment succeeded after a slow
+clone stage; https://axiovexsystems.com/research/ now serves
+the figure inside the October 22 article, and the image asset
+returns 200 at its exact staged size (398,650 bytes).
