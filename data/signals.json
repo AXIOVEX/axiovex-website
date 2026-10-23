@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-23T20:04:27.840Z",
+  "updatedUtc": "2026-10-23T22:03:47.604Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -125,6 +125,13 @@
         {
           "source": "Michigan WARN (LEO)",
           "sourceId": "michigan-warn",
+          "title": "Salterra at Chesterfield — announced closure, New Baltimore, 46 jobs, effective November 20, 2026",
+          "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-23-salterra-at-chesterfield",
+          "date": "2026-10-23"
+        },
+        {
+          "source": "Michigan WARN (LEO)",
+          "sourceId": "michigan-warn",
           "title": "Woodbridge Group — Lansing — announced temporary layoff, Lansing, 100 jobs, effective December 18, 2026",
           "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-23-woodbridge-group-lansing",
           "date": "2026-10-23"
@@ -156,13 +163,6 @@
           "title": "Dakkota Integrated Systems, LLC — announced closure, Detroit, 397 jobs, effective December 31, 2026",
           "link": "https://www.michigan.gov/leo/bureaus-agencies/wd/data-public-notices/warn-notices?notice=2026-10-21-dakkota-integrated-systems-llc",
           "date": "2026-10-21"
-        },
-        {
-          "source": "Automation Alley",
-          "sourceId": "automation-alley",
-          "title": "Succession Planning for Manufacturing Owners: Protecting Enterprise Value Before You Exit",
-          "link": "https://automationalley.com/2026/10/20/succession-planning-for-manufacturing-owners-protecting-enterprise-value-before-you-exit/",
-          "date": "2026-10-20"
         }
       ]
     },
