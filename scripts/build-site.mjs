@@ -46,14 +46,14 @@ function inlineMd(s) {
   var codes = [];
   s = s.replace(/`([^`]+)`/g, function (m, c) {
     codes.push(c);
-    return '\u0000' + (codes.length - 1) + '\u0000';
+    return '^@' + (codes.length - 1) + '^@';
   });
   s = s.replace(/!\[([^\]]*)\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g, '<img src="$2" alt="$1" loading="lazy">');
   s = s.replace(/\[([^\]]+)\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
   s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   s = s.replace(/(^|[\s(])\*([^*\n]+)\*/g, '$1<em>$2</em>');
   s = s.replace(/(^|[\s(])_([^_\n]+)_/g, '$1<em>$2</em>');
-  s = s.replace(/\u0000(\d+)\u0000/g, function (m, i) {
+  s = s.replace(/^@(\d+)^@/g, function (m, i) {
     return '<code>' + codes[+i] + '</code>';
   });
   return s;
@@ -413,6 +413,7 @@ function parsePost(filePath) {
     description: fm.description || '',
     tags: (typeof fm.tags === 'string' ? fm.tags : '').split(',').map(s => s.trim()).filter(Boolean),
     listening: (fm.listening && typeof fm.listening === 'object') ? fm.listening : null,
+    featured: fm.featured === 'true',
     slug,
     bodyMd: raw.slice(m[0].length),
     url: SITE + '/blog/' + slug + '/',
@@ -425,6 +426,12 @@ function buildBlog() {
     .filter(f => f.endsWith('.md'))
     .map(f => parsePost(path.join(postsDir, f)))
     .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  // Featured article (owner rule, 2026-10-23): a post whose front matter
+  // carries `featured: true` leads every ordered surface the blog builds
+  // (index cards, feed, More-analysis cards) ahead of the date order;
+  // all other posts keep their newest-first order. Dates stay truthful —
+  // featuring is position, never a date change.
+  posts = [...posts.filter(p => p.featured), ...posts.filter(p => !p.featured)];
 
   // Date discipline (owner rule, 2026-10-12): a post's date is its ACTUAL
   // release date. A future-dated post is not yet released, so it is held

@@ -1,0 +1,130 @@
+{
+  "slug": "structural-psychology",
+  "title": "Why structure comes first: a look at Structural Psychology",
+  "voice": "Brian (ElevenLabs)",
+  "defaultVoice": "nPczCjzI2devNBz1zQrb",
+  "voices": [
+    {
+      "id": "nPczCjzI2devNBz1zQrb",
+      "name": "Brian",
+      "description": "Deep and resonant, comforting and steady."
+    },
+    {
+      "id": "EXAVITQu4vr4xnSDxMaL",
+      "name": "Sarah",
+      "description": "Warm and reassuring, with a calm, confident delivery."
+    }
+  ],
+  "chapters": [
+    {
+      "kicker": "THE DISTINCTION",
+      "headline": "Not the old structuralism",
+      "points": [
+        "Not Wundt and Titchener's structuralism — that chapter of psychology's history is closed",
+        "A modern framework by Anita Kozlowski, developed since 2015 and published this year",
+        "\"Structure\" here means the architecture that governs what a mind can do"
+      ],
+      "takeaway": "The name is old; the framework is new — and structure means the architecture that governs the mind.",
+      "audio": "/assets/audio/structural-psychology/ch-01.mp3",
+      "durationSec": 47,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/structural-psychology/ch-01.mp3",
+          "durationSec": 47
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/structural-psychology/EXAVITQu4vr4xnSDxMaL/ch-01.mp3",
+          "durationSec": 49
+        }
+      }
+    },
+    {
+      "kicker": "THE CLAIM",
+      "headline": "Identity runs on an architecture of constraints",
+      "points": [
+        "Identity is organized by a layered system of constraints — hierarchical necessity conditions",
+        "Beliefs, emotions, and behaviours are expressions of the structure, not its causes",
+        "Real change is architectural: recalibrate a governing condition and the change propagates"
+      ],
+      "takeaway": "Argue with a belief and you argue with a shadow; change the constraint and the outputs change.",
+      "audio": "/assets/audio/structural-psychology/ch-02.mp3",
+      "durationSec": 114,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/structural-psychology/ch-02.mp3",
+          "durationSec": 114
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/structural-psychology/EXAVITQu4vr4xnSDxMaL/ch-02.mp3",
+          "durationSec": 105
+        }
+      }
+    },
+    {
+      "kicker": "THE DIFFERENCE",
+      "headline": "Content is downstream of structure",
+      "points": [
+        "Psychology is fragmented by level; the framework claims the missing regulatory level",
+        "It aims at structure, not at the contents of the mind",
+        "Persistence is explained by necessity — what coherence costs — not by motivation"
+      ],
+      "takeaway": "Most psychology works on content; this framework works on the structure that admits the content.",
+      "audio": "/assets/audio/structural-psychology/ch-03.mp3",
+      "durationSec": 103,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/structural-psychology/ch-03.mp3",
+          "durationSec": 103
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/structural-psychology/EXAVITQu4vr4xnSDxMaL/ch-03.mp3",
+          "durationSec": 97
+        }
+      }
+    },
+    {
+      "kicker": "THE CASE",
+      "headline": "Why take it seriously",
+      "points": [
+        "It names a real gap: no mainstream level explains how a person stabilizes",
+        "Its geometry matches how change actually behaves in organizations",
+        "It is stated precisely enough to disagree with — and to test"
+      ],
+      "takeaway": "Taking a framework seriously means engaging it at full strength — and asking what would count against it.",
+      "audio": "/assets/audio/structural-psychology/ch-04.mp3",
+      "durationSec": 100,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/structural-psychology/ch-04.mp3",
+          "durationSec": 100
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/structural-psychology/EXAVITQu4vr4xnSDxMaL/ch-04.mp3",
+          "durationSec": 105
+        }
+      }
+    },
+    {
+      "kicker": "THE PARALLEL",
+      "headline": "Why it looks familiar from Axiovex",
+      "points": [
+        "Axiovex planning is constraint-based: start from what must hold, search the admissible space",
+        "When a situation truly changes, a governing constraint changed — and everything downstream reorganized",
+        "Different domains, the same structural bet: the whole is what the constraints allow"
+      ],
+      "takeaway": "A person, like a plan, is what their governing constraints admit — structure comes first.",
+      "audio": "/assets/audio/structural-psychology/ch-05.mp3",
+      "durationSec": 101,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/structural-psychology/ch-05.mp3",
+          "durationSec": 101
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/structural-psychology/EXAVITQu4vr4xnSDxMaL/ch-05.mp3",
+          "durationSec": 113
+        }
+      }
+    }
+  ]
+}
