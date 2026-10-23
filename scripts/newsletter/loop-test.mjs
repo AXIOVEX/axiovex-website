@@ -14,8 +14,7 @@
 // 2 (BLOCKED or DEFERRED, no FAIL). BLOCKED means an
 // automation limit outside the deployed code (production
 // Managed Turnstile vs a headless browser; test-send mode
-// not yet promoted; no signed-in M365 session for the
-// production mailbox check; this runner's own connectivity
+// not yet promoted; this runner's own connectivity
 // to the site) — never a silent pass. DEFERRED (added
 // 2026-10-10, T007) means the send was accepted (endpoint /
 // Graph evidence) but delivery was not observed inside the
@@ -23,24 +22,31 @@
 // distinct from a hard FAIL (send rejected, wrong content,
 // D1 mismatch) and never a silent pass either.
 //
-// One probe per environment (FR-022-2, read-path correction
-// 2026-10-10), chosen by where its mail is OBSERVABLE:
-//  - staging: tristen.pierson@gmail.com — direct delivery into
-//    the Gmail this runner reads (proven <1 min). The loop
+// One probe per environment, and since the owner directive
+// of 2026-10-23 it is the SAME dedicated test recipient in
+// both: tristen.pierson+newsletter-loop@gmail.com. Tests
+// never mail the owner's real addresses (the pre-2026-10-23
+// probes were the owner's own Gmail and Axiovex addresses,
+// and every deployment's loop landed two confirmation emails
+// plus a test issue in his inbox). The plus-address delivers
+// into the Gmail this runner reads, and a Gmail filter
+// ('Newsletter Loop Test': skip inbox, mark read) files the
+// test mail out of the owner's sight while leaving it fully
+// searchable in:anywhere for the mail legs below.
+//  - staging: delivery is read from Gmail directly. The loop
 //    snapshots the probe's starting status and restores it as
 //    a final, separately labeled step.
-//  - production: tristen@axiovexsystems.com (the owner's gmail
-//    production row is a REAL subscription — never churn it).
-//    Its mail is not observable via Gmail (the mailbox
-//    forwards to a different hub gmail, keep-a-copy on), so
-//    delivery is asserted via endpoint mail status + the
-//    sends table + an all-folders M365 mailbox search
-//    (Outlook web) instead.
+//  - production: delivery is read from Gmail the same way;
+//    the issue leg additionally cross-checks the endpoint
+//    mail status + the sends table. The probe is a test row
+//    in the production database (resting state 'unsubscribed',
+//    FR-022-5) — the owner's real production subscription is
+//    never the probe and is never churned.
 // Every delivery assertion's ledger evidence names its source
-// (Gmail / endpoint mailStatus + sends table / M365 mailbox
-// search). The runner writes D1 rows for the probe address
-// only; a before/after snapshot of every other row makes that
-// self-checking (C-022-3). Secrets come from the ops store
+// (Gmail / endpoint mailStatus + sends table). The runner
+// writes D1 rows for the probe address only; a before/after
+// snapshot of every other row makes that self-checking
+// (C-022-3). Secrets come from the ops store
 // (~/workspace/system/axiovex-ops/.env) and are never printed.
 
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
@@ -53,8 +59,8 @@ import { fileURLToPath } from 'node:url';
 const execFileP = promisify(execFile);
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const PROBES = {
-  staging: 'tristen.pierson@gmail.com',
-  production: 'tristen@axiovexsystems.com',
+  staging: 'tristen.pierson+newsletter-loop@gmail.com',
+  production: 'tristen.pierson+newsletter-loop@gmail.com',
 };
 const ENVS = {
   staging: { base: 'https://staging.axiovexsystems.com', db: 'a143d549-31d6-4d4e-98a4-503bdae864b7' },
@@ -201,7 +207,8 @@ async function browserSubscribe() {
   }
 }
 
-// ---------- M365 mailbox check (production delivery evidence) ----------
+// ---------- M365 mailbox check — RETAINED, UNUSED since 2026-10-23 ----------
+// (Both environments evidence delivery in Gmail now; kept for reference only.)
 async function mailboxCheck(mode, { subject = '' } = {}) {
   const py = path.join(homedir(), 'workspace/venvs/playwright/bin/python');
   const script = path.join(ROOT, 'scripts/newsletter/loop-mailbox-browser.py');
@@ -312,9 +319,9 @@ if (!priorBad()) {
 } else mirrorRecord(2, 'verify pending in D1');
 
 // Step 3 — confirmation email: receive, extract, follow.
-// Delivery evidence differs per environment: staging reads
-// the probe's Gmail directly; production searches the
-// probe's M365 mailbox (Outlook web, all folders).
+// Delivery evidence (2026-10-23): the probe is the shared
+// Gmail test recipient in BOTH environments, so both read
+// the probe's Gmail directly (pollConfirmAndFollow).
 let confirmFollowed = false;
 // Gmail confirmation hunt used by step 3 and the staging
 // restore step. Follows candidate links until one lands on
@@ -377,15 +384,18 @@ if (!priorBad()) {
       record(3, 'confirmation email arrives', 'FAIL', `no confirmation dated after run start within ${DELIVERY_WINDOW_MS / 1000}s and the endpoint mail leg reported '${mailLeg ?? 'n/a'}' — the send itself did not report acceptance; evidence source: Gmail — direct delivery to probe ${PROBE}`);
     }
   } else {
-    const mb = await mailboxCheck('confirmation');
-    if (mb.outcome === 'blocked') {
-      record(3, 'confirmation email + confirm link', 'BLOCKED', `mailbox check unavailable: ${mb.detail}; evidence source: M365 mailbox search (Outlook web, all folders)`);
-    } else if (mb.outcome !== 'found') {
-      record(3, 'confirmation email arrives', 'DEFERRED', `the D1 pending row was written at step 2 (the subscribe leg completed) but no confirmation was observed within ${DELIVERY_WINDOW_MS / 1000}s (${mb.detail}) — DEFERRED: delivery unobserved, not a send rejection; evidence source: M365 mailbox search (Outlook web, all folders)`);
-    } else if (!mb.confirmUrl) {
-      record(3, 'confirmation email arrives', 'FAIL', `confirmation present in the probe mailbox (header date ${mb.dateText || 'unread'}) but no confirm link for this environment could be extracted from it; evidence source: M365 mailbox search (Outlook web, all folders)`);
+    // Production (2026-10-23): same Gmail evidence path as
+    // staging — the probe is the shared Gmail test recipient.
+    const res3 = await pollConfirmAndFollow(0, DELIVERY_WINDOW_MS);
+    if (res3.ok) {
+      confirmFollowed = true;
+      record(3, 'confirmation email + confirm link', 'PASS', `message dated ${res3.msg.date}; link followed -> HTTP 200 WF-17 'You're subscribed.' landing; evidence source: Gmail — direct delivery to probe ${PROBE}`);
+    } else if (res3.noLink) {
+      record(3, 'confirmation email arrives', 'FAIL', `message ${res3.msg.id} dated ${res3.msg.date} carries no confirm link for this environment; evidence source: Gmail — direct delivery to probe ${PROBE}`);
+    } else if (res3.msg) {
+      record(3, 'confirmation email + confirm link', 'FAIL', `message dated ${res3.msg.date}; link followed -> HTTP ${res3.status}, landing '${res3.title}'; evidence source: Gmail — direct delivery to probe ${PROBE}`);
     } else {
-      await followConfirm(mb.confirmUrl, `message header date ${mb.dateText || '(unread)'}`, 'M365 mailbox search (Outlook web, all folders)');
+      record(3, 'confirmation email arrives', 'DEFERRED', `the D1 pending row was written at step 2 (the subscribe leg completed) but no confirmation was observed in Gmail within ${DELIVERY_WINDOW_MS / 1000}s${res3.expiredOnly ? '; only a stale pre-run confirmation was visible (its token predates this run)' : ''} — DEFERRED: delivery unobserved, not a send rejection; evidence source: Gmail — direct delivery to probe ${PROBE}`);
     }
   }
 } else mirrorRecord(3, 'confirmation email + confirm link');
@@ -421,29 +431,35 @@ if (!priorBad()) {
     } else if (j.probeActive !== true || j.sent !== 1) {
       record(5, 'probe-only test send', 'FAIL', `endpoint reports probeActive=${j.probeActive} sent=${j.sent} mailStatus=${j.mailStatus} — the mail leg did not deliver`);
     } else if (envName === 'production') {
-      // Production evidence model (read-path correction):
-      // (a) endpoint mail status ('sent' = Graph 202) + the
-      // sends-table record for this run, and (b) presence in
-      // the probe's M365 mailbox via an all-folders Outlook
-      // web search. List-Unsubscribe header assertions ride
-      // on staging's identical render/send path (raw headers
-      // are not readable in Outlook web); body-level contents
-      // (postal footer, unsubscribe URL) are asserted from
-      // the opened message here.
+      // Production evidence model (2026-10-23): (a) endpoint
+      // mail status ('sent' = Graph 202) + the sends-table
+      // record for this run, and (b) the delivered copy in the
+      // probe's Gmail — the probe is the shared Gmail test
+      // recipient in both environments — asserted with the
+      // same header/footer checks staging uses. (Before
+      // 2026-10-23 leg (b) searched the probe's M365 mailbox
+      // via Outlook web; that path retired with the probe
+      // change.)
       const sendRow = (await d1("SELECT id, started_at, recipient_count, sent_count FROM sends WHERE provider_ref = 'loop-test' AND issue_id = ? AND started_at >= ? ORDER BY id DESC LIMIT 1", [issueDate, new Date(runStart).toISOString()]).catch(() => []))[0];
       if (!(j.mailStatus === 'sent' && sendRow && sendRow.sent_count === 1)) {
         record(5, 'test issue delivered + verified', 'FAIL', `endpoint mailStatus=${j.mailStatus}; sends-table loop-test row for this run: ${sendRow ? `sent_count ${sendRow.sent_count}` : 'absent'}; evidence sources: endpoint mailStatus + sends table`);
       } else {
-        const mb = await mailboxCheck('issue', { subject });
-        if (mb.outcome === 'blocked') {
-          record(5, 'test issue delivered + verified', 'BLOCKED', `endpoint + sends table agree the issue was sent (mailStatus 'sent', sends row ${sendRow.id} sent_count 1) but the mailbox leg is unavailable: ${mb.detail}; evidence sources: endpoint mailStatus + sends table (a), M365 mailbox search (b, unavailable)`);
-        } else if (mb.outcome !== 'found') {
-          record(5, 'test issue delivered + verified', 'DEFERRED', `endpoint + sends table agree the issue was sent (mailStatus 'sent', sends row ${sendRow.id} sent_count 1) but no copy was observed within the delivery window (${mb.detail}) — DEFERRED: delivery unobserved, not a send rejection; evidence sources: endpoint mailStatus + sends table, M365 mailbox search (Outlook web, all folders)`);
-        } else if (!mb.unsubUrl || !mb.hasPostal) {
-          record(5, 'test issue delivered + verified', 'FAIL', `issue present in the probe mailbox (header date ${mb.dateText || 'unread'}); postal footer ${mb.hasPostal ? 'present' : 'MISSING'}, unsubscribe URL ${mb.unsubUrl ? 'found' : 'MISSING'} in the message body; evidence source: M365 mailbox search (Outlook web, all folders)`);
+        const msg = await pollMail((m) => m.subject === subject, DELIVERY_WINDOW_MS);
+        if (!msg) {
+          record(5, 'test issue delivered + verified', 'DEFERRED', `endpoint + sends table agree the issue was sent (mailStatus 'sent', sends row ${sendRow.id} sent_count 1) but no copy was observed in Gmail within ${DELIVERY_WINDOW_MS / 1000}s — DEFERRED: delivery unobserved, not a send rejection; evidence sources: endpoint mailStatus + sends table, Gmail — direct delivery to probe ${PROBE}`);
         } else {
-          probeUnsubUrl = mb.unsubUrl;
-          record(5, 'test issue delivered + verified', 'PASS', `issue ${issueDate} delivered: mailStatus 'sent' (Graph 202), sends row ${sendRow.id} sent_count 1, copy present in the probe mailbox (header date ${mb.dateText || 'unread'}) with postal footer + unsubscribe URL in the body; evidence sources: endpoint mailStatus + sends table, M365 mailbox search (Outlook web, all folders)`);
+          const lu = msg.headers['list-unsubscribe'] || '';
+          const headerUrl = lu.match(/<([^>]+)>/)?.[1] || null;
+          const footerMatch = (msg.text + '\n' + msg.html).match(/\/newsletter\/unsubscribe\?t=[a-f0-9]+/);
+          const footerUrl = footerMatch ? `${ENV.base}${footerMatch[0]}` : null;
+          const hasAddr = (msg.html + msg.text).includes(POSTAL);
+          if (lu && headerUrl && footerUrl && hasAddr) {
+            probeUnsubUrl = headerUrl;
+            probeFooterUrl = footerUrl;
+            record(5, 'test issue delivered + verified', 'PASS', `issue ${issueDate} delivered: mailStatus 'sent' (Graph 202), sends row ${sendRow.id} sent_count 1, copy in Gmail dated ${msg.date} with List-Unsubscribe header, footer one-click link and postal footer present; evidence sources: endpoint mailStatus + sends table, Gmail — direct delivery to probe ${PROBE}`);
+          } else {
+            record(5, 'test issue delivered + verified', 'FAIL', `issue dated ${msg.date}; List-Unsubscribe ${lu ? 'present' : 'MISSING'}, header unsub URL ${headerUrl ? 'found' : 'MISSING'}, footer one-click link ${footerUrl ? 'found' : 'MISSING'}, postal footer ${hasAddr ? 'present' : 'MISSING'}; evidence sources: endpoint mailStatus + sends table, Gmail — direct delivery to probe ${PROBE}`);
+          }
         }
       }
     } else {
@@ -494,10 +510,11 @@ if (!priorBad()) {
 // idempotent (a repeat visit lands on the WF-17 'already'
 // page), so the GET check proves the link's target serves
 // the unsubscribe flow without consuming a second probe
-// state. On production, step 5 captures only the body URL
-// (headers are unreadable in Outlook web), so the POST URL
-// IS the footer link there and sub-check (ii) is covered by
-// the POST itself.
+// state. (Before 2026-10-23, production's step 5 captured
+// only the body URL from its M365 mailbox evidence, so the
+// POST URL was the footer link there; since the probe moved
+// to the shared Gmail test recipient, both environments
+// capture the header + footer URLs the same way.)
 if (!priorBad()) {
   if (!probeUnsubUrl) {
     record(6, 'one-click unsubscribe', 'FAIL', 'no unsubscribe URL captured from the delivered issue');
@@ -545,11 +562,10 @@ if (guardBefore !== 'unavailable' && guardAfter !== 'unavailable') {
 
 // Step 9 (staging only) — RESTORE the probe to its starting
 // status. This is post-loop state preservation, NOT a loop
-// step: the staging probe is the owner's gmail, a row with a
-// life outside the test, so the run hands it back exactly as
-// it found it (snapshotted at step 0). Production has no
-// restore step: its probe's resting state is 'unsubscribed'
-// by design (FR-022-5).
+// step: the run hands the probe row back exactly as it found
+// it (snapshotted at step 0). Production has no restore
+// step: its probe's resting state is 'unsubscribed' by
+// design (FR-022-5).
 if (envName === 'staging') {
   const RESTORE = 'restore probe to starting status (post-loop state preservation)';
   try {
