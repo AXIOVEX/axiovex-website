@@ -1,19 +1,15 @@
 {
   "source": "EIA",
   "publisher": "U.S. Energy Information Administration",
-  "retrievedUtc": "2026-10-22T17:19:28.647Z",
+  "retrievedUtc": "2026-10-23T17:16:43.503Z",
   "vintage": "EIA API v2 monthly series, latest 24 months per series",
-  "referencePeriod": "2026-07",
+  "referencePeriod": "2026-08",
   "series": [
     {
       "id": "elec-industrial-mi",
       "label": "Average retail price of electricity, industrial sector, Michigan",
       "unit": "Cents per kilowatt-hour",
       "observations": [
-        {
-          "period": "2024-08",
-          "value": 8.18
-        },
         {
           "period": "2024-09",
           "value": 8.27
@@ -84,11 +80,11 @@
         },
         {
           "period": "2026-02",
-          "value": 8.96
+          "value": 8.95
         },
         {
           "period": "2026-03",
-          "value": 9.14
+          "value": 9.15
         },
         {
           "period": "2026-04",
@@ -100,11 +96,15 @@
         },
         {
           "period": "2026-06",
-          "value": 9.24
+          "value": 9.25
         },
         {
           "period": "2026-07",
           "value": 9.81
+        },
+        {
+          "period": "2026-08",
+          "value": 8.99
         }
       ]
     },
