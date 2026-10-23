@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-23T16:23:05.055Z",
+  "updatedUtc": "2026-10-23T18:16:13.726Z",
   "pulse": [
     {
       "label": "MI manufacturing",
@@ -35,6 +35,14 @@
       "source": "U.S. Department of Energy",
       "date": "2026-10-23",
       "url": "https://www.energy.gov/articles/energy-department-use-defense-production-act-funding-restart-american-refinery-and-expand"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "US Steel to invest nearly $3B in hot strip mill near Pittsburgh",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-23",
+      "url": "https://www.manufacturingdive.com/news/us-steel-invest-3b-hot-strip-mill-near-pittsburgh-edgar-thomson/833835/"
     },
     {
       "lane": "michigan",
@@ -79,10 +87,18 @@
     {
       "lane": "manufacturing",
       "laneLabel": "Manufacturing & automation",
-      "title": "Lockheed, Pentagon reached F-35 fighter jet deal for $7B",
+      "title": "Lockheed, Pentagon reach $7B F-35 fighter jet deal",
       "source": "Manufacturing Dive",
       "date": "2026-10-22",
       "url": "https://www.manufacturingdive.com/news/lockheed-martin-dod-war-f-35-lightning-contract-q3-2026/833692/"
+    },
+    {
+      "lane": "manufacturing",
+      "laneLabel": "Manufacturing & automation",
+      "title": "Trump signs infrastructure manufacturing law; Eli Lilly, BAE expand",
+      "source": "Manufacturing Dive",
+      "date": "2026-10-22",
+      "url": "https://www.manufacturingdive.com/news/trump-signs-critical-infrastructure-manufacturing-feasibility-act-lilly-bae-systems/833768/"
     },
     {
       "lane": "michigan",
@@ -91,22 +107,6 @@
       "source": "Automation Alley",
       "date": "2026-10-22",
       "url": "https://automationalley.com/2026/10/22/3d-printed-fixed-wing-drone-design-and-manufacturing-guide/"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Siemens Industrial Edge App Publisher",
-      "source": "CISA",
-      "date": "2026-10-22",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02"
-    },
-    {
-      "lane": "ot-security",
-      "laneLabel": "OT cybersecurity",
-      "title": "Siemens Software Center",
-      "source": "CISA",
-      "date": "2026-10-22",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-03"
     },
     {
       "lane": "ai-standards",
