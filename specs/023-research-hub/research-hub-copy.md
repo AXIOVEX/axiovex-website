@@ -274,9 +274,10 @@ across both programs.
 **Section heading:** Read the primary material
 
 **Intro line:** This page is a summary. The work itself lives in
-three public places:
+four public places:
 
-[Three link cards — drawn in WF-18.]
+[Four link cards — drawn in WF-18. Card 4 added 2026-10-23 — see
+amendment-2026-10-23-paper-link.md.]
 
 1. **The framing paper and the ledger** — GitHub
    (https://github.com/AXIOVEX/epistemic-ledger)
@@ -293,6 +294,13 @@ three public places:
    "Our sister company runs its own research program — including
    its work on the undeciphered Indus script. Their page links
    back here."
+
+4. **The boundary-counting paper and its evidence** — Zenodo
+   (https://doi.org/10.5281/zenodo.23600630)
+   "Everything behind the paper in 'Gravity may be counting'
+   above, public now: both registered tests' full data, the
+   frozen code, the run logs, the derivations, and the
+   computer-checked proof companion."
 
 ---
 
