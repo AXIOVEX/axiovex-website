@@ -367,6 +367,69 @@ function listeningSection(post) {
   return listeningHtml(JSON.parse(readFileSync(dataPath, 'utf8')));
 }
 
+/* Video embeds + stills (2026-10-23): a post may declare in front matter
+     video:
+       src: /assets/video/<slug>/<file>.mp4
+       poster: /assets/video/<slug>/poster.jpg     (optional)
+     stills:
+       <name>: /assets/video/<slug>/still-<name>.jpg
+   and place marker lines in the body:
+     [VIDEO EMBED]    -> a responsive HTML5 player at that point in the
+                         text: controls on, preload="none", the declared
+                         poster, and NO autoplay.
+     [STILL: <name>]  -> a <figure> holding the named still; its alt text
+                         is the current section heading (the last ##–####
+                         heading above the marker), so each image stays
+                         described by the section it illustrates.
+   A marker with no matching front-matter entry is loud, never silent:
+   the build logs a warning and renders nothing for that marker. Posts
+   without markers render exactly as before (one renderMarkdown pass). */
+function videoEmbedHtml(post) {
+  const v = post.video;
+  return '<figure class="post-video"><video controls preload="none" playsinline' +
+    (v.poster ? ' poster="' + escAttr(v.poster) + '"' : '') +
+    ' src="' + escAttr(v.src) + '"></video></figure>';
+}
+
+function stillFigureHtml(src, alt) {
+  return '<figure class="post-still"><img src="' + escAttr(src) + '" alt="' + escAttr(alt) + '" loading="lazy"></figure>';
+}
+
+function renderPostBody(post) {
+  const lines = post.bodyMd.replace(/\r\n?/g, '\n').split('\n');
+  const out = [];
+  let buf = [];
+  let inFence = false;
+  let heading = post.title;
+  const flush = () => {
+    if (buf.length) { out.push(renderMarkdown(buf.join('\n'))); buf = []; }
+  };
+  for (const line of lines) {
+    if (/^```/.test(line)) inFence = !inFence;
+    if (!inFence) {
+      const h = /^(#{2,4})\s+(.*)$/.exec(line);
+      if (h) heading = h[2].trim();
+      if (line.trim() === '[VIDEO EMBED]') {
+        flush();
+        if (post.video) out.push(videoEmbedHtml(post));
+        else console.log('blog: WARNING "' + post.slug + '" has a [VIDEO EMBED] marker but no video front matter — marker dropped');
+        continue;
+      }
+      const sm = /^\[STILL:\s*([A-Za-z0-9_-]+)\s*\]$/.exec(line.trim());
+      if (sm) {
+        flush();
+        const src = post.stills && post.stills[sm[1]];
+        if (src) out.push(stillFigureHtml(src, heading));
+        else console.log('blog: WARNING "' + post.slug + '" has a [STILL: ' + sm[1] + '] marker but no stills.' + sm[1] + ' front matter — marker dropped');
+        continue;
+      }
+    }
+    buf.push(line);
+  }
+  flush();
+  return out.join('\n');
+}
+
 /* Signals Briefing (spec 029): the spoken edition of the Signals
    board. Editions live at signals/listening/<YYYY-MM-DD>/ with the
    same chapters.json shape as article listening editions; the
@@ -413,6 +476,15 @@ function parsePost(filePath) {
     description: fm.description || '',
     tags: (typeof fm.tags === 'string' ? fm.tags : '').split(',').map(s => s.trim()).filter(Boolean),
     listening: (fm.listening && typeof fm.listening === 'object') ? fm.listening : null,
+    // Video embed (2026-10-23, first used by the "Measure space" explainer):
+    // front matter may carry a `video:` block (src + optional poster) and a
+    // `stills:` block (name -> image path); the body then places them with
+    // the [VIDEO EMBED] and [STILL: <name>] marker lines — see
+    // renderPostBody below. `video: <path>` as a plain string also works.
+    video: (fm.video && typeof fm.video === 'object' && fm.video.src)
+      ? { src: fm.video.src, poster: fm.video.poster || '' }
+      : (typeof fm.video === 'string' && fm.video ? { src: fm.video, poster: '' } : null),
+    stills: (fm.stills && typeof fm.stills === 'object') ? fm.stills : null,
     featured: fm.featured === 'true',
     slug,
     bodyMd: raw.slice(m[0].length),
@@ -480,7 +552,7 @@ function buildBlog() {
       '{{TAGS_DATA}}': escAttr(post.tags.join(', ')),
       '{{SHARE_TOP}}': shareRow(post.title, post.url, true),
       '{{LISTENING_HTML}}': listeningSection(post),
-      '{{BODY_HTML}}': renderMarkdown(post.bodyMd),
+      '{{BODY_HTML}}': renderPostBody(post),
       '{{NEWSLETTER_HTML}}': newsletterBlock('article'),
       '{{MORE_HTML}}': moreHtml,
     });

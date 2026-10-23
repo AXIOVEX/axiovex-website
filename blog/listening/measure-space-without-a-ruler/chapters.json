@@ -1,0 +1,130 @@
+{
+  "slug": "measure-space-without-a-ruler",
+  "title": "Measure space. Without a ruler.",
+  "voice": "Brian (ElevenLabs)",
+  "defaultVoice": "nPczCjzI2devNBz1zQrb",
+  "voices": [
+    {
+      "id": "nPczCjzI2devNBz1zQrb",
+      "name": "Brian",
+      "description": "Deep and resonant, comforting and steady."
+    },
+    {
+      "id": "EXAVITQu4vr4xnSDxMaL",
+      "name": "Sarah",
+      "description": "Warm and reassuring, with a calm, confident delivery."
+    }
+  ],
+  "chapters": [
+    {
+      "kicker": "THE QUESTION",
+      "headline": "Measure space, without a ruler",
+      "points": [
+        "The question: can counting events measure the size of a slice of space?",
+        "The paper is by T. Pierson (Axiovex Systems / Research, October 2026)",
+        "The article is the paper's 60-second explainer in full — video, text, and stills"
+      ],
+      "takeaway": "No ruler, no measuring rod — just events, links, and a count.",
+      "audio": "/assets/audio/measure-space-without-a-ruler/ch-01.mp3",
+      "durationSec": 29,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/measure-space-without-a-ruler/ch-01.mp3",
+          "durationSec": 29
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/measure-space-without-a-ruler/EXAVITQu4vr4xnSDxMaL/ch-01.mp3",
+          "durationSec": 30
+        }
+      }
+    },
+    {
+      "kicker": "COUNTING",
+      "headline": "Count the layers next to the slice",
+      "points": [
+        "Spacetime as a sprinkling of events linked by cause and effect — the causal set picture",
+        "Count the last layer before the middle slice and the first layer after it",
+        "At a known sampling density, that count is a statistical ruler for the slice's area"
+      ],
+      "takeaway": "The count alone carries the size — no geometry is measured directly.",
+      "audio": "/assets/audio/measure-space-without-a-ruler/ch-02.mp3",
+      "durationSec": 59,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/measure-space-without-a-ruler/ch-02.mp3",
+          "durationSec": 59
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/measure-space-without-a-ruler/EXAVITQu4vr4xnSDxMaL/ch-02.mp3",
+          "durationSec": 50
+        }
+      }
+    },
+    {
+      "kicker": "THE EDGES",
+      "headline": "The subtlety is the edges",
+      "points": [
+        "The diamond narrows away from its middle, so a uniform formula expects too many counted events",
+        "The paper's fix is an exact finite-size correction — an accounting for the rim of the diamond",
+        "The corrected formula is a single exact prediction, not a fit"
+      ],
+      "takeaway": "Get the edges right, and the prediction is exact — derived, not tuned.",
+      "audio": "/assets/audio/measure-space-without-a-ruler/ch-03.mp3",
+      "durationSec": 34,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/measure-space-without-a-ruler/ch-03.mp3",
+          "durationSec": 34
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/measure-space-without-a-ruler/EXAVITQu4vr4xnSDxMaL/ch-03.mp3",
+          "durationSec": 34
+        }
+      }
+    },
+    {
+      "kicker": "THE PREDICTION",
+      "headline": "A prediction that lands",
+      "points": [
+        "With 2,000 events in the whole region: ignoring the edges predicts about 536 counted events",
+        "Including the correction predicts about 484 — the reported simulation average is 483, over 24 realizations",
+        "Across 4 model sizes and 72 simulations, the averages match the exact predictions within 0.8%"
+      ],
+      "takeaway": "Five hundred thirty-six without the correction; four hundred eighty-four with it; four hundred eighty-three measured.",
+      "audio": "/assets/audio/measure-space-without-a-ruler/ch-04.mp3",
+      "durationSec": 36,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/measure-space-without-a-ruler/ch-04.mp3",
+          "durationSec": 36
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/measure-space-without-a-ruler/EXAVITQu4vr4xnSDxMaL/ch-04.mp3",
+          "durationSec": 36
+        }
+      }
+    },
+    {
+      "kicker": "THE BOUNDARY",
+      "headline": "What this is, and what it is not",
+      "points": [
+        "A better ruler for a model of spacetime — not a new law of gravity",
+        "The prediction was exact and made in advance; the correction was derived, not tuned",
+        "The reproducibility package (data + code) is public on Zenodo, and the Lean formalization is linked in the article"
+      ],
+      "takeaway": "Counting is a way of measuring — and the edges are the difference between a guess and a prediction that lands.",
+      "audio": "/assets/audio/measure-space-without-a-ruler/ch-05.mp3",
+      "durationSec": 43,
+      "voices": {
+        "nPczCjzI2devNBz1zQrb": {
+          "audio": "/assets/audio/measure-space-without-a-ruler/ch-05.mp3",
+          "durationSec": 43
+        },
+        "EXAVITQu4vr4xnSDxMaL": {
+          "audio": "/assets/audio/measure-space-without-a-ruler/EXAVITQu4vr4xnSDxMaL/ch-05.mp3",
+          "durationSec": 44
+        }
+      }
+    }
+  ]
+}
