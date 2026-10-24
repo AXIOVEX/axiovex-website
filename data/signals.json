@@ -1,5 +1,5 @@
 {
-  "updatedUtc": "2026-10-23T22:03:47.604Z",
+  "updatedUtc": "2026-10-24T05:44:37.012Z",
   "lanes": {
     "manufacturing": {
       "id": "manufacturing",
@@ -249,6 +249,13 @@
         {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
+          "title": "Department of Veterans Affairs → VETS ACCESS LLC — $17,472 award, October 22, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_36C24827P0059_3600_-NONE-_-NONE-",
+          "date": "2026-10-22"
+        },
+        {
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
           "title": "Department of Veterans Affairs → CREATIVE ABILITY SOLUTIONS, LLC — $29,502 award, October 21, 2026",
           "link": "https://www.usaspending.gov/award/CONT_AWD_36C24627P0069_3600_-NONE-_-NONE-",
           "date": "2026-10-21"
@@ -256,37 +263,30 @@
         {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
-          "title": "Environmental Protection Agency → LESSORS, INC — $22,608 award, October 21, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_68HERL27F0018_6800_68HERH22A0032_6800",
+          "title": "General Services Administration → FORD MOTOR CO — $37,048 award, October 21, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F0039_4732_47QMCA22D000P_4732",
           "date": "2026-10-21"
         },
         {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
-          "title": "Council of the Inspectors General on Integrity and Efficiency → COMMUNICATIONS PROFESSIONALS INC. — $19,729 award, October 21, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_9531BL27F0001_9511_47QSWA18D001S_4732",
+          "title": "General Services Administration → GENERAL MOTORS LLC — $60,673 award, October 21, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F003A_4732_47QMCA22D000Q_4732",
           "date": "2026-10-21"
         },
         {
-          "source": "U.S. Department of Energy",
-          "sourceId": "doe",
-          "title": "Energy Department Announces New Investments to Strengthen America's Power Grid and Lower Electricity Costs",
-          "link": "https://www.energy.gov/articles/energy-department-announces-new-investments-strengthen-americas-power-grid-and-lower",
-          "date": "2026-10-20"
+          "source": "USAspending (Treasury)",
+          "sourceId": "usaspending-awards",
+          "title": "General Services Administration → GENERAL MOTORS LLC — $60,673 award, October 21, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F003B_4732_47QMCA22D000Q_4732",
+          "date": "2026-10-21"
         },
         {
           "source": "USAspending (Treasury)",
           "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → TRILLAMED LLC — $757K award, October 20, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0034_3600_36C10G22D0050_3600",
-          "date": "2026-10-20"
-        },
-        {
-          "source": "USAspending (Treasury)",
-          "sourceId": "usaspending-awards",
-          "title": "Department of Veterans Affairs → TRILLAMED LLC — $736K award, October 20, 2026",
-          "link": "https://www.usaspending.gov/award/CONT_AWD_36C10X27K0042_3600_36C10G22D0031_3600",
-          "date": "2026-10-20"
+          "title": "General Services Administration → GENERAL MOTORS LLC — $60,673 award, October 21, 2026",
+          "link": "https://www.usaspending.gov/award/CONT_AWD_47QMCA27F003C_4732_47QMCA22D000Q_4732",
+          "date": "2026-10-21"
         }
       ]
     }
